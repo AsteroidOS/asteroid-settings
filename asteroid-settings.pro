@@ -19,6 +19,6 @@ TARGET = asteroid-settings
 target.path = /usr/bin/
 
 desktop.path = /usr/share/applications
-desktop.files = settings.desktop
+desktop.files = asteroid-settings.desktop
 
 INSTALLS += target desktop

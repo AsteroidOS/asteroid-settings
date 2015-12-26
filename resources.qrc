@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>GridItem.qml</file>
+        <file>TimePage.qml</file>
+        <file>DatePage.qml</file>
+        <file>BluetoothPage.qml</file>
+        <file>BrightnessPage.qml</file>
+        <file>ScreenPage.qml</file>
+        <file>WatchfacePage.qml</file>
+        <file>PoweroffPage.qml</file>
+        <file>RestartPage.qml</file>
+        <file>AboutPage.qml</file>
+        <file>asteroid-logo.png</file>
+    </qresource>
+</RCC>

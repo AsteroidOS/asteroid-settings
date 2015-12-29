@@ -27,6 +27,7 @@ Rectangle {
     }
 
     TimePicker {
+        id: timePicker
         anchors.fill: parent
         onHoursChanged: {
             if (hours == 24)

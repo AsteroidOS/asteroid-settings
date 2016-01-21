@@ -19,11 +19,16 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.0
 import org.asteroid.controls 1.0
+import org.nemomobile.time 1.0
 import org.nemomobile.systemsettings 1.0
 
 Rectangle {
     DateTimeSettings {
         id: dtSettings
+    }
+
+    WallClock {
+        id: wallClock
     }
 
     TimePicker {
@@ -40,6 +45,10 @@ Rectangle {
                 minutes = 0
             dtSettings.setTime(timePicker.hours, timePicker.minutes)
         }
+    }
+    Component.onCompleted: {
+        timePicker.hours   = wallClock.time.getHours();
+        timePicker.minutes = wallClock.time.getMinutes();
     }
 }
 

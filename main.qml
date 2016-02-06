@@ -20,9 +20,9 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.2
 import org.asteroid.controls 1.0
 
-Application {
+Item {
     id: app
-    title: "Settings"
+    anchors.fill: parent
 
     LayerStack {
         id: layerStack

@@ -15,26 +15,16 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <QtQml>
-#include <QtQuick/QQuickView>
-#include <QtCore/QString>
-#include <QScreen>
-#include <QtGui/QGuiApplication>
+#include <QQuickView>
+#include <QGuiApplication>
+#include <MDeclarativeCache>
 
-int main(int argc, char *argv[])
+Q_DECL_EXPORT int main(int argc, char *argv[])
 {
-    QGuiApplication app(argc, argv);
-    QScreen* sc = app.primaryScreen();
-    if(sc) {
-        sc->setOrientationUpdateMask(Qt::LandscapeOrientation | Qt::PortraitOrientation | Qt::InvertedLandscapeOrientation | Qt::InvertedPortraitOrientation);
-    }
-    QQmlApplicationEngine engine(QUrl("qrc:/main.qml"));
-    QObject *topLevel = engine.rootObjects().value(0);
-    QQuickWindow *window = qobject_cast<QQuickWindow *>(topLevel);
-    if(!window) {
-        qWarning("Error: Your root item has to be a Window.");
-        return -1;
-    }
-    window->showFullScreen();
-    return app.exec();
+    QScopedPointer<QGuiApplication> app(MDeclarativeCache::qApplication(argc, argv));
+    QScopedPointer<QQuickView> view(MDeclarativeCache::qQuickView());
+    view->setSource(QUrl("qrc:/main.qml"));
+    view->setTitle("Settings");
+    view->showFullScreen();
+    return app->exec();
 }

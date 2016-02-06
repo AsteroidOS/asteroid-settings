@@ -2,6 +2,6 @@
 Type=Application
 Name=Settings
 Categories=Applications;
-Exec=env QT_QUICK_CONTROLS_STYLE=Asteroid /usr/bin/asteroid-settings
+Exec=invoker --type=qtcomponents-qt5 /usr/bin/asteroid-settings
 Icon=preferences-system
 X-Desktop-File-Install-Version=0.20

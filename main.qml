@@ -20,22 +20,20 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.2
 import org.asteroid.controls 1.0
 
-Item {
+Application {
     id: app
-    anchors.fill: parent
 
-    LayerStack {
-        id: layerStack
-        Layer { id: timeLayer;       TimePage       { anchors.fill: parent } }
-        Layer { id: dateLayer;       DatePage       { anchors.fill: parent } }
-        Layer { id: bluetoothLayer;  BluetoothPage  { anchors.fill: parent } }
-        Layer { id: brightnessLayer; BrightnessPage { anchors.fill: parent } }
-        Layer { id: screenLayer;     ScreenPage     { anchors.fill: parent } }
-        Layer { id: watchfaceLayer;  WatchfacePage  { anchors.fill: parent } }
-        Layer { id: poweroffLayer;   PoweroffPage   { anchors.fill: parent } }
-        Layer { id: restartLayer;    RestartPage    { anchors.fill: parent } }
-        Layer { id: aboutLayer;      AboutPage      { anchors.fill: parent } }
-    }
+    Component { id: timeLayer;       TimePage       { } }
+    Component { id: dateLayer;       DatePage       { } }
+    Component { id: bluetoothLayer;  BluetoothPage  { } }
+    Component { id: brightnessLayer; BrightnessPage { } }
+    Component { id: screenLayer;     ScreenPage     { } }
+    Component { id: watchfaceLayer;  WatchfacePage  { } }
+    Component { id: poweroffLayer;   PoweroffPage   { } }
+    Component { id: restartLayer;    RestartPage    { } }
+    Component { id: aboutLayer;      AboutPage      { } }
+
+    LayerStack { id: layerStack }
 
     GridLayout {
         id: grid
@@ -46,47 +44,47 @@ Item {
         GridItem {
             title: "Time"
             iconName: "clock-outline"
-            onClicked: timeLayer.show()
+            onClicked: layerStack.push(timeLayer)
         }
         GridItem {
             title: "Date"
             iconName: "calendar-outline"
-            onClicked: dateLayer.show()
+            onClicked: layerStack.push(dateLayer)
         }
         GridItem {
             title: "Bluetooth"
             iconName: "cloud-outline" // bluetooth would probably be more suited but it's not available in outline!
-            onClicked: bluetoothLayer.show()
+            onClicked: layerStack.push(bluetoothLayer)
         }
         GridItem {
             title: "Brightness"
             iconName: "sunny-outline"
-            onClicked: brightnessLayer.show()
+            onClicked: layerStack.push(brightnessLayer)
         }
         GridItem {
             title: "Screen"
             iconName: "monitor-outline"
-            onClicked: screenLayer.show()
+            onClicked: layerStack.push(screenLayer)
         }
         GridItem {
             title: "Watchface"
             iconName: "color-wand-outline"
-            onClicked: watchfaceLayer.show()
+            onClicked: layerStack.push(watchfaceLayer)
         }
         GridItem {
             title: "Power Off"
             iconName: "bolt-outline" // power would probably be more suited but it's not available in outline!
-            onClicked: poweroffLayer.show()
+            onClicked: layerStack.push(poweroffLayer)
         }
         GridItem {
             title: "Restart"
             iconName: "reload"
-            onClicked: restartLayer.show()
+            onClicked: layerStack.push(restartLayer)
         }
         GridItem {
             title: "About"
             iconName: "help-outline"
-            onClicked: aboutLayer.show()
+            onClicked: layerStack.push(aboutLayer)
         }
     }
 }

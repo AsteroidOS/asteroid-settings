@@ -18,15 +18,16 @@
 import QtQuick 2.1
 import QtQuick.Controls 1.3
 import QtQuick.Layouts 1.1
+import org.asteroid.controls 1.0
 import org.nemomobile.systemsettings 1.0
 
 Rectangle {
-    DateTimeSettings {
-        id: dtSettings
-    }
+    DateTimeSettings { id: dtSettings }
 
     Calendar {
-        anchors.fill: parent;
+        anchors.centerIn: parent
+        width: DeviceInfo.hasRoundScreen ? parent.width/Math.sqrt(2) : parent.width
+        height: DeviceInfo.hasRoundScreen ? parent.height/Math.sqrt(2) : parent.height
         onClicked: dtSettings.setDate(date)
     }
 }

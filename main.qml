@@ -35,56 +35,62 @@ Application {
 
     LayerStack { id: layerStack }
 
-    GridLayout {
-        id: grid
+    Flickable {
+        contentHeight: DeviceInfo.hasRoundScreen ? 9*Units.dp(25) : height
+        contentWidth: width
+        boundsBehavior: DeviceInfo.hasRoundScreen ? Flickable.DragOverBounds : Flickable.StopAtBounds
+        flickableDirection: Flickable.VerticalFlick
         anchors.fill: parent
-        columns: 3
-        rows: 3
-        
-        GridItem {
-            title: "Time"
-            iconName: "clock-outline"
-            onClicked: layerStack.push(timeLayer)
-        }
-        GridItem {
-            title: "Date"
-            iconName: "calendar-outline"
-            onClicked: layerStack.push(dateLayer)
-        }
-        GridItem {
-            title: "Bluetooth"
-            iconName: "cloud-outline" // bluetooth would probably be more suited but it's not available in outline!
-            onClicked: layerStack.push(bluetoothLayer)
-        }
-        GridItem {
-            title: "Brightness"
-            iconName: "sunny-outline"
-            onClicked: layerStack.push(brightnessLayer)
-        }
-        GridItem {
-            title: "Screen"
-            iconName: "monitor-outline"
-            onClicked: layerStack.push(screenLayer)
-        }
-        GridItem {
-            title: "Watchface"
-            iconName: "color-wand-outline"
-            onClicked: layerStack.push(watchfaceLayer)
-        }
-        GridItem {
-            title: "Power Off"
-            iconName: "bolt-outline" // power would probably be more suited but it's not available in outline!
-            onClicked: layerStack.push(poweroffLayer)
-        }
-        GridItem {
-            title: "Restart"
-            iconName: "reload"
-            onClicked: layerStack.push(restartLayer)
-        }
-        GridItem {
-            title: "About"
-            iconName: "help-outline"
-            onClicked: layerStack.push(aboutLayer)
+        GridLayout {
+            id: grid
+            anchors.fill: parent
+            columns: DeviceInfo.hasRoundScreen ? 1 : 3
+            
+            GridItem {
+                title: "Time"
+                iconName: "clock-outline"
+                onClicked: layerStack.push(timeLayer)
+            }
+            GridItem {
+                title: "Date"
+                iconName: "calendar-outline"
+                onClicked: layerStack.push(dateLayer)
+            }
+            GridItem {
+                title: "Bluetooth"
+                iconName: "cloud-outline" // bluetooth would probably be more suited but it's not available in outline!
+                onClicked: layerStack.push(bluetoothLayer)
+            }
+            GridItem {
+                title: "Brightness"
+                iconName: "sunny-outline"
+                onClicked: layerStack.push(brightnessLayer)
+            }
+            GridItem {
+                title: "Screen"
+                iconName: "monitor-outline"
+                onClicked: layerStack.push(screenLayer)
+            }
+            GridItem {
+                title: "Watchface"
+                iconName: "color-wand-outline"
+                onClicked: layerStack.push(watchfaceLayer)
+            }
+            GridItem {
+                title: "Power Off"
+                iconName: "bolt-outline" // power would probably be more suited but it's not available in outline!
+                onClicked: layerStack.push(poweroffLayer)
+            }
+            GridItem {
+                title: "Restart"
+                iconName: "reload"
+                onClicked: layerStack.push(restartLayer)
+            }
+            GridItem {
+                title: "About"
+                iconName: "help-outline"
+                onClicked: layerStack.push(aboutLayer)
+            }
         }
     }
 }

@@ -33,13 +33,16 @@ Item {
         id: icon
         color: "black"
         anchors.top: parent.top
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.horizontalCenter: DeviceInfo.hasRoundScreen ? undefined : parent.horizontalCenter
+        anchors.left: DeviceInfo.hasRoundScreen ? parent.left : undefined
+        anchors.leftMargin: DeviceInfo.hasRoundScreen ? Units.dp(10) : undefined
     }
     Label {
         id: label
         horizontalAlignment: Text.AlignHCenter
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.bottom: parent.bottom
+        anchors.verticalCenter: DeviceInfo.hasRoundScreen ? parent.verticalCenter : undefined
+        anchors.bottom: DeviceInfo.hasRoundScreen ? undefined : parent.bottom
     }
 
     MouseArea {

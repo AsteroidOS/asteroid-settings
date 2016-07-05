@@ -22,8 +22,8 @@ import org.nemomobile.configuration 1.0
 
 Rectangle {
     ConfigurationValue {
-        id: wallpaperSource
-        key: "/desktop/asteroid/background_filename"
+        id: watchfaceSource
+        key: "/desktop/asteroid/watchface"
     }
 
     GridView {
@@ -34,8 +34,8 @@ Rectangle {
 
         model: FolderListModel {
             id: folderModel
-            folder: "file:///usr/share/asteroid-launcher/wallpapers/"
-            nameFilters: ["*.jpg"]
+            folder: "file:///usr/share/asteroid-launcher/watchfaces/"
+            nameFilters: ["*.qml"]
         }
 
         delegate: Component {
@@ -45,10 +45,10 @@ Rectangle {
                 height: grid.height/2
                 fillMode: Image.PreserveAspectFit
                 smooth: true
-                source: folderModel.folder + "/" + fileName
+                source: folderModel.folder + "/" + fileName.replace(".qml", ".jpg")
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: wallpaperSource.value = folderModel.folder + "/" + fileName
+                    onClicked: watchfaceSource.value = folderModel.folder + "/" + fileName
                 }
             }
         }

@@ -21,20 +21,20 @@ import QtQuick.Layouts 1.1
 import org.nemomobile.dbus 2.0
 
 Rectangle {
-    Label {
-        text: "Are you sure you want to turn off?"
-        horizontalAlignment: Text.AlignHCenter
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.bottom: yesButton.top
+    Button {
+        text: "Turn off"
+        anchors.bottom: parent.verticalCenter
+        anchors.bottomMargin: 10
+        anchors.horizontalCenter: parent.horizontalCenter
+        onClicked: dsmeDbus.call("req_shutdown", [])
     }
 
     Button {
-        id: yesButton
-        anchors.verticalCenter: parent.verticalCenter
+        text: "Restart"
+        anchors.top: parent.verticalCenter
+        anchors.topMargin: 10
         anchors.horizontalCenter: parent.horizontalCenter
-        text: "Turn off"
-        onClicked: dsmeDbus.call("req_shutdown", [])
+        onClicked: dsmeDbus.call("req_reboot", [])
     }
 
     DBusInterface {

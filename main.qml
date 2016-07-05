@@ -27,10 +27,10 @@ Application {
     Component { id: dateLayer;       DatePage       { } }
     Component { id: bluetoothLayer;  BluetoothPage  { } }
     Component { id: brightnessLayer; BrightnessPage { } }
-    Component { id: screenLayer;     ScreenPage     { } }
+    Component { id: wallpaperLayer;  WallpaperPage  { } }
     Component { id: watchfaceLayer;  WatchfacePage  { } }
+    Component { id: screenLayer;     ScreenPage     { } }
     Component { id: poweroffLayer;   PoweroffPage   { } }
-    Component { id: restartLayer;    RestartPage    { } }
     Component { id: aboutLayer;      AboutPage      { } }
 
     LayerStack { id: layerStack }
@@ -67,9 +67,9 @@ Application {
                 onClicked: layerStack.push(brightnessLayer)
             }
             GridItem {
-                title: "Screen"
-                iconName: "monitor-outline"
-                onClicked: layerStack.push(screenLayer)
+                title: "Wallpaper"
+                iconName: "photos-outline"
+                onClicked: layerStack.push(wallpaperLayer)
             }
             GridItem {
                 title: "Watchface"
@@ -77,14 +77,14 @@ Application {
                 onClicked: layerStack.push(watchfaceLayer)
             }
             GridItem {
+                title: "Screen"
+                iconName: "monitor-outline"
+                onClicked: layerStack.push(screenLayer)
+            }
+            GridItem {
                 title: "Power Off"
                 iconName: "bolt-outline" // power would probably be more suited but it's not available in outline!
                 onClicked: layerStack.push(poweroffLayer)
-            }
-            GridItem {
-                title: "Restart"
-                iconName: "reload"
-                onClicked: layerStack.push(restartLayer)
             }
             GridItem {
                 title: "About"

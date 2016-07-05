@@ -16,10 +16,41 @@
  */
 
 import QtQuick 2.1
+import QtQuick.Controls 1.3
 import QtQuick.Layouts 1.1
 import QtBluetooth 5.2
 
 Rectangle {
-    // TODO: bt scanner results http://doc.qt.io/qt-5/qtbluetooth-scanner-example.html
+    GridLayout {
+        columns: 2
+        anchors.fill: parent
+        anchors.margins: 20
+        rowSpacing: 10
+        columnSpacing: 10
+
+        Label {
+            text: "Use Bluetooth"
+        }
+        Switch {
+            id: btSwitch
+            anchors.right: parent.right
+        }
+
+        Label {
+            text: "Sync notifications"
+        }
+        Switch {
+            id: notifSwitch
+            anchors.right: parent.right
+        }
+
+        Label {
+            text: "Sync time"
+        }
+        Switch {
+            id: timeSwitch
+            anchors.right: parent.right
+        }
+    }
 }
 

@@ -16,7 +16,6 @@
  */
 
 import QtQuick 2.1
-import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.1
 import org.asteroid.controls 1.0
 
@@ -37,12 +36,15 @@ Item {
         anchors.left: DeviceInfo.hasRoundScreen ? parent.left : undefined
         anchors.leftMargin: DeviceInfo.hasRoundScreen ? Units.dp(10) : undefined
     }
-    Label {
+    Text {
         id: label
+        color: "black"
+        font.pointSize: 11
         horizontalAlignment: Text.AlignHCenter
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: DeviceInfo.hasRoundScreen ? parent.verticalCenter : undefined
         anchors.bottom: DeviceInfo.hasRoundScreen ? undefined : parent.bottom
+        anchors.bottomMargin: Units.dp(5)
     }
 
     MouseArea {

@@ -16,7 +16,6 @@
  */
 
 import QtQuick 2.1
-import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.1
 
 Rectangle {
@@ -28,14 +27,14 @@ Rectangle {
         anchors.top: parent.top
         anchors.bottom: osLabel.top
     }
-    Label {
+    Text {
         id: osLabel
         text: "<b>AsteroidOS</b>"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: releaseLabel.top
         font.pointSize: 20
     }
-    Label {
+    Text {
         id: releaseLabel
         text: "Developer preview"
         color: "#333"

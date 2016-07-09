@@ -21,7 +21,7 @@ import QtQuick.Layouts 1.1
 import org.nemomobile.systemsettings 1.0
 
 Rectangle {
-    Label {
+    Text {
         text: "Brightness: " + displaySettings.brightness + "%"
         anchors.left: parent.left
         anchors.right: parent.right

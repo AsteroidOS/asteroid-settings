@@ -16,25 +16,23 @@
  */
 
 import QtQuick 2.1
-import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.1
+import org.asteroid.controls 1.0
 import org.nemomobile.systemsettings 1.0
 
 Rectangle {
     Text {
         text: "Brightness: " + displaySettings.brightness + "%"
-        anchors.left: parent.left
-        anchors.right: parent.right
+        anchors.left: brightnessSlider.left
         anchors.bottom: brightnessSlider.top
 
     }
     Slider {
         id: brightnessSlider
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.left: parent.left
-        anchors.right: parent.right
-        value: displaySettings.brightness / 100
-        onValueChanged: displaySettings.brightness = brightnessSlider.value * 100
+        anchors.centerIn: parent
+        width: parent.width*0.9
+        value: displaySettings.brightness
+        onValueChanged: displaySettings.brightness = brightnessSlider.value
     }
     DisplaySettings {
         id: displaySettings

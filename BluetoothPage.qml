@@ -16,9 +16,8 @@
  */
 
 import QtQuick 2.1
-import QtQuick.Controls 1.3
+import org.asteroid.controls 1.0
 import QtQuick.Layouts 1.1
-import QtBluetooth 5.2
 
 Rectangle {
     GridLayout {
@@ -28,7 +27,7 @@ Rectangle {
         rowSpacing: 10
         columnSpacing: 10
 
-        Label {
+        Text {
             text: "Use Bluetooth"
         }
         Switch {
@@ -36,7 +35,7 @@ Rectangle {
             anchors.right: parent.right
         }
 
-        Label {
+        Text {
             text: "Sync notifications"
         }
         Switch {
@@ -44,7 +43,7 @@ Rectangle {
             anchors.right: parent.right
         }
 
-        Label {
+        Text {
             text: "Sync time"
         }
         Switch {

@@ -16,38 +16,104 @@
  */
 
 import QtQuick 2.1
-import QtQuick.Layouts 1.1
 import org.asteroid.controls 1.0
 import org.nemomobile.time 1.0
 import org.nemomobile.systemsettings 1.0
 
 Rectangle {
-    DateTimeSettings {
-        id: dtSettings
+    DateTimeSettings { id: dtSettings }
+    WallClock { id: wallClock}
+
+    Text {
+        id: title
+        text: "Select an hour:"
+        height: parent.height*0.2
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        verticalAlignment: Text.AlignVCenter
+        horizontalAlignment: Text.AlignHCenter
     }
 
-    WallClock {
-        id: wallClock
-    }
+    Row {
+        id: timeSelector
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: title.bottom
+        height: parent.height*0.6
 
-    TimePicker {
-        id: timePicker
-        anchors.fill: parent
-        onHoursChanged: {
-            if (hours == 24)
-                hours = 0
-            dtSettings.setTime(timePicker.hours, timePicker.minutes)
+        ListView {
+            id: hourLV
+            height: parent.height
+            width: parent.width/2-1
+            clip: true
+            spacing: 15
+            model: 24
+            delegate: Item {
+                width: hourLV.width
+                height: 30
+                Text {
+                    text: index
+                    anchors.centerIn: parent
+                    color: parent.ListView.isCurrentItem ? "black" : "grey"
+                    scale: parent.ListView.isCurrentItem ? 1.5 : 1
+                    Behavior on scale { NumberAnimation { duration: 200 } }
+                    Behavior on color { ColorAnimation { } }
+                }
+            }
+            preferredHighlightBegin: height / 2 - 15
+            preferredHighlightEnd: height / 2 + 15
+            highlightRangeMode: ListView.StrictlyEnforceRange
         }
 
-        onMinutesChanged: {
-            if (minutes == 60)
-                minutes = 0
-            dtSettings.setTime(timePicker.hours, timePicker.minutes)
+        Rectangle {
+            width: 1
+            height: parent.height*0.8
+            color: "grey"
+            anchors.verticalCenter: parent.verticalCenter
+        }
+
+        ListView {
+            id: minuteLV
+            height: parent.height
+            width: parent.width/2-1
+            clip: true
+            spacing: 15
+            model: 60
+            delegate: Item {
+                width: minuteLV.width
+                height: 30
+                Text {
+                    text: index
+                    anchors.centerIn: parent
+                    color: parent.ListView.isCurrentItem ? "black" : "grey"
+                    scale: parent.ListView.isCurrentItem ? 1.5 : 1
+                    Behavior on scale { NumberAnimation { duration: 200 } }
+                    Behavior on color { ColorAnimation { } }
+                }
+            }
+            preferredHighlightBegin: height / 2 - 15
+            preferredHighlightEnd: height / 2 + 15
+            highlightRangeMode: ListView.StrictlyEnforceRange
         }
     }
+
     Component.onCompleted: {
-        timePicker.hours   = wallClock.time.getHours();
-        timePicker.minutes = wallClock.time.getMinutes();
+        hourLV.currentIndex = wallClock.time.getHours();
+        minuteLV.currentIndex = wallClock.time.getMinutes();
+    }
+
+    IconButton {
+        height: parent.height*0.2
+        width: height
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottom: parent.bottom
+
+        iconColor: "black"
+        iconName: "checkmark-circled"
+
+        onClicked: {
+            dtSettings.setTime(hourLV.currentIndex, minuteLV.currentIndex)
+        }
     }
 }
-

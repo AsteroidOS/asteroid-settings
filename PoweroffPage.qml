@@ -16,24 +16,26 @@
  */
 
 import QtQuick 2.1
-import QtQuick.Controls 1.0
-import QtQuick.Layouts 1.1
 import org.nemomobile.dbus 2.0
 
 Rectangle {
-    Button {
-        text: "Turn off"
-        anchors.bottom: parent.verticalCenter
-        anchors.bottomMargin: 10
-        anchors.horizontalCenter: parent.horizontalCenter
+    GridItem {
+        title: "Turn off"
+        iconName: "power"
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: parent.horizontalCenter
+        width: parent.width*0.3
+        height: width
         onClicked: dsmeDbus.call("req_shutdown", [])
     }
 
-    Button {
-        text: "Restart"
-        anchors.top: parent.verticalCenter
-        anchors.topMargin: 10
-        anchors.horizontalCenter: parent.horizontalCenter
+    GridItem {
+        title: "Restart"
+        iconName: "refresh"
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.horizontalCenter
+        width: parent.width*0.3
+        height: width
         onClicked: dsmeDbus.call("req_reboot", [])
     }
 

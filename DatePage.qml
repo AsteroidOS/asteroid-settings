@@ -16,19 +16,141 @@
  */
 
 import QtQuick 2.1
-import QtQuick.Controls 1.3
-import QtQuick.Layouts 1.1
 import org.asteroid.controls 1.0
 import org.nemomobile.systemsettings 1.0
 
 Rectangle {
     DateTimeSettings { id: dtSettings }
 
-    Calendar {
-        anchors.centerIn: parent
-        width: DeviceInfo.hasRoundScreen ? parent.width/Math.sqrt(2) : parent.width
-        height: DeviceInfo.hasRoundScreen ? parent.height/Math.sqrt(2) : parent.height
-        onClicked: dtSettings.setDate(date)
+    Text {
+        id: title
+        text: "Select a date:"
+        height: parent.height*0.2
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        verticalAlignment: Text.AlignVCenter
+        horizontalAlignment: Text.AlignHCenter
+    }
+
+    Row {
+        id: dateSelector
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: title.bottom
+        height: parent.height*0.6
+
+        ListView {
+            id: dayLV
+            height: parent.height
+            width: parent.width/3-2
+            clip: true
+            spacing: 15
+            model: 31
+            delegate: Item {
+                width: dayLV.width
+                height: 30
+                Text {
+                    text: index+1
+                    anchors.centerIn: parent
+                    color: parent.ListView.isCurrentItem ? "black" : "grey"
+                    scale: parent.ListView.isCurrentItem ? 1.5 : 1
+                    Behavior on scale { NumberAnimation { duration: 200 } }
+                    Behavior on color { ColorAnimation { } }
+                }
+            }
+            preferredHighlightBegin: height / 2 - 15
+            preferredHighlightEnd: height / 2 + 15
+            highlightRangeMode: ListView.StrictlyEnforceRange
+        }
+
+        Rectangle {
+            width: 1
+            height: parent.height*0.8
+            color: "grey"
+            anchors.verticalCenter: parent.verticalCenter
+        }
+
+        ListView {
+            id: monthLV
+            height: parent.height
+            width: parent.width/3-2
+            clip: true
+            spacing: 15
+            model: 12
+            delegate: Item {
+                width: monthLV.width
+                height: 30
+                Text {
+                    text: Qt.locale().monthName(index, Locale.ShortFormat)
+                    anchors.centerIn: parent
+                    color: parent.ListView.isCurrentItem ? "black" : "grey"
+                    scale: parent.ListView.isCurrentItem ? 1.5 : 1
+                    Behavior on scale { NumberAnimation { duration: 200 } }
+                    Behavior on color { ColorAnimation { } }
+                }
+            }
+            preferredHighlightBegin: height / 2 - 15
+            preferredHighlightEnd: height / 2 + 15
+            highlightRangeMode: ListView.StrictlyEnforceRange
+        }
+
+        Rectangle {
+            width: 1
+            height: parent.height*0.8
+            color: "grey"
+            anchors.verticalCenter: parent.verticalCenter
+        }
+
+        ListView {
+            id: yearLV
+            height: parent.height
+            width: parent.width/3-2
+            clip: true
+            spacing: 15
+            model: 100
+            delegate: Item {
+                width: yearLV.width
+                height: 30
+                Text {
+                    text: index+2000
+                    anchors.centerIn: parent
+                    color: parent.ListView.isCurrentItem ? "black" : "grey"
+                    scale: parent.ListView.isCurrentItem ? 1.5 : 1
+                    Behavior on scale { NumberAnimation { duration: 200 } }
+                    Behavior on color { ColorAnimation { } }
+                }
+            }
+            preferredHighlightBegin: height / 2 - 15
+            preferredHighlightEnd: height / 2 + 15
+            highlightRangeMode: ListView.StrictlyEnforceRange
+        }
+    }
+
+    Component.onCompleted: {
+        var d = new Date();
+        dayLV.currentIndex = d.getDate()-1;
+        monthLV.currentIndex = d.getMonth();
+        yearLV.currentIndex = d.getFullYear()-2000;
+
+    }
+
+    IconButton {
+        height: parent.height*0.2
+        width: height
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottom: parent.bottom
+
+        iconColor: "black"
+        iconName: "checkmark-circled"
+
+        onClicked: {
+            var date = new Date();
+            date.setDate(dayLV.currentIndex+1)
+            date.setMonth(monthLV.currentIndex)
+            date.setFullYear(yearLV.currentIndex+2000)
+            dtSettings.setDate(date)
+        }
     }
 }
 

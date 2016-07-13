@@ -11,7 +11,7 @@ OTHER_FILES += main.qml \
                DatePage.qml \
                BluetoothPage.qml \
                BrightnessPage.qml \
-               ScreenPage.qml \
+               USBPage.qml \
                WatchfacePage.qml \
                PoweroffPage.qml \
                RestartPage.qml \

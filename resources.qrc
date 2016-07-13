@@ -8,7 +8,7 @@
         <file>BrightnessPage.qml</file>
         <file>WallpaperPage.qml</file>
         <file>WatchfacePage.qml</file>
-        <file>ScreenPage.qml</file>
+        <file>USBPage.qml</file>
         <file>PoweroffPage.qml</file>
         <file>AboutPage.qml</file>
         <file>asteroid-logo.png</file>

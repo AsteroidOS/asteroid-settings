@@ -28,7 +28,7 @@ Application {
     Component { id: brightnessLayer; BrightnessPage { } }
     Component { id: wallpaperLayer;  WallpaperPage  { } }
     Component { id: watchfaceLayer;  WatchfacePage  { } }
-    Component { id: screenLayer;     ScreenPage     { } }
+    Component { id: usbLayer;        USBPage     { } }
     Component { id: poweroffLayer;   PoweroffPage   { } }
     Component { id: aboutLayer;      AboutPage      { } }
 
@@ -76,9 +76,9 @@ Application {
                 onClicked: layerStack.push(watchfaceLayer)
             }
             GridItem {
-                title: "Screen"
-                iconName: "monitor-outline"
-                onClicked: layerStack.push(screenLayer)
+                title: "USB"
+                iconName: "usb"
+                onClicked: layerStack.push(usbLayer)
             }
             GridItem {
                 title: "Power Off"

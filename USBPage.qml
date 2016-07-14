@@ -20,6 +20,9 @@ import org.nemomobile.dbus 2.0
 import org.asteroid.controls 1.0
 
 Rectangle {
+    id: root
+    property var pop
+
     ListModel {
         id: usbModesModel
         ListElement { title: "Adb Mode"; mode: "adb_mode" }
@@ -62,6 +65,8 @@ Rectangle {
 
         onClicked: {
             usbmodedDbus.call("set_mode", [usbModesModel.get(usbModeLV.currentIndex).mode])
+
+            root.pop();
         }
     }
     

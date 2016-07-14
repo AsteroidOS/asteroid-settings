@@ -20,6 +20,9 @@ import org.asteroid.controls 1.0
 import org.nemomobile.systemsettings 1.0
 
 Rectangle {
+    id: root
+    property var pop
+
     DateTimeSettings { id: dtSettings }
 
     Text {
@@ -150,6 +153,8 @@ Rectangle {
             date.setMonth(monthLV.currentIndex)
             date.setFullYear(yearLV.currentIndex+2000)
             dtSettings.setDate(date)
+
+            root.pop();
         }
     }
 }

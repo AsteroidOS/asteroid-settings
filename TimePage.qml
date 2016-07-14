@@ -21,6 +21,9 @@ import org.nemomobile.time 1.0
 import org.nemomobile.systemsettings 1.0
 
 Rectangle {
+    id: root
+    property var pop
+
     DateTimeSettings { id: dtSettings }
     WallClock { id: wallClock}
 
@@ -114,6 +117,8 @@ Rectangle {
 
         onClicked: {
             dtSettings.setTime(hourLV.currentIndex, minuteLV.currentIndex)
+
+            root.pop()
         }
     }
 }

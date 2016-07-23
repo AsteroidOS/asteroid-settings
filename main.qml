@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2016 - Sylvia van Os <iamsylvie@openmailbox.org>
  * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -22,20 +23,21 @@ import org.asteroid.controls 1.0
 Application {
     id: app
 
+    Component { id: languageLayer;   LanguagePage   { } }
     Component { id: timeLayer;       TimePage       { } }
     Component { id: dateLayer;       DatePage       { } }
     Component { id: bluetoothLayer;  BluetoothPage  { } }
     Component { id: brightnessLayer; BrightnessPage { } }
     Component { id: wallpaperLayer;  WallpaperPage  { } }
     Component { id: watchfaceLayer;  WatchfacePage  { } }
-    Component { id: usbLayer;        USBPage     { } }
+    Component { id: usbLayer;        USBPage        { } }
     Component { id: poweroffLayer;   PoweroffPage   { } }
     Component { id: aboutLayer;      AboutPage      { } }
 
     LayerStack { id: layerStack }
 
     Flickable {
-        contentHeight: DeviceInfo.hasRoundScreen ? 9*Units.dp(25) : height
+        contentHeight: DeviceInfo.hasRoundScreen ? 10*Units.dp(25) : height
         contentWidth: width
         boundsBehavior: DeviceInfo.hasRoundScreen ? Flickable.DragOverBounds : Flickable.StopAtBounds
         flickableDirection: Flickable.VerticalFlick
@@ -45,6 +47,11 @@ Application {
             anchors.fill: parent
             columns: DeviceInfo.hasRoundScreen ? 1 : 3
             
+            GridItem {
+                title: "Language"
+                iconName: "world-outline"
+                onClicked: layerStack.push(languageLayer)
+            }
             GridItem {
                 title: "Time"
                 iconName: "clock-outline"

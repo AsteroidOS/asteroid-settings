@@ -7,6 +7,7 @@ SOURCES +=     main.cpp
 RESOURCES +=   resources.qrc
 OTHER_FILES += main.qml \
                GridItem.qml \
+               LanguagePage.qml \
                TimePage.qml \
                DatePage.qml \
                BluetoothPage.qml \

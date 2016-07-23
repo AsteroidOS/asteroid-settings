@@ -18,6 +18,21 @@ OTHER_FILES += main.qml \
                RestartPage.qml \
                AboutPage.qml
 
+lupdate_only{
+    SOURCES = main.qml \
+              GridItem.qml \
+              LanguagePage.qml \
+              TimePage.qml \
+              DatePage.qml \
+              BluetoothPage.qml \
+              BrightnessPage.qml \
+              USBPage.qml \
+              WatchfacePage.qml \
+              PoweroffPage.qml \
+              RestartPage.qml \
+              AboutPage.qml
+}
+
 TARGET = asteroid-settings
 target.path = /usr/bin/
 

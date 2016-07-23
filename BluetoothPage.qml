@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2016 - Sylvia van Os <iamsylvie@openmailbox.org>
  * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -28,7 +29,7 @@ Rectangle {
         columnSpacing: 10
 
         Text {
-            text: "Use Bluetooth"
+            text: qsTr("Use Bluetooth")
         }
         Switch {
             id: btSwitch
@@ -36,7 +37,7 @@ Rectangle {
         }
 
         Text {
-            text: "Sync notifications"
+            text: qsTr("Sync notifications")
         }
         Switch {
             id: notifSwitch
@@ -44,7 +45,7 @@ Rectangle {
         }
 
         Text {
-            text: "Sync time"
+            text: qsTr("Sync time")
         }
         Switch {
             id: timeSwitch

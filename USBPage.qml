@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2016 - Sylvia van Os <iamsylvie@openmailbox.org>
  * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -25,10 +26,10 @@ Rectangle {
 
     ListModel {
         id: usbModesModel
-        ListElement { title: "Adb Mode"; mode: "adb_mode" }
-        ListElement { title: "Developer Mode"; mode: "developer_mode" }
-        ListElement { title: "Mass Storage"; mode: "mass_storage" }
-        ListElement { title: "MTP Mode"; mode: "mtp_mode" }
+        ListElement { title: qsTr("Adb Mode"); mode: "adb_mode" }
+        ListElement { title: qsTr("Developer Mode"); mode: "developer_mode" }
+        ListElement { title: qsTr("Mass Storage"); mode: "mass_storage" }
+        ListElement { title: qsTr("MTP Mode"); mode: "mtp_mode" }
     }
     ListView {
         id: usbModeLV

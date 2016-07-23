@@ -46,54 +46,54 @@ Application {
             id: grid
             anchors.fill: parent
             columns: DeviceInfo.hasRoundScreen ? 1 : 3
-            
+
             GridItem {
-                title: "Language"
+                title: qsTr("Language")
                 iconName: "world-outline"
                 onClicked: layerStack.push(languageLayer)
             }
             GridItem {
-                title: "Time"
+                title: qsTr("Time")
                 iconName: "clock-outline"
                 onClicked: layerStack.push(timeLayer)
             }
             GridItem {
-                title: "Date"
+                title: qsTr("Date")
                 iconName: "calendar-outline"
                 onClicked: layerStack.push(dateLayer)
             }
             GridItem {
-                title: "Bluetooth"
+                title: qsTr("Bluetooth")
                 iconName: "cloud-outline" // bluetooth would probably be more suited but it's not available in outline!
                 onClicked: layerStack.push(bluetoothLayer)
             }
             GridItem {
-                title: "Brightness"
+                title: qsTr("Brightness")
                 iconName: "sunny-outline"
                 onClicked: layerStack.push(brightnessLayer)
             }
             GridItem {
-                title: "Wallpaper"
+                title: qsTr("Wallpaper")
                 iconName: "photos-outline"
                 onClicked: layerStack.push(wallpaperLayer)
             }
             GridItem {
-                title: "Watchface"
+                title: qsTr("Watchface")
                 iconName: "color-wand-outline"
                 onClicked: layerStack.push(watchfaceLayer)
             }
             GridItem {
-                title: "USB"
+                title: qsTr("USB")
                 iconName: "usb"
                 onClicked: layerStack.push(usbLayer)
             }
             GridItem {
-                title: "Power Off"
+                title: qsTr("Power Off")
                 iconName: "bolt-outline" // power would probably be more suited but it's not available in outline!
                 onClicked: layerStack.push(poweroffLayer)
             }
             GridItem {
-                title: "About"
+                title: qsTr("About")
                 iconName: "help-outline"
                 onClicked: layerStack.push(aboutLayer)
             }

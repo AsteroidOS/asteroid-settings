@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2016 - Sylvia van Os <iamsylvie@openmailbox.org>
  * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -20,7 +21,7 @@ import org.nemomobile.dbus 2.0
 
 Rectangle {
     GridItem {
-        title: "Turn off"
+        title: qsTr("Turn off")
         iconName: "power"
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.horizontalCenter
@@ -30,7 +31,7 @@ Rectangle {
     }
 
     GridItem {
-        title: "Restart"
+        title: qsTr("Restart")
         iconName: "refresh"
         anchors.verticalCenter: parent.verticalCenter
         anchors.right: parent.horizontalCenter

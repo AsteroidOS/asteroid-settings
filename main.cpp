@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2016 - Sylvia van Os <iamsylvie@openmailbox.org>
  * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -16,12 +17,18 @@
  */
 
 #include <QQuickView>
+#include <QTranslator>
 #include <QGuiApplication>
 #include <MDeclarativeCache>
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     QScopedPointer<QGuiApplication> app(MDeclarativeCache::qApplication(argc, argv));
+
+    QTranslator translator;
+    translator.load(QLocale(), "asteroid-settings", ".", "/usr/share/translations", ".qm");
+    app->installTranslator(&translator);
+
     QScopedPointer<QQuickView> view(MDeclarativeCache::qQuickView());
     view->setSource(QUrl("qrc:/main.qml"));
     view->setTitle("Settings");

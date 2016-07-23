@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2016 - Sylvia van Os <iamsylvie@openmailbox.org>
  * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -22,7 +23,7 @@ import org.nemomobile.systemsettings 1.0
 
 Rectangle {
     Text {
-        text: "Brightness: " + displaySettings.brightness + "%"
+        text: qsTr("Brightness: %1%").arg(displaySettings.brightness)
         anchors.left: brightnessSlider.left
         anchors.bottom: brightnessSlider.top
 

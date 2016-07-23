@@ -28,7 +28,7 @@ Rectangle {
 
     Text {
         id: title
-        text: Select a language:
+        text: qsTr("Select a language:")
         height: parent.height*0.2
         anchors.top: parent.top
         anchors.left: parent.left

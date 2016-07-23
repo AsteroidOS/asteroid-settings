@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2016 - Sylvia van Os <iamsylvie@openmailbox.org>
  * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -27,7 +28,7 @@ Rectangle {
 
     Text {
         id: title
-        text: "Select a date:"
+        text: qsTr("Select a date:")
         height: parent.height*0.2
         anchors.top: parent.top
         anchors.left: parent.left

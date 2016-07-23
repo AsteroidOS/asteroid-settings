@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Settings
+Name[nl_NL]=Instellingen
 Categories=Applications;
 Exec=invoker --type=qtcomponents-qt5 /usr/bin/asteroid-settings
 Icon=preferences-system

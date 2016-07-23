@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2016 - Sylvia van Os <iamsylvie@openmailbox.org>
  * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -22,71 +23,77 @@ import org.asteroid.controls 1.0
 Application {
     id: app
 
+    Component { id: languageLayer;   LanguagePage   { } }
     Component { id: timeLayer;       TimePage       { } }
     Component { id: dateLayer;       DatePage       { } }
     Component { id: bluetoothLayer;  BluetoothPage  { } }
     Component { id: brightnessLayer; BrightnessPage { } }
     Component { id: wallpaperLayer;  WallpaperPage  { } }
     Component { id: watchfaceLayer;  WatchfacePage  { } }
-    Component { id: usbLayer;        USBPage     { } }
+    Component { id: usbLayer;        USBPage        { } }
     Component { id: poweroffLayer;   PoweroffPage   { } }
     Component { id: aboutLayer;      AboutPage      { } }
 
     LayerStack { id: layerStack }
 
     Flickable {
-        contentHeight: DeviceInfo.hasRoundScreen ? 9*Units.dp(25) : height
+        contentHeight: 10*Units.dp(25)
         contentWidth: width
-        boundsBehavior: DeviceInfo.hasRoundScreen ? Flickable.DragOverBounds : Flickable.StopAtBounds
+        boundsBehavior: Flickable.DragOverBounds
         flickableDirection: Flickable.VerticalFlick
         anchors.fill: parent
         GridLayout {
             id: grid
             anchors.fill: parent
-            columns: DeviceInfo.hasRoundScreen ? 1 : 3
-            
+            columns: 1
+
             GridItem {
-                title: "Time"
+                title: qsTr("Language")
+                iconName: "world-outline"
+                onClicked: layerStack.push(languageLayer)
+            }
+            GridItem {
+                title: qsTr("Time")
                 iconName: "clock-outline"
                 onClicked: layerStack.push(timeLayer)
             }
             GridItem {
-                title: "Date"
+                title: qsTr("Date")
                 iconName: "calendar-outline"
                 onClicked: layerStack.push(dateLayer)
             }
             GridItem {
-                title: "Bluetooth"
+                title: qsTr("Bluetooth")
                 iconName: "cloud-outline" // bluetooth would probably be more suited but it's not available in outline!
                 onClicked: layerStack.push(bluetoothLayer)
             }
             GridItem {
-                title: "Brightness"
+                title: qsTr("Brightness")
                 iconName: "sunny-outline"
                 onClicked: layerStack.push(brightnessLayer)
             }
             GridItem {
-                title: "Wallpaper"
+                title: qsTr("Wallpaper")
                 iconName: "photos-outline"
                 onClicked: layerStack.push(wallpaperLayer)
             }
             GridItem {
-                title: "Watchface"
+                title: qsTr("Watchface")
                 iconName: "color-wand-outline"
                 onClicked: layerStack.push(watchfaceLayer)
             }
             GridItem {
-                title: "USB"
+                title: qsTr("USB")
                 iconName: "usb"
                 onClicked: layerStack.push(usbLayer)
             }
             GridItem {
-                title: "Power Off"
+                title: qsTr("Power Off")
                 iconName: "bolt-outline" // power would probably be more suited but it's not available in outline!
                 onClicked: layerStack.push(poweroffLayer)
             }
             GridItem {
-                title: "About"
+                title: qsTr("About")
                 iconName: "help-outline"
                 onClicked: layerStack.push(aboutLayer)
             }

@@ -18,19 +18,17 @@
 
 import QtQuick 2.1
 import org.asteroid.controls 1.0
-import org.nemomobile.time 1.0
 import org.nemomobile.systemsettings 1.0
 
 Rectangle {
     id: root
     property var pop
 
-    DateTimeSettings { id: dtSettings }
-    WallClock { id: wallClock}
+    LanguageModel { id: langSettings }
 
     Text {
         id: title
-        text: qsTr("Select a time:")
+        text: qsTr("Select a language:")
         height: parent.height*0.2
         anchors.top: parent.top
         anchors.left: parent.left
@@ -40,55 +38,24 @@ Rectangle {
     }
 
     Row {
-        id: timeSelector
+        id: langSelector
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.top: title.bottom
         height: parent.height*0.6
 
         ListView {
-            id: hourLV
+            id: langLV
             height: parent.height
-            width: parent.width/2-1
+            width: parent.width
             clip: true
             spacing: 15
-            model: 24
+            model: langSettings
             delegate: Item {
-                width: hourLV.width
+                width: langLV.width
                 height: 30
                 Text {
-                    text: index
-                    anchors.centerIn: parent
-                    color: parent.ListView.isCurrentItem ? "black" : "grey"
-                    scale: parent.ListView.isCurrentItem ? 1.5 : 1
-                    Behavior on scale { NumberAnimation { duration: 200 } }
-                    Behavior on color { ColorAnimation { } }
-                }
-            }
-            preferredHighlightBegin: height / 2 - 15
-            preferredHighlightEnd: height / 2 + 15
-            highlightRangeMode: ListView.StrictlyEnforceRange
-        }
-
-        Rectangle {
-            width: 1
-            height: parent.height*0.8
-            color: "grey"
-            anchors.verticalCenter: parent.verticalCenter
-        }
-
-        ListView {
-            id: minuteLV
-            height: parent.height
-            width: parent.width/2-1
-            clip: true
-            spacing: 15
-            model: 60
-            delegate: Item {
-                width: minuteLV.width
-                height: 30
-                Text {
-                    text: index
+                    text: langSettings.languageName(index)
                     anchors.centerIn: parent
                     color: parent.ListView.isCurrentItem ? "black" : "grey"
                     scale: parent.ListView.isCurrentItem ? 1.5 : 1
@@ -103,8 +70,7 @@ Rectangle {
     }
 
     Component.onCompleted: {
-        hourLV.currentIndex = wallClock.time.getHours();
-        minuteLV.currentIndex = wallClock.time.getMinutes();
+        langLV.currentIndex = langSettings.currentIndex;
     }
 
     IconButton {
@@ -117,7 +83,7 @@ Rectangle {
         iconName: "checkmark-circled"
 
         onClicked: {
-            dtSettings.setTime(hourLV.currentIndex, minuteLV.currentIndex)
+            langSettings.setSystemLocale(langSettings.locale(langLV.currentIndex), LanguageModel.UpdateAndReboot)
 
             root.pop()
         }

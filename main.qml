@@ -37,15 +37,15 @@ Application {
     LayerStack { id: layerStack }
 
     Flickable {
-        contentHeight: DeviceInfo.hasRoundScreen ? 10*Units.dp(25) : height
+        contentHeight: 10*Units.dp(25)
         contentWidth: width
-        boundsBehavior: DeviceInfo.hasRoundScreen ? Flickable.DragOverBounds : Flickable.StopAtBounds
+        boundsBehavior: Flickable.DragOverBounds
         flickableDirection: Flickable.VerticalFlick
         anchors.fill: parent
         GridLayout {
             id: grid
             anchors.fill: parent
-            columns: DeviceInfo.hasRoundScreen ? 1 : 3
+            columns: 1
 
             GridItem {
                 title: qsTr("Language")

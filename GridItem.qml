@@ -32,9 +32,8 @@ Item {
         id: icon
         color: "black"
         anchors.top: parent.top
-        anchors.horizontalCenter: DeviceInfo.hasRoundScreen ? undefined : parent.horizontalCenter
-        anchors.left: DeviceInfo.hasRoundScreen ? parent.left : undefined
-        anchors.leftMargin: DeviceInfo.hasRoundScreen ? Units.dp(10) : undefined
+        anchors.left: parent.left
+        anchors.leftMargin: Units.dp(10)
     }
     Text {
         id: label
@@ -42,8 +41,7 @@ Item {
         font.pointSize: 11
         horizontalAlignment: Text.AlignHCenter
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.verticalCenter: DeviceInfo.hasRoundScreen ? parent.verticalCenter : undefined
-        anchors.bottom: DeviceInfo.hasRoundScreen ? undefined : parent.bottom
+        anchors.verticalCenter: parent.verticalCenter
         anchors.bottomMargin: Units.dp(5)
     }
 

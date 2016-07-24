@@ -33,8 +33,6 @@ lupdate_only{
               AboutPage.qml
 }
 
-TRANSLATIONS = asteroid-settings.*.ts
-
 TARGET = asteroid-settings
 target.path = /usr/bin/
 

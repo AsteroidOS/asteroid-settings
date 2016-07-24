@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Settings
+Name[de_DE]=Einstellungen
 Name[es_ES]=Ajustes
 Name[nl_NL]=Instellingen
 Categories=Applications;

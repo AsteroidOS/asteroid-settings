@@ -17,27 +17,78 @@
  */
 
 import QtQuick 2.1
+import org.asteroid.controls 1.0
 import org.nemomobile.dbus 2.0
 
 Rectangle {
-    GridItem {
-        title: qsTr("Turn off")
-        iconName: "power"
+    Rectangle {
+        anchors.fill: parent
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#777777" }
+            GradientStop { position: 1.0; color: "#2d2d2d" }
+        }
+    }
+
+    Item {
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.horizontalCenter
         width: parent.width*0.3
         height: width
-        onClicked: dsmeDbus.call("req_shutdown", [])
+        Icon {
+            color: "white"
+            name: "power"
+            anchors.top: parent.top
+            anchors.horizontalCenter: DeviceInfo.hasRoundScreen ? undefined : parent.horizontalCenter
+            anchors.left: DeviceInfo.hasRoundScreen ? parent.left : undefined
+            anchors.leftMargin: DeviceInfo.hasRoundScreen ? Units.dp(10) : undefined
+        }
+        Text {
+            text: qsTr("Turn off")
+            color: "white"
+            font.pointSize: 11
+            horizontalAlignment: Text.AlignHCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: DeviceInfo.hasRoundScreen ? parent.verticalCenter : undefined
+            anchors.bottom: DeviceInfo.hasRoundScreen ? undefined : parent.bottom
+            anchors.bottomMargin: Units.dp(5)
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            hoverEnabled: true
+            onClicked: dsmeDbus.call("req_shutdown", [])
+        }
     }
 
-    GridItem {
-        title: qsTr("Restart")
-        iconName: "refresh"
+    Item {
         anchors.verticalCenter: parent.verticalCenter
         anchors.right: parent.horizontalCenter
         width: parent.width*0.3
         height: width
-        onClicked: dsmeDbus.call("req_reboot", [])
+        Icon {
+            color: "white"
+            name: "refresh"
+            anchors.top: parent.top
+            anchors.horizontalCenter: DeviceInfo.hasRoundScreen ? undefined : parent.horizontalCenter
+            anchors.left: DeviceInfo.hasRoundScreen ? parent.left : undefined
+            anchors.leftMargin: DeviceInfo.hasRoundScreen ? Units.dp(10) : undefined
+        }
+        Text {
+            text: qsTr("Restart")
+            color: "white"
+            font.pointSize: 11
+            horizontalAlignment: Text.AlignHCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: DeviceInfo.hasRoundScreen ? parent.verticalCenter : undefined
+            anchors.bottom: DeviceInfo.hasRoundScreen ? undefined : parent.bottom
+            anchors.bottomMargin: Units.dp(5)
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            hoverEnabled: true
+            onClicked: dsmeDbus.call("req_reboot", [])
+        }
     }
 
     DBusInterface {

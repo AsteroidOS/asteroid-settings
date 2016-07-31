@@ -23,6 +23,13 @@ import org.asteroid.controls 1.0
 Rectangle {
     id: root
     property var pop
+    Rectangle {
+        anchors.fill: parent
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#777777" }
+            GradientStop { position: 1.0; color: "#2d2d2d" }
+        }
+    }
 
     ListModel {
         id: usbModesModel
@@ -44,7 +51,7 @@ Rectangle {
             Text {
                 text: title
                 anchors.centerIn: parent
-                color: parent.ListView.isCurrentItem ? "black" : "grey"
+                color: parent.ListView.isCurrentItem ? "white" : "lightgrey"
                 scale: parent.ListView.isCurrentItem ? 1.5 : 1
                 Behavior on scale { NumberAnimation { duration: 200 } }
                 Behavior on color { ColorAnimation { } }
@@ -61,7 +68,8 @@ Rectangle {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
 
-        iconColor: "black"
+        iconColor: "white"
+        pressedIconColor: "lightgrey"
         iconName: "checkmark-circled"
 
         onClicked: {

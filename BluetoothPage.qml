@@ -21,6 +21,14 @@ import org.asteroid.controls 1.0
 import QtQuick.Layouts 1.1
 
 Rectangle {
+    Rectangle {
+        anchors.fill: parent
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#777777" }
+            GradientStop { position: 1.0; color: "#2d2d2d" }
+        }
+    }
+
     GridLayout {
         columns: 2
         anchors.fill: parent
@@ -30,6 +38,7 @@ Rectangle {
 
         Text {
             text: qsTr("Use Bluetooth")
+            color: "white"
         }
         Switch {
             id: btSwitch
@@ -38,6 +47,7 @@ Rectangle {
 
         Text {
             text: qsTr("Sync notifications")
+            color: "white"
         }
         Switch {
             id: notifSwitch
@@ -46,6 +56,7 @@ Rectangle {
 
         Text {
             text: qsTr("Sync time")
+            color: "white"
         }
         Switch {
             id: timeSwitch

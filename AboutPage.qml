@@ -19,6 +19,14 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.1
 
 Rectangle {
+    Rectangle {
+        anchors.fill: parent
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#777777" }
+            GradientStop { position: 1.0; color: "#2d2d2d" }
+        }
+    }
+
     Image {
         fillMode: Image.PreserveAspectFit
         source: "qrc:///asteroid-logo.png"
@@ -29,6 +37,7 @@ Rectangle {
     }
     Text {
         id: osLabel
+        color: "white"
         text: "<b>AsteroidOS</b>"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: releaseLabel.top
@@ -37,7 +46,7 @@ Rectangle {
     Text {
         id: releaseLabel
         text: "Developer preview"
-        color: "#333"
+        color: "lightgrey"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 13

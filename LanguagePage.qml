@@ -23,12 +23,20 @@ import org.nemomobile.systemsettings 1.0
 Rectangle {
     id: root
     property var pop
+    Rectangle {
+        anchors.fill: parent
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#777777" }
+            GradientStop { position: 1.0; color: "#2d2d2d" }
+        }
+    }
 
     LanguageModel { id: langSettings }
 
     Text {
         id: title
         text: qsTr("Select a language:")
+        color: "white"
         height: parent.height*0.2
         anchors.top: parent.top
         anchors.left: parent.left
@@ -57,7 +65,7 @@ Rectangle {
                 Text {
                     text: langSettings.languageName(index)
                     anchors.centerIn: parent
-                    color: parent.ListView.isCurrentItem ? "black" : "grey"
+                    color: parent.ListView.isCurrentItem ? "white" : "lightgrey"
                     scale: parent.ListView.isCurrentItem ? 1.5 : 1
                     Behavior on scale { NumberAnimation { duration: 200 } }
                     Behavior on color { ColorAnimation { } }
@@ -79,7 +87,7 @@ Rectangle {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
 
-        iconColor: "black"
+        iconColor: "white"
         iconName: "checkmark-circled"
 
         onClicked: {

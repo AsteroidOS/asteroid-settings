@@ -26,23 +26,23 @@ Item {
     signal clicked()
 
     Layout.fillWidth: true
-    Layout.fillHeight: true
+    height: Units.dp(25)
 
     Icon {
         id: icon
-        color: "black"
+        color: "white"
         anchors.top: parent.top
         anchors.left: parent.left
-        anchors.leftMargin: Units.dp(10)
+        anchors.leftMargin: Units.dp(20)
     }
     Text {
         id: label
-        color: "black"
-        font.pointSize: 11
+        color: "white"
+        font.pointSize: parent.height/4
         horizontalAlignment: Text.AlignHCenter
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.leftMargin: Units.dp(15)
+        anchors.left: icon.right
         anchors.verticalCenter: parent.verticalCenter
-        anchors.bottomMargin: Units.dp(5)
     }
 
     MouseArea {
@@ -50,6 +50,12 @@ Item {
         anchors.fill: parent
         hoverEnabled: true
         onClicked: gridItem.clicked()
+    }
+
+    Rectangle {
+        anchors.fill: parent
+        color: "white"
+        opacity: mouseArea.containsPress ? 0.2 : 0
     }
 }
 

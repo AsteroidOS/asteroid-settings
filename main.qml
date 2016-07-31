@@ -22,10 +22,17 @@ import org.asteroid.controls 1.0
 
 Application {
     id: app
+    Rectangle {
+        anchors.fill: parent
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#777777" }
+            GradientStop { position: 1.0; color: "#2d2d2d" }
+        }
+    }
 
-    Component { id: languageLayer;   LanguagePage   { } }
     Component { id: timeLayer;       TimePage       { } }
     Component { id: dateLayer;       DatePage       { } }
+    Component { id: languageLayer;   LanguagePage   { } }
     Component { id: bluetoothLayer;  BluetoothPage  { } }
     Component { id: brightnessLayer; BrightnessPage { } }
     Component { id: wallpaperLayer;  WallpaperPage  { } }
@@ -37,7 +44,7 @@ Application {
     LayerStack { id: layerStack }
 
     Flickable {
-        contentHeight: 10*Units.dp(25)
+        contentHeight: 11*Units.dp(25)
         contentWidth: width
         boundsBehavior: Flickable.DragOverBounds
         flickableDirection: Flickable.VerticalFlick
@@ -47,11 +54,6 @@ Application {
             anchors.fill: parent
             columns: 1
 
-            GridItem {
-                title: qsTr("Language")
-                iconName: "world-outline"
-                onClicked: layerStack.push(languageLayer)
-            }
             GridItem {
                 title: qsTr("Time")
                 iconName: "clock-outline"
@@ -63,8 +65,13 @@ Application {
                 onClicked: layerStack.push(dateLayer)
             }
             GridItem {
+                title: qsTr("Language")
+                iconName: "world-outline"
+                onClicked: layerStack.push(languageLayer)
+            }
+            GridItem {
                 title: qsTr("Bluetooth")
-                iconName: "cloud-outline" // bluetooth would probably be more suited but it's not available in outline!
+                iconName: "cloud-outline"
                 onClicked: layerStack.push(bluetoothLayer)
             }
             GridItem {
@@ -89,7 +96,7 @@ Application {
             }
             GridItem {
                 title: qsTr("Power Off")
-                iconName: "bolt-outline" // power would probably be more suited but it's not available in outline!
+                iconName: "bolt-outline"
                 onClicked: layerStack.push(poweroffLayer)
             }
             GridItem {

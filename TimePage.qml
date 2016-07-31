@@ -24,6 +24,13 @@ import org.nemomobile.systemsettings 1.0
 Rectangle {
     id: root
     property var pop
+    Rectangle {
+        anchors.fill: parent
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#777777" }
+            GradientStop { position: 1.0; color: "#2d2d2d" }
+        }
+    }
 
     DateTimeSettings { id: dtSettings }
     WallClock { id: wallClock}
@@ -31,6 +38,7 @@ Rectangle {
     Text {
         id: title
         text: qsTr("Select a time:")
+        color: "white"
         height: parent.height*0.2
         anchors.top: parent.top
         anchors.left: parent.left
@@ -59,7 +67,7 @@ Rectangle {
                 Text {
                     text: index
                     anchors.centerIn: parent
-                    color: parent.ListView.isCurrentItem ? "black" : "grey"
+                    color: parent.ListView.isCurrentItem ? "white" : "lightgrey"
                     scale: parent.ListView.isCurrentItem ? 1.5 : 1
                     Behavior on scale { NumberAnimation { duration: 200 } }
                     Behavior on color { ColorAnimation { } }
@@ -73,7 +81,7 @@ Rectangle {
         Rectangle {
             width: 1
             height: parent.height*0.8
-            color: "grey"
+            color: "lightgrey"
             anchors.verticalCenter: parent.verticalCenter
         }
 
@@ -90,7 +98,7 @@ Rectangle {
                 Text {
                     text: index
                     anchors.centerIn: parent
-                    color: parent.ListView.isCurrentItem ? "black" : "grey"
+                    color: parent.ListView.isCurrentItem ? "white" : "lightgrey"
                     scale: parent.ListView.isCurrentItem ? 1.5 : 1
                     Behavior on scale { NumberAnimation { duration: 200 } }
                     Behavior on color { ColorAnimation { } }
@@ -113,7 +121,8 @@ Rectangle {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
 
-        iconColor: "black"
+        iconColor: "white"
+        pressedIconColor: "lightgrey"
         iconName: "checkmark-circled"
 
         onClicked: {

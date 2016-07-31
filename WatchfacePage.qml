@@ -21,6 +21,14 @@ import Qt.labs.folderlistmodel 2.1
 import org.nemomobile.configuration 1.0
 
 Rectangle {
+    Rectangle {
+        anchors.fill: parent
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#777777" }
+            GradientStop { position: 1.0; color: "#2d2d2d" }
+        }
+    }
+
     ConfigurationValue {
         id: watchfaceSource
         key: "/desktop/asteroid/watchface"

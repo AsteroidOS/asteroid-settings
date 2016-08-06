@@ -97,7 +97,7 @@
     <message>
         <location filename="main.qml" line="56"></location>
         <source>Time</source>
-        <translation type="unfinished">Zeit/Uhrzeit</translation>
+        <translation>Uhrzeit</translation>
     </message>
     <message>
         <location filename="main.qml" line="61"></location>
@@ -122,7 +122,7 @@
     <message>
         <location filename="main.qml" line="81"></location>
         <source>Watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>Ziffernblatt</translation>
     </message>
     <message>
         <location filename="main.qml" line="86"></location>

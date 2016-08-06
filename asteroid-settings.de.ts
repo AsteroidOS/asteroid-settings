@@ -1,20 +1,20 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.0" language="de_DE">
 <context>
     <name>BluetoothPage</name>
     <message>
-        <location filename="BluetoothPage.qml" line="32"></location>
+        <location filename="BluetoothPage.qml" line="32"/>
         <source>Use Bluetooth</source>
-        <translation type="unfinished">Bluetooth benutzen</translation>
+        <translation>Bluetooth aktivieren</translation>
     </message>
     <message>
-        <location filename="BluetoothPage.qml" line="40"></location>
+        <location filename="BluetoothPage.qml" line="40"/>
         <source>Sync notifications</source>
         <translation>Benachrichtigungen synchronisieren</translation>
     </message>
     <message>
-        <location filename="BluetoothPage.qml" line="48"></location>
+        <location filename="BluetoothPage.qml" line="48"/>
         <source>Sync time</source>
         <translation>Uhrzeit synchronisieren</translation>
     </message>
@@ -22,7 +22,7 @@
 <context>
     <name>BrightnessPage</name>
     <message>
-        <location filename="BrightnessPage.qml" line="26"></location>
+        <location filename="BrightnessPage.qml" line="26"/>
         <source>Brightness: %1%</source>
         <translation>Helligkeit: %1%</translation>
     </message>
@@ -30,7 +30,7 @@
 <context>
     <name>DatePage</name>
     <message>
-        <location filename="DatePage.qml" line="31"></location>
+        <location filename="DatePage.qml" line="31"/>
         <source>Select a date:</source>
         <translation>Datum auswählen:</translation>
     </message>
@@ -38,7 +38,7 @@
 <context>
     <name>LanguagePage</name>
     <message>
-        <location filename="LanguagePage.qml" line="31"></location>
+        <location filename="LanguagePage.qml" line="31"/>
         <source>Select a language:</source>
         <translation>Sprache auswählen:</translation>
     </message>
@@ -46,12 +46,12 @@
 <context>
     <name>PoweroffPage</name>
     <message>
-        <location filename="PoweroffPage.qml" line="24"></location>
+        <location filename="PoweroffPage.qml" line="24"/>
         <source>Turn off</source>
         <translation>Ausschalten</translation>
     </message>
     <message>
-        <location filename="PoweroffPage.qml" line="34"></location>
+        <location filename="PoweroffPage.qml" line="34"/>
         <source>Restart</source>
         <translation>Neustarten</translation>
     </message>
@@ -59,7 +59,7 @@
 <context>
     <name>TimePage</name>
     <message>
-        <location filename="TimePage.qml" line="33"></location>
+        <location filename="TimePage.qml" line="33"/>
         <source>Select a time:</source>
         <translation>Wähle eine Uhrzeit:</translation>
     </message>
@@ -67,22 +67,22 @@
 <context>
     <name>USBPage</name>
     <message>
-        <location filename="USBPage.qml" line="29"></location>
+        <location filename="USBPage.qml" line="29"/>
         <source>Adb Mode</source>
         <translation>ADB Modus</translation>
     </message>
     <message>
-        <location filename="USBPage.qml" line="30"></location>
+        <location filename="USBPage.qml" line="30"/>
         <source>Developer Mode</source>
         <translation>Entwicklermodus</translation>
     </message>
     <message>
-        <location filename="USBPage.qml" line="31"></location>
+        <location filename="USBPage.qml" line="31"/>
         <source>Mass Storage</source>
         <translation>Massenspeicher</translation>
     </message>
     <message>
-        <location filename="USBPage.qml" line="32"></location>
+        <location filename="USBPage.qml" line="32"/>
         <source>MTP Mode</source>
         <translation>MTP Modus</translation>
     </message>
@@ -90,52 +90,52 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="main.qml" line="51"></location>
+        <location filename="main.qml" line="51"/>
         <source>Language</source>
         <translation>Sprache</translation>
     </message>
     <message>
-        <location filename="main.qml" line="56"></location>
+        <location filename="main.qml" line="56"/>
         <source>Time</source>
         <translation>Uhrzeit</translation>
     </message>
     <message>
-        <location filename="main.qml" line="61"></location>
+        <location filename="main.qml" line="61"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
     <message>
-        <location filename="main.qml" line="66"></location>
+        <location filename="main.qml" line="66"/>
         <source>Bluetooth</source>
         <translation>Bluetooth</translation>
     </message>
     <message>
-        <location filename="main.qml" line="71"></location>
+        <location filename="main.qml" line="71"/>
         <source>Brightness</source>
         <translation>Helligkeit</translation>
     </message>
     <message>
-        <location filename="main.qml" line="76"></location>
+        <location filename="main.qml" line="76"/>
         <source>Wallpaper</source>
         <translation>Hintergrund</translation>
     </message>
     <message>
-        <location filename="main.qml" line="81"></location>
+        <location filename="main.qml" line="81"/>
         <source>Watchface</source>
         <translation>Ziffernblatt</translation>
     </message>
     <message>
-        <location filename="main.qml" line="86"></location>
+        <location filename="main.qml" line="86"/>
         <source>USB</source>
         <translation>USB</translation>
     </message>
     <message>
-        <location filename="main.qml" line="91"></location>
+        <location filename="main.qml" line="91"/>
         <source>Power Off</source>
         <translation>Ausschalten</translation>
     </message>
     <message>
-        <location filename="main.qml" line="96"></location>
+        <location filename="main.qml" line="96"/>
         <source>About</source>
         <translation>Über</translation>
     </message>

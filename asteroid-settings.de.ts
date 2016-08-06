@@ -6,7 +6,7 @@
     <message>
         <location filename="BluetoothPage.qml" line="32"></location>
         <source>Use Bluetooth</source>
-        <translation>Bluetooth benutzen</translation>
+        <translation type="unfinished">Bluetooth benutzen</translation>
     </message>
     <message>
         <location filename="BluetoothPage.qml" line="40"></location>
@@ -32,7 +32,7 @@
     <message>
         <location filename="DatePage.qml" line="31"></location>
         <source>Select a date:</source>
-        <translation>Wähle ein Datum:</translation>
+        <translation>Datum auswählen:</translation>
     </message>
 </context>
 <context>
@@ -40,7 +40,7 @@
     <message>
         <location filename="LanguagePage.qml" line="31"></location>
         <source>Select a language:</source>
-        <translation>Wähle eine Sprache:</translation>
+        <translation>Sprache auswählen:</translation>
     </message>
 </context>
 <context>

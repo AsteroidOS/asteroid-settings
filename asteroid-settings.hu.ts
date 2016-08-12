@@ -67,7 +67,7 @@
     </message>
     <message>
         <source>Mass Storage</source>
-        <translation>Háttértároló</translation>
+        <translation>Háttértárolás</translation>
     </message>
     <message>
         <source>MTP Mode</source>
@@ -114,7 +114,7 @@
     </message>
     <message>
         <source>About</source>
-        <translation>A telefonról</translation>
+        <translation>Az okosóráról</translation>
     </message>
 </context>
 </TS>

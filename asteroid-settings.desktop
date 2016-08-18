@@ -3,6 +3,7 @@ Type=Application
 Name=Settings
 Name[de_DE]=Einstellungen
 Name[es_ES]=Ajustes
+Name[fr_FR]=Paramètres 
 Name[nl_NL]=Instellingen
 Name[pl_PL]=Ustawienia
 Categories=Applications;

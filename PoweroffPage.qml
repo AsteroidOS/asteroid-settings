@@ -38,9 +38,7 @@ Rectangle {
             color: "white"
             name: "power"
             anchors.top: parent.top
-            anchors.horizontalCenter: DeviceInfo.hasRoundScreen ? undefined : parent.horizontalCenter
-            anchors.left: DeviceInfo.hasRoundScreen ? parent.left : undefined
-            anchors.leftMargin: DeviceInfo.hasRoundScreen ? Units.dp(10) : undefined
+            anchors.horizontalCenter: parent.horizontalCenter
         }
         Text {
             text: qsTr("Turn off")
@@ -48,8 +46,7 @@ Rectangle {
             font.pointSize: 11
             horizontalAlignment: Text.AlignHCenter
             anchors.horizontalCenter: parent.horizontalCenter
-            anchors.verticalCenter: DeviceInfo.hasRoundScreen ? parent.verticalCenter : undefined
-            anchors.bottom: DeviceInfo.hasRoundScreen ? undefined : parent.bottom
+            anchors.bottom: parent.bottom
             anchors.bottomMargin: Units.dp(5)
         }
 
@@ -69,9 +66,7 @@ Rectangle {
             color: "white"
             name: "refresh"
             anchors.top: parent.top
-            anchors.horizontalCenter: DeviceInfo.hasRoundScreen ? undefined : parent.horizontalCenter
-            anchors.left: DeviceInfo.hasRoundScreen ? parent.left : undefined
-            anchors.leftMargin: DeviceInfo.hasRoundScreen ? Units.dp(10) : undefined
+            anchors.horizontalCenter: parent.horizontalCenter
         }
         Text {
             text: qsTr("Restart")
@@ -79,8 +74,7 @@ Rectangle {
             font.pointSize: 11
             horizontalAlignment: Text.AlignHCenter
             anchors.horizontalCenter: parent.horizontalCenter
-            anchors.verticalCenter: DeviceInfo.hasRoundScreen ? parent.verticalCenter : undefined
-            anchors.bottom: DeviceInfo.hasRoundScreen ? undefined : parent.bottom
+            anchors.bottom: parent.bottom
             anchors.bottomMargin: Units.dp(5)
         }
 

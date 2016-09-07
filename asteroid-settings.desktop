@@ -8,5 +8,5 @@ Name[nl_NL]=Instellingen
 Name[pl_PL]=Ustawienia
 Categories=Applications;
 Exec=invoker --type=qtcomponents-qt5 /usr/bin/asteroid-settings
-Icon=preferences-system
+Icon=ios-settings-outline
 X-Desktop-File-Install-Version=0.20

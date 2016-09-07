@@ -69,7 +69,7 @@ Rectangle {
                 }
                 Icon {
                     color: "white"
-                    name: "checkmark-circled"
+                    name: "ios-checkmark-circle"
                     anchors.bottom: parent.bottom
                     anchors.right: parent.right
                     height: width

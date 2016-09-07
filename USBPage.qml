@@ -70,7 +70,7 @@ Rectangle {
 
         iconColor: "white"
         pressedIconColor: "lightgrey"
-        iconName: "checkmark-circled"
+        iconName: "ios-add-circle-outline"
 
         onClicked: {
             usbmodedDbus.call("set_mode", [usbModesModel.get(usbModeLV.currentIndex).mode])

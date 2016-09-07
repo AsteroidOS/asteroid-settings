@@ -36,7 +36,7 @@ Rectangle {
         height: width
         Icon {
             color: "white"
-            name: "power"
+            name: "ios-power-outline"
             anchors.top: parent.top
             anchors.horizontalCenter: parent.horizontalCenter
         }
@@ -64,7 +64,7 @@ Rectangle {
         height: width
         Icon {
             color: "white"
-            name: "refresh"
+            name: "ios-sync"
             anchors.top: parent.top
             anchors.horizontalCenter: parent.horizontalCenter
         }

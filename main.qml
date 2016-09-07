@@ -56,37 +56,37 @@ Application {
 
             GridItem {
                 title: qsTr("Time")
-                iconName: "clock-outline"
+                iconName: "ios-clock-outline"
                 onClicked: layerStack.push(timeLayer)
             }
             GridItem {
                 title: qsTr("Date")
-                iconName: "calendar-outline"
+                iconName: "ios-calendar-outline"
                 onClicked: layerStack.push(dateLayer)
             }
             GridItem {
                 title: qsTr("Language")
-                iconName: "world-outline"
+                iconName: "ios-globe-outline"
                 onClicked: layerStack.push(languageLayer)
             }
             GridItem {
                 title: qsTr("Bluetooth")
-                iconName: "cloud-outline"
+                iconName: "ios-cloud-outline"
                 onClicked: layerStack.push(bluetoothLayer)
             }
             GridItem {
                 title: qsTr("Brightness")
-                iconName: "sunny-outline"
+                iconName: "ios-sunny-outline"
                 onClicked: layerStack.push(brightnessLayer)
             }
             GridItem {
                 title: qsTr("Wallpaper")
-                iconName: "photos-outline"
+                iconName: "ios-images-outline"
                 onClicked: layerStack.push(wallpaperLayer)
             }
             GridItem {
                 title: qsTr("Watchface")
-                iconName: "color-wand-outline"
+                iconName: "ios-color-wand-outline"
                 onClicked: layerStack.push(watchfaceLayer)
             }
             GridItem {
@@ -96,12 +96,12 @@ Application {
             }
             GridItem {
                 title: qsTr("Power Off")
-                iconName: "bolt-outline"
+                iconName: "ios-flash-outline"
                 onClicked: layerStack.push(poweroffLayer)
             }
             GridItem {
                 title: qsTr("About")
-                iconName: "help-outline"
+                iconName: "ios-help-circle-outline"
                 onClicked: layerStack.push(aboutLayer)
             }
         }

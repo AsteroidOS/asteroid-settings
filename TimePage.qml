@@ -123,7 +123,7 @@ Rectangle {
 
         iconColor: "white"
         pressedIconColor: "lightgrey"
-        iconName: "checkmark-circled"
+        iconName: "ios-add-circle-outline"
 
         onClicked: {
             dtSettings.setTime(hourLV.currentIndex, minuteLV.currentIndex)

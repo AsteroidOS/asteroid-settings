@@ -16,9 +16,11 @@
  */
 
 import QtQuick 2.1
+import QtGraphicalEffects 1.0
 import QtQuick.Layouts 1.1
 import Qt.labs.folderlistmodel 2.1
 import org.nemomobile.configuration 1.0
+import org.asteroid.controls 1.0
 
 Rectangle {
     Rectangle {
@@ -57,6 +59,22 @@ Rectangle {
                 MouseArea {
                     anchors.fill: parent
                     onClicked: wallpaperSource.value = folderModel.folder + "/" + fileName
+                }
+
+                BrightnessContrast {
+                    anchors.fill: parent
+                    source: parent
+                    brightness: -0.4
+                    visible: wallpaperSource.value == folderModel.folder + "/" + fileName
+                }
+                Icon {
+                    color: "white"
+                    name: "checkmark-circled"
+                    anchors.bottom: parent.bottom
+                    anchors.right: parent.right
+                    height: width
+                    width: parent.width*0.3
+                    visible: wallpaperSource.value == folderModel.folder + "/" + fileName
                 }
             }
         }

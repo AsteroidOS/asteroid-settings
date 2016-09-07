@@ -31,7 +31,7 @@ Rectangle {
         fillMode: Image.PreserveAspectFit
         source: "qrc:///asteroid-logo.png"
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.topMargin: 13
+        anchors.topMargin: 15
         anchors.top: parent.top
         anchors.bottom: osLabel.top
     }
@@ -49,7 +49,7 @@ Rectangle {
         color: "lightgrey"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: 13
+        anchors.bottomMargin: 30
         font.pointSize: 12
     }
 }

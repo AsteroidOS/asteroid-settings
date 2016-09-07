@@ -19,6 +19,7 @@
 import QtQuick 2.1
 import org.asteroid.controls 1.0
 import QtQuick.Layouts 1.1
+import org.nemomobile.dbus 1.0
 
 Rectangle {
     Rectangle {
@@ -29,38 +30,67 @@ Rectangle {
         }
     }
 
-    GridLayout {
-        columns: 2
-        anchors.fill: parent
+    DBusInterface {
+        id: bluez_adapter_dbus
+
+        destination: "org.bluez"
+        path: "/org/bluez/hci0"
+        iface: "org.bluez.Adapter1"
+
+        busType: DBusInterface.SystemBus
+    }
+
+    DBusInterface {
+        id: bluez_advertiser_dbus
+
+        destination: "org.bluez"
+        path: "/org/bluez/hci0"
+        iface: "org.bluez.LEAdvertisingManager1"
+        busType: DBusInterface.SystemBus
+    }
+
+    Text {
+        text: qsTr("Use Bluetooth")
+        color: "white"
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.verticalCenter: btSwitch.verticalCenter
         anchors.margins: 20
-        rowSpacing: 10
-        columnSpacing: 10
+    }
+    Switch {
+        id: btSwitch
+        anchors.top: parent.top
+        anchors.right: parent.right
+        anchors.margins: 20
+        checked:  bluez_adapter_dbus.getProperty("Powered")
+        onCheckedChanged: bluez_adapter_dbus.setProperty("Powered", btSwitch.checked)
+    }
 
-        Text {
-            text: qsTr("Use Bluetooth")
+    Item {
+        visible: btSwitch.checked
+        anchors.centerIn: parent
+        width: parent.width*0.3
+        height: width
+        Icon {
             color: "white"
+            name: "ios-radio-outline"
+            anchors.top: parent.top
+            anchors.horizontalCenter:  parent.horizontalCenter
         }
-        Switch {
-            id: btSwitch
-            anchors.right: parent.right
+        Text {
+            text: qsTr("Advertise")
+            color: "white"
+            font.pointSize: 11
+            horizontalAlignment: Text.AlignHCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: Units.dp(5)
         }
 
-        Text {
-            text: qsTr("Sync notifications")
-            color: "white"
-        }
-        Switch {
-            id: notifSwitch
-            anchors.right: parent.right
-        }
-
-        Text {
-            text: qsTr("Sync time")
-            color: "white"
-        }
-        Switch {
-            id: timeSwitch
-            anchors.right: parent.right
+        MouseArea {
+            anchors.fill: parent
+            hoverEnabled: true
+            onClicked: bluez_advertiser_dbus.call("RegisterAdvertisement", []) // TODO: Doesn't work
         }
     }
 }

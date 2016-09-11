@@ -88,7 +88,7 @@ Rectangle {
         anchors.bottom: parent.bottom
 
         iconColor: "white"
-        iconName: "ios-add-circle-outline"
+        iconName: "ios-checkmark-circle-outline"
 
         onClicked: {
             langSettings.setSystemLocale(langSettings.locale(langLV.currentIndex), LanguageModel.UpdateAndReboot)

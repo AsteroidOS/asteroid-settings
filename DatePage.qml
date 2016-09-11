@@ -155,7 +155,7 @@ Rectangle {
 
         iconColor: "white"
         pressedIconColor: "lightgrey"
-        iconName: "ios-add-circle-outline"
+        iconName: "ios-checkmark-circle-outline"
 
         onClicked: {
             var date = new Date();

@@ -1,5 +1,5 @@
 TEMPLATE = app
-QT += qml quick bluetooth
+QT += qml quick
 CONFIG += link_pkgconfig
 PKGCONFIG += qdeclarative5-boostable
 

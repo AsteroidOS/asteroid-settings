@@ -18,7 +18,6 @@
 
 import QtQuick 2.1
 import org.asteroid.controls 1.0
-import QtQuick.Layouts 1.1
 import org.nemomobile.dbus 1.0
 
 Rectangle {

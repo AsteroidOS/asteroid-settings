@@ -17,7 +17,6 @@
  */
 
 import QtQuick 2.2
-import QtQuick.Layouts 1.1
 import org.asteroid.controls 1.0
 
 Application {
@@ -44,15 +43,13 @@ Application {
     LayerStack { id: layerStack }
 
     Flickable {
-        contentHeight: 11*Units.dp(25)
+        contentHeight: 10*Units.dp(25)
         contentWidth: width
         boundsBehavior: Flickable.DragOverBounds
         flickableDirection: Flickable.VerticalFlick
         anchors.fill: parent
-        GridLayout {
-            id: grid
+        Column {
             anchors.fill: parent
-            columns: 1
 
             GridItem {
                 title: qsTr("Time")

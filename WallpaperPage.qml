@@ -17,7 +17,6 @@
 
 import QtQuick 2.1
 import QtGraphicalEffects 1.0
-import QtQuick.Layouts 1.1
 import Qt.labs.folderlistmodel 2.1
 import org.nemomobile.configuration 1.0
 import org.asteroid.controls 1.0

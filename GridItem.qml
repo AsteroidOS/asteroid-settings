@@ -16,7 +16,6 @@
  */
 
 import QtQuick 2.1
-import QtQuick.Layouts 1.1
 import org.asteroid.controls 1.0
 
 Item {
@@ -25,7 +24,7 @@ Item {
     property alias iconName: icon.name
     signal clicked()
 
-    Layout.fillWidth: true
+    width: parent.width
     height: Units.dp(25)
 
     Icon {

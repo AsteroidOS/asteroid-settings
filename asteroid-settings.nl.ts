@@ -5,15 +5,15 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation>Gebruikt Bluetooth</translation>
+        <translation>Gebruik Bluetooth</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation>Sync notificaties</translation>
+        <translation>Synchronisatienotificaties</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation>Sync tijd</translation>
+        <translation>Synchronisatietijd</translation>
     </message>
 </context>
 <context>
@@ -41,11 +41,11 @@
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation>Sluit af</translation>
+        <translation>Uitschakelen</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation>Herstart</translation>
+        <translation>Herstarten</translation>
     </message>
 </context>
 <context>
@@ -59,7 +59,7 @@
     <name>USBPage</name>
     <message>
         <source>Adb Mode</source>
-        <translation>Adb Modus</translation>
+        <translation>Adb-modus</translation>
     </message>
     <message>
         <source>Developer Mode</source>
@@ -71,7 +71,7 @@
     </message>
     <message>
         <source>MTP Mode</source>
-        <translation>MTP Modus</translation>
+        <translation>MTP-modus</translation>
     </message>
 </context>
 <context>
@@ -110,7 +110,7 @@
     </message>
     <message>
         <source>Power Off</source>
-        <translation>Afsluiten</translation>
+        <translation>Uitschakelen</translation>
     </message>
     <message>
         <source>About</source>

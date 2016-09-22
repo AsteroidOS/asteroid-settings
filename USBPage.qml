@@ -31,6 +31,18 @@ Rectangle {
         }
     }
 
+    Text {
+        id: title
+        color: "white"
+        text: qsTr("Select a USB mode:")
+        height: parent.height*0.2
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        verticalAlignment: Text.AlignVCenter
+        horizontalAlignment: Text.AlignHCenter
+    }
+
     ListModel {
         id: usbModesModel
         ListElement { title: qsTr("Adb Mode"); mode: "adb_mode" }
@@ -40,7 +52,8 @@ Rectangle {
     }
     ListView {
         id: usbModeLV
-        height: parent.height*0.8
+        anchors.top: title.bottom
+        height: parent.height*0.6
         width: parent.width
         clip: true
         spacing: 15

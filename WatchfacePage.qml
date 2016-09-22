@@ -33,6 +33,7 @@ Rectangle {
     ConfigurationValue {
         id: watchfaceSource
         key: "/desktop/asteroid/watchface"
+        defaultValue: "file:///usr/share/asteroid-launcher/watchfaces/000-default-digital.qml"
     }
 
     GridView {
@@ -43,7 +44,7 @@ Rectangle {
 
         model: FolderListModel {
             id: folderModel
-            folder: "file:///usr/share/asteroid-launcher/watchfaces/"
+            folder: "file:///usr/share/asteroid-launcher/watchfaces"
             nameFilters: ["*.qml"]
         }
 

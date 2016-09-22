@@ -33,6 +33,7 @@ Rectangle {
     ConfigurationValue {
         id: wallpaperSource
         key: "/desktop/asteroid/background_filename"
+        defaultValue: "file:///usr/share/asteroid-launcher/wallpapers/Ipswich_is_THAT_way_by_simon.hedge.jpg"
     }
 
     GridView {
@@ -43,7 +44,7 @@ Rectangle {
 
         model: FolderListModel {
             id: folderModel
-            folder: "file:///usr/share/asteroid-launcher/wallpapers/"
+            folder: "file:///usr/share/asteroid-launcher/wallpapers"
             nameFilters: ["*.jpg"]
         }
 

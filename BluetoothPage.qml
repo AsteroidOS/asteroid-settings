@@ -18,7 +18,7 @@
 
 import QtQuick 2.1
 import org.asteroid.controls 1.0
-import org.nemomobile.dbus 1.0
+import org.asteroid.settings 1.0
 
 Rectangle {
     Rectangle {
@@ -29,23 +29,9 @@ Rectangle {
         }
     }
 
-    DBusInterface {
-        id: bluez_adapter_dbus
-
-        destination: "org.bluez"
-        path: "/org/bluez/hci0"
-        iface: "org.bluez.Adapter1"
-
-        busType: DBusInterface.SystemBus
-    }
-
-    DBusInterface {
-        id: bluez_advertiser_dbus
-
-        destination: "org.bluez"
-        path: "/org/bluez/hci0"
-        iface: "org.bluez.LEAdvertisingManager1"
-        busType: DBusInterface.SystemBus
+    BluetoothStatus {
+        id: bt_status
+        onPoweredChanged: console.log("Powered changed")
     }
 
     Text {
@@ -61,36 +47,26 @@ Rectangle {
         anchors.top: parent.top
         anchors.right: parent.right
         anchors.margins: 20
-        checked:  bluez_adapter_dbus.getProperty("Powered")
-        onCheckedChanged: bluez_adapter_dbus.setProperty("Powered", btSwitch.checked)
+        Component.onCompleted: btSwitch.checked = bt_status.powered
+        onCheckedChanged: bt_status.powered = btSwitch.checked
     }
 
-    Item {
+    Icon {
+        id: connectedIcon
         visible: btSwitch.checked
+        color: "white"
+        name: bt_status.connected ? "ios-cloud-done" : "ios-cloud"
+        size: parent.width*0.3
         anchors.centerIn: parent
-        width: parent.width*0.3
-        height: width
-        Icon {
-            color: "white"
-            name: "ios-radio-outline"
-            anchors.top: parent.top
-            anchors.horizontalCenter:  parent.horizontalCenter
-        }
-        Text {
-            text: qsTr("Advertise")
-            color: "white"
-            font.pointSize: 11
-            horizontalAlignment: Text.AlignHCenter
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.bottom: parent.bottom
-            anchors.bottomMargin: Units.dp(5)
-        }
-
-        MouseArea {
-            anchors.fill: parent
-            hoverEnabled: true
-            onClicked: bluez_advertiser_dbus.call("RegisterAdvertisement", []) // TODO: Doesn't work
-        }
+    }
+    Text {
+        visible: btSwitch.checked
+        text:  bt_status.connected ? qsTr("Connected") : qsTr("Not connected")
+        color: "white"
+        font.pointSize: 11
+        horizontalAlignment: Text.AlignHCenter
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: connectedIcon.bottom
     }
 }
 

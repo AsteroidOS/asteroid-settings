@@ -21,6 +21,8 @@
 #include <QGuiApplication>
 #include <MDeclarativeCache>
 
+#include "bluetoothstatus.h"
+
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     QScopedPointer<QGuiApplication> app(MDeclarativeCache::qApplication(argc, argv));
@@ -28,6 +30,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QTranslator translator;
     translator.load(QLocale(), "asteroid-settings", ".", "/usr/share/translations", ".qm");
     app->installTranslator(&translator);
+
+    qmlRegisterType<BluetoothStatus>("org.asteroid.settings", 1, 0, "BluetoothStatus");
 
     QScopedPointer<QQuickView> view(MDeclarativeCache::qQuickView());
     view->setSource(QUrl("qrc:/main.qml"));

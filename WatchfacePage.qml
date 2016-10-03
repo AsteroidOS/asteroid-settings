@@ -50,20 +50,24 @@ Rectangle {
 
         delegate: Component {
             id: fileDelegate
-            Image {
+            Item {
                 width: grid.width/2
                 height: grid.height/2
-                fillMode: Image.PreserveAspectFit
-                smooth: true
-                source: folderModel.folder + "/" + fileName.replace(".qml", ".jpg")
+                Image {
+                    id: img
+                    anchors.fill: parent
+                    fillMode: Image.PreserveAspectFit
+                    smooth: true
+                    source: folderModel.folder + "/" + fileName.replace(".qml", ".jpg")
+                }
                 MouseArea {
                     anchors.fill: parent
                     onClicked: watchfaceSource.value = folderModel.folder + "/" + fileName
                 }
 
                 BrightnessContrast {
-                    anchors.fill: parent
-                    source: parent
+                    anchors.fill: img
+                    source: img
                     brightness: -0.4
                     visible: watchfaceSource.value == folderModel.folder + "/" + fileName
                 }

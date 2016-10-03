@@ -30,8 +30,8 @@ Rectangle {
     }
 
     BluetoothStatus {
-        id: bt_status
-        onPoweredChanged: console.log("Powered changed")
+        id: btStatus
+        onPoweredChanged: btSwitch.checked = btStatus.powered
     }
 
     Text {
@@ -47,21 +47,21 @@ Rectangle {
         anchors.top: parent.top
         anchors.right: parent.right
         anchors.margins: 20
-        Component.onCompleted: btSwitch.checked = bt_status.powered
-        onCheckedChanged: bt_status.powered = btSwitch.checked
+        Component.onCompleted: btSwitch.checked = btStatus.powered
+        onCheckedChanged: btStatus.powered = btSwitch.checked
     }
 
     Icon {
         id: connectedIcon
         visible: btSwitch.checked
         color: "white"
-        name: bt_status.connected ? "ios-cloud-done" : "ios-cloud"
+        name: btStatus.connected ? "ios-cloud-done" : "ios-cloud"
         size: parent.width*0.3
         anchors.centerIn: parent
     }
     Text {
         visible: btSwitch.checked
-        text:  bt_status.connected ? qsTr("Connected") : qsTr("Not connected")
+        text:  btStatus.connected ? qsTr("Connected") : qsTr("Not connected")
         color: "white"
         font.pointSize: 11
         horizontalAlignment: Text.AlignHCenter

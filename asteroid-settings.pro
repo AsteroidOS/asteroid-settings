@@ -1,10 +1,9 @@
 TEMPLATE = app
-QT += qml quick dbus
+QT += qml quick
 CONFIG += link_pkgconfig
 PKGCONFIG += qdeclarative5-boostable
 
-SOURCES +=     main.cpp bluetoothstatus.cpp
-HEADERS +=     bluetoothstatus.h
+SOURCES +=     main.cpp
 RESOURCES +=   resources.qrc
 OTHER_FILES += main.qml \
                GridItem.qml \

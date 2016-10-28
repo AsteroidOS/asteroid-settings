@@ -18,7 +18,7 @@
 
 import QtQuick 2.1
 import org.asteroid.controls 1.0
-import org.asteroid.settings 1.0
+import org.asteroid.utils 1.0
 
 Rectangle {
     Rectangle {

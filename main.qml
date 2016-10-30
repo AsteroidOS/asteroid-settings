@@ -21,13 +21,6 @@ import org.asteroid.controls 1.0
 
 Application {
     id: app
-    Rectangle {
-        anchors.fill: parent
-        gradient: Gradient {
-            GradientStop { position: 0.0; color: "#777777" }
-            GradientStop { position: 1.0; color: "#2d2d2d" }
-        }
-    }
 
     Component { id: timeLayer;       TimePage       { } }
     Component { id: dateLayer;       DatePage       { } }
@@ -40,66 +33,72 @@ Application {
     Component { id: poweroffLayer;   PoweroffPage   { } }
     Component { id: aboutLayer;      AboutPage      { } }
 
-    LayerStack { id: layerStack }
+    LayerStack {
+        id: layerStack
+        firstPage: firstPageComponent
+    }
 
-    Flickable {
-        contentHeight: 10*Units.dp(25)
-        contentWidth: width
-        boundsBehavior: Flickable.DragOverBounds
-        flickableDirection: Flickable.VerticalFlick
-        anchors.fill: parent
-        Column {
-            anchors.fill: parent
+    Component {
+        id: firstPageComponent
 
-            GridItem {
-                title: qsTr("Time")
-                iconName: "ios-clock-outline"
-                onClicked: layerStack.push(timeLayer)
-            }
-            GridItem {
-                title: qsTr("Date")
-                iconName: "ios-calendar-outline"
-                onClicked: layerStack.push(dateLayer)
-            }
-            GridItem {
-                title: qsTr("Language")
-                iconName: "ios-globe-outline"
-                onClicked: layerStack.push(languageLayer)
-            }
-            GridItem {
-                title: qsTr("Bluetooth")
-                iconName: "ios-cloud-outline"
-                onClicked: layerStack.push(bluetoothLayer)
-            }
-            GridItem {
-                title: qsTr("Brightness")
-                iconName: "ios-sunny-outline"
-                onClicked: layerStack.push(brightnessLayer)
-            }
-            GridItem {
-                title: qsTr("Wallpaper")
-                iconName: "ios-images-outline"
-                onClicked: layerStack.push(wallpaperLayer)
-            }
-            GridItem {
-                title: qsTr("Watchface")
-                iconName: "ios-color-wand-outline"
-                onClicked: layerStack.push(watchfaceLayer)
-            }
-            GridItem {
-                title: qsTr("USB")
-                iconName: "usb"
-                onClicked: layerStack.push(usbLayer)
-            }
-            GridItem {
-                title: qsTr("Power Off")
-                iconName: "ios-flash-outline"
-                onClicked: layerStack.push(poweroffLayer)
-            }
-            GridItem {
-                title: qsTr("About")
-                iconName: "ios-help-circle-outline"
-                onClicked: layerStack.push(aboutLayer)
+        Flickable {
+            contentHeight: 10*Units.dp(25)
+            contentWidth: width
+            boundsBehavior: Flickable.DragOverBounds
+            flickableDirection: Flickable.VerticalFlick
+            Column {
+                anchors.fill: parent
+
+                GridItem {
+                    title: qsTr("Time")
+                    iconName: "ios-clock-outline"
+                    onClicked: layerStack.push(timeLayer)
+                }
+                GridItem {
+                    title: qsTr("Date")
+                    iconName: "ios-calendar-outline"
+                    onClicked: layerStack.push(dateLayer)
+                }
+                GridItem {
+                    title: qsTr("Language")
+                    iconName: "ios-globe-outline"
+                    onClicked: layerStack.push(languageLayer)
+                }
+                GridItem {
+                    title: qsTr("Bluetooth")
+                    iconName: "ios-cloud-outline"
+                    onClicked: layerStack.push(bluetoothLayer)
+                }
+                GridItem {
+                    title: qsTr("Brightness")
+                    iconName: "ios-sunny-outline"
+                    onClicked: layerStack.push(brightnessLayer)
+                }
+                GridItem {
+                    title: qsTr("Wallpaper")
+                    iconName: "ios-images-outline"
+                    onClicked: layerStack.push(wallpaperLayer)
+                }
+                GridItem {
+                    title: qsTr("Watchface")
+                    iconName: "ios-color-wand-outline"
+                    onClicked: layerStack.push(watchfaceLayer)
+                }
+                GridItem {
+                    title: qsTr("USB")
+                    iconName: "usb"
+                    onClicked: layerStack.push(usbLayer)
+                }
+                GridItem {
+                    title: qsTr("Power Off")
+                    iconName: "ios-flash-outline"
+                    onClicked: layerStack.push(poweroffLayer)
+                }
+                GridItem {
+                    title: qsTr("About")
+                    iconName: "ios-help-circle-outline"
+                    onClicked: layerStack.push(aboutLayer)
+                }
             }
         }
     }

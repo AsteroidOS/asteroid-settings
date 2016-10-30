@@ -21,25 +21,11 @@ import Qt.labs.folderlistmodel 2.1
 import org.nemomobile.configuration 1.0
 import org.asteroid.controls 1.0
 
-Rectangle {
-    Rectangle {
-        anchors.fill: parent
-        gradient: Gradient {
-            GradientStop { position: 0.0; color: "#777777" }
-            GradientStop { position: 1.0; color: "#2d2d2d" }
-        }
-    }
-
+Item {
     ConfigurationValue {
         id: wallpaperSource
         key: "/desktop/asteroid/background_filename"
         defaultValue: "file:///usr/share/asteroid-launcher/wallpapers/Ipswich_is_THAT_way_by_simon.hedge.jpg"
-    }
-
-    FolderListModel {
-        id: qmlWallpapersModel
-        folder: "file:///usr/share/asteroid-launcher/wallpapers"
-        nameFilters: ["*.qml"]
     }
 
     GridView {
@@ -68,20 +54,14 @@ Rectangle {
                 }
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: {
-                        if(qmlWallpapersModel.indexOf(folderModel.folder + "/" + fileBaseName + ".qml") != -1)
-                            wallpaperSource.value = folderModel.folder + "/" + fileBaseName + ".qml"
-                        else
-                            wallpaperSource.value = folderModel.folder + "/" + fileName
-                    }
+                    onClicked: wallpaperSource.value = folderModel.folder + "/" + fileName
                 }
 
                 BrightnessContrast {
                     anchors.fill: img
                     source: img
                     brightness: -0.4
-                    visible: wallpaperSource.value == folderModel.folder + "/" + fileName |
-                             wallpaperSource.value == folderModel.folder + "/" + fileBaseName + ".qml"
+                    visible: wallpaperSource.value == folderModel.folder + "/" + fileName
                 }
                 Icon {
                     color: "white"
@@ -90,8 +70,7 @@ Rectangle {
                     anchors.right: parent.right
                     height: width
                     width: parent.width*0.3
-                    visible: wallpaperSource.value == folderModel.folder + "/" + fileName |
-                             wallpaperSource.value == folderModel.folder + "/" + fileBaseName + ".qml"
+                    visible: wallpaperSource.value == folderModel.folder + "/" + fileName
                 }
             }
         }

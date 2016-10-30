@@ -20,16 +20,9 @@ import QtQuick 2.1
 import org.asteroid.controls 1.0
 import org.nemomobile.systemsettings 1.0
 
-Rectangle {
+Item {
     id: root
     property var pop
-    Rectangle {
-        anchors.fill: parent
-        gradient: Gradient {
-            GradientStop { position: 0.0; color: "#777777" }
-            GradientStop { position: 1.0; color: "#2d2d2d" }
-        }
-    }
 
     LanguageModel { id: langSettings }
 

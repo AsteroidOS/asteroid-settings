@@ -20,15 +20,7 @@ import QtQuick 2.1
 import org.asteroid.controls 1.0
 import org.nemomobile.systemsettings 1.0
 
-Rectangle {
-    Rectangle {
-        anchors.fill: parent
-        gradient: Gradient {
-            GradientStop { position: 0.0; color: "#777777" }
-            GradientStop { position: 1.0; color: "#2d2d2d" }
-        }
-    }
-
+Item {
     Text {
         text: qsTr("Brightness: %1%").arg(displaySettings.brightness)
         color: "white"

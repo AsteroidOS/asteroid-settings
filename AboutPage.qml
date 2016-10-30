@@ -17,15 +17,7 @@
 
 import QtQuick 2.1
 
-Rectangle {
-    Rectangle {
-        anchors.fill: parent
-        gradient: Gradient {
-            GradientStop { position: 0.0; color: "#777777" }
-            GradientStop { position: 1.0; color: "#2d2d2d" }
-        }
-    }
-
+Item {
     Image {
         fillMode: Image.PreserveAspectFit
         source: "qrc:///asteroid-logo.png"

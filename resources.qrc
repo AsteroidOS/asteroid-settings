@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>GridItem.qml</file>
+        <file>ListItem.qml</file>
         <file>LanguagePage.qml</file>
         <file>TimePage.qml</file>
         <file>DatePage.qml</file>

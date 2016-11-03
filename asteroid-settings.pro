@@ -6,7 +6,7 @@ PKGCONFIG += qdeclarative5-boostable
 SOURCES +=     main.cpp
 RESOURCES +=   resources.qrc
 OTHER_FILES += main.qml \
-               GridItem.qml \
+               ListItem.qml \
                LanguagePage.qml \
                TimePage.qml \
                DatePage.qml \
@@ -20,7 +20,7 @@ OTHER_FILES += main.qml \
 
 lupdate_only{
     SOURCES = main.qml \
-              GridItem.qml \
+              ListItem.qml \
               LanguagePage.qml \
               TimePage.qml \
               DatePage.qml \

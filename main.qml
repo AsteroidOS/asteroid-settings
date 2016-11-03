@@ -49,52 +49,52 @@ Application {
             Column {
                 anchors.fill: parent
 
-                GridItem {
+                ListItem {
                     title: qsTr("Time")
                     iconName: "ios-clock-outline"
                     onClicked: layerStack.push(timeLayer)
                 }
-                GridItem {
+                ListItem {
                     title: qsTr("Date")
                     iconName: "ios-calendar-outline"
                     onClicked: layerStack.push(dateLayer)
                 }
-                GridItem {
+                ListItem {
                     title: qsTr("Language")
                     iconName: "ios-globe-outline"
                     onClicked: layerStack.push(languageLayer)
                 }
-                GridItem {
+                ListItem {
                     title: qsTr("Bluetooth")
                     iconName: "ios-cloud-outline"
                     onClicked: layerStack.push(bluetoothLayer)
                 }
-                GridItem {
+                ListItem {
                     title: qsTr("Brightness")
                     iconName: "ios-sunny-outline"
                     onClicked: layerStack.push(brightnessLayer)
                 }
-                GridItem {
+                ListItem {
                     title: qsTr("Wallpaper")
                     iconName: "ios-images-outline"
                     onClicked: layerStack.push(wallpaperLayer)
                 }
-                GridItem {
+                ListItem {
                     title: qsTr("Watchface")
                     iconName: "ios-color-wand-outline"
                     onClicked: layerStack.push(watchfaceLayer)
                 }
-                GridItem {
+                ListItem {
                     title: qsTr("USB")
                     iconName: "usb"
                     onClicked: layerStack.push(usbLayer)
                 }
-                GridItem {
+                ListItem {
                     title: qsTr("Power Off")
                     iconName: "ios-flash-outline"
                     onClicked: layerStack.push(poweroffLayer)
                 }
-                GridItem {
+                ListItem {
                     title: qsTr("About")
                     iconName: "ios-help-circle-outline"
                     onClicked: layerStack.push(aboutLayer)

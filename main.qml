@@ -42,12 +42,15 @@ Application {
         id: firstPageComponent
 
         Flickable {
-            contentHeight: 10*Units.dp(25)
+            contentHeight: DeviceInfo.hasRoundScreen ? 10*Units.dp(25) + app.height/5 : 10*Units.dp(25)
             contentWidth: width
             boundsBehavior: Flickable.DragOverBounds
             flickableDirection: Flickable.VerticalFlick
+
             Column {
                 anchors.fill: parent
+
+                Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? app.height/10 : 0 }
 
                 ListItem {
                     title: qsTr("Time")
@@ -99,6 +102,8 @@ Application {
                     iconName: "ios-help-circle-outline"
                     onClicked: layerStack.push(aboutLayer)
                 }
+
+                Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? app.height/10 : 0 }
             }
         }
     }

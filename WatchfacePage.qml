@@ -50,6 +50,7 @@ Item {
                     anchors.fill: parent
                     fillMode: Image.PreserveAspectFit
                     smooth: true
+                    asynchronous: true
                     source: folderModel.folder + "/" + fileName.replace(".qml", ".jpg")
                 }
                 MouseArea {

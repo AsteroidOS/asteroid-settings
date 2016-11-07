@@ -25,7 +25,7 @@ Item {
     ConfigurationValue {
         id: wallpaperSource
         key: "/desktop/asteroid/background_filename"
-        defaultValue: "file:///usr/share/asteroid-launcher/wallpapers/Ipswich_is_THAT_way_by_simon.hedge.jpg"
+        defaultValue: "file:///usr/share/asteroid-launcher/wallpapers/flatmesh.qml"
     }
 
     GridView {

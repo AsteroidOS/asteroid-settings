@@ -10,4 +10,5 @@ Name[ru_RU]=настройки
 Categories=Applications;
 Exec=invoker --type=qtcomponents-qt5 /usr/bin/asteroid-settings
 Icon=ios-settings-outline
-X-Desktop-File-Install-Version=0.20
+X-Asteroid-Center-Color=#4b45b9
+X-Asteroid-Outer-Color=#161537

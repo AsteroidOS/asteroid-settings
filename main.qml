@@ -22,6 +22,9 @@ import org.asteroid.controls 1.0
 Application {
     id: app
 
+    centerColor: "#4b45b9"
+    outerColor: "#161537"
+
     Component { id: timeLayer;       TimePage       { } }
     Component { id: dateLayer;       DatePage       { } }
     Component { id: languageLayer;   LanguagePage   { } }

@@ -25,7 +25,13 @@ Item {
     ConfigurationValue {
         id: wallpaperSource
         key: "/desktop/asteroid/background_filename"
-        defaultValue: "file:///usr/share/asteroid-launcher/wallpapers/flatmesh.qml"
+        defaultValue: "file:///usr/share/asteroid-launcher/wallpapers/Ipswich_is_THAT_way_by_simon.hedge.jpg"
+    }
+
+    FolderListModel {
+        id: qmlWallpapersModel
+        folder: "file:///usr/share/asteroid-launcher/wallpapers"
+        nameFilters: ["*.qml"]
     }
 
     GridView {
@@ -50,19 +56,24 @@ Item {
                     anchors.fill: parent
                     fillMode: Image.PreserveAspectFit
                     smooth: true
-                    asynchronous: true
                     source: folderModel.folder + "/" + fileName
                 }
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: wallpaperSource.value = folderModel.folder + "/" + fileName
+                    onClicked: {
+                        if(qmlWallpapersModel.indexOf(folderModel.folder + "/" + fileBaseName + ".qml") != -1)
+                            wallpaperSource.value = folderModel.folder + "/" + fileBaseName + ".qml"
+                        else
+                            wallpaperSource.value = folderModel.folder + "/" + fileName
+                    }
                 }
 
                 BrightnessContrast {
                     anchors.fill: img
                     source: img
                     brightness: -0.4
-                    visible: wallpaperSource.value == folderModel.folder + "/" + fileName
+                    visible: wallpaperSource.value == folderModel.folder + "/" + fileName |
+                             wallpaperSource.value == folderModel.folder + "/" + fileBaseName + ".qml"
                 }
                 Icon {
                     color: "white"
@@ -71,7 +82,8 @@ Item {
                     anchors.right: parent.right
                     height: width
                     width: parent.width*0.3
-                    visible: wallpaperSource.value == folderModel.folder + "/" + fileName
+                    visible: wallpaperSource.value == folderModel.folder + "/" + fileName |
+                             wallpaperSource.value == folderModel.folder + "/" + fileBaseName + ".qml"
                 }
             }
         }

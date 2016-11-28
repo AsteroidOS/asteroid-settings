@@ -8,7 +8,7 @@ Name[nl_NL]=Instellingen
 Name[pl_PL]=Ustawienia
 Name[ru_RU]=настройки
 Categories=Applications;
-Exec=invoker --type=qtcomponents-qt5 /usr/bin/asteroid-settings
+Exec=invoker --single-instance --type=qtcomponents-qt5 /usr/bin/asteroid-settings
 Icon=ios-settings-outline
 X-Asteroid-Center-Color=#4b45b9
 X-Asteroid-Outer-Color=#161537

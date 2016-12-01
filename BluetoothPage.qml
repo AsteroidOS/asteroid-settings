@@ -26,47 +26,41 @@ Item {
         onPoweredChanged: btSwitch.checked = btStatus.powered
     }
 
-    Text {
-        id: title
-        color: "white"
-        text: qsTr("Bluetooth:")
-        height: parent.height*0.2
-        anchors.top: parent.top
-        anchors.left: parent.left
-        anchors.right: parent.right
-        verticalAlignment: Text.AlignVCenter
-        horizontalAlignment: Text.AlignHCenter
+    Rectangle {
+        id: btBackground
+        visible: availableDays(timestampDay0.value*1000) <= 0
+        anchors.centerIn: parent
+        anchors.verticalCenterOffset: -parent.height*0.13
+        color: "black"
+        radius: width/2
+        opacity: btStatus.powered ? 0.4 : 0.2
+        width: parent.height*0.25
+        height: width
     }
-
-    Switch {
-        id: btSwitch
-        anchors.top: parent.top
-        anchors.topMargin: parent.height/4
-        anchors.horizontalCenter: parent.horizontalCenter
-        Component.onCompleted: btSwitch.checked = btStatus.powered
-        onCheckedChanged: btStatus.powered = btSwitch.checked
-    }
-
     Icon {
-        id: connectedIcon
-        opacity: btSwitch.checked ? 1.0 : 0.0
+        visible: availableDays(timestampDay0.value*1000) <= 0
+        size: width
+        anchors.fill: btBackground
         color: "white"
-        name: btStatus.connected ? "ios-cloud-done" : "ios-cloud"
-        size: parent.width*0.3
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: parent.height/4
-        Behavior on opacity { NumberAnimation { duration: 200 } }
+        name: btStatus.powered ? "ios-bluetooth-outline" : "ios-bluetooth-off-outline"
     }
+    MouseArea {
+        anchors.fill: btBackground
+        onClicked: btStatus.powered = !btStatus.powered
+    }
+
     Text {
-        opacity: btSwitch.checked ? 1.0 : 0.0
-        text:  btStatus.connected ? qsTr("Connected") : qsTr("Not connected")
+        id: status
+        visible: availableDays(timestampDay0.value*1000) <= 0
+        text: "<h3>" + (btStatus.powered ? qsTr("Bluetooth on") : qsTr("Bluetooth off")) + "</h3>\n" + (btStatus.connected ? qsTr("Connected") : qsTr("Not Connected"))
+        font.pixelSize: parent.height*0.05
         color: "white"
-        font.pointSize: 11
         horizontalAlignment: Text.AlignHCenter
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: connectedIcon.bottom
-        Behavior on opacity { NumberAnimation { duration: 200 } }
+        verticalAlignment: Text.AlignVCenter
+        wrapMode: Text.Wrap
+        anchors.left: parent.left; anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.verticalCenterOffset: parent.height*0.15
     }
 }
 

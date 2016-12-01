@@ -72,7 +72,7 @@ Application {
                 }
                 ListItem {
                     title: qsTr("Bluetooth")
-                    iconName: "ios-cloud-outline"
+                    iconName: "ios-bluetooth-outline"
                     onClicked: layerStack.push(bluetoothLayer)
                 }
                 ListItem {

@@ -84,9 +84,29 @@ Item {
         iconName: "ios-checkmark-circle-outline"
 
         onClicked: {
-            langSettings.setSystemLocale(langSettings.locale(langLV.currentIndex), LanguageModel.UpdateAndReboot)
-
-            root.pop()
+            rebootMessage.opacity = 1.0
+            delayTimer.start();
         }
+    }
+
+    Rectangle {
+        id: rebootMessage
+        anchors.fill: parent
+        color: "black"
+        opacity: 0.0
+        Behavior on opacity { NumberAnimation { duration: 200 } }
+
+        Text {
+            anchors.centerIn: parent
+            text: qsTr("Rebooting...")
+            font.pixelSize: parent.height*0.12
+            color: "white"
+        }
+    }
+    Timer {
+        id: delayTimer
+        interval: 2000
+        repeat: false
+        onTriggered: langSettings.setSystemLocale(langSettings.locale(langLV.currentIndex), LanguageModel.UpdateAndReboot)
     }
 }

@@ -27,38 +27,46 @@ Item {
     }
 
     Text {
-        text: qsTr("Use Bluetooth")
+        id: title
         color: "white"
+        text: qsTr("Bluetooth:")
+        height: parent.height*0.2
         anchors.top: parent.top
         anchors.left: parent.left
-        anchors.verticalCenter: btSwitch.verticalCenter
-        anchors.margins: 20
+        anchors.right: parent.right
+        verticalAlignment: Text.AlignVCenter
+        horizontalAlignment: Text.AlignHCenter
     }
+
     Switch {
         id: btSwitch
         anchors.top: parent.top
-        anchors.right: parent.right
-        anchors.margins: 20
+        anchors.topMargin: parent.height/4
+        anchors.horizontalCenter: parent.horizontalCenter
         Component.onCompleted: btSwitch.checked = btStatus.powered
         onCheckedChanged: btStatus.powered = btSwitch.checked
     }
 
     Icon {
         id: connectedIcon
-        visible: btSwitch.checked
+        opacity: btSwitch.checked ? 1.0 : 0.0
         color: "white"
         name: btStatus.connected ? "ios-cloud-done" : "ios-cloud"
         size: parent.width*0.3
-        anchors.centerIn: parent
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: parent.height/4
+        Behavior on opacity { NumberAnimation { duration: 200 } }
     }
     Text {
-        visible: btSwitch.checked
+        opacity: btSwitch.checked ? 1.0 : 0.0
         text:  btStatus.connected ? qsTr("Connected") : qsTr("Not connected")
         color: "white"
         font.pointSize: 11
         horizontalAlignment: Text.AlignHCenter
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: connectedIcon.bottom
+        Behavior on opacity { NumberAnimation { duration: 200 } }
     }
 }
 

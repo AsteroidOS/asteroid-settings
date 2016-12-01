@@ -22,11 +22,24 @@ import org.nemomobile.systemsettings 1.0
 
 Item {
     Text {
-        text: qsTr("Brightness: %1%").arg(displaySettings.brightness)
+        id: title
         color: "white"
-        anchors.left: brightnessSlider.left
-        anchors.bottom: brightnessSlider.top
+        text: qsTr("Brightness:")
+        height: parent.height*0.2
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        verticalAlignment: Text.AlignVCenter
+        horizontalAlignment: Text.AlignHCenter
+    }
 
+    Text {
+        text: displaySettings.brightness + "%"
+        font.pixelSize: parent.height*0.08
+        color: "white"
+        anchors.topMargin: parent.height*0.1
+        anchors.top: brightnessSlider.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
     }
     Slider {
         id: brightnessSlider

@@ -36,7 +36,7 @@ Item {
     }
     Text {
         id: releaseLabel
-        text: "Developer preview"
+        text: "Alpha 1.0"
         color: "lightgrey"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom

@@ -25,7 +25,7 @@ Item {
     property var pop
 
     Text {
-        text: qsTr("Power off AsteroidOS")
+        text: qsTr("Reboot AsteroidOS")
         font.pixelSize: parent.height*0.07
         anchors.centerIn: parent
         color: "white"
@@ -56,7 +56,7 @@ Item {
         anchors.horizontalCenterOffset: parent.width*0.15
         anchors.bottom: parent.bottom
         anchors.bottomMargin: parent.height*0.15
-        onClicked: dsmeDbus.call("req_shutdown", [])
+        onClicked: dsmeDbus.call("req_reboot", [])
     }
 
     DBusInterface {

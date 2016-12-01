@@ -34,6 +34,7 @@ Application {
     Component { id: watchfaceLayer;  WatchfacePage  { } }
     Component { id: usbLayer;        USBPage        { } }
     Component { id: poweroffLayer;   PoweroffPage   { } }
+    Component { id: rebootLayer;     RebootPage     { } }
     Component { id: aboutLayer;      AboutPage      { } }
 
     LayerStack {
@@ -45,7 +46,7 @@ Application {
         id: firstPageComponent
 
         Flickable {
-            contentHeight: DeviceInfo.hasRoundScreen ? 10*Units.dp(25) + app.height/5 : 10*Units.dp(25)
+            contentHeight: DeviceInfo.hasRoundScreen ? 11*Units.dp(25) + app.height/5 : 11*Units.dp(25)
             contentWidth: width
             boundsBehavior: Flickable.DragOverBounds
             flickableDirection: Flickable.VerticalFlick
@@ -97,8 +98,13 @@ Application {
                 }
                 ListItem {
                     title: qsTr("Power Off")
-                    iconName: "ios-flash-outline"
+                    iconName: "ios-power-outline"
                     onClicked: layerStack.push(poweroffLayer)
+                }
+                ListItem {
+                    title: qsTr("Reboot")
+                    iconName: "ios-sync"
+                    onClicked: layerStack.push(rebootLayer)
                 }
                 ListItem {
                     title: qsTr("About")

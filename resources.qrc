@@ -11,6 +11,7 @@
         <file>WatchfacePage.qml</file>
         <file>USBPage.qml</file>
         <file>PoweroffPage.qml</file>
+        <file>RebootPage.qml</file>
         <file>AboutPage.qml</file>
         <file>asteroid-logo.png</file>
     </qresource>

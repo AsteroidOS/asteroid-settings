@@ -15,6 +15,7 @@ OTHER_FILES += main.qml \
                USBPage.qml \
                WatchfacePage.qml \
                PoweroffPage.qml \
+               RebootPage.qml \
                RestartPage.qml \
                AboutPage.qml
 
@@ -29,6 +30,7 @@ lupdate_only{
               USBPage.qml \
               WatchfacePage.qml \
               PoweroffPage.qml \
+              RebootPage.qml \
               RestartPage.qml \
               AboutPage.qml
 }

@@ -84,6 +84,10 @@ Item {
         iconName: "ios-checkmark-circle-outline"
 
         onClicked: {
+            if(langLV.currentIndex == langSettings.currentIndex) {
+                root.pop();
+                return;
+            }
             rebootMessage.opacity = 1.0
             delayTimer.start();
         }

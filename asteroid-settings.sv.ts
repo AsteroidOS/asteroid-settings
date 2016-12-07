@@ -5,100 +5,100 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation type="unfinished"></translation>
+        <translation>Använd Bluetooth</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Synkronisera notifikationer</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation type="unfinished"></translation>
+        <translation>Synkronisera klockan</translation>
     </message>
 </context>
 <context>
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Ljusstyrka: %1%</translation>
     </message>
 </context>
 <context>
     <name>DatePage</name>
     <message>
         <source>Select a date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Välj ett datum:</translation>
     </message>
 </context>
 <context>
     <name>LanguagePage</name>
     <message>
         <source>Select a language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Välj språk:</translation>
     </message>
 </context>
 <context>
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation type="unfinished"></translation>
+        <translation>Stäng av</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation type="unfinished"></translation>
+        <translation>Starta om</translation>
     </message>
 </context>
 <context>
     <name>TimePage</name>
     <message>
         <source>Select a time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Välj en tid:</translation>
     </message>
 </context>
 <context>
     <name>USBPage</name>
     <message>
         <source>Adb Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Adb-läge</translation>
     </message>
     <message>
         <source>Developer Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Utvecklar-läge</translation>
     </message>
     <message>
         <source>Mass Storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Lagringsenhet</translation>
     </message>
     <message>
         <source>MTP Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>MTP-läge</translation>
     </message>
 </context>
 <context>
     <name>main</name>
     <message>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Språk</translation>
     </message>
     <message>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Tid</translation>
     </message>
     <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum</translation>
     </message>
     <message>
         <source>Bluetooth</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth</translation>
     </message>
     <message>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Ljusstyrka</translation>
     </message>
     <message>
         <source>Wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Bakgrundsbild</translation>
     </message>
     <message>
         <source>Watchface</source>
@@ -106,15 +106,15 @@
     </message>
     <message>
         <source>USB</source>
-        <translation type="unfinished"></translation>
+        <translation>USB</translation>
     </message>
     <message>
         <source>Power Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Stäng av</translation>
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Om</translation>
     </message>
 </context>
 </TS>

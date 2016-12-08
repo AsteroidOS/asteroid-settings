@@ -5,116 +5,116 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation type="unfinished"></translation>
+        <translation>使用蓝牙</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>同步通知</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation type="unfinished"></translation>
+        <translation>同步时间</translation>
     </message>
 </context>
 <context>
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>亮度: %1%</translation>
     </message>
 </context>
 <context>
     <name>DatePage</name>
     <message>
         <source>Select a date:</source>
-        <translation type="unfinished"></translation>
+        <translation>选择日期：</translation>
     </message>
 </context>
 <context>
     <name>LanguagePage</name>
     <message>
         <source>Select a language:</source>
-        <translation type="unfinished"></translation>
+        <translation>选择语言：</translation>
     </message>
 </context>
 <context>
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation type="unfinished"></translation>
+        <translation>关闭</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation type="unfinished"></translation>
+        <translation>重启</translation>
     </message>
 </context>
 <context>
     <name>TimePage</name>
     <message>
         <source>Select a time:</source>
-        <translation type="unfinished"></translation>
+        <translation>选择时间：</translation>
     </message>
 </context>
 <context>
     <name>USBPage</name>
     <message>
         <source>Adb Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>ADB 模式</translation>
     </message>
     <message>
         <source>Developer Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>开发者模式</translation>
     </message>
     <message>
         <source>Mass Storage</source>
-        <translation type="unfinished"></translation>
+        <translation>大容量存储模式</translation>
     </message>
     <message>
         <source>MTP Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>MTP 模式</translation>
     </message>
 </context>
 <context>
     <name>main</name>
     <message>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>语言</translation>
     </message>
     <message>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation>时间</translation>
     </message>
     <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>日期</translation>
     </message>
     <message>
         <source>Bluetooth</source>
-        <translation type="unfinished"></translation>
+        <translation>蓝牙</translation>
     </message>
     <message>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>亮度</translation>
     </message>
     <message>
         <source>Wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>壁纸</translation>
     </message>
     <message>
         <source>Watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>表盘</translation>
     </message>
     <message>
         <source>USB</source>
-        <translation type="unfinished"></translation>
+        <translation>USB</translation>
     </message>
     <message>
         <source>Power Off</source>
-        <translation type="unfinished"></translation>
+        <translation>关机</translation>
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>关于</translation>
     </message>
 </context>
 </TS>

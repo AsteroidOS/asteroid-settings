@@ -5,7 +5,7 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation type="unfinished">Usar Bluetooth</translation>
+        <translation>Usar Bluetooth</translation>
     </message>
     <message>
         <source>Sync notifications</source>
@@ -13,7 +13,7 @@
     </message>
     <message>
         <source>Sync time</source>
-        <translation type="unfinished">Tempo de sincronização</translation>
+        <translation>Tempo de sincronização</translation>
     </message>
 </context>
 <context>
@@ -67,7 +67,7 @@
     </message>
     <message>
         <source>Mass Storage</source>
-        <translation type="unfinished">Armazenamento em massa</translation>
+        <translation>Armazenamento em massa</translation>
     </message>
     <message>
         <source>MTP Mode</source>
@@ -102,7 +102,7 @@
     </message>
     <message>
         <source>Watchface</source>
-        <translation type="unfinished">Watchface</translation>
+        <translation>Mostrador</translation>
     </message>
     <message>
         <source>USB</source>

@@ -13,7 +13,7 @@
     </message>
     <message>
         <source>Sync time</source>
-        <translation type="unfinished"></translation>
+        <translation>Hora de sincronització</translation>
     </message>
 </context>
 <context>
@@ -67,7 +67,7 @@
     </message>
     <message>
         <source>Mass Storage</source>
-        <translation type="unfinished">Emmagatzematge massiu</translation>
+        <translation>Emmagatzematge massiu</translation>
     </message>
     <message>
         <source>MTP Mode</source>

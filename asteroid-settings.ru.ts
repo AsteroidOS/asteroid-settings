@@ -102,11 +102,11 @@
     </message>
     <message>
         <source>Watchface</source>
-        <translation></translation>
+        <translation>Циферблат</translation>
     </message>
     <message>
         <source>USB</source>
-        <translation type="unfinished"></translation>
+        <translation>USB</translation>
     </message>
     <message>
         <source>Power Off</source>

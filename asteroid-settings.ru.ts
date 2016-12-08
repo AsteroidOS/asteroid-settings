@@ -110,7 +110,7 @@
     </message>
     <message>
         <source>Power Off</source>
-        <translation>Выключение питания</translation>
+        <translation>Выключить</translation>
     </message>
     <message>
         <source>About</source>

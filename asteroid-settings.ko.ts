@@ -5,29 +5,29 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation type="unfinished"></translation>
+        <translation>블루투스 사용</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>알림 동기화</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation type="unfinished"></translation>
+        <translation>시간 동기화</translation>
     </message>
 </context>
 <context>
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>밝기: %1%</translation>
     </message>
 </context>
 <context>
     <name>DatePage</name>
     <message>
         <source>Select a date:</source>
-        <translation type="unfinished"></translation>
+        <translation>날짜 설정:</translation>
     </message>
 </context>
 <context>

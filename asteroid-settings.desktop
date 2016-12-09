@@ -2,14 +2,14 @@
 Type=Application
 Name=Settings
 Name[de_DE]=Einstellungen
-Name[es_ES]=Ajustes
-Name[fr_FR]=Paramètres
-Name[ko_KO]=설정
+Name[es]=Ajustes
+Name[fr]=Paramètres
+Name[ko]=설정
 Name[nl_NL]=Instellingen
-Name[pl_PL]=Ustawienia
+Name[pl]=Ustawienia
 Name[pt_BR]=Configurações
-Name[sv_SV]=Inställningar
-Name[ru_RU]=настройки
+Name[sv]=Inställningar
+Name[ru]=настройки
 Categories=Applications;
 Exec=invoker --single-instance --type=qtcomponents-qt5 /usr/bin/asteroid-settings
 Icon=ios-settings-outline

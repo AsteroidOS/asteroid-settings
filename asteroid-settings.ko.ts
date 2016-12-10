@@ -34,87 +34,87 @@
     <name>LanguagePage</name>
     <message>
         <source>Select a language:</source>
-        <translation type="unfinished"></translation>
+        <translation>언어 선택:</translation>
     </message>
 </context>
 <context>
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation type="unfinished"></translation>
+        <translation>끄기</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation type="unfinished"></translation>
+        <translation>다시 시작</translation>
     </message>
 </context>
 <context>
     <name>TimePage</name>
     <message>
         <source>Select a time:</source>
-        <translation type="unfinished"></translation>
+        <translation>시간 설정:</translation>
     </message>
 </context>
 <context>
     <name>USBPage</name>
     <message>
         <source>Adb Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Adb 모드</translation>
     </message>
     <message>
         <source>Developer Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>개발자 모드</translation>
     </message>
     <message>
         <source>Mass Storage</source>
-        <translation type="unfinished"></translation>
+        <translation>대용량 저장소</translation>
     </message>
     <message>
         <source>MTP Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>MTP 모드</translation>
     </message>
 </context>
 <context>
     <name>main</name>
     <message>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>언어</translation>
     </message>
     <message>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation>시간</translation>
     </message>
     <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>날짜</translation>
     </message>
     <message>
         <source>Bluetooth</source>
-        <translation type="unfinished"></translation>
+        <translation>블루투스</translation>
     </message>
     <message>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>밝기</translation>
     </message>
     <message>
         <source>Wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>배경화면</translation>
     </message>
     <message>
         <source>Watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>시계화면</translation>
     </message>
     <message>
         <source>USB</source>
-        <translation type="unfinished"></translation>
+        <translation>USB</translation>
     </message>
     <message>
         <source>Power Off</source>
-        <translation type="unfinished"></translation>
+        <translation>종료</translation>
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>정보</translation>
     </message>
 </context>
 </TS>

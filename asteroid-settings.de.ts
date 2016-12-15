@@ -6,7 +6,7 @@
     <message>
         <location filename="BluetoothPage.qml" line="32"/>
         <source>Use Bluetooth</source>
-        <translation>Bluetooth aktivieren</translation>
+        <translation>Bluetooth einschalten</translation>
     </message>
     <message>
         <location filename="BluetoothPage.qml" line="40"/>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.0" language="fr">
 <context>
@@ -20,7 +20,7 @@
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation>Luminosité: %1%</translation>
+        <translation>Luminosité : %1%</translation>
     </message>
 </context>
 <context>

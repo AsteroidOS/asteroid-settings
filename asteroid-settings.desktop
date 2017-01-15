@@ -10,6 +10,7 @@ Name[pl]=Ustawienia
 Name[pt_BR]=Configurações
 Name[sv]=Inställningar
 Name[ru]=настройки
+Name[fa]=تنظیمات
 Categories=Applications;
 Exec=invoker --single-instance --type=qtcomponents-qt5 /usr/bin/asteroid-settings
 Icon=ios-settings-outline

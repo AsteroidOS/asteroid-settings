@@ -5,11 +5,11 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation>Rmed Bluetooth</translation>
+        <translation>Sker Bluetooth</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation>Mtawi ilɣuten</translation>
+        <translation>Mtawi alɣuten</translation>
     </message>
     <message>
         <source>Sync time</source>
@@ -63,7 +63,7 @@
     </message>
     <message>
         <source>Developer Mode</source>
-        <translation>Askar n uneflay</translation>
+        <translation>Askar uneflay</translation>
     </message>
     <message>
         <source>Mass Storage</source>

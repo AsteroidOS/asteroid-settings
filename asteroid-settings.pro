@@ -66,5 +66,6 @@ target.path = /usr/bin/
 desktop.commands = bash $$PWD/i18n/generate-desktop.sh $$PWD asteroid-settings.desktop
 desktop.path = /usr/share/applications
 desktop.files = $$OUT_PWD/asteroid-settings.desktop
+desktop.CONFIG = no_check_exist
 
 INSTALLS += target desktop

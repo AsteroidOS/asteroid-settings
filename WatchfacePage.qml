@@ -18,6 +18,7 @@
 import QtQuick 2.1
 import QtGraphicalEffects 1.0
 import Qt.labs.folderlistmodel 2.1
+import org.nemomobile.time 1.0
 import org.nemomobile.configuration 1.0
 import org.asteroid.controls 1.0
 
@@ -40,18 +41,21 @@ Item {
             nameFilters: ["*.qml"]
         }
 
+        WallClock {
+            id: wallClock
+            enabled: true
+            updateFrequency: WallClock.Minute
+        }
+
         delegate: Component {
             id: fileDelegate
             Item {
                 width: grid.width/2
                 height: grid.height/2
-                Image {
-                    id: img
+                Loader {
+                    id: preview
                     anchors.fill: parent
-                    fillMode: Image.PreserveAspectFit
-                    smooth: true
-                    asynchronous: true
-                    source: folderModel.folder + "/" + fileName.replace(".qml", ".jpg")
+                    source: folderModel.folder + "/" + fileName
                 }
                 MouseArea {
                     anchors.fill: parent
@@ -59,8 +63,8 @@ Item {
                 }
 
                 BrightnessContrast {
-                    anchors.fill: img
-                    source: img
+                    anchors.fill: preview
+                    source: preview
                     brightness: -0.4
                     visible: watchfaceSource.value == folderModel.folder + "/" + fileName
                 }

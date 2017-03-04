@@ -1,26 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ta">
+<TS version="2.1" language="ta">
 <context>
     <name>BluetoothPage</name>
     <message>
-        <source>Use Bluetooth</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Sync notifications</source>
-        <translation>அறிவிப்புகளை ஒத்திசை</translation>
+        <translation type="vanished">அறிவிப்புகளை ஒத்திசை</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation>ஒத்திசைவு நேரம்</translation>
+        <translation type="vanished">ஒத்திசைவு நேரம்</translation>
+    </message>
+    <message>
+        <source>Bluetooth on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bluetooth off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Connected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Not Connected</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation>ஒளிர்வு: %1%</translation>
+        <translation type="vanished">ஒளிர்வு: %1%</translation>
+    </message>
+    <message>
+        <source>Brightness %1%</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -36,16 +52,38 @@
         <source>Select a language:</source>
         <translation>மொழி:</translation>
     </message>
+    <message>
+        <source>Rebooting...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation>நிறுத்து</translation>
+        <translation type="vanished">நிறுத்து</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation>மீள்துவக்கு</translation>
+        <translation type="vanished">மீள்துவக்கு</translation>
+    </message>
+    <message>
+        <source>Power off AsteroidOS</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RebootPage</name>
+    <message>
+        <source>Reboot AsteroidOS</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -72,6 +110,10 @@
     <message>
         <source>MTP Mode</source>
         <translation>MTP முறை</translation>
+    </message>
+    <message>
+        <source>Select a USB mode:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -115,6 +157,10 @@
     <message>
         <source>About</source>
         <translation>பற்றி</translation>
+    </message>
+    <message>
+        <source>Reboot</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

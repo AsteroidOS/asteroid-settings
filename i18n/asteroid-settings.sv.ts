@@ -1,26 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sv">
+<TS version="2.1" language="sv">
 <context>
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation>Använd Bluetooth</translation>
+        <translation type="vanished">Använd Bluetooth</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation>Synkronisera notifikationer</translation>
+        <translation type="vanished">Synkronisera notifikationer</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation>Synkronisera klockan</translation>
+        <translation type="vanished">Synkronisera klockan</translation>
+    </message>
+    <message>
+        <source>Bluetooth on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bluetooth off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Connected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Not Connected</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation>Ljusstyrka: %1%</translation>
+        <translation type="vanished">Ljusstyrka: %1%</translation>
+    </message>
+    <message>
+        <source>Brightness %1%</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -36,16 +56,39 @@
         <source>Select a language:</source>
         <translation>Välj språk:</translation>
     </message>
+    <message>
+        <source>Rebooting...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation>Stäng av</translation>
+        <translation type="vanished">Stäng av</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation>Starta om</translation>
+        <translation type="vanished">Starta om</translation>
+    </message>
+    <message>
+        <source>Power off AsteroidOS</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <location filename="asteroid-settings.desktop.h" line="5"/>
+        <source>Settings</source>
+        <translation>Inställningar</translation>
+    </message>
+</context>
+<context>
+    <name>RebootPage</name>
+    <message>
+        <source>Reboot AsteroidOS</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -72,6 +115,10 @@
     <message>
         <source>MTP Mode</source>
         <translation>MTP-läge</translation>
+    </message>
+    <message>
+        <source>Select a USB mode:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -115,6 +162,10 @@
     <message>
         <source>About</source>
         <translation>Om</translation>
+    </message>
+    <message>
+        <source>Reboot</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

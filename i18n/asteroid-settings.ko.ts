@@ -1,26 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ko">
+<TS version="2.1" language="ko">
 <context>
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation>블루투스 사용</translation>
+        <translation type="vanished">블루투스 사용</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation>알림 동기화</translation>
+        <translation type="vanished">알림 동기화</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation>시간 동기화</translation>
+        <translation type="vanished">시간 동기화</translation>
+    </message>
+    <message>
+        <source>Bluetooth on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bluetooth off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Connected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Not Connected</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation>밝기: %1%</translation>
+        <translation type="vanished">밝기: %1%</translation>
+    </message>
+    <message>
+        <source>Brightness %1%</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -36,16 +56,39 @@
         <source>Select a language:</source>
         <translation>언어 선택:</translation>
     </message>
+    <message>
+        <source>Rebooting...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation>끄기</translation>
+        <translation type="vanished">끄기</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation>다시 시작</translation>
+        <translation type="vanished">다시 시작</translation>
+    </message>
+    <message>
+        <source>Power off AsteroidOS</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <location filename="asteroid-settings.desktop.h" line="5"/>
+        <source>Settings</source>
+        <translation>설정</translation>
+    </message>
+</context>
+<context>
+    <name>RebootPage</name>
+    <message>
+        <source>Reboot AsteroidOS</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -72,6 +115,10 @@
     <message>
         <source>MTP Mode</source>
         <translation>MTP 모드</translation>
+    </message>
+    <message>
+        <source>Select a USB mode:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -115,6 +162,10 @@
     <message>
         <source>About</source>
         <translation>정보</translation>
+    </message>
+    <message>
+        <source>Reboot</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

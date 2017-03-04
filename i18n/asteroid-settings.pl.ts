@@ -1,26 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pl">
+<TS version="2.1" language="pl">
 <context>
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation>Użyj Bluetooth</translation>
+        <translation type="vanished">Użyj Bluetooth</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation>Synchronizuj powiadomienia</translation>
+        <translation type="vanished">Synchronizuj powiadomienia</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation>Synchronizuj czas</translation>
+        <translation type="vanished">Synchronizuj czas</translation>
+    </message>
+    <message>
+        <source>Bluetooth on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bluetooth off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Connected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Not Connected</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation>Jasność: %1%</translation>
+        <translation type="vanished">Jasność: %1%</translation>
+    </message>
+    <message>
+        <source>Brightness %1%</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -36,16 +56,39 @@
         <source>Select a language:</source>
         <translation>Wybierz język:</translation>
     </message>
+    <message>
+        <source>Rebooting...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation>Wyłącz</translation>
+        <translation type="vanished">Wyłącz</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation>Zrestartuj</translation>
+        <translation type="vanished">Zrestartuj</translation>
+    </message>
+    <message>
+        <source>Power off AsteroidOS</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <location filename="asteroid-settings.desktop.h" line="5"/>
+        <source>Settings</source>
+        <translation>Ustawienia</translation>
+    </message>
+</context>
+<context>
+    <name>RebootPage</name>
+    <message>
+        <source>Reboot AsteroidOS</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -72,6 +115,10 @@
     <message>
         <source>MTP Mode</source>
         <translation>Tryb MTP</translation>
+    </message>
+    <message>
+        <source>Select a USB mode:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -115,6 +162,10 @@
     <message>
         <source>About</source>
         <translation>O urządzeniu</translation>
+    </message>
+    <message>
+        <source>Reboot</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

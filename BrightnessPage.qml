@@ -24,7 +24,6 @@ Item {
     Icon {
         width: parent.height*0.25
         height: width
-        size: width
         anchors.centerIn: parent
         anchors.verticalCenterOffset: -parent.height*0.15
         color: "white"
@@ -47,7 +46,6 @@ Item {
     IconButton {
         width: parent.height*0.2
         height: width
-        iconSize: width
         iconColor: "white"
         pressedIconColor: "lightgrey"
         iconName: "ios-remove-circle-outline"
@@ -65,7 +63,6 @@ Item {
     IconButton {
         width: parent.height*0.2
         height: width
-        iconSize: width
         iconColor: "white"
         pressedIconColor: "lightgrey"
         iconName: "ios-add-circle-outline"

@@ -5,15 +5,15 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation type="vanished">Bluetooth használata</translation>
+        <translation>Bluetooth használata</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation type="vanished">Értesítések szinkronizálása</translation>
+        <translation>Értesítések szinkronizálása</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation type="vanished">Idő szinkronizálása</translation>
+        <translation>Idő szinkronizálása</translation>
     </message>
     <message>
         <source>Bluetooth on</source>
@@ -36,7 +36,7 @@
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation type="vanished">Fényerő: %1%</translation>
+        <translation>Fényerő: %1%</translation>
     </message>
     <message>
         <source>Brightness %1%</source>
@@ -65,11 +65,11 @@
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation type="vanished">Kikapcsolás</translation>
+        <translation>Kikapcsolás</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation type="vanished">Újraindítás</translation>
+        <translation>Újraindítás</translation>
     </message>
     <message>
         <source>Power off AsteroidOS</source>

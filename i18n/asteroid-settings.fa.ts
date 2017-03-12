@@ -5,15 +5,15 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation type="vanished">استفاده از بلوتوث</translation>
+        <translation>استفاده از بلوتوث</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation type="vanished">هم‌گام‌سازی آگاهی‌ها</translation>
+        <translation>هم‌گام‌سازی آگاهی‌ها</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation type="vanished">هم‌گام‌سازی زمان</translation>
+        <translation>هم‌گام‌سازی زمان</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="55"/>
@@ -40,7 +40,7 @@
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation type="vanished">روشنایی: %1%</translation>
+        <translation>روشنایی: %1%</translation>
     </message>
     <message>
         <location filename="../BrightnessPage.qml" line="35"/>
@@ -73,11 +73,11 @@
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation type="vanished">خاموش کردن</translation>
+        <translation>خاموش کردن</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation type="vanished">خاموش و روشن</translation>
+        <translation>خاموش و روشن</translation>
     </message>
     <message>
         <location filename="../PoweroffPage.qml" line="28"/>

@@ -5,15 +5,15 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation type="vanished">블루투스 사용</translation>
+        <translation>블루투스 사용</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation type="vanished">알림 동기화</translation>
+        <translation>알림 동기화</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation type="vanished">시간 동기화</translation>
+        <translation>시간 동기화</translation>
     </message>
     <message>
         <source>Bluetooth on</source>
@@ -36,7 +36,7 @@
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation type="vanished">밝기: %1%</translation>
+        <translation>밝기: %1%</translation>
     </message>
     <message>
         <source>Brightness %1%</source>
@@ -65,11 +65,11 @@
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation type="vanished">끄기</translation>
+        <translation>끄기</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation type="vanished">다시 시작</translation>
+        <translation>다시 시작</translation>
     </message>
     <message>
         <source>Power off AsteroidOS</source>

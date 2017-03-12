@@ -5,15 +5,15 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation type="vanished">Використовувати Bluetooth</translation>
+        <translation>Використовувати Bluetooth</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation type="vanished">Синхронізувати сповіщення</translation>
+        <translation>Синхронізувати сповіщення</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation type="vanished">Синхронізувати час</translation>
+        <translation>Синхронізувати час</translation>
     </message>
     <message>
         <source>Bluetooth on</source>
@@ -36,7 +36,7 @@
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation type="vanished">Яскравість: %1%</translation>
+        <translation>Яскравість: %1%</translation>
     </message>
     <message>
         <source>Brightness %1%</source>
@@ -65,11 +65,11 @@
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation type="vanished">Вимкнути</translation>
+        <translation>Вимкнути</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation type="vanished">Перезавантаження</translation>
+        <translation>Перезавантаження</translation>
     </message>
     <message>
         <source>Power off AsteroidOS</source>

@@ -39,7 +39,6 @@ Item {
     }
     Icon {
         visible: availableDays(timestampDay0.value*1000) <= 0
-        size: width
         anchors.fill: btBackground
         color: "white"
         name: btStatus.powered ? "ios-bluetooth-outline" : "ios-bluetooth-off-outline"

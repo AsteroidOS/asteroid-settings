@@ -75,10 +75,9 @@ Item {
     }
 
     IconButton {
-        height: parent.height*0.2
-        width: height
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
+        anchors.bottomMargin: app.height/28
 
         iconColor: "white"
         iconName: "ios-checkmark-circle-outline"

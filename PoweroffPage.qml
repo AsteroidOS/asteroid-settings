@@ -34,7 +34,6 @@ Item {
     IconButton {
         width: parent.height*0.2
         height: width
-        iconSize: width
         iconColor: "white"
         pressedIconColor: "lightgrey"
         iconName: "ios-close-circle-outline"
@@ -48,7 +47,6 @@ Item {
     IconButton {
         width: parent.height*0.2
         height: width
-        iconSize: width
         iconColor: "white"
         pressedIconColor: "lightgrey"
         iconName: "ios-checkmark-circle-outline"

@@ -25,11 +25,13 @@ Item {
     signal clicked()
 
     width: parent.width
-    height: Units.dp(25)
+    height: 50
 
     Icon {
         id: icon
         color: "white"
+        width: parent.height
+        height: width
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.leftMargin: Units.dp(20)

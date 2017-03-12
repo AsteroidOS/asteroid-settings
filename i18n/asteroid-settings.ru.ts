@@ -17,19 +17,19 @@
     </message>
     <message>
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth включен</translation>
     </message>
     <message>
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>отключен</translation>
     </message>
     <message>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Подключен</translation>
     </message>
     <message>
         <source>Not Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Не подключен</translation>
     </message>
 </context>
 <context>
@@ -40,7 +40,7 @@
     </message>
     <message>
         <source>Brightness %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Яркость %1%</translation>
     </message>
 </context>
 <context>
@@ -58,7 +58,7 @@
     </message>
     <message>
         <source>Rebooting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Перезагрузка...</translation>
     </message>
 </context>
 <context>
@@ -73,7 +73,7 @@
     </message>
     <message>
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>выключить AsteroidOS</translation>
     </message>
 </context>
 <context>
@@ -88,7 +88,7 @@
     <name>RebootPage</name>
     <message>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Перезагрузка AsteroidOS</translation>
     </message>
 </context>
 <context>
@@ -118,7 +118,7 @@
     </message>
     <message>
         <source>Select a USB mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбор режима USB:</translation>
     </message>
 </context>
 <context>
@@ -165,7 +165,7 @@
     </message>
     <message>
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Перезагрузка</translation>
     </message>
 </context>
 </TS>

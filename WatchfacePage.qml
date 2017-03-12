@@ -16,7 +16,6 @@
  */
 
 import QtQuick 2.1
-import QtGraphicalEffects 1.0
 import Qt.labs.folderlistmodel 2.1
 import org.nemomobile.time 1.0
 import org.nemomobile.configuration 1.0
@@ -62,10 +61,10 @@ Item {
                     onClicked: watchfaceSource.value = folderModel.folder + "/" + fileName
                 }
 
-                BrightnessContrast {
+                Rectangle {
                     anchors.fill: preview
-                    source: preview
-                    brightness: -0.4
+                    color: "black"
+                    opacity: 0.4
                     visible: watchfaceSource.value == folderModel.folder + "/" + fileName
                 }
                 Icon {

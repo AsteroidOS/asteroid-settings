@@ -68,10 +68,10 @@ Item {
                     }
                 }
 
-                BrightnessContrast {
+                Rectangle {
                     anchors.fill: img
-                    source: img
-                    brightness: -0.4
+                    color: "black"
+                    opacity: 0.4
                     visible: wallpaperSource.value == folderModel.folder + "/" + fileName |
                              wallpaperSource.value == folderModel.folder + "/" + fileBaseName + ".qml"
                 }

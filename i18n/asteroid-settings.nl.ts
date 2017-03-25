@@ -17,19 +17,19 @@
     </message>
     <message>
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth aan</translation>
     </message>
     <message>
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth uit</translation>
     </message>
     <message>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Verbonden</translation>
     </message>
     <message>
         <source>Not Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Niet verbonden</translation>
     </message>
 </context>
 <context>
@@ -40,7 +40,7 @@
     </message>
     <message>
         <source>Brightness %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Helderheid %1%</translation>
     </message>
 </context>
 <context>
@@ -58,7 +58,7 @@
     </message>
     <message>
         <source>Rebooting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezig met herstarten...</translation>
     </message>
 </context>
 <context>
@@ -73,7 +73,7 @@
     </message>
     <message>
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>AsteroidOS uitschakelen</translation>
     </message>
 </context>
 <context>
@@ -88,7 +88,7 @@
     <name>RebootPage</name>
     <message>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>AsteroidOS herstarten</translation>
     </message>
 </context>
 <context>
@@ -118,7 +118,7 @@
     </message>
     <message>
         <source>Select a USB mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kies een USB-modus:</translation>
     </message>
 </context>
 <context>
@@ -165,7 +165,7 @@
     </message>
     <message>
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Herstarten</translation>
     </message>
 </context>
 </TS>

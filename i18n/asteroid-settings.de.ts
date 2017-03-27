@@ -18,22 +18,22 @@
     <message>
         <location filename="../BluetoothPage.qml" line="55"/>
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth an</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="55"/>
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth aus</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="55"/>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Verbunden</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="55"/>
         <source>Not Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Nicht verbunden</translation>
     </message>
 </context>
 <context>
@@ -45,7 +45,7 @@
     <message>
         <location filename="../BrightnessPage.qml" line="35"/>
         <source>Brightness %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Helligkeit %1%</translation>
     </message>
 </context>
 <context>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../LanguagePage.qml" line="105"/>
         <source>Rebooting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu starten...</translation>
     </message>
 </context>
 <context>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../PoweroffPage.qml" line="28"/>
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Schalte AsteroidOS aus</translation>
     </message>
 </context>
 <context>
@@ -98,7 +98,7 @@
     <message>
         <location filename="../RebootPage.qml" line="28"/>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Starte AsteroidOS neu</translation>
     </message>
 </context>
 <context>

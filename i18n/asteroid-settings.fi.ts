@@ -5,75 +5,75 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä Bluetoothia</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Synkronoi ilmoitukset</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation type="unfinished"></translation>
+        <translation>Synkronoi aika</translation>
     </message>
     <message>
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth päällä</translation>
     </message>
     <message>
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth pois</translation>
     </message>
     <message>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Yhdistetty</translation>
     </message>
     <message>
         <source>Not Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei Yhteyttä</translation>
     </message>
 </context>
 <context>
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirkkaus: %1%</translation>
     </message>
     <message>
         <source>Brightness %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirkkaus %1%</translation>
     </message>
 </context>
 <context>
     <name>DatePage</name>
     <message>
         <source>Select a date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse päivämäärä:</translation>
     </message>
 </context>
 <context>
     <name>LanguagePage</name>
     <message>
         <source>Select a language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse kieli:</translation>
     </message>
     <message>
         <source>Rebooting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Käynnistetään uudelleen...</translation>
     </message>
 </context>
 <context>
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation type="unfinished"></translation>
+        <translation>Sammuta</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation type="unfinished"></translation>
+        <translation>Uudelleenkäynnistys</translation>
     </message>
     <message>
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Sammuta AsteroidOS</translation>
     </message>
 </context>
 <context>
@@ -81,91 +81,91 @@
     <message>
         <location filename="asteroid-settings.desktop.h" line="5"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset</translation>
     </message>
 </context>
 <context>
     <name>RebootPage</name>
     <message>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Uudelleenkäynnistä AsteroidOS</translation>
     </message>
 </context>
 <context>
     <name>TimePage</name>
     <message>
         <source>Select a time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aseta aika:</translation>
     </message>
 </context>
 <context>
     <name>USBPage</name>
     <message>
         <source>Adb Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Adb Tila</translation>
     </message>
     <message>
         <source>Developer Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Kehittäjätila</translation>
     </message>
     <message>
         <source>Mass Storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Massamuisti</translation>
     </message>
     <message>
         <source>MTP Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>MTP Tila</translation>
     </message>
     <message>
         <source>Select a USB mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse USB tila:</translation>
     </message>
 </context>
 <context>
     <name>main</name>
     <message>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Kieli</translation>
     </message>
     <message>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Aika</translation>
     </message>
     <message>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Päivämäärä</translation>
     </message>
     <message>
         <source>Bluetooth</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth</translation>
     </message>
     <message>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirkkaus</translation>
     </message>
     <message>
         <source>Wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Taustakuva</translation>
     </message>
     <message>
         <source>Watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>Kellotaulu</translation>
     </message>
     <message>
         <source>USB</source>
-        <translation type="unfinished"></translation>
+        <translation>USB</translation>
     </message>
     <message>
         <source>Power Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Sammuta</translation>
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Tietoa</translation>
     </message>
     <message>
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Uudelleenkäynnistä</translation>
     </message>
 </context>
 </TS>

@@ -23,7 +23,7 @@ import org.asteroid.controls 1.0
 Item {
     ConfigurationValue {
         id: wallpaperSource
-        key: "/desktop/asteroid/background_filename"
+        key: "/desktop/asteroid/background-filename"
         defaultValue: "file:///usr/share/asteroid-launcher/wallpapers/000-flatmesh.qml"
     }
 

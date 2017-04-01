@@ -17,19 +17,19 @@
     </message>
     <message>
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>Attiva Bluetooth</translation>
     </message>
     <message>
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>Disattiva Bluetooth</translation>
     </message>
     <message>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Connesso</translation>
     </message>
     <message>
         <source>Not Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Non connesso</translation>
     </message>
 </context>
 <context>
@@ -40,7 +40,7 @@
     </message>
     <message>
         <source>Brightness %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Luminosità %1%</translation>
     </message>
 </context>
 <context>
@@ -58,7 +58,7 @@
     </message>
     <message>
         <source>Rebooting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sto riavviando...</translation>
     </message>
 </context>
 <context>
@@ -73,21 +73,21 @@
     </message>
     <message>
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Spegni AsteroidOS</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni</translation>
     </message>
 </context>
 <context>
     <name>RebootPage</name>
     <message>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Riavvia AsteroidOS</translation>
     </message>
 </context>
 <context>
@@ -101,23 +101,23 @@
     <name>USBPage</name>
     <message>
         <source>Adb Mode</source>
-        <translation>Modo Adb</translation>
+        <translation>Attiva Adb</translation>
     </message>
     <message>
         <source>Developer Mode</source>
-        <translation>Modalità Sviluppatore</translation>
+        <translation>Modalità sviluppatore</translation>
     </message>
     <message>
         <source>Mass Storage</source>
-        <translation>Memoria di Massa</translation>
+        <translation>Memoria di massa</translation>
     </message>
     <message>
         <source>MTP Mode</source>
-        <translation>Modo MTP</translation>
+        <translation>Attiva MTP</translation>
     </message>
     <message>
         <source>Select a USB mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Scegli una modalità USB:</translation>
     </message>
 </context>
 <context>
@@ -164,7 +164,7 @@
     </message>
     <message>
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Riavvia</translation>
     </message>
 </context>
 </TS>

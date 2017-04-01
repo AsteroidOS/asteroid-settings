@@ -94,14 +94,14 @@
     <name>TimePage</name>
     <message>
         <source>Select a time:</source>
-        <translation>Selezione ora:</translation>
+        <translation>Seleziona ora:</translation>
     </message>
 </context>
 <context>
     <name>USBPage</name>
     <message>
         <source>Adb Mode</source>
-        <translation>Attiva Adb</translation>
+        <translation>Modalità Adb</translation>
     </message>
     <message>
         <source>Developer Mode</source>
@@ -117,7 +117,7 @@
     </message>
     <message>
         <source>Select a USB mode:</source>
-        <translation>Scegli una modalità USB:</translation>
+        <translation>Seleziona una modalità USB:</translation>
     </message>
 </context>
 <context>

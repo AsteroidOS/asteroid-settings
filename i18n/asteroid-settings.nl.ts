@@ -9,7 +9,7 @@
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation>Synchronisatienotificaties</translation>
+        <translation>Synchronisatiemeldingen</translation>
     </message>
     <message>
         <source>Sync time</source>

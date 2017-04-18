@@ -5,60 +5,60 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation>Bluetooth&apos;u Kullan</translation>
+        <translation>Bluetooth'u Kullan</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation>Eşlenen Bildirimler</translation>
+        <translation>Bildirimleri eşitle</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation>Eşlenen Zaman</translation>
+        <translation>Zamanı eşitle</translation>
     </message>
     <message>
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth açık</translation>
     </message>
     <message>
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth kapalı</translation>
     </message>
     <message>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağlı</translation>
     </message>
     <message>
         <source>Not Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağlı Değil</translation>
     </message>
 </context>
 <context>
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation>Parlaklık : %1%</translation>
+        <translation>Parlaklık: %%1</translation>
     </message>
     <message>
         <source>Brightness %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>%%1 Parlaklık</translation>
     </message>
 </context>
 <context>
     <name>DatePage</name>
     <message>
         <source>Select a date:</source>
-        <translation>Tarih Seç:</translation>
+        <translation>Tarih seç:</translation>
     </message>
 </context>
 <context>
     <name>LanguagePage</name>
     <message>
         <source>Select a language:</source>
-        <translation>Dil Seç:</translation>
+        <translation>Dil seç:</translation>
     </message>
     <message>
         <source>Rebooting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeniden başlatılıyor...</translation>
     </message>
 </context>
 <context>
@@ -69,55 +69,55 @@
     </message>
     <message>
         <source>Restart</source>
-        <translation>Yeniden Başlat</translation>
+        <translation>Yeniden başlat</translation>
     </message>
     <message>
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>AsteroidOS'i kapat</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayarlar</translation>
     </message>
 </context>
 <context>
     <name>RebootPage</name>
     <message>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>AsteroidOS'i yeniden başlat</translation>
     </message>
 </context>
 <context>
     <name>TimePage</name>
     <message>
         <source>Select a time:</source>
-        <translation>Zamanı Seç:</translation>
+        <translation>Saat seç:</translation>
     </message>
 </context>
 <context>
     <name>USBPage</name>
     <message>
         <source>Adb Mode</source>
-        <translation>Adb Modu</translation>
+        <translation>Adb Kipi</translation>
     </message>
     <message>
         <source>Developer Mode</source>
-        <translation>Geliştirici Modu</translation>
+        <translation>Geliştirici Kipi</translation>
     </message>
     <message>
         <source>Mass Storage</source>
-        <translation>Bellek</translation>
+        <translation>Yığınsal Bellek</translation>
     </message>
     <message>
         <source>MTP Mode</source>
-        <translation>MTP Modu</translation>
+        <translation>MTP Kipi</translation>
     </message>
     <message>
         <source>Select a USB mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>USB kipi seç:</translation>
     </message>
 </context>
 <context>
@@ -128,7 +128,7 @@
     </message>
     <message>
         <source>Time</source>
-        <translation>Zaman</translation>
+        <translation>Saat</translation>
     </message>
     <message>
         <source>Date</source>
@@ -148,7 +148,7 @@
     </message>
     <message>
         <source>Watchface</source>
-        <translation>Yüzü İzle</translation>
+        <translation>Saat yüzü</translation>
     </message>
     <message>
         <source>USB</source>
@@ -164,7 +164,7 @@
     </message>
     <message>
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeniden Başlat</translation>
     </message>
 </context>
 </TS>

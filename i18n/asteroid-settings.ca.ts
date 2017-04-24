@@ -17,19 +17,19 @@
     </message>
     <message>
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth activat</translation>
     </message>
     <message>
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth apagat</translation>
     </message>
     <message>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Connectat</translation>
     </message>
     <message>
         <source>Not Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>No connectat</translation>
     </message>
 </context>
 <context>
@@ -40,7 +40,7 @@
     </message>
     <message>
         <source>Brightness %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Brillantor %1%</translation>
     </message>
 </context>
 <context>
@@ -58,7 +58,7 @@
     </message>
     <message>
         <source>Rebooting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Reiniciant...</translation>
     </message>
 </context>
 <context>
@@ -73,21 +73,21 @@
     </message>
     <message>
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Apagar AsteroidOS</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuració</translation>
     </message>
 </context>
 <context>
     <name>RebootPage</name>
     <message>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Reiniciar AsteroidOS</translation>
     </message>
 </context>
 <context>
@@ -117,7 +117,7 @@
     </message>
     <message>
         <source>Select a USB mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccioneu un mode USB:</translation>
     </message>
 </context>
 <context>
@@ -164,7 +164,7 @@
     </message>
     <message>
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Reiniciar</translation>
     </message>
 </context>
 </TS>

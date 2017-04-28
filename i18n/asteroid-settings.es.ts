@@ -18,34 +18,34 @@
     <message>
         <location filename="../BluetoothPage.qml" line="55"/>
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth encendido</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="55"/>
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth apagado</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="55"/>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Conectado</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="55"/>
         <source>Not Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>No conectado</translation>
     </message>
 </context>
 <context>
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation>Brillo</translation>
+        <translation>Brillo: %1%</translation>
     </message>
     <message>
         <location filename="../BrightnessPage.qml" line="35"/>
         <source>Brightness %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Brillo %1%</translation>
     </message>
 </context>
 <context>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../LanguagePage.qml" line="105"/>
         <source>Rebooting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Reiniciando...</translation>
     </message>
 </context>
 <context>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../PoweroffPage.qml" line="28"/>
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Apagar AsteroidOS</translation>
     </message>
 </context>
 <context>
@@ -98,7 +98,7 @@
     <message>
         <location filename="../RebootPage.qml" line="28"/>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Reiniciar AsteroidOS</translation>
     </message>
 </context>
 <context>
@@ -114,7 +114,7 @@
     <message>
         <location filename="../USBPage.qml" line="30"/>
         <source>Select a USB mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar modo USB:</translation>
     </message>
     <message>
         <location filename="../USBPage.qml" line="41"/>
@@ -142,12 +142,12 @@
     <message>
         <location filename="../main.qml" line="70"/>
         <source>Language</source>
-        <translation>Idioma</translation>
+        <translation>Lenguaje</translation>
     </message>
     <message>
         <location filename="../main.qml" line="60"/>
         <source>Time</source>
-        <translation>Hora</translation>
+        <translation>Tiempo</translation>
     </message>
     <message>
         <location filename="../main.qml" line="65"/>
@@ -167,12 +167,12 @@
     <message>
         <location filename="../main.qml" line="85"/>
         <source>Wallpaper</source>
-        <translation>Fondo de pantalla</translation>
+        <translation>salvapantalla</translation>
     </message>
     <message>
         <location filename="../main.qml" line="90"/>
         <source>Watchface</source>
-        <translation>SymbolicFace</translation>
+        <translation>Watchface</translation>
     </message>
     <message>
         <location filename="../main.qml" line="95"/>
@@ -187,7 +187,7 @@
     <message>
         <location filename="../main.qml" line="105"/>
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Reiniciar</translation>
     </message>
     <message>
         <location filename="../main.qml" line="110"/>

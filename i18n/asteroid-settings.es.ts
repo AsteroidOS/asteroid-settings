@@ -129,7 +129,7 @@
     <message>
         <location filename="../USBPage.qml" line="43"/>
         <source>Mass Storage</source>
-        <translation>Almacenamiento masivo</translation>
+        <translation>Almacenaje masivo</translation>
     </message>
     <message>
         <location filename="../USBPage.qml" line="44"/>
@@ -172,7 +172,7 @@
     <message>
         <location filename="../main.qml" line="90"/>
         <source>Watchface</source>
-        <translation>Watchface</translation>
+        <translation>Tipos de reloj</translation>
     </message>
     <message>
         <location filename="../main.qml" line="95"/>
@@ -182,7 +182,7 @@
     <message>
         <location filename="../main.qml" line="100"/>
         <source>Power Off</source>
-        <translation>Apagado</translation>
+        <translation>Apagar</translation>
     </message>
     <message>
         <location filename="../main.qml" line="105"/>

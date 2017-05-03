@@ -5,7 +5,7 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation>Sker Bluetooth</translation>
+        <translation>Rmed Bluetooth</translation>
     </message>
     <message>
         <source>Sync notifications</source>
@@ -156,7 +156,7 @@
     </message>
     <message>
         <source>Power Off</source>
-        <translation>Sens</translation>
+        <translation>Sexsi</translation>
     </message>
     <message>
         <source>About</source>

@@ -53,7 +53,7 @@
     <message>
         <location filename="../DatePage.qml" line="32"/>
         <source>Select a date:</source>
-        <translation>Seleccionar fecha:</translation>
+        <translation>Configurar la fecha:</translation>
     </message>
 </context>
 <context>
@@ -61,7 +61,7 @@
     <message>
         <location filename="../LanguagePage.qml" line="31"/>
         <source>Select a language:</source>
-        <translation>Seleccionar lenguaje:</translation>
+        <translation>Configurar el lenguaje:</translation>
     </message>
     <message>
         <location filename="../LanguagePage.qml" line="105"/>
@@ -106,7 +106,7 @@
     <message>
         <location filename="../TimePage.qml" line="38"/>
         <source>Select a time:</source>
-        <translation>Seleccionar tiempo:</translation>
+        <translation>Configurar la hora:</translation>
     </message>
 </context>
 <context>

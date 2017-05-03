@@ -23,7 +23,6 @@ import org.asteroid.utils 1.0
 Item {
     BluetoothStatus {
         id: btStatus
-        onPoweredChanged: btSwitch.checked = btStatus.powered
     }
 
     Rectangle {

@@ -27,7 +27,6 @@ Item {
 
     Rectangle {
         id: btBackground
-        visible: availableDays(timestampDay0.value*1000) <= 0
         anchors.centerIn: parent
         anchors.verticalCenterOffset: -parent.height*0.13
         color: "black"
@@ -37,7 +36,6 @@ Item {
         height: width
     }
     Icon {
-        visible: availableDays(timestampDay0.value*1000) <= 0
         anchors.fill: btBackground
         color: "white"
         name: btStatus.powered ? "ios-bluetooth-outline" : "ios-bluetooth-off-outline"
@@ -49,7 +47,6 @@ Item {
 
     Text {
         id: status
-        visible: availableDays(timestampDay0.value*1000) <= 0
         text: "<h3>" + (btStatus.powered ? qsTr("Bluetooth on") : qsTr("Bluetooth off")) + "</h3>\n" + (btStatus.connected ? qsTr("Connected") : qsTr("Not Connected"))
         font.pixelSize: parent.height*0.05
         color: "white"

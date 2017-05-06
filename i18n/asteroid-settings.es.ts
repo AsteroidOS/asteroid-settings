@@ -129,7 +129,7 @@
     <message>
         <location filename="../USBPage.qml" line="43"/>
         <source>Mass Storage</source>
-        <translation>Almacenaje masivo</translation>
+        <translation>Almacenaje Masivo</translation>
     </message>
     <message>
         <location filename="../USBPage.qml" line="44"/>
@@ -147,7 +147,7 @@
     <message>
         <location filename="../main.qml" line="60"/>
         <source>Time</source>
-        <translation>Tiempo</translation>
+        <translation>Hora</translation>
     </message>
     <message>
         <location filename="../main.qml" line="65"/>
@@ -167,12 +167,12 @@
     <message>
         <location filename="../main.qml" line="85"/>
         <source>Wallpaper</source>
-        <translation>salvapantalla</translation>
+        <translation>Salvapantalla</translation>
     </message>
     <message>
         <location filename="../main.qml" line="90"/>
         <source>Watchface</source>
-        <translation>Tipos de reloj</translation>
+        <translation>Relojes</translation>
     </message>
     <message>
         <location filename="../main.qml" line="95"/>

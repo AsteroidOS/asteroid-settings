@@ -36,7 +36,7 @@ Item {
     GridView {
         id: grid
         cellWidth: width/2
-        cellHeight: height/2
+        cellHeight: height*3/8
         anchors.fill: parent
 
         model: FolderListModel {
@@ -49,12 +49,11 @@ Item {
             id: fileDelegate
             Item {
                 width: grid.width/2
-                height: grid.height/2
+                height: grid.height/2 * 0.75
                 Image {
                     id: img
                     anchors.fill: parent
-                    fillMode: Image.PreserveAspectFit
-                    smooth: true
+                    fillMode: Image.PreserveAspectCrop
                     source: folderModel.folder + "/" + fileName
                 }
                 MouseArea {

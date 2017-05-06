@@ -31,7 +31,7 @@ Item {
     GridView {
         id: grid
         cellWidth: width/2
-        cellHeight: height/2
+        cellHeight: height*3/8
         anchors.fill: parent
 
         model: FolderListModel {
@@ -50,10 +50,12 @@ Item {
             id: fileDelegate
             Item {
                 width: grid.width/2
-                height: grid.height/2
+                height: grid.height*3/8
                 Loader {
                     id: preview
-                    anchors.fill: parent
+                    anchors.centerIn: parent
+                    width: Math.min(parent.width, parent.height)
+                    height: Math.min(parent.width, parent.height)
                     source: folderModel.folder + "/" + fileName
                 }
                 MouseArea {
@@ -62,7 +64,7 @@ Item {
                 }
 
                 Rectangle {
-                    anchors.fill: preview
+                    anchors.fill: parent
                     color: "black"
                     opacity: 0.4
                     visible: watchfaceSource.value == folderModel.folder + "/" + fileName

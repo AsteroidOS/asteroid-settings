@@ -13,7 +13,7 @@
     </message>
     <message>
         <source>Sync time</source>
-        <translation>Sincronizar tiempo</translation>
+        <translation>Sincronizar hora</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="55"/>

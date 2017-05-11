@@ -40,7 +40,7 @@ lupdate_only{
 TRANSLATIONS = i18n/asteroid-settings.ca.ts \
                i18n/asteroid-settings.ckb.ts \
                i18n/asteroid-settings.cs.ts \
-               i18n/asteroid-settings.de.ts \
+               i18n/asteroid-settings.de_DE.ts \
                i18n/asteroid-settings.el.ts \
                i18n/asteroid-settings.es.ts \
                i18n/asteroid-settings.fa.ts \
@@ -49,7 +49,7 @@ TRANSLATIONS = i18n/asteroid-settings.ca.ts \
                i18n/asteroid-settings.it.ts \
                i18n/asteroid-settings.kab.ts \
                i18n/asteroid-settings.ko.ts \
-               i18n/asteroid-settings.nl.ts \
+               i18n/asteroid-settings.nl_NL.ts \
                i18n/asteroid-settings.pl.ts \
                i18n/asteroid-settings.pt_BR.ts \
                i18n/asteroid-settings.ru.ts \

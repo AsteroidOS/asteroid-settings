@@ -187,7 +187,7 @@
     <message>
         <location filename="../main.qml" line="105"/>
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Neustart</translation>
     </message>
     <message>
         <location filename="../main.qml" line="110"/>

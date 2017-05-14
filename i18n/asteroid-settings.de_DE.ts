@@ -114,7 +114,7 @@
     <message>
         <location filename="../USBPage.qml" line="30"/>
         <source>Select a USB mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle einen USB-Modus</translation>
     </message>
     <message>
         <location filename="../USBPage.qml" line="41"/>

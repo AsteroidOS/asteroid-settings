@@ -5,33 +5,33 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation>Usar Bluetooth</translation>
+        <translation type="vanished">Usar Bluetooth</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation>Sincronizar notificaciones</translation>
+        <translation type="vanished">Sincronizar notificaciones</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation>Sincronizar hora</translation>
+        <translation type="vanished">Sincronizar hora</translation>
     </message>
     <message>
-        <location filename="../BluetoothPage.qml" line="55"/>
+        <location filename="../BluetoothPage.qml" line="50"/>
         <source>Bluetooth on</source>
         <translation>Bluetooth encendido</translation>
     </message>
     <message>
-        <location filename="../BluetoothPage.qml" line="55"/>
+        <location filename="../BluetoothPage.qml" line="50"/>
         <source>Bluetooth off</source>
         <translation>Bluetooth apagado</translation>
     </message>
     <message>
-        <location filename="../BluetoothPage.qml" line="55"/>
+        <location filename="../BluetoothPage.qml" line="50"/>
         <source>Connected</source>
         <translation>Conectado</translation>
     </message>
     <message>
-        <location filename="../BluetoothPage.qml" line="55"/>
+        <location filename="../BluetoothPage.qml" line="50"/>
         <source>Not Connected</source>
         <translation>No conectado</translation>
     </message>
@@ -40,10 +40,10 @@
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation>Brillo: %1%</translation>
+        <translation type="vanished">Brillo: %1%</translation>
     </message>
     <message>
-        <location filename="../BrightnessPage.qml" line="35"/>
+        <location filename="../BrightnessPage.qml" line="34"/>
         <source>Brightness %1%</source>
         <translation>Brillo %1%</translation>
     </message>
@@ -64,7 +64,7 @@
         <translation>Configurar el lenguaje:</translation>
     </message>
     <message>
-        <location filename="../LanguagePage.qml" line="105"/>
+        <location filename="../LanguagePage.qml" line="104"/>
         <source>Rebooting...</source>
         <translation>Reiniciando...</translation>
     </message>
@@ -73,11 +73,11 @@
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation>Apagar</translation>
+        <translation type="vanished">Apagar</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation>Reiniciar</translation>
+        <translation type="vanished">Reiniciar</translation>
     </message>
     <message>
         <location filename="../PoweroffPage.qml" line="28"/>

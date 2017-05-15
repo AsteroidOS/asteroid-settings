@@ -44,6 +44,7 @@ TRANSLATIONS = i18n/asteroid-settings.ca.ts \
                i18n/asteroid-settings.el.ts \
                i18n/asteroid-settings.es.ts \
                i18n/asteroid-settings.fa.ts \
+               i18n/asteroid-settings.fi.ts \
                i18n/asteroid-settings.fr.ts \
                i18n/asteroid-settings.hu.ts \
                i18n/asteroid-settings.it.ts \

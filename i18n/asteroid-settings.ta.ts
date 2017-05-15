@@ -5,11 +5,11 @@
     <name>BluetoothPage</name>
     <message>
         <source>Sync notifications</source>
-        <translation>அறிவிப்புகளை ஒத்திசை</translation>
+        <translation type="vanished">அறிவிப்புகளை ஒத்திசை</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation>ஒத்திசைவு நேரம்</translation>
+        <translation type="vanished">ஒத்திசைவு நேரம்</translation>
     </message>
     <message>
         <source>Bluetooth on</source>
@@ -32,7 +32,7 @@
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation>ஒளிர்வு: %1%</translation>
+        <translation type="vanished">ஒளிர்வு: %1%</translation>
     </message>
     <message>
         <source>Brightness %1%</source>
@@ -61,11 +61,11 @@
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation>நிறுத்து</translation>
+        <translation type="vanished">நிறுத்து</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation>மீள்துவக்கு</translation>
+        <translation type="vanished">மீள்துவக்கு</translation>
     </message>
     <message>
         <source>Power off AsteroidOS</source>

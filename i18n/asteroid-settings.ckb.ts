@@ -5,15 +5,15 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation>بەکارهێنانی بلوتوس</translation>
+        <translation type="vanished">بەکارهێنانی بلوتوس</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation>هاودەمکردنی ئاگادارکردنەوەکان</translation>
+        <translation type="vanished">هاودەمکردنی ئاگادارکردنەوەکان</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation>کاتی هاودەمکردن</translation>
+        <translation type="vanished">کاتی هاودەمکردن</translation>
     </message>
     <message>
         <source>Bluetooth on</source>
@@ -36,7 +36,7 @@
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation>ڕۆشنایی: %1%</translation>
+        <translation type="vanished">ڕۆشنایی: %1%</translation>
     </message>
     <message>
         <source>Brightness %1%</source>
@@ -65,11 +65,11 @@
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation>ناکاراکردن</translation>
+        <translation type="vanished">ناکاراکردن</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation>دەستپێکردنەوە</translation>
+        <translation type="vanished">دەستپێکردنەوە</translation>
     </message>
     <message>
         <source>Power off AsteroidOS</source>

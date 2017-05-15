@@ -5,15 +5,15 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation>Použiť Bluetooth</translation>
+        <translation type="vanished">Použiť Bluetooth</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation>Synchronizovať notifikácie</translation>
+        <translation type="vanished">Synchronizovať notifikácie</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation>Synchronizovať čaš</translation>
+        <translation type="vanished">Synchronizovať čaš</translation>
     </message>
     <message>
         <source>Bluetooth on</source>
@@ -36,7 +36,7 @@
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation>Jas: %1%</translation>
+        <translation type="vanished">Jas: %1%</translation>
     </message>
     <message>
         <source>Brightness %1%</source>
@@ -65,11 +65,11 @@
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation>Vypnúť</translation>
+        <translation type="vanished">Vypnúť</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation>Reštartovať</translation>
+        <translation type="vanished">Reštartovať</translation>
     </message>
     <message>
         <source>Power off AsteroidOS</source>

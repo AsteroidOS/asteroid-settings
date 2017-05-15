@@ -5,15 +5,15 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation>Bluetooth'u Kullan</translation>
+        <translation type="vanished">Bluetooth&apos;u Kullan</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation>Bildirimleri eşitle</translation>
+        <translation type="vanished">Bildirimleri eşitle</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation>Zamanı eşitle</translation>
+        <translation type="vanished">Zamanı eşitle</translation>
     </message>
     <message>
         <source>Bluetooth on</source>
@@ -36,7 +36,7 @@
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation>Parlaklık: %%1</translation>
+        <translation type="vanished">Parlaklık: %%1</translation>
     </message>
     <message>
         <source>Brightness %1%</source>
@@ -65,15 +65,15 @@
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation>Kapat</translation>
+        <translation type="vanished">Kapat</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation>Yeniden başlat</translation>
+        <translation type="vanished">Yeniden başlat</translation>
     </message>
     <message>
         <source>Power off AsteroidOS</source>
-        <translation>AsteroidOS'i kapat</translation>
+        <translation>AsteroidOS&apos;i kapat</translation>
     </message>
 </context>
 <context>
@@ -87,7 +87,7 @@
     <name>RebootPage</name>
     <message>
         <source>Reboot AsteroidOS</source>
-        <translation>AsteroidOS'i yeniden başlat</translation>
+        <translation>AsteroidOS&apos;i yeniden başlat</translation>
     </message>
 </context>
 <context>

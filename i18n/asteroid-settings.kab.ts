@@ -5,15 +5,15 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation>Rmed Bluetooth</translation>
+        <translation type="vanished">Rmed Bluetooth</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation>Mtawi alɣuten</translation>
+        <translation type="vanished">Mtawi alɣuten</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation>Mtawi akud</translation>
+        <translation type="vanished">Mtawi akud</translation>
     </message>
     <message>
         <source>Bluetooth on</source>
@@ -36,7 +36,7 @@
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation>Tafat: %1%</translation>
+        <translation type="vanished">Tafat: %1%</translation>
     </message>
     <message>
         <source>Brightness %1%</source>
@@ -65,11 +65,11 @@
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation>Sens</translation>
+        <translation type="vanished">Sens</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation>Ales asenker</translation>
+        <translation type="vanished">Ales asenker</translation>
     </message>
     <message>
         <source>Power off AsteroidOS</source>

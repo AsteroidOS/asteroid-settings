@@ -5,33 +5,33 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation>Bluetooth einschalten</translation>
+        <translation type="vanished">Bluetooth einschalten</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation>Benachrichtigungen synchronisieren</translation>
+        <translation type="vanished">Benachrichtigungen synchronisieren</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation>Uhrzeit synchronisieren</translation>
+        <translation type="vanished">Uhrzeit synchronisieren</translation>
     </message>
     <message>
-        <location filename="../BluetoothPage.qml" line="55"/>
+        <location filename="../BluetoothPage.qml" line="50"/>
         <source>Bluetooth on</source>
         <translation>Bluetooth an</translation>
     </message>
     <message>
-        <location filename="../BluetoothPage.qml" line="55"/>
+        <location filename="../BluetoothPage.qml" line="50"/>
         <source>Bluetooth off</source>
         <translation>Bluetooth aus</translation>
     </message>
     <message>
-        <location filename="../BluetoothPage.qml" line="55"/>
+        <location filename="../BluetoothPage.qml" line="50"/>
         <source>Connected</source>
         <translation>Verbunden</translation>
     </message>
     <message>
-        <location filename="../BluetoothPage.qml" line="55"/>
+        <location filename="../BluetoothPage.qml" line="50"/>
         <source>Not Connected</source>
         <translation>Nicht verbunden</translation>
     </message>
@@ -40,10 +40,10 @@
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation>Helligkeit: %1%</translation>
+        <translation type="vanished">Helligkeit: %1%</translation>
     </message>
     <message>
-        <location filename="../BrightnessPage.qml" line="35"/>
+        <location filename="../BrightnessPage.qml" line="34"/>
         <source>Brightness %1%</source>
         <translation>Helligkeit %1%</translation>
     </message>
@@ -64,7 +64,7 @@
         <translation>Sprache auswählen:</translation>
     </message>
     <message>
-        <location filename="../LanguagePage.qml" line="105"/>
+        <location filename="../LanguagePage.qml" line="104"/>
         <source>Rebooting...</source>
         <translation>Neu starten...</translation>
     </message>
@@ -73,11 +73,11 @@
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation>Ausschalten</translation>
+        <translation type="vanished">Ausschalten</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation>Neustarten</translation>
+        <translation type="vanished">Neustarten</translation>
     </message>
     <message>
         <location filename="../PoweroffPage.qml" line="28"/>

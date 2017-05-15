@@ -5,33 +5,33 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation>استفاده از بلوتوث</translation>
+        <translation type="vanished">استفاده از بلوتوث</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation>هم‌گام‌سازی آگاهی‌ها</translation>
+        <translation type="vanished">هم‌گام‌سازی آگاهی‌ها</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation>هم‌گام‌سازی زمان</translation>
+        <translation type="vanished">هم‌گام‌سازی زمان</translation>
     </message>
     <message>
-        <location filename="../BluetoothPage.qml" line="55"/>
+        <location filename="../BluetoothPage.qml" line="50"/>
         <source>Bluetooth on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../BluetoothPage.qml" line="55"/>
+        <location filename="../BluetoothPage.qml" line="50"/>
         <source>Bluetooth off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../BluetoothPage.qml" line="55"/>
+        <location filename="../BluetoothPage.qml" line="50"/>
         <source>Connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../BluetoothPage.qml" line="55"/>
+        <location filename="../BluetoothPage.qml" line="50"/>
         <source>Not Connected</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40,10 +40,10 @@
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation>روشنایی: %1%</translation>
+        <translation type="vanished">روشنایی: %1%</translation>
     </message>
     <message>
-        <location filename="../BrightnessPage.qml" line="35"/>
+        <location filename="../BrightnessPage.qml" line="34"/>
         <source>Brightness %1%</source>
         <translation type="unfinished"></translation>
     </message>
@@ -64,7 +64,7 @@
         <translation>گزینش یک زبان:</translation>
     </message>
     <message>
-        <location filename="../LanguagePage.qml" line="105"/>
+        <location filename="../LanguagePage.qml" line="104"/>
         <source>Rebooting...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -73,11 +73,11 @@
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation>خاموش کردن</translation>
+        <translation type="vanished">خاموش کردن</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation>خاموش و روشن</translation>
+        <translation type="vanished">خاموش و روشن</translation>
     </message>
     <message>
         <location filename="../PoweroffPage.qml" line="28"/>

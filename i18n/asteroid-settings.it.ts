@@ -5,15 +5,15 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation>Usa Bluetooth</translation>
+        <translation type="vanished">Usa Bluetooth</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation>Sincronizza notifiche</translation>
+        <translation type="vanished">Sincronizza notifiche</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation>Sincronizza orologio</translation>
+        <translation type="vanished">Sincronizza orologio</translation>
     </message>
     <message>
         <source>Bluetooth on</source>
@@ -36,7 +36,7 @@
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation>Luminiosità: %1%</translation>
+        <translation type="vanished">Luminiosità: %1%</translation>
     </message>
     <message>
         <source>Brightness %1%</source>
@@ -65,11 +65,11 @@
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation>Spegni</translation>
+        <translation type="vanished">Spegni</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation>Riavvia</translation>
+        <translation type="vanished">Riavvia</translation>
     </message>
     <message>
         <source>Power off AsteroidOS</source>

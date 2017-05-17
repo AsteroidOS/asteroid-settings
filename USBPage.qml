@@ -40,7 +40,6 @@ Item {
         id: usbModesModel
         ListElement { title: qsTr("Adb Mode"); mode: "adb_mode" }
         ListElement { title: qsTr("Developer Mode"); mode: "developer_mode" }
-        ListElement { title: qsTr("Mass Storage"); mode: "mass_storage" }
         ListElement { title: qsTr("MTP Mode"); mode: "mtp_mode" }
     }
     ListView {
@@ -83,11 +82,10 @@ Item {
             root.pop();
         }
     }
-    
+
     Component.onCompleted: {
         usbmodedDbus.typedCall('mode_request', [], function (mode) {
-            if     (mode == "mtp_mode")       usbModeLV.currentIndex = 3
-            else if(mode == "mass_storage")   usbModeLV.currentIndex = 2
+            if     (mode == "mtp_mode")       usbModeLV.currentIndex = 2
             else if(mode == "developer_mode") usbModeLV.currentIndex = 1
             else  /*mode == "adb_mode"*/      usbModeLV.currentIndex = 0
         });

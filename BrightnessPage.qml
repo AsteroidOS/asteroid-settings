@@ -38,7 +38,7 @@ Item {
         verticalAlignment: Text.AlignVCenter
         wrapMode: Text.Wrap
         anchors.left: parent.left; anchors.right: parent.right
-        anchors.leftMargin: width*0.02; anchors.rightMargin: width*0.02
+        anchors.leftMargin: parent.width*0.02; anchors.rightMargin: parent.width*0.02
         anchors.verticalCenter: parent.verticalCenter
         anchors.verticalCenterOffset: parent.height*0.1
     }

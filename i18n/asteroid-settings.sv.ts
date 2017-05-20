@@ -18,22 +18,22 @@
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth på</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth av</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Ansluten</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Not Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Ej ansluten</translation>
     </message>
 </context>
 <context>
@@ -45,7 +45,7 @@
     <message>
         <location filename="../BrightnessPage.qml" line="34"/>
         <source>Brightness %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Ljusstyrka %1%</translation>
     </message>
 </context>
 <context>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../LanguagePage.qml" line="104"/>
         <source>Rebooting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Startar om...</translation>
     </message>
 </context>
 <context>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../PoweroffPage.qml" line="28"/>
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Stäng av AsteroidOS</translation>
     </message>
 </context>
 <context>
@@ -98,7 +98,7 @@
     <message>
         <location filename="../RebootPage.qml" line="28"/>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Starta om AsteroidOS</translation>
     </message>
 </context>
 <context>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../USBPage.qml" line="30"/>
         <source>Select a USB mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Välj USB läge:</translation>
     </message>
 </context>
 <context>
@@ -172,7 +172,7 @@
     <message>
         <location filename="../main.qml" line="90"/>
         <source>Watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>Klockansikte</translation>
     </message>
     <message>
         <location filename="../main.qml" line="95"/>
@@ -192,7 +192,7 @@
     <message>
         <location filename="../main.qml" line="105"/>
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Starta om</translation>
     </message>
 </context>
 </TS>

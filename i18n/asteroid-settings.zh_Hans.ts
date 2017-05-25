@@ -73,7 +73,7 @@
     </message>
     <message>
         <source>Power off AsteroidOS</source>
-        <translation>关机</translation>
+        <translation>关闭 AsteroidOS</translation>
     </message>
 </context>
 <context>
@@ -87,7 +87,7 @@
     <name>RebootPage</name>
     <message>
         <source>Reboot AsteroidOS</source>
-        <translation>重启</translation>
+        <translation>重启 AsteroidOS</translation>
     </message>
 </context>
 <context>

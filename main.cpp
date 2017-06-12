@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2016 - Sylvia van Os <iamsylvie@openmailbox.org>
- * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
+ * Copyright (C) 2017 - Florent Revest <revestflo@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,24 +15,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <QQuickView>
-#include <QTranslator>
-#include <QGuiApplication>
-#include <QScreen>
-#include <MDeclarativeCache>
+#include <asteroidapp.h>
 
-Q_DECL_EXPORT int main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-    QScopedPointer<QGuiApplication> app(MDeclarativeCache::qApplication(argc, argv));
-
-    QTranslator translator;
-    translator.load(QLocale(), "asteroid-settings", ".", "/usr/share/translations", ".qm");
-    app->installTranslator(&translator);
-
-    QScopedPointer<QQuickView> view(MDeclarativeCache::qQuickView());
-    view->setSource(QUrl("qrc:/main.qml"));
-    view->setTitle("Settings");
-    view->resize(app->primaryScreen()->size());
-    view->show();
-    return app->exec();
+    return AsteroidApp::main(argc, argv);
 }

@@ -13,22 +13,22 @@
     </message>
     <message>
         <source>Sync time</source>
-        <translation type="vanished">Synchroniser l&apos;heure</translation>
+        <translation type="vanished">Synchroniser l'heure</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth activé</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth désactivé</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Connecté</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
@@ -167,7 +167,7 @@
     <message>
         <location filename="../main.qml" line="85"/>
         <source>Wallpaper</source>
-        <translation>Fond d&apos;écran</translation>
+        <translation>Fond d'écran</translation>
     </message>
     <message>
         <location filename="../main.qml" line="90"/>

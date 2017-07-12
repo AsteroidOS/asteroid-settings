@@ -33,7 +33,7 @@
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Not Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Non connecté</translation>
     </message>
 </context>
 <context>
@@ -45,7 +45,7 @@
     <message>
         <location filename="../BrightnessPage.qml" line="34"/>
         <source>Brightness %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Luminosité %1%</translation>
     </message>
 </context>
 <context>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../LanguagePage.qml" line="104"/>
         <source>Rebooting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Redémarrage ...</translation>
     </message>
 </context>
 <context>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../PoweroffPage.qml" line="28"/>
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Éteindre AsteroidOS</translation>
     </message>
 </context>
 <context>
@@ -98,7 +98,7 @@
     <message>
         <location filename="../RebootPage.qml" line="28"/>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Redémarrer AsteroidOS</translation>
     </message>
 </context>
 <context>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../USBPage.qml" line="30"/>
         <source>Select a USB mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner un mode USB :</translation>
     </message>
 </context>
 <context>
@@ -192,7 +192,7 @@
     <message>
         <location filename="../main.qml" line="105"/>
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Redémarrer</translation>
     </message>
 </context>
 </TS>

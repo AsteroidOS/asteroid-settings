@@ -172,7 +172,7 @@
     <message>
         <location filename="../main.qml" line="90"/>
         <source>Watchface</source>
-        <translation>Watchface</translation>
+        <translation>Cadrans</translation>
     </message>
     <message>
         <location filename="../main.qml" line="95"/>

@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.1
+import QtQuick 2.9
 import org.asteroid.controls 1.0
 import org.nemomobile.dbus 2.0
 
@@ -26,34 +26,34 @@ Item {
 
     Text {
         text: qsTr("Reboot AsteroidOS")
-        font.pixelSize: parent.height*0.07
+        font.pixelSize: Dims.l(7)
         anchors.centerIn: parent
         color: "white"
     }
 
     IconButton {
-        width: parent.height*0.2
+        width: Dims.w(20)
         height: width
         iconColor: "white"
         pressedIconColor: "lightgrey"
         iconName: "ios-close-circle-outline"
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.horizontalCenterOffset: -parent.width*0.15
+        anchors.horizontalCenterOffset: -Dims.w(15)
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: parent.height*0.15
+        anchors.bottomMargin: Dims.h(15)
         onClicked: root.pop()
     }
 
     IconButton {
-        width: parent.height*0.2
+        width: Dims.w(20)
         height: width
         iconColor: "white"
         pressedIconColor: "lightgrey"
         iconName: "ios-checkmark-circle-outline"
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.horizontalCenterOffset: parent.width*0.15
+        anchors.horizontalCenterOffset: Dims.w(15)
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: parent.height*0.15
+        anchors.bottomMargin: Dims.h(15)
         onClicked: dsmeDbus.call("req_reboot", [])
     }
 

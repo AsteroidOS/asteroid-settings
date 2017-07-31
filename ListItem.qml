@@ -15,7 +15,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.1
+import QtQuick 2.9
 import org.asteroid.controls 1.0
 
 Item {
@@ -25,7 +25,7 @@ Item {
     signal clicked()
 
     width: parent.width
-    height: 50
+    height: Dims.h(16)
 
     Icon {
         id: icon
@@ -34,14 +34,14 @@ Item {
         height: width
         anchors.top: parent.top
         anchors.left: parent.left
-        anchors.leftMargin: Units.dp(20)
+        anchors.leftMargin: Dims.w(15)
     }
     Text {
         id: label
         color: "white"
-        font.pointSize: parent.height/4
+        font.pointSize: Dims.l(4)
         horizontalAlignment: Text.AlignHCenter
-        anchors.leftMargin: Units.dp(15)
+        anchors.leftMargin: Dims.w(12)
         anchors.left: icon.right
         anchors.verticalCenter: parent.verticalCenter
     }

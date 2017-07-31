@@ -15,14 +15,15 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.1
+import QtQuick 2.9
+import org.asteroid.controls 1.0
 
 Item {
     Image {
         fillMode: Image.PreserveAspectFit
         source: "qrc:///asteroid-logo.png"
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.topMargin: 15
+        anchors.topMargin: Dims.h(7)
         anchors.top: parent.top
         anchors.bottom: osLabel.top
     }
@@ -32,7 +33,7 @@ Item {
         text: "<b>AsteroidOS</b>"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: releaseLabel.top
-        font.pointSize: 20
+        font.pixelSize: Dims.l(7)
     }
     Text {
         id: releaseLabel
@@ -40,8 +41,8 @@ Item {
         color: "lightgrey"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: 30
-        font.pointSize: 12
+        anchors.bottomMargin: Dims.h(7)
+        font.pointSize: Dims.l(4)
     }
 }
 

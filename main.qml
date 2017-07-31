@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.2
+import QtQuick 2.9
 import org.asteroid.controls 1.0
 
 Application {
@@ -46,7 +46,7 @@ Application {
         id: firstPageComponent
 
         Flickable {
-            contentHeight: DeviceInfo.hasRoundScreen ? 11*Units.dp(25) + app.height/5 : 11*Units.dp(25)
+            contentHeight: DeviceInfo.hasRoundScreen ? 11*Dims.h(16) + Dims.h(20) : 11*Dims.h(16)
             contentWidth: width
             boundsBehavior: Flickable.DragOverBounds
             flickableDirection: Flickable.VerticalFlick
@@ -54,7 +54,7 @@ Application {
             Column {
                 anchors.fill: parent
 
-                Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? app.height/10 : 0 }
+                Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? Dims.h(10) : 0 }
 
                 ListItem {
                     title: qsTr("Time")
@@ -112,7 +112,7 @@ Application {
                     onClicked: layerStack.push(aboutLayer)
                 }
 
-                Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? app.height/10 : 0 }
+                Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? Dims.h(10) : 0 }
             }
         }
     }

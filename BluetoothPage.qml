@@ -16,23 +16,21 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.1
+import QtQuick 2.9
 import org.asteroid.controls 1.0
 import org.asteroid.utils 1.0
 
 Item {
-    BluetoothStatus {
-        id: btStatus
-    }
+    BluetoothStatus { id: btStatus }
 
     Rectangle {
         id: btBackground
         anchors.centerIn: parent
-        anchors.verticalCenterOffset: -parent.height*0.13
+        anchors.verticalCenterOffset: -Dims.h(13)
         color: "black"
         radius: width/2
         opacity: btStatus.powered ? 0.4 : 0.2
-        width: parent.height*0.25
+        width: Dims.w(25)
         height: width
     }
     Icon {
@@ -48,14 +46,14 @@ Item {
     Text {
         id: status
         text: "<h3>" + (btStatus.powered ? qsTr("Bluetooth on") : qsTr("Bluetooth off")) + "</h3>\n" + (btStatus.connected ? qsTr("Connected") : qsTr("Not Connected"))
-        font.pixelSize: parent.height*0.05
+        font.pixelSize: Dims.l(5)
         color: "white"
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         wrapMode: Text.Wrap
         anchors.left: parent.left; anchors.right: parent.right
         anchors.verticalCenter: parent.verticalCenter
-        anchors.verticalCenterOffset: parent.height*0.15
+        anchors.verticalCenterOffset: Dims.h(15)
     }
 }
 

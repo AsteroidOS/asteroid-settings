@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.1
+import QtQuick 2.9
 import org.asteroid.controls 1.0
 import org.nemomobile.systemsettings 1.0
 
@@ -30,7 +30,7 @@ Item {
         id: title
         color: "white"
         text: qsTr("Select a date:")
-        height: parent.height*0.2
+        height: Dims.h(20)
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
@@ -43,18 +43,18 @@ Item {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.top: title.bottom
-        height: parent.height*0.6
+        height: Dims.h(60)
 
         ListView {
             id: dayLV
             height: parent.height
-            width: parent.width/3-2
+            width: Dims.w(50)
             clip: true
-            spacing: 15
+            spacing: Dims.h(2)
             model: 31
             delegate: Item {
                 width: dayLV.width
-                height: 30
+                height: Dims.h(10)
                 Text {
                     text: index+1
                     anchors.centerIn: parent
@@ -64,8 +64,8 @@ Item {
                     Behavior on color { ColorAnimation { } }
                 }
             }
-            preferredHighlightBegin: height / 2 - 15
-            preferredHighlightEnd: height / 2 + 15
+            preferredHighlightBegin: height / 2 - Dims.h(5)
+            preferredHighlightEnd: height / 2 + Dims.h(5)
             highlightRangeMode: ListView.StrictlyEnforceRange
         }
 
@@ -79,13 +79,13 @@ Item {
         ListView {
             id: monthLV
             height: parent.height
-            width: parent.width/3-2
+            width: Dims.w(50)
             clip: true
-            spacing: 15
+            spacing: Dims.h(2)
             model: 12
             delegate: Item {
                 width: monthLV.width
-                height: 30
+                height: Dims.h(10)
                 Text {
                     text: Qt.locale().monthName(index, Locale.ShortFormat)
                     anchors.centerIn: parent
@@ -95,8 +95,8 @@ Item {
                     Behavior on color { ColorAnimation { } }
                 }
             }
-            preferredHighlightBegin: height / 2 - 15
-            preferredHighlightEnd: height / 2 + 15
+            preferredHighlightBegin: height / 2 - Dims.h(5)
+            preferredHighlightEnd: height / 2 + Dims.h(5)
             highlightRangeMode: ListView.StrictlyEnforceRange
         }
 
@@ -110,13 +110,13 @@ Item {
         ListView {
             id: yearLV
             height: parent.height
-            width: parent.width/3-2
+            width: Dims.w(50)
             clip: true
-            spacing: 15
+            spacing: Dims.h(2)
             model: 100
             delegate: Item {
                 width: yearLV.width
-                height: 30
+                height: Dims.h(10)
                 Text {
                     text: index+2000
                     anchors.centerIn: parent
@@ -126,8 +126,8 @@ Item {
                     Behavior on color { ColorAnimation { } }
                 }
             }
-            preferredHighlightBegin: height / 2 - 15
-            preferredHighlightEnd: height / 2 + 15
+            preferredHighlightBegin: height / 2 - Dims.h(5)
+            preferredHighlightEnd: height / 2 + Dims.h(5)
             highlightRangeMode: ListView.StrictlyEnforceRange
         }
     }
@@ -143,7 +143,7 @@ Item {
     IconButton {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: app.height/28
+        anchors.bottomMargin: Dims.iconButtonMargin
 
         iconColor: "white"
         pressedIconColor: "lightgrey"

@@ -16,43 +16,45 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.1
+import QtQuick 2.9
 import org.asteroid.controls 1.0
 import org.nemomobile.systemsettings 1.0
 
 Item {
+    DisplaySettings { id: displaySettings }
+
     Icon {
-        width: parent.height*0.25
+        width: Dims.w(25)
         height: width
         anchors.centerIn: parent
-        anchors.verticalCenterOffset: -parent.height*0.15
+        anchors.verticalCenterOffset: -Dims.h(15)
         color: "white"
         name: "ios-sunny-outline"
     }
 
     Text {
         text: qsTr("Brightness %1%").arg(displaySettings.brightness)
-        font.pixelSize: parent.height*0.06
+        font.pixelSize: Dims.l(6)
         color: "white"
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         wrapMode: Text.Wrap
         anchors.left: parent.left; anchors.right: parent.right
-        anchors.leftMargin: parent.width*0.02; anchors.rightMargin: parent.width*0.02
+        anchors.leftMargin: Dims.w(2); anchors.rightMargin: Dims.w(2)
         anchors.verticalCenter: parent.verticalCenter
-        anchors.verticalCenterOffset: parent.height*0.1
+        anchors.verticalCenterOffset: Dims.h(10)
     }
 
     IconButton {
-        width: parent.height*0.2
+        width: Dims.w(20)
         height: width
         iconColor: "white"
         pressedIconColor: "lightgrey"
         iconName: "ios-remove-circle-outline"
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.horizontalCenterOffset: -parent.width*0.15
+        anchors.horizontalCenterOffset: -Dims.w(15)
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: parent.height*0.1
+        anchors.bottomMargin: Dims.h(10)
         onClicked: {
             var newVal = displaySettings.brightness - 10
             if(newVal < 0) newVal = 0
@@ -61,24 +63,20 @@ Item {
     }
 
     IconButton {
-        width: parent.height*0.2
+        width: Dims.w(20)
         height: width
         iconColor: "white"
         pressedIconColor: "lightgrey"
         iconName: "ios-add-circle-outline"
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.horizontalCenterOffset: parent.width*0.15
+        anchors.horizontalCenterOffset: Dims.w(15)
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: parent.height*0.1
+        anchors.bottomMargin: Dims.h(10)
         onClicked: {
             var newVal = displaySettings.brightness + 10
             if(newVal > 100) newVal = 100
             displaySettings.brightness = newVal
         }
-    }
-
-    DisplaySettings {
-        id: displaySettings
     }
 }
 

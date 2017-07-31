@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.1
+import QtQuick 2.9
 import org.asteroid.controls 1.0
 import org.nemomobile.systemsettings 1.0
 
@@ -30,7 +30,7 @@ Item {
         id: title
         text: qsTr("Select a language:")
         color: "white"
-        height: parent.height*0.2
+        height: Dims.h(20)
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
@@ -43,18 +43,18 @@ Item {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.top: title.bottom
-        height: parent.height*0.6
+        height: Dims.h(60)
 
         ListView {
             id: langLV
             height: parent.height
             width: parent.width
             clip: true
-            spacing: 15
+            spacing: Dims.h(2)
             model: langSettings
             delegate: Item {
                 width: langLV.width
-                height: 30
+                height: Dims.h(10)
                 Text {
                     text: langSettings.languageName(index)
                     anchors.centerIn: parent
@@ -64,8 +64,8 @@ Item {
                     Behavior on color { ColorAnimation { } }
                 }
             }
-            preferredHighlightBegin: height / 2 - 15
-            preferredHighlightEnd: height / 2 + 15
+            preferredHighlightBegin: height / 2 - Dims.h(5)
+            preferredHighlightEnd: height / 2 + Dims.h(5)
             highlightRangeMode: ListView.StrictlyEnforceRange
         }
     }
@@ -77,7 +77,7 @@ Item {
     IconButton {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: app.height/28
+        anchors.bottomMargin: Dims.iconButtonMargin
 
         iconColor: "white"
         iconName: "ios-checkmark-circle-outline"
@@ -102,7 +102,7 @@ Item {
         Text {
             anchors.centerIn: parent
             text: qsTr("Rebooting...")
-            font.pixelSize: parent.height*0.12
+            font.pixelSize: Dims.l(11)
             color: "white"
         }
     }

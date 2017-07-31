@@ -15,7 +15,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.1
+import QtQuick 2.9
 import Qt.labs.folderlistmodel 2.1
 import org.nemomobile.time 1.0
 import org.nemomobile.configuration 1.0
@@ -30,8 +30,8 @@ Item {
 
     GridView {
         id: grid
-        cellWidth: width/2
-        cellHeight: height*3/8
+        cellWidth: Dims.w(50)
+        cellHeight: Dims.h(40)
         anchors.fill: parent
 
         model: FolderListModel {
@@ -49,8 +49,8 @@ Item {
         delegate: Component {
             id: fileDelegate
             Item {
-                width: grid.width/2
-                height: grid.height*3/8
+                width: grid.cellWidth
+                height: grid.cellHeight
                 Loader {
                     id: preview
                     anchors.centerIn: parent

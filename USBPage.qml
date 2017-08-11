@@ -42,29 +42,28 @@ Item {
         ListElement { title: qsTr("Developer Mode"); mode: "developer_mode" }
         ListElement { title: qsTr("MTP Mode"); mode: "mtp_mode" }
     }
-    ListView {
+
+    Spinner {
         id: usbModeLV
+        anchors.left: parent.left
+        anchors.right: parent.right
         anchors.top: title.bottom
-        height: parent.height*0.6
-        width: parent.width
-        clip: true
-        spacing: 15
+        height: Dims.h(60)
         model: usbModesModel
+        showSeparator: true
+
         delegate: Item {
             width: usbModeLV.width
             height: 30
             Text {
                 text: title
                 anchors.centerIn: parent
-                color: parent.ListView.isCurrentItem ? "white" : "lightgrey"
-                scale: parent.ListView.isCurrentItem ? 1.5 : 1
+                color: parent.ListView.isCurrentItem ? "#FFFFFF" : "#88FFFFFF"
+                scale: parent.ListView.isCurrentItem ? 1.7 : 1
                 Behavior on scale { NumberAnimation { duration: 200 } }
-                Behavior on color { ColorAnimation { } }
+                Behavior on color { ColorAnimation { duration: 200 } }
             }
         }
-        preferredHighlightBegin: height / 2 - 15
-        preferredHighlightEnd: height / 2 + 15
-        highlightRangeMode: ListView.StrictlyEnforceRange
     }
 
     IconButton {

@@ -38,41 +38,30 @@ Item {
         horizontalAlignment: Text.AlignHCenter
     }
 
-    Row {
-        id: langSelector
+    Spinner {
+        id: langLV
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.top: title.bottom
         height: Dims.h(60)
+        model: langSettings
+        showSeparator: true
 
-        ListView {
-            id: langLV
-            height: parent.height
-            width: parent.width
-            clip: true
-            spacing: Dims.h(2)
-            model: langSettings
-            delegate: Item {
-                width: langLV.width
-                height: Dims.h(10)
-                Text {
-                    text: langSettings.languageName(index)
-                    anchors.centerIn: parent
-                    color: parent.ListView.isCurrentItem ? "white" : "lightgrey"
-                    scale: parent.ListView.isCurrentItem ? 1.5 : 1
-                    Behavior on scale { NumberAnimation { duration: 200 } }
-                    Behavior on color { ColorAnimation { } }
-                }
+        delegate: Item {
+            width: langLV.width
+            height: Dims.h(10)
+            Text {
+                text: langSettings.languageName(index)
+                anchors.centerIn: parent
+                color: parent.ListView.isCurrentItem ? "#FFFFFF" : "#88FFFFFF"
+                scale: parent.ListView.isCurrentItem ? 1.7 : 1
+                Behavior on scale { NumberAnimation { duration: 200 } }
+                Behavior on color { ColorAnimation { duration: 200 } }
             }
-            preferredHighlightBegin: height / 2 - Dims.h(5)
-            preferredHighlightEnd: height / 2 + Dims.h(5)
-            highlightRangeMode: ListView.StrictlyEnforceRange
         }
     }
 
-    Component.onCompleted: {
-        langLV.currentIndex = langSettings.currentIndex;
-    }
+    Component.onCompleted: langLV.currentIndex = langSettings.currentIndex;
 
     IconButton {
         anchors.horizontalCenter: parent.horizontalCenter

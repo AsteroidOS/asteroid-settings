@@ -77,13 +77,14 @@ Item {
 
         onClicked: {
             usbmodedDbus.call("set_mode", [usbModesModel.get(usbModeLV.currentIndex).mode])
+            usbmodedDbus.call("set_config", [usbModesModel.get(usbModeLV.currentIndex).mode])
 
             root.pop();
         }
     }
 
     Component.onCompleted: {
-        usbmodedDbus.typedCall('mode_request', [], function (mode) {
+        usbmodedDbus.typedCall('get_config', [], function (mode) {
             if     (mode == "mtp_mode")       usbModeLV.currentIndex = 2
             else if(mode == "developer_mode") usbModeLV.currentIndex = 1
             else  /*mode == "adb_mode"*/      usbModeLV.currentIndex = 0

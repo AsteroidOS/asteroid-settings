@@ -57,6 +57,7 @@ Item {
                     width: Math.min(parent.width, parent.height)
                     height: Math.min(parent.width, parent.height)
                     source: folderModel.folder + "/" + fileName
+                    asynchronous: true
                 }
                 MouseArea {
                     anchors.fill: parent

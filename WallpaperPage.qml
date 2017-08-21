@@ -55,6 +55,7 @@ Item {
                     anchors.fill: parent
                     fillMode: Image.PreserveAspectCrop
                     source: folderModel.folder + "/" + fileName
+                    asynchronous: true
                 }
                 MouseArea {
                     anchors.fill: parent

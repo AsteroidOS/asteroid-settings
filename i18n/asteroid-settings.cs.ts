@@ -69,7 +69,7 @@
     </message>
     <message>
         <source>Restart</source>
-        <translation>Restart</translation>
+        <translation>Restartovat</translation>
     </message>
     <message>
         <source>Power off AsteroidOS</source>

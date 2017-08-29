@@ -9,27 +9,27 @@
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation type="vanished">Seřídit oznámení</translation>
+        <translation>Synchronizovat oznámení</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation type="vanished">Seřídit čas</translation>
+        <translation>Synchronizovat čas</translation>
     </message>
     <message>
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth zapnuto</translation>
     </message>
     <message>
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth vypnuto</translation>
     </message>
     <message>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Připojeno</translation>
     </message>
     <message>
         <source>Not Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepřipojeno</translation>
     </message>
 </context>
 <context>
@@ -40,25 +40,25 @@
     </message>
     <message>
         <source>Brightness %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Jas %1%</translation>
     </message>
 </context>
 <context>
     <name>DatePage</name>
     <message>
         <source>Select a date:</source>
-        <translation>Vybrat datum:</translation>
+        <translation>Vyberte datum:</translation>
     </message>
 </context>
 <context>
     <name>LanguagePage</name>
     <message>
         <source>Select a language:</source>
-        <translation>Vybrat jazyk:</translation>
+        <translation>Vyberte jazyk:</translation>
     </message>
     <message>
         <source>Rebooting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Restartování…</translation>
     </message>
 </context>
 <context>
@@ -69,32 +69,32 @@
     </message>
     <message>
         <source>Restart</source>
-        <translation type="vanished">Spustit znovu</translation>
+        <translation>Restart</translation>
     </message>
     <message>
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnout AsteroidOS</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavení</translation>
     </message>
 </context>
 <context>
     <name>RebootPage</name>
     <message>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Restartovat AsteroidOS</translation>
     </message>
 </context>
 <context>
     <name>TimePage</name>
     <message>
         <source>Select a time:</source>
-        <translation>Vybrat čas:</translation>
+        <translation>Vyberte čas:</translation>
     </message>
 </context>
 <context>
@@ -113,11 +113,11 @@
     </message>
     <message>
         <source>MTP Mode</source>
-        <translation>Režim MTP</translation>
+        <translation>MTP režim</translation>
     </message>
     <message>
         <source>Select a USB mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte režim USB:</translation>
     </message>
 </context>
 <context>
@@ -164,7 +164,7 @@
     </message>
     <message>
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Restart</translation>
     </message>
 </context>
 </TS>

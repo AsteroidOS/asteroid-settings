@@ -53,7 +53,7 @@
     <message>
         <location filename="../DatePage.qml" line="32"/>
         <source>Select a date:</source>
-        <translation>Configurar la fecha:</translation>
+        <translation>Seleccionar fecha:</translation>
     </message>
 </context>
 <context>
@@ -61,7 +61,7 @@
     <message>
         <location filename="../LanguagePage.qml" line="31"/>
         <source>Select a language:</source>
-        <translation>Configurar el lenguaje:</translation>
+        <translation>Seleccionar idioma:</translation>
     </message>
     <message>
         <location filename="../LanguagePage.qml" line="104"/>
@@ -106,7 +106,7 @@
     <message>
         <location filename="../TimePage.qml" line="38"/>
         <source>Select a time:</source>
-        <translation>Configurar la hora:</translation>
+        <translation>Seleccionar hora:</translation>
     </message>
 </context>
 <context>
@@ -119,17 +119,17 @@
     <message>
         <location filename="../USBPage.qml" line="41"/>
         <source>Adb Mode</source>
-        <translation>Modo ADB</translation>
+        <translation>Modo Adb</translation>
     </message>
     <message>
         <location filename="../USBPage.qml" line="42"/>
         <source>Developer Mode</source>
-        <translation>Modo Desarrollador</translation>
+        <translation>Modo desarrollador</translation>
     </message>
     <message>
         <location filename="../USBPage.qml" line="43"/>
         <source>Mass Storage</source>
-        <translation>Almacenaje Masivo</translation>
+        <translation>Almacenamiento masivo</translation>
     </message>
     <message>
         <location filename="../USBPage.qml" line="44"/>
@@ -142,7 +142,7 @@
     <message>
         <location filename="../main.qml" line="70"/>
         <source>Language</source>
-        <translation>Lenguaje</translation>
+        <translation>Idioma</translation>
     </message>
     <message>
         <location filename="../main.qml" line="60"/>
@@ -167,12 +167,12 @@
     <message>
         <location filename="../main.qml" line="85"/>
         <source>Wallpaper</source>
-        <translation>Salvapantalla</translation>
+        <translation>Fondo</translation>
     </message>
     <message>
         <location filename="../main.qml" line="90"/>
         <source>Watchface</source>
-        <translation>Relojes</translation>
+        <translation>Esfera</translation>
     </message>
     <message>
         <location filename="../main.qml" line="95"/>

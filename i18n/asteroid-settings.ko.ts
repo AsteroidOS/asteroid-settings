@@ -18,22 +18,22 @@
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>블루투스 켜짐</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>블루투스 꺼짐</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>연결됨</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Not Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>연결 안됨</translation>
     </message>
 </context>
 <context>
@@ -45,7 +45,7 @@
     <message>
         <location filename="../BrightnessPage.qml" line="34"/>
         <source>Brightness %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>밝기 %1%</translation>
     </message>
 </context>
 <context>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../LanguagePage.qml" line="104"/>
         <source>Rebooting...</source>
-        <translation type="unfinished"></translation>
+        <translation>재시동중...</translation>
     </message>
 </context>
 <context>
@@ -82,7 +82,7 @@
     <message>
         <location filename="../PoweroffPage.qml" line="28"/>
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>AsteroidOS 종료</translation>
     </message>
 </context>
 <context>
@@ -98,7 +98,7 @@
     <message>
         <location filename="../RebootPage.qml" line="28"/>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>AsteroidOS 재시동</translation>
     </message>
 </context>
 <context>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../USBPage.qml" line="30"/>
         <source>Select a USB mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>USB 모드 선택:</translation>
     </message>
 </context>
 <context>
@@ -192,7 +192,7 @@
     <message>
         <location filename="../main.qml" line="105"/>
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>재시동</translation>
     </message>
 </context>
 </TS>

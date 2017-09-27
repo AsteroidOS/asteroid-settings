@@ -9,7 +9,7 @@
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation type="vanished">Synkronisera notifikationer</translation>
+        <translation>Synkronisera aviseringar</translation>
     </message>
     <message>
         <source>Sync time</source>
@@ -119,7 +119,7 @@
     <message>
         <location filename="../USBPage.qml" line="42"/>
         <source>Developer Mode</source>
-        <translation>Utvecklar-läge</translation>
+        <translation>Utvecklarläge</translation>
     </message>
     <message>
         <location filename="../USBPage.qml" line="43"/>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../USBPage.qml" line="30"/>
         <source>Select a USB mode:</source>
-        <translation>Välj USB läge:</translation>
+        <translation>Välj ett USB-läge:</translation>
     </message>
 </context>
 <context>

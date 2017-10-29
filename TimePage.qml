@@ -20,6 +20,7 @@ import QtQuick 2.9
 import org.asteroid.controls 1.0
 import org.nemomobile.time 1.0
 import org.nemomobile.systemsettings 1.0
+import org.nemomobile.configuration 1.0
 
 Item {
     id: root
@@ -32,6 +33,12 @@ Item {
 
     DateTimeSettings { id: dtSettings }
     WallClock { id: wallClock}
+
+    ConfigurationValue {
+        id: use12H
+        key: "/org/asteroidos/settings/use-12h-format"
+        defaultValue: false
+    }
 
     Text {
         id: title
@@ -51,24 +58,51 @@ Item {
         height: Dims.h(60)
         width: parent.width
 
+        property int spinnerWidth: use12H.value ? width/3 : width/2
+
         CircularSpinner {
             id: hourLV
             height: parent.height
-            width: parent.width/2
-            model: 24
+            width: parent.spinnerWidth
+            model: use12H.value ? 24 : 12
             showSeparator: true
         }
 
         CircularSpinner {
             id: minuteLV
             height: parent.height
-            width: parent.width/2
+            width: parent.spinnerWidth
             model: 60
+            showSeparator: use12H.value
+        }
+
+        Spinner {
+            id: amPmLV
+            height: parent.height
+            width: parent.spinnerWidth
+            model: 2
+            delegate: Item {
+                width: amPmLV.width
+                height: Dims.h(10)
+                Text {
+                    text: index == 0 ? "AM" : "PM"
+                    anchors.centerIn: parent
+                    color: parent.ListView.isCurrentItem ? "#FFFFFF" : "#88FFFFFF"
+                    scale: parent.ListView.isCurrentItem ? 1.5 : 1
+                    Behavior on scale { NumberAnimation { duration: 200 } }
+                    Behavior on color { ColorAnimation { duration: 200 } }
+                }
+            }
         }
     }
 
     Component.onCompleted: {
-        hourLV.currentIndex = wallClock.time.getHours();
+        var hour = wallClock.time.getHours();
+        if(use12H.value) {
+            amPmLV.currentIndex = hour / 12;
+            hour = hour % 12;
+        }
+        hourLV.currentIndex = hour;
         minuteLV.currentIndex = wallClock.time.getMinutes();
     }
 
@@ -82,7 +116,11 @@ Item {
         iconName: "ios-checkmark-circle-outline"
 
         onClicked: {
-            dtSettings.setTime(hourLV.currentIndex, minuteLV.currentIndex)
+            var hour = hourLV.currentIndex;
+            if(use12H.value)
+                hour += amPmLV.currentIndex*12;
+
+            dtSettings.setTime(hour, minuteLV.currentIndex)
 
             root.pop()
         }

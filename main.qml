@@ -31,6 +31,7 @@ Application {
     Component { id: languageLayer;   LanguagePage   { } }
     Component { id: bluetoothLayer;  BluetoothPage  { } }
     Component { id: brightnessLayer; BrightnessPage { } }
+    Component { id: soundLayer;      SoundPage      { } }
     Component { id: wallpaperLayer;  WallpaperPage  { } }
     Component { id: watchfaceLayer;  WatchfacePage  { } }
     Component { id: usbLayer;        USBPage        { } }
@@ -47,7 +48,12 @@ Application {
         id: firstPageComponent
 
         Flickable {
-            contentHeight: DeviceInfo.hasRoundScreen ? 11*Dims.h(16) + Dims.h(20) : 11*Dims.h(16)
+            function elementsNb() {
+                var nb = 11;
+                if(DeviceInfo.hasSpeaker) nb ++
+                return nb;
+            }
+            contentHeight: elementsNb()*Dims.h(16) + (DeviceInfo.hasRoundScreen ? Dims.h(20) : 0)
             contentWidth: width
             boundsBehavior: Flickable.DragOverBounds
             flickableDirection: Flickable.VerticalFlick
@@ -81,6 +87,13 @@ Application {
                     title: qsTr("Brightness")
                     iconName: "ios-sunny-outline"
                     onClicked: layerStack.push(brightnessLayer)
+                }
+                ListItem {
+                    title: qsTr("Sound")
+                    iconName: "ios-wifi-outline"
+                    onClicked: layerStack.push(soundLayer)
+                    height: DeviceInfo.hasSpeaker ? Dims.h(16) : 0
+                    clip: true
                 }
                 ListItem {
                     title: qsTr("Wallpaper")

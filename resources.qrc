@@ -7,6 +7,7 @@
         <file>DatePage.qml</file>
         <file>BluetoothPage.qml</file>
         <file>BrightnessPage.qml</file>
+        <file>SoundPage.qml</file>
         <file>WallpaperPage.qml</file>
         <file>WatchfacePage.qml</file>
         <file>USBPage.qml</file>

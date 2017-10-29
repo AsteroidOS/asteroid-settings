@@ -1,7 +1,10 @@
 TARGET = asteroid-settings
 CONFIG += asteroidapp
+PKGCONFIG += dbus-1 dbus-glib-1
+QT += dbus multimedia
 
-SOURCES +=     main.cpp
+SOURCES +=     main.cpp volumecontrol.cpp
+HEADERS +=     volumecontrol.h
 RESOURCES +=   resources.qrc
 OTHER_FILES += main.qml \
                ListItem.qml \
@@ -10,6 +13,7 @@ OTHER_FILES += main.qml \
                DatePage.qml \
                BluetoothPage.qml \
                BrightnessPage.qml \
+               SoundPage.qml \
                USBPage.qml \
                WatchfacePage.qml \
                PoweroffPage.qml \
@@ -25,6 +29,7 @@ lupdate_only{
               DatePage.qml \
               BluetoothPage.qml \
               BrightnessPage.qml \
+              SoundPage.qml \
               USBPage.qml \
               WatchfacePage.qml \
               PoweroffPage.qml \

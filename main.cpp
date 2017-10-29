@@ -15,9 +15,22 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <QGuiApplication>
+#include <QQuickView>
+#include <QScreen>
+#include <QtQml>
+
 #include <asteroidapp.h>
+
+#include "volumecontrol.h"
 
 int main(int argc, char *argv[])
 {
-    return AsteroidApp::main(argc, argv);
+    QScopedPointer<QGuiApplication> app(AsteroidApp::application(argc, argv));
+    QScopedPointer<QQuickView> view(AsteroidApp::createView());
+    qmlRegisterType<VolumeControl>("org.asteroid.settings", 1, 0, "VolumeControl");
+    view->setSource(QUrl("qrc:/main.qml"));
+    view->resize(app->primaryScreen()->size());
+    view->show();
+    return app->exec();
 }

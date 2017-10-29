@@ -28,6 +28,12 @@ Item {
         defaultValue: "file:///usr/share/asteroid-launcher/watchfaces/000-default-digital.qml"
     }
 
+    ConfigurationValue {
+        id: use12H
+        key: "/org/asteroidos/settings/use-12h-format"
+        defaultValue: false
+    }
+
     GridView {
         id: grid
         cellWidth: Dims.w(50)

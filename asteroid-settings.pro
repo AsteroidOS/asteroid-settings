@@ -14,6 +14,7 @@ OTHER_FILES += main.qml \
                BluetoothPage.qml \
                BrightnessPage.qml \
                SoundPage.qml \
+               UnitsPage.qml \
                USBPage.qml \
                WatchfacePage.qml \
                PoweroffPage.qml \
@@ -30,6 +31,7 @@ lupdate_only{
               BluetoothPage.qml \
               BrightnessPage.qml \
               SoundPage.qml \
+              UnitsPage.qml \
               USBPage.qml \
               WatchfacePage.qml \
               PoweroffPage.qml \

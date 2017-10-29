@@ -32,6 +32,7 @@ Application {
     Component { id: bluetoothLayer;  BluetoothPage  { } }
     Component { id: brightnessLayer; BrightnessPage { } }
     Component { id: soundLayer;      SoundPage      { } }
+    Component { id: unitsLayer;      UnitsPage      { } }
     Component { id: wallpaperLayer;  WallpaperPage  { } }
     Component { id: watchfaceLayer;  WatchfacePage  { } }
     Component { id: usbLayer;        USBPage        { } }
@@ -49,7 +50,7 @@ Application {
 
         Flickable {
             function elementsNb() {
-                var nb = 11;
+                var nb = 12;
                 if(DeviceInfo.hasSpeaker) nb ++
                 return nb;
             }
@@ -94,6 +95,11 @@ Application {
                     onClicked: layerStack.push(soundLayer)
                     height: DeviceInfo.hasSpeaker ? Dims.h(16) : 0
                     clip: true
+                }
+                ListItem {
+                    title: qsTr("Units")
+                    iconName: "ios-speedometer-outline"
+                    onClicked: layerStack.push(unitsLayer)
                 }
                 ListItem {
                     title: qsTr("Wallpaper")

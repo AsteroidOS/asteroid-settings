@@ -29,7 +29,6 @@ Item {
 
     Icon {
         id: icon
-        color: "white"
         width: parent.height
         height: width
         anchors.top: parent.top

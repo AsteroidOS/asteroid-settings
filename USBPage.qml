@@ -71,8 +71,6 @@ Item {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: app.height/28
 
-        iconColor: "white"
-        pressedIconColor: "lightgrey"
         iconName: "ios-checkmark-circle-outline"
 
         onClicked: {

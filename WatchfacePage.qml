@@ -77,7 +77,6 @@ Item {
                     visible: watchfaceSource.value == folderModel.folder + "/" + fileName
                 }
                 Icon {
-                    color: "white"
                     name: "ios-checkmark-circle"
                     anchors.bottom: parent.bottom
                     anchors.right: parent.right

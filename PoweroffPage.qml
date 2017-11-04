@@ -34,8 +34,6 @@ Item {
     IconButton {
         width: Dims.w(20)
         height: width
-        iconColor: "white"
-        pressedIconColor: "lightgrey"
         iconName: "ios-close-circle-outline"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.horizontalCenterOffset: -Dims.w(15)
@@ -47,8 +45,6 @@ Item {
     IconButton {
         width: Dims.w(20)
         height: width
-        iconColor: "white"
-        pressedIconColor: "lightgrey"
         iconName: "ios-checkmark-circle-outline"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.horizontalCenterOffset: Dims.w(15)

@@ -75,7 +75,6 @@ Item {
                              wallpaperSource.value == folderModel.folder + "/" + fileBaseName + ".qml"
                 }
                 Icon {
-                    color: "white"
                     name: "ios-checkmark-circle"
                     anchors.bottom: parent.bottom
                     anchors.right: parent.right

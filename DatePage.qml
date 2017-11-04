@@ -118,8 +118,6 @@ Item {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: Dims.iconButtonMargin
 
-        iconColor: "white"
-        pressedIconColor: "lightgrey"
         iconName: "ios-checkmark-circle-outline"
 
         onClicked: {

@@ -35,7 +35,6 @@ Item {
     }
     Icon {
         anchors.fill: btBackground
-        color: "white"
         name: btStatus.powered ? "ios-bluetooth-outline" : "ios-bluetooth-off-outline"
     }
     MouseArea {

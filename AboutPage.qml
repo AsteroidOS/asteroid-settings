@@ -38,7 +38,8 @@ Item {
     Text {
         id: releaseLabel
         text: "Alpha 1.0"
-        color: "lightgrey"
+        color: "white"
+        opacity: 0.8
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
         anchors.bottomMargin: Dims.h(7)

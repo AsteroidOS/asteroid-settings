@@ -28,7 +28,6 @@ Item {
         height: width
         anchors.centerIn: parent
         anchors.verticalCenterOffset: -Dims.h(15)
-        color: "white"
         name: "ios-sunny-outline"
     }
 
@@ -48,8 +47,6 @@ Item {
     IconButton {
         width: Dims.w(20)
         height: width
-        iconColor: "white"
-        pressedIconColor: "lightgrey"
         iconName: "ios-remove-circle-outline"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.horizontalCenterOffset: -Dims.w(15)
@@ -65,8 +62,6 @@ Item {
     IconButton {
         width: Dims.w(20)
         height: width
-        iconColor: "white"
-        pressedIconColor: "lightgrey"
         iconName: "ios-add-circle-outline"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.horizontalCenterOffset: Dims.w(15)

@@ -64,11 +64,6 @@ Item {
     Component.onCompleted: langLV.currentIndex = langSettings.currentIndex;
 
     IconButton {
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: Dims.iconButtonMargin
-
-        iconColor: "white"
         iconName: "ios-checkmark-circle-outline"
 
         onClicked: {

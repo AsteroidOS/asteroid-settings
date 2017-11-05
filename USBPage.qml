@@ -67,10 +67,6 @@ Item {
     }
 
     IconButton {
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: app.height/28
-
         iconName: "ios-checkmark-circle-outline"
 
         onClicked: {

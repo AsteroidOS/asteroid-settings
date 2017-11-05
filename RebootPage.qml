@@ -32,9 +32,8 @@ Item {
     }
 
     IconButton {
-        width: Dims.w(20)
-        height: width
         iconName: "ios-close-circle-outline"
+        edge: undefinedEdge
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.horizontalCenterOffset: -Dims.w(15)
         anchors.bottom: parent.bottom
@@ -43,9 +42,8 @@ Item {
     }
 
     IconButton {
-        width: Dims.w(20)
-        height: width
         iconName: "ios-checkmark-circle-outline"
+        edge: undefinedEdge
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.horizontalCenterOffset: Dims.w(15)
         anchors.bottom: parent.bottom

@@ -64,7 +64,7 @@ Item {
             id: hourLV
             height: parent.height
             width: parent.spinnerWidth
-            model: use12H.value ? 24 : 12
+            model: use12H.value ? 12 : 24
             showSeparator: true
         }
 

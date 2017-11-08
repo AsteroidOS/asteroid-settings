@@ -38,10 +38,9 @@ Item {
         anchors.fill: parent
         anchors.margins: Dims.l(15)
 
-        Text {
+        Label {
             text: qsTr("Use 12H format:")
             font.pixelSize: Dims.l(6)
-            color: "white"
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             wrapMode: Text.Wrap
@@ -53,10 +52,9 @@ Item {
             width: Dims.l(20)
         }
 
-        Text {
+        Label {
             text: qsTr("Use Farhenheit:")
             font.pixelSize: Dims.l(6)
-            color: "white"
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             wrapMode: Text.Wrap

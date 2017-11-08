@@ -31,10 +31,9 @@ Item {
         name: "ios-volume-up"
     }
 
-    Text {
+    Label {
         text: qsTr("Sound %1%").arg(volumeControl.volume)
         font.pixelSize: Dims.l(6)
-        color: "white"
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         wrapMode: Text.Wrap

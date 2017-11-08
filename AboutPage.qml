@@ -27,23 +27,19 @@ Item {
         anchors.top: parent.top
         anchors.bottom: osLabel.top
     }
-    Text {
+    Label {
         id: osLabel
-        color: "white"
         text: "<b>AsteroidOS</b>"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: releaseLabel.top
-        font.pixelSize: Dims.l(7)
     }
-    Text {
+    Label {
         id: releaseLabel
         text: "Alpha 1.0"
-        color: "white"
         opacity: 0.8
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
         anchors.bottomMargin: Dims.h(7)
-        font.pointSize: Dims.l(4)
     }
 }
 

@@ -40,10 +40,9 @@ Item {
         defaultValue: false
     }
 
-    Text {
+    Label {
         id: title
         text: qsTr("Select a time:")
-        color: "white"
         height: Dims.h(20)
         anchors.top: parent.top
         anchors.left: parent.left

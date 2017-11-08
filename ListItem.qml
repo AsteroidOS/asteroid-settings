@@ -35,10 +35,8 @@ Item {
         anchors.left: parent.left
         anchors.leftMargin: Dims.w(15)
     }
-    Text {
+    Label {
         id: label
-        color: "white"
-        font.pointSize: Dims.l(4)
         horizontalAlignment: Text.AlignHCenter
         anchors.leftMargin: Dims.w(12)
         anchors.left: icon.right

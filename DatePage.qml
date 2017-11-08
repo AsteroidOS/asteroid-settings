@@ -26,9 +26,8 @@ Item {
 
     DateTimeSettings { id: dtSettings }
 
-    Text {
+    Label {
         id: title
-        color: "white"
         text: qsTr("Select a date:")
         height: Dims.h(20)
         anchors.top: parent.top

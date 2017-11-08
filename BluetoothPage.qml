@@ -42,11 +42,10 @@ Item {
         onClicked: btStatus.powered = !btStatus.powered
     }
 
-    Text {
+    Label {
         id: status
         text: "<h3>" + (btStatus.powered ? qsTr("Bluetooth on") : qsTr("Bluetooth off")) + "</h3>\n" + (btStatus.connected ? qsTr("Connected") : qsTr("Not Connected"))
         font.pixelSize: Dims.l(5)
-        color: "white"
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         wrapMode: Text.Wrap

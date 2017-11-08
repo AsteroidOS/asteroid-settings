@@ -31,10 +31,9 @@ Item {
         name: "ios-sunny-outline"
     }
 
-    Text {
+    Label {
         text: qsTr("Brightness %1%").arg(displaySettings.brightness)
         font.pixelSize: Dims.l(6)
-        color: "white"
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         wrapMode: Text.Wrap

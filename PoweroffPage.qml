@@ -24,11 +24,9 @@ Item {
     id: root
     property var pop
 
-    Text {
+    Label {
         text: qsTr("Power off AsteroidOS")
-        font.pixelSize: Dims.l(7)
         anchors.centerIn: parent
-        color: "white"
     }
 
     IconButton {

@@ -26,10 +26,9 @@ Item {
 
     LanguageModel { id: langSettings }
 
-    Text {
+    Label {
         id: title
         text: qsTr("Select a language:")
-        color: "white"
         height: Dims.h(20)
         anchors.top: parent.top
         anchors.left: parent.left
@@ -83,11 +82,10 @@ Item {
         opacity: 0.0
         Behavior on opacity { NumberAnimation { duration: 200 } }
 
-        Text {
+        Label {
             anchors.centerIn: parent
             text: qsTr("Rebooting...")
             font.pixelSize: Dims.l(11)
-            color: "white"
         }
     }
     Timer {

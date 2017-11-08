@@ -24,9 +24,8 @@ Item {
     id: root
     property var pop
 
-    Text {
+    Label {
         id: title
-        color: "white"
         text: qsTr("Select a USB mode:")
         height: parent.height*0.2
         anchors.top: parent.top

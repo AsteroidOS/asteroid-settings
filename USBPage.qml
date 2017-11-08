@@ -51,18 +51,7 @@ Item {
         model: usbModesModel
         showSeparator: true
 
-        delegate: Item {
-            width: usbModeLV.width
-            height: 30
-            Text {
-                text: title
-                anchors.centerIn: parent
-                color: parent.ListView.isCurrentItem ? "#FFFFFF" : "#88FFFFFF"
-                scale: parent.ListView.isCurrentItem ? 1.7 : 1
-                Behavior on scale { NumberAnimation { duration: 200 } }
-                Behavior on color { ColorAnimation { duration: 200 } }
-            }
-        }
+        delegate: SpinnerDelegate { text: title }
     }
 
     IconButton {

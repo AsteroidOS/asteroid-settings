@@ -80,18 +80,7 @@ Item {
             height: parent.height
             width: parent.spinnerWidth
             model: 2
-            delegate: Item {
-                width: amPmLV.width
-                height: Dims.h(10)
-                Text {
-                    text: index == 0 ? "AM" : "PM"
-                    anchors.centerIn: parent
-                    color: parent.ListView.isCurrentItem ? "#FFFFFF" : "#88FFFFFF"
-                    scale: parent.ListView.isCurrentItem ? 1.5 : 1
-                    Behavior on scale { NumberAnimation { duration: 200 } }
-                    Behavior on color { ColorAnimation { duration: 200 } }
-                }
-            }
+            delegate: SpinnerDelegate { text: index == 0 ? "AM" : "PM" }
         }
     }
 

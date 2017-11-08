@@ -46,18 +46,7 @@ Item {
         model: langSettings
         showSeparator: true
 
-        delegate: Item {
-            width: langLV.width
-            height: Dims.h(10)
-            Text {
-                text: langSettings.languageName(index)
-                anchors.centerIn: parent
-                color: parent.ListView.isCurrentItem ? "#FFFFFF" : "#88FFFFFF"
-                scale: parent.ListView.isCurrentItem ? 1.7 : 1
-                Behavior on scale { NumberAnimation { duration: 200 } }
-                Behavior on color { ColorAnimation { duration: 200 } }
-            }
-        }
+        delegate: SpinnerDelegate { text: langSettings.languageName(index) }
     }
 
     Component.onCompleted: langLV.currentIndex = langSettings.currentIndex;

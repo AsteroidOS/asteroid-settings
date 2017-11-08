@@ -21,7 +21,7 @@ import org.asteroid.controls 1.0
 Item {
     Image {
         fillMode: Image.PreserveAspectFit
-        source: "qrc:///asteroid-logo.png"
+        source: "qrc:///asteroidos-logo.svg"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.topMargin: Dims.h(7)
         anchors.top: parent.top

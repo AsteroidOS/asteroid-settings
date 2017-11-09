@@ -44,7 +44,6 @@ Item {
         anchors.top: title.bottom
         height: Dims.h(60)
         model: langSettings
-        showSeparator: true
 
         delegate: SpinnerDelegate { text: langSettings.languageName(index) }
     }

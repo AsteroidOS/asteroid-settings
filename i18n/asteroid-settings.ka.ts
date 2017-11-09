@@ -90,7 +90,7 @@
     <message>
         <location filename="asteroid-settings.desktop.h" line="5"/>
         <source>Settings</source>
-        <translation></translation>
+        <translation>პარამეტრები</translation>
     </message>
 </context>
 <context>
@@ -142,12 +142,12 @@
     <message>
         <location filename="../main.qml" line="70"/>
         <source>Language</source>
-        <translation></translation>
+        <translation>ენა</translation>
     </message>
     <message>
         <location filename="../main.qml" line="60"/>
         <source>Time</source>
-        <translation></translation>
+        <translation>დრო</translation>
     </message>
     <message>
         <location filename="../main.qml" line="65"/>
@@ -187,12 +187,12 @@
     <message>
         <location filename="../main.qml" line="110"/>
         <source>About</source>
-        <translation></translation>
+        <translation>AsteroidOS შესახებ</translation>
     </message>
     <message>
         <location filename="../main.qml" line="105"/>
         <source>Reboot</source>
-        <translation></translation>
+        <translation>გადატვირთვა</translation>
     </message>
 </context>
 </TS>

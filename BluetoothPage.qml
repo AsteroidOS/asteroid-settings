@@ -23,35 +23,11 @@ import org.asteroid.utils 1.0
 Item {
     BluetoothStatus { id: btStatus }
 
-    Rectangle {
-        id: btBackground
-        anchors.centerIn: parent
-        anchors.verticalCenterOffset: -Dims.h(13)
-        color: "black"
-        radius: width/2
-        opacity: btStatus.powered ? 0.4 : 0.2
-        width: Dims.w(25)
-        height: width
-    }
-    Icon {
-        anchors.fill: btBackground
-        name: btStatus.powered ? "ios-bluetooth-outline" : "ios-bluetooth-off-outline"
-    }
-    MouseArea {
-        anchors.fill: btBackground
-        onClicked: btStatus.powered = !btStatus.powered
-    }
-
-    Label {
-        id: status
+    StatusPage {
         text: "<h3>" + (btStatus.powered ? qsTr("Bluetooth on") : qsTr("Bluetooth off")) + "</h3>\n" + (btStatus.connected ? qsTr("Connected") : qsTr("Not Connected"))
-        font.pixelSize: Dims.l(5)
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVCenter
-        wrapMode: Text.Wrap
-        anchors.left: parent.left; anchors.right: parent.right
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.verticalCenterOffset: Dims.h(15)
+        icon: btStatus.powered ? "ios-bluetooth-outline" : "ios-bluetooth-off-outline"
+        clickable: true
+        onClicked: btStatus.powered = !btStatus.powered
     }
 }
 

@@ -49,7 +49,6 @@ Item {
         anchors.top: title.bottom
         height: Dims.h(60)
         model: usbModesModel
-        showSeparator: true
 
         delegate: SpinnerDelegate { text: title }
     }

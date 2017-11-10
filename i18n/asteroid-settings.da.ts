@@ -23,7 +23,7 @@
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Bluetooth off</source>
-        <translation>Bluetooth off</translation>
+        <translation>Bluetooth fra</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
@@ -114,7 +114,7 @@
     <message>
         <location filename="../USBPage.qml" line="41"/>
         <source>Adb Mode</source>
-        <translation>Adb Mode</translation>
+        <translation>Adb-Tilstand</translation>
     </message>
     <message>
         <location filename="../USBPage.qml" line="42"/>
@@ -129,7 +129,7 @@
     <message>
         <location filename="../USBPage.qml" line="44"/>
         <source>MTP Mode</source>
-        <translation>MTP Mode</translation>
+        <translation>MTP-Tilstand</translation>
     </message>
     <message>
         <location filename="../USBPage.qml" line="30"/>

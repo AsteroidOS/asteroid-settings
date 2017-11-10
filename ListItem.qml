@@ -37,6 +37,7 @@ Item {
     }
     Label {
         id: label
+        font.pixelSize: Dims.l(6)
         horizontalAlignment: Text.AlignHCenter
         anchors.leftMargin: Dims.w(12)
         anchors.left: icon.right

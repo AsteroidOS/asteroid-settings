@@ -28,6 +28,7 @@ Item {
         id: title
         text: qsTr("Select a USB mode:")
         height: parent.height*0.2
+        font.pixelSize: Dims.l(6)
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right

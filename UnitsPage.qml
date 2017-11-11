@@ -53,7 +53,7 @@ Item {
         }
 
         Label {
-            text: qsTr("Use Farhenheit:")
+            text: qsTr("Use Fahrenheit:")
             font.pixelSize: Dims.l(6)
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter

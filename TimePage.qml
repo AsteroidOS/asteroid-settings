@@ -66,6 +66,7 @@ Item {
             width: parent.spinnerWidth
             model: use12H.value ? 12 : 24
             showSeparator: true
+            delegate: SpinnerDelegate { text: (index == 0 && use12H.value) ? "12" : ("0" + index).slice(-2) }
         }
 
         CircularSpinner {

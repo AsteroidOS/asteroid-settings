@@ -5,47 +5,47 @@
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
-        <translation></translation>
+        <translation>გამოიყენეთ ბლუთუზი</translation>
     </message>
     <message>
         <source>Sync notifications</source>
-        <translation></translation>
+        <translation>სინქრონიზება შეტყობინებები</translation>
     </message>
     <message>
         <source>Sync time</source>
-        <translation></translation>
+        <translation>სინქრონიზება დრო</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Bluetooth on</source>
-        <translation></translation>
+        <translation>ბლუთუზი ჩართულია</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Bluetooth off</source>
-        <translation></translation>
+        <translation>ბლუთუზი გამორთულია</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Connected</source>
-        <translation></translation>
+        <translation>დაკავშირებული</translation>
     </message>
     <message>
         <location filename="../BluetoothPage.qml" line="50"/>
         <source>Not Connected</source>
-        <translation></translation>
+        <translation>გათიშული</translation>
     </message>
 </context>
 <context>
     <name>BrightnessPage</name>
     <message>
         <source>Brightness: %1%</source>
-        <translation></translation>
+        <translation>სიკაშკაშე: %1%</translation>
     </message>
     <message>
         <location filename="../BrightnessPage.qml" line="34"/>
         <source>Brightness %1%</source>
-        <translation></translation>
+        <translation>სიკაშკაშე %1%</translation>
     </message>
 </context>
 <context>
@@ -53,7 +53,7 @@
     <message>
         <location filename="../DatePage.qml" line="32"/>
         <source>Select a date:</source>
-        <translation></translation>
+        <translation>აირჩიეთ თარიღი:</translation>
     </message>
 </context>
 <context>
@@ -61,28 +61,28 @@
     <message>
         <location filename="../LanguagePage.qml" line="31"/>
         <source>Select a language:</source>
-        <translation></translation>
+        <translation>აირჩიეთ ენა:</translation>
     </message>
     <message>
         <location filename="../LanguagePage.qml" line="104"/>
         <source>Rebooting...</source>
-        <translation></translation>
+        <translation>გადატვირთვა...</translation>
     </message>
 </context>
 <context>
     <name>PoweroffPage</name>
     <message>
         <source>Turn off</source>
-        <translation></translation>
+        <translation>კვების გამორთვა</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation></translation>
+        <translation>გადატვირთვა</translation>
     </message>
     <message>
         <location filename="../PoweroffPage.qml" line="28"/>
         <source>Power off AsteroidOS</source>
-        <translation></translation>
+        <translation>გამორთვა AsteroidOS</translation>
     </message>
 </context>
 <context>
@@ -98,7 +98,7 @@
     <message>
         <location filename="../RebootPage.qml" line="28"/>
         <source>Reboot AsteroidOS</source>
-        <translation></translation>
+        <translation>გადატვირთვა AsteroidOS</translation>
     </message>
 </context>
 <context>
@@ -106,7 +106,7 @@
     <message>
         <location filename="../TimePage.qml" line="38"/>
         <source>Select a time:</source>
-        <translation></translation>
+        <translation>აირჩიეთ დრო:</translation>
     </message>
 </context>
 <context>
@@ -114,27 +114,27 @@
     <message>
         <location filename="../USBPage.qml" line="41"/>
         <source>Adb Mode</source>
-        <translation></translation>
+        <translation>ADB მეთოდი</translation>
     </message>
     <message>
         <location filename="../USBPage.qml" line="42"/>
         <source>Developer Mode</source>
-        <translation></translation>
+        <translation>დეველოპერის მეთოდი</translation>
     </message>
     <message>
         <location filename="../USBPage.qml" line="43"/>
         <source>Mass Storage</source>
-        <translation></translation>
+        <translation>მეხსიერების მოწყობილობა</translation>
     </message>
     <message>
         <location filename="../USBPage.qml" line="44"/>
         <source>MTP Mode</source>
-        <translation></translation>
+        <translation>MTP მეთოდი</translation>
     </message>
     <message>
         <location filename="../USBPage.qml" line="30"/>
         <source>Select a USB mode:</source>
-        <translation></translation>
+        <translation>აირჩიეთ USB მეთოდი:</translation>
     </message>
 </context>
 <context>
@@ -152,27 +152,27 @@
     <message>
         <location filename="../main.qml" line="65"/>
         <source>Date</source>
-        <translation></translation>
+        <translation>თარიღი</translation>
     </message>
     <message>
         <location filename="../main.qml" line="75"/>
         <source>Bluetooth</source>
-        <translation></translation>
+        <translation>ბლუთუზი</translation>
     </message>
     <message>
         <location filename="../main.qml" line="80"/>
         <source>Brightness</source>
-        <translation></translation>
+        <translation>სიკაშკაშე</translation>
     </message>
     <message>
         <location filename="../main.qml" line="85"/>
         <source>Wallpaper</source>
-        <translation></translation>
+        <translation>ფონი</translation>
     </message>
     <message>
         <location filename="../main.qml" line="90"/>
         <source>Watchface</source>
-        <translation></translation>
+        <translation>მაჯისსაათის სახე</translation>
     </message>
     <message>
         <location filename="../main.qml" line="95"/>
@@ -182,7 +182,7 @@
     <message>
         <location filename="../main.qml" line="100"/>
         <source>Power Off</source>
-        <translation></translation>
+        <translation>კვების გამორთვა</translation>
     </message>
     <message>
         <location filename="../main.qml" line="110"/>

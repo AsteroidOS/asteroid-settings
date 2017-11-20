@@ -22,9 +22,11 @@ Item {
     Icon {
         name: "logo-asteroidos"
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.topMargin: Dims.h(7)
+        anchors.topMargin: Dims.h(10)
         anchors.top: parent.top
         anchors.bottom: osLabel.top
+        anchors.bottomMargin: Dims.h(3)
+        width: height
     }
     Label {
         id: osLabel

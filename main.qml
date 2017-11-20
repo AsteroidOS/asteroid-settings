@@ -123,7 +123,7 @@ Application {
                 ListItem {
                     //% "USB"
                     title: qsTrId("id-usb-page")
-                    iconName: "usb"
+                    iconName: "ios-usb"
                     onClicked: layerStack.push(usbLayer)
                 }
                 ListItem {

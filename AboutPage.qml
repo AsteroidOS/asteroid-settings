@@ -19,9 +19,8 @@ import QtQuick 2.9
 import org.asteroid.controls 1.0
 
 Item {
-    Image {
-        fillMode: Image.PreserveAspectFit
-        source: "qrc:///asteroidos-logo.svg"
+    Icon {
+        name: "logo-asteroidos"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.topMargin: Dims.h(7)
         anchors.top: parent.top

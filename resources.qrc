@@ -15,6 +15,5 @@
         <file>PoweroffPage.qml</file>
         <file>RebootPage.qml</file>
         <file>AboutPage.qml</file>
-        <file>asteroidos-logo.svg</file>
     </qresource>
 </RCC>

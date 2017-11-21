@@ -6,17 +6,17 @@
     <message id="id-bluetooth-on">
         <location filename="../BluetoothPage.qml" line="28"/>
         <source>Bluetooth on</source>
-        <translation type="unfinished">Bluetooth включен</translation>
+        <translation>Bluetooth включен</translation>
     </message>
     <message id="id-bluetooth-off">
         <location filename="../BluetoothPage.qml" line="30"/>
         <source>Bluetooth off</source>
-        <translation type="unfinished">отключен</translation>
+        <translation>отключен</translation>
     </message>
     <message id="id-connected">
         <location filename="../BluetoothPage.qml" line="32"/>
         <source>Connected</source>
-        <translation type="unfinished">Подключен</translation>
+        <translation>Подключен</translation>
     </message>
     <message id="id-disconnected">
         <location filename="../BluetoothPage.qml" line="34"/>
@@ -26,32 +26,32 @@
     <message id="id-brightness-percentage">
         <location filename="../BrightnessPage.qml" line="36"/>
         <source>Brightness %1%</source>
-        <translation type="unfinished">Яркость %1%</translation>
+        <translation>Яркость %1%</translation>
     </message>
     <message id="id-date-select">
         <location filename="../DatePage.qml" line="32"/>
         <source>Select a date:</source>
-        <translation type="unfinished">Выберите дату:</translation>
+        <translation>Выберите дату:</translation>
     </message>
     <message id="id-language-select">
         <location filename="../LanguagePage.qml" line="32"/>
         <source>Select a language:</source>
-        <translation type="unfinished">Выберите язык:</translation>
+        <translation>Выберите язык:</translation>
     </message>
     <message id="id-rebooting">
         <location filename="../LanguagePage.qml" line="78"/>
         <source>Rebooting...</source>
-        <translation type="unfinished">Перезагрузка...</translation>
+        <translation>Перезагрузка...</translation>
     </message>
     <message id="id-poweroff-warn">
         <location filename="../PoweroffPage.qml" line="29"/>
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished">выключить AsteroidOS</translation>
+        <translation>выключить AsteroidOS</translation>
     </message>
     <message id="id-reboot-warn">
         <location filename="../RebootPage.qml" line="29"/>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished">Перезагрузка AsteroidOS</translation>
+        <translation>Перезагрузка AsteroidOS</translation>
     </message>
     <message id="id-sound-percentage">
         <location filename="../SoundPage.qml" line="36"/>
@@ -61,27 +61,27 @@
     <message id="id-time-select">
         <location filename="../TimePage.qml" line="46"/>
         <source>Select a time:</source>
-        <translation type="unfinished">Выберите время:</translation>
+        <translation>Выберите время:</translation>
     </message>
     <message id="id-usb-mode-select">
         <location filename="../USBPage.qml" line="30"/>
         <source>Select a USB mode:</source>
-        <translation type="unfinished">Выбор режима USB:</translation>
+        <translation>Выбор режима USB:</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="43"/>
         <source>Adb Mode</source>
-        <translation type="unfinished">ADB режим</translation>
+        <translation>ADB режим</translation>
     </message>
     <message id="id-developer-mode">
         <location filename="../USBPage.qml" line="45"/>
         <source>Developer Mode</source>
-        <translation type="unfinished">Режим разработчика</translation>
+        <translation>Режим разработчика</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../USBPage.qml" line="47"/>
         <source>MTP Mode</source>
-        <translation type="unfinished">Режим MTP</translation>
+        <translation>Режим MTP</translation>
     </message>
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="43"/>
@@ -96,27 +96,27 @@
     <message id="id-time-page">
         <location filename="../main.qml" line="69"/>
         <source>Time</source>
-        <translation type="unfinished">Время</translation>
+        <translation>Время</translation>
     </message>
     <message id="id-date-page">
         <location filename="../main.qml" line="75"/>
         <source>Date</source>
-        <translation type="unfinished">Дата</translation>
+        <translation>Дата</translation>
     </message>
     <message id="id-language-page">
         <location filename="../main.qml" line="81"/>
         <source>Language</source>
-        <translation type="unfinished">Язык</translation>
+        <translation>Язык</translation>
     </message>
     <message id="id-bluetooth-page">
         <location filename="../main.qml" line="87"/>
         <source>Bluetooth</source>
-        <translation type="unfinished">Bluetooth</translation>
+        <translation>Bluetooth</translation>
     </message>
     <message id="id-brightness-page">
         <location filename="../main.qml" line="93"/>
         <source>Brightness</source>
-        <translation type="unfinished">Яркость</translation>
+        <translation>Яркость</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../main.qml" line="99"/>
@@ -131,203 +131,37 @@
     <message id="id-wallpaper-page">
         <location filename="../main.qml" line="113"/>
         <source>Wallpaper</source>
-        <translation type="unfinished">Обои</translation>
+        <translation>Обои</translation>
     </message>
     <message id="id-watchface-page">
         <location filename="../main.qml" line="119"/>
         <source>Watchface</source>
-        <translation type="unfinished">Циферблат</translation>
+        <translation>Циферблат</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../main.qml" line="125"/>
         <source>USB</source>
-        <translation type="unfinished">USB</translation>
+        <translation>USB</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../main.qml" line="131"/>
         <source>Power Off</source>
-        <translation type="unfinished">Выключить</translation>
+        <translation>Выключить</translation>
     </message>
     <message id="id-reboot-page">
         <location filename="../main.qml" line="137"/>
         <source>Reboot</source>
-        <translation type="unfinished">Перезагрузка</translation>
+        <translation>Перезагрузка</translation>
     </message>
     <message id="id-about-page">
         <location filename="../main.qml" line="143"/>
         <source>About</source>
-        <translation type="unfinished">О продукте</translation>
+        <translation>О продукте</translation>
     </message>
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation type="unfinished">настройки</translation>
-    </message>
-</context>
-<context>
-    <name>BluetoothPage</name>
-    <message>
-        <source>Use Bluetooth</source>
-        <translation type="vanished">Использовать Bluetooth</translation>
-    </message>
-    <message>
-        <source>Sync notifications</source>
-        <translation type="vanished">Синхронизировать уведомления</translation>
-    </message>
-    <message>
-        <source>Sync time</source>
-        <translation type="vanished">Синхронизировать время</translation>
-    </message>
-    <message>
-        <source>Bluetooth on</source>
-        <translation type="vanished">Bluetooth включен</translation>
-    </message>
-    <message>
-        <source>Bluetooth off</source>
-        <translation type="vanished">отключен</translation>
-    </message>
-    <message>
-        <source>Connected</source>
-        <translation type="vanished">Подключен</translation>
-    </message>
-    <message>
-        <source>Not Connected</source>
-        <translation type="vanished">Не подключен</translation>
-    </message>
-</context>
-<context>
-    <name>BrightnessPage</name>
-    <message>
-        <source>Brightness: %1%</source>
-        <translation type="vanished">Яркость: %1%</translation>
-    </message>
-    <message>
-        <source>Brightness %1%</source>
-        <translation type="vanished">Яркость %1%</translation>
-    </message>
-</context>
-<context>
-    <name>DatePage</name>
-    <message>
-        <source>Select a date:</source>
-        <translation type="vanished">Выберите дату:</translation>
-    </message>
-</context>
-<context>
-    <name>LanguagePage</name>
-    <message>
-        <source>Select a language:</source>
-        <translation type="vanished">Выберите язык:</translation>
-    </message>
-    <message>
-        <source>Rebooting...</source>
-        <translation type="vanished">Перезагрузка...</translation>
-    </message>
-</context>
-<context>
-    <name>PoweroffPage</name>
-    <message>
-        <source>Turn off</source>
-        <translation type="vanished">Выключить</translation>
-    </message>
-    <message>
-        <source>Restart</source>
-        <translation type="vanished">Перезагрузка</translation>
-    </message>
-    <message>
-        <source>Power off AsteroidOS</source>
-        <translation type="vanished">выключить AsteroidOS</translation>
-    </message>
-</context>
-<context>
-    <name>QObject</name>
-    <message>
-        <source>Settings</source>
-        <translation type="vanished">настройки</translation>
-    </message>
-</context>
-<context>
-    <name>RebootPage</name>
-    <message>
-        <source>Reboot AsteroidOS</source>
-        <translation type="vanished">Перезагрузка AsteroidOS</translation>
-    </message>
-</context>
-<context>
-    <name>TimePage</name>
-    <message>
-        <source>Select a time:</source>
-        <translation type="vanished">Выберите время:</translation>
-    </message>
-</context>
-<context>
-    <name>USBPage</name>
-    <message>
-        <source>Adb Mode</source>
-        <translation type="vanished">ADB режим</translation>
-    </message>
-    <message>
-        <source>Developer Mode</source>
-        <translation type="vanished">Режим разработчика</translation>
-    </message>
-    <message>
-        <source>Mass Storage</source>
-        <translation type="vanished">Запоминающее устройство</translation>
-    </message>
-    <message>
-        <source>MTP Mode</source>
-        <translation type="vanished">Режим MTP</translation>
-    </message>
-    <message>
-        <source>Select a USB mode:</source>
-        <translation type="vanished">Выбор режима USB:</translation>
-    </message>
-</context>
-<context>
-    <name>main</name>
-    <message>
-        <source>Language</source>
-        <translation type="vanished">Язык</translation>
-    </message>
-    <message>
-        <source>Time</source>
-        <translation type="vanished">Время</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation type="vanished">Дата</translation>
-    </message>
-    <message>
-        <source>Bluetooth</source>
-        <translation type="vanished">Bluetooth</translation>
-    </message>
-    <message>
-        <source>Brightness</source>
-        <translation type="vanished">Яркость</translation>
-    </message>
-    <message>
-        <source>Wallpaper</source>
-        <translation type="vanished">Обои</translation>
-    </message>
-    <message>
-        <source>Watchface</source>
-        <translation type="vanished">Циферблат</translation>
-    </message>
-    <message>
-        <source>USB</source>
-        <translation type="vanished">USB</translation>
-    </message>
-    <message>
-        <source>Power Off</source>
-        <translation type="vanished">Выключить</translation>
-    </message>
-    <message>
-        <source>About</source>
-        <translation type="vanished">О продукте</translation>
-    </message>
-    <message>
-        <source>Reboot</source>
-        <translation type="vanished">Перезагрузка</translation>
+        <translation>настройки</translation>
     </message>
 </context>
 </TS>

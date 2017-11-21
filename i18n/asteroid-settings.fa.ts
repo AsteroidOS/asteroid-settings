@@ -31,12 +31,12 @@
     <message id="id-date-select">
         <location filename="../DatePage.qml" line="32"/>
         <source>Select a date:</source>
-        <translation type="unfinished">گزینش یک تاریخ:</translation>
+        <translation>گزینش یک تاریخ:</translation>
     </message>
     <message id="id-language-select">
         <location filename="../LanguagePage.qml" line="32"/>
         <source>Select a language:</source>
-        <translation type="unfinished">گزینش یک زبان:</translation>
+        <translation>گزینش یک زبان:</translation>
     </message>
     <message id="id-rebooting">
         <location filename="../LanguagePage.qml" line="78"/>
@@ -61,7 +61,7 @@
     <message id="id-time-select">
         <location filename="../TimePage.qml" line="46"/>
         <source>Select a time:</source>
-        <translation type="unfinished">گزینش یک زمان:</translation>
+        <translation>گزینش یک زمان:</translation>
     </message>
     <message id="id-usb-mode-select">
         <location filename="../USBPage.qml" line="30"/>
@@ -71,17 +71,17 @@
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="43"/>
         <source>Adb Mode</source>
-        <translation type="unfinished">پل توسعهٔ اندروید</translation>
+        <translation>پل توسعهٔ اندروید</translation>
     </message>
     <message id="id-developer-mode">
         <location filename="../USBPage.qml" line="45"/>
         <source>Developer Mode</source>
-        <translation type="unfinished">توسعه‌دهنده</translation>
+        <translation>توسعه‌دهنده</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../USBPage.qml" line="47"/>
         <source>MTP Mode</source>
-        <translation type="unfinished">پروتکل انتقال رسانه</translation>
+        <translation>پروتکل انتقال رسانه</translation>
     </message>
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="43"/>
@@ -96,27 +96,27 @@
     <message id="id-time-page">
         <location filename="../main.qml" line="69"/>
         <source>Time</source>
-        <translation type="unfinished">زمان</translation>
+        <translation>زمان</translation>
     </message>
     <message id="id-date-page">
         <location filename="../main.qml" line="75"/>
         <source>Date</source>
-        <translation type="unfinished">تاریخ</translation>
+        <translation>تاریخ</translation>
     </message>
     <message id="id-language-page">
         <location filename="../main.qml" line="81"/>
         <source>Language</source>
-        <translation type="unfinished">زبان</translation>
+        <translation>زبان</translation>
     </message>
     <message id="id-bluetooth-page">
         <location filename="../main.qml" line="87"/>
         <source>Bluetooth</source>
-        <translation type="unfinished">بلوتوث</translation>
+        <translation>بلوتوث</translation>
     </message>
     <message id="id-brightness-page">
         <location filename="../main.qml" line="93"/>
         <source>Brightness</source>
-        <translation type="unfinished">روشنایی</translation>
+        <translation>روشنایی</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../main.qml" line="99"/>
@@ -131,22 +131,22 @@
     <message id="id-wallpaper-page">
         <location filename="../main.qml" line="113"/>
         <source>Wallpaper</source>
-        <translation type="unfinished">کاغذدیواری</translation>
+        <translation>کاغذدیواری</translation>
     </message>
     <message id="id-watchface-page">
         <location filename="../main.qml" line="119"/>
         <source>Watchface</source>
-        <translation type="unfinished">صفحهٔ ساعت</translation>
+        <translation>صفحهٔ ساعت</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../main.qml" line="125"/>
         <source>USB</source>
-        <translation type="unfinished">یواِس‌بی</translation>
+        <translation>یواِس‌بی</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../main.qml" line="131"/>
         <source>Power Off</source>
-        <translation type="unfinished">خاموش</translation>
+        <translation>خاموش</translation>
     </message>
     <message id="id-reboot-page">
         <location filename="../main.qml" line="137"/>
@@ -156,135 +156,12 @@
     <message id="id-about-page">
         <location filename="../main.qml" line="143"/>
         <source>About</source>
-        <translation type="unfinished">درباره</translation>
+        <translation>درباره</translation>
     </message>
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation type="unfinished">ﺖﻨﻇیﻡﺎﺗ</translation>
-    </message>
-</context>
-<context>
-    <name>BluetoothPage</name>
-    <message>
-        <source>Use Bluetooth</source>
-        <translation type="vanished">استفاده از بلوتوث</translation>
-    </message>
-    <message>
-        <source>Sync notifications</source>
-        <translation type="vanished">هم‌گام‌سازی آگاهی‌ها</translation>
-    </message>
-    <message>
-        <source>Sync time</source>
-        <translation type="vanished">هم‌گام‌سازی زمان</translation>
-    </message>
-</context>
-<context>
-    <name>BrightnessPage</name>
-    <message>
-        <source>Brightness: %1%</source>
-        <translation type="vanished">روشنایی: %1%</translation>
-    </message>
-</context>
-<context>
-    <name>DatePage</name>
-    <message>
-        <source>Select a date:</source>
-        <translation type="vanished">گزینش یک تاریخ:</translation>
-    </message>
-</context>
-<context>
-    <name>LanguagePage</name>
-    <message>
-        <source>Select a language:</source>
-        <translation type="vanished">گزینش یک زبان:</translation>
-    </message>
-</context>
-<context>
-    <name>PoweroffPage</name>
-    <message>
-        <source>Turn off</source>
-        <translation type="vanished">خاموش کردن</translation>
-    </message>
-    <message>
-        <source>Restart</source>
-        <translation type="vanished">خاموش و روشن</translation>
-    </message>
-</context>
-<context>
-    <name>QObject</name>
-    <message>
-        <source>Settings</source>
-        <translation type="vanished">ﺖﻨﻇیﻡﺎﺗ</translation>
-    </message>
-</context>
-<context>
-    <name>TimePage</name>
-    <message>
-        <source>Select a time:</source>
-        <translation type="vanished">گزینش یک زمان:</translation>
-    </message>
-</context>
-<context>
-    <name>USBPage</name>
-    <message>
-        <source>Adb Mode</source>
-        <translation type="vanished">پل توسعهٔ اندروید</translation>
-    </message>
-    <message>
-        <source>Developer Mode</source>
-        <translation type="vanished">توسعه‌دهنده</translation>
-    </message>
-    <message>
-        <source>Mass Storage</source>
-        <translation type="vanished">فضای ذخیره</translation>
-    </message>
-    <message>
-        <source>MTP Mode</source>
-        <translation type="vanished">پروتکل انتقال رسانه</translation>
-    </message>
-</context>
-<context>
-    <name>main</name>
-    <message>
-        <source>Language</source>
-        <translation type="vanished">زبان</translation>
-    </message>
-    <message>
-        <source>Time</source>
-        <translation type="vanished">زمان</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation type="vanished">تاریخ</translation>
-    </message>
-    <message>
-        <source>Bluetooth</source>
-        <translation type="vanished">بلوتوث</translation>
-    </message>
-    <message>
-        <source>Brightness</source>
-        <translation type="vanished">روشنایی</translation>
-    </message>
-    <message>
-        <source>Wallpaper</source>
-        <translation type="vanished">کاغذدیواری</translation>
-    </message>
-    <message>
-        <source>Watchface</source>
-        <translation type="vanished">صفحهٔ ساعت</translation>
-    </message>
-    <message>
-        <source>USB</source>
-        <translation type="vanished">یواِس‌بی</translation>
-    </message>
-    <message>
-        <source>Power Off</source>
-        <translation type="vanished">خاموش</translation>
-    </message>
-    <message>
-        <source>About</source>
-        <translation type="vanished">درباره</translation>
+        <translation>ﺖﻨﻇیﻡﺎﺗ</translation>
     </message>
 </context>
 </TS>

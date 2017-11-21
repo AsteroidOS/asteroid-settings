@@ -6,17 +6,17 @@
     <message id="id-bluetooth-on">
         <location filename="../BluetoothPage.qml" line="28"/>
         <source>Bluetooth on</source>
-        <translation type="unfinished">Bluetooth włączony</translation>
+        <translation>Bluetooth włączony</translation>
     </message>
     <message id="id-bluetooth-off">
         <location filename="../BluetoothPage.qml" line="30"/>
         <source>Bluetooth off</source>
-        <translation type="unfinished">Bluetooth wyłączony</translation>
+        <translation>Bluetooth wyłączony</translation>
     </message>
     <message id="id-connected">
         <location filename="../BluetoothPage.qml" line="32"/>
         <source>Connected</source>
-        <translation type="unfinished">Połączony</translation>
+        <translation>Połączony</translation>
     </message>
     <message id="id-disconnected">
         <location filename="../BluetoothPage.qml" line="34"/>
@@ -26,32 +26,32 @@
     <message id="id-brightness-percentage">
         <location filename="../BrightnessPage.qml" line="36"/>
         <source>Brightness %1%</source>
-        <translation type="unfinished">Jasność %1%</translation>
+        <translation>Jasność %1%</translation>
     </message>
     <message id="id-date-select">
         <location filename="../DatePage.qml" line="32"/>
         <source>Select a date:</source>
-        <translation type="unfinished">Wybierz datę:</translation>
+        <translation>Wybierz datę:</translation>
     </message>
     <message id="id-language-select">
         <location filename="../LanguagePage.qml" line="32"/>
         <source>Select a language:</source>
-        <translation type="unfinished">Wybierz język:</translation>
+        <translation>Wybierz język:</translation>
     </message>
     <message id="id-rebooting">
         <location filename="../LanguagePage.qml" line="78"/>
         <source>Rebooting...</source>
-        <translation type="unfinished">Trwa restartowanie...</translation>
+        <translation>Trwa restartowanie...</translation>
     </message>
     <message id="id-poweroff-warn">
         <location filename="../PoweroffPage.qml" line="29"/>
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished">Wyłącz AsteroidOS</translation>
+        <translation>Wyłącz AsteroidOS</translation>
     </message>
     <message id="id-reboot-warn">
         <location filename="../RebootPage.qml" line="29"/>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished">Uruchom AsteroidOS ponownie</translation>
+        <translation>Uruchom AsteroidOS ponownie</translation>
     </message>
     <message id="id-sound-percentage">
         <location filename="../SoundPage.qml" line="36"/>
@@ -61,27 +61,27 @@
     <message id="id-time-select">
         <location filename="../TimePage.qml" line="46"/>
         <source>Select a time:</source>
-        <translation type="unfinished">Wybierz czas:</translation>
+        <translation>Wybierz czas:</translation>
     </message>
     <message id="id-usb-mode-select">
         <location filename="../USBPage.qml" line="30"/>
         <source>Select a USB mode:</source>
-        <translation type="unfinished">Wybierz tryb USB:</translation>
+        <translation>Wybierz tryb USB:</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="43"/>
         <source>Adb Mode</source>
-        <translation type="unfinished">Tryb Adb</translation>
+        <translation>Tryb Adb</translation>
     </message>
     <message id="id-developer-mode">
         <location filename="../USBPage.qml" line="45"/>
         <source>Developer Mode</source>
-        <translation type="unfinished">Tryb Dewelopera</translation>
+        <translation>Tryb Dewelopera</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../USBPage.qml" line="47"/>
         <source>MTP Mode</source>
-        <translation type="unfinished">Tryb MTP</translation>
+        <translation>Tryb MTP</translation>
     </message>
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="43"/>
@@ -96,27 +96,27 @@
     <message id="id-time-page">
         <location filename="../main.qml" line="69"/>
         <source>Time</source>
-        <translation type="unfinished">Czas</translation>
+        <translation>Czas</translation>
     </message>
     <message id="id-date-page">
         <location filename="../main.qml" line="75"/>
         <source>Date</source>
-        <translation type="unfinished">Data</translation>
+        <translation>Data</translation>
     </message>
     <message id="id-language-page">
         <location filename="../main.qml" line="81"/>
         <source>Language</source>
-        <translation type="unfinished">Język</translation>
+        <translation>Język</translation>
     </message>
     <message id="id-bluetooth-page">
         <location filename="../main.qml" line="87"/>
         <source>Bluetooth</source>
-        <translation type="unfinished">Bluetooth</translation>
+        <translation>Bluetooth</translation>
     </message>
     <message id="id-brightness-page">
         <location filename="../main.qml" line="93"/>
         <source>Brightness</source>
-        <translation type="unfinished">Jasność</translation>
+        <translation>Jasność</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../main.qml" line="99"/>
@@ -131,203 +131,37 @@
     <message id="id-wallpaper-page">
         <location filename="../main.qml" line="113"/>
         <source>Wallpaper</source>
-        <translation type="unfinished">Tapeta</translation>
+        <translation>Tapeta</translation>
     </message>
     <message id="id-watchface-page">
         <location filename="../main.qml" line="119"/>
         <source>Watchface</source>
-        <translation type="unfinished">Wygląd zegarka</translation>
+        <translation>Wygląd zegarka</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../main.qml" line="125"/>
         <source>USB</source>
-        <translation type="unfinished">USB</translation>
+        <translation>USB</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../main.qml" line="131"/>
         <source>Power Off</source>
-        <translation type="unfinished">Wyłącz</translation>
+        <translation>Wyłącz</translation>
     </message>
     <message id="id-reboot-page">
         <location filename="../main.qml" line="137"/>
         <source>Reboot</source>
-        <translation type="unfinished">Uruchom ponownie</translation>
+        <translation>Uruchom ponownie</translation>
     </message>
     <message id="id-about-page">
         <location filename="../main.qml" line="143"/>
         <source>About</source>
-        <translation type="unfinished">O urządzeniu</translation>
+        <translation>O urządzeniu</translation>
     </message>
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation type="unfinished">Ustawienia</translation>
-    </message>
-</context>
-<context>
-    <name>BluetoothPage</name>
-    <message>
-        <source>Use Bluetooth</source>
-        <translation type="vanished">Użyj Bluetooth</translation>
-    </message>
-    <message>
-        <source>Sync notifications</source>
-        <translation type="vanished">Synchronizuj powiadomienia</translation>
-    </message>
-    <message>
-        <source>Sync time</source>
-        <translation type="vanished">Synchronizuj czas</translation>
-    </message>
-    <message>
-        <source>Bluetooth on</source>
-        <translation type="vanished">Bluetooth włączony</translation>
-    </message>
-    <message>
-        <source>Bluetooth off</source>
-        <translation type="vanished">Bluetooth wyłączony</translation>
-    </message>
-    <message>
-        <source>Connected</source>
-        <translation type="vanished">Połączony</translation>
-    </message>
-    <message>
-        <source>Not Connected</source>
-        <translation type="vanished">Nie połączony</translation>
-    </message>
-</context>
-<context>
-    <name>BrightnessPage</name>
-    <message>
-        <source>Brightness: %1%</source>
-        <translation type="vanished">Jasność: %1%</translation>
-    </message>
-    <message>
-        <source>Brightness %1%</source>
-        <translation type="vanished">Jasność %1%</translation>
-    </message>
-</context>
-<context>
-    <name>DatePage</name>
-    <message>
-        <source>Select a date:</source>
-        <translation type="vanished">Wybierz datę:</translation>
-    </message>
-</context>
-<context>
-    <name>LanguagePage</name>
-    <message>
-        <source>Select a language:</source>
-        <translation type="vanished">Wybierz język:</translation>
-    </message>
-    <message>
-        <source>Rebooting...</source>
-        <translation type="vanished">Trwa restartowanie...</translation>
-    </message>
-</context>
-<context>
-    <name>PoweroffPage</name>
-    <message>
-        <source>Turn off</source>
-        <translation type="vanished">Wyłącz</translation>
-    </message>
-    <message>
-        <source>Restart</source>
-        <translation type="vanished">Zrestartuj</translation>
-    </message>
-    <message>
-        <source>Power off AsteroidOS</source>
-        <translation type="vanished">Wyłącz AsteroidOS</translation>
-    </message>
-</context>
-<context>
-    <name>QObject</name>
-    <message>
-        <source>Settings</source>
-        <translation type="vanished">Ustawienia</translation>
-    </message>
-</context>
-<context>
-    <name>RebootPage</name>
-    <message>
-        <source>Reboot AsteroidOS</source>
-        <translation type="vanished">Uruchom AsteroidOS ponownie</translation>
-    </message>
-</context>
-<context>
-    <name>TimePage</name>
-    <message>
-        <source>Select a time:</source>
-        <translation type="vanished">Wybierz czas:</translation>
-    </message>
-</context>
-<context>
-    <name>USBPage</name>
-    <message>
-        <source>Adb Mode</source>
-        <translation type="vanished">Tryb Adb</translation>
-    </message>
-    <message>
-        <source>Developer Mode</source>
-        <translation type="vanished">Tryb Dewelopera</translation>
-    </message>
-    <message>
-        <source>Mass Storage</source>
-        <translation type="vanished">Pamięć Masowa</translation>
-    </message>
-    <message>
-        <source>MTP Mode</source>
-        <translation type="vanished">Tryb MTP</translation>
-    </message>
-    <message>
-        <source>Select a USB mode:</source>
-        <translation type="vanished">Wybierz tryb USB:</translation>
-    </message>
-</context>
-<context>
-    <name>main</name>
-    <message>
-        <source>Language</source>
-        <translation type="vanished">Język</translation>
-    </message>
-    <message>
-        <source>Time</source>
-        <translation type="vanished">Czas</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation type="vanished">Data</translation>
-    </message>
-    <message>
-        <source>Bluetooth</source>
-        <translation type="vanished">Bluetooth</translation>
-    </message>
-    <message>
-        <source>Brightness</source>
-        <translation type="vanished">Jasność</translation>
-    </message>
-    <message>
-        <source>Wallpaper</source>
-        <translation type="vanished">Tapeta</translation>
-    </message>
-    <message>
-        <source>Watchface</source>
-        <translation type="vanished">Wygląd zegarka</translation>
-    </message>
-    <message>
-        <source>USB</source>
-        <translation type="vanished">USB</translation>
-    </message>
-    <message>
-        <source>Power Off</source>
-        <translation type="vanished">Wyłącz</translation>
-    </message>
-    <message>
-        <source>About</source>
-        <translation type="vanished">O urządzeniu</translation>
-    </message>
-    <message>
-        <source>Reboot</source>
-        <translation type="vanished">Uruchom ponownie</translation>
+        <translation>Ustawienia</translation>
     </message>
 </context>
 </TS>

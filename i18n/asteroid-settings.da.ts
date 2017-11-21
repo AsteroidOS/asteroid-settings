@@ -6,17 +6,17 @@
     <message id="id-bluetooth-on">
         <location filename="../BluetoothPage.qml" line="28"/>
         <source>Bluetooth on</source>
-        <translation type="unfinished">Bluetooth on</translation>
+        <translation>Bluetooth on</translation>
     </message>
     <message id="id-bluetooth-off">
         <location filename="../BluetoothPage.qml" line="30"/>
         <source>Bluetooth off</source>
-        <translation type="unfinished">Bluetooth fra</translation>
+        <translation>Bluetooth fra</translation>
     </message>
     <message id="id-connected">
         <location filename="../BluetoothPage.qml" line="32"/>
         <source>Connected</source>
-        <translation type="unfinished">Forbundet</translation>
+        <translation>Forbundet</translation>
     </message>
     <message id="id-disconnected">
         <location filename="../BluetoothPage.qml" line="34"/>
@@ -26,32 +26,32 @@
     <message id="id-brightness-percentage">
         <location filename="../BrightnessPage.qml" line="36"/>
         <source>Brightness %1%</source>
-        <translation type="unfinished">Lysstyrke %1%</translation>
+        <translation>Lysstyrke %1%</translation>
     </message>
     <message id="id-date-select">
         <location filename="../DatePage.qml" line="32"/>
         <source>Select a date:</source>
-        <translation type="unfinished">Vælg dato:</translation>
+        <translation>Vælg dato:</translation>
     </message>
     <message id="id-language-select">
         <location filename="../LanguagePage.qml" line="32"/>
         <source>Select a language:</source>
-        <translation type="unfinished">Vælg sprog:</translation>
+        <translation>Vælg sprog:</translation>
     </message>
     <message id="id-rebooting">
         <location filename="../LanguagePage.qml" line="78"/>
         <source>Rebooting...</source>
-        <translation type="unfinished">Genstarter...</translation>
+        <translation>Genstarter...</translation>
     </message>
     <message id="id-poweroff-warn">
         <location filename="../PoweroffPage.qml" line="29"/>
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished">Sluk AsteroidOS</translation>
+        <translation>Sluk AsteroidOS</translation>
     </message>
     <message id="id-reboot-warn">
         <location filename="../RebootPage.qml" line="29"/>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished">Genstart AsteroidOS</translation>
+        <translation>Genstart AsteroidOS</translation>
     </message>
     <message id="id-sound-percentage">
         <location filename="../SoundPage.qml" line="36"/>
@@ -61,27 +61,27 @@
     <message id="id-time-select">
         <location filename="../TimePage.qml" line="46"/>
         <source>Select a time:</source>
-        <translation type="unfinished">Vælg tid:</translation>
+        <translation>Vælg tid:</translation>
     </message>
     <message id="id-usb-mode-select">
         <location filename="../USBPage.qml" line="30"/>
         <source>Select a USB mode:</source>
-        <translation type="unfinished">Vælg en USB tilstand:</translation>
+        <translation>Vælg en USB tilstand:</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="43"/>
         <source>Adb Mode</source>
-        <translation type="unfinished">Adb-Tilstand</translation>
+        <translation>Adb-Tilstand</translation>
     </message>
     <message id="id-developer-mode">
         <location filename="../USBPage.qml" line="45"/>
         <source>Developer Mode</source>
-        <translation type="unfinished">Udvikler Mode</translation>
+        <translation>Udvikler Mode</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../USBPage.qml" line="47"/>
         <source>MTP Mode</source>
-        <translation type="unfinished">MTP-Tilstand</translation>
+        <translation>MTP-Tilstand</translation>
     </message>
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="43"/>
@@ -96,27 +96,27 @@
     <message id="id-time-page">
         <location filename="../main.qml" line="69"/>
         <source>Time</source>
-        <translation type="unfinished">Tid</translation>
+        <translation>Tid</translation>
     </message>
     <message id="id-date-page">
         <location filename="../main.qml" line="75"/>
         <source>Date</source>
-        <translation type="unfinished">Dato</translation>
+        <translation>Dato</translation>
     </message>
     <message id="id-language-page">
         <location filename="../main.qml" line="81"/>
         <source>Language</source>
-        <translation type="unfinished">Sprog</translation>
+        <translation>Sprog</translation>
     </message>
     <message id="id-bluetooth-page">
         <location filename="../main.qml" line="87"/>
         <source>Bluetooth</source>
-        <translation type="unfinished">Bluetooth</translation>
+        <translation>Bluetooth</translation>
     </message>
     <message id="id-brightness-page">
         <location filename="../main.qml" line="93"/>
         <source>Brightness</source>
-        <translation type="unfinished">Lysstyrke</translation>
+        <translation>Lysstyrke</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../main.qml" line="99"/>
@@ -131,203 +131,37 @@
     <message id="id-wallpaper-page">
         <location filename="../main.qml" line="113"/>
         <source>Wallpaper</source>
-        <translation type="unfinished">Baggrund</translation>
+        <translation>Baggrund</translation>
     </message>
     <message id="id-watchface-page">
         <location filename="../main.qml" line="119"/>
         <source>Watchface</source>
-        <translation type="unfinished">Udseende</translation>
+        <translation>Udseende</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../main.qml" line="125"/>
         <source>USB</source>
-        <translation type="unfinished">USB</translation>
+        <translation>USB</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../main.qml" line="131"/>
         <source>Power Off</source>
-        <translation type="unfinished">Sluk</translation>
+        <translation>Sluk</translation>
     </message>
     <message id="id-reboot-page">
         <location filename="../main.qml" line="137"/>
         <source>Reboot</source>
-        <translation type="unfinished">Genstart</translation>
+        <translation>Genstart</translation>
     </message>
     <message id="id-about-page">
         <location filename="../main.qml" line="143"/>
         <source>About</source>
-        <translation type="unfinished">Om</translation>
+        <translation>Om</translation>
     </message>
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation type="unfinished">Indstillinger</translation>
-    </message>
-</context>
-<context>
-    <name>BluetoothPage</name>
-    <message>
-        <source>Use Bluetooth</source>
-        <translation type="vanished">Brug Bluetooth</translation>
-    </message>
-    <message>
-        <source>Sync notifications</source>
-        <translation type="vanished">Synkroniser beskeder</translation>
-    </message>
-    <message>
-        <source>Sync time</source>
-        <translation type="vanished">Synkroniser tid</translation>
-    </message>
-    <message>
-        <source>Bluetooth on</source>
-        <translation type="vanished">Bluetooth on</translation>
-    </message>
-    <message>
-        <source>Bluetooth off</source>
-        <translation type="vanished">Bluetooth fra</translation>
-    </message>
-    <message>
-        <source>Connected</source>
-        <translation type="vanished">Forbundet</translation>
-    </message>
-    <message>
-        <source>Not Connected</source>
-        <translation type="vanished">Ikke forbundet</translation>
-    </message>
-</context>
-<context>
-    <name>BrightnessPage</name>
-    <message>
-        <source>Brightness: %1%</source>
-        <translation type="vanished">Lysstyrke: %1%</translation>
-    </message>
-    <message>
-        <source>Brightness %1%</source>
-        <translation type="vanished">Lysstyrke %1%</translation>
-    </message>
-</context>
-<context>
-    <name>DatePage</name>
-    <message>
-        <source>Select a date:</source>
-        <translation type="vanished">Vælg dato:</translation>
-    </message>
-</context>
-<context>
-    <name>LanguagePage</name>
-    <message>
-        <source>Select a language:</source>
-        <translation type="vanished">Vælg sprog:</translation>
-    </message>
-    <message>
-        <source>Rebooting...</source>
-        <translation type="vanished">Genstarter...</translation>
-    </message>
-</context>
-<context>
-    <name>PoweroffPage</name>
-    <message>
-        <source>Turn off</source>
-        <translation type="vanished">Sluk</translation>
-    </message>
-    <message>
-        <source>Restart</source>
-        <translation type="vanished">Genstart</translation>
-    </message>
-    <message>
-        <source>Power off AsteroidOS</source>
-        <translation type="vanished">Sluk AsteroidOS</translation>
-    </message>
-</context>
-<context>
-    <name>QObject</name>
-    <message>
-        <source>Settings</source>
-        <translation type="vanished">Indstillinger</translation>
-    </message>
-</context>
-<context>
-    <name>RebootPage</name>
-    <message>
-        <source>Reboot AsteroidOS</source>
-        <translation type="vanished">Genstart AsteroidOS</translation>
-    </message>
-</context>
-<context>
-    <name>TimePage</name>
-    <message>
-        <source>Select a time:</source>
-        <translation type="vanished">Vælg tid:</translation>
-    </message>
-</context>
-<context>
-    <name>USBPage</name>
-    <message>
-        <source>Adb Mode</source>
-        <translation type="vanished">Adb-Tilstand</translation>
-    </message>
-    <message>
-        <source>Developer Mode</source>
-        <translation type="vanished">Udvikler Mode</translation>
-    </message>
-    <message>
-        <source>Mass Storage</source>
-        <translation type="vanished">Lagring</translation>
-    </message>
-    <message>
-        <source>MTP Mode</source>
-        <translation type="vanished">MTP-Tilstand</translation>
-    </message>
-    <message>
-        <source>Select a USB mode:</source>
-        <translation type="vanished">Vælg en USB tilstand:</translation>
-    </message>
-</context>
-<context>
-    <name>main</name>
-    <message>
-        <source>Language</source>
-        <translation type="vanished">Sprog</translation>
-    </message>
-    <message>
-        <source>Time</source>
-        <translation type="vanished">Tid</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation type="vanished">Dato</translation>
-    </message>
-    <message>
-        <source>Bluetooth</source>
-        <translation type="vanished">Bluetooth</translation>
-    </message>
-    <message>
-        <source>Brightness</source>
-        <translation type="vanished">Lysstyrke</translation>
-    </message>
-    <message>
-        <source>Wallpaper</source>
-        <translation type="vanished">Baggrund</translation>
-    </message>
-    <message>
-        <source>Watchface</source>
-        <translation type="vanished">Udseende</translation>
-    </message>
-    <message>
-        <source>USB</source>
-        <translation type="vanished">USB</translation>
-    </message>
-    <message>
-        <source>Power Off</source>
-        <translation type="vanished">Sluk</translation>
-    </message>
-    <message>
-        <source>About</source>
-        <translation type="vanished">Om</translation>
-    </message>
-    <message>
-        <source>Reboot</source>
-        <translation type="vanished">Genstart</translation>
+        <translation>Indstillinger</translation>
     </message>
 </context>
 </TS>

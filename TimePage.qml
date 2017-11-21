@@ -42,7 +42,8 @@ Item {
 
     Label {
         id: title
-        text: qsTr("Select a time:")
+        //% "Select a time:"
+        text: qsTrId("id-time-select")
         height: Dims.h(20)
         font.pixelSize: Dims.l(6)
         anchors.top: parent.top

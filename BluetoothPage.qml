@@ -24,7 +24,15 @@ Item {
     BluetoothStatus { id: btStatus }
 
     StatusPage {
-        text: "<h3>" + (btStatus.powered ? qsTr("Bluetooth on") : qsTr("Bluetooth off")) + "</h3>\n" + (btStatus.connected ? qsTr("Connected") : qsTr("Not Connected"))
+        //% "Bluetooth on"
+        property string bluetoothOnStr: qsTrId("id-bluetooth-on")
+        //% "Bluetooth off"
+        property string bluetoothOffStr: qsTrId("id-bluetooth-off")
+        //% "Connected"
+        property string connectedStr: qsTrId("id-connected")
+        //% "Not connected"
+        property string notConnectedStr: qsTrId("id-disconnected")
+        text: "<h3>" + (btStatus.powered ? bluetoothOnStr : bluetoothOffStr) + "</h3>\n" + (btStatus.connected ? connectedStr : notConnectedStr)
         icon: btStatus.powered ? "ios-bluetooth-outline" : "ios-bluetooth-off-outline"
         clickable: true
         onClicked: btStatus.powered = !btStatus.powered

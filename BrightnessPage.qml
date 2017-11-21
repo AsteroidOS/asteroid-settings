@@ -32,7 +32,8 @@ Item {
     }
 
     Label {
-        text: qsTr("Brightness %1%").arg(displaySettings.brightness)
+        //% "Brightness %1%"
+        text: qsTrId("id-brightness-percentage").arg(displaySettings.brightness)
         font.pixelSize: Dims.l(6)
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter

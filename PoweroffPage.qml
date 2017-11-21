@@ -25,7 +25,8 @@ Item {
     property var pop
 
     Label {
-        text: qsTr("Power off AsteroidOS")
+        //% "Power off AsteroidOS"
+        text: qsTrId("id-poweroff-warn")
         anchors.centerIn: parent
     }
 

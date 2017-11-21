@@ -28,7 +28,8 @@ Item {
 
     Label {
         id: title
-        text: qsTr("Select a language:")
+        //% "Select a language:"
+        text: qsTrId("id-language-select")
         height: Dims.h(20)
         font.pixelSize: Dims.l(6)
         anchors.top: parent.top
@@ -73,7 +74,8 @@ Item {
 
         Label {
             anchors.centerIn: parent
-            text: qsTr("Rebooting...")
+            //% "Rebooting..."
+            text: qsTrId("id-rebooting")
             font.pixelSize: Dims.l(11)
         }
     }

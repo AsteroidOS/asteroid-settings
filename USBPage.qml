@@ -26,7 +26,8 @@ Item {
 
     Label {
         id: title
-        text: qsTr("Select a USB mode:")
+        //% "Select a USB mode:"
+        text: qsTrId("id-usb-mode-select")
         height: parent.height*0.2
         font.pixelSize: Dims.l(6)
         anchors.top: parent.top
@@ -38,9 +39,12 @@ Item {
 
     ListModel {
         id: usbModesModel
-        ListElement { title: qsTr("Adb Mode"); mode: "adb_mode" }
-        ListElement { title: qsTr("Developer Mode"); mode: "developer_mode" }
-        ListElement { title: qsTr("MTP Mode"); mode: "mtp_mode" }
+        //% "Adb Mode"
+        ListElement { title: qsTrId("id-adb-mode"); mode: "adb_mode" }
+        //% "Developer Mode"
+        ListElement { title: qsTrId("id-developer-mode"); mode: "developer_mode" }
+        //% "MTP Mode"
+        ListElement { title: qsTrId("id-mtp-mode"); mode: "mtp_mode" }
     }
 
     Spinner {

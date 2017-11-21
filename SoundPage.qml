@@ -32,7 +32,8 @@ Item {
     }
 
     Label {
-        text: qsTr("Sound %1%").arg(volumeControl.volume)
+        //% "Sound %1%"
+        text: qsTrId("id-sound-percentage").arg(volumeControl.volume)
         font.pixelSize: Dims.l(6)
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter

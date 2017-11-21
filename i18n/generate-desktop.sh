@@ -19,7 +19,7 @@ if [ ! -f "${SRC_DIR}/i18n/${OUTPUT_DESKTOP_FILE}.h" ]; then
     exit 2
 fi
 
-DEFAULT_NAME=`grep -oP 'QObject::tr\("\K[^"]+(?="\);)' ${SRC_DIR}/i18n/${OUTPUT_DESKTOP_FILE}.h`
+DEFAULT_NAME=`grep -oP '//% "\K[^"]+(?=")' ${SRC_DIR}/i18n/${OUTPUT_DESKTOP_FILE}.h`
 if [ -z "$DEFAULT_NAME" ]; then
   echo "Default name can not be found in ${SRC_DIR}/i18n/${OUTPUT_DESKTOP_FILE}.h"
   exit 3
@@ -38,7 +38,7 @@ for FILE in ${SRC_DIR}/i18n/*.ts; do
   fi
   echo "> Language: $PROCESSED_LANG detected"
 
-  TRANSLATION_LINE=`grep -A 2 '<location.*desktop\.h" ' $FILE | grep '<translation'`
+  TRANSLATION_LINE=`grep -A 3 '<message id=\"id-app-launcher-name\">' $FILE | grep '<translation'`
   if [ -z "$TRANSLATION_LINE" ]; then
     echo "> Couldn't find a corresponding desktop.h translation, aborting"
     continue

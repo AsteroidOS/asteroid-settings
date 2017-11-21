@@ -2,6 +2,137 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="hu">
 <context>
+    <name></name>
+    <message id="id-bluetooth-on">
+        <source>Bluetooth on</source>
+        <translation type="unfinished">Bluetooth bekapcsolva</translation>
+    </message>
+    <message id="id-bluetooth-off">
+        <source>Bluetooth off</source>
+        <translation type="unfinished">Bluetooth kikapcsolva</translation>
+    </message>
+    <message id="id-connected">
+        <source>Connected</source>
+        <translation type="unfinished">Kapcsolódva</translation>
+    </message>
+    <message id="id-disconnected">
+        <source>Not connected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-brightness-percentage">
+        <source>Brightness %1%</source>
+        <translation type="unfinished">Fényerő %1%</translation>
+    </message>
+    <message id="id-date-select">
+        <source>Select a date:</source>
+        <translation type="unfinished">Dátum kiválasztása:</translation>
+    </message>
+    <message id="id-language-select">
+        <source>Select a language:</source>
+        <translation type="unfinished">Nyelv kiválasztása:</translation>
+    </message>
+    <message id="id-rebooting">
+        <source>Rebooting...</source>
+        <translation type="unfinished">Újraindítás...</translation>
+    </message>
+    <message id="id-poweroff-warn">
+        <source>Power off AsteroidOS</source>
+        <translation type="unfinished">AsteroidOS kikapcsolása</translation>
+    </message>
+    <message id="id-reboot-warn">
+        <source>Reboot AsteroidOS</source>
+        <translation type="unfinished">AsteroidOS újraindítása</translation>
+    </message>
+    <message id="id-sound-percentage">
+        <source>Sound %1%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-time-select">
+        <source>Select a time:</source>
+        <translation type="unfinished">Idő kiválasztása:</translation>
+    </message>
+    <message id="id-usb-mode-select">
+        <source>Select a USB mode:</source>
+        <translation type="unfinished">Válassz egy USB módot:</translation>
+    </message>
+    <message id="id-adb-mode">
+        <source>Adb Mode</source>
+        <translation type="unfinished">ADB használata</translation>
+    </message>
+    <message id="id-developer-mode">
+        <source>Developer Mode</source>
+        <translation type="unfinished">Fejlesztői beállítások</translation>
+    </message>
+    <message id="id-mtp-mode">
+        <source>MTP Mode</source>
+        <translation type="unfinished">MTP használata</translation>
+    </message>
+    <message id="id-12h-format">
+        <source>Use 12H format:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-fahrenheit">
+        <source>Use Fahrenheit:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-time-page">
+        <source>Time</source>
+        <translation type="unfinished">Idő</translation>
+    </message>
+    <message id="id-date-page">
+        <source>Date</source>
+        <translation type="unfinished">Dátum</translation>
+    </message>
+    <message id="id-language-page">
+        <source>Language</source>
+        <translation type="unfinished">Nyelv</translation>
+    </message>
+    <message id="id-bluetooth-page">
+        <source>Bluetooth</source>
+        <translation type="unfinished">Bluetooth</translation>
+    </message>
+    <message id="id-brightness-page">
+        <source>Brightness</source>
+        <translation type="unfinished">Fényerő</translation>
+    </message>
+    <message id="id-sound-page">
+        <source>Sound</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-units-page">
+        <source>Units</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-wallpaper-page">
+        <source>Wallpaper</source>
+        <translation type="unfinished">Háttérkép</translation>
+    </message>
+    <message id="id-watchface-page">
+        <source>Watchface</source>
+        <translation type="unfinished">Óra számlapja</translation>
+    </message>
+    <message id="id-usb-page">
+        <source>USB</source>
+        <translation type="unfinished">USB</translation>
+    </message>
+    <message id="id-poweroff-page">
+        <source>Power Off</source>
+        <translation type="unfinished">Kikapcsolás</translation>
+    </message>
+    <message id="id-reboot-page">
+        <source>Reboot</source>
+        <translation type="unfinished">Újraindítás</translation>
+    </message>
+    <message id="id-about-page">
+        <source>About</source>
+        <translation type="unfinished">Az okosóráról</translation>
+    </message>
+    <message id="id-app-launcher-name">
+        <source>Settings</source>
+        <translation type="unfinished">Beállítások</translation>
+    </message>
+</context>
+<context>
     <name>BluetoothPage</name>
     <message>
         <source>Use Bluetooth</source>
@@ -17,19 +148,19 @@
     </message>
     <message>
         <source>Bluetooth on</source>
-        <translation>Bluetooth bekapcsolva</translation>
+        <translation type="vanished">Bluetooth bekapcsolva</translation>
     </message>
     <message>
         <source>Bluetooth off</source>
-        <translation>Bluetooth kikapcsolva</translation>
+        <translation type="vanished">Bluetooth kikapcsolva</translation>
     </message>
     <message>
         <source>Connected</source>
-        <translation>Kapcsolódva</translation>
+        <translation type="vanished">Kapcsolódva</translation>
     </message>
     <message>
         <source>Not Connected</source>
-        <translation>Nem kapcsolódva</translation>
+        <translation type="vanished">Nem kapcsolódva</translation>
     </message>
 </context>
 <context>
@@ -40,25 +171,25 @@
     </message>
     <message>
         <source>Brightness %1%</source>
-        <translation>Fényerő %1%</translation>
+        <translation type="vanished">Fényerő %1%</translation>
     </message>
 </context>
 <context>
     <name>DatePage</name>
     <message>
         <source>Select a date:</source>
-        <translation>Dátum kiválasztása:</translation>
+        <translation type="vanished">Dátum kiválasztása:</translation>
     </message>
 </context>
 <context>
     <name>LanguagePage</name>
     <message>
         <source>Select a language:</source>
-        <translation>Nyelv kiválasztása:</translation>
+        <translation type="vanished">Nyelv kiválasztása:</translation>
     </message>
     <message>
         <source>Rebooting...</source>
-        <translation>Újraindítás...</translation>
+        <translation type="vanished">Újraindítás...</translation>
     </message>
 </context>
 <context>
@@ -73,98 +204,98 @@
     </message>
     <message>
         <source>Power off AsteroidOS</source>
-        <translation>AsteroidOS kikapcsolása</translation>
+        <translation type="vanished">AsteroidOS kikapcsolása</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>Settings</source>
-        <translation>Beállítások</translation>
+        <translation type="vanished">Beállítások</translation>
     </message>
 </context>
 <context>
     <name>RebootPage</name>
     <message>
         <source>Reboot AsteroidOS</source>
-        <translation>AsteroidOS újraindítása</translation>
+        <translation type="vanished">AsteroidOS újraindítása</translation>
     </message>
 </context>
 <context>
     <name>TimePage</name>
     <message>
         <source>Select a time:</source>
-        <translation>Idő kiválasztása:</translation>
+        <translation type="vanished">Idő kiválasztása:</translation>
     </message>
 </context>
 <context>
     <name>USBPage</name>
     <message>
         <source>Adb Mode</source>
-        <translation>ADB használata</translation>
+        <translation type="vanished">ADB használata</translation>
     </message>
     <message>
         <source>Developer Mode</source>
-        <translation>Fejlesztői beállítások</translation>
+        <translation type="vanished">Fejlesztői beállítások</translation>
     </message>
     <message>
         <source>Mass Storage</source>
-        <translation>Háttértárolás</translation>
+        <translation type="vanished">Háttértárolás</translation>
     </message>
     <message>
         <source>MTP Mode</source>
-        <translation>MTP használata</translation>
+        <translation type="vanished">MTP használata</translation>
     </message>
     <message>
         <source>Select a USB mode:</source>
-        <translation>Válassz egy USB módot:</translation>
+        <translation type="vanished">Válassz egy USB módot:</translation>
     </message>
 </context>
 <context>
     <name>main</name>
     <message>
         <source>Language</source>
-        <translation>Nyelv</translation>
+        <translation type="vanished">Nyelv</translation>
     </message>
     <message>
         <source>Time</source>
-        <translation>Idő</translation>
+        <translation type="vanished">Idő</translation>
     </message>
     <message>
         <source>Date</source>
-        <translation>Dátum</translation>
+        <translation type="vanished">Dátum</translation>
     </message>
     <message>
         <source>Bluetooth</source>
-        <translation>Bluetooth</translation>
+        <translation type="vanished">Bluetooth</translation>
     </message>
     <message>
         <source>Brightness</source>
-        <translation>Fényerő</translation>
+        <translation type="vanished">Fényerő</translation>
     </message>
     <message>
         <source>Wallpaper</source>
-        <translation>Háttérkép</translation>
+        <translation type="vanished">Háttérkép</translation>
     </message>
     <message>
         <source>Watchface</source>
-        <translation>Óra számlapja</translation>
+        <translation type="vanished">Óra számlapja</translation>
     </message>
     <message>
         <source>USB</source>
-        <translation>USB</translation>
+        <translation type="vanished">USB</translation>
     </message>
     <message>
         <source>Power Off</source>
-        <translation>Kikapcsolás</translation>
+        <translation type="vanished">Kikapcsolás</translation>
     </message>
     <message>
         <source>About</source>
-        <translation>Az okosóráról</translation>
+        <translation type="vanished">Az okosóráról</translation>
     </message>
     <message>
         <source>Reboot</source>
-        <translation>Újraindítás</translation>
+        <translation type="vanished">Újraindítás</translation>
     </message>
 </context>
 </TS>

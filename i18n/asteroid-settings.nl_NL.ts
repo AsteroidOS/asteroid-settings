@@ -86,7 +86,7 @@
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="43"/>
         <source>Use 12H format:</source>
-        <translation>24-uursnotatie:</translation>
+        <translation>12-uursnotatie:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../UnitsPage.qml" line="58"/>

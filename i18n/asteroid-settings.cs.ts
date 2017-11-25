@@ -17,7 +17,7 @@
     </message>
     <message id="id-disconnected">
         <source>Not connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepřipojeno</translation>
     </message>
     <message id="id-brightness-percentage">
         <source>Brightness %1%</source>
@@ -45,7 +45,7 @@
     </message>
     <message id="id-sound-percentage">
         <source>Sound %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvuk %1%</translation>
     </message>
     <message id="id-time-select">
         <source>Select a time:</source>
@@ -69,11 +69,11 @@
     </message>
     <message id="id-12h-format">
         <source>Use 12H format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Použít 12 hodinový formát:</translation>
     </message>
     <message id="id-fahrenheit">
         <source>Use Fahrenheit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Použít stupně Fahrenheita:</translation>
     </message>
     <message id="id-time-page">
         <source>Time</source>
@@ -97,11 +97,11 @@
     </message>
     <message id="id-sound-page">
         <source>Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvuk</translation>
     </message>
     <message id="id-units-page">
         <source>Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Jednotky</translation>
     </message>
     <message id="id-wallpaper-page">
         <source>Wallpaper</source>

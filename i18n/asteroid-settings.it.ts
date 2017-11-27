@@ -23,14 +23,6 @@
         <source>Brightness %1%</source>
         <translation>Luminosità %1%</translation>
     </message>
-    <message id="id-date-select">
-        <source>Select a date:</source>
-        <translation>Seleziona una data:</translation>
-    </message>
-    <message id="id-language-select">
-        <source>Select a language:</source>
-        <translation>Seleziona una lingua:</translation>
-    </message>
     <message id="id-rebooting">
         <source>Rebooting...</source>
         <translation>Sto riavviando...</translation>
@@ -44,16 +36,8 @@
         <translation>Riavvia AsteroidOS</translation>
     </message>
     <message id="id-sound-percentage">
-        <source>Sound %1%</source>
+        <source>Volume %1%</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message id="id-time-select">
-        <source>Select a time:</source>
-        <translation>Seleziona ora:</translation>
-    </message>
-    <message id="id-usb-mode-select">
-        <source>Select a USB mode:</source>
-        <translation>Seleziona una modalità USB:</translation>
     </message>
     <message id="id-adb-mode">
         <source>Adb Mode</source>

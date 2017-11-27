@@ -28,18 +28,8 @@
         <source>Brightness %1%</source>
         <translation>밝기 %1%</translation>
     </message>
-    <message id="id-date-select">
-        <location filename="../DatePage.qml" line="32"/>
-        <source>Select a date:</source>
-        <translation>날짜 설정:</translation>
-    </message>
-    <message id="id-language-select">
-        <location filename="../LanguagePage.qml" line="32"/>
-        <source>Select a language:</source>
-        <translation>언어 선택:</translation>
-    </message>
     <message id="id-rebooting">
-        <location filename="../LanguagePage.qml" line="78"/>
+        <location filename="../LanguagePage.qml" line="70"/>
         <source>Rebooting...</source>
         <translation>재시동중...</translation>
     </message>
@@ -55,55 +45,48 @@
     </message>
     <message id="id-sound-percentage">
         <location filename="../SoundPage.qml" line="36"/>
-        <source>Sound %1%</source>
-        <translation></translation>
-    </message>
-    <message id="id-time-select">
-        <location filename="../TimePage.qml" line="46"/>
-        <source>Select a time:</source>
-        <translation>시간 설정:</translation>
-    </message>
-    <message id="id-usb-mode-select">
-        <location filename="../USBPage.qml" line="30"/>
-        <source>Select a USB mode:</source>
-        <translation>USB 모드 선택:</translation>
+        <source>Volume %1%</source>
+        <translation type="unfinished"></translation>
     </message>
     <message id="id-adb-mode">
-        <location filename="../USBPage.qml" line="43"/>
+        <location filename="../USBPage.qml" line="35"/>
         <source>Adb Mode</source>
         <translation>Adb 모드</translation>
     </message>
     <message id="id-developer-mode">
-        <location filename="../USBPage.qml" line="45"/>
+        <location filename="../USBPage.qml" line="37"/>
         <source>Developer Mode</source>
         <translation>개발자 모드</translation>
     </message>
     <message id="id-mtp-mode">
-        <location filename="../USBPage.qml" line="47"/>
+        <location filename="../USBPage.qml" line="39"/>
         <source>MTP Mode</source>
         <translation>MTP 모드</translation>
     </message>
     <message id="id-12h-format">
-        <location filename="../UnitsPage.qml" line="43"/>
+        <location filename="../UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
         <translation></translation>
     </message>
     <message id="id-fahrenheit">
-        <location filename="../UnitsPage.qml" line="58"/>
+        <location filename="../UnitsPage.qml" line="63"/>
         <source>Use Fahrenheit:</source>
         <translation></translation>
     </message>
     <message id="id-time-page">
+        <location filename="../TimePage.qml" line="45"/>
         <location filename="../main.qml" line="69"/>
         <source>Time</source>
         <translation>시간</translation>
     </message>
     <message id="id-date-page">
+        <location filename="../DatePage.qml" line="31"/>
         <location filename="../main.qml" line="75"/>
         <source>Date</source>
         <translation>날짜</translation>
     </message>
     <message id="id-language-page">
+        <location filename="../LanguagePage.qml" line="31"/>
         <location filename="../main.qml" line="81"/>
         <source>Language</source>
         <translation>언어</translation>
@@ -124,6 +107,7 @@
         <translation></translation>
     </message>
     <message id="id-units-page">
+        <location filename="../UnitsPage.qml" line="26"/>
         <location filename="../main.qml" line="107"/>
         <source>Units</source>
         <translation></translation>
@@ -139,6 +123,7 @@
         <translation>시계화면</translation>
     </message>
     <message id="id-usb-page">
+        <location filename="../USBPage.qml" line="29"/>
         <location filename="../main.qml" line="125"/>
         <source>USB</source>
         <translation>USB</translation>

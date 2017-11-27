@@ -23,14 +23,6 @@
         <source>Brightness %1%</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="id-date-select">
-        <source>Select a date:</source>
-        <translation>Επιλέξτε μία ημερομηνία:</translation>
-    </message>
-    <message id="id-language-select">
-        <source>Select a language:</source>
-        <translation>Επιλέξτε μία γλώσσα:</translation>
-    </message>
     <message id="id-rebooting">
         <source>Rebooting...</source>
         <translation type="unfinished"></translation>
@@ -44,15 +36,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message id="id-sound-percentage">
-        <source>Sound %1%</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="id-time-select">
-        <source>Select a time:</source>
-        <translation>Επιλέξτε χρόνο:</translation>
-    </message>
-    <message id="id-usb-mode-select">
-        <source>Select a USB mode:</source>
+        <source>Volume %1%</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-adb-mode">

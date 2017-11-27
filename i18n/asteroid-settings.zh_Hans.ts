@@ -23,14 +23,6 @@
         <source>Brightness %1%</source>
         <translation>亮度 %1%</translation>
     </message>
-    <message id="id-date-select">
-        <source>Select a date:</source>
-        <translation>选择日期：</translation>
-    </message>
-    <message id="id-language-select">
-        <source>Select a language:</source>
-        <translation>选择语言：</translation>
-    </message>
     <message id="id-rebooting">
         <source>Rebooting...</source>
         <translation>正在重启...</translation>
@@ -44,16 +36,8 @@
         <translation>重启 AsteroidOS</translation>
     </message>
     <message id="id-sound-percentage">
-        <source>Sound %1%</source>
+        <source>Volume %1%</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message id="id-time-select">
-        <source>Select a time:</source>
-        <translation>选择时间：</translation>
-    </message>
-    <message id="id-usb-mode-select">
-        <source>Select a USB mode:</source>
-        <translation>选择 USB 模式:</translation>
     </message>
     <message id="id-adb-mode">
         <source>Adb Mode</source>

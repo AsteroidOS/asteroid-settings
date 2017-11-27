@@ -46,7 +46,7 @@
     <message id="id-sound-percentage">
         <location filename="../SoundPage.qml" line="36"/>
         <source>Volume %1%</source>
-        <translation>Lyd %1%</translation>
+        <translation>Lydstyrke %1%</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="35"/>

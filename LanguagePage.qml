@@ -26,17 +26,9 @@ Item {
 
     LanguageModel { id: langSettings }
 
-    Label {
+    PageHeader {
         id: title
-        //% "Select a language:"
-        text: qsTrId("id-language-select")
-        height: Dims.h(20)
-        font.pixelSize: Dims.l(6)
-        anchors.top: parent.top
-        anchors.left: parent.left
-        anchors.right: parent.right
-        verticalAlignment: Text.AlignVCenter
-        horizontalAlignment: Text.AlignHCenter
+        text: qsTrId("id-language-page")
     }
 
     Spinner {

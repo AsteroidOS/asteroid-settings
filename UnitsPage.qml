@@ -21,6 +21,11 @@ import org.nemomobile.configuration 1.0
 import org.asteroid.controls 1.0
 
 Item {
+    PageHeader {
+        id: title
+        text: qsTrId("id-units-page")
+    }
+
     ConfigurationValue {
         id: use12H
         key: "/org/asteroidos/settings/use-12h-format"

@@ -24,17 +24,9 @@ Item {
     id: root
     property var pop
 
-    Label {
+    PageHeader {
         id: title
-        //% "Select a USB mode:"
-        text: qsTrId("id-usb-mode-select")
-        height: parent.height*0.2
-        font.pixelSize: Dims.l(6)
-        anchors.top: parent.top
-        anchors.left: parent.left
-        anchors.right: parent.right
-        verticalAlignment: Text.AlignVCenter
-        horizontalAlignment: Text.AlignHCenter
+        text: qsTrId("id-usb-page")
     }
 
     ListModel {

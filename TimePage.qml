@@ -26,11 +26,6 @@ Item {
     id: root
     property var pop
 
-    function zeroPadding(x) {
-        if (x<10) return "0"+x;
-        else      return x;
-    }
-
     DateTimeSettings { id: dtSettings }
     WallClock { id: wallClock}
 

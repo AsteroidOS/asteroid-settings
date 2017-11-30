@@ -42,7 +42,11 @@ Item {
         delegate: SpinnerDelegate { text: langSettings.languageName(index) }
     }
 
-    Component.onCompleted: langLV.currentIndex = langSettings.currentIndex;
+    Component.onCompleted: {
+        var i = langSettings.currentIndex;
+        if(i != -1)
+            langLV.currentIndex = i
+    }
 
     IconButton {
         iconName: "ios-checkmark-circle-outline"

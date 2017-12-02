@@ -77,7 +77,7 @@
         <location filename="../TimePage.qml" line="45"/>
         <location filename="../main.qml" line="69"/>
         <source>Time</source>
-        <translation>Tid</translation>
+        <translation>TId</translation>
     </message>
     <message id="id-date-page">
         <location filename="../DatePage.qml" line="31"/>

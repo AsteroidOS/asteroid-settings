@@ -5,39 +5,39 @@
     <name></name>
     <message id="id-bluetooth-on">
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth ενεργό</translation>
     </message>
     <message id="id-bluetooth-off">
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth κλειστό</translation>
     </message>
     <message id="id-connected">
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Συνδέθηκε</translation>
     </message>
     <message id="id-disconnected">
         <source>Not connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Δε συνδέθηκε</translation>
     </message>
     <message id="id-brightness-percentage">
         <source>Brightness %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Φωτεινότητα %1%</translation>
     </message>
     <message id="id-rebooting">
         <source>Rebooting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Επανεκκίνηση...</translation>
     </message>
     <message id="id-poweroff-warn">
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Απενεργοποίηση του AsteroidOS</translation>
     </message>
     <message id="id-reboot-warn">
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Επανεκκίνηση του AsteroidOS</translation>
     </message>
     <message id="id-sound-percentage">
         <source>Volume %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Ένταση ήχου %1%</translation>
     </message>
     <message id="id-adb-mode">
         <source>Adb Mode</source>
@@ -53,11 +53,11 @@
     </message>
     <message id="id-12h-format">
         <source>Use 12H format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρήση 12ωρης ώρας:</translation>
     </message>
     <message id="id-fahrenheit">
         <source>Use Fahrenheit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρήση κλίμακας Fahrenheit:</translation>
     </message>
     <message id="id-time-page">
         <source>Time</source>
@@ -81,11 +81,11 @@
     </message>
     <message id="id-sound-page">
         <source>Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>Ήχος</translation>
     </message>
     <message id="id-units-page">
         <source>Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Μονάδες</translation>
     </message>
     <message id="id-wallpaper-page">
         <source>Wallpaper</source>
@@ -105,7 +105,7 @@
     </message>
     <message id="id-reboot-page">
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Επανεκκίνηση</translation>
     </message>
     <message id="id-about-page">
         <source>About</source>
@@ -113,7 +113,7 @@
     </message>
     <message id="id-app-launcher-name">
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ρυθμίσεις</translation>
     </message>
 </context>
 </TS>

@@ -55,7 +55,7 @@ Item {
             if(langLV.currentIndex == langSettings.currentIndex)
                 root.pop();
             else
-                langSettings.setSystemLocale(langSettings.locale(langLV.currentIndex), LanguageModel.UpdateAndReboot)
+                langSettings.setSystemLocale(langSettings.locale(langLV.currentIndex), LanguageModel.UpdateWithoutReboot)
         }
     }
 }

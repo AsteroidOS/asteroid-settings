@@ -17,7 +17,7 @@
     </message>
     <message id="id-disconnected">
         <source>Not connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Disconnesso</translation>
     </message>
     <message id="id-brightness-percentage">
         <source>Brightness %1%</source>
@@ -37,7 +37,7 @@
     </message>
     <message id="id-sound-percentage">
         <source>Volume %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Volume %1%</translation>
     </message>
     <message id="id-adb-mode">
         <source>Adb Mode</source>
@@ -57,7 +57,7 @@
     </message>
     <message id="id-fahrenheit">
         <source>Use Fahrenheit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa Fahrenheit:</translation>
     </message>
     <message id="id-time-page">
         <source>Time</source>
@@ -81,11 +81,11 @@
     </message>
     <message id="id-sound-page">
         <source>Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>Audio</translation>
     </message>
     <message id="id-units-page">
         <source>Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Unità</translation>
     </message>
     <message id="id-wallpaper-page">
         <source>Wallpaper</source>

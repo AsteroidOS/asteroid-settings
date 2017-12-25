@@ -31,17 +31,17 @@
     <message id="id-rebooting">
         <location filename="../LanguagePage.qml" line="70"/>
         <source>Rebooting...</source>
-        <translation>Neu starten...</translation>
+        <translation>Neu starten …</translation>
     </message>
     <message id="id-poweroff-warn">
         <location filename="../PoweroffPage.qml" line="29"/>
         <source>Power off AsteroidOS</source>
-        <translation>Schalte AsteroidOS aus</translation>
+        <translation>AsteroidOS ausschalten</translation>
     </message>
     <message id="id-reboot-warn">
         <location filename="../RebootPage.qml" line="29"/>
         <source>Reboot AsteroidOS</source>
-        <translation>Starte AsteroidOS neu</translation>
+        <translation>AsteroidOS neu starten</translation>
     </message>
     <message id="id-sound-percentage">
         <location filename="../SoundPage.qml" line="36"/>
@@ -51,7 +51,7 @@
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="35"/>
         <source>Adb Mode</source>
-        <translation>ADB Modus</translation>
+        <translation>ADB-Modus</translation>
     </message>
     <message id="id-developer-mode">
         <location filename="../USBPage.qml" line="37"/>
@@ -61,7 +61,7 @@
     <message id="id-mtp-mode">
         <location filename="../USBPage.qml" line="39"/>
         <source>MTP Mode</source>
-        <translation>MTP Modus</translation>
+        <translation>MTP-Modus</translation>
     </message>
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="48"/>

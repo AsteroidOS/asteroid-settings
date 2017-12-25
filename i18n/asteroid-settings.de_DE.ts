@@ -21,7 +21,7 @@
     <message id="id-disconnected">
         <location filename="../BluetoothPage.qml" line="34"/>
         <source>Not connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Nicht verbunden</translation>
     </message>
     <message id="id-brightness-percentage">
         <location filename="../BrightnessPage.qml" line="36"/>
@@ -46,7 +46,7 @@
     <message id="id-sound-percentage">
         <location filename="../SoundPage.qml" line="36"/>
         <source>Volume %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Lautstärke %1%</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="35"/>
@@ -66,12 +66,12 @@
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation type="unfinished"></translation>
+        <translation>12-Std.-Format verwenden:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../UnitsPage.qml" line="63"/>
         <source>Use Fahrenheit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fahrenheit verwenden:</translation>
     </message>
     <message id="id-time-page">
         <location filename="../TimePage.qml" line="45"/>
@@ -104,13 +104,13 @@
     <message id="id-sound-page">
         <location filename="../main.qml" line="99"/>
         <source>Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>Klang</translation>
     </message>
     <message id="id-units-page">
         <location filename="../UnitsPage.qml" line="26"/>
         <location filename="../main.qml" line="107"/>
         <source>Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Einheiten</translation>
     </message>
     <message id="id-wallpaper-page">
         <location filename="../main.qml" line="113"/>

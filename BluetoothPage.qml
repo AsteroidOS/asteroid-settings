@@ -36,6 +36,7 @@ Item {
         icon: btStatus.powered ? "ios-bluetooth-outline" : "ios-bluetooth-off-outline"
         clickable: true
         onClicked: btStatus.powered = !btStatus.powered
+        activeBackground: btStatus.powered
     }
 }
 

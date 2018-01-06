@@ -71,7 +71,7 @@
     <message id="id-fahrenheit">
         <location filename="../UnitsPage.qml" line="63"/>
         <source>Use Fahrenheit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Använd Fahrenheit:</translation>
     </message>
     <message id="id-time-page">
         <location filename="../TimePage.qml" line="45"/>
@@ -104,13 +104,13 @@
     <message id="id-sound-page">
         <location filename="../main.qml" line="99"/>
         <source>Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>Ljud</translation>
     </message>
     <message id="id-units-page">
         <location filename="../UnitsPage.qml" line="26"/>
         <location filename="../main.qml" line="107"/>
         <source>Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Enheter</translation>
     </message>
     <message id="id-wallpaper-page">
         <location filename="../main.qml" line="113"/>

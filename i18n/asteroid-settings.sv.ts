@@ -46,7 +46,7 @@
     <message id="id-sound-percentage">
         <location filename="../SoundPage.qml" line="36"/>
         <source>Volume %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Volym %1%</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="35"/>
@@ -66,7 +66,7 @@
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Använd 12h-format:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../UnitsPage.qml" line="63"/>

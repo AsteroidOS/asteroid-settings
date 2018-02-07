@@ -5,11 +5,11 @@
     <name></name>
     <message id="id-bluetooth-on">
         <source>Bluetooth on</source>
-        <translation>Attiva Bluetooth</translation>
+        <translation>Bluetooth attivato</translation>
     </message>
     <message id="id-bluetooth-off">
         <source>Bluetooth off</source>
-        <translation>Disattiva Bluetooth</translation>
+        <translation>Bluetooth disattivato</translation>
     </message>
     <message id="id-connected">
         <source>Connected</source>

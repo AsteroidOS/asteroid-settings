@@ -53,7 +53,7 @@
     </message>
     <message id="id-12h-format">
         <source>Use 12H format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa il formato 12H:</translation>
     </message>
     <message id="id-fahrenheit">
         <source>Use Fahrenheit:</source>

@@ -42,12 +42,12 @@
         <location filename="../SoundPage.qml" line="36"/>
         <source>Volume %1%</source>
         <oldsource>Sound %1%</oldsource>
-        <translation type="unfinished">צליל %1%</translation>
+        <translation>עצמת שמע %1%</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../USBPage.qml" line="35"/>
         <source>Charging only</source>
-        <translation type="unfinished"></translation>
+        <translation>טעינה בלבד</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="37"/>

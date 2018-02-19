@@ -23,10 +23,6 @@
         <source>Brightness %1%</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="id-rebooting">
-        <source>Rebooting...</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message id="id-poweroff-warn">
         <source>Power off AsteroidOS</source>
         <translation type="unfinished"></translation>
@@ -113,6 +109,10 @@
     </message>
     <message id="id-app-launcher-name">
         <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-charging-only">
+        <source>Charging only</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

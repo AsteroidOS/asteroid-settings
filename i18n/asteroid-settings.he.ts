@@ -28,21 +28,6 @@
         <source>Brightness %1%</source>
         <translation>בהירות %1%</translation>
     </message>
-    <message id="id-date-select">
-        <location filename="../DatePage.qml" line="32"/>
-        <source>Select a date:</source>
-        <translation>בחירת תאריך:</translation>
-    </message>
-    <message id="id-language-select">
-        <location filename="../LanguagePage.qml" line="32"/>
-        <source>Select a language:</source>
-        <translation>בחירת שפה:</translation>
-    </message>
-    <message id="id-rebooting">
-        <location filename="../LanguagePage.qml" line="78"/>
-        <source>Rebooting...</source>
-        <translation>הפעלה מחדש...</translation>
-    </message>
     <message id="id-poweroff-warn">
         <location filename="../PoweroffPage.qml" line="29"/>
         <source>Power off AsteroidOS</source>
@@ -55,55 +40,54 @@
     </message>
     <message id="id-sound-percentage">
         <location filename="../SoundPage.qml" line="36"/>
-        <source>Sound %1%</source>
-        <translation>צליל %1%</translation>
+        <source>Volume %1%</source>
+        <oldsource>Sound %1%</oldsource>
+        <translation type="unfinished">צליל %1%</translation>
     </message>
-    <message id="id-time-select">
-        <location filename="../TimePage.qml" line="46"/>
-        <source>Select a time:</source>
-        <translation>בחירת שעה:</translation>
-    </message>
-    <message id="id-usb-mode-select">
-        <location filename="../USBPage.qml" line="30"/>
-        <source>Select a USB mode:</source>
-        <translation>בחירת מצב USB:</translation>
+    <message id="id-charging-only">
+        <location filename="../USBPage.qml" line="35"/>
+        <source>Charging only</source>
+        <translation type="unfinished"></translation>
     </message>
     <message id="id-adb-mode">
-        <location filename="../USBPage.qml" line="43"/>
+        <location filename="../USBPage.qml" line="37"/>
         <source>Adb Mode</source>
         <translation>מצב Adb</translation>
     </message>
     <message id="id-developer-mode">
-        <location filename="../USBPage.qml" line="45"/>
+        <location filename="../USBPage.qml" line="39"/>
         <source>Developer Mode</source>
         <translation>מצב פיתוח</translation>
     </message>
     <message id="id-mtp-mode">
-        <location filename="../USBPage.qml" line="47"/>
+        <location filename="../USBPage.qml" line="41"/>
         <source>MTP Mode</source>
         <translation>מצב התקן אחסון</translation>
     </message>
     <message id="id-12h-format">
-        <location filename="../UnitsPage.qml" line="43"/>
+        <location filename="../UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
         <translation>תבנית 12 שעות:</translation>
     </message>
     <message id="id-fahrenheit">
-        <location filename="../UnitsPage.qml" line="58"/>
+        <location filename="../UnitsPage.qml" line="63"/>
         <source>Use Fahrenheit:</source>
         <translation>שימוש בפרנהייט:</translation>
     </message>
     <message id="id-time-page">
+        <location filename="../TimePage.qml" line="40"/>
         <location filename="../main.qml" line="69"/>
         <source>Time</source>
         <translation>שעה</translation>
     </message>
     <message id="id-date-page">
+        <location filename="../DatePage.qml" line="31"/>
         <location filename="../main.qml" line="75"/>
         <source>Date</source>
         <translation>תאריך</translation>
     </message>
     <message id="id-language-page">
+        <location filename="../LanguagePage.qml" line="31"/>
         <location filename="../main.qml" line="81"/>
         <source>Language</source>
         <translation>שפה</translation>
@@ -124,6 +108,7 @@
         <translation>צליל</translation>
     </message>
     <message id="id-units-page">
+        <location filename="../UnitsPage.qml" line="26"/>
         <location filename="../main.qml" line="107"/>
         <source>Units</source>
         <translation>יחידות</translation>
@@ -139,6 +124,7 @@
         <translation>פני השעון</translation>
     </message>
     <message id="id-usb-page">
+        <location filename="../USBPage.qml" line="29"/>
         <location filename="../main.qml" line="125"/>
         <source>USB</source>
         <translation></translation>

@@ -28,11 +28,6 @@
         <source>Brightness %1%</source>
         <translation>ప్రకాశవంతత %1%</translation>
     </message>
-    <message id="id-rebooting">
-        <location filename="../LanguagePage.qml" line="70"/>
-        <source>Rebooting...</source>
-        <translation>రీబూట్ చేస్తున్నాం...</translation>
-    </message>
     <message id="id-poweroff-warn">
         <location filename="../PoweroffPage.qml" line="29"/>
         <source>Power off AsteroidOS</source>
@@ -48,18 +43,23 @@
         <source>Volume %1%</source>
         <translation>శబ్దం %1%</translation>
     </message>
-    <message id="id-adb-mode">
+    <message id="id-charging-only">
         <location filename="../USBPage.qml" line="35"/>
+        <source>Charging only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-adb-mode">
+        <location filename="../USBPage.qml" line="37"/>
         <source>Adb Mode</source>
         <translation>ఎడిబి మోడ్</translation>
     </message>
     <message id="id-developer-mode">
-        <location filename="../USBPage.qml" line="37"/>
+        <location filename="../USBPage.qml" line="39"/>
         <source>Developer Mode</source>
         <translation>డెవలపర్ మోడ్</translation>
     </message>
     <message id="id-mtp-mode">
-        <location filename="../USBPage.qml" line="39"/>
+        <location filename="../USBPage.qml" line="41"/>
         <source>MTP Mode</source>
         <translation>ఎంటిపి మోడ్</translation>
     </message>
@@ -74,7 +74,7 @@
         <translation>ఫరెన్హెఇట్ ను వాడు:</translation>
     </message>
     <message id="id-time-page">
-        <location filename="../TimePage.qml" line="45"/>
+        <location filename="../TimePage.qml" line="40"/>
         <location filename="../main.qml" line="69"/>
         <source>Time</source>
         <translation>సమయం</translation>

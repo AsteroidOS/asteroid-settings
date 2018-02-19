@@ -23,10 +23,6 @@
         <source>Brightness %1%</source>
         <translation>%%1 Parlaklık</translation>
     </message>
-    <message id="id-rebooting">
-        <source>Rebooting...</source>
-        <translation>Yeniden başlatılıyor...</translation>
-    </message>
     <message id="id-poweroff-warn">
         <source>Power off AsteroidOS</source>
         <translation>AsteroidOS&apos;i kapat</translation>
@@ -114,6 +110,10 @@
     <message id="id-app-launcher-name">
         <source>Settings</source>
         <translation>Ayarlar</translation>
+    </message>
+    <message id="id-charging-only">
+        <source>Charging only</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

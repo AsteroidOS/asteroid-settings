@@ -6,27 +6,27 @@
     <message id="id-bluetooth-on">
         <location filename="../BluetoothPage.qml" line="28"/>
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>روشن کردن بلوتوث</translation>
     </message>
     <message id="id-bluetooth-off">
         <location filename="../BluetoothPage.qml" line="30"/>
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>خاموش کردن بلوتوث</translation>
     </message>
     <message id="id-connected">
         <location filename="../BluetoothPage.qml" line="32"/>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>متصل شد</translation>
     </message>
     <message id="id-disconnected">
         <location filename="../BluetoothPage.qml" line="34"/>
         <source>Not connected</source>
-        <translation type="unfinished"></translation>
+        <translation>متصل نشد</translation>
     </message>
     <message id="id-brightness-percentage">
         <location filename="../BrightnessPage.qml" line="36"/>
         <source>Brightness %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>روشنایی %1%</translation>
     </message>
     <message id="id-poweroff-warn">
         <location filename="../PoweroffPage.qml" line="29"/>

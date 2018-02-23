@@ -113,7 +113,7 @@
     </message>
     <message id="id-charging-only">
         <source>Charging only</source>
-        <translation type="unfinished"></translation>
+        <translation>Yalnızca şarj edim</translation>
     </message>
 </context>
 </TS>

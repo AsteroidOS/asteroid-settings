@@ -17,7 +17,7 @@
     </message>
     <message id="id-disconnected">
         <source>Not connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Nincs csatlakoztatva</translation>
     </message>
     <message id="id-brightness-percentage">
         <source>Brightness %1%</source>

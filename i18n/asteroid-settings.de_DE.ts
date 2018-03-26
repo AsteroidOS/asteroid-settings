@@ -71,7 +71,7 @@
     <message id="id-fahrenheit">
         <location filename="../UnitsPage.qml" line="63"/>
         <source>Use Fahrenheit:</source>
-        <translation>Fahrenheit verwenden:</translation>
+        <translation>Fahrenheit:</translation>
     </message>
     <message id="id-time-page">
         <location filename="../TimePage.qml" line="40"/>

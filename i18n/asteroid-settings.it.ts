@@ -36,8 +36,8 @@
         <translation>Volume %1%</translation>
     </message>
     <message id="id-adb-mode">
-        <source>Adb Mode</source>
-        <translation>Modalità Adb</translation>
+        <source>ADB Mode</source>
+        <translation>Modalità ADB</translation>
     </message>
     <message id="id-developer-mode">
         <source>Developer Mode</source>

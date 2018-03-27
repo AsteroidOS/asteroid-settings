@@ -36,8 +36,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message id="id-adb-mode">
-        <source>Adb Mode</source>
-        <translation>Mód Adb</translation>
+        <source>ADB Mode</source>
+        <translation>Mód ADB</translation>
     </message>
     <message id="id-developer-mode">
         <source>Developer Mode</source>

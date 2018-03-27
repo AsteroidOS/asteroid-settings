@@ -36,8 +36,8 @@
         <translation>Zvuk %1%</translation>
     </message>
     <message id="id-adb-mode">
-        <source>Adb Mode</source>
-        <translation>Režim Adb</translation>
+        <source>ADB Mode</source>
+        <translation>Režim ADB</translation>
     </message>
     <message id="id-developer-mode">
         <source>Developer Mode</source>

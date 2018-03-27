@@ -33,7 +33,7 @@ Item {
         id: usbModesModel
         //% "Charging only"
         ListElement { title: qsTrId("id-charging-only"); mode: "charging_only" }
-        //% "Adb Mode"
+        //% "ADB Mode"
         ListElement { title: qsTrId("id-adb-mode"); mode: "adb_mode" }
         //% "Developer Mode"
         ListElement { title: qsTrId("id-developer-mode"); mode: "developer_mode" }

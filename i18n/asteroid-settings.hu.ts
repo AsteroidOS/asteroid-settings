@@ -36,7 +36,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message id="id-adb-mode">
-        <source>Adb Mode</source>
+        <source>ADB Mode</source>
         <translation>ADB használata</translation>
     </message>
     <message id="id-developer-mode">

@@ -36,8 +36,8 @@
         <translation>Ses %%1</translation>
     </message>
     <message id="id-adb-mode">
-        <source>Adb Mode</source>
-        <translation>Adb Kipi</translation>
+        <source>ADB Mode</source>
+        <translation>ADB Kipi</translation>
     </message>
     <message id="id-developer-mode">
         <source>Developer Mode</source>

@@ -36,8 +36,8 @@
         <translation>Ένταση ήχου %1%</translation>
     </message>
     <message id="id-adb-mode">
-        <source>Adb Mode</source>
-        <translation>Τρόπος Λειτουργίας Adb</translation>
+        <source>ADB Mode</source>
+        <translation>Τρόπος Λειτουργίας ADB</translation>
     </message>
     <message id="id-developer-mode">
         <source>Developer Mode</source>

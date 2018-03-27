@@ -50,7 +50,7 @@
     </message>
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="37"/>
-        <source>Adb Mode</source>
+        <source>ADB Mode</source>
         <translation>ఎడిబి మోడ్</translation>
     </message>
     <message id="id-developer-mode">

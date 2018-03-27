@@ -36,8 +36,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message id="id-adb-mode">
-        <source>Adb Mode</source>
-        <translation>شێوازی Adb</translation>
+        <source>ADB Mode</source>
+        <translation>شێوازی ADB</translation>
     </message>
     <message id="id-developer-mode">
         <source>Developer Mode</source>

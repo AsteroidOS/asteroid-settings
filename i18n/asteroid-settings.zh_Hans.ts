@@ -36,7 +36,7 @@
         <translation>音量 %1%</translation>
     </message>
     <message id="id-adb-mode">
-        <source>Adb Mode</source>
+        <source>ADB Mode</source>
         <translation>ADB 模式</translation>
     </message>
     <message id="id-developer-mode">

@@ -44,6 +44,16 @@ Item {
             id: folderModel
             folder: "file:///usr/share/asteroid-launcher/watchfaces"
             nameFilters: ["*.qml"]
+            onCountChanged: {
+                var i = 0
+                while (i < folderModel.count){
+                    var fileName = folderModel.get(i, "fileName")
+                    if(watchfaceSource.value == folderModel.folder + "/" + fileName)
+                        grid.positionViewAtIndex(i, GridView.Center)
+
+                    i = i+1
+                }
+            }
         }
 
         WallClock {

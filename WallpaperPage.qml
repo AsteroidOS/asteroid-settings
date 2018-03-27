@@ -43,6 +43,18 @@ Item {
             id: folderModel
             folder: "file:///usr/share/asteroid-launcher/wallpapers"
             nameFilters: ["*.jpg"]
+            onCountChanged: {
+                var i = 0
+                while (i < folderModel.count){
+                    var fileName = folderModel.get(i, "fileName")
+                    var fileBaseName = folderModel.get(i, "fileBaseName")
+                    if(wallpaperSource.value == folderModel.folder + "/" + fileName |
+                       wallpaperSource.value == folderModel.folder + "/" + fileBaseName + ".qml") {
+                        grid.positionViewAtIndex(i, GridView.Center)
+                    }
+                    i = i+1
+                }
+            }
         }
 
         delegate: Component {

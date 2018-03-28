@@ -62,6 +62,11 @@ Item {
             updateFrequency: WallClock.Minute
         }
 
+        QtObject {
+            id: localeManager
+            property string changesObserver: ""
+        }
+
         delegate: Component {
             id: fileDelegate
             Item {

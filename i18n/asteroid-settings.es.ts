@@ -56,7 +56,7 @@
     <message id="id-developer-mode">
         <location filename="../USBPage.qml" line="39"/>
         <source>Developer Mode</source>
-        <translation>Modo desarrollador</translation>
+        <translation>Modo de desarrollador</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../USBPage.qml" line="41"/>
@@ -146,7 +146,7 @@
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation>Ajustes</translation>
+        <translation>Configuración</translation>
     </message>
 </context>
 </TS>

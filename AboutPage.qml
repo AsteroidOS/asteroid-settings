@@ -36,7 +36,7 @@ Item {
     }
     Label {
         id: releaseLabel
-        text: "Alpha 1.0"
+        text: "1.0"
         opacity: 0.8
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom

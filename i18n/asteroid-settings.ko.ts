@@ -41,12 +41,12 @@
     <message id="id-sound-percentage">
         <location filename="../SoundPage.qml" line="36"/>
         <source>Volume %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>음량 %1%</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../USBPage.qml" line="35"/>
         <source>Charging only</source>
-        <translation type="unfinished"></translation>
+        <translation>충전 전용</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="37"/>

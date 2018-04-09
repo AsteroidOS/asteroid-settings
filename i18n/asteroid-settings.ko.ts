@@ -21,7 +21,7 @@
     <message id="id-disconnected">
         <location filename="../BluetoothPage.qml" line="34"/>
         <source>Not connected</source>
-        <translation></translation>
+        <translation>연결되지 않음</translation>
     </message>
     <message id="id-brightness-percentage">
         <location filename="../BrightnessPage.qml" line="36"/>
@@ -66,12 +66,12 @@
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation></translation>
+        <translation>12시간제를 사용:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../UnitsPage.qml" line="63"/>
         <source>Use Fahrenheit:</source>
-        <translation></translation>
+        <translation>화씨를 사용:</translation>
     </message>
     <message id="id-time-page">
         <location filename="../TimePage.qml" line="40"/>
@@ -104,13 +104,13 @@
     <message id="id-sound-page">
         <location filename="../main.qml" line="99"/>
         <source>Sound</source>
-        <translation></translation>
+        <translation>소리</translation>
     </message>
     <message id="id-units-page">
         <location filename="../UnitsPage.qml" line="26"/>
         <location filename="../main.qml" line="107"/>
         <source>Units</source>
-        <translation></translation>
+        <translation>단위</translation>
     </message>
     <message id="id-wallpaper-page">
         <location filename="../main.qml" line="113"/>

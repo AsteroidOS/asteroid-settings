@@ -33,7 +33,7 @@
     </message>
     <message id="id-sound-percentage">
         <source>Volume %1%</source>
-        <translation>Ses %%1</translation>
+        <translation>%%1 Ses</translation>
     </message>
     <message id="id-adb-mode">
         <source>ADB Mode</source>
@@ -89,7 +89,7 @@
     </message>
     <message id="id-watchface-page">
         <source>Watchface</source>
-        <translation>Saat yüzü</translation>
+        <translation>Saat Yüzü</translation>
     </message>
     <message id="id-usb-page">
         <source>USB</source>

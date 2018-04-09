@@ -6,7 +6,7 @@
     <message id="id-bluetooth-on">
         <location filename="../BluetoothPage.qml" line="28"/>
         <source>Bluetooth on</source>
-        <translation>Bluetooth on</translation>
+        <translation>Bluetooth til</translation>
     </message>
     <message id="id-bluetooth-off">
         <location filename="../BluetoothPage.qml" line="30"/>
@@ -51,17 +51,17 @@
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="37"/>
         <source>ADB Mode</source>
-        <translation>ADB-Tilstand</translation>
+        <translation>ADB-tilstand</translation>
     </message>
     <message id="id-developer-mode">
         <location filename="../USBPage.qml" line="39"/>
         <source>Developer Mode</source>
-        <translation>Udvikler Mode</translation>
+        <translation>Udviklertilstand</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../USBPage.qml" line="41"/>
         <source>MTP Mode</source>
-        <translation>MTP-Tilstand</translation>
+        <translation>MTP-tilstand</translation>
     </message>
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="48"/>
@@ -77,7 +77,7 @@
         <location filename="../TimePage.qml" line="40"/>
         <location filename="../main.qml" line="69"/>
         <source>Time</source>
-        <translation>Tid</translation>
+        <translation>Tidspunkt</translation>
     </message>
     <message id="id-date-page">
         <location filename="../DatePage.qml" line="31"/>
@@ -120,7 +120,7 @@
     <message id="id-watchface-page">
         <location filename="../main.qml" line="119"/>
         <source>Watchface</source>
-        <translation>Udseende</translation>
+        <translation>Udseende på ur</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../USBPage.qml" line="29"/>

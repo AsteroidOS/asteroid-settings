@@ -113,7 +113,7 @@
     </message>
     <message id="id-charging-only">
         <source>Charging only</source>
-        <translation type="unfinished"></translation>
+        <translation>仅充电</translation>
     </message>
 </context>
 </TS>

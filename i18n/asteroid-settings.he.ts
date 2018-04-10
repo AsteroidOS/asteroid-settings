@@ -95,7 +95,7 @@
     <message id="id-bluetooth-page">
         <location filename="../main.qml" line="87"/>
         <source>Bluetooth</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="id-brightness-page">
         <location filename="../main.qml" line="93"/>
@@ -127,7 +127,7 @@
         <location filename="../USBPage.qml" line="29"/>
         <location filename="../main.qml" line="125"/>
         <source>USB</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../main.qml" line="131"/>

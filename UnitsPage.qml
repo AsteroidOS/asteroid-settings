@@ -47,9 +47,9 @@ Item {
             //% "Use 12H format:"
             text: qsTrId("id-12h-format")
             font.pixelSize: Dims.l(6)
-            horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             wrapMode: Text.Wrap
+            Layout.maximumWidth: Dims.w(50)
         }
 
         Switch {
@@ -62,9 +62,9 @@ Item {
             //% "Use Fahrenheit:"
             text: qsTrId("id-fahrenheit")
             font.pixelSize: Dims.l(6)
-            horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             wrapMode: Text.Wrap
+            Layout.maximumWidth: Dims.w(50)
         }
 
         Switch {

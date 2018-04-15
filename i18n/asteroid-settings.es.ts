@@ -56,7 +56,7 @@
     <message id="id-developer-mode">
         <location filename="../USBPage.qml" line="39"/>
         <source>Developer Mode</source>
-        <translation>Modo de desarrollador</translation>
+        <translation>Modo desarrollador</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../USBPage.qml" line="41"/>
@@ -66,12 +66,12 @@
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation>Utilizar el formato 12H:</translation>
+        <translation>Formato 12H:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../UnitsPage.qml" line="63"/>
         <source>Use Fahrenheit:</source>
-        <translation>Usar Fahrenheit:</translation>
+        <translation>Formato Fahrenheit:</translation>
     </message>
     <message id="id-time-page">
         <location filename="../TimePage.qml" line="40"/>
@@ -89,7 +89,7 @@
         <location filename="../LanguagePage.qml" line="31"/>
         <location filename="../main.qml" line="81"/>
         <source>Language</source>
-        <translation>Idioma</translation>
+        <translation>Lenguaje</translation>
     </message>
     <message id="id-bluetooth-page">
         <location filename="../main.qml" line="87"/>

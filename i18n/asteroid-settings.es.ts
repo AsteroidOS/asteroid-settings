@@ -66,7 +66,7 @@
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation>Formato 12H:</translation>
+        <translation>Usar formato 12H:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../UnitsPage.qml" line="63"/>
@@ -89,7 +89,7 @@
         <location filename="../LanguagePage.qml" line="31"/>
         <location filename="../main.qml" line="81"/>
         <source>Language</source>
-        <translation>Lenguaje</translation>
+        <translation>Idioma</translation>
     </message>
     <message id="id-bluetooth-page">
         <location filename="../main.qml" line="87"/>

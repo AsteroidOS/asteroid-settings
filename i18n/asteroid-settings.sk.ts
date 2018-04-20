@@ -53,7 +53,7 @@
     </message>
     <message id="id-fahrenheit">
         <source>Use Fahrenheit:</source>
-        <translation>Používať stupne Fahrenheita</translation>
+        <translation>Používať stupne Fahrenheita:</translation>
     </message>
     <message id="id-time-page">
         <source>Time</source>
@@ -89,7 +89,7 @@
     </message>
     <message id="id-watchface-page">
         <source>Watchface</source>
-        <translation>Watchface</translation>
+        <translation>Ciferník</translation>
     </message>
     <message id="id-usb-page">
         <source>USB</source>

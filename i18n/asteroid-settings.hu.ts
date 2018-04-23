@@ -13,7 +13,7 @@
     </message>
     <message id="id-connected">
         <source>Connected</source>
-        <translation>Kapcsolódva</translation>
+        <translation>Csatlakozva</translation>
     </message>
     <message id="id-disconnected">
         <source>Not connected</source>

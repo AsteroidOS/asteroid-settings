@@ -45,11 +45,11 @@
     </message>
     <message id="id-mtp-mode">
         <source>MTP Mode</source>
-        <translation>Attiva MTP</translation>
+        <translation>Modalità MTP</translation>
     </message>
     <message id="id-12h-format">
         <source>Use 12H format:</source>
-        <translation>Usa il formato 12H:</translation>
+        <translation>Usa il formato 12 ore:</translation>
     </message>
     <message id="id-fahrenheit">
         <source>Use Fahrenheit:</source>
@@ -61,7 +61,7 @@
     </message>
     <message id="id-date-page">
         <source>Date</source>
-        <translation>Giorno</translation>
+        <translation>Data</translation>
     </message>
     <message id="id-language-page">
         <source>Language</source>

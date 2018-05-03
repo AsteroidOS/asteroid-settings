@@ -41,7 +41,7 @@
     <message id="id-sound-percentage">
         <location filename="../SoundPage.qml" line="36"/>
         <source>Volume %1%</source>
-        <translation type="unfinished">Sound %1%</translation>
+        <translation>Volume %1%</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../USBPage.qml" line="35"/>

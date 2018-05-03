@@ -113,7 +113,7 @@
     </message>
     <message id="id-charging-only">
         <source>Charging only</source>
-        <translation type="unfinished"></translation>
+        <translation>Solo carica</translation>
     </message>
 </context>
 </TS>

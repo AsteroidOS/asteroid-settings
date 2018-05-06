@@ -16,7 +16,7 @@
     <message id="id-connected">
         <location filename="../BluetoothPage.qml" line="32"/>
         <source>Connected</source>
-        <translation>Підключено</translation>
+        <translation>З&apos;єднано</translation>
     </message>
     <message id="id-disconnected">
         <location filename="../BluetoothPage.qml" line="34"/>

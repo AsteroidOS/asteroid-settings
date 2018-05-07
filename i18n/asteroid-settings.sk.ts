@@ -13,11 +13,11 @@
     </message>
     <message id="id-connected">
         <source>Connected</source>
-        <translation>Pripojený</translation>
+        <translation>Pripojené</translation>
     </message>
     <message id="id-disconnected">
         <source>Not connected</source>
-        <translation>Nepripojený</translation>
+        <translation>Nepripojené</translation>
     </message>
     <message id="id-brightness-percentage">
         <source>Brightness %1%</source>

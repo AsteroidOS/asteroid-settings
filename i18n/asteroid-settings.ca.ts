@@ -17,7 +17,7 @@
     </message>
     <message id="id-disconnected">
         <source>Not connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Sense connexió</translation>
     </message>
     <message id="id-brightness-percentage">
         <source>Brightness %1%</source>
@@ -33,7 +33,7 @@
     </message>
     <message id="id-sound-percentage">
         <source>Volume %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>Volum %1%</translation>
     </message>
     <message id="id-adb-mode">
         <source>ADB Mode</source>
@@ -49,11 +49,11 @@
     </message>
     <message id="id-12h-format">
         <source>Use 12H format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilitzar format de 12h:</translation>
     </message>
     <message id="id-fahrenheit">
         <source>Use Fahrenheit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilitzar Fahrenheit:</translation>
     </message>
     <message id="id-time-page">
         <source>Time</source>
@@ -77,11 +77,11 @@
     </message>
     <message id="id-sound-page">
         <source>Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>So</translation>
     </message>
     <message id="id-units-page">
         <source>Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Unitats</translation>
     </message>
     <message id="id-wallpaper-page">
         <source>Wallpaper</source>
@@ -113,7 +113,7 @@
     </message>
     <message id="id-charging-only">
         <source>Charging only</source>
-        <translation type="unfinished"></translation>
+        <translation>Només carregant-se</translation>
     </message>
 </context>
 </TS>

@@ -21,7 +21,7 @@
     <message id="id-disconnected">
         <location filename="../BluetoothPage.qml" line="34"/>
         <source>Not connected</source>
-        <translation>Nie’ verbonden</translation>
+        <translation>Niet verbonden</translation>
     </message>
     <message id="id-brightness-percentage">
         <location filename="../BrightnessPage.qml" line="36"/>

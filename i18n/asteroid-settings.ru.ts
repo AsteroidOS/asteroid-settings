@@ -11,7 +11,7 @@
     <message id="id-bluetooth-off">
         <location filename="../BluetoothPage.qml" line="30"/>
         <source>Bluetooth off</source>
-        <translation>Bluetooth Отключен</translation>
+        <translation>Bluetooth выключен</translation>
     </message>
     <message id="id-connected">
         <location filename="../BluetoothPage.qml" line="32"/>
@@ -51,7 +51,7 @@
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="37"/>
         <source>ADB Mode</source>
-        <translation>ADB режим</translation>
+        <translation>Режим ADB</translation>
     </message>
     <message id="id-developer-mode">
         <location filename="../USBPage.qml" line="39"/>

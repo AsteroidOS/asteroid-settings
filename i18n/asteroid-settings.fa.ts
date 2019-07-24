@@ -6,22 +6,22 @@
     <message id="id-bluetooth-on">
         <location filename="../BluetoothPage.qml" line="28"/>
         <source>Bluetooth on</source>
-        <translation>روشن کردن بلوتوث</translation>
+        <translation>بلوتوث روشن</translation>
     </message>
     <message id="id-bluetooth-off">
         <location filename="../BluetoothPage.qml" line="30"/>
         <source>Bluetooth off</source>
-        <translation>خاموش کردن بلوتوث</translation>
+        <translation>بلوتوث خاموش</translation>
     </message>
     <message id="id-connected">
         <location filename="../BluetoothPage.qml" line="32"/>
         <source>Connected</source>
-        <translation>متصل شد</translation>
+        <translation>وصل‌شده</translation>
     </message>
     <message id="id-disconnected">
         <location filename="../BluetoothPage.qml" line="34"/>
         <source>Not connected</source>
-        <translation>متصل نشد</translation>
+        <translation>وصل‌نشده</translation>
     </message>
     <message id="id-brightness-percentage">
         <location filename="../BrightnessPage.qml" line="36"/>
@@ -31,22 +31,22 @@
     <message id="id-poweroff-warn">
         <location filename="../PoweroffPage.qml" line="29"/>
         <source>Power off AsteroidOS</source>
-        <translation>خاموش کردن دستگاه</translation>
+        <translation>خاموش کردن استروید</translation>
     </message>
     <message id="id-reboot-warn">
         <location filename="../RebootPage.qml" line="29"/>
         <source>Reboot AsteroidOS</source>
-        <translation>راه‌اندازی مجدد دستگاه</translation>
+        <translation>راه‌اندازی دوبارهٔ استروید</translation>
     </message>
     <message id="id-sound-percentage">
         <location filename="../SoundPage.qml" line="36"/>
         <source>Volume %1%</source>
-        <translation>میزان صدا %1%</translation>
+        <translation>حجم صدا %1%</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../USBPage.qml" line="35"/>
         <source>Charging only</source>
-        <translation>فقط شارژ کردن</translation>
+        <translation>فقط شارژ شدن</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="37"/>
@@ -56,17 +56,17 @@
     <message id="id-developer-mode">
         <location filename="../USBPage.qml" line="39"/>
         <source>Developer Mode</source>
-        <translation>توسعه‌دهنده</translation>
+        <translation>حالت توسعه‌دهنده</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../USBPage.qml" line="41"/>
         <source>MTP Mode</source>
-        <translation>پروتکل انتقال رسانه</translation>
+        <translation>حالت انتقال رسانه</translation>
     </message>
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation>استفاده از فرمت 12ساعته:</translation>
+        <translation>استفاده از قالب ۱۲ساعته:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../UnitsPage.qml" line="63"/>
@@ -110,7 +110,7 @@
         <location filename="../UnitsPage.qml" line="26"/>
         <location filename="../main.qml" line="107"/>
         <source>Units</source>
-        <translation>واحد ها</translation>
+        <translation>واحدها</translation>
     </message>
     <message id="id-wallpaper-page">
         <location filename="../main.qml" line="113"/>
@@ -136,7 +136,7 @@
     <message id="id-reboot-page">
         <location filename="../main.qml" line="137"/>
         <source>Reboot</source>
-        <translation>راه‌اندازی مجدد</translation>
+        <translation>راه‌اندازی دوباره</translation>
     </message>
     <message id="id-about-page">
         <location filename="../main.qml" line="143"/>
@@ -146,7 +146,7 @@
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation>ﺖﻨﻇیﻡﺎﺗ</translation>
+        <translation>تنظیمات</translation>
     </message>
 </context>
 </TS>

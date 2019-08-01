@@ -17,8 +17,13 @@
 
 import QtQuick 2.9
 import org.asteroid.controls 1.0
+import org.nemomobile.systemsettings 1.0
 
 Item {
+    AboutSettings {
+        id: about
+    }
+
     Icon {
         name: "logo-asteroidos"
         anchors.horizontalCenter: parent.horizontalCenter
@@ -30,13 +35,14 @@ Item {
     }
     Label {
         id: osLabel
-        text: "<b>AsteroidOS</b>"
+        text: about.operatingSystemName
+        font.bold: true
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: releaseLabel.top
     }
     Label {
         id: releaseLabel
-        text: "1.0"
+        text: about.softwareVersion
         opacity: 0.8
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom

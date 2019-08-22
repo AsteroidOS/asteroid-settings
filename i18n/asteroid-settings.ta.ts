@@ -5,39 +5,39 @@
     <name></name>
     <message id="id-bluetooth-on">
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>ப்ளூடூத் இயக்கத்தில்</translation>
     </message>
     <message id="id-bluetooth-off">
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>ப்ளூடூத் முடக்கத்தில்</translation>
     </message>
     <message id="id-connected">
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>இணைக்கப்பட்டது</translation>
     </message>
     <message id="id-disconnected">
         <source>Not connected</source>
-        <translation type="unfinished"></translation>
+        <translation>இணைக்கப்படவில்லை</translation>
     </message>
     <message id="id-brightness-percentage">
         <source>Brightness %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>ஒளிர்வு %1%</translation>
     </message>
     <message id="id-poweroff-warn">
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>AsteroidOS ஐ முடக்கு</translation>
     </message>
     <message id="id-reboot-warn">
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>AsteroidOS ஐ மீள்துவக்கு</translation>
     </message>
     <message id="id-sound-percentage">
         <source>Volume %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>ஒலியளவு %1%</translation>
     </message>
     <message id="id-adb-mode">
         <source>ADB Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>ADB முறை</translation>
     </message>
     <message id="id-developer-mode">
         <source>Developer Mode</source>
@@ -49,11 +49,11 @@
     </message>
     <message id="id-12h-format">
         <source>Use 12H format:</source>
-        <translation type="unfinished"></translation>
+        <translation>12H முறை:</translation>
     </message>
     <message id="id-fahrenheit">
         <source>Use Fahrenheit:</source>
-        <translation type="unfinished"></translation>
+        <translation>பாரன்ஹீட் முறை:</translation>
     </message>
     <message id="id-time-page">
         <source>Time</source>
@@ -77,11 +77,11 @@
     </message>
     <message id="id-sound-page">
         <source>Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>ஒலி</translation>
     </message>
     <message id="id-units-page">
         <source>Units</source>
-        <translation type="unfinished"></translation>
+        <translation>அலகுகள்</translation>
     </message>
     <message id="id-wallpaper-page">
         <source>Wallpaper</source>
@@ -89,7 +89,7 @@
     </message>
     <message id="id-watchface-page">
         <source>Watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>கடிகார முகப்பு</translation>
     </message>
     <message id="id-usb-page">
         <source>USB</source>
@@ -101,7 +101,7 @@
     </message>
     <message id="id-reboot-page">
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>மீள்துவக்கு</translation>
     </message>
     <message id="id-about-page">
         <source>About</source>
@@ -109,11 +109,11 @@
     </message>
     <message id="id-app-launcher-name">
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>அமைவுகள்</translation>
     </message>
     <message id="id-charging-only">
         <source>Charging only</source>
-        <translation type="unfinished"></translation>
+        <translation>மின்னினைப்பில் மட்டும்</translation>
     </message>
 </context>
 </TS>

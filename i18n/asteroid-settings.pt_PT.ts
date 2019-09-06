@@ -16,12 +16,12 @@
     <message id="id-connected">
         <location filename="../BluetoothPage.qml" line="32"/>
         <source>Connected</source>
-        <translation>Conectado</translation>
+        <translation>Ligado</translation>
     </message>
     <message id="id-disconnected">
         <location filename="../BluetoothPage.qml" line="34"/>
         <source>Not connected</source>
-        <translation>Não conectado</translation>
+        <translation>Não ligado</translation>
     </message>
     <message id="id-brightness-percentage">
         <location filename="../BrightnessPage.qml" line="36"/>
@@ -46,7 +46,7 @@
     <message id="id-charging-only">
         <location filename="../USBPage.qml" line="35"/>
         <source>Charging only</source>
-        <translation>Apenas carregar</translation>
+        <translation>Carregar apenas</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="37"/>
@@ -56,17 +56,17 @@
     <message id="id-developer-mode">
         <location filename="../USBPage.qml" line="39"/>
         <source>Developer Mode</source>
-        <translation>Modo Programador</translation>
+        <translation>Modo de Programador</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../USBPage.qml" line="41"/>
         <source>MTP Mode</source>
-        <translation>Modo MTP</translation>
+        <translation>Modo de MTP</translation>
     </message>
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation>Utilizar formato de 12 horas:</translation>
+        <translation>Usar formato de 12 horas:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../UnitsPage.qml" line="63"/>

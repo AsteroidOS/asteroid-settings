@@ -26,7 +26,7 @@
     <message id="id-brightness-percentage">
         <location filename="../BrightnessPage.qml" line="36"/>
         <source>Brightness %1%</source>
-        <translation>Luminosidade %1%</translation>
+        <translation>Brilho %1%</translation>
     </message>
     <message id="id-poweroff-warn">
         <location filename="../PoweroffPage.qml" line="29"/>
@@ -51,7 +51,7 @@
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="37"/>
         <source>ADB Mode</source>
-        <translation>Modo ADB</translation>
+        <translation>Modo de ADB</translation>
     </message>
     <message id="id-developer-mode">
         <location filename="../USBPage.qml" line="39"/>
@@ -71,7 +71,7 @@
     <message id="id-fahrenheit">
         <location filename="../UnitsPage.qml" line="63"/>
         <source>Use Fahrenheit:</source>
-        <translation>Utilizar Fahrenheit:</translation>
+        <translation>Usar Fahrenheit:</translation>
     </message>
     <message id="id-time-page">
         <location filename="../TimePage.qml" line="40"/>
@@ -99,7 +99,7 @@
     <message id="id-brightness-page">
         <location filename="../main.qml" line="93"/>
         <source>Brightness</source>
-        <translation>Luminosidade</translation>
+        <translation>Brilho</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../main.qml" line="99"/>

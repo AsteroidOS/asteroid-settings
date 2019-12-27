@@ -6,12 +6,12 @@
     <message id="id-bluetooth-on">
         <location filename="../BluetoothPage.qml" line="28"/>
         <source>Bluetooth on</source>
-        <translation>Bluetooth uklj</translation>
+        <translation>Bluetooth uključen</translation>
     </message>
     <message id="id-bluetooth-off">
         <location filename="../BluetoothPage.qml" line="30"/>
         <source>Bluetooth off</source>
-        <translation>Bluetooth isklj</translation>
+        <translation>Bluetooth isključen</translation>
     </message>
     <message id="id-connected">
         <location filename="../BluetoothPage.qml" line="32"/>
@@ -36,7 +36,7 @@
     <message id="id-reboot-warn">
         <location filename="../RebootPage.qml" line="29"/>
         <source>Reboot AsteroidOS</source>
-        <translation>Ponovno pokreni AsteroidOS</translation>
+        <translation>Ponovo pokreni AsteroidOS</translation>
     </message>
     <message id="id-sound-percentage">
         <location filename="../SoundPage.qml" line="36"/>
@@ -51,22 +51,22 @@
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="37"/>
         <source>ADB Mode</source>
-        <translation>ADB Mod</translation>
+        <translation>ADB modus</translation>
     </message>
     <message id="id-developer-mode">
         <location filename="../USBPage.qml" line="39"/>
         <source>Developer Mode</source>
-        <translation>Razv Prog Mod</translation>
+        <translation>Modus za razvijatelje</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../USBPage.qml" line="41"/>
         <source>MTP Mode</source>
-        <translation>MTP Mod</translation>
+        <translation>MTP modus</translation>
     </message>
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation>Koristi 12h format:</translation>
+        <translation>Koristi 12-satni format:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../UnitsPage.qml" line="63"/>
@@ -120,7 +120,7 @@
     <message id="id-watchface-page">
         <location filename="../main.qml" line="119"/>
         <source>Watchface</source>
-        <translation>Watch pozadina</translation>
+        <translation>Pozadina sata</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../USBPage.qml" line="29"/>
@@ -136,12 +136,12 @@
     <message id="id-reboot-page">
         <location filename="../main.qml" line="137"/>
         <source>Reboot</source>
-        <translation>Ponovno pokreni</translation>
+        <translation>Ponovo pokreni</translation>
     </message>
     <message id="id-about-page">
         <location filename="../main.qml" line="143"/>
         <source>About</source>
-        <translation>O</translation>
+        <translation>Informacije</translation>
     </message>
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>

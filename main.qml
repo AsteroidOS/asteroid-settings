@@ -97,7 +97,7 @@ Application {
                 ListItem {
                     //% "Sound"
                     title: qsTrId("id-sound-page")
-                    iconName: "ios-wifi-outline"
+                    iconName: "ios-volume-up"
                     onClicked: layerStack.push(soundLayer)
                     height: DeviceInfo.hasSpeaker ? Dims.h(16) : 0
                     clip: true

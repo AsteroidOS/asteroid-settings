@@ -31,6 +31,7 @@ Application {
     Component { id: languageLayer;   LanguagePage   { } }
     Component { id: bluetoothLayer;  BluetoothPage  { } }
     Component { id: brightnessLayer; BrightnessPage { } }
+    Component { id: tilttowakeLayer; TiltToWakePage { } }
     Component { id: soundLayer;      SoundPage      { } }
     Component { id: unitsLayer;      UnitsPage      { } }
     Component { id: wallpaperLayer;  WallpaperPage  { } }
@@ -87,6 +88,12 @@ Application {
                     title: qsTrId("id-bluetooth-page")
                     iconName: "ios-bluetooth-outline"
                     onClicked: layerStack.push(bluetoothLayer)
+                }
+                ListItem {
+                    //% "Tilt-to-wake"
+                    title: qsTrId("id-tilt-to-wake-page")
+                    iconName: "ios-tilttowake-outline"
+                    onClicked: layerStack.push(tilttowakeLayer)
                 }
                 ListItem {
                     //% "Brightness"

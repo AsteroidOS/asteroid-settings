@@ -23,12 +23,14 @@
 #include <asteroidapp.h>
 
 #include "volumecontrol.h"
+#include "tilttowake.h"
 
 int main(int argc, char *argv[])
 {
     QScopedPointer<QGuiApplication> app(AsteroidApp::application(argc, argv));
     QScopedPointer<QQuickView> view(AsteroidApp::createView());
     qmlRegisterType<VolumeControl>("org.asteroid.settings", 1, 0, "VolumeControl");
+    qmlRegisterType<TiltToWake>("org.asteroid.settings", 1, 0, "TiltToWake");
     view->setSource(QUrl("qrc:/main.qml"));
     view->resize(app->primaryScreen()->size());
     view->show();

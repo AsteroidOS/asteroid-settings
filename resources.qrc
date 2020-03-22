@@ -6,6 +6,7 @@
         <file>TimePage.qml</file>
         <file>DatePage.qml</file>
         <file>BluetoothPage.qml</file>
+        <file>TiltToWakePage.qml</file>
         <file>BrightnessPage.qml</file>
         <file>SoundPage.qml</file>
         <file>UnitsPage.qml</file>

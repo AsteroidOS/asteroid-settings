@@ -75,71 +75,76 @@
     </message>
     <message id="id-time-page">
         <location filename="../TimePage.qml" line="40"/>
-        <location filename="../main.qml" line="69"/>
+        <location filename="../main.qml" line="74"/>
         <source>Time</source>
         <translation>Tijd</translation>
     </message>
     <message id="id-date-page">
         <location filename="../DatePage.qml" line="31"/>
-        <location filename="../main.qml" line="75"/>
+        <location filename="../main.qml" line="80"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
     <message id="id-language-page">
         <location filename="../LanguagePage.qml" line="31"/>
-        <location filename="../main.qml" line="81"/>
+        <location filename="../main.qml" line="86"/>
         <source>Language</source>
         <translation>Taal</translation>
     </message>
     <message id="id-bluetooth-page">
-        <location filename="../main.qml" line="87"/>
+        <location filename="../main.qml" line="92"/>
         <source>Bluetooth</source>
-        <translation></translation>
+        <translation>Bluetooth</translation>
+    </message>
+    <message id="id-tilt-to-wake-page">
+        <location filename="../main.qml" line="98"/>
+        <source>Tilt-to-wake</source>
+        <translation>Kantelen voor activeren</translation>
     </message>
     <message id="id-brightness-page">
-        <location filename="../main.qml" line="93"/>
+        <location filename="../main.qml" line="106"/>
         <source>Brightness</source>
         <translation>Helderheid</translation>
     </message>
     <message id="id-sound-page">
-        <location filename="../main.qml" line="99"/>
+        <location filename="../main.qml" line="112"/>
         <source>Sound</source>
         <translation>Geluid</translation>
     </message>
     <message id="id-units-page">
         <location filename="../UnitsPage.qml" line="26"/>
-        <location filename="../main.qml" line="107"/>
+        <location filename="../main.qml" line="120"/>
         <source>Units</source>
         <translation>Eenheden</translation>
     </message>
     <message id="id-wallpaper-page">
-        <location filename="../main.qml" line="113"/>
+        <location filename="../main.qml" line="126"/>
         <source>Wallpaper</source>
         <translation>Achtergrond</translation>
     </message>
     <message id="id-watchface-page">
-        <location filename="../main.qml" line="119"/>
+        <location filename="../main.qml" line="132"/>
         <source>Watchface</source>
         <translation>Horlogestijl</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../USBPage.qml" line="29"/>
-        <location filename="../main.qml" line="125"/>
+        <location filename="../main.qml" line="138"/>
         <source>USB</source>
-        <translation></translation>
+        <translation>USB</translation>
     </message>
     <message id="id-poweroff-page">
-        <location filename="../main.qml" line="131"/>
+        <location filename="../main.qml" line="144"/>
         <source>Power Off</source>
         <translation>Uitschakelen</translation>
     </message>
     <message id="id-reboot-page">
-        <location filename="../main.qml" line="137"/>
+        <location filename="../main.qml" line="150"/>
         <source>Reboot</source>
         <translation>Herstarten</translation>
     </message>
     <message id="id-about-page">
-        <location filename="../main.qml" line="143"/>
+        <location filename="../main.qml" line="156"/>
         <source>About</source>
         <translation>Over</translation>
     </message>
@@ -147,6 +152,16 @@
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
         <translation>Instellingen</translation>
+    </message>
+    <message id="id-tilt-to-wake-on">
+        <location filename="../TiltToWakePage.qml" line="29"/>
+        <source>Tilt-to-wake on</source>
+        <translation>Kantelen voor activeren aan</translation>
+    </message>
+    <message id="id-tilt-to-wake-off">
+        <location filename="../TiltToWakePage.qml" line="31"/>
+        <source>Tilt-to-wake off</source>
+        <translation>Kantelen voor activeren uit</translation>
     </message>
 </context>
 </TS>

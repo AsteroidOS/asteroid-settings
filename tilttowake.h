@@ -61,6 +61,7 @@ class TiltToWake : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
+    Q_PROPERTY(bool available READ available CONSTANT)
 
 public:
     TiltToWake(QObject *parent = NULL);
@@ -68,6 +69,7 @@ public:
     bool enabled() const;
     void setEnabled(bool);
 
+    bool available();
 private slots:
     void configChange(const QString &key, const QDBusVariant &value);
     void configReply(QDBusPendingCallWatcher *watcher);

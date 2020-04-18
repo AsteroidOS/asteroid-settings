@@ -59,6 +59,7 @@
 #include "mceiface.h"
 
 static const char *MceWristSensorEnabled = "/system/osso/dsm/display/wrist_sensor_enabled";
+static const char *MceWristSensorAvailable = "/system/osso/dsm/display/wrist_sensor_available";
 
 TiltToWake::TiltToWake(QObject *parent) :
     QObject(parent),
@@ -116,3 +117,10 @@ void TiltToWake::setEnabled(bool enabled)
     }
 }
 
+bool TiltToWake::available()
+{
+    QDBusPendingReply<QDBusVariant> result = m_mceIface->get_config(QDBusObjectPath(MceWristSensorAvailable));
+    result.waitForFinished();
+
+    return result.value().variant().toInt() > 0;
+}

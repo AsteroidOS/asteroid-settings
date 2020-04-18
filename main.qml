@@ -19,6 +19,7 @@
 import QtQuick 2.9
 import org.asteroid.controls 1.0
 import org.asteroid.utils 1.0
+import org.asteroid.settings 1.0
 
 Application {
     id: app
@@ -41,6 +42,8 @@ Application {
     Component { id: rebootLayer;     RebootPage     { } }
     Component { id: aboutLayer;      AboutPage      { } }
 
+    TiltToWake { id: tiltToWake }
+
     LayerStack {
         id: layerStack
         firstPage: firstPageComponent
@@ -53,6 +56,7 @@ Application {
             function elementsNb() {
                 var nb = 12;
                 if(DeviceInfo.hasSpeaker) nb ++
+                if(tiltToWake.available) nb ++
                 return nb;
             }
             contentHeight: elementsNb()*Dims.h(16) + (DeviceInfo.hasRoundScreen ? Dims.h(20) : 0)
@@ -94,6 +98,8 @@ Application {
                     title: qsTrId("id-tilt-to-wake-page")
                     iconName: "ios-tilttowake-outline"
                     onClicked: layerStack.push(tilttowakeLayer)
+                    height: tiltToWake.available ? Dims.h(16) : 0
+                    clip: true
                 }
                 ListItem {
                     //% "Brightness"

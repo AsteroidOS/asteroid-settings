@@ -29,7 +29,7 @@
     </message>
     <message id="id-reboot-warn">
         <source>Reboot AsteroidOS</source>
-        <translation>Ales tankra n AsteroidOS</translation>
+        <translation>Ales tanekra n AsteroidOS</translation>
     </message>
     <message id="id-sound-percentage">
         <source>Volume %1%</source>
@@ -41,7 +41,7 @@
     </message>
     <message id="id-developer-mode">
         <source>Developer Mode</source>
-        <translation>Askar uneflay</translation>
+        <translation>Askar n uneflay</translation>
     </message>
     <message id="id-mtp-mode">
         <source>MTP Mode</source>

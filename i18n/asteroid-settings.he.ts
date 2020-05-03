@@ -100,7 +100,7 @@
     <message id="id-tilt-to-wake-page">
         <location filename="../main.qml" line="98"/>
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>להטות כדי להעיר</translation>
     </message>
     <message id="id-brightness-page">
         <location filename="../main.qml" line="106"/>
@@ -157,12 +157,12 @@
     <message id="id-tilt-to-wake-on">
         <location filename="../TiltToWakePage.qml" line="29"/>
         <source>Tilt-to-wake on</source>
-        <translation type="unfinished"></translation>
+        <translation>להטות כדי להעיר פעיל</translation>
     </message>
     <message id="id-tilt-to-wake-off">
         <location filename="../TiltToWakePage.qml" line="31"/>
         <source>Tilt-to-wake off</source>
-        <translation type="unfinished"></translation>
+        <translation>להטות כדי להעיר כבוי</translation>
     </message>
 </context>
 </TS>

@@ -156,7 +156,7 @@
     <message id="id-tilt-to-wake-on">
         <location filename="../TiltToWakePage.qml" line="29"/>
         <source>Tilt-to-wake on</source>
-        <translation type="unfinished"></translation>
+        <translation>Inclinar para acordar ligado</translation>
     </message>
     <message id="id-tilt-to-wake-off">
         <location filename="../TiltToWakePage.qml" line="31"/>

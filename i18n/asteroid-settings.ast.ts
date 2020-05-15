@@ -46,7 +46,7 @@
     <message id="id-charging-only">
         <location filename="../USBPage.qml" line="35"/>
         <source>Charging only</source>
-        <translation type="unfinished"></translation>
+        <translation>-</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="37"/>

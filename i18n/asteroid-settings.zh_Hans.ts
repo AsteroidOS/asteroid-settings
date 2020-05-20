@@ -117,15 +117,15 @@
     </message>
     <message id="id-tilt-to-wake-on">
         <source>Tilt-to-wake on</source>
-        <translation type="unfinished"></translation>
+        <translation>开启倾斜唤醒</translation>
     </message>
     <message id="id-tilt-to-wake-off">
         <source>Tilt-to-wake off</source>
-        <translation type="unfinished"></translation>
+        <translation>关闭倾斜唤醒</translation>
     </message>
     <message id="id-tilt-to-wake-page">
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>倾斜唤醒</translation>
     </message>
 </context>
 </TS>

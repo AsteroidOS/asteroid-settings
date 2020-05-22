@@ -117,15 +117,15 @@
     </message>
     <message id="id-tilt-to-wake-on">
         <source>Tilt-to-wake on</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενεργοποίηση με περιστροφή</translation>
     </message>
     <message id="id-tilt-to-wake-off">
         <source>Tilt-to-wake off</source>
-        <translation type="unfinished"></translation>
+        <translation>Απενεργοποίηση με περιστροφή</translation>
     </message>
     <message id="id-tilt-to-wake-page">
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Αφύπνιση με περιστροφή</translation>
     </message>
 </context>
 </TS>

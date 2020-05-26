@@ -83,7 +83,7 @@
         <location filename="../DatePage.qml" line="31"/>
         <location filename="../main.qml" line="80"/>
         <source>Date</source>
-        <translation>तारीख</translation>
+        <translation>दिनांक</translation>
     </message>
     <message id="id-language-page">
         <location filename="../LanguagePage.qml" line="31"/>

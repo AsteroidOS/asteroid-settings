@@ -75,76 +75,81 @@
     </message>
     <message id="id-time-page">
         <location filename="../TimePage.qml" line="40"/>
-        <location filename="../main.qml" line="74"/>
+        <location filename="../main.qml" line="75"/>
         <source>Time</source>
         <translation>Masa</translation>
     </message>
     <message id="id-date-page">
         <location filename="../DatePage.qml" line="31"/>
-        <location filename="../main.qml" line="80"/>
+        <location filename="../main.qml" line="81"/>
         <source>Date</source>
         <translation>Tarikh</translation>
     </message>
     <message id="id-language-page">
         <location filename="../LanguagePage.qml" line="31"/>
-        <location filename="../main.qml" line="86"/>
+        <location filename="../main.qml" line="87"/>
         <source>Language</source>
         <translation>Bahasa</translation>
     </message>
     <message id="id-bluetooth-page">
-        <location filename="../main.qml" line="92"/>
+        <location filename="../main.qml" line="93"/>
         <source>Bluetooth</source>
         <translation></translation>
     </message>
     <message id="id-tilt-to-wake-page">
-        <location filename="../main.qml" line="98"/>
+        <location filename="../main.qml" line="99"/>
         <source>Tilt-to-wake</source>
         <translation>Pusing-untuk-bangun</translation>
     </message>
     <message id="id-brightness-page">
-        <location filename="../main.qml" line="106"/>
+        <location filename="../main.qml" line="107"/>
         <source>Brightness</source>
         <translation>Kecerahan</translation>
     </message>
+    <message id="id-always-on-display-page">
+        <location filename="../main.qml" line="113"/>
+        <source>Always on Display</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="id-sound-page">
-        <location filename="../main.qml" line="112"/>
+        <location filename="../main.qml" line="119"/>
         <source>Sound</source>
         <translation>Bunyi</translation>
     </message>
     <message id="id-units-page">
         <location filename="../UnitsPage.qml" line="26"/>
-        <location filename="../main.qml" line="120"/>
+        <location filename="../main.qml" line="127"/>
         <source>Units</source>
         <translation>Unit</translation>
     </message>
     <message id="id-wallpaper-page">
-        <location filename="../main.qml" line="126"/>
+        <location filename="../main.qml" line="133"/>
         <source>Wallpaper</source>
         <translation>Paparan</translation>
     </message>
     <message id="id-watchface-page">
-        <location filename="../main.qml" line="132"/>
+        <location filename="../main.qml" line="139"/>
         <source>Watchface</source>
         <translation>Muka jam</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../USBPage.qml" line="29"/>
-        <location filename="../main.qml" line="138"/>
+        <location filename="../main.qml" line="145"/>
         <source>USB</source>
         <translation></translation>
     </message>
     <message id="id-poweroff-page">
-        <location filename="../main.qml" line="144"/>
+        <location filename="../main.qml" line="151"/>
         <source>Power Off</source>
         <translation>Tutup Kuasa</translation>
     </message>
     <message id="id-reboot-page">
-        <location filename="../main.qml" line="150"/>
+        <location filename="../main.qml" line="157"/>
         <source>Reboot</source>
         <translation>Mulakan Semula</translation>
     </message>
     <message id="id-about-page">
-        <location filename="../main.qml" line="156"/>
+        <location filename="../main.qml" line="163"/>
         <source>About</source>
         <translation>Mengenai</translation>
     </message>
@@ -162,6 +167,16 @@
         <location filename="../TiltToWakePage.qml" line="31"/>
         <source>Tilt-to-wake off</source>
         <translation>Pusing-untuk-matikan</translation>
+    </message>
+    <message id="id-always-on-display-on">
+        <location filename="../AlwaysOnDisplayPage.qml" line="28"/>
+        <source>Always on Display on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-always-on-display-off">
+        <location filename="../AlwaysOnDisplayPage.qml" line="30"/>
+        <source>Always on Display off</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

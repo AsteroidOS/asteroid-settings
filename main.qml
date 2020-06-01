@@ -32,6 +32,7 @@ Application {
     Component { id: languageLayer;   LanguagePage   { } }
     Component { id: bluetoothLayer;  BluetoothPage  { } }
     Component { id: brightnessLayer; BrightnessPage { } }
+    Component { id: alwaysondisplayLayer; AlwaysOnDisplayPage { } }
     Component { id: tilttowakeLayer; TiltToWakePage { } }
     Component { id: soundLayer;      SoundPage      { } }
     Component { id: unitsLayer;      UnitsPage      { } }
@@ -54,7 +55,7 @@ Application {
 
         Flickable {
             function elementsNb() {
-                var nb = 12;
+                var nb = 13;
                 if(DeviceInfo.hasSpeaker) nb ++
                 if(tiltToWake.available) nb ++
                 return nb;
@@ -106,6 +107,12 @@ Application {
                     title: qsTrId("id-brightness-page")
                     iconName: "ios-sunny-outline"
                     onClicked: layerStack.push(brightnessLayer)
+                }
+                ListItem {
+                    //% "Always on Display"
+                    title: qsTrId("id-always-on-display-page")
+                    iconName: "md-watch"
+                    onClicked: layerStack.push(alwaysondisplayLayer)
                 }
                 ListItem {
                     //% "Sound"

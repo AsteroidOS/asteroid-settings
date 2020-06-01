@@ -127,5 +127,17 @@
         <source>Tilt-to-wake</source>
         <translation type="unfinished"></translation>
     </message>
+    <message id="id-always-on-display-on">
+        <source>Always on Display on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-always-on-display-off">
+        <source>Always on Display off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-always-on-display-page">
+        <source>Always on Display</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

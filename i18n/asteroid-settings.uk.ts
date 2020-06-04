@@ -161,7 +161,7 @@
     <message id="id-tilt-to-wake-off">
         <location filename="../TiltToWakePage.qml" line="31"/>
         <source>Tilt-to-wake off</source>
-        <translation type="unfinished"></translation>
+        <translation>Підняти для деактивації</translation>
     </message>
 </context>
 </TS>

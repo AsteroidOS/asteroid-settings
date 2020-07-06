@@ -99,7 +99,7 @@
     <message id="id-tilt-to-wake-page">
         <location filename="../main.qml" line="98"/>
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Пробудження по нахилу</translation>
     </message>
     <message id="id-brightness-page">
         <location filename="../main.qml" line="106"/>
@@ -156,7 +156,7 @@
     <message id="id-tilt-to-wake-on">
         <location filename="../TiltToWakePage.qml" line="29"/>
         <source>Tilt-to-wake on</source>
-        <translation type="unfinished"></translation>
+        <translation>Пробудження по нахилу включено</translation>
     </message>
     <message id="id-tilt-to-wake-off">
         <location filename="../TiltToWakePage.qml" line="31"/>

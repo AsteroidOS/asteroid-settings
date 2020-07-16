@@ -21,7 +21,7 @@
     <message id="id-disconnected">
         <location filename="../BluetoothPage.qml" line="34"/>
         <source>Not connected</source>
-        <translation type="unfinished"></translation>
+        <translation>არაა დაკავშირებული</translation>
     </message>
     <message id="id-brightness-percentage">
         <location filename="../BrightnessPage.qml" line="36"/>
@@ -41,12 +41,12 @@
     <message id="id-sound-percentage">
         <location filename="../SoundPage.qml" line="36"/>
         <source>Volume %1%</source>
-        <translation type="unfinished"></translation>
+        <translation>ხმის სიმაღლე %1%</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../USBPage.qml" line="35"/>
         <source>Charging only</source>
-        <translation type="unfinished"></translation>
+        <translation>მხოლოდ დამუხტვა</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="37"/>
@@ -66,12 +66,12 @@
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation type="unfinished"></translation>
+        <translation>გამოყენებულ იქნას 12 საათიანი ფორმატი:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../UnitsPage.qml" line="63"/>
         <source>Use Fahrenheit:</source>
-        <translation type="unfinished"></translation>
+        <translation>გამოყენებულ იქნას ფარენჰეიტის შკალა:</translation>
     </message>
     <message id="id-time-page">
         <location filename="../TimePage.qml" line="40"/>
@@ -99,7 +99,7 @@
     <message id="id-tilt-to-wake-page">
         <location filename="../main.qml" line="98"/>
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>დახრით გამოღვიძება</translation>
     </message>
     <message id="id-brightness-page">
         <location filename="../main.qml" line="106"/>
@@ -109,13 +109,13 @@
     <message id="id-sound-page">
         <location filename="../main.qml" line="112"/>
         <source>Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>ხმა</translation>
     </message>
     <message id="id-units-page">
         <location filename="../UnitsPage.qml" line="26"/>
         <location filename="../main.qml" line="120"/>
         <source>Units</source>
-        <translation type="unfinished"></translation>
+        <translation>ერთეულები</translation>
     </message>
     <message id="id-wallpaper-page">
         <location filename="../main.qml" line="126"/>
@@ -131,7 +131,7 @@
         <location filename="../USBPage.qml" line="29"/>
         <location filename="../main.qml" line="138"/>
         <source>USB</source>
-        <translation type="unfinished"></translation>
+        <translation>USB</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../main.qml" line="144"/>
@@ -156,12 +156,12 @@
     <message id="id-tilt-to-wake-on">
         <location filename="../TiltToWakePage.qml" line="29"/>
         <source>Tilt-to-wake on</source>
-        <translation type="unfinished"></translation>
+        <translation>დახრით გაღვიძება ჩართულია</translation>
     </message>
     <message id="id-tilt-to-wake-off">
         <location filename="../TiltToWakePage.qml" line="31"/>
         <source>Tilt-to-wake off</source>
-        <translation type="unfinished"></translation>
+        <translation>დახრით გაღვიძება გამორთულია</translation>
     </message>
 </context>
 </TS>

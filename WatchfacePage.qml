@@ -22,6 +22,8 @@ import Nemo.Configuration 1.0
 import org.asteroid.controls 1.0
 
 Item {
+    property alias displayAmbient: compositor.displayAmbient
+
     ConfigurationValue {
         id: watchfaceSource
         key: "/desktop/asteroid/watchface"
@@ -54,6 +56,21 @@ Item {
                     i = i+1
                 }
             }
+        }
+
+        Item {
+            id: burnInProtectionManager
+            property int leftOffset
+            property int rightOffset
+            property int topOffset
+            property int bottomOffset
+            property int widthOffset
+            property int heightOffset
+        }
+
+        QtObject {
+            id: compositor
+            property bool displayAmbient: false
         }
 
         WallClock {

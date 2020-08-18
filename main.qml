@@ -31,9 +31,7 @@ Application {
     Component { id: dateLayer;       DatePage       { } }
     Component { id: languageLayer;   LanguagePage   { } }
     Component { id: bluetoothLayer;  BluetoothPage  { } }
-    Component { id: brightnessLayer; BrightnessPage { } }
-    Component { id: alwaysondisplayLayer; AlwaysOnDisplayPage { } }
-    Component { id: tilttowakeLayer; TiltToWakePage { } }
+    Component { id: displayLayer;    DisplayPage    { } }
     Component { id: soundLayer;      SoundPage      { } }
     Component { id: unitsLayer;      UnitsPage      { } }
     Component { id: wallpaperLayer;  WallpaperPage  { } }
@@ -55,9 +53,8 @@ Application {
 
         Flickable {
             function elementsNb() {
-                var nb = 13;
+                var nb = 12;
                 if(DeviceInfo.hasSpeaker) nb ++
-                if(tiltToWake.available) nb ++
                 return nb;
             }
             contentHeight: elementsNb()*Dims.h(16) + (DeviceInfo.hasRoundScreen ? Dims.h(20) : 0)
@@ -95,24 +92,10 @@ Application {
                     onClicked: layerStack.push(bluetoothLayer)
                 }
                 ListItem {
-                    //% "Tilt-to-wake"
-                    title: qsTrId("id-tilt-to-wake-page")
-                    iconName: "ios-tilttowake-outline"
-                    onClicked: layerStack.push(tilttowakeLayer)
-                    height: tiltToWake.available ? Dims.h(16) : 0
-                    clip: true
-                }
-                ListItem {
-                    //% "Brightness"
-                    title: qsTrId("id-brightness-page")
+                    //% "Display"
+                    title: qsTrId("id-display-page")
                     iconName: "ios-sunny-outline"
-                    onClicked: layerStack.push(brightnessLayer)
-                }
-                ListItem {
-                    //% "Always on Display"
-                    title: qsTrId("id-always-on-display-page")
-                    iconName: "md-watch"
-                    onClicked: layerStack.push(alwaysondisplayLayer)
+                    onClicked: layerStack.push(displayLayer)
                 }
                 ListItem {
                     //% "Sound"

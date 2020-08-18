@@ -14,9 +14,7 @@ OTHER_FILES += main.qml \
                TimePage.qml \
                DatePage.qml \
                BluetoothPage.qml \
-               TiltToWakePage.qml \
-               AlwaysOnDisplayPage.qml \
-               BrightnessPage.qml \
+               DisplayPage.qml \
                SoundPage.qml \
                UnitsPage.qml \
                USBPage.qml \

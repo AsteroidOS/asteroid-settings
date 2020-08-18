@@ -23,11 +23,6 @@
         <source>Not connected</source>
         <translation>연결되지 않음</translation>
     </message>
-    <message id="id-brightness-percentage">
-        <location filename="../BrightnessPage.qml" line="36"/>
-        <source>Brightness %1%</source>
-        <translation>밝기 %1%</translation>
-    </message>
     <message id="id-poweroff-warn">
         <location filename="../PoweroffPage.qml" line="29"/>
         <source>Power off AsteroidOS</source>
@@ -75,81 +70,87 @@
     </message>
     <message id="id-time-page">
         <location filename="../TimePage.qml" line="40"/>
-        <location filename="../main.qml" line="75"/>
+        <location filename="../main.qml" line="72"/>
         <source>Time</source>
         <translation>시간</translation>
     </message>
     <message id="id-date-page">
         <location filename="../DatePage.qml" line="31"/>
-        <location filename="../main.qml" line="81"/>
+        <location filename="../main.qml" line="78"/>
         <source>Date</source>
         <translation>날짜</translation>
     </message>
     <message id="id-language-page">
         <location filename="../LanguagePage.qml" line="31"/>
-        <location filename="../main.qml" line="87"/>
+        <location filename="../main.qml" line="84"/>
         <source>Language</source>
         <translation>언어</translation>
     </message>
     <message id="id-bluetooth-page">
-        <location filename="../main.qml" line="93"/>
+        <location filename="../main.qml" line="90"/>
         <source>Bluetooth</source>
         <translation>블루투스</translation>
     </message>
-    <message id="id-tilt-to-wake-page">
-        <location filename="../main.qml" line="99"/>
-        <source>Tilt-to-wake</source>
-        <translation>시계를 볼 때 화면 켜기</translation>
+    <message id="id-display-page">
+        <location filename="../DisplayPage.qml" line="32"/>
+        <location filename="../main.qml" line="96"/>
+        <source>Display</source>
+        <translation type="unfinished"></translation>
     </message>
-    <message id="id-brightness-page">
-        <location filename="../main.qml" line="107"/>
+    <message id="id-brightness">
+        <location filename="../DisplayPage.qml" line="54"/>
         <source>Brightness</source>
-        <translation>밝기</translation>
+        <translation type="unfinished">밝기</translation>
     </message>
-    <message id="id-always-on-display-page">
-        <location filename="../main.qml" line="113"/>
+    <message id="id-always-on-display">
+        <location filename="../DisplayPage.qml" line="103"/>
         <source>Always on Display</source>
         <translation type="unfinished"></translation>
     </message>
+    <message id="id-tilt-to-wake">
+        <location filename="../DisplayPage.qml" line="119"/>
+        <source>Tilt-to-wake</source>
+        <translation type="unfinished">시계를 볼 때 화면 켜기</translation>
+    </message>
     <message id="id-sound-page">
-        <location filename="../main.qml" line="119"/>
+        <location filename="../main.qml" line="102"/>
         <source>Sound</source>
         <translation>소리</translation>
     </message>
     <message id="id-units-page">
         <location filename="../UnitsPage.qml" line="26"/>
-        <location filename="../main.qml" line="127"/>
+        <location filename="../main.qml" line="110"/>
         <source>Units</source>
         <translation>단위</translation>
     </message>
     <message id="id-wallpaper-page">
-        <location filename="../main.qml" line="133"/>
+        <location filename="../main.qml" line="116"/>
         <source>Wallpaper</source>
         <translation>배경화면</translation>
     </message>
     <message id="id-watchface-page">
-        <location filename="../main.qml" line="139"/>
+        <location filename="../main.qml" line="122"/>
         <source>Watchface</source>
         <translation>시계화면</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../USBPage.qml" line="29"/>
-        <location filename="../main.qml" line="145"/>
+        <location filename="../main.qml" line="128"/>
         <source>USB</source>
         <translation>USB</translation>
     </message>
     <message id="id-poweroff-page">
-        <location filename="../main.qml" line="151"/>
+        <location filename="../main.qml" line="134"/>
         <source>Power Off</source>
         <translation>종료</translation>
     </message>
     <message id="id-reboot-page">
-        <location filename="../main.qml" line="157"/>
+        <location filename="../main.qml" line="140"/>
         <source>Reboot</source>
         <translation>재시동</translation>
     </message>
     <message id="id-about-page">
-        <location filename="../main.qml" line="163"/>
+        <location filename="../main.qml" line="146"/>
         <source>About</source>
         <translation>정보</translation>
     </message>
@@ -157,26 +158,6 @@
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
         <translation>설정</translation>
-    </message>
-    <message id="id-tilt-to-wake-on">
-        <location filename="../TiltToWakePage.qml" line="29"/>
-        <source>Tilt-to-wake on</source>
-        <translation>켜짐</translation>
-    </message>
-    <message id="id-tilt-to-wake-off">
-        <location filename="../TiltToWakePage.qml" line="31"/>
-        <source>Tilt-to-wake off</source>
-        <translation>꺼짐</translation>
-    </message>
-    <message id="id-always-on-display-on">
-        <location filename="../AlwaysOnDisplayPage.qml" line="28"/>
-        <source>Always on Display on</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="id-always-on-display-off">
-        <location filename="../AlwaysOnDisplayPage.qml" line="30"/>
-        <source>Always on Display off</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -19,10 +19,6 @@
         <source>Not connected</source>
         <translation>未连接</translation>
     </message>
-    <message id="id-brightness-percentage">
-        <source>Brightness %1%</source>
-        <translation>亮度 %1%</translation>
-    </message>
     <message id="id-poweroff-warn">
         <source>Power off AsteroidOS</source>
         <translation>关闭 AsteroidOS</translation>
@@ -71,10 +67,6 @@
         <source>Bluetooth</source>
         <translation>蓝牙</translation>
     </message>
-    <message id="id-brightness-page">
-        <source>Brightness</source>
-        <translation>亮度</translation>
-    </message>
     <message id="id-sound-page">
         <source>Sound</source>
         <translation>声音</translation>
@@ -115,29 +107,21 @@
         <source>Charging only</source>
         <translation>仅充电</translation>
     </message>
-    <message id="id-tilt-to-wake-on">
-        <source>Tilt-to-wake on</source>
-        <translation>开启倾斜唤醒</translation>
-    </message>
-    <message id="id-tilt-to-wake-off">
-        <source>Tilt-to-wake off</source>
-        <translation>关闭倾斜唤醒</translation>
-    </message>
-    <message id="id-tilt-to-wake-page">
-        <source>Tilt-to-wake</source>
-        <translation>倾斜唤醒</translation>
-    </message>
-    <message id="id-always-on-display-on">
-        <source>Always on Display on</source>
+    <message id="id-display-page">
+        <source>Display</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="id-always-on-display-off">
-        <source>Always on Display off</source>
-        <translation type="unfinished"></translation>
+    <message id="id-brightness">
+        <source>Brightness</source>
+        <translation type="unfinished">亮度</translation>
     </message>
-    <message id="id-always-on-display-page">
+    <message id="id-always-on-display">
         <source>Always on Display</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message id="id-tilt-to-wake">
+        <source>Tilt-to-wake</source>
+        <translation type="unfinished">倾斜唤醒</translation>
     </message>
 </context>
 </TS>

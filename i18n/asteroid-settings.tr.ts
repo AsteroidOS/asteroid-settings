@@ -19,10 +19,6 @@
         <source>Not connected</source>
         <translation>Bağlı değil</translation>
     </message>
-    <message id="id-brightness-percentage">
-        <source>Brightness %1%</source>
-        <translation>%%1 Parlaklık</translation>
-    </message>
     <message id="id-poweroff-warn">
         <source>Power off AsteroidOS</source>
         <translation>AsteroidOS&apos;i kapat</translation>
@@ -71,10 +67,6 @@
         <source>Bluetooth</source>
         <translation>Bluetooth</translation>
     </message>
-    <message id="id-brightness-page">
-        <source>Brightness</source>
-        <translation>Parlaklık</translation>
-    </message>
     <message id="id-sound-page">
         <source>Sound</source>
         <translation>Ses</translation>
@@ -115,29 +107,21 @@
         <source>Charging only</source>
         <translation>Yalnızca şarj edim</translation>
     </message>
-    <message id="id-tilt-to-wake-on">
-        <source>Tilt-to-wake on</source>
-        <translation>Eğerek uyandırma açık</translation>
-    </message>
-    <message id="id-tilt-to-wake-off">
-        <source>Tilt-to-wake off</source>
-        <translation>Eğerek uyandırma kapalı</translation>
-    </message>
-    <message id="id-tilt-to-wake-page">
-        <source>Tilt-to-wake</source>
-        <translation>Eğerek uyandırma</translation>
-    </message>
-    <message id="id-always-on-display-on">
-        <source>Always on Display on</source>
+    <message id="id-display-page">
+        <source>Display</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="id-always-on-display-off">
-        <source>Always on Display off</source>
-        <translation type="unfinished"></translation>
+    <message id="id-brightness">
+        <source>Brightness</source>
+        <translation type="unfinished">Parlaklık</translation>
     </message>
-    <message id="id-always-on-display-page">
+    <message id="id-always-on-display">
         <source>Always on Display</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message id="id-tilt-to-wake">
+        <source>Tilt-to-wake</source>
+        <translation type="unfinished">Eğerek uyandırma</translation>
     </message>
 </context>
 </TS>

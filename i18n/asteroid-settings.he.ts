@@ -23,11 +23,6 @@
         <source>Not connected</source>
         <translation>מנותק</translation>
     </message>
-    <message id="id-brightness-percentage">
-        <location filename="../BrightnessPage.qml" line="36"/>
-        <source>Brightness %1%</source>
-        <translation>בהירות %1%</translation>
-    </message>
     <message id="id-poweroff-warn">
         <location filename="../PoweroffPage.qml" line="29"/>
         <source>Power off AsteroidOS</source>
@@ -76,81 +71,87 @@
     </message>
     <message id="id-time-page">
         <location filename="../TimePage.qml" line="40"/>
-        <location filename="../main.qml" line="75"/>
+        <location filename="../main.qml" line="72"/>
         <source>Time</source>
         <translation>שעה</translation>
     </message>
     <message id="id-date-page">
         <location filename="../DatePage.qml" line="31"/>
-        <location filename="../main.qml" line="81"/>
+        <location filename="../main.qml" line="78"/>
         <source>Date</source>
         <translation>תאריך</translation>
     </message>
     <message id="id-language-page">
         <location filename="../LanguagePage.qml" line="31"/>
-        <location filename="../main.qml" line="87"/>
+        <location filename="../main.qml" line="84"/>
         <source>Language</source>
         <translation>שפה</translation>
     </message>
     <message id="id-bluetooth-page">
-        <location filename="../main.qml" line="93"/>
+        <location filename="../main.qml" line="90"/>
         <source>Bluetooth</source>
         <translation>Bluetooth</translation>
     </message>
-    <message id="id-tilt-to-wake-page">
-        <location filename="../main.qml" line="99"/>
-        <source>Tilt-to-wake</source>
-        <translation>להטות כדי להעיר</translation>
+    <message id="id-display-page">
+        <location filename="../DisplayPage.qml" line="32"/>
+        <location filename="../main.qml" line="96"/>
+        <source>Display</source>
+        <translation type="unfinished"></translation>
     </message>
-    <message id="id-brightness-page">
-        <location filename="../main.qml" line="107"/>
+    <message id="id-brightness">
+        <location filename="../DisplayPage.qml" line="54"/>
         <source>Brightness</source>
-        <translation>בהירות</translation>
+        <translation type="unfinished">בהירות</translation>
     </message>
-    <message id="id-always-on-display-page">
-        <location filename="../main.qml" line="113"/>
+    <message id="id-always-on-display">
+        <location filename="../DisplayPage.qml" line="103"/>
         <source>Always on Display</source>
         <translation type="unfinished"></translation>
     </message>
+    <message id="id-tilt-to-wake">
+        <location filename="../DisplayPage.qml" line="119"/>
+        <source>Tilt-to-wake</source>
+        <translation type="unfinished">להטות כדי להעיר</translation>
+    </message>
     <message id="id-sound-page">
-        <location filename="../main.qml" line="119"/>
+        <location filename="../main.qml" line="102"/>
         <source>Sound</source>
         <translation>צליל</translation>
     </message>
     <message id="id-units-page">
         <location filename="../UnitsPage.qml" line="26"/>
-        <location filename="../main.qml" line="127"/>
+        <location filename="../main.qml" line="110"/>
         <source>Units</source>
         <translation>יחידות</translation>
     </message>
     <message id="id-wallpaper-page">
-        <location filename="../main.qml" line="133"/>
+        <location filename="../main.qml" line="116"/>
         <source>Wallpaper</source>
         <translation>תמונת רקע</translation>
     </message>
     <message id="id-watchface-page">
-        <location filename="../main.qml" line="139"/>
+        <location filename="../main.qml" line="122"/>
         <source>Watchface</source>
         <translation>פני השעון</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../USBPage.qml" line="29"/>
-        <location filename="../main.qml" line="145"/>
+        <location filename="../main.qml" line="128"/>
         <source>USB</source>
         <translation>USB</translation>
     </message>
     <message id="id-poweroff-page">
-        <location filename="../main.qml" line="151"/>
+        <location filename="../main.qml" line="134"/>
         <source>Power Off</source>
         <translation>כיבוי</translation>
     </message>
     <message id="id-reboot-page">
-        <location filename="../main.qml" line="157"/>
+        <location filename="../main.qml" line="140"/>
         <source>Reboot</source>
         <translation>הפעלה מחדש</translation>
     </message>
     <message id="id-about-page">
-        <location filename="../main.qml" line="163"/>
+        <location filename="../main.qml" line="146"/>
         <source>About</source>
         <translation>על אודות</translation>
     </message>
@@ -158,26 +159,6 @@
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
         <translation>הגדרות</translation>
-    </message>
-    <message id="id-tilt-to-wake-on">
-        <location filename="../TiltToWakePage.qml" line="29"/>
-        <source>Tilt-to-wake on</source>
-        <translation>להטות כדי להעיר פעיל</translation>
-    </message>
-    <message id="id-tilt-to-wake-off">
-        <location filename="../TiltToWakePage.qml" line="31"/>
-        <source>Tilt-to-wake off</source>
-        <translation>להטות כדי להעיר כבוי</translation>
-    </message>
-    <message id="id-always-on-display-on">
-        <location filename="../AlwaysOnDisplayPage.qml" line="28"/>
-        <source>Always on Display on</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="id-always-on-display-off">
-        <location filename="../AlwaysOnDisplayPage.qml" line="30"/>
-        <source>Always on Display off</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -5,8 +5,8 @@ QT += dbus multimedia
 
 system(qdbusxml2cpp -p mceiface.h:mceiface.cpp mce.xml)
 
-SOURCES +=     main.cpp volumecontrol.cpp mceiface.cpp tilttowake.cpp
-HEADERS +=     volumecontrol.h tilttowake.h mceiface.h
+SOURCES +=     main.cpp volumecontrol.cpp mceiface.cpp tilttowake.cpp taptowake.cpp
+HEADERS +=     volumecontrol.h tilttowake.h taptowake.h mceiface.h
 RESOURCES +=   resources.qrc
 OTHER_FILES += main.qml \
                ListItem.qml \

@@ -24,6 +24,7 @@
 
 #include "volumecontrol.h"
 #include "tilttowake.h"
+#include "taptowake.h"
 
 int main(int argc, char *argv[])
 {
@@ -31,6 +32,7 @@ int main(int argc, char *argv[])
     QScopedPointer<QQuickView> view(AsteroidApp::createView());
     qmlRegisterType<VolumeControl>("org.asteroid.settings", 1, 0, "VolumeControl");
     qmlRegisterType<TiltToWake>("org.asteroid.settings", 1, 0, "TiltToWake");
+    qmlRegisterType<TapToWake>("org.asteroid.settings", 1, 0, "TapToWake");
     view->setSource(QUrl("qrc:/main.qml"));
     view->resize(app->primaryScreen()->size());
     view->show();

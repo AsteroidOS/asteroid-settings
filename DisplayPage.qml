@@ -24,6 +24,7 @@ import org.asteroid.settings 1.0
 import org.nemomobile.systemsettings 1.0
 
 Item {
+    TapToWake { id: tapToWake }
     TiltToWake { id: tiltToWake }
     DisplaySettings { id: displaySettings }
 
@@ -34,7 +35,7 @@ Item {
 
     Flickable {
         anchors.fill: parent
-        contentHeight: Dims.h(30) + 2*Dims.h(34)
+        contentHeight: Dims.h(30) + 3*Dims.h(34)
         boundsBehavior: Flickable.DragOverBounds
         flickableDirection: Flickable.VerticalFlick
 
@@ -131,6 +132,22 @@ Item {
                 enabled: tiltToWake.available
                 checked: tiltToWake.enabled
                 onCheckedChanged: tiltToWake.enabled = checked
+            }
+
+            Label {
+                //% "Tap-to-wake"
+                text: qsTrId("id-tap-to-wake")
+                font.pixelSize: Dims.l(6)
+                verticalAlignment: Text.AlignVCenter
+                wrapMode: Text.Wrap
+                Layout.maximumWidth: Dims.w(50)
+            }
+
+            Switch {
+                Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
+                width: Dims.l(20)
+                checked: tapToWake.enabled
+                onCheckedChanged: tapToWake.enabled = checked
             }
         }
     }

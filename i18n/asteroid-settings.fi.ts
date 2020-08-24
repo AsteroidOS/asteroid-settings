@@ -92,24 +92,29 @@
         <translation>Bluetooth</translation>
     </message>
     <message id="id-display-page">
-        <location filename="../DisplayPage.qml" line="32"/>
+        <location filename="../DisplayPage.qml" line="33"/>
         <location filename="../main.qml" line="96"/>
         <source>Display</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-brightness">
-        <location filename="../DisplayPage.qml" line="54"/>
+        <location filename="../DisplayPage.qml" line="55"/>
         <source>Brightness</source>
         <translation type="unfinished">Kirkkaus</translation>
     </message>
     <message id="id-always-on-display">
-        <location filename="../DisplayPage.qml" line="103"/>
+        <location filename="../DisplayPage.qml" line="104"/>
         <source>Always on Display</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-tilt-to-wake">
-        <location filename="../DisplayPage.qml" line="119"/>
+        <location filename="../DisplayPage.qml" line="120"/>
         <source>Tilt-to-wake</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-tap-to-wake">
+        <location filename="../DisplayPage.qml" line="139"/>
+        <source>Tap-to-wake</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-sound-page">

@@ -123,5 +123,9 @@
         <source>Tilt-to-wake</source>
         <translation type="unfinished">Nakloniť k prebudeniu</translation>
     </message>
+    <message id="id-tap-to-wake">
+        <source>Tap-to-wake</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

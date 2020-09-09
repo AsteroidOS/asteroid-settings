@@ -110,7 +110,7 @@
     <message id="id-tilt-to-wake">
         <location filename="../DisplayPage.qml" line="120"/>
         <source>Tilt-to-wake</source>
-        <translation type="unfinished">Skakke-vekking</translation>
+        <translation>Skakke-vekking</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../DisplayPage.qml" line="139"/>
@@ -163,6 +163,16 @@
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
         <translation>Innstillinger</translation>
+    </message>
+    <message id="id-tilt-to-wake-on">
+        <location filename="../TiltToWakePage.qml" line="29"/>
+        <source>Tilt-to-wake on</source>
+        <translation>Skakke-vekking på</translation>
+    </message>
+    <message id="id-tilt-to-wake-off">
+        <location filename="../TiltToWakePage.qml" line="31"/>
+        <source>Tilt-to-wake off</source>
+        <translation>Skakke-vekking av</translation>
     </message>
 </context>
 </TS>

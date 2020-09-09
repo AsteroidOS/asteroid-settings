@@ -109,23 +109,23 @@
     </message>
     <message id="id-display-page">
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazení</translation>
     </message>
     <message id="id-brightness">
         <source>Brightness</source>
-        <translation type="unfinished">Jas</translation>
+        <translation>Jas</translation>
     </message>
     <message id="id-always-on-display">
         <source>Always on Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Vždy zapnutý displej</translation>
     </message>
     <message id="id-tilt-to-wake">
         <source>Tilt-to-wake</source>
-        <translation type="unfinished">probuzení/uspání naklopením</translation>
+        <translation>Probuzení naklopením</translation>
     </message>
     <message id="id-tap-to-wake">
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Probuzení klepnutím</translation>
     </message>
 </context>
 </TS>

@@ -109,23 +109,23 @@
     </message>
     <message id="id-display-page">
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekran</translation>
     </message>
     <message id="id-brightness">
         <source>Brightness</source>
-        <translation type="unfinished">Parlaklık</translation>
+        <translation>Parlaklık</translation>
     </message>
     <message id="id-always-on-display">
         <source>Always on Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Sürekli açık ekran</translation>
     </message>
     <message id="id-tilt-to-wake">
         <source>Tilt-to-wake</source>
-        <translation type="unfinished">Eğerek uyandırma</translation>
+        <translation>Eğerek uyandır</translation>
     </message>
     <message id="id-tap-to-wake">
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokunarak uyandır</translation>
     </message>
 </context>
 </TS>

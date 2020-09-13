@@ -95,27 +95,27 @@
         <location filename="../DisplayPage.qml" line="33"/>
         <location filename="../main.qml" line="96"/>
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>화면</translation>
     </message>
     <message id="id-brightness">
         <location filename="../DisplayPage.qml" line="55"/>
         <source>Brightness</source>
-        <translation type="unfinished">밝기</translation>
+        <translation>밝기</translation>
     </message>
     <message id="id-always-on-display">
         <location filename="../DisplayPage.qml" line="104"/>
         <source>Always on Display</source>
-        <translation type="unfinished"></translation>
+        <translation>항상 켜기</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../DisplayPage.qml" line="120"/>
         <source>Tilt-to-wake</source>
-        <translation type="unfinished">시계를 볼 때 화면 켜기</translation>
+        <translation>시계를 볼 때 화면 켜기</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../DisplayPage.qml" line="139"/>
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>탭할 때 화면 켜기</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../main.qml" line="102"/>

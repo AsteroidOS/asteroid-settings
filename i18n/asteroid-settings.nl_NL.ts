@@ -110,7 +110,7 @@
     <message id="id-tilt-to-wake">
         <location filename="../DisplayPage.qml" line="120"/>
         <source>Tilt-to-wake</source>
-        <translation>Kantelen voor activeren</translation>
+        <translation>Kantelen om te ontwaken</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../DisplayPage.qml" line="139"/>

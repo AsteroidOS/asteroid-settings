@@ -109,23 +109,23 @@
     </message>
     <message id="id-display-page">
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>காட்சி</translation>
     </message>
     <message id="id-brightness">
         <source>Brightness</source>
-        <translation type="unfinished">ஒளிர்வு</translation>
+        <translation>பிரகாசம்</translation>
     </message>
     <message id="id-always-on-display">
         <source>Always on Display</source>
-        <translation type="unfinished"></translation>
+        <translation>எப்போதும் காட்சிக்கு</translation>
     </message>
     <message id="id-tilt-to-wake">
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>சாய்த்து-எழுந்திரு</translation>
     </message>
     <message id="id-tap-to-wake">
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>எழுந்திரு என்பதைத் தட்டவும்</translation>
     </message>
 </context>
 </TS>

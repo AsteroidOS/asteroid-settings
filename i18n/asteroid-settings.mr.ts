@@ -95,27 +95,27 @@
         <location filename="../DisplayPage.qml" line="33"/>
         <location filename="../main.qml" line="96"/>
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>प्रदर्शन</translation>
     </message>
     <message id="id-brightness">
         <location filename="../DisplayPage.qml" line="55"/>
         <source>Brightness</source>
-        <translation type="unfinished">ब्राइटनेस</translation>
+        <translation>उज्ज्वलता</translation>
     </message>
     <message id="id-always-on-display">
         <location filename="../DisplayPage.qml" line="104"/>
         <source>Always on Display</source>
-        <translation type="unfinished"></translation>
+        <translation>नेहमी प्रदर्शनावर</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../DisplayPage.qml" line="120"/>
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>टिल्ट टू वेक</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../DisplayPage.qml" line="139"/>
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>टॅप टू वेक</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../main.qml" line="102"/>

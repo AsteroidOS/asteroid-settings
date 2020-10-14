@@ -16,17 +16,17 @@
     <message id="id-connected">
         <location filename="../BluetoothPage.qml" line="32"/>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Izdey</translation>
     </message>
     <message id="id-disconnected">
         <location filename="../BluetoothPage.qml" line="34"/>
         <source>Not connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Ur izdey</translation>
     </message>
     <message id="id-poweroff-warn">
         <location filename="../PoweroffPage.qml" line="29"/>
         <source>Power off AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>Sexsi AsteroidOS</translation>
     </message>
     <message id="id-reboot-warn">
         <location filename="../RebootPage.qml" line="29"/>
@@ -72,24 +72,24 @@
         <location filename="../TimePage.qml" line="40"/>
         <location filename="../main.qml" line="72"/>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Akud</translation>
     </message>
     <message id="id-date-page">
         <location filename="../DatePage.qml" line="31"/>
         <location filename="../main.qml" line="78"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Asakud</translation>
     </message>
     <message id="id-language-page">
         <location filename="../LanguagePage.qml" line="31"/>
         <location filename="../main.qml" line="84"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutlayt</translation>
     </message>
     <message id="id-bluetooth-page">
         <location filename="../main.qml" line="90"/>
         <source>Bluetooth</source>
-        <translation type="unfinished"></translation>
+        <translation>Ablutut</translation>
     </message>
     <message id="id-display-page">
         <location filename="../DisplayPage.qml" line="33"/>
@@ -120,13 +120,13 @@
     <message id="id-sound-page">
         <location filename="../main.qml" line="102"/>
         <source>Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>Imesli</translation>
     </message>
     <message id="id-units-page">
         <location filename="../UnitsPage.qml" line="26"/>
         <location filename="../main.qml" line="110"/>
         <source>Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Iferdas</translation>
     </message>
     <message id="id-wallpaper-page">
         <location filename="../main.qml" line="116"/>
@@ -142,12 +142,12 @@
         <location filename="../USBPage.qml" line="29"/>
         <location filename="../main.qml" line="128"/>
         <source>USB</source>
-        <translation type="unfinished"></translation>
+        <translation>USB</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../main.qml" line="134"/>
         <source>Power Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Sexsi</translation>
     </message>
     <message id="id-reboot-page">
         <location filename="../main.qml" line="140"/>
@@ -157,12 +157,12 @@
     <message id="id-about-page">
         <location filename="../main.qml" line="146"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Γef</translation>
     </message>
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Tisɣal</translation>
     </message>
 </context>
 </TS>

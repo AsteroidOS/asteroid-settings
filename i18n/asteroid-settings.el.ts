@@ -113,19 +113,19 @@
     </message>
     <message id="id-brightness">
         <source>Brightness</source>
-        <translation type="unfinished">Φωτεινότητα</translation>
+        <translation>Φωτεινότητα</translation>
     </message>
     <message id="id-always-on-display">
         <source>Always on Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Πάντα στην οθόνη</translation>
     </message>
     <message id="id-tilt-to-wake">
         <source>Tilt-to-wake</source>
-        <translation type="unfinished">Αφύπνιση με περιστροφή</translation>
+        <translation>Ενεργοποίηση με περιστροφή</translation>
     </message>
     <message id="id-tap-to-wake">
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενεργοποίηση με πάτημα</translation>
     </message>
 </context>
 </TS>

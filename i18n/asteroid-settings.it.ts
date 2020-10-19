@@ -109,23 +109,23 @@
     </message>
     <message id="id-display-page">
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizzare</translation>
     </message>
     <message id="id-brightness">
         <source>Brightness</source>
-        <translation type="unfinished">Luminosità</translation>
+        <translation>Linguaggio</translation>
     </message>
     <message id="id-always-on-display">
         <source>Always on Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Sempre sul display</translation>
     </message>
     <message id="id-tilt-to-wake">
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Inclinare-per-svegliarsi</translation>
     </message>
     <message id="id-tap-to-wake">
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Toccare-per-svegliarsi</translation>
     </message>
 </context>
 </TS>

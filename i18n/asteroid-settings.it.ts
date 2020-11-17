@@ -105,11 +105,11 @@
     </message>
     <message id="id-charging-only">
         <source>Charging only</source>
-        <translation>Solo carica</translation>
+        <translation>Solo ricarica</translation>
     </message>
     <message id="id-display-page">
         <source>Display</source>
-        <translation>Visualizzare</translation>
+        <translation>Schermo</translation>
     </message>
     <message id="id-brightness">
         <source>Brightness</source>
@@ -117,7 +117,7 @@
     </message>
     <message id="id-always-on-display">
         <source>Always on Display</source>
-        <translation>Sempre sul display</translation>
+        <translation>Schermo sempre acceso</translation>
     </message>
     <message id="id-tilt-to-wake">
         <source>Tilt-to-wake</source>
@@ -125,7 +125,7 @@
     </message>
     <message id="id-tap-to-wake">
         <source>Tap-to-wake</source>
-        <translation>Toccare-per-svegliarsi</translation>
+        <translation>Tocca-per-riattivare</translation>
     </message>
 </context>
 </TS>

@@ -109,7 +109,7 @@
     </message>
     <message id="id-display-page">
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Απεικόνιση</translation>
     </message>
     <message id="id-brightness">
         <source>Brightness</source>

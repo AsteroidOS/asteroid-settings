@@ -36,12 +36,12 @@
     <message id="id-sound-percentage">
         <location filename="../SoundPage.qml" line="36"/>
         <source>Volume %1%</source>
-        <translation>Volumen %1%</translation>
+        <translation>Volumen %1 %</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../USBPage.qml" line="35"/>
         <source>Charging only</source>
-        <translation>Sólo carga</translation>
+        <translation>Solo carga</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="37"/>
@@ -61,7 +61,7 @@
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation>Usar formato 12H:</translation>
+        <translation>Usar formato 12 h:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../UnitsPage.qml" line="63"/>
@@ -100,22 +100,22 @@
     <message id="id-brightness">
         <location filename="../DisplayPage.qml" line="55"/>
         <source>Brightness</source>
-        <translation>Brillante</translation>
+        <translation>Brillo</translation>
     </message>
     <message id="id-always-on-display">
         <location filename="../DisplayPage.qml" line="104"/>
         <source>Always on Display</source>
-        <translation>Siempre a la vista</translation>
+        <translation>Pantalla siempre encendida</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../DisplayPage.qml" line="120"/>
         <source>Tilt-to-wake</source>
-        <translation>Inclinarse-para-despertar</translation>
+        <translation>Inclinar para encender</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../DisplayPage.qml" line="139"/>
         <source>Tap-to-wake</source>
-        <translation>Golpee-para-despertar</translation>
+        <translation>Tocar para encender</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../main.qml" line="102"/>

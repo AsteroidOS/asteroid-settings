@@ -21,7 +21,7 @@
     <message id="id-disconnected">
         <location filename="../BluetoothPage.qml" line="34"/>
         <source>Not connected</source>
-        <translation>Не соединен</translation>
+        <translation>Не соединён</translation>
     </message>
     <message id="id-poweroff-warn">
         <location filename="../PoweroffPage.qml" line="29"/>
@@ -61,12 +61,12 @@
     <message id="id-12h-format">
         <location filename="../UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation>Использовать 12h формат:</translation>
+        <translation>Использовать 12-часовой формат:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../UnitsPage.qml" line="63"/>
         <source>Use Fahrenheit:</source>
-        <translation>Использовать градус Фаренгейта:</translation>
+        <translation>Использовать градусы Фаренгейта:</translation>
     </message>
     <message id="id-time-page">
         <location filename="../TimePage.qml" line="40"/>
@@ -105,7 +105,7 @@
     <message id="id-always-on-display">
         <location filename="../DisplayPage.qml" line="104"/>
         <source>Always on Display</source>
-        <translation>Always on Display</translation>
+        <translation>Всегда на экране</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../DisplayPage.qml" line="120"/>
@@ -152,7 +152,7 @@
     <message id="id-reboot-page">
         <location filename="../main.qml" line="140"/>
         <source>Reboot</source>
-        <translation>Перезагрузка</translation>
+        <translation>Перезагрузить</translation>
     </message>
     <message id="id-about-page">
         <location filename="../main.qml" line="146"/>

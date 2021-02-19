@@ -105,22 +105,22 @@
     <message id="id-always-on-display">
         <location filename="../DisplayPage.qml" line="104"/>
         <source>Always on Display</source>
-        <translation>Aktive Bildschirm</translation>
+        <translation>Immer aktiver Bildschirm (AOD)</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../DisplayPage.qml" line="120"/>
         <source>Tilt-to-wake</source>
-        <translation>Neigung zum erwachen</translation>
+        <translation>Neigen zum Aufwachen</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../DisplayPage.qml" line="139"/>
         <source>Tap-to-wake</source>
-        <translation>Drücken zum erwachen</translation>
+        <translation>Tippen zum Aufwachen</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../main.qml" line="102"/>
         <source>Sound</source>
-        <translation>Klang</translation>
+        <translation>Ton</translation>
     </message>
     <message id="id-units-page">
         <location filename="../UnitsPage.qml" line="26"/>
@@ -131,7 +131,7 @@
     <message id="id-wallpaper-page">
         <location filename="../main.qml" line="116"/>
         <source>Wallpaper</source>
-        <translation>Hintergrund</translation>
+        <translation>Hintergrundbild</translation>
     </message>
     <message id="id-watchface-page">
         <location filename="../main.qml" line="122"/>

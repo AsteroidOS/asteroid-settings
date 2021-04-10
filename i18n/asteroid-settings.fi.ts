@@ -95,27 +95,27 @@
         <location filename="../DisplayPage.qml" line="33"/>
         <location filename="../main.qml" line="96"/>
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Näyttö</translation>
     </message>
     <message id="id-brightness">
         <location filename="../DisplayPage.qml" line="55"/>
         <source>Brightness</source>
-        <translation type="unfinished">Kirkkaus</translation>
+        <translation>Kirkkaus</translation>
     </message>
     <message id="id-always-on-display">
         <location filename="../DisplayPage.qml" line="104"/>
         <source>Always on Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Tyyni näyttö (ei sammu)</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../DisplayPage.qml" line="120"/>
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Nosta herättääksesi puhelin</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../DisplayPage.qml" line="139"/>
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Napauta herättääksesi puhelin</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../main.qml" line="102"/>
@@ -126,7 +126,7 @@
         <location filename="../UnitsPage.qml" line="26"/>
         <location filename="../main.qml" line="110"/>
         <source>Units</source>
-        <translation>Yksikköä</translation>
+        <translation>Yksiköt</translation>
     </message>
     <message id="id-wallpaper-page">
         <location filename="../main.qml" line="116"/>
@@ -152,7 +152,7 @@
     <message id="id-reboot-page">
         <location filename="../main.qml" line="140"/>
         <source>Reboot</source>
-        <translation>Uudelleenkäynnistä</translation>
+        <translation>Käynnistä uudelleen</translation>
     </message>
     <message id="id-about-page">
         <location filename="../main.qml" line="146"/>

@@ -1,7 +1,7 @@
 TARGET = asteroid-settings
-CONFIG += asteroidapp
-PKGCONFIG += dbus-1 dbus-glib-1
-QT += dbus multimedia
+CONFIG += asteroidapp link_pkgconfig
+PKGCONFIG += dbus-1 dbus-glib-1 asteroidapp
+QT += dbus multimedia qml quick
 
 system(qdbusxml2cpp -p mceiface.h:mceiface.cpp mce.xml)
 
@@ -26,3 +26,6 @@ OTHER_FILES += main.qml \
 
 lupdate_only{ SOURCES += i18n/asteroid-settings.desktop.h }
 TRANSLATIONS = $$files(i18n/$$TARGET.*.ts)
+
+target.path = /usr/bin/
+INSTALLS += target

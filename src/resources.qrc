@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/ListItem.qml</file>
+        <file>qml/LanguagePage.qml</file>
+        <file>qml/TimePage.qml</file>
+        <file>qml/DatePage.qml</file>
+        <file>qml/BluetoothPage.qml</file>
+        <file>qml/DisplayPage.qml</file>
+        <file>qml/SoundPage.qml</file>
+        <file>qml/UnitsPage.qml</file>
+        <file>qml/WallpaperPage.qml</file>
+        <file>qml/WatchfacePage.qml</file>
+        <file>qml/USBPage.qml</file>
+        <file>qml/PoweroffPage.qml</file>
+        <file>qml/RebootPage.qml</file>
+        <file>qml/AboutPage.qml</file>
+    </qresource>
+</RCC>

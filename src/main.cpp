@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     qmlRegisterType<VolumeControl>("org.asteroid.settings", 1, 0, "VolumeControl");
     qmlRegisterType<TiltToWake>("org.asteroid.settings", 1, 0, "TiltToWake");
     qmlRegisterType<TapToWake>("org.asteroid.settings", 1, 0, "TapToWake");
-    view->setSource(QUrl("qrc:/main.qml"));
+    view->setSource(QUrl("qrc:/qml/main.qml"));
     view->resize(app->primaryScreen()->size());
     view->show();
     return app->exec();

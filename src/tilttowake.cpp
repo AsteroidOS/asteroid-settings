@@ -50,7 +50,6 @@
 #include <QDBusMessage>
 #include <QDBusConnection>
 #include <QDBusArgument>
-#include <dbus/dbus-glib-lowlevel.h>
 #include <QTimer>
 #include <QDebug>
 

@@ -109,7 +109,7 @@
     </message>
     <message id="id-display-page">
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Kijelző</translation>
     </message>
     <message id="id-brightness">
         <source>Brightness</source>
@@ -121,11 +121,11 @@
     </message>
     <message id="id-tilt-to-wake">
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Felébresztés döntéssel</translation>
     </message>
     <message id="id-tap-to-wake">
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Ébresztés koppintással</translation>
     </message>
 </context>
 </TS>

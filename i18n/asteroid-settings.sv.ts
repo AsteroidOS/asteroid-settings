@@ -105,12 +105,12 @@
     <message id="id-always-on-display">
         <location filename="../DisplayPage.qml" line="104"/>
         <source>Always on Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Always on skärm</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../DisplayPage.qml" line="120"/>
         <source>Tilt-to-wake</source>
-        <translation type="unfinished">Skaka för att aktivera</translation>
+        <translation>Skaka för att aktivera</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../DisplayPage.qml" line="139"/>

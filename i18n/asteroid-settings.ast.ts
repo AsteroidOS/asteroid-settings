@@ -16,17 +16,17 @@
     <message id="id-connected">
         <location filename="../BluetoothPage.qml" line="32"/>
         <source>Connected</source>
-        <translation>Coneutóse</translation>
+        <translation>Conectóse</translation>
     </message>
     <message id="id-disconnected">
         <location filename="../BluetoothPage.qml" line="34"/>
         <source>Not connected</source>
-        <translation>Nun se coneutó</translation>
+        <translation>Nun se conectó</translation>
     </message>
     <message id="id-brightness-percentage">
         <location filename="../BrightnessPage.qml" line="36"/>
         <source>Brightness %1%</source>
-        <translation>Brilléu %1%</translation>
+        <translation>Brillu %1%</translation>
     </message>
     <message id="id-poweroff-warn">
         <location filename="../PoweroffPage.qml" line="29"/>
@@ -46,7 +46,7 @@
     <message id="id-charging-only">
         <location filename="../USBPage.qml" line="35"/>
         <source>Charging only</source>
-        <translation>-</translation>
+        <translation></translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="37"/>
@@ -99,7 +99,7 @@
     <message id="id-brightness-page">
         <location filename="../main.qml" line="93"/>
         <source>Brightness</source>
-        <translation>Brilléu</translation>
+        <translation>Brillu</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../main.qml" line="99"/>

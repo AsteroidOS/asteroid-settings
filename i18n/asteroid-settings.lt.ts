@@ -41,7 +41,7 @@
     <message id="id-charging-only">
         <location filename="../USBPage.qml" line="35"/>
         <source>Charging only</source>
-        <translation type="unfinished"></translation>
+        <translation>Tik įkraunama</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../USBPage.qml" line="37"/>
@@ -95,7 +95,7 @@
         <location filename="../DisplayPage.qml" line="33"/>
         <location filename="../main.qml" line="96"/>
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekranas</translation>
     </message>
     <message id="id-brightness">
         <location filename="../DisplayPage.qml" line="55"/>
@@ -105,17 +105,17 @@
     <message id="id-always-on-display">
         <location filename="../DisplayPage.qml" line="104"/>
         <source>Always on Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Visada įjungtas ekranas</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../DisplayPage.qml" line="120"/>
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakreipti, kad pabustų</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../DisplayPage.qml" line="139"/>
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Paliesti, kas pabustų</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../main.qml" line="102"/>
@@ -131,12 +131,12 @@
     <message id="id-wallpaper-page">
         <location filename="../main.qml" line="116"/>
         <source>Wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekrano paveikslėlis</translation>
     </message>
     <message id="id-watchface-page">
         <location filename="../main.qml" line="122"/>
         <source>Watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>Ciferblatas</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../USBPage.qml" line="29"/>
@@ -147,12 +147,12 @@
     <message id="id-poweroff-page">
         <location filename="../main.qml" line="134"/>
         <source>Power Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Išjungti</translation>
     </message>
     <message id="id-reboot-page">
         <location filename="../main.qml" line="140"/>
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Perkrauti</translation>
     </message>
     <message id="id-about-page">
         <location filename="../main.qml" line="146"/>
@@ -162,7 +162,7 @@
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuostatos</translation>
     </message>
 </context>
 </TS>

@@ -95,7 +95,7 @@
         <location filename="../DisplayPage.qml" line="33"/>
         <location filename="../main.qml" line="96"/>
         <source>Display</source>
-        <translation>Wystawa</translation>
+        <translation>Wyświetlacz</translation>
     </message>
     <message id="id-brightness">
         <location filename="../DisplayPage.qml" line="55"/>

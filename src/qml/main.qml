@@ -36,6 +36,7 @@ Application {
     Component { id: unitsLayer;      UnitsPage      { } }
     Component { id: wallpaperLayer;  WallpaperPage  { } }
     Component { id: watchfaceLayer;  WatchfacePage  { } }
+    Component { id: launcherLayer;   LauncherPage  { } }
     Component { id: usbLayer;        USBPage        { } }
     Component { id: poweroffLayer;   PoweroffPage   { } }
     Component { id: rebootLayer;     RebootPage     { } }
@@ -53,7 +54,7 @@ Application {
 
         Flickable {
             function elementsNb() {
-                var nb = 12;
+                var nb = 13;
                 if(DeviceInfo.hasSpeaker) nb ++
                 return nb;
             }
@@ -122,6 +123,12 @@ Application {
                     title: qsTrId("id-watchface-page")
                     iconName: "ios-color-wand-outline"
                     onClicked: layerStack.push(watchfaceLayer)
+                }
+                ListItem {
+                    //% "Launcher"
+                    title: qsTrId("id-launcher-page")
+                    iconName: "ios-apps-outline"
+                    onClicked: layerStack.push(launcherLayer)
                 }
                 ListItem {
                     //% "USB"

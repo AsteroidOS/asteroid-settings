@@ -162,7 +162,7 @@
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation>Nuostatos</translation>
+        <translation>Nustatymai</translation>
     </message>
 </context>
 </TS>

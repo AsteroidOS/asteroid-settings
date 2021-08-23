@@ -115,7 +115,7 @@
     <message id="id-tap-to-wake">
         <location filename="../DisplayPage.qml" line="139"/>
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Tryck-för-att-vakna</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../main.qml" line="102"/>

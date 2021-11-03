@@ -22,11 +22,17 @@ import org.asteroid.controls 1.0
 import org.asteroid.utils 1.0
 import org.asteroid.settings 1.0
 import org.nemomobile.systemsettings 1.0
+import Nemo.Configuration 1.0
 
 Item {
     TapToWake { id: tapToWake }
     TiltToWake { id: tiltToWake }
     DisplaySettings { id: displaySettings }
+    ConfigurationValue {
+        id: useBip
+        key: "/org/asteroidos/settings/use-burn-in-protection"
+        defaultValue: DeviceInfo.needsBurnInProtection
+    }
 
     PageHeader {
         id: title
@@ -113,6 +119,24 @@ Item {
                 width: Dims.l(20)
                 checked: displaySettings.lowPowerModeEnabled
                 onCheckedChanged: displaySettings.lowPowerModeEnabled = checked
+            }
+
+            Label {
+                //% "Burn in protection"
+                text: qsTrId("id-burn-in-protection")
+                font.pixelSize: Dims.l(6)
+                verticalAlignment: Text.AlignVCenter
+                wrapMode: Text.Wrap
+                Layout.maximumWidth: Dims.w(50)
+                visible: DeviceInfo.needsBurnInProtection
+            }
+
+            Switch {
+                Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
+                width: Dims.l(20)
+                checked: useBip.value
+                onCheckedChanged: useBip.value = checked
+                visible: DeviceInfo.needsBurnInProtection
             }
 
             Label {

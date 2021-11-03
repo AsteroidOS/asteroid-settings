@@ -127,5 +127,9 @@
         <source>Tap-to-wake</source>
         <translation>Probuzení klepnutím</translation>
     </message>
+    <message id="id-burn-in-protection">
+        <source>Burn in protection</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

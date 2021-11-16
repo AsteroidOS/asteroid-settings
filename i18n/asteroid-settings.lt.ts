@@ -69,31 +69,31 @@
         <translation>Naudoti Fahrenheit:</translation>
     </message>
     <message id="id-time-page">
-        <location filename="../src/qml/main.qml" line="72"/>
+        <location filename="../src/qml/main.qml" line="73"/>
         <location filename="../src/qml/TimePage.qml" line="40"/>
         <source>Time</source>
         <translation>Laikas</translation>
     </message>
     <message id="id-date-page">
         <location filename="../src/qml/DatePage.qml" line="31"/>
-        <location filename="../src/qml/main.qml" line="78"/>
+        <location filename="../src/qml/main.qml" line="79"/>
         <source>Date</source>
         <translation>Data</translation>
     </message>
     <message id="id-language-page">
         <location filename="../src/qml/LanguagePage.qml" line="31"/>
-        <location filename="../src/qml/main.qml" line="84"/>
+        <location filename="../src/qml/main.qml" line="85"/>
         <source>Language</source>
         <translation>Kalba</translation>
     </message>
     <message id="id-bluetooth-page">
-        <location filename="../src/qml/main.qml" line="90"/>
+        <location filename="../src/qml/main.qml" line="91"/>
         <source>Bluetooth</source>
         <translation>Bluetooth</translation>
     </message>
     <message id="id-display-page">
         <location filename="../src/qml/DisplayPage.qml" line="39"/>
-        <location filename="../src/qml/main.qml" line="96"/>
+        <location filename="../src/qml/main.qml" line="97"/>
         <source>Display</source>
         <translation>Ekranas</translation>
     </message>
@@ -123,44 +123,49 @@
         <translation>Paliesti, kas pabustų</translation>
     </message>
     <message id="id-sound-page">
-        <location filename="../src/qml/main.qml" line="102"/>
+        <location filename="../src/qml/main.qml" line="103"/>
         <source>Sound</source>
         <translation>Garsas</translation>
     </message>
     <message id="id-units-page">
-        <location filename="../src/qml/main.qml" line="110"/>
+        <location filename="../src/qml/main.qml" line="111"/>
         <location filename="../src/qml/UnitsPage.qml" line="26"/>
         <source>Units</source>
         <translation>Vienetai</translation>
     </message>
     <message id="id-wallpaper-page">
-        <location filename="../src/qml/main.qml" line="116"/>
+        <location filename="../src/qml/main.qml" line="117"/>
         <source>Wallpaper</source>
         <translation>Ekrano paveikslėlis</translation>
     </message>
     <message id="id-watchface-page">
-        <location filename="../src/qml/main.qml" line="122"/>
+        <location filename="../src/qml/main.qml" line="123"/>
         <source>Watchface</source>
         <translation>Ciferblatas</translation>
     </message>
+    <message id="id-launcher-page">
+        <location filename="../src/qml/main.qml" line="129"/>
+        <source>Launcher</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="id-usb-page">
-        <location filename="../src/qml/main.qml" line="128"/>
+        <location filename="../src/qml/main.qml" line="135"/>
         <location filename="../src/qml/USBPage.qml" line="29"/>
         <source>USB</source>
         <translation>USB</translation>
     </message>
     <message id="id-poweroff-page">
-        <location filename="../src/qml/main.qml" line="134"/>
+        <location filename="../src/qml/main.qml" line="141"/>
         <source>Power Off</source>
         <translation>Išjungti</translation>
     </message>
     <message id="id-reboot-page">
-        <location filename="../src/qml/main.qml" line="140"/>
+        <location filename="../src/qml/main.qml" line="147"/>
         <source>Reboot</source>
         <translation>Perkrauti</translation>
     </message>
     <message id="id-about-page">
-        <location filename="../src/qml/main.qml" line="146"/>
+        <location filename="../src/qml/main.qml" line="153"/>
         <source>About</source>
         <translation>Apie</translation>
     </message>

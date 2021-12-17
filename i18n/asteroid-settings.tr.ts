@@ -129,11 +129,11 @@
     </message>
     <message id="id-burn-in-protection">
         <source>Burn in protection</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekran yanığı koruması</translation>
     </message>
     <message id="id-launcher-page">
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Başlatıcı</translation>
     </message>
 </context>
 </TS>

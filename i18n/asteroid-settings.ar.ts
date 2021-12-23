@@ -110,17 +110,17 @@
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="126"/>
         <source>Burn in protection</source>
-        <translation type="unfinished"></translation>
+        <translation>الحماية من الاحتراق</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="144"/>
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>إمالة للإيقاظ</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="163"/>
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>انقر للاستيقاظ</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../src/qml/main.qml" line="103"/>
@@ -146,13 +146,13 @@
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="129"/>
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>الواجهة</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="135"/>
         <location filename="../src/qml/USBPage.qml" line="29"/>
         <source>USB</source>
-        <translation type="unfinished"></translation>
+        <translation>يو اس بي</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../src/qml/main.qml" line="141"/>

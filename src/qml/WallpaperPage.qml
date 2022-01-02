@@ -20,6 +20,8 @@ import QtQuick 2.9
 import Qt.labs.folderlistmodel 2.1
 import Nemo.Configuration 1.0
 import org.asteroid.controls 1.0
+import org.asteroid.utils 1.0
+
 
 Item {
 
@@ -76,7 +78,11 @@ Item {
 
                     anchors.fill: parent
                     fillMode: Image.PreserveAspectCrop
-                    source: assetPath + "wallpaperpreview/" + Dims.w(100) / 2 + "/" + fileName
+                    // If a pre-scaled thumbnail file exists, use that.
+                    source: FileInfo.exists((assetPath + "wallpaperpreview/" + Dims.w(50) + "/" + fileName).slice(7)) ?
+                                assetPath + "wallpaperpreview/" + Dims.w(50) + "/" + fileName :
+                                // Else use the full resolution wallpaper with negative impact on performance, as failsafe.
+                                folderModel.folder + "/" + fileName
                     asynchronous: true
                 }
 

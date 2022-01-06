@@ -95,7 +95,7 @@
         <location filename="../src/qml/DisplayPage.qml" line="39"/>
         <location filename="../src/qml/main.qml" line="97"/>
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Skærm</translation>
     </message>
     <message id="id-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="61"/>
@@ -105,7 +105,7 @@
     <message id="id-always-on-display">
         <location filename="../src/qml/DisplayPage.qml" line="110"/>
         <source>Always on Display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skærm altid på</translation>
     </message>
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="126"/>

@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2021 - Timo Könnecke <github.com/eLtMosen>
+ * Copyright (C) 2022 - Timo Könnecke <github.com/eLtMosen>
+ *               2022 - Darrel Griët <dgriet@gmail.com>
  *               2015 - Florent Revest <revestflo@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -17,6 +18,7 @@
  */
 
 import QtQuick 2.9
+import QtGraphicalEffects 1.12
 import Qt.labs.folderlistmodel 2.1
 import Nemo.Configuration 1.0
 import org.asteroid.controls 1.0
@@ -25,19 +27,19 @@ import org.asteroid.utils 1.0
 
 Item {
 
-    property string assetPath: "file:///usr/share/asteroid-launcher/"
+    property string assetPath: "file:///usr/share/asteroid-launcher/wallpapers/"
 
     ConfigurationValue {
         id: wallpaperSource
 
         key: "/desktop/asteroid/background-filename"
-        defaultValue: assetPath + "wallpapers/000-flatmesh.qml"
+        defaultValue: assetPath + "full/000-flatmesh.qml"
     }
 
     FolderListModel {
         id: qmlWallpapersModel
 
-        folder: assetPath + "wallpapers"
+        folder: assetPath + "full"
         nameFilters: ["*.qml"]
     }
 
@@ -51,7 +53,7 @@ Item {
         model: FolderListModel {
             id: folderModel
 
-            folder: assetPath + "wallpapers"
+            folder: assetPath + "full"
             nameFilters: ["*.jpg"]
             onCountChanged: {
                 var i = 0
@@ -79,8 +81,8 @@ Item {
                     anchors.fill: parent
                     fillMode: Image.PreserveAspectCrop
                     // If a pre-scaled thumbnail file exists, use that.
-                    source: FileInfo.exists((assetPath + "wallpaperpreview/" + Dims.w(50) + "/" + fileName).slice(7)) ?
-                                assetPath + "wallpaperpreview/" + Dims.w(50) + "/" + fileName :
+                    source: FileInfo.exists((assetPath + Dims.w(50) + "/" + fileName).slice(7)) ?
+                                assetPath + Dims.w(50) + "/" + fileName :
                                 // Else use the full resolution wallpaper with negative impact on performance, as failsafe.
                                 folderModel.folder + "/" + fileName
                     asynchronous: true
@@ -97,10 +99,16 @@ Item {
                 }
 
                 Rectangle {
+                    id: highlightSelection
+
+                    property bool notSelected: wallpaperSource.value !== folderModel.folder + "/" + fileName &
+                                               wallpaperSource.value !== folderModel.folder + "/" + fileBaseName + ".qml"
+
                     anchors.fill: img
-                    color: "#4D000000"
-                    visible: wallpaperSource.value === folderModel.folder + "/" + fileName |
-                             wallpaperSource.value === folderModel.folder + "/" + fileBaseName + ".qml"
+                    color: "#30000000"
+                    visible: opacity
+                    opacity: notSelected ? 1 : 0
+                    Behavior on opacity { NumberAnimation { duration: 100 } }
                 }
 
                 Icon {
@@ -108,14 +116,25 @@ Item {
                     anchors {
                         bottom: parent.bottom
                         bottomMargin: parent.height * 0.05
-                        right: parent.right
-                        rightMargin: parent.height * 0.05
-
+                        horizontalCenter: parent.horizontalCenter
+                        horizontalCenterOffset: index % 2 ?
+                                                    -parent.height * 0.4 :
+                                                    parent.height * 0.38
                     }
                     height: width
                     width: parent.width * 0.3
                     visible: wallpaperSource.value === folderModel.folder + "/" + fileName |
                              wallpaperSource.value === folderModel.folder + "/" + fileBaseName + ".qml"
+
+                    layer.enabled: visible
+                    layer.effect: DropShadow {
+                        transparentBorder: true
+                        horizontalOffset: 2
+                        verticalOffset: 2
+                        radius: 8.0
+                        samples: 17
+                        color: "#88000000"
+                    }
                 }
             }
         }

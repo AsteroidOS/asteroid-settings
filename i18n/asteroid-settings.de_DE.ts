@@ -146,7 +146,7 @@
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="129"/>
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Starter</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="135"/>

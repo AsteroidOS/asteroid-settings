@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>qml/main.qml</file>
-        <file>qml/ListItem.qml</file>
         <file>qml/LanguagePage.qml</file>
         <file>qml/TimePage.qml</file>
         <file>qml/DatePage.qml</file>

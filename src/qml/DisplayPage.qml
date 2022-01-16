@@ -41,7 +41,7 @@ Item {
 
     Flickable {
         anchors.fill: parent
-        contentHeight: Dims.h(30) + 3*Dims.h(34)
+        contentHeight: Dims.h(30) + 4*Dims.h(34)
         boundsBehavior: Flickable.DragOverBounds
         flickableDirection: Flickable.VerticalFlick
 

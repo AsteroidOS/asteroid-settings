@@ -1,4 +1,6 @@
 /*
+ * Copyright (C) 2022 - Darrel Griët <dgriet@gmail.com>
+ * Copyright (C) 2022 - Timo Könnecke <github.com/eLtMosen>
  * Copyright (C) 2016 - Sylvia van Os <iamsylvie@openmailbox.org>
  * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
  *
@@ -51,111 +53,156 @@ Application {
 
     Component {
         id: firstPageComponent
+        Item {
+            property var icon: ""
 
-        Flickable {
-            function elementsNb() {
-                var nb = 13;
-                if(DeviceInfo.hasSpeaker) nb ++
-                return nb;
+            ListModel {
+                id: layerModel
+                Component.onCompleted: {
+                    append({
+                        //% "Time"
+                        title: qsTrId("id-time-page"),
+                        iconName: "ios-clock-outline",
+                        newLayer: timeLayer
+                    })
+                    append({
+                        //% "Date"
+                        title: qsTrId("id-date-page"),
+                        iconName: "ios-calendar-outline",
+                        newLayer: dateLayer
+                    })
+
+                    append({
+                        //% "Language"
+                        title: qsTrId("id-language-page"),
+                        iconName: "ios-globe-outline",
+                        newLayer: languageLayer
+                    })
+                    append({
+                        //% "Bluetooth"
+                        title: qsTrId("id-bluetooth-page"),
+                        iconName: "ios-bluetooth-outline",
+                        newLayer: bluetoothLayer
+                    })
+                    append({
+                        //% "Display"
+                        title: qsTrId("id-display-page"),
+                        iconName: "ios-sunny-outline",
+                        newLayer: displayLayer
+                    })
+                    if (DeviceInfo.hasSpeaker) {
+                        append({
+                            //% "Sound"
+                            title: qsTrId("id-sound-page"),
+                            iconName: "ios-volume-up",
+                            newLayer: soundLayer
+                        })
+                    }
+                    append({
+                        //% "Units"
+                        title: qsTrId("id-units-page"),
+                        iconName: "ios-speedometer-outline",
+                        newLayer: unitsLayer
+                    })
+                    append({
+                        //% "Wallpaper"
+                        title: qsTrId("id-wallpaper-page"),
+                        iconName: "ios-images-outline",
+                        newLayer: wallpaperLayer
+                    })
+                    append({
+                        //% "Watchface"
+                        title: qsTrId("id-watchface-page"),
+                        iconName: "ios-color-wand-outline",
+                        newLayer: watchfaceLayer
+                    })
+                    append({
+                        //% "Launcher"
+                        title: qsTrId("id-launcher-page"),
+                        iconName: "ios-apps-outline",
+                        newLayer: launcherLayer
+                    })
+                    append({
+                        //% "USB"
+                        title: qsTrId("id-usb-page"),
+                        iconName: "ios-usb",
+                        newLayer: usbLayer
+                    })
+                    append({
+                        //% "Power Off"
+                        title: qsTrId("id-poweroff-page"),
+                        iconName: "ios-power-outline",
+                        newLayer: poweroffLayer
+                    })
+                    append({
+                        //% "Reboot"
+                        title: qsTrId("id-reboot-page"),
+                        iconName: "ios-sync",
+                        newLayer: rebootLayer
+                    })
+                    append({
+                        //% "About"
+                        title: qsTrId("id-about-page"),
+                        iconName: "ios-help-circle-outline",
+                        newLayer: aboutLayer
+                    })
+                }
             }
-            contentHeight: elementsNb()*Dims.h(16) + (DeviceInfo.hasRoundScreen ? Dims.h(20) : 0)
-            contentWidth: width
-            boundsBehavior: Flickable.DragOverBounds
-            flickableDirection: Flickable.VerticalFlick
 
-            Column {
+            Spinner {
+                id: settingsView
                 anchors.fill: parent
+                topOffset: 0.5
+                preferredHighlightBegin: height / 2 - Dims.h(8)
+                preferredHighlightEnd: height / 2 + Dims.h(8)
+                model: layerModel
+                delegate: MouseArea {
+                    property bool isCurr: ListView.isCurrentItem
+                    height: isCurr ? Dims.h(16) : Dims.h(13)
+                    //Behavior on height { NumberAnimation { duration: 200 } }
+                    width: settingsView.width
+                    enabled: !settingsView.dragging
 
-                Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? Dims.h(10) : 0 }
+                    onClicked: layerStack.push(newLayer)
+                    onIsCurrChanged: if (isCurr) icon = iconName
 
-                ListItem {
-                    //% "Time"
-                    title: qsTrId("id-time-page")
-                    iconName: "ios-clock-outline"
-                    onClicked: layerStack.push(timeLayer)
+                    Label {
+                        id: iconText
+                        anchors.fill: parent
+                        verticalAlignment: Text.AlignVCenter
+                        horizontalAlignment: Text.AlignHCenter
+                        font.pixelSize: Dims.l(9)
+                        font.letterSpacing: Dims.l(0.3)
+                        font.styleName: "SemiCondensed Medium"
+                        style: Text.Normal
+                        opacity: isCurr ? 1.0 : 0.6
+                        scale: isCurr ? 1.3 : 0.8
+                        text: title
+                        Behavior on scale   { NumberAnimation { duration: 200 } }
+                        Behavior on opacity { NumberAnimation { duration: 200 } }
+                    }
                 }
-                ListItem {
-                    //% "Date"
-                    title: qsTrId("id-date-page")
-                    iconName: "ios-calendar-outline"
-                    onClicked: layerStack.push(dateLayer)
-                }
-                ListItem {
-                    //% "Language"
-                    title: qsTrId("id-language-page")
-                    iconName: "ios-globe-outline"
-                    onClicked: layerStack.push(languageLayer)
-                }
-                ListItem {
-                    //% "Bluetooth"
-                    title: qsTrId("id-bluetooth-page")
-                    iconName: "ios-bluetooth-outline"
-                    onClicked: layerStack.push(bluetoothLayer)
-                }
-                ListItem {
-                    //% "Display"
-                    title: qsTrId("id-display-page")
-                    iconName: "ios-sunny-outline"
-                    onClicked: layerStack.push(displayLayer)
-                }
-                ListItem {
-                    //% "Sound"
-                    title: qsTrId("id-sound-page")
-                    iconName: "ios-volume-up"
-                    onClicked: layerStack.push(soundLayer)
-                    height: DeviceInfo.hasSpeaker ? Dims.h(16) : 0
-                    clip: true
-                }
-                ListItem {
-                    //% "Units"
-                    title: qsTrId("id-units-page")
-                    iconName: "ios-speedometer-outline"
-                    onClicked: layerStack.push(unitsLayer)
-                }
-                ListItem {
-                    //% "Wallpaper"
-                    title: qsTrId("id-wallpaper-page")
-                    iconName: "ios-images-outline"
-                    onClicked: layerStack.push(wallpaperLayer)
-                }
-                ListItem {
-                    //% "Watchface"
-                    title: qsTrId("id-watchface-page")
-                    iconName: "ios-color-wand-outline"
-                    onClicked: layerStack.push(watchfaceLayer)
-                }
-                ListItem {
-                    //% "Launcher"
-                    title: qsTrId("id-launcher-page")
-                    iconName: "ios-apps-outline"
-                    onClicked: layerStack.push(launcherLayer)
-                }
-                ListItem {
-                    //% "USB"
-                    title: qsTrId("id-usb-page")
-                    iconName: "ios-usb"
-                    onClicked: layerStack.push(usbLayer)
-                }
-                ListItem {
-                    //% "Power Off"
-                    title: qsTrId("id-poweroff-page")
-                    iconName: "ios-power-outline"
-                    onClicked: layerStack.push(poweroffLayer)
-                }
-                ListItem {
-                    //% "Reboot"
-                    title: qsTrId("id-reboot-page")
-                    iconName: "ios-sync"
-                    onClicked: layerStack.push(rebootLayer)
-                }
-                ListItem {
-                    //% "About"
-                    title: qsTrId("id-about-page")
-                    iconName: "ios-help-circle-outline"
-                    onClicked: layerStack.push(aboutLayer)
-                }
+            }
 
-                Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? Dims.h(10) : 0 }
+            Rectangle {
+                height: (settingsView.currentIndex == 0) ? Dims.l(37.5) : Dims.l(24)
+                Behavior on height { NumberAnimation { duration: 200 } }
+                anchors {
+                    top: parent.top
+                    left: parent.left
+                    right: parent.right
+                }
+                color: "#99161162"
+
+                Icon {
+                    name: icon
+                    anchors.top: parent.top
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.topMargin: (settingsView.currentIndex == 0) ? Dims.l(8.75) : Dims.l(2)
+                    width: Dims.l(20)
+                    height: width
+                    Behavior on anchors.topMargin { NumberAnimation { duration: 200 } }
+                }
             }
         }
     }

@@ -72,7 +72,7 @@
         <location filename="../src/qml/main.qml" line="73"/>
         <location filename="../src/qml/TimePage.qml" line="40"/>
         <source>Time</source>
-        <translation>TId</translation>
+        <translation>Klokke</translation>
     </message>
     <message id="id-date-page">
         <location filename="../src/qml/DatePage.qml" line="31"/>

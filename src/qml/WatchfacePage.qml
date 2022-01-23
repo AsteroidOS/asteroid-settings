@@ -165,10 +165,10 @@ Item {
                         fillMode: Image.PreserveAspectFit
                         visible: opacity
                         opacity: watchfaceSource.value === folderModel.folder + "/" + fileName ? 1 : 0
-                        source: FileInfo.exists(wallpaperPreviewImg) ?
+                        source: opacity > 0 ? FileInfo.exists(wallpaperPreviewImg) ?
                                     wallpaperPreviewImg :
-                                    wallpaperSource.value
-                        Behavior on opacity { NumberAnimation { duration: 200 } }
+                                    wallpaperSource.value : ""
+                        Behavior on opacity { NumberAnimation { duration: 100 } }
                     }
 
                     layer.enabled: true

@@ -41,6 +41,7 @@ Item {
         id: wallpaperSource
 
         key: "/desktop/asteroid/background-filename"
+        defaultValue: "file:///usr/share/asteroid-launcher/wallpapers/full/000-flatmesh.qml"
     }
 
     ConfigurationValue {

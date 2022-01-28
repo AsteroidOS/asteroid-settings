@@ -129,11 +129,11 @@
     </message>
     <message id="id-burn-in-protection">
         <source>Burn in protection</source>
-        <translation type="unfinished"></translation>
+        <translation>Ochrana proti popálení</translation>
     </message>
     <message id="id-launcher-page">
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Spouštěč</translation>
     </message>
 </context>
 </TS>

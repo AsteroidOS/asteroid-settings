@@ -110,7 +110,7 @@
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="126"/>
         <source>Burn in protection</source>
-        <translation type="unfinished"></translation>
+        <translation>Proteção de queimadura</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="144"/>

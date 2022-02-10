@@ -24,8 +24,8 @@ import org.asteroid.settings 1.0
 Application {
     id: app
 
-    centerColor: "#4b45b9"
-    outerColor: "#161537"
+    centerColor: "#0044A6"
+    outerColor: "#00010C"
 
     Component { id: timeLayer;       TimePage       { } }
     Component { id: dateLayer;       DatePage       { } }

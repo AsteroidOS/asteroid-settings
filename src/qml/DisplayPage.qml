@@ -33,6 +33,11 @@ Item {
         key: "/org/asteroidos/settings/use-burn-in-protection"
         defaultValue: DeviceInfo.needsBurnInProtection
     }
+    ConfigurationValue {
+        id: userBrightness
+        key: "/org/asteroidos/settings/user-preferred-brightness"
+        defaultValue: 42
+    }
 
     PageHeader {
         id: title
@@ -71,14 +76,15 @@ Item {
                     anchors.top: parent.top
                     anchors.topMargin: Dims.h(10)
                     onClicked: {
-                        var newVal = displaySettings.brightness - 10
+                        var newVal = userBrightness.value - 10
                         if(newVal < 0) newVal = 0
                         displaySettings.brightness = newVal
+                        userBrightness.value = newVal
                     }
                 }
 
                 Label {
-                    text: displaySettings.brightness + "%"
+                    text: userBrightness.value + "%"
                     font.pixelSize: Dims.l(6)
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
@@ -98,9 +104,10 @@ Item {
                     anchors.top: parent.top
                     anchors.topMargin: Dims.h(10)
                     onClicked: {
-                        var newVal = displaySettings.brightness + 10
+                        var newVal = userBrightness.value + 10
                         if(newVal > 100) newVal = 100
                         displaySettings.brightness = newVal
+                        userBrightness.value = newVal
                     }
                 }
             }

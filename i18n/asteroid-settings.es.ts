@@ -102,23 +102,28 @@
         <source>Brightness</source>
         <translation>Brillo</translation>
     </message>
-    <message id="id-always-on-display">
+    <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="110"/>
+        <source>Automatic brightness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-always-on-display">
+        <location filename="../src/qml/DisplayPage.qml" line="126"/>
         <source>Always on Display</source>
         <translation>Pantalla siempre encendida</translation>
     </message>
     <message id="id-burn-in-protection">
-        <location filename="../src/qml/DisplayPage.qml" line="126"/>
+        <location filename="../src/qml/DisplayPage.qml" line="142"/>
         <source>Burn in protection</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-tilt-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="144"/>
+        <location filename="../src/qml/DisplayPage.qml" line="160"/>
         <source>Tilt-to-wake</source>
         <translation>Inclinar para encender</translation>
     </message>
     <message id="id-tap-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="163"/>
+        <location filename="../src/qml/DisplayPage.qml" line="179"/>
         <source>Tap-to-wake</source>
         <translation>Tocar para encender</translation>
     </message>

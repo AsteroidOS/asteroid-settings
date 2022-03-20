@@ -102,23 +102,28 @@
         <source>Brightness</source>
         <translation>밝기</translation>
     </message>
-    <message id="id-always-on-display">
+    <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="110"/>
+        <source>Automatic brightness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-always-on-display">
+        <location filename="../src/qml/DisplayPage.qml" line="126"/>
         <source>Always on Display</source>
         <translation>항상 켜기</translation>
     </message>
     <message id="id-burn-in-protection">
-        <location filename="../src/qml/DisplayPage.qml" line="126"/>
+        <location filename="../src/qml/DisplayPage.qml" line="142"/>
         <source>Burn in protection</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-tilt-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="144"/>
+        <location filename="../src/qml/DisplayPage.qml" line="160"/>
         <source>Tilt-to-wake</source>
         <translation>시계를 볼 때 화면 켜기</translation>
     </message>
     <message id="id-tap-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="163"/>
+        <location filename="../src/qml/DisplayPage.qml" line="179"/>
         <source>Tap-to-wake</source>
         <translation>탭할 때 화면 켜기</translation>
     </message>

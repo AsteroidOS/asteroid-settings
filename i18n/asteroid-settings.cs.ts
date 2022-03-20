@@ -135,5 +135,9 @@
         <source>Launcher</source>
         <translation>Spouštěč</translation>
     </message>
+    <message id="id-automatic-brightness">
+        <source>Automatic brightness</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

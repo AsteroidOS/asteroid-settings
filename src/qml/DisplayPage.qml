@@ -41,7 +41,7 @@ Item {
 
     Flickable {
         anchors.fill: parent
-        contentHeight: Dims.h(30) + 3*Dims.h(34) + (DeviceInfo.needsBurnInProtection ? Dims.h(34) : 0)
+        contentHeight: Dims.h(30) + 4*Dims.h(34) + (DeviceInfo.needsBurnInProtection ? Dims.h(34) : 0)
         boundsBehavior: Flickable.DragOverBounds
         flickableDirection: Flickable.VerticalFlick
 
@@ -103,6 +103,22 @@ Item {
                         displaySettings.brightness = newVal
                     }
                 }
+            }
+
+            Label {
+                //% "Automatic brightness"
+                text: qsTrId("id-automatic-brightness")
+                font.pixelSize: Dims.l(6)
+                verticalAlignment: Text.AlignVCenter
+                wrapMode: Text.Wrap
+                Layout.maximumWidth: Dims.w(50)
+            }
+
+            Switch {
+                Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
+                width: Dims.l(20)
+                checked: displaySettings.ambientLightSensorEnabled
+                onCheckedChanged: displaySettings.ambientLightSensorEnabled = checked
             }
 
             Label {

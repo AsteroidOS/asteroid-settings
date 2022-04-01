@@ -41,7 +41,7 @@ Item {
 
     Flickable {
         anchors.fill: parent
-        contentHeight: Dims.h(30) + 3*Dims.h(34)
+        contentHeight: Dims.h(30) + 3*Dims.h(34) + (DeviceInfo.needsBurnInProtection ? Dims.h(34) : 0)
         boundsBehavior: Flickable.DragOverBounds
         flickableDirection: Flickable.VerticalFlick
 

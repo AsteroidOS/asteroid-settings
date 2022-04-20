@@ -105,7 +105,7 @@
     <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="110"/>
         <source>Automatic brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>स्वयंचलित ब्राइटनेस</translation>
     </message>
     <message id="id-always-on-display">
         <location filename="../src/qml/DisplayPage.qml" line="126"/>

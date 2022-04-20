@@ -137,7 +137,7 @@
     </message>
     <message id="id-automatic-brightness">
         <source>Automatic brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatická úroveň jasu</translation>
     </message>
 </context>
 </TS>

@@ -115,7 +115,7 @@
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="142"/>
         <source>Burn in protection</source>
-        <translation type="unfinished"></translation>
+        <translation>संरक्षणात बर्न करा</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="160"/>
@@ -151,7 +151,7 @@
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="129"/>
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>लाँचर</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="135"/>

@@ -21,7 +21,7 @@
     <message id="id-disconnected">
         <location filename="../src/qml/BluetoothPage.qml" line="34"/>
         <source>Not connected</source>
-        <translation>не з&apos;єднаний</translation>
+        <translation>Не з&apos;єднаний</translation>
     </message>
     <message id="id-poweroff-warn">
         <location filename="../src/qml/PoweroffPage.qml" line="29"/>

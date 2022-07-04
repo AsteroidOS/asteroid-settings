@@ -27,20 +27,22 @@ Application {
     centerColor: "#0044A6"
     outerColor: "#00010C"
 
-    Component { id: timeLayer;       TimePage       { } }
-    Component { id: dateLayer;       DatePage       { } }
-    Component { id: languageLayer;   LanguagePage   { } }
-    Component { id: bluetoothLayer;  BluetoothPage  { } }
-    Component { id: displayLayer;    DisplayPage    { } }
-    Component { id: soundLayer;      SoundPage      { } }
-    Component { id: unitsLayer;      UnitsPage      { } }
-    Component { id: wallpaperLayer;  WallpaperPage  { } }
-    Component { id: watchfaceLayer;  WatchfacePage  { } }
-    Component { id: launcherLayer;   LauncherPage  { } }
-    Component { id: usbLayer;        USBPage        { } }
-    Component { id: poweroffLayer;   PoweroffPage   { } }
-    Component { id: rebootLayer;     RebootPage     { } }
-    Component { id: aboutLayer;      AboutPage      { } }
+    Component { id: timeLayer;                  TimePage       { } }
+    Component { id: dateLayer;                  DatePage       { } }
+    Component { id: languageLayer;              LanguagePage   { } }
+    Component { id: bluetoothLayer;             BluetoothPage  { } }
+    Component { id: displayLayer;               DisplayPage    { } }
+    Component { id: soundLayer;                 SoundPage      { } }
+    Component { id: nightstandLayer;            NightstandPage { } }
+    Component { id: nightstandWatchfaceLayer;   NightstandWatchfacePage { } }
+    Component { id: unitsLayer;                 UnitsPage      { } }
+    Component { id: wallpaperLayer;             WallpaperPage  { } }
+    Component { id: watchfaceLayer;             WatchfacePage  { } }
+    Component { id: launcherLayer;              LauncherPage   { } }
+    Component { id: usbLayer;                   USBPage        { } }
+    Component { id: poweroffLayer;              PoweroffPage   { } }
+    Component { id: rebootLayer;                RebootPage     { } }
+    Component { id: aboutLayer;                 AboutPage      { } }
 
     TiltToWake { id: tiltToWake }
 
@@ -100,6 +102,12 @@ Application {
                     iconName: "ios-volume-up"
                     onClicked: layerStack.push(soundLayer)
                     visible: DeviceInfo.hasSpeaker
+                }
+                ListItem {
+                    //% "Nightstand"
+                    title: qsTrId("id-nightstand-page")
+                    iconName: "ios-moon-outline"
+                    onClicked: layerStack.push(nightstandLayer)
                 }
                 ListItem {
                     //% "Units"

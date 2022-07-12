@@ -109,7 +109,7 @@
     </message>
     <message id="id-display-page">
         <source>Display</source>
-        <translation>显示设置</translation>
+        <translation>显示</translation>
     </message>
     <message id="id-brightness">
         <source>Brightness</source>
@@ -137,7 +137,7 @@
     </message>
     <message id="id-automatic-brightness">
         <source>Automatic brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>自动亮度</translation>
     </message>
 </context>
 </TS>

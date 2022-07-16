@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2022 - Ed Beroset <beroset@ieee.org>
  * Copyright (C) 2017 - Florent Revest <revestflo@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -31,7 +32,8 @@
 
 #include <QObject>
 #include <QMediaPlayer>
-#include <dbus/dbus.h>
+
+class ComMeegoMainVolume2Interface;
 
 class VolumeControl : public QObject
 {
@@ -40,26 +42,18 @@ class VolumeControl : public QObject
 
 public:
     VolumeControl(QObject *parent = NULL);
-    virtual ~VolumeControl();
+    int volume() const { return volumePercentage; }
+    void setVolume(int volume);
 
 signals:
     void volumeChanged();
 
-public slots:
-    void update();
-    void setVolume(int volume);
-
 private:
-    int volume();
-    void openConnection();
-    void setSteps(quint32 currentStep, quint32 stepCount);
-    void addSignalMatch();
-    static DBusHandlerResult signalHandler(DBusConnection *conn, DBusMessage *message, void *control);
-    DBusConnection *dbusConnection;
-    int volumePercentage;
-    quint32 maximumVolume;
-    QMediaPlayer *effect;
-    int reconnectTimeout;
+    void setSteps(uint stepCount, uint currentStep);
+    ComMeegoMainVolume2Interface *m_volIface = nullptr;
+    int volumePercentage = 0;
+    quint32 maximumVolume = 0;
+    QMediaPlayer *effect = nullptr;
 };
 
 #endif

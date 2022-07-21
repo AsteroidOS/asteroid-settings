@@ -1,0 +1,50 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+"http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+ <interface name="com.Meego.MainVolume2">
+  <property name="InterfaceRevision" type="u" access="read"/>
+  <property name="StepCount" type="u" access="read"/>
+  <property name="CurrentStep" type="u" access="readwrite"/>
+  <property name="HighVolumeStep" type="u" access="read"/>
+  <property name="CallState" type="s" access="read"/>
+  <property name="MediaState" type="s" access="read"/>
+  <signal name="StepsUpdated">
+   <arg name="StepCount" type="u"/>
+   <arg name="CurrentStep" type="u"/>
+  </signal>
+  <signal name="NotifyListeningTime">
+   <arg name="ListeningTime" type="u"/>
+  </signal>
+  <signal name="NotifyHighVolume">
+   <arg name="SafeStep" type="u"/>
+  </signal>
+  <signal name="CallStateChanged">
+   <arg name="State" type="s"/>
+  </signal>
+  <signal name="MediaStateChanged">
+   <arg name="State" type="s"/>
+  </signal>
+ </interface>
+ <interface name="org.freedesktop.DBus.Introspectable">
+  <method name="Introspect">
+   <arg name="data" type="s" direction="out"/>
+  </method>
+ </interface>
+ <interface name="org.freedesktop.DBus.Properties">
+  <method name="Get">
+   <arg name="interface_name" type="s" direction="in"/>
+   <arg name="property_name" type="s" direction="in"/>
+   <arg name="value" type="v" direction="out"/>
+  </method>
+  <method name="Set">
+   <arg name="interface_name" type="s" direction="in"/>
+   <arg name="property_name" type="s" direction="in"/>
+   <arg name="value" type="v" direction="in"/>
+  </method>
+  <method name="GetAll">
+   <arg name="interface_name" type="s" direction="in"/>
+   <arg name="props" type="a{sv}" direction="out"/>
+   <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QVariantMap"/>
+  </method>
+ </interface>
+</node>

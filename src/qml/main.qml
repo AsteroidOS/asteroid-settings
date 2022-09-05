@@ -53,20 +53,16 @@ Application {
         id: firstPageComponent
 
         Flickable {
-            function elementsNb() {
-                var nb = 13;
-                if(DeviceInfo.hasSpeaker) nb ++
-                return nb;
-            }
-            contentHeight: elementsNb()*Dims.h(16) + (DeviceInfo.hasRoundScreen ? Dims.h(20) : 0)
+            contentHeight: settingsColumn.implicitHeight
             contentWidth: width
             boundsBehavior: Flickable.DragOverBounds
             flickableDirection: Flickable.VerticalFlick
 
             Column {
+                id: settingsColumn
                 anchors.fill: parent
 
-                Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? Dims.h(10) : 0 }
+                Item { width: parent.width; height: Dims.h(10); visible: DeviceInfo.hasRoundScreen }
 
                 ListItem {
                     //% "Time"
@@ -103,8 +99,7 @@ Application {
                     title: qsTrId("id-sound-page")
                     iconName: "ios-volume-up"
                     onClicked: layerStack.push(soundLayer)
-                    height: DeviceInfo.hasSpeaker ? Dims.h(16) : 0
-                    clip: true
+                    visible: DeviceInfo.hasSpeaker
                 }
                 ListItem {
                     //% "Units"
@@ -155,7 +150,7 @@ Application {
                     onClicked: layerStack.push(aboutLayer)
                 }
 
-                Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? Dims.h(10) : 0 }
+                Item { width: parent.width; height: Dims.h(10); visible: DeviceInfo.hasRoundScreen }
             }
         }
     }

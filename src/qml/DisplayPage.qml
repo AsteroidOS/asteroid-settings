@@ -66,7 +66,6 @@ Item {
 
                 IconButton {
                     iconName: "ios-remove-circle-outline"
-                    edge: undefinedEdge
                     anchors.left: parent.left
                     anchors.top: parent.top
                     anchors.topMargin: Dims.h(10)
@@ -93,7 +92,6 @@ Item {
                     width: Dims.w(20)
                     height: width
                     iconName: "ios-add-circle-outline"
-                    edge: undefinedEdge
                     anchors.right: parent.right
                     anchors.top: parent.top
                     anchors.topMargin: Dims.h(10)

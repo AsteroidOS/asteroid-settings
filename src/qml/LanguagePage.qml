@@ -50,6 +50,11 @@ Item {
 
     IconButton {
         iconName: "ios-checkmark-circle-outline"
+        anchors { 
+            bottom: parent.bottom
+            horizontalCenter: parent.horizontalCenter
+            bottomMargin: Dims.iconButtonMargin
+        }
 
         onClicked: {
             if(langLV.currentIndex == langSettings.currentIndex)

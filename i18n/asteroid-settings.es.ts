@@ -69,31 +69,31 @@
         <translation>Usar Fahrenheit:</translation>
     </message>
     <message id="id-time-page">
-        <location filename="../src/qml/main.qml" line="73"/>
+        <location filename="../src/qml/main.qml" line="71"/>
         <location filename="../src/qml/TimePage.qml" line="40"/>
         <source>Time</source>
         <translation>Hora</translation>
     </message>
     <message id="id-date-page">
         <location filename="../src/qml/DatePage.qml" line="31"/>
-        <location filename="../src/qml/main.qml" line="79"/>
+        <location filename="../src/qml/main.qml" line="77"/>
         <source>Date</source>
         <translation>Fecha</translation>
     </message>
     <message id="id-language-page">
         <location filename="../src/qml/LanguagePage.qml" line="31"/>
-        <location filename="../src/qml/main.qml" line="85"/>
+        <location filename="../src/qml/main.qml" line="83"/>
         <source>Language</source>
         <translation>Idioma</translation>
     </message>
     <message id="id-bluetooth-page">
-        <location filename="../src/qml/main.qml" line="91"/>
+        <location filename="../src/qml/main.qml" line="89"/>
         <source>Bluetooth</source>
         <translation>Bluetooth</translation>
     </message>
     <message id="id-display-page">
         <location filename="../src/qml/DisplayPage.qml" line="39"/>
-        <location filename="../src/qml/main.qml" line="97"/>
+        <location filename="../src/qml/main.qml" line="95"/>
         <source>Display</source>
         <translation>Pantalla</translation>
     </message>
@@ -103,74 +103,80 @@
         <translation>Brillo</translation>
     </message>
     <message id="id-automatic-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="110"/>
+        <location filename="../src/qml/DisplayPage.qml" line="108"/>
         <source>Automatic brightness</source>
         <translation>Brillo automático</translation>
     </message>
     <message id="id-always-on-display">
-        <location filename="../src/qml/DisplayPage.qml" line="126"/>
+        <location filename="../src/qml/DisplayPage.qml" line="124"/>
         <source>Always on Display</source>
         <translation>Pantalla siempre encendida</translation>
     </message>
     <message id="id-burn-in-protection">
-        <location filename="../src/qml/DisplayPage.qml" line="142"/>
+        <location filename="../src/qml/DisplayPage.qml" line="140"/>
         <source>Burn in protection</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-tilt-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="160"/>
+        <location filename="../src/qml/DisplayPage.qml" line="158"/>
         <source>Tilt-to-wake</source>
         <translation>Inclinar para encender</translation>
     </message>
     <message id="id-tap-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="179"/>
+        <location filename="../src/qml/DisplayPage.qml" line="177"/>
         <source>Tap-to-wake</source>
         <translation>Tocar para encender</translation>
     </message>
     <message id="id-sound-page">
-        <location filename="../src/qml/main.qml" line="103"/>
+        <location filename="../src/qml/main.qml" line="101"/>
         <source>Sound</source>
         <translation>Sonido</translation>
     </message>
+    <message id="id-nightstand-page">
+        <location filename="../src/qml/main.qml" line="108"/>
+        <location filename="../src/qml/NightstandPage.qml" line="49"/>
+        <source>Nightstand</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="id-units-page">
-        <location filename="../src/qml/main.qml" line="111"/>
+        <location filename="../src/qml/main.qml" line="114"/>
         <location filename="../src/qml/UnitsPage.qml" line="26"/>
         <source>Units</source>
         <translation>Unidades</translation>
     </message>
     <message id="id-wallpaper-page">
-        <location filename="../src/qml/main.qml" line="117"/>
+        <location filename="../src/qml/main.qml" line="120"/>
         <source>Wallpaper</source>
         <translation>Fondo</translation>
     </message>
     <message id="id-watchface-page">
-        <location filename="../src/qml/main.qml" line="123"/>
+        <location filename="../src/qml/main.qml" line="126"/>
         <source>Watchface</source>
         <translation>Esfera</translation>
     </message>
     <message id="id-launcher-page">
-        <location filename="../src/qml/main.qml" line="129"/>
+        <location filename="../src/qml/main.qml" line="132"/>
         <source>Launcher</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-usb-page">
-        <location filename="../src/qml/main.qml" line="135"/>
+        <location filename="../src/qml/main.qml" line="138"/>
         <location filename="../src/qml/USBPage.qml" line="29"/>
         <source>USB</source>
         <translation>USB</translation>
     </message>
     <message id="id-poweroff-page">
-        <location filename="../src/qml/main.qml" line="141"/>
+        <location filename="../src/qml/main.qml" line="144"/>
         <source>Power Off</source>
         <translation>Apagar</translation>
     </message>
     <message id="id-reboot-page">
-        <location filename="../src/qml/main.qml" line="147"/>
+        <location filename="../src/qml/main.qml" line="150"/>
         <source>Reboot</source>
         <translation>Reiniciar</translation>
     </message>
     <message id="id-about-page">
-        <location filename="../src/qml/main.qml" line="153"/>
+        <location filename="../src/qml/main.qml" line="156"/>
         <source>About</source>
         <translation>Acerca de</translation>
     </message>
@@ -178,6 +184,103 @@
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
         <translation>Configuración</translation>
+    </message>
+    <message id="id-nightstand-enable">
+        <location filename="../src/qml/NightstandPage.qml" line="64"/>
+        <source>Enable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-nightstand-brightness">
+        <location filename="../src/qml/NightstandPage.qml" line="77"/>
+        <source>Brightness</source>
+        <oldsource>Nightstand Brightness</oldsource>
+        <translation type="unfinished">Brillo</translation>
+    </message>
+    <message id="id-nightstand-delay">
+        <location filename="../src/qml/NightstandPage.qml" line="97"/>
+        <source>Delay</source>
+        <oldsource>Nightstand delay</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-nightstand-watchface">
+        <location filename="../src/qml/NightstandPage.qml" line="134"/>
+        <source>Select watchface</source>
+        <oldsource>select nightstand watchface</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>AboutPage</name>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="59"/>
+        <source>Build ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="60"/>
+        <source>Codename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="61"/>
+        <source>Host name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="62"/>
+        <source>WLAN MAC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="63"/>
+        <source>IMEI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="64"/>
+        <source>Serial number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="65"/>
+        <source>Total disk space</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="65"/>
+        <location filename="../src/qml/AboutPage.qml" line="66"/>
+        <source>%L1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="66"/>
+        <source>Available disk space</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="68"/>
+        <source>Display size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="68"/>
+        <source>W</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="68"/>
+        <source>H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="69"/>
+        <source>Kernel version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="70"/>
+        <source>Qt version</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

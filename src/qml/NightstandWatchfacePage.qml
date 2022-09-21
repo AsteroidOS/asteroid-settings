@@ -26,14 +26,15 @@ import Nemo.Configuration 1.0
 import Nemo.Time 1.0
 
 Item {
+
     property alias displayAmbient: compositor.displayAmbient
     property string assetPath: "file:///usr/share/asteroid-launcher/"
-    property alias watchface: watchfaceSource.value
+    property alias watchface: watchfaceNightstandSource.value
 
     ConfigurationValue {
-        id: watchfaceSource
-        key: "/desktop/asteroid/watchface"
-        defaultValue: assetPath + "watchfaces/000-default-digital.qml"
+        id: watchfaceNightstandSource
+        key: "/desktop/asteroid/nightstand/watchface"
+        defaultValue: assetPath + "watchfaces/005-analog-nordic.qml"
     }
 
     ConfigurationValue {

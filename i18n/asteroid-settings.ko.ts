@@ -105,7 +105,7 @@
     <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="110"/>
         <source>Automatic brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>자동 밝기</translation>
     </message>
     <message id="id-always-on-display">
         <location filename="../src/qml/DisplayPage.qml" line="126"/>
@@ -115,7 +115,7 @@
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="142"/>
         <source>Burn in protection</source>
-        <translation type="unfinished"></translation>
+        <translation>번인 보호</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="160"/>
@@ -151,7 +151,7 @@
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="129"/>
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>런처</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="135"/>

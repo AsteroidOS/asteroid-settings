@@ -188,19 +188,19 @@
     <message id="id-nightstand-enable">
         <location filename="../src/qml/NightstandPage.qml" line="64"/>
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivieren</translation>
     </message>
     <message id="id-nightstand-brightness">
         <location filename="../src/qml/NightstandPage.qml" line="77"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation type="unfinished">Helligkeit</translation>
+        <translation>Helligkeit</translation>
     </message>
     <message id="id-nightstand-delay">
         <location filename="../src/qml/NightstandPage.qml" line="97"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Verzögerung</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="134"/>
@@ -219,12 +219,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="60"/>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>Codename</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="61"/>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>Hostname</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="62"/>
@@ -234,17 +234,17 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="63"/>
         <source>IMEI</source>
-        <translation type="unfinished"></translation>
+        <translation>IMEI</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="64"/>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>Seriennummer</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="65"/>
         <source>Total disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Gesamter Festplattenspeicher</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="65"/>
@@ -255,12 +255,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="66"/>
         <source>Available disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Verfügbarer Festplattenspeicher</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="68"/>
         <source>Display size</source>
-        <translation type="unfinished"></translation>
+        <translation>Anzeigegröße</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="68"/>
@@ -275,12 +275,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="69"/>
         <source>Kernel version</source>
-        <translation type="unfinished"></translation>
+        <translation>Kernel-Version</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="70"/>
         <source>Qt version</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt-Version</translation>
     </message>
 </context>
 </TS>

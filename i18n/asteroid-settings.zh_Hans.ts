@@ -141,85 +141,85 @@
     </message>
     <message id="id-nightstand-page">
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>床头柜</translation>
     </message>
     <message id="id-nightstand-enable">
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>启用</translation>
     </message>
     <message id="id-nightstand-brightness">
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation type="unfinished">亮度设置</translation>
+        <translation>亮度</translation>
     </message>
     <message id="id-nightstand-delay">
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>延迟</translation>
     </message>
     <message id="id-nightstand-watchface">
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>选择表盘</translation>
     </message>
 </context>
 <context>
     <name>AboutPage</name>
     <message>
         <source>Build ID</source>
-        <translation type="unfinished"></translation>
+        <translation>内部版本号</translation>
     </message>
     <message>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>代号</translation>
     </message>
     <message>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>主机名</translation>
     </message>
     <message>
         <source>WLAN MAC</source>
-        <translation type="unfinished"></translation>
+        <translation>WLAN MAC</translation>
     </message>
     <message>
         <source>IMEI</source>
-        <translation type="unfinished"></translation>
+        <translation>IMEI</translation>
     </message>
     <message>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>序列号</translation>
     </message>
     <message>
         <source>Total disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>总磁盘空间</translation>
     </message>
     <message>
         <source>%L1</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1</translation>
     </message>
     <message>
         <source>Available disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>可用磁盘空间</translation>
     </message>
     <message>
         <source>Display size</source>
-        <translation type="unfinished"></translation>
+        <translation>显示屏尺寸</translation>
     </message>
     <message>
         <source>W</source>
-        <translation type="unfinished"></translation>
+        <translation>W</translation>
     </message>
     <message>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>H</translation>
     </message>
     <message>
         <source>Kernel version</source>
-        <translation type="unfinished"></translation>
+        <translation>内核版本</translation>
     </message>
     <message>
         <source>Qt version</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt 版本</translation>
     </message>
 </context>
 </TS>

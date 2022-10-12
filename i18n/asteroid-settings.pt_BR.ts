@@ -188,7 +188,7 @@
     <message id="id-nightstand-enable">
         <location filename="../src/qml/NightstandPage.qml" line="64"/>
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar</translation>
     </message>
     <message id="id-nightstand-brightness">
         <location filename="../src/qml/NightstandPage.qml" line="77"/>
@@ -214,12 +214,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="59"/>
         <source>Build ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID da Build</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="60"/>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>Codinome</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="61"/>
@@ -239,23 +239,23 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="64"/>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>Número de série</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="65"/>
         <source>Total disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Espaço total de disco</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="65"/>
         <location filename="../src/qml/AboutPage.qml" line="66"/>
         <source>%L1</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="66"/>
         <source>Available disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Espaço de disco disponível</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="68"/>
@@ -265,22 +265,22 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="68"/>
         <source>W</source>
-        <translation type="unfinished"></translation>
+        <translation>W</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="68"/>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>H</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="69"/>
         <source>Kernel version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versão do Kernel</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="70"/>
         <source>Qt version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versão do QT</translation>
     </message>
 </context>
 </TS>

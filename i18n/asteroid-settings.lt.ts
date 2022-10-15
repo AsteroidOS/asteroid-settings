@@ -105,7 +105,7 @@
     <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="108"/>
         <source>Automatic brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatinis ryškumas</translation>
     </message>
     <message id="id-always-on-display">
         <location filename="../src/qml/DisplayPage.qml" line="124"/>
@@ -136,7 +136,7 @@
         <location filename="../src/qml/main.qml" line="108"/>
         <location filename="../src/qml/NightstandPage.qml" line="49"/>
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>Naktinis staliukas</translation>
     </message>
     <message id="id-units-page">
         <location filename="../src/qml/main.qml" line="114"/>
@@ -188,25 +188,25 @@
     <message id="id-nightstand-enable">
         <location filename="../src/qml/NightstandPage.qml" line="64"/>
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>Įjungti</translation>
     </message>
     <message id="id-nightstand-brightness">
         <location filename="../src/qml/NightstandPage.qml" line="77"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation type="unfinished">Ryškumas</translation>
+        <translation>Ryškumas</translation>
     </message>
     <message id="id-nightstand-delay">
         <location filename="../src/qml/NightstandPage.qml" line="97"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Atidėjimas</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="134"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Pasirinkite laikrodžio veidą</translation>
     </message>
 </context>
 <context>
@@ -214,73 +214,73 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="59"/>
         <source>Build ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Versijos ID</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="60"/>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>Kodinis pavadinimas</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="61"/>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>Pagrindinio kompiuterio vardas</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="62"/>
         <source>WLAN MAC</source>
-        <translation type="unfinished"></translation>
+        <translation>WLAN MAC</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="63"/>
         <source>IMEI</source>
-        <translation type="unfinished"></translation>
+        <translation>IMEI</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="64"/>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>Serijos numeris</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="65"/>
         <source>Total disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Iš viso vietos diske</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="65"/>
         <location filename="../src/qml/AboutPage.qml" line="66"/>
         <source>%L1</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="66"/>
         <source>Available disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Turima disko vieta</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="68"/>
         <source>Display size</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekrano dydis</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="68"/>
         <source>W</source>
-        <translation type="unfinished"></translation>
+        <translation>Plotis</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="68"/>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>Aukštis</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="69"/>
         <source>Kernel version</source>
-        <translation type="unfinished"></translation>
+        <translation>Branduolio versija</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="70"/>
         <source>Qt version</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt versija</translation>
     </message>
 </context>
 </TS>

@@ -113,7 +113,7 @@
     </message>
     <message id="id-brightness">
         <source>Brightness</source>
-        <translation>Linguaggio</translation>
+        <translation>Luminosità</translation>
     </message>
     <message id="id-always-on-display">
         <source>Always on Display</source>
@@ -129,97 +129,97 @@
     </message>
     <message id="id-burn-in-protection">
         <source>Burn in protection</source>
-        <translation type="unfinished"></translation>
+        <translation>Protezione contro il &quot;burn-in&quot;</translation>
     </message>
     <message id="id-launcher-page">
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>App Launcher</translation>
     </message>
     <message id="id-automatic-brightness">
         <source>Automatic brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Luminosità automatica</translation>
     </message>
     <message id="id-nightstand-page">
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>Modalità Comodino</translation>
     </message>
     <message id="id-nightstand-enable">
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilita</translation>
     </message>
     <message id="id-nightstand-brightness">
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation type="unfinished">Linguaggio</translation>
+        <translation>Luminosità</translation>
     </message>
     <message id="id-nightstand-delay">
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Ritardo</translation>
     </message>
     <message id="id-nightstand-watchface">
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona il quadrante</translation>
     </message>
 </context>
 <context>
     <name>AboutPage</name>
     <message>
         <source>Build ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID Build</translation>
     </message>
     <message>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome in codice</translation>
     </message>
     <message>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome dell&apos;host</translation>
     </message>
     <message>
         <source>WLAN MAC</source>
-        <translation type="unfinished"></translation>
+        <translation>MAC WLAN</translation>
     </message>
     <message>
         <source>IMEI</source>
-        <translation type="unfinished"></translation>
+        <translation>IMEI</translation>
     </message>
     <message>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>Numero seriale</translation>
     </message>
     <message>
         <source>Total disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Spazio totale sul disco</translation>
     </message>
     <message>
         <source>%L1</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1</translation>
     </message>
     <message>
         <source>Available disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Spazio disponibile sul disco</translation>
     </message>
     <message>
         <source>Display size</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensione schermo</translation>
     </message>
     <message>
         <source>W</source>
-        <translation type="unfinished"></translation>
+        <translation>W</translation>
     </message>
     <message>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>H</translation>
     </message>
     <message>
         <source>Kernel version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versione del kernel</translation>
     </message>
     <message>
         <source>Qt version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versione di Qt</translation>
     </message>
 </context>
 </TS>

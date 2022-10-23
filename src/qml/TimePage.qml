@@ -77,7 +77,7 @@ Item {
     Component.onCompleted: {
         var hour = wallClock.time.getHours();
         if(use12H.value) {
-            amPmLV.currentIndex = hour / 12;
+            amPmLV.positionViewAtIndex(hour / 12, ListView.SnapPosition);
             hour = hour % 12;
         }
         hourLV.currentIndex = hour;

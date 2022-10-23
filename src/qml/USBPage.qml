@@ -70,10 +70,10 @@ Item {
 
     Component.onCompleted: {
         usbmodedDbus.typedCall('get_config', [], function (mode) {
-            if     (mode == "mtp_mode")       usbModeLV.currentIndex = 3
-            else if(mode == "developer_mode") usbModeLV.currentIndex = 2
-            else if(mode == "adb_mode")       usbModeLV.currentIndex = 1
-            else  /*mode == "charging_only"*/ usbModeLV.currentIndex = 0
+            if     (mode == "mtp_mode")       usbModeLV.positionViewAtIndex(3, ListView.SnapPosition)
+            else if(mode == "developer_mode") usbModeLV.positionViewAtIndex(2, ListView.SnapPosition)
+            else if(mode == "adb_mode")       usbModeLV.positionViewAtIndex(1, ListView.SnapPosition)
+            else  /*mode == "charging_only"*/ usbModeLV.positionViewAtIndex(0, ListView.SnapPosition)
         });
     }
 

@@ -136,7 +136,7 @@
         <location filename="../src/qml/main.qml" line="108"/>
         <location filename="../src/qml/NightstandPage.qml" line="49"/>
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nachttisch</translation>
     </message>
     <message id="id-units-page">
         <location filename="../src/qml/main.qml" line="114"/>
@@ -206,7 +206,7 @@
         <location filename="../src/qml/NightstandPage.qml" line="134"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Zifferblatt wählen</translation>
     </message>
 </context>
 <context>
@@ -214,7 +214,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="59"/>
         <source>Build ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Buildnummer</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="60"/>

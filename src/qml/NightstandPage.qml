@@ -26,6 +26,28 @@ import org.nemomobile.systemsettings 1.0
 import Nemo.Configuration 1.0
 
 Item {
+    property alias nightstandwatchface: watchfaceNightstandSource.value
+    property alias regularwatchface: watchfaceSource.value
+    property string assetPath: "file:///usr/share/asteroid-launcher/"
+
+    ConfigurationValue {
+        id: nightstandTracksRegularWatchface
+        key: "/desktop/asteroid/nightstand/samewatchface"
+        defaultValue: true
+    }
+
+    ConfigurationValue {
+        id: watchfaceSource
+        key: "/desktop/asteroid/watchface"
+        defaultValue: assetPath + "watchfaces/000-default-digital.qml"
+    }
+
+    ConfigurationValue {
+        id: watchfaceNightstandSource
+        key: "/desktop/asteroid/nightstand/watchface"
+        defaultValue: assetPath + "watchfaces/000-default-digital.qml"
+    }
+
     ConfigurationValue {
         id: nightstandBrightness
         key: "/desktop/asteroid/nightstand/brightness"
@@ -110,40 +132,20 @@ Item {
                 }
             }
 
-            Item {
+            LabeledSwitch {
+                //% "Use Custom Watchface"
+                text: qsTrId("id-nightstand-custom-watchface")
                 width: parent.width
                 height: Dims.l(20)
                 opacity: nightstandEnabled.value ? 1.0 : 0.4
 		enabled: nightstandEnabled.value
-
-                MouseArea {
-                    id: mouseArea
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    onClicked: layerStack.push(nightstandWatchfaceLayer)
-                }
-
-                Rectangle {
-                    anchors.fill: parent
-                    color: "white"
-                    opacity: mouseArea.containsPress ? 0.2 : 0
-                }
-
-                Label {
-                    //% "Select watchface"
-                    text: qsTrId("id-nightstand-watchface")
-                    font.pixelSize: Dims.l(6)
-                    verticalAlignment: Text.AlignVCenter
-                    height: parent.height
-                    width: parent.width * 0.7143
-                    wrapMode: Text.Wrap
-                }
-                Icon {
-                    id: nextButton
-                    name: "ios-arrow-dropright"
-                    height: parent.height
-                    width: height
-                    anchors.right: parent.right
+                checked: nightstandTracksRegularWatchface.value
+                onCheckedChanged: {
+                    if (checked) {
+                        layerStack.push(nightstandWatchfaceLayer)
+                    } else {
+                        nightstandwatchface = regularwatchface
+                    }
                 }
             }
 

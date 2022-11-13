@@ -34,7 +34,7 @@ Item {
     ConfigurationValue {
         id: watchfaceNightstandSource
         key: "/desktop/asteroid/nightstand/watchface"
-        defaultValue: assetPath + "watchfaces/005-analog-nordic.qml"
+        defaultValue: assetPath + "watchfaces/000-default-digital.qml"
     }
 
     ConfigurationValue {

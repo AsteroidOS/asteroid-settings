@@ -27,7 +27,6 @@ import Nemo.Time 1.0
 
 Item {
 
-    property alias displayAmbient: compositor.displayAmbient
     property string assetPath: "file:///usr/share/asteroid-launcher/"
     property alias watchface: watchfaceNightstandSource.value
 
@@ -41,17 +40,6 @@ Item {
         id: wallpaperSource
         key: "/desktop/asteroid/background-filename"
         defaultValue: "file:///usr/share/asteroid-launcher/wallpapers/full/000-flatmesh.qml"
-    }
-
-    ConfigurationValue {
-        id: use12H
-        key: "/org/asteroidos/settings/use-12h-format"
-        defaultValue: false
-    }
-
-    QtObject {
-        id: compositor
-        property bool displayAmbient: false
     }
 
     WatchfaceSelector {

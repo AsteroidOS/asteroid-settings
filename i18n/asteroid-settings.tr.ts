@@ -141,7 +141,7 @@
     </message>
     <message id="id-nightstand-page">
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>Komodin</translation>
     </message>
     <message id="id-nightstand-enable">
         <source>Enable</source>
@@ -160,14 +160,14 @@
     <message id="id-nightstand-watchface">
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation>Saat yüzünü seçin</translation>
+        <translation>Saat yüzünü seç</translation>
     </message>
 </context>
 <context>
     <name>AboutPage</name>
     <message>
         <source>Build ID</source>
-        <translation type="unfinished"></translation>
+        <translation>İnşa kimliği</translation>
     </message>
     <message>
         <source>Codename</source>
@@ -207,11 +207,11 @@
     </message>
     <message>
         <source>W</source>
-        <translation type="unfinished"></translation>
+        <translation>G</translation>
     </message>
     <message>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>Y</translation>
     </message>
     <message>
         <source>Kernel version</source>

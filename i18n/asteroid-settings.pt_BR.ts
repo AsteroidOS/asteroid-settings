@@ -194,13 +194,13 @@
         <location filename="../src/qml/NightstandPage.qml" line="77"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation type="unfinished">Brilho</translation>
+        <translation>Brilho</translation>
     </message>
     <message id="id-nightstand-delay">
         <location filename="../src/qml/NightstandPage.qml" line="97"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Atraso</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="134"/>

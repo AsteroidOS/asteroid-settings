@@ -224,7 +224,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="61"/>
         <source>Host name</source>
-        <translation>Nome do Hospedeiro</translation>
+        <translation>Nome do hospedeiro</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="62"/>

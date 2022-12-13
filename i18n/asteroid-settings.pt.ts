@@ -194,7 +194,7 @@
         <location filename="../src/qml/NightstandPage.qml" line="77"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation type="unfinished">Brilho</translation>
+        <translation>Brilho</translation>
     </message>
     <message id="id-nightstand-delay">
         <location filename="../src/qml/NightstandPage.qml" line="97"/>
@@ -206,7 +206,7 @@
         <location filename="../src/qml/NightstandPage.qml" line="134"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Selecione a face do relógio</translation>
     </message>
 </context>
 <context>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="61"/>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome do host</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="62"/>

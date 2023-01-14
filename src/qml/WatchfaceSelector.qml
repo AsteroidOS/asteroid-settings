@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2022 - Timo Könnecke <github.com/eLtMosen>
+ * Copyright (C) 2023 - Arseniy Movshev <dodoradio@outlook.com>
+ *               2022 - Timo Könnecke <github.com/eLtMosen>
  *               2022 - Darrel Griët <dgriet@gmail.com>
  *               2015 - Florent Revest <revestflo@gmail.com>
  *
@@ -150,36 +151,28 @@ Item {
                     }
                 }
 
-                Icon {
-                    name: "ios-checkmark-circle"
-
-                    z: 100
-                    width: parent.width * .3
-                    height: width
-                    visible: watchface === folderModel.folder + "/" + fileName
-                    anchors {
+                Rectangle {
+                    id: textContainer
+                    anchors { 
                         bottom: parent.bottom
-                        bottomMargin: DeviceInfo.hasRoundScreen ?
-                                          -parent.height * .03 :
-                                          -parent.height * .08
-                        horizontalCenter: parent.horizontalCenter
-                        horizontalCenterOffset: index % 2 ?
-                                                    DeviceInfo.hasRoundScreen ?
-                                                        -parent.height * .45 :
-                                                        -parent.height * .40 :
-                                                        DeviceInfo.hasRoundScreen ?
-                                                            parent.height * .45 :
-                                                            parent.height * .40
+                        left: parent.left
+                        right: parent.right
+                        margins: parent.width*0.05
                     }
-
-                    layer.enabled: visible
-                    layer.effect: DropShadow {
-                        transparentBorder: true
-                        horizontalOffset: 2
-                        verticalOffset: 2
-                        radius: 8.0
-                        samples: 17
-                        color: "#88000000"
+                    radius: height*0.4
+                    height: parent.height*0.17
+                    color: "#000000"
+                    opacity: 0.6
+                    visible: watchface === folderModel.folder + "/" + fileName
+                    Marquee {
+                        text: fileName.replace(".qml","")
+                        color: "#FFFFFF"
+                        anchors {
+                            fill: parent
+                            leftMargin: parent.width*0.05
+                            rightMargin: parent.width*0.05
+                        }
+                        font.pixelSize: parent.height*0.7
                     }
                 }
             }

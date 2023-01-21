@@ -136,7 +136,7 @@
         <location filename="../src/qml/main.qml" line="108"/>
         <location filename="../src/qml/NightstandPage.qml" line="49"/>
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>Nightstand</translation>
     </message>
     <message id="id-units-page">
         <location filename="../src/qml/main.qml" line="114"/>
@@ -157,7 +157,7 @@
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="132"/>
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Launcher</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="138"/>
@@ -188,25 +188,25 @@
     <message id="id-nightstand-enable">
         <location filename="../src/qml/NightstandPage.qml" line="64"/>
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>Enable</translation>
     </message>
     <message id="id-nightstand-brightness">
         <location filename="../src/qml/NightstandPage.qml" line="77"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation type="unfinished">Brightness</translation>
+        <translation>Brightness</translation>
     </message>
     <message id="id-nightstand-delay">
         <location filename="../src/qml/NightstandPage.qml" line="97"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Delay</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="134"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Select watchface</translation>
     </message>
 </context>
 <context>
@@ -214,17 +214,17 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="59"/>
         <source>Build ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Build ID</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="60"/>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>Codename</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="61"/>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>Host name</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="62"/>

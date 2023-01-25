@@ -71,7 +71,7 @@ Item {
             Column {
                 width: parent.width
                 opacity: nightstandEnabled.value ? 1.0 : 0.4
-		enabled: nightstandEnabled.value
+                enabled: nightstandEnabled.value
                 Label {
                     //% "Brightness"
                     text: qsTrId("id-nightstand-brightness")
@@ -91,7 +91,7 @@ Item {
             Column {
                 width: parent.width
                 opacity: nightstandEnabled.value ? 1.0 : 0.4
-		enabled: nightstandEnabled.value
+                enabled: nightstandEnabled.value
                 Label {
                     //% "Delay"
                     text: qsTrId("id-nightstand-delay")
@@ -114,7 +114,7 @@ Item {
                 width: parent.width
                 height: Dims.l(20)
                 opacity: nightstandEnabled.value ? 1.0 : 0.4
-		enabled: nightstandEnabled.value
+                enabled: nightstandEnabled.value
 
                 MouseArea {
                     id: mouseArea

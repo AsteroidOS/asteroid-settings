@@ -129,97 +129,97 @@
     </message>
     <message id="id-burn-in-protection">
         <source>Burn in protection</source>
-        <translation type="unfinished"></translation>
+        <translation>Ochrana pred vypaľovaním</translation>
     </message>
     <message id="id-launcher-page">
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Spúšťač</translation>
     </message>
     <message id="id-automatic-brightness">
         <source>Automatic brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatický jas</translation>
     </message>
     <message id="id-nightstand-page">
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>Stojan</translation>
     </message>
     <message id="id-nightstand-enable">
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>Povoliť</translation>
     </message>
     <message id="id-nightstand-brightness">
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation type="unfinished">Jas</translation>
+        <translation>Jas</translation>
     </message>
     <message id="id-nightstand-delay">
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Oneskorenie</translation>
     </message>
     <message id="id-nightstand-watchface">
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Zvoliť ciferník</translation>
     </message>
 </context>
 <context>
     <name>AboutPage</name>
     <message>
         <source>Build ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID zostavenia</translation>
     </message>
     <message>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>Kódové označenie</translation>
     </message>
     <message>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>Názov zariadenia</translation>
     </message>
     <message>
         <source>WLAN MAC</source>
-        <translation type="unfinished"></translation>
+        <translation>WLAN MAC</translation>
     </message>
     <message>
         <source>IMEI</source>
-        <translation type="unfinished"></translation>
+        <translation>IMEI</translation>
     </message>
     <message>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>Sériové číslo</translation>
     </message>
     <message>
         <source>Total disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Celková kapacita úložiska</translation>
     </message>
     <message>
         <source>%L1</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1</translation>
     </message>
     <message>
         <source>Available disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Dostupné miesto na úložisku</translation>
     </message>
     <message>
         <source>Display size</source>
-        <translation type="unfinished"></translation>
+        <translation>Veľkosť displeja</translation>
     </message>
     <message>
         <source>W</source>
-        <translation type="unfinished"></translation>
+        <translation>W</translation>
     </message>
     <message>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>H</translation>
     </message>
     <message>
         <source>Kernel version</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzia jadra</translation>
     </message>
     <message>
         <source>Qt version</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzia Qt</translation>
     </message>
 </context>
 </TS>

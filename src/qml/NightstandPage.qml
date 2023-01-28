@@ -44,6 +44,12 @@ Item {
         defaultValue: false
     }
 
+    ConfigurationValue {
+        id: nightstandUseCustomWatchface
+        key: "/desktop/asteroid/nightstand/use-custom-watchface"
+        defaultValue: false
+    }
+
     PageHeader {
         id: title
         text: qsTrId("id-nightstand-page")
@@ -113,8 +119,34 @@ Item {
             Item {
                 width: parent.width
                 height: Dims.l(20)
+
+                MouseArea {
+                    anchors.fill: parent
+                    hoverEnabled: true
+                    onClicked: nightstandUseCustomWatchface.value = !nightstandUseCustomWatchface.value
+                    Rectangle {
+                        anchors.fill: parent
+                        color: "white"
+                        opacity: parent.containsPress ? 0.2 : 0
+                    }
+                }
+
+                LabeledSwitch {
+                    anchors.fill: parent
+                    //% "Custom watchface"
+                    text: qsTrId("id-nightstand-custom-watchface")
+                    checked: nightstandUseCustomWatchface.value
+                    opacity: nightstandEnabled.value ? 1.0 : 0.4
+                    onCheckedChanged: nightstandUseCustomWatchface.value = checked
+                }
+            }
+
+            Item {
+                width: parent.width
+                height: Dims.l(20)
                 opacity: nightstandEnabled.value ? 1.0 : 0.4
                 enabled: nightstandEnabled.value
+                visible: nightstandUseCustomWatchface.value
 
                 MouseArea {
                     id: mouseArea

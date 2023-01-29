@@ -162,6 +162,10 @@
         <oldsource>select nightstand watchface</oldsource>
         <translation>Zvoliť ciferník</translation>
     </message>
+    <message id="id-nightstand-custom-watchface">
+        <source>Custom watchface</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AboutPage</name>

@@ -162,6 +162,10 @@
         <oldsource>select nightstand watchface</oldsource>
         <translation>选择表盘</translation>
     </message>
+    <message id="id-nightstand-custom-watchface">
+        <source>Custom watchface</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AboutPage</name>

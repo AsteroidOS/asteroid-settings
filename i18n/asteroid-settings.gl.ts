@@ -134,7 +134,7 @@
     </message>
     <message id="id-nightstand-page">
         <location filename="../src/qml/main.qml" line="108"/>
-        <location filename="../src/qml/NightstandPage.qml" line="49"/>
+        <location filename="../src/qml/NightstandPage.qml" line="55"/>
         <source>Nightstand</source>
         <translation>Mesita de noite</translation>
     </message>
@@ -186,24 +186,29 @@
         <translation>Axustes</translation>
     </message>
     <message id="id-nightstand-enable">
-        <location filename="../src/qml/NightstandPage.qml" line="64"/>
+        <location filename="../src/qml/NightstandPage.qml" line="70"/>
         <source>Enable</source>
         <translation>Activar</translation>
     </message>
     <message id="id-nightstand-brightness">
-        <location filename="../src/qml/NightstandPage.qml" line="77"/>
+        <location filename="../src/qml/NightstandPage.qml" line="83"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
         <translation>Brillo</translation>
     </message>
     <message id="id-nightstand-delay">
-        <location filename="../src/qml/NightstandPage.qml" line="97"/>
+        <location filename="../src/qml/NightstandPage.qml" line="103"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
         <translation>Atraso</translation>
     </message>
+    <message id="id-nightstand-custom-watchface">
+        <location filename="../src/qml/NightstandPage.qml" line="137"/>
+        <source>Custom watchface</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="id-nightstand-watchface">
-        <location filename="../src/qml/NightstandPage.qml" line="134"/>
+        <location filename="../src/qml/NightstandPage.qml" line="166"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
         <translation>Seleccionala esfera do reloxo</translation>

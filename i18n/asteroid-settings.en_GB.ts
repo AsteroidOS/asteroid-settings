@@ -229,58 +229,58 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="62"/>
         <source>WLAN MAC</source>
-        <translation type="unfinished"></translation>
+        <translation>WLAN MAC</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="63"/>
         <source>IMEI</source>
-        <translation type="unfinished"></translation>
+        <translation>IMEI</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="64"/>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>Serial number</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="65"/>
         <source>Total disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Total disk space</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="65"/>
         <location filename="../src/qml/AboutPage.qml" line="66"/>
         <source>%L1</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="66"/>
         <source>Available disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Available disk space</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="68"/>
         <source>Display size</source>
-        <translation type="unfinished"></translation>
+        <translation>Display size</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="68"/>
         <source>W</source>
-        <translation type="unfinished"></translation>
+        <translation>W</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="68"/>
         <source>H</source>
-        <translation type="unfinished"></translation>
+        <translation>H</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="69"/>
         <source>Kernel version</source>
-        <translation type="unfinished"></translation>
+        <translation>Kernel version</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="70"/>
         <source>Qt version</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt version</translation>
     </message>
 </context>
 </TS>

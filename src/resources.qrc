@@ -5,6 +5,7 @@
         <file>qml/LanguagePage.qml</file>
         <file>qml/TimePage.qml</file>
         <file>qml/DatePage.qml</file>
+        <file>qml/TimezonePage.qml</file>
         <file>qml/BluetoothPage.qml</file>
         <file>qml/DisplayPage.qml</file>
         <file>qml/SoundPage.qml</file>

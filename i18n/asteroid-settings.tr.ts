@@ -164,7 +164,7 @@
     </message>
     <message id="id-nightstand-custom-watchface">
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>Özel saat yüzü</translation>
     </message>
 </context>
 <context>

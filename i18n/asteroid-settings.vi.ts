@@ -205,7 +205,7 @@
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="137"/>
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>Mặt đồng hồ tuỳ chỉnh</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="166"/>
@@ -244,7 +244,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="64"/>
         <source>Serial number</source>
-        <translation>Mã số sê ri</translation>
+        <translation>Mã số sê-ri</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="65"/>
@@ -260,7 +260,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="66"/>
         <source>Available disk space</source>
-        <translation>Dung lượng đĩa có sẵn</translation>
+        <translation>Không gian đĩa có sẵn</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="68"/>

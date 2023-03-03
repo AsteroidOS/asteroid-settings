@@ -205,7 +205,7 @@
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="137"/>
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrador personalizado</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="166"/>
@@ -270,12 +270,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="68"/>
         <source>W</source>
-        <translation>W</translation>
+        <translation>L</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="68"/>
         <source>H</source>
-        <translation>H</translation>
+        <translation>A</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="69"/>

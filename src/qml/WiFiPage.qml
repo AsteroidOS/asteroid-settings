@@ -45,30 +45,67 @@ Item {
         }
     }
 
-    InputPanel {
-        id: inputPanel
-        z: 99
-        visible: active
-        anchors.left: parent.left
-        anchors.top: parent.top
-        anchors.topMargin: -Dims.h(25)
-        height: Dims.h(100)
-
-        width: Dims.w(100)
-        externalLanguageSwitchEnabled: false
-    }
-
-
     ListView {
+        id: wifiList
         model: wifiModel
-        visible: wifiStatus.powered
         anchors.fill: parent
         anchors.leftMargin: Dims.l(15)
         anchors.rightMargin: Dims.l(15)
-        header: Item {height: Dims.h(15)}
-        footer: Item {height: Dims.h(15)}
+
+        header: Item { //this is just an asteroid statuspage, modified to collapse when wifi is toggled.
+            height: wifiStatus.powered ? Dims.h(60) : wifiList.height
+            Behavior on height { NumberAnimation { duration: 100 } }
+
+            width: Dims.w(100)
+            anchors.horizontalCenter: parent.horizontalCenter
+            Rectangle {
+                id: statusBackground
+                anchors.centerIn: parent
+                anchors.verticalCenterOffset: -parent.height*0.13
+                color: "black"
+                radius: width/2
+                opacity: wifiStatus.powered ? 0.4 : 0.2
+                width: parent.width*0.25
+                height: width
+            }
+            Icon {
+                id: statusIcon
+                anchors.fill: statusBackground
+                anchors.margins: parent.width*0.03
+                name: wifiStatus.powered ? "ios-wifi" : "ios-wifi-outline"
+            }
+            MouseArea {
+                id: statusMA
+                enabled: true
+                anchors.fill: statusBackground
+                onClicked: wifiStatus.powered = !wifiStatus.powered
+            }
+
+            Label {
+                id: statusLabel
+                //% "WiFi on"
+                property string wifiOnStr: qsTrId("id-wifi-on")
+                //% "WiFi off"
+                property string wifiOffStr: qsTrId("id-wifi-off")
+                //% "Connected"
+                property string connectedStr: qsTrId("id-connected")
+                //% "Not connected"
+                property string notConnectedStr: qsTrId("id-disconnected")
+                text: "<h3>" + (wifiStatus.powered ? wifiOnStr : wifiOffStr) + "</h3>\n" + (wifiStatus.connected ? connectedStr : notConnectedStr)
+                font.pixelSize: parent.width*0.05
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                wrapMode: Text.Wrap
+                anchors.left: parent.left; anchors.right: parent.right
+                anchors.leftMargin: parent.width*0.04; anchors.rightMargin: anchors.leftMargin
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.verticalCenterOffset: parent.width*0.15
+            }
+        }
+        footer: Item {height: wifiStatus.powered ? Dims.h(15) : 0}
 
         delegate: Item {
+            visible: wifiStatus.powered
             property var wifiName: modelData.name
             width: parent.width
             height: Dims.h(16)
@@ -90,35 +127,6 @@ Item {
                 }
             }
         }
-    }
-
-    StatusPage {
-        //% "WiFi on"
-        property string bluetoothOnStr: qsTrId("id-wifi-on")
-        //% "WiFi off"
-        property string bluetoothOffStr: qsTrId("id-wifi-off")
-        //% "Connected"
-        property string connectedStr: qsTrId("id-connected")
-        //% "Not connected"
-        property string notConnectedStr: qsTrId("id-disconnected")
-        text: "<h3>" + (wifiStatus.powered ? bluetoothOnStr : bluetoothOffStr) + "</h3>\n" + (wifiStatus.connected ? connectedStr : notConnectedStr)
-        icon: wifiStatus.powered ? "ios-wifi" : "ios-wifi-outline"
-        clickable: true
-        onClicked: wifiStatus.powered = !wifiStatus.powered
-        activeBackground: wifiStatus.powered
-    }
-
-    TextField {
-        id: titleField
-        width: Dims.w(80)
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: parent.top
-        anchors.topMargin: Dims.h(25)
-        //% "Title"
-        previewText: qsTrId("id-title-field")
-        /*onTextChanged: {
-            console.log("OH "+text);
-        }*/
     }
 }
 

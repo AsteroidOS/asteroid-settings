@@ -136,7 +136,7 @@
         <location filename="../src/qml/main.qml" line="108"/>
         <location filename="../src/qml/NightstandPage.qml" line="55"/>
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo criado-mudo</translation>
     </message>
     <message id="id-units-page">
         <location filename="../src/qml/main.qml" line="114"/>

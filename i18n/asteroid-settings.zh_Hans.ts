@@ -164,7 +164,7 @@
     </message>
     <message id="id-nightstand-custom-watchface">
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>自定义表盘</translation>
     </message>
 </context>
 <context>

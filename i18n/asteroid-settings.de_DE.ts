@@ -205,7 +205,7 @@
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="137"/>
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>Benutzerdefiniertes Zifferblatt</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="166"/>

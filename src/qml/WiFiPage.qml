@@ -109,13 +109,13 @@ Item {
             }
         }
 
-        footer: Item {height: wifiStatus.powered ? parent.height*0.15 : 0}
+        footer: Item {height: wifiStatus.powered ? root.height*0.15 : 0; width: parent.width}
 
         delegate: MouseArea {
             property var wifiName: modelData.name
             visible: wifiStatus.powered
             width: wifiList.width
-            height: width*0.23
+            height: wifiStatus.powered ? width*0.23 : 0
             Label {
                 id: wifiNameLabel
                 text: wifiName

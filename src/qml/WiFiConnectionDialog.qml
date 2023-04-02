@@ -96,33 +96,38 @@ Item {
                 text: modelData.name
                 font.pixelSize: Dims.l(6)
             }
-            Label {
-                id: identityLabel
-                text: qsTr("Login")+":"
-                font.pixelSize: Dims.l(6)
-                visible: modelData.securityType === NetworkService.SecurityIEEE802
-            }
-
-            TextField {
-                id: identityField
-                text: modelData.identity
+            Column {
+                id: loginFieldsColumn
                 width: parent.width
-                visible: modelData.securityType === NetworkService.SecurityIEEE802
-            }
+                visible: !(modelData.connected || modelData.favorite)
+                Label {
+                    id: identityLabel
+                    text: qsTr("Login")+":"
+                    font.pixelSize: Dims.l(6)
+                    visible: modelData.securityType === NetworkService.SecurityIEEE802
+                }
 
-            Label {
-                id: passphraseLabel
-                text: qsTr("Password")+":"
-                font.pixelSize: Dims.l(6)
-                visible: !(modelData.securityType == NetworkService.SecurityNone)
-            }
+                TextField {
+                    id: identityField
+                    text: modelData.identity
+                    width: parent.width
+                    visible: modelData.securityType === NetworkService.SecurityIEEE802
+                }
 
-            TextField {
-                id: passphraseField
-                text: modelData.passphrase
-                echoMode: TextInput.Password //smartwatches are hard to type on. it is worth adding a 'show password' button for this field
-                width: parent.width
-                visible: !(modelData.securityType == NetworkService.SecurityNone)
+                Label {
+                    id: passphraseLabel
+                    text: qsTr("Password")+":"
+                    font.pixelSize: Dims.l(6)
+                    visible: !(modelData.securityType == NetworkService.SecurityNone)
+                }
+
+                TextField {
+                    id: passphraseField
+                    text: modelData.passphrase
+                    echoMode: TextInput.Password //smartwatches are hard to type on. it is worth adding a 'show password' button for this field
+                    width: parent.width
+                    visible: !(modelData.securityType == NetworkService.SecurityNone)
+                }
             }
             LabeledSwitch {
                 id: autoConnectCheckBox
@@ -137,8 +142,10 @@ Item {
                 width: parent.width*0.3
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
-                    modelData.passphrase = passphraseField.text;
-                    modelData.identity = identityField.text
+                    if(!modelData.connected) {
+                        modelData.passphrase = passphraseField.text;
+                        modelData.identity = identityField.text
+                    }
                     modelData.autoConnect = autoConnectCheckBox.checked
                     modelData.requestConnect();
                 }

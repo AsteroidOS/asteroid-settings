@@ -136,7 +136,11 @@ Item {
                 }
             }
             onClicked: {
+                if (modelData.favorite && !modelData.connected) {
+                    modelData.requestConnect()
+                } else {
                     layerStack.push(connectionDialog, {modelData: modelData})
+                }
             }
         }
     }

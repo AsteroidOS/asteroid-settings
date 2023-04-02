@@ -51,80 +51,64 @@ Item {
         }
     }
 
-    InputPanel {
-        id: inputPanel
-        z: 99
-        visible: active
-        anchors.left: parent.left
-        anchors.top: parent.top
-        anchors.topMargin: -Dims.h(25)
-        height: Dims.h(100)
-
-        width: Dims.w(100)
-        externalLanguageSwitchEnabled: false
-    }
-
-
     ListView {
         id: wifiList
         model: wifiModel
         width: parent.width*0.7
         anchors.horizontalCenter: parent.horizontalCenter
-        height: Dims.h(100)
-        header: Column {
-            width: parent.width
-            Item {
-                //this is literally a statuspage
-                width: root.width
-                height: wifiStatus.powered ? width*0.6 : root.height
-                Behavior on height { NumberAnimation { duration: 100 } }
-                anchors.horizontalCenter: parent.horizontalCenter
-                Rectangle {
-                    id: statusIconBackground
-                    anchors.centerIn: parent
-                    anchors.verticalCenterOffset: -parent.width*0.13
-                    color: "black"
-                    radius: width/2
-                    opacity: wifiStatus.powered ? 0.4 : 0.2
-                    width: parent.width*0.25
-                    height: width
-                    Icon {
-                        id: statusIcon
-                        anchors.fill: statusIconBackground
-                        anchors.margins: parent.width*0.12
-                        name: wifiStatus.powered ? "ios-wifi" : "ios-wifi-outline"
-                    }
-                    MouseArea {
-                        id: statusMA
-                        enabled: true
-                        anchors.fill: parent
-                        onClicked: wifiStatus.powered = !wifiStatus.powered
-                    }
+        height: parent.height
+        header: Item {
+            //this is literally a statuspage
+            width: root.width
+            height: wifiStatus.powered ? width*0.6 : root.height
+            Behavior on height { NumberAnimation { duration: 100 } }
+            anchors.horizontalCenter: parent.horizontalCenter
+            Rectangle {
+                id: statusIconBackground
+                anchors.centerIn: parent
+                anchors.verticalCenterOffset: -parent.width*0.13
+                color: "black"
+                radius: width/2
+                opacity: wifiStatus.powered ? 0.4 : 0.2
+                width: parent.width*0.25
+                height: width
+                Icon {
+                    id: statusIcon
+                    anchors.fill: statusIconBackground
+                    anchors.margins: parent.width*0.12
+                    name: wifiStatus.powered ? "ios-wifi" : "ios-wifi-outline"
                 }
-
-
-                Label {
-                    id: statusLabel
-                    font.pixelSize: parent.width*0.07
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                    wrapMode: Text.Wrap
-                    anchors.left: parent.left; anchors.right: parent.right
-                    anchors.leftMargin: parent.width*0.04; anchors.rightMargin: anchors.leftMargin
-                    anchors.verticalCenter: parent.verticalCenter
-                    anchors.verticalCenterOffset: parent.width*0.15
-                    //% "WiFi on"
-                    property string bluetoothOnStr: qsTrId("id-wifi-on")
-                    //% "WiFi off"
-                    property string bluetoothOffStr: qsTrId("id-wifi-off")
-                    //% "Connected"
-                    property string connectedStr: qsTrId("id-connected")
-                    //% "Not connected"
-                    property string notConnectedStr: qsTrId("id-disconnected")
-                    text: "<h3>" + (wifiStatus.powered ? bluetoothOnStr : bluetoothOffStr) + "</h3>\n" + (wifiStatus.connected ? connectedStr : notConnectedStr)
+                MouseArea {
+                    id: statusMA
+                    enabled: true
+                    anchors.fill: parent
+                    onClicked: wifiStatus.powered = !wifiStatus.powered
                 }
             }
+
+
+            Label {
+                id: statusLabel
+                font.pixelSize: parent.width*0.07
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                wrapMode: Text.Wrap
+                anchors.left: parent.left; anchors.right: parent.right
+                anchors.leftMargin: parent.width*0.04; anchors.rightMargin: anchors.leftMargin
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.verticalCenterOffset: parent.width*0.15
+                //% "WiFi on"
+                property string bluetoothOnStr: qsTrId("id-wifi-on")
+                //% "WiFi off"
+                property string bluetoothOffStr: qsTrId("id-wifi-off")
+                //% "Connected"
+                property string connectedStr: qsTrId("id-connected")
+                //% "Not connected"
+                property string notConnectedStr: qsTrId("id-disconnected")
+                text: "<h3>" + (wifiStatus.powered ? bluetoothOnStr : bluetoothOffStr) + "</h3>\n" + (wifiStatus.connected ? connectedStr : notConnectedStr)
+            }
         }
+
         footer: Item {height: wifiStatus.powered ? parent.height*0.15 : 0}
 
         delegate: MouseArea {
@@ -150,124 +134,14 @@ Item {
                 }
             }
             onClicked: {
-                    if (true) {
-                        layerStack.push(firstTimeConnectDialog, {modelData: modelData})
-                    } else {
-                        layerStack.push(dialog)
-                    }
-                }
+                    layerStack.push(connectionDialog, {modelData: modelData})
+            }
         }
     }
 
-
-
     Component {
-        id: firstTimeConnectDialog
-        Item {
-            id: dialogItem
-            property var modelData
-
-            UserAgent {
-                id: userAgent
-                onUserInputRequested: {
-                    var view = {
-                        "fields": []
-                    };
-                    for (var key in fields) {
-                        view.fields.push({
-                                            "name": key,
-                                            "id": key.toLowerCase(),
-                                            "type": fields[key]["Type"],
-                                            "requirement": fields[key]["Requirement"]
-                                        });
-                        console.log(key + ":");
-                        for (var inkey in fields[key]) {
-                            console.log("    " + inkey + ": " + fields[key][inkey]);
-                        }
-                    }
-                    userAgent.sendUserReply({"Passphrase": passphraseField.text})
-                }
-
-                onErrorReported: {
-                    console.log("Got error from model: " + error);
-                    failDialog.subLabelText = error;
-                    failDialog.open();
-                }
-            }
-            Connections {
-                target: modelData
-                function onConnectRequestFailed(error) {
-                    console.log(error)
-                }
-
-                function onConnectedChanged(connected) {
-                    if(connected) {
-                        layerStack.pop(layerStack.currentLayer);
-                    }
-                }
-            }
-            Flickable {
-                anchors.fill: parent
-                anchors.margins: Dims.l(15)
-                contentHeight: contentColumn.implicitHeight
-                Column {
-                    id: contentColumn
-                    width: parent.width
-                    Item {height: dialogItem.height*0.15; width: parent.width}
-                    Label{
-                        text: modelData.name
-                        font.pixelSize: Dims.l(6)
-                    }
-                    Label{
-                        id: identityLabel
-                        text: qsTr("Login")+":"
-                        font.pixelSize: Dims.l(6)
-                        visible: modelData.securityType === NetworkService.SecurityIEEE802
-                    }
-
-                    TextField{
-                        id: identityField
-                        text: modelData.identity
-                        width: parent.width
-                        visible: modelData.securityType === NetworkService.SecurityIEEE802
-                    }
-
-                    Label{
-                        id: passphraseLabel
-                        text: qsTr("Password")+":"
-                        font.pixelSize: Dims.l(6)
-                        visible: !(modelData.securityType == NetworkService.SecurityNone)
-                    }
-
-                    TextField{
-                        id: passphraseField
-                        text: modelData.passphrase
-                        echoMode: TextInput.Password //smartwatches are hard to type on. it is worth adding a 'show password' button for this field
-                        width: parent.width
-                        visible: !(modelData.securityType == NetworkService.SecurityNone)
-                    }
-                    LabeledSwitch {
-                        id: autoConnectCheckBox
-                        width: parent.width
-                        height: Dims.l(20)
-                        text: "autoconnect"
-                    }
-
-                    IconButton {
-                        iconName: "ios-checkmark-circle"
-                        height: width
-                        width: parent.width*0.3
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        onClicked: {
-                            modelData.passphrase = passphraseField.text;
-                            modelData.identity = identityField.text
-                            modelData.autoConnect = autoConnectCheckBox.checked
-                            modelData.requestConnect();
-                        }
-                    }
-                }
-            }
-        }
+        id: connectionDialog
+        WiFiConnectionDialog {}
     }
 }
 

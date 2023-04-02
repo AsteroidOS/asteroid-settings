@@ -128,6 +128,8 @@ Item {
                 text: {
                     if (modelData.connected) {
                         "Connected"
+                    } else if (modelData.favorite){
+                        "Saved"
                     } else {
                         "Not set up"
                     }

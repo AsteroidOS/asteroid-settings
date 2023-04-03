@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2023 - Arseniy Movshev <dodoradio@outlook.com>
+ *               2022 - Ed Beroset <github.com/beroset>
  *               2017-2022 - Chupligin Sergey <neochapay@gmail.com>
  *               2021 - Darrel Griët <idanlcontact@gmail.com>
  *               2016 - Sylvia van Os <iamsylvie@openmailbox.org>
@@ -50,26 +51,26 @@ Item {
         onUserInputRequested: {
             var view = {
                 "fields": []
-            };
+            }
             for (var key in fields) {
                 view.fields.push({
                                     "name": key,
                                     "id": key.toLowerCase(),
                                     "type": fields[key]["Type"],
                                     "requirement": fields[key]["Requirement"]
-                                });
-                console.log(key + ":");
+                                })
+                console.log(key + ":")
                 for (var inkey in fields[key]) {
-                    console.log("    " + inkey + ": " + fields[key][inkey]);
+                    console.log("    " + inkey + ": " + fields[key][inkey])
                 }
             }
             userAgent.sendUserReply({"Passphrase": passphraseField.text})
         }
 
         onErrorReported: {
-            console.log("Got error from model: " + error);
-            failDialog.subLabelText = error;
-            failDialog.open();
+            console.log("Got error from model: " + error)
+            failDialog.subLabelText = error
+            failDialog.open()
         }
     }
     Connections {
@@ -80,7 +81,7 @@ Item {
 
         function onConnectedChanged(connected) {
             if(connected) {
-                layerStack.pop(layerStack.currentLayer);
+                layerStack.pop(layerStack.currentLayer)
             }
         }
     }
@@ -129,11 +130,73 @@ Item {
                     visible: !(modelData.securityType == NetworkService.SecurityNone)
                 }
             }
+            Column {
+                visible: modelData.connected
+                Label {
+                    text: "IP Address: " + modelData.ipv4["Address"]
+                    font.pixelSize: Dims.l(6)
+                }
+                Row {
+                    width: parent.width
+                    height: Dims.l(20)
+                    // labelWidthRatio is the ratio of label width to the total width
+                    property real labelWidthRatio: 0.7143
+                    // fontToHeightRatio is the ratio of the font size to the height
+                    property real fontToHeightRatio: 0.3
+
+                    Label {
+                        text: "Disconnect"
+                        font.pixelSize: parent.height * fontToHeightRatio
+                        verticalAlignment: Text.AlignVCenter
+                        wrapMode: Text.Wrap
+                        width: parent.width * labelWidthRatio
+                        height: parent.height
+                    }
+
+                    IconButton {
+                        iconName: "ios-close-circle-outline"
+                        height: parent.height
+                        width: height
+                        onClicked: {
+                            modelData.requestDisconnect()
+                            layerStack.pop(layerStack.currentLayer)
+                        }
+                    }
+                }
+            }
             LabeledSwitch {
                 id: autoConnectCheckBox
                 width: parent.width
                 height: Dims.l(20)
                 text: "autoconnect"
+            }
+            Row {
+                visible: (modelData.connected || modelData.favorite)
+                width: parent.width
+                height: Dims.l(20)
+                // labelWidthRatio is the ratio of label width to the total width
+                property real labelWidthRatio: 0.7143
+                // fontToHeightRatio is the ratio of the font size to the height
+                property real fontToHeightRatio: 0.3
+
+                Label {
+                    text: "remove network"
+                    font.pixelSize: parent.height * fontToHeightRatio
+                    verticalAlignment: Text.AlignVCenter
+                    wrapMode: Text.Wrap
+                    width: parent.width * labelWidthRatio
+                    height: parent.height
+                }
+
+                IconButton {
+                    iconName: "ios-remove-circle-outline"
+                    height: parent.height
+                    width: height
+                    onClicked: {
+                        modelData.remove()
+                        layerStack.pop(layerStack.currentLayer)
+                    }
+                }
             }
 
             IconButton {
@@ -143,11 +206,11 @@ Item {
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     if(!modelData.connected) {
-                        modelData.passphrase = passphraseField.text;
+                        modelData.passphrase = passphraseField.text
                         modelData.identity = identityField.text
                     }
                     modelData.autoConnect = autoConnectCheckBox.checked
-                    modelData.requestConnect();
+                    modelData.requestConnect()
                 }
             }
         }

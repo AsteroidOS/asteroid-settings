@@ -36,7 +36,7 @@ Item {
         //% "ADB Mode"
         ListElement { title: qsTrId("id-adb-mode"); mode: "adb_mode" }
         //% "SSH Mode"
-        ListElement { title: qsTrId("id-ssh-mode"); mode: "ssh_mode" }
+        ListElement { title: qsTrId("id-ssh-mode"); mode: "developer_mode" }
         //% "MTP Mode"
         ListElement { title: qsTrId("id-mtp-mode"); mode: "mtp_mode" }
     }
@@ -71,7 +71,7 @@ Item {
     Component.onCompleted: {
         usbmodedDbus.typedCall('get_config', [], function (mode) {
             if     (mode === "mtp_mode")       usbModeLV.positionViewAtIndex(3, ListView.SnapPosition)
-            else if(mode === "ssh_mode") usbModeLV.positionViewAtIndex(2, ListView.SnapPosition)
+            else if(mode === "developer_mode") usbModeLV.positionViewAtIndex(2, ListView.SnapPosition)
             else if(mode === "adb_mode")       usbModeLV.positionViewAtIndex(1, ListView.SnapPosition)
             else  /*mode === "charging_only"*/ usbModeLV.positionViewAtIndex(0, ListView.SnapPosition)
         });

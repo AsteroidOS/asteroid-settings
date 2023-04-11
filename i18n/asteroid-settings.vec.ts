@@ -50,8 +50,8 @@
     </message>
     <message id="id-developer-mode">
         <location filename="../USBPage.qml" line="39"/>
-        <source>Developer Mode</source>
-        <translation>Magnera desviłupador</translation>
+        <source>SSH Mode</source>
+        <translation>Magnera SSH</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../USBPage.qml" line="41"/>

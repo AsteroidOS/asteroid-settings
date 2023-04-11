@@ -48,9 +48,9 @@
         <source>ADB Mode</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="id-developer-mode">
+    <message id="id-ssh-mode">
         <location filename="../src/qml/USBPage.qml" line="39"/>
-        <source>Developer Mode</source>
+        <source>SSH Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-mtp-mode">

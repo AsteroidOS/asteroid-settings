@@ -48,10 +48,10 @@
         <source>ADB Mode</source>
         <translation>ADB rėžimas</translation>
     </message>
-    <message id="id-developer-mode">
+    <message id="id-ssh-mode">
         <location filename="../src/qml/USBPage.qml" line="39"/>
-        <source>Developer Mode</source>
-        <translation>Kūrėjo rėžimas</translation>
+        <source>SSH Mode</source>
+        <translation>SSH rėžimas</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../src/qml/USBPage.qml" line="41"/>

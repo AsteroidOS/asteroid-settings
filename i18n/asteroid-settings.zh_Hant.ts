@@ -48,10 +48,10 @@
         <source>ADB Mode</source>
         <translation>ADB 模式</translation>
     </message>
-    <message id="id-developer-mode">
+    <message id="id-ssh-mode">
         <location filename="../src/qml/USBPage.qml" line="39"/>
-        <source>Developer Mode</source>
-        <translation>開發者模式</translation>
+        <source>SSH Mode</source>
+        <translation>SSH 模式</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../src/qml/USBPage.qml" line="41"/>

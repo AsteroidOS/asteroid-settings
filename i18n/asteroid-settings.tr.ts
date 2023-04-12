@@ -35,10 +35,6 @@
         <source>ADB Mode</source>
         <translation>ADB Kipi</translation>
     </message>
-    <message id="id-developer-mode">
-        <source>Developer Mode</source>
-        <translation>Geliştirici Kipi</translation>
-    </message>
     <message id="id-mtp-mode">
         <source>MTP Mode</source>
         <translation>MTP Kipi</translation>
@@ -165,6 +161,10 @@
     <message id="id-nightstand-custom-watchface">
         <source>Custom watchface</source>
         <translation>Özel saat yüzü</translation>
+    </message>
+    <message id="id-ssh-mode">
+        <source>SSH Mode</source>
+        <translation>SSH Kipi</translation>
     </message>
 </context>
 <context>

@@ -50,8 +50,8 @@
     </message>
     <message id="id-developer-mode">
         <location filename="../src/qml/USBPage.qml" line="39"/>
-        <source>Developer Mode</source>
-        <translation>Режим Створителя</translation>
+        <source>SSH Mode</source>
+        <translation>ADB режим</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../src/qml/USBPage.qml" line="41"/>

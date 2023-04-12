@@ -35,10 +35,6 @@
         <source>ADB Mode</source>
         <translation>Mód ADB</translation>
     </message>
-    <message id="id-developer-mode">
-        <source>Developer Mode</source>
-        <translation>Možnosti pre vývojárov</translation>
-    </message>
     <message id="id-mtp-mode">
         <source>MTP Mode</source>
         <translation>Mód MTP</translation>
@@ -165,6 +161,10 @@
     <message id="id-nightstand-custom-watchface">
         <source>Custom watchface</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message id="id-ssh-mode">
+        <source>SSH Mode</source>
+        <translation>Mód SSH</translation>
     </message>
 </context>
 <context>

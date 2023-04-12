@@ -40,8 +40,8 @@
         <translation>شێوازی ADB</translation>
     </message>
     <message id="id-developer-mode">
-        <source>Developer Mode</source>
-        <translation>شێوازی گەشەپێدەر</translation>
+        <source>SSH Mode</source>
+        <translation>شێوازی SSH</translation>
     </message>
     <message id="id-mtp-mode">
         <source>MTP Mode</source>

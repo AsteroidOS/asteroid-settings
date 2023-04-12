@@ -35,10 +35,6 @@
         <source>ADB Mode</source>
         <translation>ADB 模式</translation>
     </message>
-    <message id="id-developer-mode">
-        <source>Developer Mode</source>
-        <translation>开发者模式</translation>
-    </message>
     <message id="id-mtp-mode">
         <source>MTP Mode</source>
         <translation>MTP 模式</translation>
@@ -165,6 +161,10 @@
     <message id="id-nightstand-custom-watchface">
         <source>Custom watchface</source>
         <translation>自定义表盘</translation>
+    </message>
+    <message id="id-ssh-mode">
+        <source>SSH Mode</source>
+        <translation>SSH 模式</translation>
     </message>
 </context>
 <context>

@@ -35,10 +35,6 @@
         <source>ADB Mode</source>
         <translation>ADB használata</translation>
     </message>
-    <message id="id-developer-mode">
-        <source>Developer Mode</source>
-        <translation>Fejlesztői beállítások</translation>
-    </message>
     <message id="id-mtp-mode">
         <source>MTP Mode</source>
         <translation>MTP használata</translation>
@@ -165,6 +161,10 @@
     <message id="id-nightstand-custom-watchface">
         <source>Custom watchface</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message id="id-ssh-mode">
+        <source>SSH Mode</source>
+        <translation>SSH használata</translation>
     </message>
 </context>
 <context>

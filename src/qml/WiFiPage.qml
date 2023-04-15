@@ -142,6 +142,7 @@ Item {
                     layerStack.push(connectionDialog, {modelData: modelData})
                 }
             }
+            onPressAndHold: layerStack.push(connectionDialog, {modelData: modelData})
         }
     }
 

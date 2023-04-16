@@ -48,6 +48,7 @@ Application {
 
     LayerStack {
         id: layerStack
+
         firstPage: firstPageComponent
     }
 
@@ -64,7 +65,7 @@ Application {
                 id: settingsColumn
                 anchors.fill: parent
 
-                Item { width: parent.width; height: Dims.h(10); visible: DeviceInfo.hasRoundScreen }
+                Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? Dims.h(6) : Dims.h(2) }
 
                 ListItem {
                     //% "Time"
@@ -158,7 +159,7 @@ Application {
                     onClicked: layerStack.push(aboutLayer)
                 }
 
-                Item { width: parent.width; height: Dims.h(10); visible: DeviceInfo.hasRoundScreen }
+                Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? Dims.h(6) : Dims.h(2) }
             }
         }
     }

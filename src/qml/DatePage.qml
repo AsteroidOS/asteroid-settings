@@ -18,6 +18,7 @@
 
 import QtQuick 2.9
 import org.asteroid.controls 1.0
+import org.asteroid.utils 1.0
 import org.nemomobile.systemsettings 1.0
 
 Item {
@@ -33,9 +34,13 @@ Item {
 
     Row {
         id: dateSelector
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.top: title.bottom
+        anchors {
+            left: parent.left
+            leftMargin: DeviceInfo.hasRoundScreen ? Dims.w(5) : 0
+            right: parent.right
+            rightMargin: DeviceInfo.hasRoundScreen ? Dims.w(5) : 0
+            top: title.bottom
+        }
         height: Dims.h(60)
 
         CircularSpinner {

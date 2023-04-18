@@ -29,6 +29,7 @@ Application {
 
     Component { id: timeLayer;                  TimePage       { } }
     Component { id: dateLayer;                  DatePage       { } }
+    Component { id: timezoneLayer;              TimezonePage   { } }
     Component { id: languageLayer;              LanguagePage   { } }
     Component { id: bluetoothLayer;             BluetoothPage  { } }
     Component { id: displayLayer;               DisplayPage    { } }
@@ -77,6 +78,12 @@ Application {
                     title: qsTrId("id-date-page")
                     iconName: "ios-calendar-outline"
                     onClicked: layerStack.push(dateLayer)
+                }
+                ListItem {
+                    //% "Time zone"
+                    title: qsTrId("id-timezone-page")
+                    iconName: "ios-flag-outline"
+                    onClicked: layerStack.push(timezoneLayer)
                 }
                 ListItem {
                     //% "Language"

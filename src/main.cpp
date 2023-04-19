@@ -26,6 +26,7 @@
 #include "volumecontrol.h"
 #include "tilttowake.h"
 #include "taptowake.h"
+#include "process.h"
 
 int main(int argc, char *argv[])
 {
@@ -36,6 +37,7 @@ int main(int argc, char *argv[])
     qmlRegisterType<VolumeControl>("org.asteroid.settings", 1, 0, "VolumeControl");
     qmlRegisterType<TiltToWake>("org.asteroid.settings", 1, 0, "TiltToWake");
     qmlRegisterType<TapToWake>("org.asteroid.settings", 1, 0, "TapToWake");
+    qmlRegisterType<Process>("Process", 1, 0, "Process");
     view->setSource(QUrl("qrc:/qml/main.qml"));
     view->rootContext()->setContextProperty("qtVersion", QString(qVersion()));
     view->rootContext()->setContextProperty("kernelVersion", QString(buf.release));

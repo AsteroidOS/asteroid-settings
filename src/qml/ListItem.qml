@@ -57,21 +57,6 @@ Item {
 
         anchors.fill: parent
 
-        layer {
-            enabled: true
-            mipmap : true
-            samples: 2
-            effect: DropShadow {
-                cached: true
-                transparentBorder: true
-                horizontalOffset: 2
-                verticalOffset: 2
-                radius: 3.0
-                samples: 7
-                color: "#70000000"
-            }
-        }
-
         Icon {
             id: icon
 

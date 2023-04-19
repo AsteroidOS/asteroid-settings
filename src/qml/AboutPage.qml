@@ -19,6 +19,7 @@
 import QtQuick 2.9
 import org.asteroid.utils 1.0
 import org.asteroid.controls 1.0
+import Process 1.0
 import org.nemomobile.systemsettings 1.0
 
 Flickable {
@@ -27,6 +28,19 @@ Flickable {
     }
     DiskUsage {
         id: diskUsage
+    }
+
+    Process {
+        id: process
+        onReadyRead: uptime.text = readAll();
+    }
+
+    Timer {
+        interval: 1000
+        repeat: true
+        triggeredOnStart: true
+        running: true
+        onTriggered: process.start("/bin/cat", [ "/proc/uptime" ]);
     }
 
     contentHeight: contentcolumn.implicitHeight
@@ -54,6 +68,11 @@ Flickable {
             opacity: 0.8
             anchors.horizontalCenter: parent.horizontalCenter
         }
+
+        Text {
+            id: uptime
+        }
+
         Repeater {
             model: [
                 { label: qsTr("Build ID"), text: DeviceInfo.buildID },

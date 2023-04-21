@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2023 - Arseniy Movshev <dodoradio@outlook.com>
  * Copyright (C) 2023 - Ed Beroset <beroset@ieee.org>
  * Copyright (C) 2016 - Sylvia van Os <iamsylvie@openmailbox.org>
  * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
@@ -24,41 +25,80 @@ import Nemo.DBus 2.0
 Item {
     id: root
     property var pop
-    property int currentIndex: -1
+    property string selectedTz: ""
+    property var timezoneList: []
+    property int regionLevel: 0
+    property string regionPath: ""
 
     PageHeader {
         id: title
         text: qsTrId("id-timezone-page")
     }
 
+    onTimezoneListChanged: {
+        var processedRegionList = [];
+        timezoneList.forEach(function(region) {
+            //console.log("processing ", region);
+            if(region.includes(regionPath)) {
+                var tzAsList = region.split("/")
+                if (tzAsList.length > (regionLevel + 1)) { //check if this item in the list has children
+                    if (processedRegionList.indexOf(tzAsList[regionLevel]) < 0) {
+                        processedRegionList.push(tzAsList[regionLevel]);
+                        timezoneModel.append({"visualName": tzAsList[regionLevel], "fullPath": region, "bottomLevel": false});
+                    }
+                } else { //if this item doesn't have children - add it with a full name
+                    timezoneModel.append({"visualName": tzAsList[regionLevel], "fullPath": region, "bottomLevel": true});
+                }
+            } else {
+                //console.log("skipping ", region, " because it does not contain ", regionPath, " which is the region path");
+            }
+        });
+    }
+
     ListModel {
         id: timezoneModel
         Component.onCompleted: {
-            var currentTZ = timedateDbus.getProperty("Timezone");
-            timedateDbus.call("ListTimezones", undefined, function(m) {
-                timezoneModel.clear();
-                var i = 0;
-                m.forEach(function(region) {
-                    timezoneModel.append({"timezoneName": region});
-                    if (region == currentTZ) {
-                        currentIndex = i;
-                        timezoneList.positionViewAtIndex(i, ListView.SnapPosition)
-                    }
-                    ++i;
+            if (!root.selectedTz) {
+                root.selectedTz = timedateDbus.getProperty("Timezone");
+            };
+            if (root.timezoneList.length < 1) {
+                timedateDbus.call("ListTimezones", undefined, function(m) {
+                    timezoneModel.clear();
+                    root.timezoneList = m;
                 });
-            });
+            };
         }
     }
 
     Spinner {
-        id: timezoneList
+        id: timezoneSpinner
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.top: title.bottom
         height: Dims.h(60)
         model: timezoneModel
 
-        delegate: SpinnerDelegate { text: timezoneName }
+        delegate: SpinnerDelegate {
+            text: visualName
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    if(model.bottomLevel) {
+                        var tzname = model.fullPath;
+                        console.log("Attempting to set timezone to ",tzname);
+                        timedateDbus.typedCall("SetTimezone", [
+                                { "type":"s", "value": tzname },
+                                { "type":"b", "value":"0" }
+                            ],
+                            function(result) { console.log('call completed with:', result) },
+                        function(error, message) { console.log('call failed', error, 'message:', message) }
+                        );
+                    } else {
+                        layerStack.push(timezoneLayer,{"regionLevel": root.regionLevel + 1, "regionPath": root.regionPath + visualName + "/", "selectedTz": root.selectedTz, "timezoneList": root.timezoneList})
+                    }
+                }
+            }
+        }
     }
 
     IconButton {
@@ -70,10 +110,10 @@ Item {
         }
 
         onClicked: {
-            if(timezoneList.currentIndex == root.currentIndex) {
+            if(timezoneSpinner.currentIndex == root.currentIndex) {
                 root.pop();
             } else {
-                var tzname = timezoneModel.get(timezoneList.currentIndex).timezoneName;
+                var tzname = timezoneModel.get(timezoneSpinner.currentIndex).timezoneName;
                 console.log("Attempting to set timezone to ",tzname);
                 timedateDbus.typedCall("SetTimezone", [
                         { "type":"s", "value": tzname },

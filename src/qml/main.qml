@@ -169,4 +169,9 @@ Application {
             }
         }
     }
+    function backToMainMenu() {
+        while (layerStack.layers.length > 0) {
+            layerStack.pop(layerStack.currentLayer)
+        }
+    }
 }

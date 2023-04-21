@@ -83,17 +83,7 @@ Item {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    if(model.bottomLevel) {
-                        var tzname = model.fullPath;
-                        console.log("Attempting to set timezone to ",tzname);
-                        timedateDbus.typedCall("SetTimezone", [
-                                { "type":"s", "value": tzname },
-                                { "type":"b", "value":"0" }
-                            ],
-                            function(result) { console.log('call completed with:', result) },
-                        function(error, message) { console.log('call failed', error, 'message:', message) }
-                        );
-                    } else {
+                    if(!model.bottomLevel) {
                         layerStack.push(timezoneLayer,{"regionLevel": root.regionLevel + 1, "regionPath": root.regionPath + model.name + "/", "selectedTz": root.selectedTz, "timezoneList": root.timezoneList})
                     }
                 }
@@ -110,18 +100,23 @@ Item {
         }
 
         onClicked: {
-            if(timezoneSpinner.currentIndex == root.currentIndex) {
-                root.pop();
+            if((root.regionPath + timezoneModel.get(timezoneSpinner.currentIndex).name) == root.selectedTz) {
+                app.backToMainMenu();
             } else {
-                var tzname = timezoneModel.get(timezoneSpinner.currentIndex).timezoneName;
-                console.log("Attempting to set timezone to ",tzname);
-                timedateDbus.typedCall("SetTimezone", [
-                        { "type":"s", "value": tzname },
-                        { "type":"b", "value":"0" }
-                    ],
-                    function(result) { console.log('call completed with:', result) },
-                   function(error, message) { console.log('call failed', error, 'message:', message) }
-                );
+                if(timezoneModel.get(timezoneSpinner.currentIndex).bottomLevel) {
+                    var tzname = timezoneModel.get(timezoneSpinner.currentIndex).fullPath;
+                    console.log("Attempting to set timezone to ",tzname);
+                    timedateDbus.typedCall("SetTimezone", [
+                            { "type":"s", "value": tzname },
+                            { "type":"b", "value":"0" }
+                        ],
+                        function(result) { console.log('call completed with:', result) },
+                    function(error, message) { console.log('call failed', error, 'message:', message) }
+                    );
+                    root.selectedTz = timezoneModel.get(timezoneSpinner.currentIndex).fullPath;
+                } else {
+                    layerStack.push(timezoneLayer,{"regionLevel": root.regionLevel + 1, "regionPath": root.regionPath + timezoneModel.get(timezoneSpinner.currentIndex).name + "/", "selectedTz": root.selectedTz})
+                }
             }
         }
     }

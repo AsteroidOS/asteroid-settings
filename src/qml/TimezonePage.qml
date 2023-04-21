@@ -44,10 +44,10 @@ Item {
                 if (tzAsList.length > (regionLevel + 1)) { //check if this item in the list has children
                     if (processedRegionList.indexOf(tzAsList[regionLevel]) < 0) {
                         processedRegionList.push(tzAsList[regionLevel]);
-                        timezoneModel.append({"visualName": tzAsList[regionLevel], "fullPath": region, "bottomLevel": false});
+                        timezoneModel.append({"visualName": tzAsList[regionLevel].replace("_"," ") + " ⋯", "name": tzAsList[regionLevel],"fullPath": region, "bottomLevel": false});
                     }
                 } else { //if this item doesn't have children - add it with a full name
-                    timezoneModel.append({"visualName": tzAsList[regionLevel], "fullPath": region, "bottomLevel": true});
+                    timezoneModel.append({"visualName": tzAsList[regionLevel].replace("_"," "), "name": tzAsList[regionLevel], "fullPath": region, "bottomLevel": true});
                 }
             } else {
                 //console.log("skipping ", region, " because it does not contain ", regionPath, " which is the region path");
@@ -94,7 +94,7 @@ Item {
                         function(error, message) { console.log('call failed', error, 'message:', message) }
                         );
                     } else {
-                        layerStack.push(timezoneLayer,{"regionLevel": root.regionLevel + 1, "regionPath": root.regionPath + visualName + "/", "selectedTz": root.selectedTz, "timezoneList": root.timezoneList})
+                        layerStack.push(timezoneLayer,{"regionLevel": root.regionLevel + 1, "regionPath": root.regionPath + model.name + "/", "selectedTz": root.selectedTz, "timezoneList": root.timezoneList})
                     }
                 }
             }

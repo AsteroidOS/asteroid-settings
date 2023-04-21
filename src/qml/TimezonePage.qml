@@ -37,6 +37,7 @@ Item {
 
     onTimezoneListChanged: {
         var processedRegionList = [];
+        var i = 0;
         timezoneList.forEach(function(region) {
             //console.log("processing ", region);
             if(region.includes(regionPath)) {
@@ -45,9 +46,17 @@ Item {
                     if (processedRegionList.indexOf(tzAsList[regionLevel]) < 0) {
                         processedRegionList.push(tzAsList[regionLevel]);
                         timezoneModel.append({"visualName": tzAsList[regionLevel].replace("_"," ") + " ⋯", "name": tzAsList[regionLevel],"fullPath": region, "bottomLevel": false});
+                        if(selectedTz.includes(root.regionPath + tzAsList[regionLevel])) {
+                            timezoneSpinner.positionViewAtIndex(i, ListView.SnapPosition);
+                        }
+                        i++;
                     }
                 } else { //if this item doesn't have children - add it with a full name
                     timezoneModel.append({"visualName": tzAsList[regionLevel].replace("_"," "), "name": tzAsList[regionLevel], "fullPath": region, "bottomLevel": true});
+                    if(selectedTz.includes(root.regionPath + tzAsList[regionLevel])) {
+                        timezoneSpinner.positionViewAtIndex(i, ListView.SnapPosition);
+                    }
+                    i++;
                 }
             } else {
                 //console.log("skipping ", region, " because it does not contain ", regionPath, " which is the region path");

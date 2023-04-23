@@ -45,7 +45,7 @@ Item {
                 if (tzAsList.length > (regionLevel + 1)) { //check if this item in the list has children
                     if (processedRegionList.indexOf(tzAsList[regionLevel]) < 0) {
                         processedRegionList.push(tzAsList[regionLevel]);
-                        timezoneModel.append({"visualName": tzAsList[regionLevel].replace("_"," ") + " ⋯", "name": tzAsList[regionLevel],"fullPath": region, "bottomLevel": false});
+                        timezoneModel.append({"visualName": "  " + tzAsList[regionLevel].replace("_"," ") + " ›", "name": tzAsList[regionLevel],"fullPath": region, "bottomLevel": false});
                         if(selectedTz.includes(root.regionPath + tzAsList[regionLevel])) {
                             timezoneSpinner.positionViewAtIndex(i, ListView.SnapPosition);
                         }

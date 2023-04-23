@@ -166,6 +166,10 @@
         <source>SSH Mode</source>
         <translation>Mód SSH</translation>
     </message>
+    <message id="id-timezone-page">
+        <source>Time zone</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AboutPage</name>

@@ -69,31 +69,31 @@
         <translation>फॅरनहाइट वापरा:</translation>
     </message>
     <message id="id-time-page">
-        <location filename="../src/qml/main.qml" line="71"/>
-        <location filename="../src/qml/TimePage.qml" line="40"/>
+        <location filename="../src/qml/main.qml" line="72"/>
+        <location filename="../src/qml/TimePage.qml" line="41"/>
         <source>Time</source>
         <translation>वेळ</translation>
     </message>
     <message id="id-date-page">
-        <location filename="../src/qml/DatePage.qml" line="31"/>
-        <location filename="../src/qml/main.qml" line="77"/>
+        <location filename="../src/qml/DatePage.qml" line="32"/>
+        <location filename="../src/qml/main.qml" line="78"/>
         <source>Date</source>
         <translation>दिनांक</translation>
     </message>
     <message id="id-language-page">
         <location filename="../src/qml/LanguagePage.qml" line="31"/>
-        <location filename="../src/qml/main.qml" line="83"/>
+        <location filename="../src/qml/main.qml" line="90"/>
         <source>Language</source>
         <translation>भाषा</translation>
     </message>
     <message id="id-bluetooth-page">
-        <location filename="../src/qml/main.qml" line="89"/>
+        <location filename="../src/qml/main.qml" line="96"/>
         <source>Bluetooth</source>
         <translation>ब्लूटुथ</translation>
     </message>
     <message id="id-display-page">
         <location filename="../src/qml/DisplayPage.qml" line="39"/>
-        <location filename="../src/qml/main.qml" line="95"/>
+        <location filename="../src/qml/main.qml" line="102"/>
         <source>Display</source>
         <translation>प्रदर्शन</translation>
     </message>
@@ -127,56 +127,62 @@
         <source>Tap-to-wake</source>
         <translation>टॅप टू वेक</translation>
     </message>
+    <message id="id-timezone-page">
+        <location filename="../src/qml/main.qml" line="84"/>
+        <location filename="../src/qml/TimezonePage.qml" line="35"/>
+        <source>Time zone</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="id-sound-page">
-        <location filename="../src/qml/main.qml" line="101"/>
+        <location filename="../src/qml/main.qml" line="108"/>
         <source>Sound</source>
         <translation>आवाज</translation>
     </message>
     <message id="id-nightstand-page">
-        <location filename="../src/qml/main.qml" line="108"/>
+        <location filename="../src/qml/main.qml" line="115"/>
         <location filename="../src/qml/NightstandPage.qml" line="55"/>
         <source>Nightstand</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-units-page">
-        <location filename="../src/qml/main.qml" line="114"/>
+        <location filename="../src/qml/main.qml" line="121"/>
         <location filename="../src/qml/UnitsPage.qml" line="26"/>
         <source>Units</source>
         <translation>युनिट</translation>
     </message>
     <message id="id-wallpaper-page">
-        <location filename="../src/qml/main.qml" line="120"/>
+        <location filename="../src/qml/main.qml" line="127"/>
         <source>Wallpaper</source>
         <translation>वॉलपेपर</translation>
     </message>
     <message id="id-watchface-page">
-        <location filename="../src/qml/main.qml" line="126"/>
+        <location filename="../src/qml/main.qml" line="133"/>
         <source>Watchface</source>
         <translation>वॉचफेस</translation>
     </message>
     <message id="id-launcher-page">
-        <location filename="../src/qml/main.qml" line="132"/>
+        <location filename="../src/qml/main.qml" line="139"/>
         <source>Launcher</source>
         <translation>लाँचर</translation>
     </message>
     <message id="id-usb-page">
-        <location filename="../src/qml/main.qml" line="138"/>
+        <location filename="../src/qml/main.qml" line="145"/>
         <location filename="../src/qml/USBPage.qml" line="29"/>
         <source>USB</source>
         <translation>युएसबी</translation>
     </message>
     <message id="id-poweroff-page">
-        <location filename="../src/qml/main.qml" line="144"/>
+        <location filename="../src/qml/main.qml" line="151"/>
         <source>Power Off</source>
         <translation>वीज बंद</translation>
     </message>
     <message id="id-reboot-page">
-        <location filename="../src/qml/main.qml" line="150"/>
+        <location filename="../src/qml/main.qml" line="157"/>
         <source>Reboot</source>
         <translation>रीबूट करा</translation>
     </message>
     <message id="id-about-page">
-        <location filename="../src/qml/main.qml" line="156"/>
+        <location filename="../src/qml/main.qml" line="163"/>
         <source>About</source>
         <translation>बद्दल</translation>
     </message>

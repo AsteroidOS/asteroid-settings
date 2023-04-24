@@ -168,7 +168,7 @@
     </message>
     <message id="id-timezone-page">
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation>Saat dilimi</translation>
     </message>
 </context>
 <context>

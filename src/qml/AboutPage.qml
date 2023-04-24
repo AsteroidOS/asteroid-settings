@@ -89,5 +89,10 @@ Flickable {
                 }
             }
         }
+        Item {
+            id: bottomSpacer
+            height: parent.width*0.1
+            width: height
+        }
     }
 }

@@ -83,13 +83,13 @@ Application {
                 ListItem {
                     //% "Time zone"
                     title: qsTrId("id-timezone-page")
-                    iconName: "ios-flag-outline"
+                    iconName: "ios-globe-outline"
                     onClicked: layerStack.push(timezoneLayer)
                 }
                 ListItem {
                     //% "Language"
                     title: qsTrId("id-language-page")
-                    iconName: "ios-globe-outline"
+                    iconName: "ios-earth-outline"
                     onClicked: layerStack.push(languageLayer)
                 }
                 ListItem {

@@ -142,7 +142,7 @@
         <location filename="../src/qml/main.qml" line="115"/>
         <location filename="../src/qml/NightstandPage.qml" line="55"/>
         <source>Nightstand</source>
-        <translation type="unfinished">Ночной вид</translation>
+        <translation>Прикроватный режим</translation>
     </message>
     <message id="id-units-page">
         <location filename="../src/qml/main.qml" line="121"/>
@@ -211,7 +211,7 @@
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="137"/>
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>Пользовательский циферблат</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="166"/>

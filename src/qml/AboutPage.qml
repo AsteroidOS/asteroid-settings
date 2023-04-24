@@ -62,10 +62,11 @@ Flickable {
                 { label: qsTr("WLAN MAC"), text: about.wlanMacAddress },
                 { label: qsTr("IMEI"), text: about.imei },
                 { label: qsTr("Serial number"), text: about.serial },
-                { label: qsTr("Total disk space"), text: qsTr("%L1").arg(Math.round(about.totalDiskSpace() / 1e7)/100) + " GB" },
-                { label: qsTr("Available disk space"), text: qsTr("%L1").arg(Math.round(about.availableDiskSpace() / 1e7)/100)
-                            + " GB (" + (100.0 * about.availableDiskSpace() / about.totalDiskSpace()).toFixed(0) + "%)" },
-                { label: qsTr("Display size"), text: Dims.w(100) + qsTr("W") + " x " + Dims.h(100) + qsTr("H") },
+                { label: qsTr("Total disk space"), text: qsTr("%L1 GB").arg(Math.round(about.totalDiskSpace() / 1e7)/100) },
+                { label: qsTr("Available disk space"), text: qsTr("%L1 GB (%L2 %)").
+                    arg(Math.round(about.availableDiskSpace() / 1e7)/100).
+                    arg((100.0 * about.availableDiskSpace() / about.totalDiskSpace()).toFixed(0)) },
+                { label: qsTr("Display size"), text: qsTr("%L1W x %L2H").arg(Dims.w(100)).arg(Dims.h(100)) },
                 { label: qsTr("Kernel version"), text: kernelVersion },
                 { label: qsTr("Qt version"), text: qtVersion }
             ]

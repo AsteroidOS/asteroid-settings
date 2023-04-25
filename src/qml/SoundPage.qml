@@ -23,14 +23,47 @@ import org.asteroid.settings 1.0
 Item {
     VolumeControl { id: volumeControl }
 
+    property int soundMute: 0
+
+    Rectangle {
+        id: soundBackground
+        anchors.centerIn: parent
+        anchors.verticalCenterOffset: -Dims.h(13)
+        color: "black"
+        radius: width/2
+        opacity: soundMute > 0 ? 0.2 : 0.4
+        width: parent.height*0.25
+        height: width
+
+        MouseArea {
+            id: muteButton
+
+            anchors.fill: parent
+            onClicked: {
+                // Is muted?
+                if (soundMute > 0) {
+                    // Restore pre mute volume value
+                    volumeControl.volume = soundMute
+                    soundMute = 0
+                } else {
+                    // Store volume value before muting
+                    soundMute = volumeControl.volume
+                    volumeControl.volume = "0"
+                }
+            }
+
+        }
+    }
+
     Icon {
         width: Dims.w(25)
         height: width
-        anchors.centerIn: parent
-        anchors.verticalCenterOffset: -Dims.h(15)
-        name: volumeControl.volume > "70" ? "ios-sound-indicator-high" :
-                                           volumeControl.volume > "30" ? "ios-sound-indicator-mid" :
-                                                                         volumeControl.volume > "0" ? "ios-sound-indicator-low" : "ios-sound-indicator-off"
+        anchors.fill: soundBackground
+        anchors.margins: Dims.l(3)
+        name: soundMute > 0 ? "ios-sound-indicator-mute" :
+                              volumeControl.volume > "70" ? "ios-sound-indicator-high" :
+                                                            volumeControl.volume > "30" ? "ios-sound-indicator-mid" :
+                                                                                          volumeControl.volume > "0" ? "ios-sound-indicator-low" : "ios-sound-indicator-off"
     }
 
     Label {

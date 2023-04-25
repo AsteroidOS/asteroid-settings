@@ -28,7 +28,9 @@ Item {
         height: width
         anchors.centerIn: parent
         anchors.verticalCenterOffset: -Dims.h(15)
-        name: "ios-volume-up"
+        name: volumeControl.volume > "70" ? "ios-sound-indicator-high" :
+                                           volumeControl.volume > "30" ? "ios-sound-indicator-mid" :
+                                                                         volumeControl.volume > "0" ? "ios-sound-indicator-low" : "ios-sound-indicator-off"
     }
 
     Label {

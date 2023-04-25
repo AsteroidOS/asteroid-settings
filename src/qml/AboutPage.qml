@@ -19,6 +19,7 @@
 import QtQuick 2.9
 import org.asteroid.utils 1.0
 import org.asteroid.controls 1.0
+import org.asteroid.settings 1.0
 import org.nemomobile.systemsettings 1.0
 
 Flickable {
@@ -27,6 +28,31 @@ Flickable {
     }
     DiskUsage {
         id: diskUsage
+    }
+    SysInfo {
+        id: info
+    }
+
+    Item {
+        id: uptimeCounter
+        readonly property int secondsPerDay: 60 * 60 * 24
+
+        Timer {
+            interval: 1000
+            repeat: true
+            triggeredOnStart: true
+            running: true
+            onTriggered: info.refresh()
+        }
+        function days() {
+            return Math.floor(info.uptime / secondsPerDay)
+        }
+        function asString() {
+            var now = info.uptime
+            var days = Math.floor(now / secondsPerDay)
+            var date = new Date(1000 * (now - days * secondsPerDay))
+            return date.toISOString().substring(11, 19);
+        }
     }
 
     contentHeight: contentcolumn.implicitHeight
@@ -68,7 +94,22 @@ Flickable {
                     arg((100.0 * about.availableDiskSpace() / about.totalDiskSpace()).toFixed(0)) },
                 { label: qsTr("Display size"), text: qsTr("%L1W x %L2H").arg(Dims.w(100)).arg(Dims.h(100)) },
                 { label: qsTr("Kernel version"), text: kernelVersion },
-                { label: qsTr("Qt version"), text: qtVersion }
+                { label: qsTr("Qt version"), text: qtVersion },
+                { label: qsTr("Uptime"), text: qsTr("%L1 days %L2").
+                    arg(uptimeCounter.days()).
+                    arg(uptimeCounter.asString())
+                },
+                { label: qsTr("Threads"), text: qsTr("%L1").arg(info.threads) },
+                { label: qsTr("1,5,15 Minute loads"), text: qsTr("%L1, %L2, %L3").
+                    arg(info.loads[0].toFixed(2)).
+                    arg(info.loads[1].toFixed(2)).
+                    arg(info.loads[2].toFixed(2))
+                },
+                { label: qsTr("Total memory"), text: qsTr("%L1 MB").arg(Math.round(info.totalRam * info.memUnit / 1e6)) },
+                { label: qsTr("Free memory"), text: qsTr("%L1 MB (%L2 %)").
+                    arg(Math.round(info.freeRam * info.memUnit / 1e6)).
+                    arg((100.0 * info.freeRam / info.totalRam).toFixed(0))
+                }
             ]
             delegate: Column {
                 width: contentcolumn.width

@@ -94,6 +94,12 @@ Item {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: Dims.h(10)
         onClicked: {
+            //Un-mute if muted
+            if (preMuteLevel.value > 0) {
+                // Restore pre mute volume value
+                volumeControl.volume = preMuteLevel.value
+                preMuteLevel.value = 0
+            }
             var newVal = volumeControl.volume - 10
             if(newVal < 0) newVal = 0
             volumeControl.volume = newVal
@@ -107,6 +113,12 @@ Item {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: Dims.h(10)
         onClicked: {
+            //Un-mute if muted
+            if (preMuteLevel.value > 0) {
+                // Restore pre mute volume value
+                volumeControl.volume = preMuteLevel.value
+                preMuteLevel.value = 0
+            }
             var newVal = volumeControl.volume + 10
             if(newVal > 100) newVal = 100
             volumeControl.volume = newVal

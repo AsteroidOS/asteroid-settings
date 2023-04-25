@@ -11,10 +11,12 @@ add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/VolumeControl2.h ${CMAKE_C
 
 set(SRC
 	main.cpp
+	sysinfo.cpp
 	taptowake.cpp
 	tilttowake.cpp
 	volumecontrol.cpp)
 set(HEADERS
+	sysinfo.h
 	taptowake.h
 	tilttowake.h
 	volumecontrol.h)

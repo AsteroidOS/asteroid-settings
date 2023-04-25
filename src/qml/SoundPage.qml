@@ -19,9 +19,17 @@ import QtQuick 2.9
 import QtMultimedia 5.8
 import org.asteroid.controls 1.0
 import org.asteroid.settings 1.0
+import Nemo.Configuration 1.0
+
 
 Item {
     VolumeControl { id: volumeControl }
+
+    ConfigurationValue {
+        id: preMuteLevel
+
+        key: "/desktop/asteroid/pre-mute-level"
+    }
 
     property int soundMute: 0
 
@@ -31,7 +39,7 @@ Item {
         anchors.verticalCenterOffset: -Dims.h(13)
         color: "black"
         radius: width/2
-        opacity: soundMute > 0 ? 0.2 : 0.4
+        opacity: preMuteLevel.value > 0 ? 0.2 : 0.4
         width: parent.height*0.25
         height: width
 
@@ -41,13 +49,13 @@ Item {
             anchors.fill: parent
             onClicked: {
                 // Is muted?
-                if (soundMute > 0) {
+                if (preMuteLevel.value > 0) {
                     // Restore pre mute volume value
-                    volumeControl.volume = soundMute
-                    soundMute = 0
+                    volumeControl.volume = preMuteLevel.value
+                    preMuteLevel.value = 0
                 } else {
                     // Store volume value before muting
-                    soundMute = volumeControl.volume
+                    preMuteLevel.value = volumeControl.volume
                     volumeControl.volume = "0"
                 }
             }
@@ -60,7 +68,7 @@ Item {
         height: width
         anchors.fill: soundBackground
         anchors.margins: Dims.l(3)
-        name: soundMute > 0 ? "ios-sound-indicator-mute" :
+        name: preMuteLevel.value > 0 ? "ios-sound-indicator-mute" :
                               volumeControl.volume > "70" ? "ios-sound-indicator-high" :
                                                             volumeControl.volume > "30" ? "ios-sound-indicator-mid" :
                                                                                           volumeControl.volume > "0" ? "ios-sound-indicator-low" : "ios-sound-indicator-off"

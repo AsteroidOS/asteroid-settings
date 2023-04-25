@@ -77,7 +77,7 @@ Application {
                 ListItem {
                     //% "Date"
                     title: qsTrId("id-date-page")
-                    iconName: "ios-calendar-outline"
+                    iconName: "ios-date-outline"
                     onClicked: layerStack.push(dateLayer)
                 }
                 ListItem {

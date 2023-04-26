@@ -23,16 +23,6 @@
         <source>Not connected</source>
         <translation>연결되지 않음</translation>
     </message>
-    <message id="id-poweroff-warn">
-        <location filename="../src/qml/PoweroffPage.qml" line="29"/>
-        <source>Power off AsteroidOS</source>
-        <translation>AsteroidOS 종료</translation>
-    </message>
-    <message id="id-reboot-warn">
-        <location filename="../src/qml/RebootPage.qml" line="29"/>
-        <source>Reboot AsteroidOS</source>
-        <translation>AsteroidOS 재시동</translation>
-    </message>
     <message id="id-sound-percentage">
         <location filename="../src/qml/SoundPage.qml" line="36"/>
         <source>Volume %1%</source>
@@ -69,31 +59,31 @@
         <translation>화씨를 사용:</translation>
     </message>
     <message id="id-time-page">
-        <location filename="../src/qml/main.qml" line="72"/>
+        <location filename="../src/qml/main.qml" line="73"/>
         <location filename="../src/qml/TimePage.qml" line="41"/>
         <source>Time</source>
         <translation>시간</translation>
     </message>
     <message id="id-date-page">
         <location filename="../src/qml/DatePage.qml" line="32"/>
-        <location filename="../src/qml/main.qml" line="78"/>
+        <location filename="../src/qml/main.qml" line="79"/>
         <source>Date</source>
         <translation>날짜</translation>
     </message>
     <message id="id-language-page">
         <location filename="../src/qml/LanguagePage.qml" line="31"/>
-        <location filename="../src/qml/main.qml" line="90"/>
+        <location filename="../src/qml/main.qml" line="91"/>
         <source>Language</source>
         <translation>언어</translation>
     </message>
     <message id="id-bluetooth-page">
-        <location filename="../src/qml/main.qml" line="96"/>
+        <location filename="../src/qml/main.qml" line="97"/>
         <source>Bluetooth</source>
         <translation>블루투스</translation>
     </message>
     <message id="id-display-page">
         <location filename="../src/qml/DisplayPage.qml" line="39"/>
-        <location filename="../src/qml/main.qml" line="102"/>
+        <location filename="../src/qml/main.qml" line="103"/>
         <source>Display</source>
         <translation>화면</translation>
     </message>
@@ -128,61 +118,67 @@
         <translation>탭할 때 화면 켜기</translation>
     </message>
     <message id="id-timezone-page">
-        <location filename="../src/qml/main.qml" line="84"/>
+        <location filename="../src/qml/main.qml" line="85"/>
         <location filename="../src/qml/TimezonePage.qml" line="35"/>
         <source>Time zone</source>
         <translation>시간대</translation>
     </message>
     <message id="id-sound-page">
-        <location filename="../src/qml/main.qml" line="108"/>
+        <location filename="../src/qml/main.qml" line="109"/>
         <source>Sound</source>
         <translation>소리</translation>
     </message>
     <message id="id-nightstand-page">
-        <location filename="../src/qml/main.qml" line="115"/>
+        <location filename="../src/qml/main.qml" line="116"/>
         <location filename="../src/qml/NightstandPage.qml" line="55"/>
         <source>Nightstand</source>
         <translation>나이트스탠드</translation>
     </message>
     <message id="id-units-page">
-        <location filename="../src/qml/main.qml" line="121"/>
+        <location filename="../src/qml/main.qml" line="122"/>
         <location filename="../src/qml/UnitsPage.qml" line="26"/>
         <source>Units</source>
         <translation>단위</translation>
     </message>
     <message id="id-wallpaper-page">
-        <location filename="../src/qml/main.qml" line="127"/>
+        <location filename="../src/qml/main.qml" line="128"/>
         <source>Wallpaper</source>
         <translation>배경화면</translation>
     </message>
     <message id="id-watchface-page">
-        <location filename="../src/qml/main.qml" line="133"/>
+        <location filename="../src/qml/main.qml" line="134"/>
         <source>Watchface</source>
         <translation>시계화면</translation>
     </message>
     <message id="id-launcher-page">
-        <location filename="../src/qml/main.qml" line="139"/>
+        <location filename="../src/qml/main.qml" line="140"/>
         <source>Launcher</source>
         <translation>런처</translation>
     </message>
     <message id="id-usb-page">
-        <location filename="../src/qml/main.qml" line="145"/>
+        <location filename="../src/qml/main.qml" line="146"/>
         <location filename="../src/qml/USBPage.qml" line="29"/>
         <source>USB</source>
         <translation>USB</translation>
     </message>
+    <message id="id-power-page">
+        <location filename="../src/qml/main.qml" line="152"/>
+        <location filename="../src/qml/PowerPage.qml" line="29"/>
+        <source>Power</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="id-poweroff-page">
-        <location filename="../src/qml/main.qml" line="151"/>
+        <location filename="../src/qml/PowerPage.qml" line="49"/>
         <source>Power Off</source>
         <translation>종료</translation>
     </message>
     <message id="id-reboot-page">
-        <location filename="../src/qml/main.qml" line="157"/>
+        <location filename="../src/qml/PowerPage.qml" line="62"/>
         <source>Reboot</source>
         <translation>재시동</translation>
     </message>
     <message id="id-about-page">
-        <location filename="../src/qml/main.qml" line="163"/>
+        <location filename="../src/qml/main.qml" line="158"/>
         <source>About</source>
         <translation>정보</translation>
     </message>

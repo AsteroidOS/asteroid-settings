@@ -19,14 +19,6 @@
         <source>Not connected</source>
         <translation>Bağlı değil</translation>
     </message>
-    <message id="id-poweroff-warn">
-        <source>Power off AsteroidOS</source>
-        <translation>AsteroidOS&apos;i kapat</translation>
-    </message>
-    <message id="id-reboot-warn">
-        <source>Reboot AsteroidOS</source>
-        <translation>AsteroidOS&apos;i yeniden başlat</translation>
-    </message>
     <message id="id-sound-percentage">
         <source>Volume %1%</source>
         <translation>%%1 Ses</translation>
@@ -169,6 +161,10 @@
     <message id="id-timezone-page">
         <source>Time zone</source>
         <translation>Saat dilimi</translation>
+    </message>
+    <message id="id-power-page">
+        <source>Power</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

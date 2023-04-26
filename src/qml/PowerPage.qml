@@ -29,48 +29,29 @@ Item {
         text: qsTrId("id-power-page")
     }
 
-    property string powerCommand: "power-off"
-    property bool selectedPowerOff: true
-    property bool selectedReboot: false
+    ListModel {
+        id: powerModel
+        //% "Power Off"
+        ListElement { text: qsTrId("id-poweroff-page"); icon: "ios-power-outline"; command: "req_shutdown" }
+        //% "Reboot"
+        ListElement { text: qsTrId("id-reboot-page"); icon: "ios-sync"; command: "req_reboot" }
+    }
 
     ListView {
+        id: powerItems
         anchors.fill: parent
-        contentHeight: Dims.h(60)
-        contentWidth: width
-
-        Column {
-            id: settingsColumn
-            anchors.fill: parent
-
-            Item { width: parent.width; height:  Dims.h(29) }
-
-            ListItem {
-                //% "Power Off"
-                title: qsTrId("id-poweroff-page")
-                iconName: "ios-power-outline"
-                highlight: selectedPowerOff ? 0.2 : 0
-                onClicked: {
-                    powerCommand = "power-off"
-                    if (!selectedPowerOff) {
-                        selectedPowerOff = !selectedPowerOff
-                        selectedReboot = !selectedReboot
-                    }
-                }
-            }
-            ListItem {
-                //% "Reboot"
-                title: qsTrId("id-reboot-page")
-                iconName: "ios-sync"
-                highlight: selectedReboot ? 0.2 : 0
-                onClicked: {
-                    powerCommand = "reboot"
-                    if (!selectedReboot) {
-                        selectedReboot = !selectedReboot
-                        selectedPowerOff = !selectedPowerOff
-                    }
-                }
-            }
+        interactive: false
+        model: powerModel
+        delegate: ListItem {
+            title: text
+            iconName: icon
+            highlight: powerItems.currentIndex == index ? 0.2 : 0
+            onClicked: powerItems.currentIndex = index
         }
+
+        preferredHighlightBegin: height / 2 - Dims.h(21)
+        preferredHighlightEnd: height / 2 + Dims.h(21)
+        highlightRangeMode: ListView.StrictlyEnforceRange
     }
 
     IconButton {
@@ -78,7 +59,7 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
         anchors.bottomMargin: Dims.h(5)
-        onClicked: powerCommand === "reboot" ? dsmeDbus.call("req_reboot", []) : dsmeDbus.call("req_shutdown", [])
+        onClicked: dsmeDbus.call(powerModel.get(powerItems.currentIndex).command, [])
     }
 
     DBusInterface {

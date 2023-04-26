@@ -26,6 +26,7 @@ Item {
 
     property alias title: label.text
     property alias iconName: icon.name
+    property alias highlight: highlightPress.opacity
     signal clicked()
 
     width: parent.width

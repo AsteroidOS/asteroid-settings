@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2023 - Timo Könnecke <github.com/eLtMosen>
  * Copyright (C) 2016 - Sylvia van Os <iamsylvie@openmailbox.org>
  * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
  *
@@ -41,8 +42,7 @@ Application {
     Component { id: watchfaceLayer;             WatchfacePage  { } }
     Component { id: launcherLayer;              LauncherPage   { } }
     Component { id: usbLayer;                   USBPage        { } }
-    Component { id: poweroffLayer;              PoweroffPage   { } }
-    Component { id: rebootLayer;                RebootPage     { } }
+    Component { id: powerLayer;                 PowerPage      { } }
     Component { id: aboutLayer;                 AboutPage      { } }
 
     TiltToWake { id: tiltToWake }
@@ -148,16 +148,10 @@ Application {
                     onClicked: layerStack.push(usbLayer)
                 }
                 ListItem {
-                    //% "Power Off"
-                    title: qsTrId("id-poweroff-page")
+                    //% "Power"
+                    title: qsTrId("id-power-page")
                     iconName: "ios-power-outline"
-                    onClicked: layerStack.push(poweroffLayer)
-                }
-                ListItem {
-                    //% "Reboot"
-                    title: qsTrId("id-reboot-page")
-                    iconName: "ios-sync"
-                    onClicked: layerStack.push(rebootLayer)
+                    onClicked: layerStack.push(powerLayer)
                 }
                 ListItem {
                     //% "About"

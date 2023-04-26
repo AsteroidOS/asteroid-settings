@@ -19,14 +19,6 @@
         <source>Not connected</source>
         <translation>Sense connexió</translation>
     </message>
-    <message id="id-poweroff-warn">
-        <source>Power off AsteroidOS</source>
-        <translation>Apagar AsteroidOS</translation>
-    </message>
-    <message id="id-reboot-warn">
-        <source>Reboot AsteroidOS</source>
-        <translation>Reiniciar AsteroidOS</translation>
-    </message>
     <message id="id-sound-percentage">
         <source>Volume %1%</source>
         <translation>Volum %1%</translation>
@@ -168,6 +160,10 @@
     </message>
     <message id="id-timezone-page">
         <source>Time zone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-power-page">
+        <source>Power</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

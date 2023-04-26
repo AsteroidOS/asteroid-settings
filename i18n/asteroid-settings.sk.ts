@@ -166,6 +166,14 @@
         <source>Power</source>
         <translation type="unfinished"></translation>
     </message>
+    <message id="id-reboot-bootloader">
+        <source>Reboot to Bootloader</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-reboot-warn">
+        <source>Reboot AsteroidOS</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AboutPage</name>
@@ -210,20 +218,60 @@
         <translation>Veľkosť displeja</translation>
     </message>
     <message>
-        <source>W</source>
-        <translation>W</translation>
-    </message>
-    <message>
-        <source>H</source>
-        <translation>H</translation>
-    </message>
-    <message>
         <source>Kernel version</source>
         <translation>Verzia jadra</translation>
     </message>
     <message>
         <source>Qt version</source>
         <translation>Verzia Qt</translation>
+    </message>
+    <message>
+        <source>%L1 GB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%L1 GB (%L2 %)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%L1W x %L2H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uptime</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%L1 days %L2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Threads</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>1,5,15 Minute loads</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%L1, %L2, %L3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Total memory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%L1 MB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Free memory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%L1 MB (%L2 %)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

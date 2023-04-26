@@ -24,7 +24,7 @@
         <translation>არაა დაკავშირებული</translation>
     </message>
     <message id="id-sound-percentage">
-        <location filename="../src/qml/SoundPage.qml" line="36"/>
+        <location filename="../src/qml/SoundPage.qml" line="79"/>
         <source>Volume %1%</source>
         <translation>ხმის სიმაღლე %1%</translation>
     </message>
@@ -168,12 +168,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message id="id-poweroff-page">
-        <location filename="../src/qml/PowerPage.qml" line="49"/>
+        <location filename="../src/qml/PowerPage.qml" line="35"/>
         <source>Power Off</source>
         <translation>კვების გამორთვა</translation>
     </message>
     <message id="id-reboot-page">
-        <location filename="../src/qml/PowerPage.qml" line="62"/>
+        <location filename="../src/qml/PowerPage.qml" line="37"/>
         <source>Reboot</source>
         <translation>გადატვირთვა</translation>
     </message>
@@ -215,77 +215,136 @@
         <oldsource>select nightstand watchface</oldsource>
         <translation type="unfinished"></translation>
     </message>
+    <message id="id-reboot-bootloader">
+        <location filename="../src/foo.qml" line="44"/>
+        <source>Reboot to Bootloader</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-reboot-warn">
+        <location filename="../src/foo.qml" line="50"/>
+        <source>Reboot AsteroidOS</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="59"/>
+        <location filename="../src/qml/AboutPage.qml" line="85"/>
         <source>Build ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="60"/>
+        <location filename="../src/qml/AboutPage.qml" line="86"/>
         <source>Codename</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="61"/>
+        <location filename="../src/qml/AboutPage.qml" line="87"/>
         <source>Host name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="62"/>
+        <location filename="../src/qml/AboutPage.qml" line="88"/>
         <source>WLAN MAC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="63"/>
+        <location filename="../src/qml/AboutPage.qml" line="89"/>
         <source>IMEI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="64"/>
+        <location filename="../src/qml/AboutPage.qml" line="90"/>
         <source>Serial number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="65"/>
+        <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>Total disk space</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="65"/>
-        <location filename="../src/qml/AboutPage.qml" line="66"/>
+        <location filename="../src/qml/AboutPage.qml" line="91"/>
+        <source>%L1 GB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="92"/>
+        <source>%L1 GB (%L2 %)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="95"/>
+        <source>%L1W x %L2H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="98"/>
+        <source>Uptime</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="98"/>
+        <source>%L1 days %L2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>%L1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="66"/>
+        <location filename="../src/qml/AboutPage.qml" line="102"/>
+        <source>Threads</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="103"/>
+        <source>1,5,15 Minute loads</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="103"/>
+        <source>%L1, %L2, %L3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="108"/>
+        <source>Total memory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="108"/>
+        <source>%L1 MB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="109"/>
+        <source>Free memory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="109"/>
+        <source>%L1 MB (%L2 %)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>Available disk space</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="68"/>
+        <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>Display size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="68"/>
-        <source>W</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/qml/AboutPage.qml" line="68"/>
-        <source>H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/qml/AboutPage.qml" line="69"/>
+        <location filename="../src/qml/AboutPage.qml" line="96"/>
         <source>Kernel version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="70"/>
+        <location filename="../src/qml/AboutPage.qml" line="97"/>
         <source>Qt version</source>
         <translation type="unfinished"></translation>
     </message>

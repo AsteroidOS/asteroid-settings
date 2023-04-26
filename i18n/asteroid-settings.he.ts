@@ -132,7 +132,7 @@
         <location filename="../src/qml/main.qml" line="84"/>
         <location filename="../src/qml/TimezonePage.qml" line="35"/>
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation>אזור זמן</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../src/qml/main.qml" line="108"/>

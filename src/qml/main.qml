@@ -69,47 +69,10 @@ Application {
                 Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? Dims.h(6) : Dims.h(2) }
 
                 ListItem {
-                    //% "Time"
-                    title: qsTrId("id-time-page")
-                    iconName: "ios-clock-outline"
-                    onClicked: layerStack.push(timeLayer)
-                }
-                ListItem {
-                    //% "Date"
-                    title: qsTrId("id-date-page")
-                    iconName: "ios-date-outline"
-                    onClicked: layerStack.push(dateLayer)
-                }
-                ListItem {
-                    //% "Time zone"
-                    title: qsTrId("id-timezone-page")
-                    iconName: "ios-globe-outline"
-                    onClicked: layerStack.push(timezoneLayer)
-                }
-                ListItem {
-                    //% "Language"
-                    title: qsTrId("id-language-page")
-                    iconName: "ios-earth-outline"
-                    onClicked: layerStack.push(languageLayer)
-                }
-                ListItem {
-                    //% "Bluetooth"
-                    title: qsTrId("id-bluetooth-page")
-                    iconName: "ios-bluetooth-outline"
-                    onClicked: layerStack.push(bluetoothLayer)
-                }
-                ListItem {
                     //% "Display"
                     title: qsTrId("id-display-page")
                     iconName: "ios-display-outline"
                     onClicked: layerStack.push(displayLayer)
-                }
-                ListItem {
-                    //% "Sound"
-                    title: qsTrId("id-sound-page")
-                    iconName: "ios-sound-outline"
-                    onClicked: layerStack.push(soundLayer)
-                    visible: DeviceInfo.hasSpeaker
                 }
                 ListItem {
                     //% "Nightstand"
@@ -118,10 +81,11 @@ Application {
                     onClicked: layerStack.push(nightstandLayer)
                 }
                 ListItem {
-                    //% "Units"
-                    title: qsTrId("id-units-page")
-                    iconName: "ios-units-outline"
-                    onClicked: layerStack.push(unitsLayer)
+                    //% "Sound"
+                    title: qsTrId("id-sound-page")
+                    iconName: "ios-sound-outline"
+                    onClicked: layerStack.push(soundLayer)
+                    visible: DeviceInfo.hasSpeaker
                 }
                 ListItem {
                     //% "Wallpaper"
@@ -140,6 +104,42 @@ Application {
                     title: qsTrId("id-launcher-page")
                     iconName: "ios-launcher-outline"
                     onClicked: layerStack.push(launcherLayer)
+                }
+                ListItem {
+                    //% "Time"
+                    title: qsTrId("id-time-page")
+                    iconName: "ios-clock-outline"
+                    onClicked: layerStack.push(timeLayer)
+                }
+                ListItem {
+                    //% "Date"
+                    title: qsTrId("id-date-page")
+                    iconName: "ios-date-outline"
+                    onClicked: layerStack.push(dateLayer)
+                }
+                ListItem {
+                    //% "Units"
+                    title: qsTrId("id-units-page")
+                    iconName: "ios-units-outline"
+                    onClicked: layerStack.push(unitsLayer)
+                }
+                ListItem {
+                    //% "Language"
+                    title: qsTrId("id-language-page")
+                    iconName: "ios-earth-outline"
+                    onClicked: layerStack.push(languageLayer)
+                }
+                ListItem {
+                    //% "Time zone"
+                    title: qsTrId("id-timezone-page")
+                    iconName: "ios-globe-outline"
+                    onClicked: layerStack.push(timezoneLayer)
+                }
+                ListItem {
+                    //% "Bluetooth"
+                    title: qsTrId("id-bluetooth-page")
+                    iconName: "ios-bluetooth-outline"
+                    onClicked: layerStack.push(bluetoothLayer)
                 }
                 ListItem {
                     //% "USB"

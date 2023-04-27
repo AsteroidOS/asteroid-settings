@@ -101,7 +101,7 @@ Application {
                 ListItem {
                     //% "Display"
                     title: qsTrId("id-display-page")
-                    iconName: "ios-sunny-outline"
+                    iconName: "ios-display-outline"
                     onClicked: layerStack.push(displayLayer)
                 }
                 ListItem {
@@ -120,25 +120,25 @@ Application {
                 ListItem {
                     //% "Units"
                     title: qsTrId("id-units-page")
-                    iconName: "ios-speedometer-outline"
+                    iconName: "ios-units-outline"
                     onClicked: layerStack.push(unitsLayer)
                 }
                 ListItem {
                     //% "Wallpaper"
                     title: qsTrId("id-wallpaper-page")
-                    iconName: "ios-images-outline"
+                    iconName: "ios-wallpaper-outline"
                     onClicked: layerStack.push(wallpaperLayer)
                 }
                 ListItem {
                     //% "Watchface"
                     title: qsTrId("id-watchface-page")
-                    iconName: "ios-color-wand-outline"
+                    iconName: "ios-watchface-outline"
                     onClicked: layerStack.push(watchfaceLayer)
                 }
                 ListItem {
                     //% "Launcher"
                     title: qsTrId("id-launcher-page")
-                    iconName: "ios-apps-outline"
+                    iconName: "ios-launcher-outline"
                     onClicked: layerStack.push(launcherLayer)
                 }
                 ListItem {

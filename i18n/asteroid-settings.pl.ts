@@ -16,7 +16,7 @@
     <message id="id-connected">
         <location filename="../src/qml/BluetoothPage.qml" line="32"/>
         <source>Connected</source>
-        <translation>Połączono</translation>
+        <translation>Połączony</translation>
     </message>
     <message id="id-disconnected">
         <location filename="../src/qml/BluetoothPage.qml" line="34"/>
@@ -51,7 +51,7 @@
     <message id="id-12h-format">
         <location filename="../src/qml/UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation>Użyj 12H formatu:</translation>
+        <translation>Użyj formatu 12H:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../src/qml/UnitsPage.qml" line="63"/>
@@ -100,7 +100,7 @@
     <message id="id-always-on-display">
         <location filename="../src/qml/DisplayPage.qml" line="124"/>
         <source>Always on Display</source>
-        <translation>Zawsze na widoku</translation>
+        <translation>Ekran zawsze włączony</translation>
     </message>
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="140"/>
@@ -110,7 +110,7 @@
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="158"/>
         <source>Tilt-to-wake</source>
-        <translation>Przechylanie się do przodu</translation>
+        <translation>Przechyl, aby wybudzić</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="177"/>
@@ -121,7 +121,7 @@
         <location filename="../src/qml/main.qml" line="85"/>
         <location filename="../src/qml/TimezonePage.qml" line="35"/>
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Strefa czasowa</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../src/qml/main.qml" line="109"/>
@@ -148,7 +148,7 @@
     <message id="id-watchface-page">
         <location filename="../src/qml/main.qml" line="134"/>
         <source>Watchface</source>
-        <translation>Wygląd zegarka</translation>
+        <translation>Tarcza</translation>
     </message>
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="140"/>
@@ -165,7 +165,7 @@
         <location filename="../src/qml/main.qml" line="152"/>
         <location filename="../src/qml/PowerPage.qml" line="29"/>
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zasilanie</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../src/qml/PowerPage.qml" line="35"/>
@@ -207,23 +207,23 @@
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="137"/>
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Niestandardowa tarcza</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="166"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation>Wybierz tarczę zegarka</translation>
+        <translation>Wybierz tarczę</translation>
     </message>
     <message id="id-reboot-bootloader">
         <location filename="../src/foo.qml" line="44"/>
         <source>Reboot to Bootloader</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zrestartuj do Bootloadera</translation>
     </message>
     <message id="id-reboot-warn">
         <location filename="../src/foo.qml" line="50"/>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zrestartuj do AsteroidOS</translation>
     </message>
 </context>
 <context>
@@ -231,7 +231,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="85"/>
         <source>Build ID</source>
-        <translation>Identyfikator kompilacji</translation>
+        <translation>Numer kompilacji</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="86"/>
@@ -266,27 +266,27 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%L1 GB</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>%L1 GB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%L1 GB (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>%L1W x %L2H</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%L1W x %L2H</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>Uptime</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Czas pracy</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>%L1 days %L2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%L1 dni %L2</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
@@ -296,37 +296,37 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>Threads</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wątki</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1,5,15 minutowe obciążenia</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>%L1, %L2, %L3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%L1, %L2, %L3</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Całkowita ilość pamięci</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%L1 MB</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ilość wolnej pamięci</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>%L1 MB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%L1 MB (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>

@@ -16,12 +16,12 @@
     <message id="id-connected">
         <location filename="../src/qml/BluetoothPage.qml" line="32"/>
         <source>Connected</source>
-        <translation>متصل</translation>
+        <translation>وصل شده</translation>
     </message>
     <message id="id-disconnected">
         <location filename="../src/qml/BluetoothPage.qml" line="34"/>
         <source>Not connected</source>
-        <translation>وصل‌نشده</translation>
+        <translation>وصل نشده</translation>
     </message>
     <message id="id-sound-percentage">
         <location filename="../src/qml/SoundPage.qml" line="79"/>
@@ -41,12 +41,12 @@
     <message id="id-ssh-mode">
         <location filename="../src/qml/USBPage.qml" line="39"/>
         <source>SSH Mode</source>
-        <translation>حالت SSH</translation>
+        <translation>حالت پوستهٔ امن</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../src/qml/USBPage.qml" line="41"/>
         <source>MTP Mode</source>
-        <translation>حالت MTP</translation>
+        <translation>حالت انتقال رسانه</translation>
     </message>
     <message id="id-12h-format">
         <location filename="../src/qml/UnitsPage.qml" line="48"/>
@@ -121,7 +121,7 @@
         <location filename="../src/qml/main.qml" line="85"/>
         <location filename="../src/qml/TimezonePage.qml" line="35"/>
         <source>Time zone</source>
-        <translation>منطقه زمانی</translation>
+        <translation>ناحیهٔ زمانی</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../src/qml/main.qml" line="109"/>
@@ -165,7 +165,7 @@
         <location filename="../src/qml/main.qml" line="152"/>
         <location filename="../src/qml/PowerPage.qml" line="29"/>
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation>نیرو</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../src/qml/PowerPage.qml" line="35"/>
@@ -190,7 +190,7 @@
     <message id="id-nightstand-enable">
         <location filename="../src/qml/NightstandPage.qml" line="70"/>
         <source>Enable</source>
-        <translation>فعال‌سازی</translation>
+        <translation>به کار انداختن</translation>
     </message>
     <message id="id-nightstand-brightness">
         <location filename="../src/qml/NightstandPage.qml" line="83"/>
@@ -218,12 +218,12 @@
     <message id="id-reboot-bootloader">
         <location filename="../src/foo.qml" line="44"/>
         <source>Reboot to Bootloader</source>
-        <translation type="unfinished"></translation>
+        <translation>راه‌اندازی به بارکنندهٔ راه‌انداز</translation>
     </message>
     <message id="id-reboot-warn">
         <location filename="../src/foo.qml" line="50"/>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>راه‌اندازی دوبارهٔ استروید</translation>
     </message>
 </context>
 <context>
@@ -266,27 +266,27 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 گ‌ب</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>%L1 GB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 گ‌ب (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>%L1W x %L2H</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1پ × %L2ب</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>Uptime</source>
-        <translation type="unfinished"></translation>
+        <translation>زمان روشنی</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>%L1 days %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 روز %L2</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
@@ -296,37 +296,37 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>Threads</source>
-        <translation type="unfinished"></translation>
+        <translation>رشته‌ها</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished"></translation>
+        <translation>بار ۱،۵،۱۵ دقیقه</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>%L1, %L2, %L3</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1، %L2، %L3</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>حافظهٔ کل</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 م‌ب</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>حافظهٔ آزاد</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>%L1 MB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 م‌ب (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
@@ -341,7 +341,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="96"/>
         <source>Kernel version</source>
-        <translation>نسخه کرنل</translation>
+        <translation>نگارش کرنل</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="97"/>

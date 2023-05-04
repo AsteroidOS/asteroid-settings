@@ -16,7 +16,7 @@
     <message id="id-connected">
         <location filename="../src/qml/BluetoothPage.qml" line="32"/>
         <source>Connected</source>
-        <translation>وصل‌شده</translation>
+        <translation>متصل</translation>
     </message>
     <message id="id-disconnected">
         <location filename="../src/qml/BluetoothPage.qml" line="34"/>
@@ -41,12 +41,12 @@
     <message id="id-ssh-mode">
         <location filename="../src/qml/USBPage.qml" line="39"/>
         <source>SSH Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>حالت SSH</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../src/qml/USBPage.qml" line="41"/>
         <source>MTP Mode</source>
-        <translation>حالت انتقال رسانه</translation>
+        <translation>حالت MTP</translation>
     </message>
     <message id="id-12h-format">
         <location filename="../src/qml/UnitsPage.qml" line="48"/>
@@ -121,7 +121,7 @@
         <location filename="../src/qml/main.qml" line="85"/>
         <location filename="../src/qml/TimezonePage.qml" line="35"/>
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation>منطقه زمانی</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../src/qml/main.qml" line="109"/>
@@ -190,7 +190,7 @@
     <message id="id-nightstand-enable">
         <location filename="../src/qml/NightstandPage.qml" line="70"/>
         <source>Enable</source>
-        <translation>به کار انداختن</translation>
+        <translation>فعال‌سازی</translation>
     </message>
     <message id="id-nightstand-brightness">
         <location filename="../src/qml/NightstandPage.qml" line="83"/>
@@ -341,7 +341,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="96"/>
         <source>Kernel version</source>
-        <translation>نگارش کرنل</translation>
+        <translation>نسخه کرنل</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="97"/>

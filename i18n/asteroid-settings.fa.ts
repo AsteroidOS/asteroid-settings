@@ -169,7 +169,7 @@
         <location filename="../src/qml/main.qml" line="145"/>
         <location filename="../src/qml/USBPage.qml" line="29"/>
         <source>USB</source>
-        <translation>USB</translation>
+        <translation>یواِس‌بی</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../src/qml/main.qml" line="151"/>

@@ -223,7 +223,7 @@
     <message id="id-reboot-warn">
         <location filename="../src/foo.qml" line="50"/>
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>AsteroidOS neu starten</translation>
     </message>
 </context>
 <context>
@@ -266,27 +266,27 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>%L1 GB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>%L1W x %L2H</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1W x %L2H</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>Uptime</source>
-        <translation type="unfinished"></translation>
+        <translation>Verfügbarkeitszeit</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>%L1 days %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 Tage %L2</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
@@ -311,22 +311,22 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Gesamtspeicher</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Freier Speicher</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>%L1 MB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>

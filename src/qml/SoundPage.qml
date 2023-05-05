@@ -37,11 +37,11 @@ Item {
     Rectangle {
         id: soundBackground
         anchors.centerIn: parent
-        anchors.verticalCenterOffset: -Dims.h(13)
+        anchors.verticalCenterOffset: -Dims.h(24)
         color: "black"
         radius: width/2
         opacity: preMuteLevel.value > 0 ? 0.2 : 0.4
-        width: parent.height*0.25
+        width: Dims.w(27)
         height: width
 
         MouseArea {
@@ -78,7 +78,10 @@ Item {
 
     Column {
         width: parent.width
-        anchors.top: volumeIcon.bottom
+        anchors {
+            top: volumeIcon.bottom
+            topMargin: Dims.h(5)
+        }
 
         Label {
             //% "Volume"
@@ -98,7 +101,7 @@ Item {
             value: volumeControl.volume
             onValueChanged: {
                 volumeControl.volume = value
-                //Un-mute if muted
+                // Un-mute if muted
                 if (preMuteLevel.value > 0) {
                     // Restore pre mute volume value
                     volumeControl.volume = preMuteLevel.value

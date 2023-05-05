@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2023 - Timo Könnecke <github.com/eLtMosen>
  * Copyright (C) 2022 - Ed Beroset <github.com/beroset>
  * Copyright (C) 2020 - Darrel Griët <idanlcontact@gmail.com>
  * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
@@ -50,17 +51,19 @@ Item {
         defaultValue: false
     }
 
-    PageHeader {
-        id: title
-        text: qsTrId("id-nightstand-page")
-    }
+    property string rowHeight: Dims.h(25)
 
     Flickable {
         anchors.fill: parent
         contentHeight: onOffSettings.implicitHeight
         boundsBehavior: Flickable.DragOverBounds
         flickableDirection: Flickable.VerticalFlick
-        anchors.margins: Dims.l(15)
+        anchors {
+            topMargin: Dims.l(10)
+            bottomMargin: Dims.l(15)
+        }
+
+        Item { width: parent.width; height: Dims.l(10) }
 
         Column {
             id: onOffSettings
@@ -69,7 +72,7 @@ Item {
                 //% "Enable"
                 text: qsTrId("id-nightstand-enable")
                 width: parent.width
-                height: Dims.l(20)
+                height: rowHeight
                 checked: nightstandEnabled.value
                 onCheckedChanged: nightstandEnabled.value = checked
             }
@@ -78,16 +81,28 @@ Item {
                 width: parent.width
                 opacity: nightstandEnabled.value ? 1.0 : 0.4
                 enabled: nightstandEnabled.value
+
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: 200;
+                        easing.type: Easing.OutQuad
+                    }
+                }
+
                 Label {
                     //% "Brightness"
                     text: qsTrId("id-nightstand-brightness")
+                    width: parent.width
+                    height: Dims.l(12)
                     font.pixelSize: Dims.l(6)
-                    verticalAlignment: Text.AlignVCenter
+                    verticalAlignment: Text.AlignBottom
+                    horizontalAlignment: Text.AlignHCenter
                     wrapMode: Text.Wrap
                 }
+
                 IntSelector {
                     width: parent.width
-                    height: Dims.l(20)
+                    height: rowHeight
                     stepSize: 10
                     value: nightstandBrightness.value
                     onValueChanged: nightstandBrightness.value = value
@@ -98,16 +113,28 @@ Item {
                 width: parent.width
                 opacity: nightstandEnabled.value ? 1.0 : 0.4
                 enabled: nightstandEnabled.value
+
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: 200;
+                        easing.type: Easing.OutQuad
+                    }
+                }
+
                 Label {
                     //% "Delay"
                     text: qsTrId("id-nightstand-delay")
+                    width: parent.width
+                    height: Dims.l(12)
                     font.pixelSize: Dims.l(6)
-                    verticalAlignment: Text.AlignVCenter
+                    verticalAlignment: Text.AlignBottom
+                    horizontalAlignment: Text.AlignHCenter
                     wrapMode: Text.Wrap
                 }
+
                 IntSelector {
                     width: parent.width
-                    height: Dims.l(20)
+                    height: rowHeight
                     stepSize: 5
                     max: 30
                     unitMarker: "s"
@@ -116,66 +143,51 @@ Item {
                 }
             }
 
+            Item { width: parent.width; height: Dims.h(6) }
+
             Item {
                 width: parent.width
-                height: Dims.l(20)
-
-                MouseArea {
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    onClicked: nightstandUseCustomWatchface.value = !nightstandUseCustomWatchface.value
-                    Rectangle {
-                        anchors.fill: parent
-                        color: "white"
-                        opacity: parent.containsPress ? 0.2 : 0
-                    }
-                }
+                height: rowHeight
 
                 LabeledSwitch {
                     anchors.fill: parent
+                    height: rowHeight
                     //% "Custom watchface"
                     text: qsTrId("id-nightstand-custom-watchface")
                     checked: nightstandUseCustomWatchface.value
                     opacity: nightstandEnabled.value ? 1.0 : 0.4
                     onCheckedChanged: nightstandUseCustomWatchface.value = checked
+                    enabled: nightstandEnabled.value
+
+                    Behavior on opacity {
+                        NumberAnimation {
+                            duration: 200;
+                            easing.type: Easing.OutQuad
+                        }
+                    }
                 }
             }
 
             Item {
                 width: parent.width
-                height: Dims.l(20)
-                opacity: nightstandEnabled.value ? 1.0 : 0.4
-                enabled: nightstandEnabled.value
-                visible: nightstandUseCustomWatchface.value
+                height: rowHeight
+                opacity: nightstandEnabled.value && nightstandUseCustomWatchface.value ? 1.0 : 0.4
+                enabled: nightstandEnabled.value && nightstandUseCustomWatchface.value
 
-                MouseArea {
-                    id: mouseArea
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    onClicked: layerStack.push(nightstandWatchfaceLayer)
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: 200;
+                        easing.type: Easing.OutQuad
+                    }
                 }
 
-                Rectangle {
+                LabeledActionButton {
                     anchors.fill: parent
-                    color: "white"
-                    opacity: mouseArea.containsPress ? 0.2 : 0
-                }
-
-                Label {
+                    height: rowHeight
                     //% "Select watchface"
                     text: qsTrId("id-nightstand-watchface")
-                    font.pixelSize: Dims.l(6)
-                    verticalAlignment: Text.AlignVCenter
-                    height: parent.height
-                    width: parent.width * 0.7143
-                    wrapMode: Text.Wrap
-                }
-                Icon {
-                    id: nextButton
-                    name: "ios-arrow-dropright"
-                    height: parent.height
-                    width: height
-                    anchors.right: parent.right
+                    icon: "ios-arrow-dropright"
+                    onClicked: function() { layerStack.push(nightstandWatchfaceLayer) }
                 }
             }
 
@@ -183,4 +195,3 @@ Item {
         }
     }
 }
-

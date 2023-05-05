@@ -24,11 +24,6 @@ Item {
     id: root
     property var pop
 
-    PageHeader {
-        id: title
-        text: qsTrId("id-usb-page")
-    }
-
     ListModel {
         id: usbModesModel
         //% "Charging only"
@@ -83,6 +78,11 @@ Item {
         service: "com.meego.usb_moded"
         path: "/com/meego/usb_moded"
         iface: "com.meego.usb_moded"
+    }
+
+    PageHeader {
+        id: title
+        text: qsTrId("id-usb-page")
     }
 }
 

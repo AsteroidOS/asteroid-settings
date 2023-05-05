@@ -27,11 +27,6 @@ Item {
 
     DateTimeSettings { id: dtSettings }
 
-    PageHeader {
-        id: title
-        text: qsTrId("id-date-page")
-    }
-
     Row {
         id: dateSelector
         anchors {
@@ -95,6 +90,11 @@ Item {
 
             root.pop();
         }
+    }
+
+    PageHeader {
+        id: title
+        text: qsTrId("id-date-page")
     }
 }
 

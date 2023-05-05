@@ -194,4 +194,9 @@ Item {
             Item { width: parent.width; height: Dims.l(10) }
         }
     }
+
+    PageHeader {
+        id: title
+        text: qsTrId("id-nightstand-page")
+    }
 }

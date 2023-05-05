@@ -69,4 +69,9 @@ Item {
             }
         }
     }
+
+    PageHeader {
+        id: title
+        text: qsTrId("id-units-page")
+    }
 }

@@ -21,10 +21,6 @@ import Nemo.Configuration 1.0
 import org.asteroid.controls 1.0
 
 Item {
-    PageHeader {
-        id: title
-        text: qsTrId("id-units-page")
-    }
 
     ConfigurationValue {
         id: use12H
@@ -38,40 +34,39 @@ Item {
         defaultValue: false
     }
 
-    GridLayout {
-        columns: 2
+    property string rowHeight: Dims.h(25)
+
+    Column {
         anchors.fill: parent
-        anchors.margins: Dims.l(15)
 
-        Label {
-            //% "Use 12H format:"
-            text: qsTrId("id-12h-format")
-            font.pixelSize: Dims.l(6)
-            verticalAlignment: Text.AlignVCenter
-            wrapMode: Text.Wrap
-            Layout.maximumWidth: Dims.w(50)
+        Item { width: parent.width; height: Dims.l(25) }
+
+        Item {
+            width: parent.width
+            height: rowHeight
+
+            LabeledSwitch {
+                anchors.fill: parent
+                height: rowHeight
+                //% "Use 12H format:"
+                text: qsTrId("id-12h-format")
+                checked: use12H.value
+                onCheckedChanged: use12H.value = checked
+            }
         }
 
-        Switch {
-            Component.onCompleted: checked = use12H.value
-            onCheckedChanged: use12H.value = checked
-            width: Dims.l(20)
-        }
+        Item {
+            width: parent.width
+            height: rowHeight
 
-        Label {
-            //% "Use Fahrenheit:"
-            text: qsTrId("id-fahrenheit")
-            font.pixelSize: Dims.l(6)
-            verticalAlignment: Text.AlignVCenter
-            wrapMode: Text.Wrap
-            Layout.maximumWidth: Dims.w(50)
-        }
-
-        Switch {
-            Component.onCompleted: checked = useFahrenheit.value
-            onCheckedChanged: useFahrenheit.value = checked
-            width: Dims.l(20)
+            LabeledSwitch {
+                anchors.fill: parent
+                height: rowHeight
+                //% "Use Fahrenheit:"
+                text: qsTrId("id-fahrenheit")
+                checked: useFahrenheit.value
+                onCheckedChanged: useFahrenheit.value = checked
+            }
         }
     }
 }
-

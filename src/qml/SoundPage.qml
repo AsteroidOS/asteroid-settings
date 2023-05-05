@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2023 - Timo Könnecke <github.com/eLtMosen>
  * Copyright (C) 2017 - Florent Revest <revestflo@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -64,6 +65,7 @@ Item {
     }
 
     Icon {
+        id: volumeIcon
         width: Dims.w(25)
         height: width
         anchors.fill: soundBackground
@@ -74,54 +76,35 @@ Item {
                                                                                           volumeControl.volume > "0" ? "ios-sound-indicator-low" : "ios-sound-indicator-off"
     }
 
-    Label {
-        //% "Volume %1%"
-        text: qsTrId("id-sound-percentage").arg(volumeControl.volume)
-        font.pixelSize: Dims.l(6)
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVCenter
-        wrapMode: Text.Wrap
-        anchors.left: parent.left; anchors.right: parent.right
-        anchors.leftMargin: Dims.w(2); anchors.rightMargin: Dims.w(2)
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.verticalCenterOffset: Dims.h(10)
-    }
+    Column {
+        width: parent.width
+        anchors.top: volumeIcon.bottom
 
-    IconButton {
-        iconName: "ios-remove-circle-outline"
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.horizontalCenterOffset: -Dims.w(15)
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: Dims.h(10)
-        onClicked: {
-            //Un-mute if muted
-            if (preMuteLevel.value > 0) {
-                // Restore pre mute volume value
-                volumeControl.volume = preMuteLevel.value
-                preMuteLevel.value = 0
-            }
-            var newVal = volumeControl.volume - 10
-            if(newVal < 0) newVal = 0
-            volumeControl.volume = newVal
+        Label {
+            //% "Volume"
+            text: qsTrId("id-sound-percentage")
+            width: parent.width
+            height: Dims.l(12)
+            font.pixelSize: Dims.l(6)
+            verticalAlignment: Text.AlignBottom
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.Wrap
         }
-    }
 
-    IconButton {
-        iconName: "ios-add-circle-outline"
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.horizontalCenterOffset: Dims.w(15)
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: Dims.h(10)
-        onClicked: {
-            //Un-mute if muted
-            if (preMuteLevel.value > 0) {
-                // Restore pre mute volume value
-                volumeControl.volume = preMuteLevel.value
-                preMuteLevel.value = 0
+        IntSelector {
+            width: parent.width
+            height: Dims.h(25)
+            stepSize: 10
+            value: volumeControl.volume
+            onValueChanged: {
+                volumeControl.volume = value
+                //Un-mute if muted
+                if (preMuteLevel.value > 0) {
+                    // Restore pre mute volume value
+                    volumeControl.volume = preMuteLevel.value
+                    preMuteLevel.value = 0
+                }
             }
-            var newVal = volumeControl.volume + 10
-            if(newVal > 100) newVal = 100
-            volumeControl.volume = newVal
         }
     }
 }

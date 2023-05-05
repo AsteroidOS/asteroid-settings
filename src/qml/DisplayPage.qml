@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2023 - Timo Könnecke <github.com/eLtMosen>
  * Copyright (C) 2020 - Darrel Griët <idanlcontact@gmail.com>
  * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
  *
@@ -34,156 +35,83 @@ Item {
         defaultValue: DeviceInfo.needsBurnInProtection
     }
 
-    PageHeader {
-        id: title
-        text: qsTrId("id-display-page")
-    }
+    property string rowHeight: Dims.h(25)
 
     Flickable {
         anchors.fill: parent
-        contentHeight: Dims.h(30) + 4*Dims.h(34) + (DeviceInfo.needsBurnInProtection ? Dims.h(34) : 0)
-        boundsBehavior: Flickable.DragOverBounds
-        flickableDirection: Flickable.VerticalFlick
+        anchors.topMargin: Dims.l(10)
+        anchors.bottomMargin: Dims.l(15)
+        contentHeight: contentColumn.implicitHeight
 
-        GridLayout {
-            id: onOffSettings
-            columns: 2
+        Column {
+            id: contentColumn
             anchors.fill: parent
-            anchors.margins: Dims.l(15)
-
-            Item {
-                id: brightnessSetting
-                height: Dims.h(30)
-                Layout.fillWidth: true
-                Layout.columnSpan: 2
-                Label {
-                    //% "Brightness"
-                    text: qsTrId("id-brightness")
-                    font.pixelSize: Dims.l(6)
-                    verticalAlignment: Text.AlignVCenter
-                    wrapMode: Text.Wrap
-                }
-
-                IconButton {
-                    iconName: "ios-remove-circle-outline"
-                    anchors.left: parent.left
-                    anchors.top: parent.top
-                    anchors.topMargin: Dims.h(10)
-                    onClicked: {
-                        var newVal = displaySettings.brightness - 10
-                        if(newVal < 0) newVal = 0
-                        displaySettings.brightness = newVal
-                    }
-                }
-
-                Label {
-                    text: displaySettings.brightness + "%"
-                    font.pixelSize: Dims.l(6)
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                    wrapMode: Text.Wrap
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    anchors.top: parent.top
-                    anchors.topMargin: Dims.h(10)
-                    height: Dims.h(20)
-                }
-
-                IconButton {
-                    width: Dims.w(20)
-                    height: width
-                    iconName: "ios-add-circle-outline"
-                    anchors.right: parent.right
-                    anchors.top: parent.top
-                    anchors.topMargin: Dims.h(10)
-                    onClicked: {
-                        var newVal = displaySettings.brightness + 10
-                        if(newVal > 100) newVal = 100
-                        displaySettings.brightness = newVal
-                    }
-                }
-            }
 
             Label {
-                //% "Automatic brightness"
-                text: qsTrId("id-automatic-brightness")
+                id: brightnessLabel
+                width: parent.width
+                height: Dims.l(12)
+                //% "Brightness"
+                text: qsTrId("id-brightness")
                 font.pixelSize: Dims.l(6)
-                verticalAlignment: Text.AlignVCenter
+                verticalAlignment: Text.AlignBottom
+                horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.Wrap
-                Layout.maximumWidth: Dims.w(50)
             }
 
-            Switch {
-                Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
-                width: Dims.l(20)
+            IntSelector {
+                width: parent.width
+                height: rowHeight
+                stepSize: 10
+                min: 10
+                value: displaySettings.brightness
+                onValueChanged: displaySettings.brightness = value
+            }
+
+            LabeledSwitch {
+                height: rowHeight
+                width: parent.width
+                //% "Automatic brightness"
+                text: qsTrId("id-automatic-brightness")
                 checked: displaySettings.ambientLightSensorEnabled
                 onCheckedChanged: displaySettings.ambientLightSensorEnabled = checked
             }
 
-            Label {
+            LabeledSwitch {
+                height: rowHeight
+                width: parent.width
                 //% "Always on Display"
                 text: qsTrId("id-always-on-display")
-                font.pixelSize: Dims.l(6)
-                verticalAlignment: Text.AlignVCenter
-                wrapMode: Text.Wrap
-                Layout.maximumWidth: Dims.w(50)
-            }
-
-            Switch {
-                Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
-                width: Dims.l(20)
                 checked: displaySettings.lowPowerModeEnabled
                 onCheckedChanged: displaySettings.lowPowerModeEnabled = checked
             }
 
-            Label {
+            LabeledSwitch {
+                height: rowHeight
+                width: parent.width
+                visible: DeviceInfo.needsBurnInProtection
                 //% "Burn in protection"
                 text: qsTrId("id-burn-in-protection")
-                font.pixelSize: Dims.l(6)
-                verticalAlignment: Text.AlignVCenter
-                wrapMode: Text.Wrap
-                Layout.maximumWidth: Dims.w(50)
-                visible: DeviceInfo.needsBurnInProtection
-            }
-
-            Switch {
-                Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
-                width: Dims.l(20)
                 checked: useBip.value
                 onCheckedChanged: useBip.value = checked
-                visible: DeviceInfo.needsBurnInProtection
             }
 
-            Label {
+            LabeledSwitch {
+                height: rowHeight
+                width: parent.width
+                opacity: !tiltToWake.available ? 0.6 : 1.0
+                //enabled: tiltToWake.available
                 //% "Tilt-to-wake"
                 text: qsTrId("id-tilt-to-wake")
-                font.pixelSize: Dims.l(6)
-                opacity: !tiltToWake.available ? 0.6 : 1.0
-                font.strikeout: !tiltToWake.available
-                verticalAlignment: Text.AlignVCenter
-                wrapMode: Text.Wrap
-                Layout.maximumWidth: Dims.w(50)
-            }
-
-            Switch {
-                Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
-                width: Dims.l(20)
-                enabled: tiltToWake.available
                 checked: tiltToWake.enabled
                 onCheckedChanged: tiltToWake.enabled = checked
             }
 
-            Label {
+            LabeledSwitch {
+                height: rowHeight
+                width: parent.width
                 //% "Tap-to-wake"
                 text: qsTrId("id-tap-to-wake")
-                font.pixelSize: Dims.l(6)
-                verticalAlignment: Text.AlignVCenter
-                wrapMode: Text.Wrap
-                Layout.maximumWidth: Dims.w(50)
-            }
-
-            Switch {
-                Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
-                width: Dims.l(20)
                 checked: tapToWake.enabled
                 onCheckedChanged: tapToWake.enabled = checked
             }

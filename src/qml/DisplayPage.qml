@@ -117,5 +117,10 @@ Item {
             }
         }
     }
+
+    PageHeader {
+        id: title
+        text: qsTrId("id-display-page")
+    }
 }
 

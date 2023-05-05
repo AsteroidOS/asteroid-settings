@@ -24,11 +24,6 @@ import Nemo.DBus 2.0
 
 Item {
 
-    PageHeader {
-        id: title
-        text: qsTrId("id-power-page")
-    }
-
     ListModel {
         id: powerModel
         //% "Power Off"
@@ -68,6 +63,11 @@ Item {
         service: "com.nokia.dsme"
         path: "/com/nokia/dsme/request"
         iface: "com.nokia.dsme.request"
+    }
+
+    PageHeader {
+        id: title
+        text: qsTrId("id-power-page")
     }
 }
 

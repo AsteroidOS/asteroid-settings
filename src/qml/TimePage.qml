@@ -36,11 +36,6 @@ Item {
         defaultValue: false
     }
 
-    PageHeader {
-        id: title
-        text: qsTrId("id-time-page")
-    }
-
     Row {
         id: timeSelector
         anchors {
@@ -107,5 +102,10 @@ Item {
 
             root.pop()
         }
+    }
+
+    PageHeader {
+        id: title
+        text: qsTrId("id-time-page")
     }
 }

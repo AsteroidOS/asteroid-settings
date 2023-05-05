@@ -26,11 +26,6 @@ Item {
 
     LanguageModel { id: langSettings }
 
-    PageHeader {
-        id: title
-        text: qsTrId("id-language-page")
-    }
-
     Spinner {
         id: langLV
         anchors.left: parent.left
@@ -62,5 +57,10 @@ Item {
             else
                 langSettings.setSystemLocale(langSettings.locale(langLV.currentIndex), LanguageModel.UpdateWithoutReboot)
         }
+    }
+
+    PageHeader {
+        id: title
+        text: qsTrId("id-language-page")
     }
 }

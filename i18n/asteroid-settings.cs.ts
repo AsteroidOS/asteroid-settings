@@ -20,8 +20,9 @@
         <translation>Nepřipojeno</translation>
     </message>
     <message id="id-sound-percentage">
-        <source>Volume %1%</source>
-        <translation>Zvuk %1%</translation>
+        <source>Volume</source>
+        <oldsource>Volume %1%</oldsource>
+        <translation type="unfinished">Zvuk %1%</translation>
     </message>
     <message id="id-adb-mode">
         <source>ADB Mode</source>
@@ -165,14 +166,6 @@
     <message id="id-power-page">
         <source>Power</source>
         <translation>Napájení</translation>
-    </message>
-    <message id="id-reboot-bootloader">
-        <source>Reboot to Bootloader</source>
-        <translation>Restartovat do zavaděče</translation>
-    </message>
-    <message id="id-reboot-warn">
-        <source>Reboot AsteroidOS</source>
-        <translation>Restartovat AsteroidOS</translation>
     </message>
 </context>
 <context>

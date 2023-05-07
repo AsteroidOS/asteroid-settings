@@ -39,7 +39,7 @@ Item {
 
     Flickable {
         anchors.fill: parent
-        anchors.topMargin: Dims.l(10)
+        anchors.topMargin: Dims.l(15)
         anchors.bottomMargin: Dims.l(15)
         contentHeight: contentColumn.implicitHeight
 
@@ -100,7 +100,7 @@ Item {
                 height: rowHeight
                 width: parent.width
                 opacity: !tiltToWake.available ? 0.6 : 1.0
-                //enabled: tiltToWake.available
+                enabled: tiltToWake.available
                 //% "Tilt-to-wake"
                 text: qsTrId("id-tilt-to-wake")
                 checked: tiltToWake.enabled

@@ -147,36 +147,26 @@ Item {
 
             Item { width: parent.width; height: Dims.h(6) }
 
-            Item {
+            LabeledSwitch {
                 width: parent.width
                 height: rowHeight
-
-                LabeledSwitch {
-                    anchors.fill: parent
-                    height: rowHeight
-                    //% "Custom watchface"
-                    text: qsTrId("id-nightstand-custom-watchface")
-                    checked: nightstandUseCustomWatchface.value
-                    opacity: nightstandEnabled.value ? 1.0 : 0.4
-                    onCheckedChanged: nightstandUseCustomWatchface.value = checked
-                    enabled: nightstandEnabled.value
-                }
+                //% "Custom watchface"
+                text: qsTrId("id-nightstand-custom-watchface")
+                checked: nightstandUseCustomWatchface.value
+                opacity: nightstandEnabled.value ? 1.0 : 0.4
+                onCheckedChanged: nightstandUseCustomWatchface.value = checked
+                enabled: nightstandEnabled.value
             }
 
-            Item {
+            LabeledActionButton {
                 width: parent.width
                 height: rowHeight
-
-                LabeledActionButton {
-                    anchors.fill: parent
-                    height: rowHeight
-                    //% "Select watchface"
-                    text: qsTrId("id-nightstand-watchface")
-                    icon: "ios-arrow-dropright"
-                    opacity: nightstandEnabled.value && nightstandUseCustomWatchface.value ? 1.0 : 0.4
-                    enabled: nightstandEnabled.value && nightstandUseCustomWatchface.value
-                    onClicked: function() { layerStack.push(nightstandWatchfaceLayer) }
-                }
+                //% "Select watchface"
+                text: qsTrId("id-nightstand-watchface")
+                icon: "ios-arrow-dropright"
+                opacity: nightstandEnabled.value && nightstandUseCustomWatchface.value ? 1.0 : 0.4
+                enabled: nightstandEnabled.value && nightstandUseCustomWatchface.value
+                onClicked: function() { layerStack.push(nightstandWatchfaceLayer) }
             }
 
             Item { width: parent.width; height: Dims.l(10) }

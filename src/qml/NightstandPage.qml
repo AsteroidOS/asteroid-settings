@@ -63,11 +63,13 @@ Item {
             bottomMargin: Dims.l(15)
         }
 
-        Item { width: parent.width; height: Dims.l(10) }
+        Item { width: parent.width; height: Dims.l(15) }
 
         Column {
             id: onOffSettings
+
             anchors.fill: parent
+
             LabeledSwitch {
                 //% "Enable"
                 text: qsTrId("id-nightstand-enable")
@@ -158,28 +160,12 @@ Item {
                     opacity: nightstandEnabled.value ? 1.0 : 0.4
                     onCheckedChanged: nightstandUseCustomWatchface.value = checked
                     enabled: nightstandEnabled.value
-
-                    Behavior on opacity {
-                        NumberAnimation {
-                            duration: 200;
-                            easing.type: Easing.OutQuad
-                        }
-                    }
                 }
             }
 
             Item {
                 width: parent.width
                 height: rowHeight
-                opacity: nightstandEnabled.value && nightstandUseCustomWatchface.value ? 1.0 : 0.4
-                enabled: nightstandEnabled.value && nightstandUseCustomWatchface.value
-
-                Behavior on opacity {
-                    NumberAnimation {
-                        duration: 200;
-                        easing.type: Easing.OutQuad
-                    }
-                }
 
                 LabeledActionButton {
                     anchors.fill: parent
@@ -187,6 +173,8 @@ Item {
                     //% "Select watchface"
                     text: qsTrId("id-nightstand-watchface")
                     icon: "ios-arrow-dropright"
+                    opacity: nightstandEnabled.value && nightstandUseCustomWatchface.value ? 1.0 : 0.4
+                    enabled: nightstandEnabled.value && nightstandUseCustomWatchface.value
                     onClicked: function() { layerStack.push(nightstandWatchfaceLayer) }
                 }
             }

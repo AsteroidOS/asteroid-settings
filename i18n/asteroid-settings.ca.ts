@@ -20,8 +20,9 @@
         <translation>Sense connexió</translation>
     </message>
     <message id="id-sound-percentage">
-        <source>Volume %1%</source>
-        <translation>Volum %1%</translation>
+        <source>Volume</source>
+        <oldsource>Volume %1%</oldsource>
+        <translation type="unfinished">Volum %1%</translation>
     </message>
     <message id="id-adb-mode">
         <source>ADB Mode</source>
@@ -164,14 +165,6 @@
     </message>
     <message id="id-power-page">
         <source>Power</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="id-reboot-bootloader">
-        <source>Reboot to Bootloader</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message id="id-reboot-warn">
-        <source>Reboot AsteroidOS</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

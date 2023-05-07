@@ -109,19 +109,6 @@ Item {
                     value: nightstandBrightness.value
                     onValueChanged: nightstandBrightness.value = value
                 }
-            }
-
-            Column {
-                width: parent.width
-                opacity: nightstandEnabled.value ? 1.0 : 0.4
-                enabled: nightstandEnabled.value
-
-                Behavior on opacity {
-                    NumberAnimation {
-                        duration: 200;
-                        easing.type: Easing.OutQuad
-                    }
-                }
 
                 Label {
                     //% "Delay"

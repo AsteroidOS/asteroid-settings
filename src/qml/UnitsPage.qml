@@ -41,32 +41,22 @@ Item {
 
         Item { width: parent.width; height: Dims.l(25) }
 
-        Item {
+        LabeledSwitch {
             width: parent.width
             height: rowHeight
-
-            LabeledSwitch {
-                anchors.fill: parent
-                height: rowHeight
-                //% "Use 12H format:"
-                text: qsTrId("id-12h-format")
-                checked: use12H.value
-                onCheckedChanged: use12H.value = checked
-            }
+            //% "Use 12H format:"
+            text: qsTrId("id-12h-format")
+            checked: use12H.value
+            onCheckedChanged: use12H.value = checked
         }
 
-        Item {
+        LabeledSwitch {
             width: parent.width
             height: rowHeight
-
-            LabeledSwitch {
-                anchors.fill: parent
-                height: rowHeight
-                //% "Use Fahrenheit:"
-                text: qsTrId("id-fahrenheit")
-                checked: useFahrenheit.value
-                onCheckedChanged: useFahrenheit.value = checked
-            }
+            //% "Use Fahrenheit:"
+            text: qsTrId("id-fahrenheit")
+            checked: useFahrenheit.value
+            onCheckedChanged: useFahrenheit.value = checked
         }
     }
 

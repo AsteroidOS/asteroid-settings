@@ -33,11 +33,11 @@
     </message>
     <message id="id-12h-format">
         <source>Use 12H format:</source>
-        <translation>使用12小时时间格式:</translation>
+        <translation>使用 12 小时时间格式：</translation>
     </message>
     <message id="id-fahrenheit">
         <source>Use Fahrenheit:</source>
-        <translation>使用华氏单位:</translation>
+        <translation>使用华氏单位：</translation>
     </message>
     <message id="id-time-page">
         <source>Time</source>
@@ -129,7 +129,7 @@
     </message>
     <message id="id-nightstand-page">
         <source>Nightstand</source>
-        <translation>床头柜</translation>
+        <translation>床头灯</translation>
     </message>
     <message id="id-nightstand-enable">
         <source>Enable</source>
@@ -160,19 +160,19 @@
     </message>
     <message id="id-timezone-page">
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation>时区</translation>
     </message>
     <message id="id-power-page">
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation>电源</translation>
     </message>
     <message id="id-reboot-bootloader">
         <source>Reboot to Bootloader</source>
-        <translation type="unfinished"></translation>
+        <translation>重启到引导程序</translation>
     </message>
     <message id="id-reboot-warn">
         <source>Reboot AsteroidOS</source>
-        <translation type="unfinished"></translation>
+        <translation>重启 AsteroidOS</translation>
     </message>
 </context>
 <context>
@@ -227,51 +227,51 @@
     </message>
     <message>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB</translation>
     </message>
     <message>
         <source>%L1 GB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB (%L2 %)</translation>
     </message>
     <message>
         <source>%L1W x %L2H</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 x %L2</translation>
     </message>
     <message>
         <source>Uptime</source>
-        <translation type="unfinished"></translation>
+        <translation>开机累计时长</translation>
     </message>
     <message>
         <source>%L1 days %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 天 %L2</translation>
     </message>
     <message>
         <source>Threads</source>
-        <translation type="unfinished"></translation>
+        <translation>线程数</translation>
     </message>
     <message>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished"></translation>
+        <translation>1、5、15 分钟内的负载</translation>
     </message>
     <message>
         <source>%L1, %L2, %L3</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1, %L2, %L3</translation>
     </message>
     <message>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>总内存</translation>
     </message>
     <message>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB</translation>
     </message>
     <message>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>空闲内存</translation>
     </message>
     <message>
         <source>%L1 MB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB (%L2 %)</translation>
     </message>
 </context>
 </TS>

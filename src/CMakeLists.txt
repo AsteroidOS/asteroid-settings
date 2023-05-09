@@ -27,7 +27,7 @@ add_library(asteroid-settings ${SRC} ${HEADERS} resources.qrc
     ${CMAKE_CURRENT_BINARY_DIR}/VolumeControl2.h 
     ${CMAKE_CURRENT_BINARY_DIR}/VolumeControl2.cpp
 )
-set_target_properties(asteroid-settings PROPERTIES PREFIX "" SUFFIX "")
+set_target_properties(asteroid-settings PROPERTIES PREFIX "")
 
 target_link_libraries(asteroid-settings PRIVATE
 	Qt5::Qml
@@ -37,4 +37,4 @@ target_link_libraries(asteroid-settings PRIVATE
 	AsteroidApp)
 
 install(TARGETS asteroid-settings
-	DESTINATION ${CMAKE_INSTALL_BINDIR})
+	DESTINATION ${CMAKE_INSTALL_LIBDIR})

@@ -26,6 +26,13 @@ ecm_find_qmlmodule(org.nemomobile.systemsettings 1.0)
 
 add_subdirectory(src)
 
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/asteroid-settings.in
+	${CMAKE_BINARY_DIR}/asteroid-settings
+	@ONLY)
+
+install(PROGRAMS ${CMAKE_BINARY_DIR}/asteroid-settings
+	DESTINATION ${CMAKE_INSTALL_BINDIR})
+
 build_translations(i18n)
 generate_desktop(${CMAKE_SOURCE_DIR} asteroid-settings)
 

@@ -292,7 +292,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished">1,5,15 Minute loads</translation>
+        <translation>مجهود 1،5،15 دقيقة</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
@@ -317,7 +317,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>%L1 MB (%L2 %)</source>
-        <translation type="unfinished">%L1 MB (%L2 %)</translation>
+        <translation>% L1 ميغابايت (% L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>

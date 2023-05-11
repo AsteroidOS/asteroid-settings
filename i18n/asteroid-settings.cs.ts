@@ -22,7 +22,7 @@
     <message id="id-sound-percentage">
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">Zvuk %1%</translation>
+        <translation>Hlasitost</translation>
     </message>
     <message id="id-adb-mode">
         <source>ADB Mode</source>

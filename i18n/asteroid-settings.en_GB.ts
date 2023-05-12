@@ -27,7 +27,7 @@
         <location filename="../src/qml/SoundPage.qml" line="88"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">Volume %1%</translation>
+        <translation>Volume</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../src/qml/USBPage.qml" line="30"/>

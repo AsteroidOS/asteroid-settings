@@ -109,7 +109,7 @@ Item {
 
                         z: 2
                         visible: !previewPng.previewExists
-                        active: visible
+                        active: visible || (watchface === folderModel.folder + "/" + fileName)
                         anchors.centerIn: parent
                         width: Math.min(parent.width, parent.height)
                         height: width
@@ -119,7 +119,11 @@ Item {
 
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: watchface = folderModel.folder + "/" + fileName
+                        onClicked: if ((watchface === folderModel.folder + "/" + fileName) && (typeof previewQml.item.settingsPage !== "undefined")) {
+				 layerStack.push(previewQml.item.settingsPage) 
+			} else {
+                        	watchface = folderModel.folder + "/" + fileName
+			}
                     }
 
                     Image {
@@ -151,6 +155,26 @@ Item {
                     }
                 }
 
+                Icon {
+                    name: "ios-settings-outline"
+
+                    z: 100
+                    width: parent.width*0.8
+                    height: width
+                    visible: (watchface === folderModel.folder + "/" + fileName) && (typeof previewQml.item.settingsPage !== "undefined")
+                    anchors.centerIn: parent
+                    layer.enabled: visible
+                    opacity: visible ? 0.4 : 0
+                    Behavior on opacity { NumberAnimation { duration: 100 } }
+                    layer.effect: DropShadow {
+                        transparentBorder: true
+                        horizontalOffset: 2
+                        verticalOffset: 2
+                        radius: 8.0
+                        samples: 17
+                        color: "#88000000"
+                    }
+                }
                 Rectangle {
                     id: textContainer
                     anchors { 

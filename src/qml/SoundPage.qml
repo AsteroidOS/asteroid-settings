@@ -30,9 +30,8 @@ Item {
         id: preMuteLevel
 
         key: "/desktop/asteroid/pre-mute-level"
+        defaultValue: 0
     }
-
-    property int soundMute: 0
 
     Rectangle {
         id: soundBackground
@@ -48,38 +47,23 @@ Item {
             id: muteButton
 
             anchors.fill: parent
-            onClicked: {
-                // Is muted?
-                if (preMuteLevel.value > 0) {
-                    // Restore pre mute volume value
-                    volumeControl.volume = preMuteLevel.value
-                    preMuteLevel.value = 0
-                } else {
-                    // Store volume value before muting
-                    preMuteLevel.value = volumeControl.volume
-                    volumeControl.volume = "0"
-                }
-            }
-
+            onClicked: [ volumeControl.volume, preMuteLevel.value ] = [ preMuteLevel.value, volumeControl.volume ]
         }
     }
 
     Icon {
-        id: volumeIcon
-        width: Dims.w(25)
-        height: width
         anchors.fill: soundBackground
         anchors.margins: Dims.l(3)
         name: preMuteLevel.value > 0 ? "ios-sound-indicator-mute" :
-                              volumeControl.volume > "70" ? "ios-sound-indicator-high" :
-                                                            volumeControl.volume > "30" ? "ios-sound-indicator-mid" :
-                                                                                          volumeControl.volume > "0" ? "ios-sound-indicator-low" : "ios-sound-indicator-off"
+              volumeControl.volume > "70" ? "ios-sound-indicator-high" :
+              volumeControl.volume > "30" ? "ios-sound-indicator-mid" :
+              volumeControl.volume > "0" ? "ios-sound-indicator-low" : "ios-sound-indicator-off"
     }
 
     Column {
         width: parent.width
         anchors {
-            top: volumeIcon.bottom
+            top: soundBackground.bottom
             topMargin: Dims.h(5)
         }
 
@@ -98,16 +82,15 @@ Item {
             width: parent.width
             height: Dims.h(25)
             stepSize: 10
-            value: volumeControl.volume
+            property bool initialized: false
             onValueChanged: {
-                volumeControl.volume = value
-                // Un-mute if muted
-                if (preMuteLevel.value > 0) {
-                    // Restore pre mute volume value
-                    volumeControl.volume = preMuteLevel.value
-                    preMuteLevel.value = 0
+                if (initialized) {
+                    [ volumeControl.volume, preMuteLevel.value ] = [ value, 0 ]
+                } else {
+                    initialized = true
                 }
             }
+            Component.onCompleted: value = Math.max(volumeControl.volume, preMuteLevel.value)
         }
     }
 }

@@ -19,7 +19,6 @@
 
 import QtQuick 2.9
 import org.asteroid.controls 1.0
-import org.asteroid.settings 1.0
 import Nemo.DBus 2.0
 
 Item {
@@ -27,47 +26,64 @@ Item {
     ListModel {
         id: powerModel
         //% "Power Off"
-        ListElement { text: qsTrId("id-poweroff-page"); icon: "ios-power-outline"; command: "req_shutdown" }
+        ListElement { text: qsTrId("id-poweroff-page"); icon: "ios-power-outline" }
         //% "Reboot"
-        ListElement { text: qsTrId("id-reboot-page"); icon: "ios-sync"; command: "req_reboot" }
+        ListElement { text: qsTrId("id-reboot-page"); icon: "ios-sync" }
+        //% "Bootloader"
+        ListElement { text: qsTrId("id-reboot-bootloader-page"); icon: "ios-bootloader-outline" }
+
     }
 
     ListView {
         id: powerItems
-        anchors.fill: parent
-        interactive: false
         model: powerModel
+        anchors {
+            top: parent.top
+            topMargin: parent.height * 0.15
+        }
+        height: parent.height
+        width: parent.width
         delegate: ListItem {
             title: text
             iconName: icon
             highlight: powerItems.currentIndex == index ? 0.2 : 0
             onClicked: powerItems.currentIndex = index
         }
-
-        preferredHighlightBegin: height / 2 - Dims.h(21)
-        preferredHighlightEnd: height / 2 + Dims.h(21)
-        highlightRangeMode: ListView.StrictlyEnforceRange
     }
 
     IconButton {
         iconName: "ios-checkmark-circle-outline"
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: Dims.h(5)
-        onClicked: dsmeDbus.call(powerModel.get(powerItems.currentIndex).command, [])
+        anchors.bottomMargin: parent.height * 0.05
+        onClicked: login1DBus.command(powerItems.currentIndex)
     }
 
     DBusInterface {
-        id: dsmeDbus
+        id: login1DBus
         bus: DBus.SystemBus
-        service: "com.nokia.dsme"
-        path: "/com/nokia/dsme/request"
-        iface: "com.nokia.dsme.request"
+        service: "org.freedesktop.login1"
+        path: "/org/freedesktop/login1"
+        iface: "org.freedesktop.login1.Manager"
+        function command(num) {
+            switch(num) {
+                case 0:
+                    call("PowerOff",[false]);
+                    break;
+                case 1:
+                    call("SetRebootParameter", [""])
+                    call("Reboot",[false]);
+                    break;
+                case 2:
+                    call("SetRebootParameter", ["bootloader"])
+                    call("Reboot",[false]);
+                    break;
+                default:
+                    console.log("Error: bad case ", num, " in login1DBus command");
+            }
+        }
     }
-
     PageHeader {
-        id: title
         text: qsTrId("id-power-page")
     }
 }
-

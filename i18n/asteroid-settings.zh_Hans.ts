@@ -167,6 +167,11 @@
         <source>Power</source>
         <translation>电源</translation>
     </message>
+    <message id="id-reboot-bootloader-page">
+        <source>Bootloader</source>
+        <oldsource>Reboot to bootloader</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AboutPage</name>

@@ -116,12 +116,15 @@ Item {
             visible: wifiStatus.powered
             width: wifiList.width
             height: wifiStatus.powered ? width*0.23 : 0
-            Label {
+            Marquee {
                 id: wifiNameLabel
                 text: wifiName
+                height: parent.height*0.6
+                width: parent.width
             }
             Label {
                 anchors.top: wifiNameLabel.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
                 opacity: 0.8
                 font.pixelSize: parent.width*0.07
                 font.weight: Font.Thin

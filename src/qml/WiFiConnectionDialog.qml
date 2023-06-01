@@ -95,7 +95,7 @@ Item {
             id: contentColumn
             width: parent.width
             Item {height: Dims.h(15); width: parent.width}
-            Label {
+            Marquee {
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -104,6 +104,7 @@ Item {
                 }
                 text: modelData.name
                 font.pixelSize: Dims.l(6)
+                height: Dims.l(8)
             }
             Column {
                 id: loginFieldsColumn

@@ -175,6 +175,7 @@ Item {
                 width: parent.width
                 height: dialogItem.rowHeight
                 text: "Autoconnect"
+                checked: modelData.autoConnect
             }
             LabeledActionButton {
                 width: parent.width

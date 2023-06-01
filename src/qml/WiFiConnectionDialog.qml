@@ -178,6 +178,7 @@ Item {
                 checked: modelData.autoConnect
             }
             LabeledActionButton {
+                visible: modelData.connected || modelData.favorite
                 width: parent.width
                 height: dialogItem.rowHeight
                 text: qsTrId("id-wifi-removenetwork")

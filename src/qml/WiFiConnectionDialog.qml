@@ -117,7 +117,7 @@ Item {
                 }
                 Label {
                     id: identityLabel
-                    text: qsTr("Login")+":"
+                    text: qsTrId("id-wifi-login")+":"
                     font.pixelSize: Dims.l(6)
                     visible: modelData.securityType === NetworkService.SecurityIEEE802
                 }
@@ -131,7 +131,7 @@ Item {
 
                 Label {
                     id: passphraseLabel
-                    text: qsTr("Password")+":"
+                    text: qsTrId("id-wifi-password")+":"
                     font.pixelSize: Dims.l(6)
                     visible: !(modelData.securityType == NetworkService.SecurityNone)
                 }
@@ -162,7 +162,7 @@ Item {
                 LabeledActionButton {
                     width: parent.width
                     height: dialogItem.rowHeight
-                    text: "Disconnect"
+                    text: qsTrId("id-wifi-disconnect")
                     icon: "ios-close-circle-outline"
                     onClicked: {
                         modelData.requestDisconnect()
@@ -174,13 +174,13 @@ Item {
                 id: autoConnectCheckBox
                 width: parent.width
                 height: dialogItem.rowHeight
-                text: "Autoconnect"
+                text: qsTrId("id-wifi-autoconnect")
                 checked: modelData.autoConnect
             }
             LabeledActionButton {
                 width: parent.width
                 height: dialogItem.rowHeight
-                text: "Remove network"
+                text: qsTrId("id-wifi-removenetwork")
                 icon: "ios-remove-circle-outline"
                 onClicked: {
                     modelData.remove()

@@ -97,15 +97,7 @@ Item {
                 anchors.leftMargin: parent.width*0.04; anchors.rightMargin: anchors.leftMargin
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.verticalCenterOffset: parent.width*0.15
-                //% "WiFi on"
-                property string bluetoothOnStr: qsTrId("id-wifi-on")
-                //% "WiFi off"
-                property string bluetoothOffStr: qsTrId("id-wifi-off")
-                //% "Connected"
-                property string connectedStr: qsTrId("id-connected")
-                //% "Not connected"
-                property string notConnectedStr: qsTrId("id-disconnected")
-                text: "<h3>" + (wifiStatus.powered ? bluetoothOnStr : bluetoothOffStr) + "</h3>\n" + (wifiStatus.connected ? connectedStr : notConnectedStr)
+                text: "<h3>" + (wifiStatus.powered ? qsTrId("id-wifi-on"): qsTrId("id-wifi-off")) + "</h3>\n" + (wifiStatus.connected ? qsTrId("id-wifi-connected") : qsTrId("id-wifi-disconnected"))
             }
         }
 
@@ -130,11 +122,11 @@ Item {
                 font.weight: Font.Thin
                 text: {
                     if (modelData.connected) {
-                        "Connected"
+                        qsTrId("id-wifi-connected")
                     } else if (modelData.favorite){
-                        "Saved"
+                        qsTrId("id-wifi-saved")
                     } else {
-                        "Not set up"
+                        qsTrId("id-wifi-notsetup")
                     }
                 }
             }

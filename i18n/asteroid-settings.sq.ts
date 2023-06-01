@@ -24,7 +24,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message id="id-sound-percentage">
-        <location filename="../src/qml/SoundPage.qml" line="88"/>
+        <location filename="../src/qml/SoundPage.qml" line="72"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
         <translation type="unfinished"></translation>
@@ -164,18 +164,24 @@
     </message>
     <message id="id-power-page">
         <location filename="../src/qml/main.qml" line="152"/>
-        <location filename="../src/qml/PowerPage.qml" line="70"/>
+        <location filename="../src/qml/PowerPage.qml" line="87"/>
         <source>Power</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-poweroff-page">
-        <location filename="../src/qml/PowerPage.qml" line="30"/>
+        <location filename="../src/qml/PowerPage.qml" line="29"/>
         <source>Power Off</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-reboot-page">
-        <location filename="../src/qml/PowerPage.qml" line="32"/>
+        <location filename="../src/qml/PowerPage.qml" line="31"/>
         <source>Reboot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-reboot-bootloader-page">
+        <location filename="../src/qml/PowerPage.qml" line="33"/>
+        <source>Bootloader</source>
+        <oldsource>Reboot to bootloader</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-about-page">

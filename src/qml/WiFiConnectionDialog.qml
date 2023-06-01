@@ -33,6 +33,9 @@ Item {
     id: dialogItem
     property var modelData
 
+    property real rowHeight: Dims.h(25)
+    property real rowMargin: Dims.w(15)
+
     InputPanel {
         id: inputPanel
         z: 99
@@ -87,20 +90,30 @@ Item {
     }
     Flickable {
         anchors.fill: parent
-        anchors.margins: Dims.l(15)
         contentHeight: contentColumn.implicitHeight
         Column {
             id: contentColumn
             width: parent.width
-            Item {height: dialogItem.height*0.15; width: parent.width}
+            Item {height: Dims.h(15); width: parent.width}
             Label {
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    leftMargin: dialogItem.rowMargin
+                    rightMargin: dialogItem.rowMargin
+                }
                 text: modelData.name
                 font.pixelSize: Dims.l(6)
             }
             Column {
                 id: loginFieldsColumn
-                width: parent.width
                 visible: !(modelData.connected || modelData.favorite)
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    leftMargin: dialogItem.rowMargin
+                    rightMargin: dialogItem.rowMargin
+                }
                 Label {
                     id: identityLabel
                     text: qsTr("Login")+":"
@@ -127,75 +140,49 @@ Item {
                     text: modelData.passphrase
                     echoMode: TextInput.Password //smartwatches are hard to type on. it is worth adding a 'show password' button for this field
                     width: parent.width
+                    height: dialogItem.rowHeight
                     visible: !(modelData.securityType == NetworkService.SecurityNone)
                 }
             }
             Column {
                 visible: modelData.connected
+                width: parent.width
                 Label {
-                    text: "IP Address: " + modelData.ipv4["Address"]
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                        leftMargin: dialogItem.rowMargin
+                        rightMargin: dialogItem.rowMargin
+                    }
+                    text: "IP: " + modelData.ipv4["Address"]
+                    horizontalAlignment: Text.AlignHCenter
                     font.pixelSize: Dims.l(6)
                 }
-                Row {
+                LabeledActionButton {
                     width: parent.width
-                    height: Dims.l(20)
-                    // labelWidthRatio is the ratio of label width to the total width
-                    property real labelWidthRatio: 0.7143
-                    // fontToHeightRatio is the ratio of the font size to the height
-                    property real fontToHeightRatio: 0.3
-
-                    Label {
-                        text: "Disconnect"
-                        font.pixelSize: parent.height * fontToHeightRatio
-                        verticalAlignment: Text.AlignVCenter
-                        wrapMode: Text.Wrap
-                        width: parent.width * labelWidthRatio
-                        height: parent.height
-                    }
-
-                    IconButton {
-                        iconName: "ios-close-circle-outline"
-                        height: parent.height
-                        width: height
-                        onClicked: {
-                            modelData.requestDisconnect()
-                            layerStack.pop(layerStack.currentLayer)
-                        }
+                    height: dialogItem.rowHeight
+                    text: "Disconnect"
+                    icon: "ios-close-circle-outline"
+                    onClicked: {
+                        modelData.requestDisconnect()
+                        layerStack.pop(layerStack.currentLayer)
                     }
                 }
             }
             LabeledSwitch {
                 id: autoConnectCheckBox
                 width: parent.width
-                height: Dims.l(20)
-                text: "autoconnect"
+                height: dialogItem.rowHeight
+                text: "Autoconnect"
             }
-            Row {
-                visible: (modelData.connected || modelData.favorite)
+            LabeledActionButton {
                 width: parent.width
-                height: Dims.l(20)
-                // labelWidthRatio is the ratio of label width to the total width
-                property real labelWidthRatio: 0.7143
-                // fontToHeightRatio is the ratio of the font size to the height
-                property real fontToHeightRatio: 0.3
-
-                Label {
-                    text: "remove network"
-                    font.pixelSize: parent.height * fontToHeightRatio
-                    verticalAlignment: Text.AlignVCenter
-                    wrapMode: Text.Wrap
-                    width: parent.width * labelWidthRatio
-                    height: parent.height
-                }
-
-                IconButton {
-                    iconName: "ios-remove-circle-outline"
-                    height: parent.height
-                    width: height
-                    onClicked: {
-                        modelData.remove()
-                        layerStack.pop(layerStack.currentLayer)
-                    }
+                height: dialogItem.rowHeight
+                text: "Remove network"
+                icon: "ios-remove-circle-outline"
+                onClicked: {
+                    modelData.remove()
+                    layerStack.pop(layerStack.currentLayer)
                 }
             }
 

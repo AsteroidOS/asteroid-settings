@@ -200,9 +200,9 @@ Item {
             }
 
             IconButton {
-                iconName: "ios-checkmark-circle"
+                iconName: "ios-checkmark-circle-outline"
                 height: width
-                width: parent.width*0.3
+                width: Dims.w(20)
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     if(!modelData.connected) {

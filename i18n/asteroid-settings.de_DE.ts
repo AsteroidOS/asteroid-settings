@@ -27,7 +27,7 @@
         <location filename="../src/qml/SoundPage.qml" line="88"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">Lautstärke %1%</translation>
+        <translation>Lautstärke</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../src/qml/USBPage.qml" line="30"/>
@@ -52,12 +52,12 @@
     <message id="id-12h-format">
         <location filename="../src/qml/UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation>12-Std.-Format:</translation>
+        <translation>12-Stunden-Format verwenden:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../src/qml/UnitsPage.qml" line="57"/>
         <source>Use Fahrenheit:</source>
-        <translation>Fahrenheit:</translation>
+        <translation>Fahrenheit verwenden:</translation>
     </message>
     <message id="id-time-page">
         <location filename="../src/qml/main.qml" line="110"/>

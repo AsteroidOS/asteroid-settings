@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10.0)
 
 project(asteroid-settings
-	VERSION 1.0.0
+	VERSION 2.0.0
 	DESCRIPTION "Default settings app for AsteroidOS")
 
 find_package(ECM REQUIRED NO_MODULE)

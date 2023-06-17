@@ -170,7 +170,7 @@
     <message id="id-reboot-bootloader-page">
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Zavaděč systému</translation>
     </message>
 </context>
 <context>

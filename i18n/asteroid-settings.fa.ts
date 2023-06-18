@@ -27,7 +27,7 @@
         <location filename="../src/qml/SoundPage.qml" line="72"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">حجم صدا %1%</translation>
+        <translation>حجم صدا</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../src/qml/USBPage.qml" line="30"/>
@@ -182,7 +182,7 @@
         <location filename="../src/qml/PowerPage.qml" line="33"/>
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>بارکنندهٔ راه‌انداز</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="158"/>

@@ -27,7 +27,7 @@
         <location filename="../src/qml/SoundPage.qml" line="72"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">Âm lượng %1%</translation>
+        <translation>Âm lượng</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../src/qml/USBPage.qml" line="30"/>
@@ -122,7 +122,7 @@
         <location filename="../src/qml/main.qml" line="134"/>
         <location filename="../src/qml/TimezonePage.qml" line="130"/>
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation>Múi giờ</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../src/qml/main.qml" line="85"/>

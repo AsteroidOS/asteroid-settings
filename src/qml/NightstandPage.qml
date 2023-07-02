@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.3
 import org.asteroid.controls 1.0
 import org.asteroid.utils 1.0
 import org.asteroid.settings 1.0
-import org.nemomobile.systemsettings 1.0
+import org.nemomobile.systemsettings 1.0 as NemoSystemSettings
 import Nemo.Configuration 1.0
 
 Item {
@@ -54,8 +54,13 @@ Item {
     ConfigurationValue {
         id: nightstandAlwaysOnDisplay
         key: "/desktop/asteroid/nightstand/always-on-display"
-        defaultValue: false
+        defaultValue: true
     }
+    
+    NemoSystemSettings.DisplaySettings { 
+        id: displaySettings
+    }
+
 
     property string rowHeight: Dims.h(25)
 
@@ -143,7 +148,10 @@ Item {
                     //% "Always on Display"
                     text: qsTrId("id-always-on-display")
                     checked: nightstandAlwaysOnDisplay.value
-                    onCheckedChanged: nightstandAlwaysOnDisplay.value = checked
+                    onCheckedChanged: {
+                        nightstandAlwaysOnDisplay.value = checked
+                        displaySettings.lowPowerModeEnabled = checked
+                    }
                 }
             }
 

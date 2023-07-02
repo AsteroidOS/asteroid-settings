@@ -51,6 +51,12 @@ Item {
         defaultValue: false
     }
 
+    ConfigurationValue {
+        id: nightstandAlwaysOnDisplay
+        key: "/desktop/asteroid/nightstand/always-on-display"
+        defaultValue: false
+    }
+
     property string rowHeight: Dims.h(25)
 
     Flickable {
@@ -129,6 +135,15 @@ Item {
                     unitMarker: "s"
                     value: nightstandDelay.value
                     onValueChanged: nightstandDelay.value = value
+                }
+
+                LabeledSwitch {
+                    height: rowHeight
+                    width: parent.width
+                    //% "Always on Display"
+                    text: qsTrId("id-always-on-display")
+                    checked: nightstandAlwaysOnDisplay.value
+                    onCheckedChanged: nightstandAlwaysOnDisplay.value = checked
                 }
             }
 

@@ -35,6 +35,12 @@ Item {
         defaultValue: DeviceInfo.needsBurnInProtection
     }
 
+    ConfigurationValue {
+        id: alwaysOnDisplay
+        key: "/org/asteroidos/settings/always-on-display"
+        defaultValue: true
+    }
+
     property string rowHeight: Dims.h(25)
 
     Flickable {
@@ -82,8 +88,11 @@ Item {
                 width: parent.width
                 //% "Always on Display"
                 text: qsTrId("id-always-on-display")
-                checked: displaySettings.lowPowerModeEnabled
-                onCheckedChanged: displaySettings.lowPowerModeEnabled = checked
+                checked: alwaysOnDisplay.value
+                onCheckedChanged: {
+                    displaySettings.lowPowerModeEnabled = checked
+                    alwaysOnDisplay.value = checked
+                }
             }
 
             LabeledSwitch {

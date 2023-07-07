@@ -170,7 +170,7 @@
     <message id="id-reboot-bootloader-page">
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>线刷模式</translation>
     </message>
 </context>
 <context>

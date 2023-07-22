@@ -54,7 +54,7 @@ Item {
             id: folderModel
 
             folder: assetPath + "full"
-            nameFilters: ["*.jpg"]
+            nameFilters: ["*.jpg", "*.png", "*.svg"]
             onCountChanged: {
                 var i = 0
                 while (i < folderModel.count){

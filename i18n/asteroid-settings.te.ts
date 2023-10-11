@@ -6,12 +6,12 @@
     <message id="id-bluetooth-on">
         <location filename="../src/qml/BluetoothPage.qml" line="28"/>
         <source>Bluetooth on</source>
-        <translation>బ్లూటూత్ ఆన్</translation>
+        <translation type="unfinished">బ్లూటూత్ ఆన్</translation>
     </message>
     <message id="id-bluetooth-off">
         <location filename="../src/qml/BluetoothPage.qml" line="30"/>
         <source>Bluetooth off</source>
-        <translation>బ్లూటూత్ ఆఫ్</translation>
+        <translation type="unfinished">బ్లూటూత్ ఆఫ్</translation>
     </message>
     <message id="id-connected">
         <location filename="../src/qml/BluetoothPage.qml" line="32"/>
@@ -133,7 +133,7 @@
         <location filename="../src/qml/main.qml" line="79"/>
         <location filename="../src/qml/NightstandPage.qml" line="165"/>
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>నైట్‌స్టాండ్</translation>
     </message>
     <message id="id-units-page">
         <location filename="../src/qml/main.qml" line="122"/>
@@ -166,7 +166,7 @@
         <location filename="../src/qml/main.qml" line="152"/>
         <location filename="../src/qml/PowerPage.qml" line="87"/>
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation>శక్తి</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../src/qml/PowerPage.qml" line="29"/>
@@ -182,7 +182,7 @@
         <location filename="../src/qml/PowerPage.qml" line="33"/>
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>బూట్‌లోడర్</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="158"/>
@@ -197,7 +197,7 @@
     <message id="id-nightstand-enable">
         <location filename="../src/qml/NightstandPage.qml" line="75"/>
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>ప్రారంభించు</translation>
     </message>
     <message id="id-nightstand-brightness">
         <location filename="../src/qml/NightstandPage.qml" line="96"/>
@@ -209,18 +209,18 @@
         <location filename="../src/qml/NightstandPage.qml" line="115"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>ఆలస్యం</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="141"/>
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>అనుకూల వాచ్‌ఫేస్</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="152"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>వాచ్‌ఫేస్‌ని ఎంచుకోండి</translation>
     </message>
 </context>
 <context>
@@ -228,87 +228,87 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="85"/>
         <source>Build ID</source>
-        <translation type="unfinished"></translation>
+        <translation>బిల్డ్ ID</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="86"/>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>కోడ్ పేరు</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="87"/>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>హోస్ట్ పేరు</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="88"/>
         <source>WLAN MAC</source>
-        <translation type="unfinished"></translation>
+        <translation>WLAN మాక్</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="89"/>
         <source>IMEI</source>
-        <translation type="unfinished"></translation>
+        <translation>ఐఎంఈఐ</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="90"/>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>క్రమ సంఖ్య</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>Total disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>మొత్తం డిస్క్ స్థలం</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 జిబి</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>%L1 GB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB (%L2%)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>%L1W x %L2H</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1W x %L2H</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>Uptime</source>
-        <translation type="unfinished"></translation>
+        <translation>సమయము</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>%L1 days %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 రోజులు %L2</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>%L1</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>Threads</source>
-        <translation type="unfinished"></translation>
+        <translation>దారాలు</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished"></translation>
+        <translation>1,5,15 నిమిషాల లోడ్లు</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>%L1, %L2, %L3</source>
-        <translation type="unfinished"></translation>
+        <translation>%l1, %no, %l</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>మొత్తం మెమరీ</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>

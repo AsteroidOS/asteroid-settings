@@ -22,7 +22,7 @@
     <message id="id-sound-percentage">
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">Volume %1%</translation>
+        <translation>Volume</translation>
     </message>
     <message id="id-adb-mode">
         <source>ADB Mode</source>
@@ -153,7 +153,7 @@
     </message>
     <message id="id-nightstand-custom-watchface">
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>Quadrante personalizzato</translation>
     </message>
     <message id="id-ssh-mode">
         <source>SSH Mode</source>
@@ -161,7 +161,7 @@
     </message>
     <message id="id-timezone-page">
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation>Fuso orario</translation>
     </message>
     <message id="id-power-page">
         <source>Power</source>
@@ -170,7 +170,7 @@
     <message id="id-reboot-bootloader-page">
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Bootloader</translation>
     </message>
 </context>
 <context>
@@ -225,23 +225,23 @@
     </message>
     <message>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB</translation>
     </message>
     <message>
         <source>%L1 GB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB (%L2 %)</translation>
     </message>
     <message>
         <source>%L1W x %L2H</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1W x %L2H</translation>
     </message>
     <message>
         <source>Uptime</source>
-        <translation type="unfinished"></translation>
+        <translation>Tempo di utilizzo</translation>
     </message>
     <message>
         <source>%L1 days %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 giorni %L2</translation>
     </message>
     <message>
         <source>Threads</source>
@@ -253,23 +253,23 @@
     </message>
     <message>
         <source>%L1, %L2, %L3</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1, %L2, %L3</translation>
     </message>
     <message>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Memoria totale</translation>
     </message>
     <message>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB</translation>
     </message>
     <message>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Memoria libera</translation>
     </message>
     <message>
         <source>%L1 MB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB (%L2 %)</translation>
     </message>
 </context>
 </TS>

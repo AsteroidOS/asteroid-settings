@@ -27,7 +27,7 @@
         <location filename="../src/qml/SoundPage.qml" line="72"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">Geluid %1%</translation>
+        <translation>Volume</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../src/qml/USBPage.qml" line="30"/>
@@ -154,7 +154,7 @@
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="104"/>
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Startprogramma</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="146"/>
@@ -182,7 +182,7 @@
         <location filename="../src/qml/PowerPage.qml" line="33"/>
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Bootloader</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="158"/>
@@ -233,22 +233,22 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="86"/>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>Codenaam</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="87"/>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>Host naam</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="88"/>
         <source>WLAN MAC</source>
-        <translation type="unfinished"></translation>
+        <translation>WLAN MAC</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="89"/>
         <source>IMEI</source>
-        <translation type="unfinished"></translation>
+        <translation>IMEI</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="90"/>
@@ -258,7 +258,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>Total disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Totale opslagruimte</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
@@ -308,7 +308,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Totaal geheugen</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
@@ -318,7 +318,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrij geheugen</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
@@ -328,7 +328,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>Available disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Beschikbare opslagplaats</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>

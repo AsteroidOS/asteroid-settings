@@ -214,7 +214,7 @@
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="141"/>
         <source>Custom watchface</source>
-        <translation>Mostrador personalizado</translation>
+        <translation>Face do relógio personalizado</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="152"/>
@@ -293,12 +293,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>Threads</source>
-        <translation>Tópicos</translation>
+        <translation>Tarefas</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>1,5,15 Minute loads</source>
-        <translation>1,5,15 Cargas de minutos</translation>
+        <translation>Cargas de 1,5,15 minutos</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>

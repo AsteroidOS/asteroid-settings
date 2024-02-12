@@ -165,7 +165,7 @@
     </message>
     <message id="id-power-page">
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation>Alimentazione</translation>
     </message>
     <message id="id-reboot-bootloader-page">
         <source>Bootloader</source>
@@ -245,11 +245,11 @@
     </message>
     <message>
         <source>Threads</source>
-        <translation type="unfinished"></translation>
+        <translation>Istanze</translation>
     </message>
     <message>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished"></translation>
+        <translation>Carico medio 1,5,15 minuti</translation>
     </message>
     <message>
         <source>%L1, %L2, %L3</source>

@@ -83,38 +83,39 @@
         <translation>Bluetooth</translation>
     </message>
     <message id="id-display-page">
-        <location filename="../src/qml/DisplayPage.qml" line="123"/>
+        <location filename="../src/qml/DisplayPage.qml" line="132"/>
         <location filename="../src/qml/main.qml" line="73"/>
         <source>Display</source>
         <translation>Дисплей</translation>
     </message>
     <message id="id-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="55"/>
+        <location filename="../src/qml/DisplayPage.qml" line="61"/>
         <source>Brightness</source>
         <translation>Яскравість</translation>
     </message>
     <message id="id-automatic-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="75"/>
+        <location filename="../src/qml/DisplayPage.qml" line="81"/>
         <source>Automatic brightness</source>
         <translation>Автоматична яскравість</translation>
     </message>
     <message id="id-always-on-display">
-        <location filename="../src/qml/DisplayPage.qml" line="84"/>
+        <location filename="../src/qml/DisplayPage.qml" line="90"/>
+        <location filename="../src/qml/NightstandPage.qml" line="149"/>
         <source>Always on Display</source>
         <translation>AOD</translation>
     </message>
     <message id="id-burn-in-protection">
-        <location filename="../src/qml/DisplayPage.qml" line="94"/>
+        <location filename="../src/qml/DisplayPage.qml" line="103"/>
         <source>Burn in protection</source>
         <translation>Захист від вигорання</translation>
     </message>
     <message id="id-tilt-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="105"/>
+        <location filename="../src/qml/DisplayPage.qml" line="114"/>
         <source>Tilt-to-wake</source>
         <translation>Пробудження нахилом</translation>
     </message>
     <message id="id-tap-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="114"/>
+        <location filename="../src/qml/DisplayPage.qml" line="123"/>
         <source>Tap-to-wake</source>
         <translation>Пробудження дотиком</translation>
     </message>
@@ -131,7 +132,7 @@
     </message>
     <message id="id-nightstand-page">
         <location filename="../src/qml/main.qml" line="79"/>
-        <location filename="../src/qml/NightstandPage.qml" line="165"/>
+        <location filename="../src/qml/NightstandPage.qml" line="188"/>
         <source>Nightstand</source>
         <translation>Нічний вид</translation>
     </message>
@@ -195,29 +196,29 @@
         <translation>Налаштування</translation>
     </message>
     <message id="id-nightstand-enable">
-        <location filename="../src/qml/NightstandPage.qml" line="75"/>
+        <location filename="../src/qml/NightstandPage.qml" line="86"/>
         <source>Enable</source>
         <translation>Увімкнути</translation>
     </message>
     <message id="id-nightstand-brightness">
-        <location filename="../src/qml/NightstandPage.qml" line="96"/>
+        <location filename="../src/qml/NightstandPage.qml" line="107"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
         <translation>Яскравість</translation>
     </message>
     <message id="id-nightstand-delay">
-        <location filename="../src/qml/NightstandPage.qml" line="115"/>
+        <location filename="../src/qml/NightstandPage.qml" line="126"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
         <translation>Затримка</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
-        <location filename="../src/qml/NightstandPage.qml" line="141"/>
+        <location filename="../src/qml/NightstandPage.qml" line="164"/>
         <source>Custom watchface</source>
         <translation>Користувацький циферблат</translation>
     </message>
     <message id="id-nightstand-watchface">
-        <location filename="../src/qml/NightstandPage.qml" line="152"/>
+        <location filename="../src/qml/NightstandPage.qml" line="175"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
         <translation>Виберіть циферблат</translation>
@@ -257,91 +258,101 @@
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
+        <source>Vendor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="92"/>
+        <source>Model</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="93"/>
         <source>Total disk space</source>
         <translation>Всього місця на диску</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="91"/>
+        <location filename="../src/qml/AboutPage.qml" line="93"/>
         <source>%L1 GB</source>
         <translation>%L1 ГБ</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="92"/>
+        <location filename="../src/qml/AboutPage.qml" line="94"/>
         <source>%L1 GB (%L2 %)</source>
         <translation>%L1 ГБ (%L2 %)</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="95"/>
+        <location filename="../src/qml/AboutPage.qml" line="97"/>
         <source>%L1W x %L2H</source>
         <translation>%L1Ш x %L2В</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="98"/>
+        <location filename="../src/qml/AboutPage.qml" line="100"/>
         <source>Uptime</source>
         <translation>Час роботи</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="98"/>
+        <location filename="../src/qml/AboutPage.qml" line="100"/>
         <source>%L1 days %L2</source>
         <translation>%L1 днів %L2</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="102"/>
+        <location filename="../src/qml/AboutPage.qml" line="104"/>
         <source>%L1</source>
         <translation>%L1</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="102"/>
+        <location filename="../src/qml/AboutPage.qml" line="104"/>
         <source>Threads</source>
         <translation>Потоки</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="103"/>
+        <location filename="../src/qml/AboutPage.qml" line="105"/>
         <source>1,5,15 Minute loads</source>
         <translation>1,5,15 Хвилинне навантаження</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="103"/>
+        <location filename="../src/qml/AboutPage.qml" line="105"/>
         <source>%L1, %L2, %L3</source>
         <translation>%L1, %L2, %L3</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="108"/>
+        <location filename="../src/qml/AboutPage.qml" line="110"/>
         <source>Total memory</source>
         <translation>Загальна пам’ять</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="108"/>
+        <location filename="../src/qml/AboutPage.qml" line="110"/>
         <source>%L1 MB</source>
         <translation>%L1 МБ</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="109"/>
+        <location filename="../src/qml/AboutPage.qml" line="111"/>
         <source>Free memory</source>
         <translation>Вільна пам&apos;ять</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="109"/>
+        <location filename="../src/qml/AboutPage.qml" line="111"/>
         <source>%L1 MB (%L2 %)</source>
         <translation>%L1 МБ (%L2 %)</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="92"/>
+        <location filename="../src/qml/AboutPage.qml" line="94"/>
         <source>Available disk space</source>
         <translation>Доступне місце на диску</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="95"/>
+        <location filename="../src/qml/AboutPage.qml" line="97"/>
         <source>Display size</source>
         <translation>Розмір дисплея</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="96"/>
+        <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>Kernel version</source>
         <translation>Версія ядра</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="97"/>
+        <location filename="../src/qml/AboutPage.qml" line="99"/>
         <source>Qt version</source>
         <translation>Версія Qt</translation>
     </message>

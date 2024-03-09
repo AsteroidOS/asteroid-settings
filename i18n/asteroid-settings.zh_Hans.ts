@@ -34,11 +34,11 @@
     </message>
     <message id="id-12h-format">
         <source>Use 12H format:</source>
-        <translation>使用 12 小时时间格式：</translation>
+        <translation>使用 12 小时制：</translation>
     </message>
     <message id="id-fahrenheit">
         <source>Use Fahrenheit:</source>
-        <translation>使用华氏单位：</translation>
+        <translation>使用华氏度：</translation>
     </message>
     <message id="id-time-page">
         <source>Time</source>
@@ -62,7 +62,7 @@
     </message>
     <message id="id-units-page">
         <source>Units</source>
-        <translation>组件</translation>
+        <translation>单位</translation>
     </message>
     <message id="id-wallpaper-page">
         <source>Wallpaper</source>
@@ -237,7 +237,7 @@
     </message>
     <message>
         <source>Uptime</source>
-        <translation>开机累计时长</translation>
+        <translation>开机时长</translation>
     </message>
     <message>
         <source>%L1 days %L2</source>

@@ -27,7 +27,7 @@
         <location filename="../src/qml/SoundPage.qml" line="72"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">आवाज %1%</translation>
+        <translation>आवाज</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../src/qml/USBPage.qml" line="30"/>
@@ -209,7 +209,7 @@
         <location filename="../src/qml/NightstandPage.qml" line="115"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>विलंब</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="141"/>
@@ -248,12 +248,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="89"/>
         <source>IMEI</source>
-        <translation type="unfinished"></translation>
+        <translation>आयएमईआय</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="90"/>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>सिरीयल क्रमांक</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
@@ -283,7 +283,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>%L1 days %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 दिवस %L2</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>

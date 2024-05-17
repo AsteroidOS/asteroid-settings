@@ -298,7 +298,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargas de 1, 5, 15 minutos</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>

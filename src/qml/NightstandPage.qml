@@ -42,7 +42,7 @@ Item {
     ConfigurationValue {
         id: nightstandEnabled
         key: "/desktop/asteroid/nightstand/enabled"
-        defaultValue: false
+        defaultValue: true
     }
 
     ConfigurationValue {

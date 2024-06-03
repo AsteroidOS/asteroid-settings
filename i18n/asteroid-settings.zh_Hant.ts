@@ -154,7 +154,7 @@
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="104"/>
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>啟動器</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="146"/>
@@ -166,7 +166,7 @@
         <location filename="../src/qml/main.qml" line="152"/>
         <location filename="../src/qml/PowerPage.qml" line="87"/>
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation>電源</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../src/qml/PowerPage.qml" line="29"/>
@@ -182,7 +182,7 @@
         <location filename="../src/qml/PowerPage.qml" line="33"/>
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>啟動程式</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="158"/>
@@ -228,17 +228,17 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="85"/>
         <source>Build ID</source>
-        <translation type="unfinished"></translation>
+        <translation>建構 ID</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="86"/>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>代號</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="87"/>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>主機名稱</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="88"/>
@@ -293,7 +293,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>Threads</source>
-        <translation type="unfinished"></translation>
+        <translation>執行緒數</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>

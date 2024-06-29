@@ -6,12 +6,12 @@
     <message id="id-bluetooth-on">
         <location filename="../src/qml/BluetoothPage.qml" line="28"/>
         <source>Bluetooth on</source>
-        <translation>Bluetooth įjungta</translation>
+        <translation>Bluetooth įjungtas</translation>
     </message>
     <message id="id-bluetooth-off">
         <location filename="../src/qml/BluetoothPage.qml" line="30"/>
         <source>Bluetooth off</source>
-        <translation>Bluetooth išjungta</translation>
+        <translation>Bluetooth išjungtas</translation>
     </message>
     <message id="id-connected">
         <location filename="../src/qml/BluetoothPage.qml" line="32"/>
@@ -27,7 +27,7 @@
         <location filename="../src/qml/SoundPage.qml" line="72"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">Garsumas %1%</translation>
+        <translation>Garsumas</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../src/qml/USBPage.qml" line="30"/>
@@ -57,7 +57,7 @@
     <message id="id-fahrenheit">
         <location filename="../src/qml/UnitsPage.qml" line="57"/>
         <source>Use Fahrenheit:</source>
-        <translation>Naudoti Fahrenheit:</translation>
+        <translation>Naudoti Fahrenheitą:</translation>
     </message>
     <message id="id-time-page">
         <location filename="../src/qml/main.qml" line="110"/>
@@ -122,7 +122,7 @@
         <location filename="../src/qml/main.qml" line="134"/>
         <location filename="../src/qml/TimezonePage.qml" line="130"/>
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation>Laiko zona</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../src/qml/main.qml" line="85"/>
@@ -149,12 +149,12 @@
     <message id="id-watchface-page">
         <location filename="../src/qml/main.qml" line="98"/>
         <source>Watchface</source>
-        <translation>Ciferblatas</translation>
+        <translation>Laikrodžio ekrano dizainas</translation>
     </message>
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="104"/>
         <source>Launcher</source>
-        <translation>Paleidimo priemonė</translation>
+        <translation>Paleidimo programa</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="146"/>
@@ -166,7 +166,7 @@
         <location filename="../src/qml/main.qml" line="152"/>
         <location filename="../src/qml/PowerPage.qml" line="87"/>
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation>Baterija</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../src/qml/PowerPage.qml" line="29"/>
@@ -182,7 +182,7 @@
         <location filename="../src/qml/PowerPage.qml" line="33"/>
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Įkroviklis</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="158"/>
@@ -214,13 +214,13 @@
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="141"/>
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>Tinkinamas laikrodžio ekrano dizainas</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="152"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation>Pasirinkite laikrodžio veidą</translation>
+        <translation>Pasirinkite laikrodžio ekrano dizainą</translation>
     </message>
 </context>
 <context>
@@ -263,27 +263,27 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>%L1 GB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>%L1W x %L2H</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1W x %L2H</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>Uptime</source>
-        <translation type="unfinished"></translation>
+        <translation>Veikimo trukmė</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>%L1 days %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 dienos %L2</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
@@ -293,37 +293,37 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>Threads</source>
-        <translation type="unfinished"></translation>
+        <translation>Gijos</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished"></translation>
+        <translation>1,5,15 minučių apkrovos</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>%L1, %L2, %L3</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1, %L2, %L3</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Bendra atmintis</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Laisva atmintis</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>%L1 MB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>

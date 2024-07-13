@@ -27,7 +27,7 @@
         <location filename="../src/qml/SoundPage.qml" line="72"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">Volume %1%</translation>
+        <translation>Volume</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../src/qml/USBPage.qml" line="30"/>
@@ -86,12 +86,12 @@
         <location filename="../src/qml/DisplayPage.qml" line="123"/>
         <location filename="../src/qml/main.qml" line="73"/>
         <source>Display</source>
-        <translation>Afficher</translation>
+        <translation>Écran</translation>
     </message>
     <message id="id-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="55"/>
         <source>Brightness</source>
-        <translation>Lumière</translation>
+        <translation>Luminosité</translation>
     </message>
     <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="75"/>
@@ -101,22 +101,22 @@
     <message id="id-always-on-display">
         <location filename="../src/qml/DisplayPage.qml" line="84"/>
         <source>Always on Display</source>
-        <translation>Toujours en vue</translation>
+        <translation>Toujours allumé</translation>
     </message>
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="94"/>
         <source>Burn in protection</source>
-        <translation>Protection contre les brûlures</translation>
+        <translation>Protection contre les brûlures d&apos;écran</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="105"/>
         <source>Tilt-to-wake</source>
-        <translation>Incliner-pour-se-réveiller</translation>
+        <translation>Incliner pour réveiller</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="114"/>
         <source>Tap-to-wake</source>
-        <translation>Tapoter-pour-réveiller</translation>
+        <translation>Tapoter pour réveiller</translation>
     </message>
     <message id="id-timezone-page">
         <location filename="../src/qml/main.qml" line="134"/>
@@ -149,7 +149,7 @@
     <message id="id-watchface-page">
         <location filename="../src/qml/main.qml" line="98"/>
         <source>Watchface</source>
-        <translation>Cadrans</translation>
+        <translation>Cadran</translation>
     </message>
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="104"/>
@@ -166,7 +166,7 @@
         <location filename="../src/qml/main.qml" line="152"/>
         <location filename="../src/qml/PowerPage.qml" line="87"/>
         <source>Power</source>
-        <translation>Puissance</translation>
+        <translation>Marche/Arrêt</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../src/qml/PowerPage.qml" line="29"/>
@@ -182,7 +182,7 @@
         <location filename="../src/qml/PowerPage.qml" line="33"/>
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Gestionnaire d&apos;amorçage</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="158"/>
@@ -192,7 +192,7 @@
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation>Paramètres</translation>
+        <translation>Réglages</translation>
     </message>
     <message id="id-nightstand-enable">
         <location filename="../src/qml/NightstandPage.qml" line="75"/>
@@ -209,7 +209,7 @@
         <location filename="../src/qml/NightstandPage.qml" line="115"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation>Retard</translation>
+        <translation>Délai</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="141"/>
@@ -238,7 +238,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="87"/>
         <source>Host name</source>
-        <translation>Nom de l&apos;appareil</translation>
+        <translation>Nom de l&apos;hôte</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="88"/>
@@ -263,27 +263,27 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>%L1 GB</source>
-        <translation>%L1 FR</translation>
+        <translation>%L1 GB</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>%L1 GB (%L2 %)</source>
-        <translation>%L1 FR (%L2 %)</translation>
+        <translation>%L1 GB (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>%L1W x %L2H</source>
-        <translation>%L1l x %L2L</translation>
+        <translation>%L1L x %L2H</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>Uptime</source>
-        <translation type="unfinished">Disponibilité</translation>
+        <translation>Temps de fonctionnement</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>%L1 days %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 jours %L2</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
@@ -293,37 +293,37 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>Threads</source>
-        <translation type="unfinished"></translation>
+        <translation>Processus</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished"></translation>
+        <translation>Charges de 1,5,15 minutes</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>%L1, %L2, %L3</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1, %L2, %L3</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Mémoire totale</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Mémoire libre</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>%L1 MB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
@@ -333,7 +333,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>Display size</source>
-        <translation>Taille écran</translation>
+        <translation>Taille d&apos;écran</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="96"/>

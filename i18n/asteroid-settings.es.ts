@@ -192,7 +192,7 @@
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation>Configuración</translation>
+        <translation>Ajustes</translation>
     </message>
     <message id="id-nightstand-enable">
         <location filename="../src/qml/NightstandPage.qml" line="75"/>
@@ -278,7 +278,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>Uptime</source>
-        <translation>Funcionamiento</translation>
+        <translation>Tiempo de actividad</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
@@ -293,7 +293,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>Threads</source>
-        <translation>Temas</translation>
+        <translation>Hilos</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
@@ -328,7 +328,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>Available disk space</source>
-        <translation>Espacio disponible en el disco</translation>
+        <translation>Espacio de disco disponible</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>

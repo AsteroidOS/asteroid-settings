@@ -214,7 +214,7 @@
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="141"/>
         <source>Custom watchface</source>
-        <translation type="unfinished">Cadran personnalisé</translation>
+        <translation>Cadran personnalisé</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="152"/>
@@ -328,7 +328,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>Available disk space</source>
-        <translation>Espace disque disponible</translation>
+        <translation>Espace disponible</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>

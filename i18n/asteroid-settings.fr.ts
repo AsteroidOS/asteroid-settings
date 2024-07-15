@@ -106,7 +106,7 @@
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="94"/>
         <source>Burn in protection</source>
-        <translation>Protection contre les brûlures d&apos;écran</translation>
+        <translation>Prévention des brûlures d&apos;écran</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="105"/>

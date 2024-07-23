@@ -27,7 +27,7 @@
         <location filename="../src/qml/SoundPage.qml" line="72"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">%1% Səs</translation>
+        <translation>Səs</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../src/qml/USBPage.qml" line="30"/>
@@ -52,7 +52,7 @@
     <message id="id-12h-format">
         <location filename="../src/qml/UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation>12 Saatlıq formatdan istifadə edin:</translation>
+        <translation>12 Saatlıq formatdan istifadə et:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../src/qml/UnitsPage.qml" line="57"/>
@@ -86,7 +86,7 @@
         <location filename="../src/qml/DisplayPage.qml" line="123"/>
         <location filename="../src/qml/main.qml" line="73"/>
         <source>Display</source>
-        <translation>Displey</translation>
+        <translation>Ekran</translation>
     </message>
     <message id="id-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="55"/>
@@ -101,7 +101,7 @@
     <message id="id-always-on-display">
         <location filename="../src/qml/DisplayPage.qml" line="84"/>
         <source>Always on Display</source>
-        <translation>Davamlı açıq Displey</translation>
+        <translation>Həmişə açıq Ekran</translation>
     </message>
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="94"/>
@@ -116,13 +116,13 @@
     <message id="id-tap-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="114"/>
         <source>Tap-to-wake</source>
-        <translation>Toxunaraq oyandırın</translation>
+        <translation>Toxunaraq oyandır</translation>
     </message>
     <message id="id-timezone-page">
         <location filename="../src/qml/main.qml" line="134"/>
         <location filename="../src/qml/TimezonePage.qml" line="130"/>
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation>Saat qurşağı</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../src/qml/main.qml" line="85"/>
@@ -166,7 +166,7 @@
         <location filename="../src/qml/main.qml" line="152"/>
         <location filename="../src/qml/PowerPage.qml" line="87"/>
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation>Söndür</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../src/qml/PowerPage.qml" line="29"/>
@@ -176,7 +176,7 @@
     <message id="id-reboot-page">
         <location filename="../src/qml/PowerPage.qml" line="31"/>
         <source>Reboot</source>
-        <translation>Yenidən başladın</translation>
+        <translation>Yenidən başlat</translation>
     </message>
     <message id="id-reboot-bootloader-page">
         <location filename="../src/qml/PowerPage.qml" line="33"/>
@@ -220,7 +220,7 @@
         <location filename="../src/qml/NightstandPage.qml" line="152"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation>Saat üzünü seçin</translation>
+        <translation>Saat ekranı seç</translation>
     </message>
 </context>
 <context>
@@ -228,7 +228,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="85"/>
         <source>Build ID</source>
-        <translation>ID Quraşdırma</translation>
+        <translation>Qurma ID</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="86"/>
@@ -308,7 +308,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Ümumi yaddaş</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
@@ -318,7 +318,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Boş yaddaş</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>

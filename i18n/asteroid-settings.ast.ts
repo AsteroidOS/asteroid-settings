@@ -146,7 +146,7 @@
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation>Axustes</translation>
+        <translation>Configuración</translation>
     </message>
 </context>
 </TS>

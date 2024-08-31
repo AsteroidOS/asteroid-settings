@@ -273,7 +273,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>%L1W x %L2H</source>
-        <translation>%L1W × %L2H</translation>
+        <translation>%L1 Š × %L2 V</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>

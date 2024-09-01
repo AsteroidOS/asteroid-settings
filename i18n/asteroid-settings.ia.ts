@@ -16,12 +16,12 @@
     <message id="id-connected">
         <location filename="../src/qml/BluetoothPage.qml" line="32"/>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Connectite</translation>
     </message>
     <message id="id-disconnected">
         <location filename="../src/qml/BluetoothPage.qml" line="34"/>
         <source>Not connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Disconnectite</translation>
     </message>
     <message id="id-sound-percentage">
         <location filename="../src/qml/SoundPage.qml" line="72"/>
@@ -52,7 +52,7 @@
     <message id="id-12h-format">
         <location filename="../src/qml/UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar formato de 12H:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../src/qml/UnitsPage.qml" line="57"/>
@@ -101,7 +101,7 @@
     <message id="id-always-on-display">
         <location filename="../src/qml/DisplayPage.qml" line="84"/>
         <source>Always on Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Schermo sempre active</translation>
     </message>
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="94"/>
@@ -238,7 +238,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="87"/>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nomine de hospite</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="88"/>
@@ -263,7 +263,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>

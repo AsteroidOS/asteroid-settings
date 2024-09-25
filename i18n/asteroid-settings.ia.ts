@@ -106,17 +106,17 @@
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="94"/>
         <source>Burn in protection</source>
-        <translation type="unfinished"></translation>
+        <translation>Protection contra ardituras</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="105"/>
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Inclinar pro activar</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="114"/>
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Toccar pro activar</translation>
     </message>
     <message id="id-timezone-page">
         <location filename="../src/qml/main.qml" line="134"/>
@@ -133,7 +133,7 @@
         <location filename="../src/qml/main.qml" line="79"/>
         <location filename="../src/qml/NightstandPage.qml" line="165"/>
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>Tabula de nocte</translation>
     </message>
     <message id="id-units-page">
         <location filename="../src/qml/main.qml" line="122"/>
@@ -171,7 +171,7 @@
     <message id="id-poweroff-page">
         <location filename="../src/qml/PowerPage.qml" line="29"/>
         <source>Power Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrestar</translation>
     </message>
     <message id="id-reboot-page">
         <location filename="../src/qml/PowerPage.qml" line="31"/>
@@ -209,7 +209,7 @@
         <location filename="../src/qml/NightstandPage.qml" line="115"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Retardo</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="141"/>
@@ -253,12 +253,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="90"/>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>Numero de serie</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>Total disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Spatio total in disco</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
@@ -268,12 +268,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>%L1 GB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>%L1W x %L2H</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1W x %L2H</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
@@ -298,7 +298,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargas de 1,5,15 minutas</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
@@ -308,7 +308,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Memoria total</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
@@ -318,17 +318,17 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Memoria libere</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>%L1 MB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>Available disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Spatio in disco disponibile</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>

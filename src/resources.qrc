@@ -14,6 +14,8 @@
         <file>qml/WallpaperPage.qml</file>
         <file>qml/WatchfacePage.qml</file>
         <file>qml/WatchfaceSelector.qml</file>
+        <file>qml/WiFiConnectionDialog.qml</file>
+        <file>qml/WiFiPage.qml</file>
         <file>qml/LauncherPage.qml</file>
         <file>qml/USBPage.qml</file>
         <file>qml/PowerPage.qml</file>

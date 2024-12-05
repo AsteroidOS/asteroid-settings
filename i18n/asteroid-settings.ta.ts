@@ -22,7 +22,7 @@
     <message id="id-sound-percentage">
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">ஒலியளவு %1%</translation>
+        <translation>தொகுதி</translation>
     </message>
     <message id="id-adb-mode">
         <source>ADB Mode</source>
@@ -74,7 +74,7 @@
     </message>
     <message id="id-usb-page">
         <source>USB</source>
-        <translation>USB</translation>
+        <translation>யூ.எச்.பி</translation>
     </message>
     <message id="id-poweroff-page">
         <source>Power Off</source>
@@ -118,42 +118,42 @@
     </message>
     <message id="id-burn-in-protection">
         <source>Burn in protection</source>
-        <translation type="unfinished"></translation>
+        <translation>பாதுகாப்பில் எரிக்கவும்</translation>
     </message>
     <message id="id-launcher-page">
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>துவக்கி</translation>
     </message>
     <message id="id-automatic-brightness">
         <source>Automatic brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>தானியங்கி ஒளி</translation>
     </message>
     <message id="id-nightstand-page">
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>நைட்ச்டாண்ட்</translation>
     </message>
     <message id="id-nightstand-enable">
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>இயக்கு</translation>
     </message>
     <message id="id-nightstand-brightness">
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation type="unfinished">பிரகாசம்</translation>
+        <translation>ஒளி</translation>
     </message>
     <message id="id-nightstand-delay">
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>சுணக்கம்</translation>
     </message>
     <message id="id-nightstand-watchface">
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>வாட்ச்ஃபேசைத் தேர்ந்தெடுக்கவும்</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>தனிப்பயன் கண்காணிப்பு</translation>
     </message>
     <message id="id-ssh-mode">
         <source>SSH Mode</source>
@@ -161,115 +161,115 @@
     </message>
     <message id="id-timezone-page">
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation>நேர மண்டலம்</translation>
     </message>
     <message id="id-power-page">
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation>விசை</translation>
     </message>
     <message id="id-reboot-bootloader-page">
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>துவக்க ஏற்றி</translation>
     </message>
 </context>
 <context>
     <name>AboutPage</name>
     <message>
         <source>Build ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ஐடியை உருவாக்குங்கள்</translation>
     </message>
     <message>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>குறியீட்டு பெயர்</translation>
     </message>
     <message>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>புரவலன் பெயர்</translation>
     </message>
     <message>
         <source>WLAN MAC</source>
-        <translation type="unfinished"></translation>
+        <translation>WLAN MAC</translation>
     </message>
     <message>
         <source>IMEI</source>
-        <translation type="unfinished"></translation>
+        <translation>IMEI</translation>
     </message>
     <message>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>வரிசை எண்</translation>
     </message>
     <message>
         <source>Total disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>மொத்த வட்டு இடம்</translation>
     </message>
     <message>
         <source>%L1</source>
-        <translation type="unfinished"></translation>
+        <translation>%எல் 1</translation>
     </message>
     <message>
         <source>Available disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>கிடைக்கும் வட்டு இடம்</translation>
     </message>
     <message>
         <source>Display size</source>
-        <translation type="unfinished"></translation>
+        <translation>காட்சி அளவு</translation>
     </message>
     <message>
         <source>Kernel version</source>
-        <translation type="unfinished"></translation>
+        <translation>கர்னல் பதிப்பு</translation>
     </message>
     <message>
         <source>Qt version</source>
-        <translation type="unfinished"></translation>
+        <translation>கியுடி பதிப்பு</translation>
     </message>
     <message>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%எல் 1 சிபி</translation>
     </message>
     <message>
         <source>%L1 GB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%எல் 1 சிபி ( %எல் 2 %)</translation>
     </message>
     <message>
         <source>%L1W x %L2H</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1W ஃச் %L2H</translation>
     </message>
     <message>
         <source>Uptime</source>
-        <translation type="unfinished"></translation>
+        <translation>விழித்திருந்நேரம்</translation>
     </message>
     <message>
         <source>%L1 days %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>%எல் 1 நாட்கள் %எல் 2</translation>
     </message>
     <message>
         <source>Threads</source>
-        <translation type="unfinished"></translation>
+        <translation>நூல்கள்</translation>
     </message>
     <message>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished"></translation>
+        <translation>1,5,15 நிமிட சுமைகள்</translation>
     </message>
     <message>
         <source>%L1, %L2, %L3</source>
-        <translation type="unfinished"></translation>
+        <translation>1, %இல்லை, %</translation>
     </message>
     <message>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>மொத்த நினைவகம்</translation>
     </message>
     <message>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%எல் 1 எம்பி</translation>
     </message>
     <message>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>இலவச நினைவகம்</translation>
     </message>
     <message>
         <source>%L1 MB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 mb ( %இல்லை %)</translation>
     </message>
 </context>
 </TS>

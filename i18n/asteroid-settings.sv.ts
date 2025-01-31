@@ -6,12 +6,12 @@
     <message id="id-bluetooth-on">
         <location filename="../src/qml/BluetoothPage.qml" line="28"/>
         <source>Bluetooth on</source>
-        <translation>Bluetooth på</translation>
+        <translation>Blåtand på</translation>
     </message>
     <message id="id-bluetooth-off">
         <location filename="../src/qml/BluetoothPage.qml" line="30"/>
         <source>Bluetooth off</source>
-        <translation>Bluetooth av</translation>
+        <translation>Blåtand av</translation>
     </message>
     <message id="id-connected">
         <location filename="../src/qml/BluetoothPage.qml" line="32"/>
@@ -101,7 +101,7 @@
     <message id="id-always-on-display">
         <location filename="../src/qml/DisplayPage.qml" line="84"/>
         <source>Always on Display</source>
-        <translation>Always on skärm</translation>
+        <translation>Allid på-skärm</translation>
     </message>
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="94"/>
@@ -149,12 +149,12 @@
     <message id="id-watchface-page">
         <location filename="../src/qml/main.qml" line="98"/>
         <source>Watchface</source>
-        <translation>Klockansikte</translation>
+        <translation>Urtavla</translation>
     </message>
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="104"/>
         <source>Launcher</source>
-        <translation>Startare</translation>
+        <translation>Appstartare</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="146"/>

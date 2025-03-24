@@ -101,7 +101,7 @@
     <message id="id-always-on-display">
         <location filename="../src/qml/DisplayPage.qml" line="84"/>
         <source>Always on Display</source>
-        <translation>Sempre en Pantalla</translation>
+        <translation>Pantalla sempre acesa</translation>
     </message>
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="94"/>
@@ -111,7 +111,7 @@
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="105"/>
         <source>Tilt-to-wake</source>
-        <translation>Inclinar-para-prender</translation>
+        <translation>Inclinar para prender</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="114"/>
@@ -214,7 +214,7 @@
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="141"/>
         <source>Custom watchface</source>
-        <translation>Esfera do reloxo persoalizable</translation>
+        <translation>Esfera do reloxo personalizable</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="152"/>
@@ -298,7 +298,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>1,5,15 Minute loads</source>
-        <translation>Cargas dende 1,5 o 15 minutos</translation>
+        <translation>Cargas de 1,5,15 minutos</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>

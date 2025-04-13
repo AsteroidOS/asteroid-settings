@@ -41,6 +41,7 @@ Application {
     Component { id: wallpaperLayer;             WallpaperPage  { } }
     Component { id: watchfaceLayer;             WatchfacePage  { } }
     Component { id: launcherLayer;              LauncherPage   { } }
+    Component { id: quicksettingsLayer;         QuickSettingsPage   { } }
     Component { id: usbLayer;                   USBPage        { } }
     Component { id: powerLayer;                 PowerPage      { } }
     Component { id: aboutLayer;                 AboutPage      { } }
@@ -104,6 +105,12 @@ Application {
                     title: qsTrId("id-launcher-page")
                     iconName: "ios-launcher-outline"
                     onClicked: layerStack.push(launcherLayer)
+                }
+                ListItem {
+                    //% "Quick Settings"
+                    title: qsTrId("id-quicksettings-page")
+                    iconName: "ios-launcher-outline"
+                    onClicked: layerStack.push(quicksettingsLayer)
                 }
                 ListItem {
                     //% "Time"

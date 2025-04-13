@@ -28,6 +28,7 @@ Application {
     centerColor: "#0044A6"
     outerColor: "#00010C"
 
+    Component { id: quickSettingsLayer;         QuickSettingsPage { } }
     Component { id: timeLayer;                  TimePage       { } }
     Component { id: dateLayer;                  DatePage       { } }
     Component { id: timezoneLayer;              TimezonePage   { } }
@@ -41,7 +42,6 @@ Application {
     Component { id: wallpaperLayer;             WallpaperPage  { } }
     Component { id: watchfaceLayer;             WatchfacePage  { } }
     Component { id: launcherLayer;              LauncherPage   { } }
-    Component { id: quicksettingsLayer;         QuickSettingsPage   { } }
     Component { id: usbLayer;                   USBPage        { } }
     Component { id: powerLayer;                 PowerPage      { } }
     Component { id: aboutLayer;                 AboutPage      { } }
@@ -110,7 +110,7 @@ Application {
                     //% "Quick Settings"
                     title: qsTrId("id-quicksettings-page")
                     iconName: "ios-launcher-outline"
-                    onClicked: layerStack.push(quicksettingsLayer)
+                    onClicked: layerStack.push(quickSettingsLayer)
                 }
                 ListItem {
                     //% "Time"

@@ -22,16 +22,17 @@ import Nemo.Configuration 1.0
 Item {
     id: settingsPage
 
-    // ConfigurationValue for slots
-    ConfigurationValue { id: topSlot1; key: "/desktop/asteroid/quicksettings/top/slot1"; defaultValue: "lockButton" }
-    ConfigurationValue { id: topSlot2; key: "/desktop/asteroid/quicksettings/top/slot2"; defaultValue: "settingsButton" }
-    ConfigurationValue { id: topSlot3; key: "/desktop/asteroid/quicksettings/top/slot3"; defaultValue: "" }
-    ConfigurationValue { id: mainSlot1; key: "/desktop/asteroid/quicksettings/main/slot1"; defaultValue: "brightnessToggle" }
-    ConfigurationValue { id: mainSlot2; key: "/desktop/asteroid/quicksettings/main/slot2"; defaultValue: "bluetoothToggle" }
-    ConfigurationValue { id: mainSlot3; key: "/desktop/asteroid/quicksettings/main/slot3"; defaultValue: "hapticsToggle" }
-    ConfigurationValue { id: mainSlot4; key: "/desktop/asteroid/quicksettings/main/slot4"; defaultValue: "wifiToggle" }
-    ConfigurationValue { id: mainSlot5; key: "/desktop/asteroid/quicksettings/main/slot5"; defaultValue: "soundToggle" }
-    ConfigurationValue { id: mainSlot6; key: "/desktop/asteroid/quicksettings/main/slot6"; defaultValue: "cinemaToggle" }
+    // ConfigurationValue for toggle arrays
+    ConfigurationValue {
+        id: topToggles
+        key: "/desktop/asteroid/quicksettings/top"
+        defaultValue: ["lockButton", "settingsButton", ""]
+    }
+    ConfigurationValue {
+        id: mainToggles
+        key: "/desktop/asteroid/quicksettings/main"
+        defaultValue: ["brightnessToggle", "bluetoothToggle", "hapticsToggle", "wifiToggle", "soundToggle", "cinemaToggle"]
+    }
 
     // Toggle definitions
     property var toggleOptions: [
@@ -56,6 +57,7 @@ Item {
     property string rowHeight: Dims.h(16)
     property int draggedItemIndex: -1  // The index of the item being dragged
     property int targetIndex: -1       // The target index where item will be dropped
+    property int topLength: topToggles.value.length // Number of top slots
 
     // Helper functions to replace Array.find
     function findToggle(toggleId) {
@@ -86,8 +88,7 @@ Item {
         for (var i = 0; i < slotModel.count; i++) {
             originalData.push({
                 toggleId: slotModel.get(i).toggleId,
-                listView: slotModel.get(i).listView,
-                slot: slotModel.get(i).slot
+                listView: slotModel.get(i).listView
             });
         }
     }
@@ -101,17 +102,14 @@ Item {
     ListModel {
         id: slotModel
         Component.onCompleted: {
-            append([
-                { toggleId: topSlot1.value, listView: "top", slot: topSlot1 },
-                { toggleId: topSlot2.value, listView: "top", slot: topSlot2 },
-                { toggleId: topSlot3.value, listView: "top", slot: topSlot3 },
-                { toggleId: mainSlot1.value, listView: "main", slot: mainSlot1 },
-                { toggleId: mainSlot2.value, listView: "main", slot: mainSlot2 },
-                { toggleId: mainSlot3.value, listView: "main", slot: mainSlot3 },
-                { toggleId: mainSlot4.value, listView: "main", slot: mainSlot4 },
-                { toggleId: mainSlot5.value, listView: "main", slot: mainSlot5 },
-                { toggleId: mainSlot6.value, listView: "main", slot: mainSlot6 }
-            ]);
+            // Populate from topToggles
+            for (var i = 0; i < topToggles.value.length; i++) {
+                append({ toggleId: topToggles.value[i], listView: "top" });
+            }
+            // Populate from mainToggles
+            for (var j = 0; j < mainToggles.value.length; j++) {
+                append({ toggleId: mainToggles.value[j], listView: "main" });
+            }
             storeOriginalData();
         }
     }
@@ -369,43 +367,48 @@ Item {
         }
     }
 
+    // Function to update configuration arrays
+    function updateConfiguration() {
+        var topArray = [];
+        var mainArray = [];
+        for (var i = 0; i < slotModel.count; i++) {
+            var item = slotModel.get(i);
+            if (i < topLength) {
+                topArray.push(item.toggleId);
+            } else {
+                mainArray.push(item.toggleId);
+            }
+        }
+        // Clear duplicates in top
+        for (i = 0; i < topArray.length; i++) {
+            var id = topArray[i];
+            if (id && topArray.indexOf(id, i + 1) !== -1) {
+                topArray[topArray.indexOf(id, i + 1)] = "";
+            }
+        }
+        // Clear duplicates in main
+        for (i = 0; i < mainArray.length; i++) {
+            var id = mainArray[i];
+            if (id && mainArray.indexOf(id, i + 1) !== -1) {
+                mainArray[mainArray.indexOf(id, i + 1)] = "";
+            }
+        }
+        // Update ConfigurationValue
+        topToggles.value = topArray;
+        mainToggles.value = mainArray;
+    }
+
     // Function to visually move items during drag
     function moveItems() {
         if (draggedItemIndex === -1 || targetIndex === -1 || draggedItemIndex === targetIndex) {
             return;
         }
 
-        // Move item in the model (for visual display and storage)
+        // Move item in the model
         slotModel.move(draggedItemIndex, targetIndex, 1);
 
-        // Update ConfigurationValue immediately
-        var slots = [topSlot1, topSlot2, topSlot3, mainSlot1, mainSlot2, mainSlot3, mainSlot4, mainSlot5, mainSlot6];
-        for (var i = 0; i < slotModel.count; i++) {
-            var item = slotModel.get(i);
-            slots[i].value = item.toggleId;
-        }
-
-        // Clear duplicates (keep first occurrence)
-        var topIds = [];
-        var mainIds = [];
-        for (i = 0; i < slotModel.count; i++) {
-            var id = slotModel.get(i).toggleId;
-            if (i < 3) {
-                if (id && topIds.includes(id)) {
-                    slotModel.setProperty(i, "toggleId", "");
-                    slots[i].value = "";
-                } else {
-                    topIds.push(id);
-                }
-            } else {
-                if (id && mainIds.includes(id)) {
-                    slotModel.setProperty(i, "toggleId", "");
-                    slots[i].value = "";
-                } else {
-                    mainIds.push(id);
-                }
-            }
-        }
+        // Update configuration
+        updateConfiguration();
 
         // Update draggedItemIndex to new position
         draggedItemIndex = targetIndex;

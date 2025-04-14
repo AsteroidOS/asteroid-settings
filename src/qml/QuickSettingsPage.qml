@@ -26,12 +26,26 @@ Item {
     ConfigurationValue {
         id: topToggles
         key: "/desktop/asteroid/quicksettings/top"
-        defaultValue: ["lockButton", "settingsButton", ""]
+        defaultValue: ["lockButton", "settingsButton"]
     }
     ConfigurationValue {
         id: mainToggles
         key: "/desktop/asteroid/quicksettings/main"
         defaultValue: ["brightnessToggle", "bluetoothToggle", "hapticsToggle", "wifiToggle", "soundToggle", "cinemaToggle"]
+    }
+    ConfigurationValue {
+        id: toggleEnabled
+        key: "/desktop/asteroid/quicksettings/enabled"
+        defaultValue: {
+            "lockButton": true,
+            "settingsButton": true,
+            "brightnessToggle": true,
+            "bluetoothToggle": true,
+            "hapticsToggle": true,
+            "wifiToggle": true,
+            "soundToggle": true,
+            "cinemaToggle": true
+        }
     }
 
     // Toggle definitions
@@ -56,8 +70,8 @@ Item {
 
     property string rowHeight: Dims.h(16)
     property int draggedItemIndex: -1  // The index of the item being dragged
-    property int targetIndex: -1       // The target index where item will be dropped
-    property int topLength: topToggles.value.length // Number of top slots
+    property int targetIndex: -1       // The index of the item will be dropped
+    property int topLength: 2 // Fixed to two top slots
 
     // Helper functions to replace Array.find
     function findToggle(toggleId) {
@@ -71,7 +85,6 @@ Item {
 
     function getToggleName(toggleId) {
         var toggle = findToggle(toggleId);
-        //% "empty"
         return toggle ? toggle.name : qsTrId("id-empty-slot");
     }
 
@@ -196,16 +209,16 @@ Item {
                 Rectangle {
                     id: slotRect
                     height: rowHeight - Dims.l(2)
-                    width: Dims.w(14) + (Dims.w(8) * 2) + labelMeasure.width // icon + doubled padding + label
+                    width: Dims.w(14) + (Dims.w(8) * 2) + labelMeasure.width // icon + padding + label
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.verticalCenter: parent.verticalCenter
                     color: "#222222"
-                    opacity: 0.4 // Only background
+                    opacity: toggleId && toggleEnabled.value[toggleId] ? 0.4 : 0.2 // Dim disabled
                     radius: height / 2 // Pill-shaped
                     visible: !isDragging
                 }
 
-                // Content above background
+                // Content for icon and label
                 Row {
                     anchors.centerIn: slotRect
                     spacing: Dims.w(2)
@@ -215,7 +228,7 @@ Item {
                         height: Dims.w(14)
                         radius: width / 2
                         color: "#222222"
-                        opacity: 0.7 // Toggled QuickSettingsToggle alpha
+                        opacity: toggleId && toggleEnabled.value[toggleId] ? 0.7 : 0.3 // Dim disabled
 
                         Icon {
                             id: toggleIcon
@@ -224,6 +237,7 @@ Item {
                             height: Dims.w(10)
                             anchors.centerIn: parent
                             color: "#ffffff"
+                            opacity: toggleId && toggleEnabled.value[toggleId] ? 1.0 : 0.5 // Dim disabled
                             visible: toggleId !== ""
                         }
                     }
@@ -231,7 +245,34 @@ Item {
                     Label {
                         text: getToggleName(toggleId)
                         font.pixelSize: Dims.l(8)
+                        color: "#ffffff"
+                        opacity: toggleId && toggleEnabled.value[toggleId] ? 1.0 : 0.5 // Dim disabled
                         anchors.verticalCenter: parent.verticalCenter
+                    }
+                }
+
+                // Checkmark positioned separately
+                Icon {
+                    id: checkmarkIcon
+                    width: Dims.w(14)
+                    height: Dims.w(14)
+                    name: toggleId && toggleEnabled.value[toggleId] ? "ios-checkmark-circle-outline" : "ios-circle-outline"
+                    color: toggleId && toggleEnabled.value[toggleId] ? "#ffffff" : "#888888"
+                    visible: toggleId !== "" // Hide for empty slots
+                    anchors {
+                        verticalCenter: slotRect.verticalCenter
+                        left: slotRect.right
+                        leftMargin: Dims.w(2)
+                    }
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            if (toggleId) {
+                                var newEnabled = Object.assign({}, toggleEnabled.value);
+                                newEnabled[toggleId] = !newEnabled[toggleId];
+                                toggleEnabled.value = newEnabled;
+                            }
+                        }
                     }
                 }
 
@@ -249,7 +290,8 @@ Item {
 
                 MouseArea {
                     id: dragArea
-                    anchors.fill: parent
+                    anchors.fill: slotRect // Cover only icon and label
+                    enabled: !isDragging
 
                     property point startPos: Qt.point(0, 0)
                     property bool dragging: false
@@ -266,7 +308,7 @@ Item {
                             // Position the drag proxy
                             dragProxy.x = slotRect.x;
                             dragProxy.y = delegateItem.mapToItem(slotList, 0, 0).y;
-                            dragProxy.width = slotRect.width;
+                            dragProxy.width = slotRect.width + Dims.w(14) + Dims.w(2);
                             dragProxy.height = slotRect.height;
                             dragProxy.text = getToggleName(toggleId);
                             dragProxy.icon = getToggleIcon(toggleId);
@@ -360,6 +402,19 @@ Item {
                         text: dragProxy.text
                         font.pixelSize: Dims.l(8)
                         color: "#ffffff"
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
+
+                    Item {
+                        width: Dims.w(14)
+                        height: Dims.w(14)
+                    }
+
+                    Icon {
+                        width: Dims.w(14)
+                        height: Dims.w(14)
+                        name: dragProxy.text === qsTrId("id-empty-slot") ? "ios-circle-outline" : (toggleEnabled.value[slotModel.get(draggedItemIndex).toggleId] ? "ios-checkmark-circle-outline" : "ios-circle-outline")
+                        color: dragProxy.text === qsTrId("id-empty-slot") ? "#888888" : (toggleEnabled.value[slotModel.get(draggedItemIndex).toggleId] ? "#ffffff" : "#888888")
                         anchors.verticalCenter: parent.verticalCenter
                     }
                 }

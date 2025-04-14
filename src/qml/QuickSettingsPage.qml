@@ -45,7 +45,7 @@ Item {
         { id: "cinemaToggle", name: qsTrId("id-toggle-cinema"), icon: "ios-film-outline" }
     ]
 
-    property string rowHeight: Dims.h(14)
+    property string rowHeight: Dims.h(16)
     property int draggedItemIndex: -1  // The index of the item being dragged
     property int targetIndex: -1       // The target index where item will be dropped
 
@@ -85,8 +85,8 @@ Item {
 
     PageHeader {
         id: title
-        //% "Quick Settings Order"
-        text: qsTrId("id-quicksettings-order")
+        //% "Quick Settings"
+        text: qsTrId("id-quicksettings")
     }
 
     ListModel {
@@ -110,12 +110,16 @@ Item {
     Column {
         anchors.fill: parent
 
-        Item { width: parent.width; height: Dims.l(25) }
+        Item { width: parent.width; height: Dims.l(20) }
 
         ListView {
             id: slotList
             width: parent.width
-            height: parent.height - title.height - Dims.l(25)
+            anchors {
+                top: parent.top
+                topMargin: Dims.l(20)
+                bottom: parent.bottom
+            }
             clip: true
             interactive: draggedItemIndex === -1 // Only allow scrolling when not dragging
             model: slotModel
@@ -162,7 +166,7 @@ Item {
             displaced: Transition {
                 NumberAnimation {
                     properties: "x,y"
-                    duration: 150
+                    duration: 120
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -174,60 +178,59 @@ Item {
                 property int visualIndex: index
                 property bool isDragging: index === draggedItemIndex
 
+                // Measure content width dynamically
+                Text {
+                    id: labelMeasure
+                    text: getToggleName(toggleId)
+                    font.pixelSize: Dims.l(8)
+                    visible: false // Hidden, used for sizing
+                }
+
                 Rectangle {
                     id: slotRect
-                    width: Dims.w(80)
-                    height: Dims.h(12)
+                    height: rowHeight - Dims.l(2)
+                    width: Dims.w(14) + (Dims.w(8) * 2) + labelMeasure.width // icon + doubled padding + label
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.verticalCenter: parent.verticalCenter
                     color: "#222222"
-                    radius: Dims.w(2)
-                    opacity: isDragging ? 0 : 1.0
+                    opacity: 0.4 // Only background
+                    radius: height / 2 // Pill-shaped
+                    visible: !isDragging
+                }
 
-                    // Visual highlight when item is target for drop
+                // Content above background
+                Row {
+                    anchors.centerIn: slotRect
+                    spacing: Dims.w(2)
+
                     Rectangle {
-                        anchors.fill: parent
-                        radius: parent.radius
-                        color: "#444444"
-                        opacity: (targetIndex === index && !isDragging) ? 0.5 : 0
-                        Behavior on opacity { NumberAnimation { duration: 150 } }
-                    }
+                        width: Dims.w(14)
+                        height: Dims.w(14)
+                        radius: width / 2
+                        color: "#222222"
+                        opacity: 0.7 // Toggled QuickSettingsToggle alpha
 
-                    Row {
-                        anchors.centerIn: parent
-                        spacing: Dims.w(4)
-
-                        Rectangle {
+                        Icon {
+                            id: toggleIcon
+                            name: getToggleIcon(toggleId)
                             width: Dims.w(10)
                             height: Dims.w(10)
-                            radius: width / 2
-                            color: "#222222"
-                            opacity: 0.95
-
-                            Icon {
-                                id: toggleIcon
-                                name: getToggleIcon(toggleId)
-                                width: Dims.w(8)
-                                height: Dims.w(8)
-                                anchors.centerIn: parent
-                                color: "#ffffff"
-                                opacity: 0.95
-                                visible: toggleId !== ""
-                            }
-                        }
-
-                        Label {
-                            text: getToggleName(toggleId)
-                            font.pixelSize: Dims.l(5)
+                            anchors.centerIn: parent
                             color: "#ffffff"
-                            anchors.verticalCenter: parent.verticalCenter
+                            visible: toggleId !== ""
                         }
+                    }
+
+                    Label {
+                        text: getToggleName(toggleId)
+                        font.pixelSize: Dims.l(8)
+                        anchors.verticalCenter: parent.verticalCenter
                     }
                 }
 
                 Timer {
                     id: longPressTimer
-                    interval: 500  // Hold for 500ms to start dragging
+                    interval: 400  // Hold for 400ms to start dragging
                     repeat: false
                     running: false
 
@@ -313,52 +316,42 @@ Item {
                 }
             }
 
-            // Visual separator between top and main slots
-            Rectangle {
-                width: parent.width
-                height: Dims.h(1)
-                color: "#444444"
-                y: rowHeight * 3
-                z: 1
-            }
-
             // Drag visual proxy (follows the finger)
             Rectangle {
                 id: dragProxy
                 visible: false
                 z: 10
-                color: "#333333"
-                radius: Dims.w(2)
-                width: Dims.w(80)
-                height: Dims.h(12)
+                color: "#AA222222"
+                border.width: Dims.l(1)
+                border.color: "#222222"
+                radius: height / 2
+                height: rowHeight
                 property string text: ""
                 property string icon: ""
 
                 Row {
                     anchors.centerIn: parent
-                    spacing: Dims.w(4)
+                    spacing: Dims.w(2)
 
                     Rectangle {
-                        width: Dims.w(10)
-                        height: Dims.w(10)
+                        width: Dims.w(14)
+                        height: Dims.w(14)
                         radius: width / 2
                         color: "#222222"
-                        opacity: 0.95
 
                         Icon {
                             name: dragProxy.icon
-                            width: Dims.w(8)
-                            height: Dims.w(8)
+                            width: Dims.w(10)
+                            height: Dims.w(10)
                             anchors.centerIn: parent
                             color: "#ffffff"
-                            opacity: 0.8
                             visible: dragProxy.icon !== ""
                         }
                     }
 
                     Label {
                         text: dragProxy.text
-                        font.pixelSize: Dims.l(5)
+                        font.pixelSize: Dims.l(8)
                         color: "#ffffff"
                         anchors.verticalCenter: parent.verticalCenter
                     }

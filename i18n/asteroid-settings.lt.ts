@@ -60,110 +60,117 @@
         <translation>Naudoti Fahrenheitą:</translation>
     </message>
     <message id="id-time-page">
-        <location filename="../src/qml/main.qml" line="110"/>
+        <location filename="../src/qml/main.qml" line="117"/>
         <location filename="../src/qml/TimePage.qml" line="109"/>
         <source>Time</source>
         <translation>Laikas</translation>
     </message>
     <message id="id-date-page">
         <location filename="../src/qml/DatePage.qml" line="97"/>
-        <location filename="../src/qml/main.qml" line="116"/>
+        <location filename="../src/qml/main.qml" line="123"/>
         <source>Date</source>
         <translation>Data</translation>
     </message>
     <message id="id-language-page">
         <location filename="../src/qml/LanguagePage.qml" line="64"/>
-        <location filename="../src/qml/main.qml" line="128"/>
+        <location filename="../src/qml/main.qml" line="135"/>
         <source>Language</source>
         <translation>Kalba</translation>
     </message>
     <message id="id-bluetooth-page">
-        <location filename="../src/qml/main.qml" line="140"/>
+        <location filename="../src/qml/main.qml" line="147"/>
         <source>Bluetooth</source>
         <translation>Bluetooth</translation>
     </message>
     <message id="id-display-page">
-        <location filename="../src/qml/DisplayPage.qml" line="123"/>
-        <location filename="../src/qml/main.qml" line="73"/>
+        <location filename="../src/qml/DisplayPage.qml" line="132"/>
+        <location filename="../src/qml/main.qml" line="74"/>
         <source>Display</source>
         <translation>Ekranas</translation>
     </message>
     <message id="id-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="55"/>
+        <location filename="../src/qml/DisplayPage.qml" line="61"/>
         <source>Brightness</source>
         <translation>Ryškumas</translation>
     </message>
     <message id="id-automatic-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="75"/>
+        <location filename="../src/qml/DisplayPage.qml" line="81"/>
         <source>Automatic brightness</source>
         <translation>Automatinis ryškumas</translation>
     </message>
     <message id="id-always-on-display">
-        <location filename="../src/qml/DisplayPage.qml" line="84"/>
+        <location filename="../src/qml/DisplayPage.qml" line="90"/>
+        <location filename="../src/qml/NightstandPage.qml" line="149"/>
         <source>Always on Display</source>
         <translation>Visada įjungtas ekranas</translation>
     </message>
     <message id="id-burn-in-protection">
-        <location filename="../src/qml/DisplayPage.qml" line="94"/>
+        <location filename="../src/qml/DisplayPage.qml" line="103"/>
         <source>Burn in protection</source>
         <translation>Apsauga nuo ekrano išdegimo</translation>
     </message>
     <message id="id-tilt-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="105"/>
+        <location filename="../src/qml/DisplayPage.qml" line="114"/>
         <source>Tilt-to-wake</source>
         <translation>Pakreipti, kad pabustų</translation>
     </message>
     <message id="id-tap-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="114"/>
+        <location filename="../src/qml/DisplayPage.qml" line="123"/>
         <source>Tap-to-wake</source>
         <translation>Paliesti, kas pabustų</translation>
     </message>
     <message id="id-timezone-page">
-        <location filename="../src/qml/main.qml" line="134"/>
+        <location filename="../src/qml/main.qml" line="141"/>
         <location filename="../src/qml/TimezonePage.qml" line="130"/>
         <source>Time zone</source>
         <translation>Laiko zona</translation>
     </message>
     <message id="id-sound-page">
-        <location filename="../src/qml/main.qml" line="85"/>
+        <location filename="../src/qml/main.qml" line="86"/>
         <source>Sound</source>
         <translation>Garsas</translation>
     </message>
     <message id="id-nightstand-page">
-        <location filename="../src/qml/main.qml" line="79"/>
-        <location filename="../src/qml/NightstandPage.qml" line="165"/>
+        <location filename="../src/qml/main.qml" line="80"/>
+        <location filename="../src/qml/NightstandPage.qml" line="188"/>
         <source>Nightstand</source>
         <translation>Naktinis staliukas</translation>
     </message>
     <message id="id-units-page">
-        <location filename="../src/qml/main.qml" line="122"/>
+        <location filename="../src/qml/main.qml" line="129"/>
         <location filename="../src/qml/UnitsPage.qml" line="65"/>
         <source>Units</source>
         <translation>Vienetai</translation>
     </message>
     <message id="id-wallpaper-page">
-        <location filename="../src/qml/main.qml" line="92"/>
+        <location filename="../src/qml/main.qml" line="93"/>
         <source>Wallpaper</source>
         <translation>Ekrano paveikslėlis</translation>
     </message>
     <message id="id-watchface-page">
-        <location filename="../src/qml/main.qml" line="98"/>
+        <location filename="../src/qml/main.qml" line="99"/>
         <source>Watchface</source>
         <translation>Laikrodžio ekrano dizainas</translation>
     </message>
     <message id="id-launcher-page">
-        <location filename="../src/qml/main.qml" line="104"/>
+        <location filename="../src/qml/main.qml" line="105"/>
         <source>Launcher</source>
         <translation>Paleidimo programa</translation>
     </message>
+    <message id="id-quicksettings-page">
+        <location filename="../src/qml/main.qml" line="111"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="98"/>
+        <source>Quick Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="id-usb-page">
-        <location filename="../src/qml/main.qml" line="146"/>
+        <location filename="../src/qml/main.qml" line="153"/>
         <location filename="../src/qml/USBPage.qml" line="85"/>
         <source>USB</source>
         <translation>USB</translation>
     </message>
     <message id="id-power-page">
-        <location filename="../src/qml/main.qml" line="152"/>
+        <location filename="../src/qml/main.qml" line="159"/>
         <location filename="../src/qml/PowerPage.qml" line="87"/>
         <source>Power</source>
         <translation>Baterija</translation>
@@ -185,7 +192,7 @@
         <translation>Įkroviklis</translation>
     </message>
     <message id="id-about-page">
-        <location filename="../src/qml/main.qml" line="158"/>
+        <location filename="../src/qml/main.qml" line="165"/>
         <source>About</source>
         <translation>Apie</translation>
     </message>
@@ -195,32 +202,77 @@
         <translation>Nustatymai</translation>
     </message>
     <message id="id-nightstand-enable">
-        <location filename="../src/qml/NightstandPage.qml" line="75"/>
+        <location filename="../src/qml/NightstandPage.qml" line="86"/>
         <source>Enable</source>
         <translation>Įjungti</translation>
     </message>
     <message id="id-nightstand-brightness">
-        <location filename="../src/qml/NightstandPage.qml" line="96"/>
+        <location filename="../src/qml/NightstandPage.qml" line="107"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
         <translation>Ryškumas</translation>
     </message>
     <message id="id-nightstand-delay">
-        <location filename="../src/qml/NightstandPage.qml" line="115"/>
+        <location filename="../src/qml/NightstandPage.qml" line="126"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
         <translation>Atidėjimas</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
-        <location filename="../src/qml/NightstandPage.qml" line="141"/>
+        <location filename="../src/qml/NightstandPage.qml" line="164"/>
         <source>Custom watchface</source>
         <translation>Tinkinamas laikrodžio ekrano dizainas</translation>
     </message>
     <message id="id-nightstand-watchface">
-        <location filename="../src/qml/NightstandPage.qml" line="152"/>
+        <location filename="../src/qml/NightstandPage.qml" line="175"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
         <translation>Pasirinkite laikrodžio ekrano dizainą</translation>
+    </message>
+    <message id="id-toggle-lock">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="39"/>
+        <source>Lock Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-settings">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="41"/>
+        <source>Settings Shortcut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-brightness">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="43"/>
+        <source>Brightness</source>
+        <translation type="unfinished">Ryškumas</translation>
+    </message>
+    <message id="id-toggle-bluetooth">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="45"/>
+        <source>Bluetooth</source>
+        <translation type="unfinished">Bluetooth</translation>
+    </message>
+    <message id="id-toggle-haptics">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="47"/>
+        <source>Vibration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-wifi">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="49"/>
+        <source>WiFi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-sound">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="51"/>
+        <source>Mute Sound</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-cinema">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="53"/>
+        <source>Cinema Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-empty-slot">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="73"/>
+        <source>empty</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

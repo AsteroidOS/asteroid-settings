@@ -35,13 +35,21 @@ Item {
 
     // Toggle definitions
     property var toggleOptions: [
+        //% "Lock Button"
         { id: "lockButton", name: qsTrId("id-toggle-lock"), icon: "ios-unlock" },
+        //% "Settings Shortcut"
         { id: "settingsButton", name: qsTrId("id-toggle-settings"), icon: "ios-settings" },
+        //% "Brightness"
         { id: "brightnessToggle", name: qsTrId("id-toggle-brightness"), icon: "ios-sunny" },
+        //% "Bluetooth"
         { id: "bluetoothToggle", name: qsTrId("id-toggle-bluetooth"), icon: "ios-bluetooth" },
+        //% "Vibration"
         { id: "hapticsToggle", name: qsTrId("id-toggle-haptics"), icon: "ios-watch-vibrating" },
+        //% "WiFi"
         { id: "wifiToggle", name: qsTrId("id-toggle-wifi"), icon: "ios-wifi-outline" },
+        //% "Mute Sound"
         { id: "soundToggle", name: qsTrId("id-toggle-sound"), icon: "ios-sound-indicator-high" },
+        //% "Cinema Mode"
         { id: "cinemaToggle", name: qsTrId("id-toggle-cinema"), icon: "ios-film-outline" }
     ]
 
@@ -61,6 +69,7 @@ Item {
 
     function getToggleName(toggleId) {
         var toggle = findToggle(toggleId);
+        //% "empty"
         return toggle ? toggle.name : qsTrId("id-empty-slot");
     }
 
@@ -86,7 +95,7 @@ Item {
     PageHeader {
         id: title
         //% "Quick Settings"
-        text: qsTrId("id-quicksettings")
+        text: qsTrId("id-quicksettings-page")
     }
 
     ListModel {

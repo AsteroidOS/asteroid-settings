@@ -172,6 +172,46 @@
         <oldsource>Reboot to bootloader</oldsource>
         <translation>Zavaděč systému</translation>
     </message>
+    <message id="id-quicksettings-page">
+        <source>Quick Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-lock">
+        <source>Lock Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-settings">
+        <source>Settings Shortcut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-brightness">
+        <source>Brightness</source>
+        <translation type="unfinished">Jas</translation>
+    </message>
+    <message id="id-toggle-bluetooth">
+        <source>Bluetooth</source>
+        <translation type="unfinished">Bluetooth</translation>
+    </message>
+    <message id="id-toggle-haptics">
+        <source>Vibration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-wifi">
+        <source>WiFi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-sound">
+        <source>Mute Sound</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-cinema">
+        <source>Cinema Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-empty-slot">
+        <source>empty</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AboutPage</name>

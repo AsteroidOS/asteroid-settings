@@ -109,7 +109,7 @@ Application {
                 ListItem {
                     //% "Quick Settings"
                     title: qsTrId("id-quicksettings-page")
-                    iconName: "ios-launcher-outline"
+                    iconName: "ios-quicksettings"
                     onClicked: layerStack.push(quickSettingsLayer)
                 }
                 ListItem {

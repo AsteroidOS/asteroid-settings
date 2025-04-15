@@ -182,11 +182,11 @@ Item {
                 }
             }
 
-            // Global function to animate position changes of ListView items
+            // Restore animation for displaced items
             displaced: Transition {
                 NumberAnimation {
-                    properties: "x,y"
-                    duration: 120
+                    properties: "y"
+                    duration: 200
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -198,71 +198,26 @@ Item {
                 property int visualIndex: index
                 property bool isDragging: index === draggedItemIndex
 
-                // Measure content width dynamically
-                Text {
-                    id: labelMeasure
-                    text: getToggleName(toggleId)
-                    font.pixelSize: Dims.l(8)
-                    visible: false // Hidden, used for sizing
-                }
-
+                // Invisible placeholder during drag
                 Rectangle {
-                    id: slotRect
-                    height: rowHeight - Dims.l(2)
-                    width: Dims.w(14) + (Dims.w(8) * 2) + labelMeasure.width // icon + padding + label
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    anchors.verticalCenter: parent.verticalCenter
-                    color: "#222222"
-                    opacity: toggleId && toggleEnabled.value[toggleId] ? 0.4 : 0.2 // Dim disabled
-                    radius: height / 2 // Pill-shaped
-                    visible: !isDragging
+                    width: parent.width
+                    height: rowHeight
+                    opacity: 0
+                    visible: isDragging
                 }
 
-                // Content for icon and label
-                Row {
-                    anchors.centerIn: slotRect
-                    spacing: Dims.w(2)
-
-                    Rectangle {
-                        width: Dims.w(14)
-                        height: Dims.w(14)
-                        radius: width / 2
-                        color: "#222222"
-                        opacity: toggleId && toggleEnabled.value[toggleId] ? 0.7 : 0.3 // Dim disabled
-
-                        Icon {
-                            id: toggleIcon
-                            name: getToggleIcon(toggleId)
-                            width: Dims.w(10)
-                            height: Dims.w(10)
-                            anchors.centerIn: parent
-                            color: "#ffffff"
-                            opacity: toggleId && toggleEnabled.value[toggleId] ? 1.0 : 0.5 // Dim disabled
-                            visible: toggleId !== ""
-                        }
-                    }
-
-                    Label {
-                        text: getToggleName(toggleId)
-                        font.pixelSize: Dims.l(8)
-                        color: "#ffffff"
-                        opacity: toggleId && toggleEnabled.value[toggleId] ? 1.0 : 0.5 // Dim disabled
-                        anchors.verticalCenter: parent.verticalCenter
-                    }
-                }
-
-                // Checkmark positioned separately
+                // Checkmark
                 Icon {
                     id: checkmarkIcon
                     width: Dims.w(14)
                     height: Dims.w(14)
                     name: toggleId && toggleEnabled.value[toggleId] ? "ios-checkmark-circle-outline" : "ios-circle-outline"
                     color: toggleId && toggleEnabled.value[toggleId] ? "#ffffff" : "#888888"
-                    visible: toggleId !== "" // Hide for empty slots
+                    visible: toggleId !== "" && !isDragging
                     anchors {
-                        verticalCenter: slotRect.verticalCenter
-                        left: slotRect.right
-                        leftMargin: Dims.w(2)
+                        verticalCenter: parent.verticalCenter
+                        left: parent.left
+                        leftMargin: Dims.l(10)
                     }
                     MouseArea {
                         anchors.fill: parent
@@ -276,21 +231,65 @@ Item {
                     }
                 }
 
+                // Icon
+                Rectangle {
+                    id: iconRectangle
+                    width: Dims.w(14)
+                    height: Dims.w(14)
+                    radius: width / 2
+                    color: "#222222"
+                    opacity: toggleId && toggleEnabled.value[toggleId] ? 0.7 : 0.3
+                    visible: !isDragging
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        left: checkmarkIcon.right
+                        leftMargin: Dims.l(2)
+                    }
+
+                    Icon {
+                        id: toggleIcon
+                        name: getToggleIcon(toggleId)
+                        width: Dims.w(10)
+                        height: Dims.w(10)
+                        anchors.centerIn: parent
+                        color: "#ffffff"
+                        opacity: toggleId && toggleEnabled.value[toggleId] ? 1.0 : 0.5
+                        visible: toggleId !== ""
+                    }
+                }
+
+                // Label
+                Label {
+                    text: getToggleName(toggleId)
+                    color: "#ffffff"
+                    opacity: toggleId && toggleEnabled.value[toggleId] ? 1.0 : 0.5
+                    visible: !isDragging
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        left: iconRectangle.right
+                        leftMargin: Dims.l(2)
+                    }
+                }
+
                 Timer {
                     id: longPressTimer
-                    interval: 400  // Hold for 400ms to start dragging
+                    interval: 400
                     repeat: false
                     running: false
 
                     onTriggered: {
-                        // Start drag after the timer expires
                         dragArea.startDrag();
                     }
                 }
 
                 MouseArea {
                     id: dragArea
-                    anchors.fill: slotRect // Cover only icon and label
+                    anchors {
+                        left: iconRectangle.left
+                        right: parent.right
+                        top: parent.top
+                        bottom: parent.bottom
+                    }
                     enabled: !isDragging
 
                     property point startPos: Qt.point(0, 0)
@@ -302,14 +301,11 @@ Item {
                             draggedItemIndex = index;
                             targetIndex = index;
 
-                            // Store original item positions for potential restoration
                             storeOriginalData();
 
-                            // Position the drag proxy
-                            dragProxy.x = slotRect.x;
+                            dragProxy.x = 0;
                             dragProxy.y = delegateItem.mapToItem(slotList, 0, 0).y;
-                            dragProxy.width = slotRect.width + Dims.w(14) + Dims.w(2);
-                            dragProxy.height = slotRect.height;
+                            dragProxy.height = rowHeight;
                             dragProxy.text = getToggleName(toggleId);
                             dragProxy.icon = getToggleIcon(toggleId);
                             dragProxy.visible = true;
@@ -323,11 +319,9 @@ Item {
 
                     onPositionChanged: {
                         if (dragging) {
-                            // Update position of drag proxy
                             var pos = mapToItem(slotList, mouse.x, mouse.y);
                             dragProxy.y = pos.y - dragProxy.height/2;
                         } else if (Math.abs(mouse.x - startPos.x) > 10 || Math.abs(mouse.y - startPos.y) > 10) {
-                            // If moved significantly without starting drag, cancel the long press timer
                             longPressTimer.stop();
                         }
                     }
@@ -338,7 +332,6 @@ Item {
                         if (dragging) {
                             dragging = false;
 
-                            // Finalize the move and update configuration
                             if (targetIndex !== -1 && draggedItemIndex !== targetIndex) {
                                 finalizeMove();
                             }
@@ -355,7 +348,6 @@ Item {
                             dragging = false;
                             dragProxy.visible = false;
 
-                            // Restore the original positions
                             restoreOriginalOrder();
 
                             draggedItemIndex = -1;
@@ -365,57 +357,61 @@ Item {
                 }
             }
 
-            // Drag visual proxy (follows the finger)
+            // Drag visual proxy
             Rectangle {
                 id: dragProxy
                 visible: false
                 z: 10
-                color: "#AA222222"
-                border.width: Dims.l(1)
-                border.color: "#222222"
-                radius: height / 2
+                width: parent.width
                 height: rowHeight
+                color: "#222222"
+                opacity: 0.7
                 property string text: ""
                 property string icon: ""
 
-                Row {
-                    anchors.centerIn: parent
-                    spacing: Dims.w(2)
-
-                    Rectangle {
-                        width: Dims.w(14)
-                        height: Dims.w(14)
-                        radius: width / 2
-                        color: "#222222"
-
-                        Icon {
-                            name: dragProxy.icon
-                            width: Dims.w(10)
-                            height: Dims.w(10)
-                            anchors.centerIn: parent
-                            color: "#ffffff"
-                            visible: dragProxy.icon !== ""
-                        }
+                Icon {
+                    id: dragCheckmark
+                    width: Dims.w(14)
+                    height: Dims.w(14)
+                    name: dragProxy.text === qsTrId("id-empty-slot") ? "ios-circle-outline" : (toggleEnabled.value[slotModel.get(draggedItemIndex).toggleId] ? "ios-checkmark-circle-outline" : "ios-circle-outline")
+                    color: dragProxy.text === qsTrId("id-empty-slot") ? "#888888" : (toggleEnabled.value[slotModel.get(draggedItemIndex).toggleId] ? "#ffffff" : "#888888")
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        left: parent.left
+                        leftMargin: Dims.l(10)
                     }
+                }
 
-                    Label {
-                        text: dragProxy.text
-                        font.pixelSize: Dims.l(8)
-                        color: "#ffffff"
-                        anchors.verticalCenter: parent.verticalCenter
-                    }
-
-                    Item {
-                        width: Dims.w(14)
-                        height: Dims.w(14)
+                Rectangle {
+                    id: dragIconRect
+                    width: Dims.w(14)
+                    height: Dims.w(14)
+                    radius: width / 2
+                    color: "#222222"
+                    opacity: 0.7
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        left: dragCheckmark.right
+                        leftMargin: Dims.l(2)
                     }
 
                     Icon {
-                        width: Dims.w(14)
-                        height: Dims.w(14)
-                        name: dragProxy.text === qsTrId("id-empty-slot") ? "ios-circle-outline" : (toggleEnabled.value[slotModel.get(draggedItemIndex).toggleId] ? "ios-checkmark-circle-outline" : "ios-circle-outline")
-                        color: dragProxy.text === qsTrId("id-empty-slot") ? "#888888" : (toggleEnabled.value[slotModel.get(draggedItemIndex).toggleId] ? "#ffffff" : "#888888")
-                        anchors.verticalCenter: parent.verticalCenter
+                        name: dragProxy.icon
+                        width: Dims.w(10)
+                        height: Dims.w(10)
+                        anchors.centerIn: parent
+                        color: "#ffffff"
+                        visible: dragProxy.icon !== ""
+                    }
+                }
+
+                Label {
+                    text: dragProxy.text
+                    color: "#ffffff"
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        left: dragIconRect.right
+                        leftMargin: Dims.l(2)
                     }
                 }
             }

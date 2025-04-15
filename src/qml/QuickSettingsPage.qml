@@ -69,6 +69,7 @@ Item {
     ]
 
     property string rowHeight: Dims.h(16)
+    property string labelHeight: rowHeight * 0.5
     property int draggedItemIndex: -1  // The index of the item being dragged
     property int targetIndex: -1       // The index of the item will be dropped
     property int topLength: 2 // Fixed to two top slots
@@ -99,9 +100,12 @@ Item {
     function storeOriginalData() {
         originalData = [];
         for (var i = 0; i < slotModel.count; i++) {
+            var item = slotModel.get(i);
             originalData.push({
-                toggleId: slotModel.get(i).toggleId,
-                listView: slotModel.get(i).listView
+                type: item.type,
+                toggleId: item.type === "toggle" ? item.toggleId : "",
+                listView: item.type === "toggle" ? item.listView : "",
+                labelText: item.type === "label" ? item.labelText : ""
             });
         }
     }
@@ -115,13 +119,56 @@ Item {
     ListModel {
         id: slotModel
         Component.onCompleted: {
-            // Populate from topToggles
-            for (var i = 0; i < topToggles.value.length; i++) {
-                append({ toggleId: topToggles.value[i], listView: "top" });
+            // Validate and reset topToggles
+            var validTop = topToggles.value && Array.isArray(topToggles.value) && topToggles.value.length > 0;
+            if (!validTop) {
+                topToggles.value = ["lockButton", "settingsButton"];
+            } else {
+                // Filter invalid IDs
+                var filteredTop = topToggles.value.filter(id => findToggle(id));
+                while (filteredTop.length < topLength) {
+                    filteredTop.push("");
+                }
+                topToggles.value = filteredTop.slice(0, topLength);
             }
-            // Populate from mainToggles
+
+            // Validate and reset mainToggles
+            var validMain = mainToggles.value && Array.isArray(mainToggles.value) && mainToggles.value.length > 0;
+            if (!validMain) {
+                mainToggles.value = ["brightnessToggle", "bluetoothToggle", "hapticsToggle", "wifiToggle", "soundToggle", "cinemaToggle"];
+            } else {
+                // Filter invalid IDs
+                var filteredMain = mainToggles.value.filter(id => findToggle(id));
+                if (filteredMain.length === 0) {
+                    filteredMain = mainToggles.defaultValue;
+                }
+                mainToggles.value = filteredMain;
+            }
+
+            // Validate and reset toggleEnabled
+            var validEnabled = toggleEnabled.value && typeof toggleEnabled.value === "object";
+            if (!validEnabled) {
+                toggleEnabled.value = toggleEnabled.defaultValue;
+            } else {
+                var newEnabled = Object.assign({}, toggleEnabled.defaultValue);
+                for (var id in newEnabled) {
+                    if (toggleEnabled.value.hasOwnProperty(id)) {
+                        newEnabled[id] = toggleEnabled.value[id];
+                    }
+                }
+                toggleEnabled.value = newEnabled;
+            }
+
+            // Populate model
+            //% "Fixed Row"
+            append({ type: "label", labelText: qsTrId("id-fixed-row"), toggleId: "", listView: "" });
+            for (var i = 0; i < topToggles.value.length; i++) {
+                append({ type: "toggle", toggleId: topToggles.value[i], listView: "top", labelText: "" });
+            }
+            //% "Sliding Row"
+            append({ type: "label", labelText: qsTrId("id-sliding-row"), toggleId: "", listView: "" });
             for (var j = 0; j < mainToggles.value.length; j++) {
-                append({ toggleId: mainToggles.value[j], listView: "main" });
+                append({ type: "toggle", toggleId: mainToggles.value[j], listView: "main", labelText: "" });
             }
             storeOriginalData();
         }
@@ -170,9 +217,12 @@ Item {
                             var item = slotList.itemAt(0, slotList.contentY + dragCenterY);
                             if (item) {
                                 var newTargetIndex = item.visualIndex;
+                                // Prevent dropping at index 0 (Fixed Row) or 3 (Sliding Row)
+                                if (newTargetIndex === 0 || newTargetIndex === 3) {
+                                    continue;
+                                }
                                 if (newTargetIndex !== targetIndex && newTargetIndex !== -1) {
                                     targetIndex = newTargetIndex;
-                                    // Move items in the UI
                                     moveItems();
                                 }
                                 break;
@@ -182,7 +232,7 @@ Item {
                 }
             }
 
-            // Restore animation for displaced items
+            // Animation for displaced items
             displaced: Transition {
                 NumberAnimation {
                     properties: "y"
@@ -194,16 +244,47 @@ Item {
             delegate: Item {
                 id: delegateItem
                 width: parent.width
-                height: rowHeight
+                height: type === "label" ? labelHeight : rowHeight
                 property int visualIndex: index
                 property bool isDragging: index === draggedItemIndex
 
-                // Invisible placeholder during drag
+                // Fake press highlight
+                Rectangle {
+                    id: pressHighlight
+                    width: parent.width
+                    height: rowHeight
+                    color: "#222222"
+                    opacity: 0
+                    visible: type === "toggle"
+                    z: -1
+
+                    Behavior on opacity {
+                        NumberAnimation {
+                            duration: 200
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
+                }
+
+                // Label delegate
+                Label {
+                    visible: type === "label"
+                    text: labelText
+                    color: "#ffffff"
+                    font.pixelSize: Dims.l(5)
+                    font.italic: true
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                        verticalCenter: parent.verticalCenter
+                    }
+                }
+
+                // Toggle delegate
                 Rectangle {
                     width: parent.width
                     height: rowHeight
                     opacity: 0
-                    visible: isDragging
+                    visible: isDragging && type === "toggle"
                 }
 
                 // Checkmark
@@ -213,7 +294,7 @@ Item {
                     height: Dims.w(14)
                     name: toggleId && toggleEnabled.value[toggleId] ? "ios-checkmark-circle-outline" : "ios-circle-outline"
                     color: toggleId && toggleEnabled.value[toggleId] ? "#ffffff" : "#888888"
-                    visible: toggleId !== "" && !isDragging
+                    visible: type === "toggle" && toggleId !== "" && !isDragging
                     anchors {
                         verticalCenter: parent.verticalCenter
                         left: parent.left
@@ -239,7 +320,7 @@ Item {
                     radius: width / 2
                     color: "#222222"
                     opacity: toggleId && toggleEnabled.value[toggleId] ? 0.7 : 0.3
-                    visible: !isDragging
+                    visible: type === "toggle" && !isDragging
                     anchors {
                         verticalCenter: parent.verticalCenter
                         left: checkmarkIcon.right
@@ -263,7 +344,7 @@ Item {
                     text: getToggleName(toggleId)
                     color: "#ffffff"
                     opacity: toggleId && toggleEnabled.value[toggleId] ? 1.0 : 0.5
-                    visible: !isDragging
+                    visible: type === "toggle" && !isDragging
                     anchors {
                         verticalCenter: parent.verticalCenter
                         left: iconRectangle.right
@@ -285,12 +366,12 @@ Item {
                 MouseArea {
                     id: dragArea
                     anchors {
-                        left: iconRectangle.left
+                        left: type === "toggle" ? iconRectangle.left : parent.left
                         right: parent.right
                         top: parent.top
                         bottom: parent.bottom
                     }
-                    enabled: !isDragging
+                    enabled: !isDragging && type === "toggle" // Disable for labels
 
                     property point startPos: Qt.point(0, 0)
                     property bool dragging: false
@@ -314,6 +395,7 @@ Item {
 
                     onPressed: {
                         startPos = Qt.point(mouse.x, mouse.y);
+                        pressHighlight.opacity = 0.2;
                         longPressTimer.start();
                     }
 
@@ -328,6 +410,7 @@ Item {
 
                     onReleased: {
                         longPressTimer.stop();
+                        pressHighlight.opacity = 0;
 
                         if (dragging) {
                             dragging = false;
@@ -344,6 +427,7 @@ Item {
 
                     onCanceled: {
                         longPressTimer.stop();
+                        pressHighlight.opacity = 0;
                         if (dragging) {
                             dragging = false;
                             dragProxy.visible = false;
@@ -365,7 +449,7 @@ Item {
                 width: parent.width
                 height: rowHeight
                 color: "#222222"
-                opacity: 0.7
+                opacity: 0.5
                 property string text: ""
                 property string icon: ""
 
@@ -424,11 +508,17 @@ Item {
         var mainArray = [];
         for (var i = 0; i < slotModel.count; i++) {
             var item = slotModel.get(i);
-            if (i < topLength) {
-                topArray.push(item.toggleId);
-            } else {
-                mainArray.push(item.toggleId);
+            if (item.type === "toggle") {
+                if (i >= 1 && i <= 2) {
+                    topArray.push(item.toggleId);
+                } else if (i >= 4) {
+                    mainArray.push(item.toggleId);
+                }
             }
+        }
+        // Pad topArray if needed
+        while (topArray.length < topLength) {
+            topArray.push("");
         }
         // Clear duplicates in top
         for (i = 0; i < topArray.length; i++) {
@@ -439,7 +529,7 @@ Item {
         }
         // Clear duplicates in main
         for (i = 0; i < mainArray.length; i++) {
-            var id = mainArray[i];
+            id = mainArray[i];
             if (id && mainArray.indexOf(id, i + 1) !== -1) {
                 mainArray[mainArray.indexOf(id, i + 1)] = "";
             }
@@ -447,6 +537,16 @@ Item {
         // Update ConfigurationValue
         topToggles.value = topArray;
         mainToggles.value = mainArray;
+    }
+
+    // Function to find Sliding Row index
+    function findSlidingRowIndex() {
+        for (var i = 0; i < slotModel.count; i++) {
+            if (slotModel.get(i).type === "label" && slotModel.get(i).labelText === qsTrId("id-sliding-row")) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     // Function to visually move items during drag
@@ -457,6 +557,12 @@ Item {
 
         // Move item in the model
         slotModel.move(draggedItemIndex, targetIndex, 1);
+
+        // Check and adjust Sliding Row position
+        var slidingRowIndex = findSlidingRowIndex();
+        if (slidingRowIndex !== 3) {
+            slotModel.move(slidingRowIndex, 3, 1);
+        }
 
         // Update configuration
         updateConfiguration();
@@ -470,7 +576,13 @@ Item {
 
     // Function to finalize the move
     function finalizeMove() {
-        // No additional storage needed; moveItems handles it
+        // Ensure Sliding Row is at index 3
+        var slidingRowIndex = findSlidingRowIndex();
+        if (slidingRowIndex !== 3) {
+            slotModel.move(slidingRowIndex, 3, 1);
+            updateConfiguration();
+            storeOriginalData();
+        }
     }
 
     // Function to restore original order if drag is cancelled

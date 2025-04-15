@@ -47,6 +47,11 @@ Item {
             "cinemaToggle": true
         }
     }
+    ConfigurationValue {
+        id: batteryBottom
+        key: "/desktop/asteroid/quicksettings/batteryBottom"
+        defaultValue: true
+    }
 
     // Toggle definitions
     property var toggleOptions: [
@@ -105,7 +110,7 @@ Item {
                 type: item.type,
                 toggleId: item.type === "toggle" ? item.toggleId : "",
                 listView: item.type === "toggle" ? item.listView : "",
-                labelText: item.type === "label" ? item.labelText : ""
+                labelText: item.type === "label" || item.type === "config" ? item.labelText : ""
             });
         }
     }
@@ -159,6 +164,11 @@ Item {
                 toggleEnabled.value = newEnabled;
             }
 
+            // Validate batteryBottom
+            if (typeof batteryBottom.value !== "boolean") {
+                batteryBottom.value = batteryBottom.defaultValue;
+            }
+
             // Populate model
             //% "Fixed Row"
             append({ type: "label", labelText: qsTrId("id-fixed-row"), toggleId: "", listView: "" });
@@ -170,6 +180,9 @@ Item {
             for (var j = 0; j < mainToggles.value.length; j++) {
                 append({ type: "toggle", toggleId: mainToggles.value[j], listView: "main", labelText: "" });
             }
+            append({ type: "spacer", labelText: "", toggleId: "", listView: "" });
+            //% "Battery Meter aligned to bottom?"
+            append({ type: "config", labelText: qsTrId("id-battery-bottom"), toggleId: "", listView: "" });
             storeOriginalData();
         }
     }
@@ -190,6 +203,12 @@ Item {
             clip: true
             interactive: draggedItemIndex === -1 // Only allow scrolling when not dragging
             model: slotModel
+
+            // Footer for bottom spacing
+            footer: Item {
+                width: parent.width
+                height: rowHeight * 1.5
+            }
 
             // Auto-scroll when dragging near edges
             Timer {
@@ -217,8 +236,9 @@ Item {
                             var item = slotList.itemAt(0, slotList.contentY + dragCenterY);
                             if (item) {
                                 var newTargetIndex = item.visualIndex;
-                                // Prevent dropping at index 0 (Fixed Row) or 3 (Sliding Row)
-                                if (newTargetIndex === 0 || newTargetIndex === 3) {
+                                // Prevent dropping at index 0, 3, count-2 (spacer), or count-1 (config)
+                                if (newTargetIndex === 0 || newTargetIndex === 3 ||
+                                    newTargetIndex === slotModel.count - 2 || newTargetIndex === slotModel.count - 1) {
                                     continue;
                                 }
                                 if (newTargetIndex !== targetIndex && newTargetIndex !== -1) {
@@ -260,13 +280,13 @@ Item {
 
                     Behavior on opacity {
                         NumberAnimation {
-                            duration: 200
+                            duration: 100
                             easing.type: Easing.InOutQuad
                         }
                     }
                 }
 
-                // Label delegate
+                // Label delegate (Fixed Row, Sliding Row)
                 Label {
                     visible: type === "label"
                     text: labelText
@@ -276,6 +296,54 @@ Item {
                     anchors {
                         horizontalCenter: parent.horizontalCenter
                         verticalCenter: parent.verticalCenter
+                    }
+                }
+
+                // Spacer delegate
+                Item {
+                    visible: type === "spacer"
+                    width: parent.width
+                    height: rowHeight
+                }
+
+                // Config delegate (Battery Bottom)
+                Item {
+                    visible: type === "config"
+                    width: parent.width
+                    height: rowHeight
+
+                    Text {
+                        id: configLabel
+                        text: labelText
+                        color: "#ffffff"
+                        font.pixelSize: Dims.l(8) // Matches toggle Label default
+                        wrapMode: Text.WordWrap
+                        anchors {
+                            left: parent.left
+                            leftMargin: Dims.l(10)
+                            right: configCheckmark.left
+                            rightMargin: Dims.l(10)
+                            verticalCenter: parent.verticalCenter
+                        }
+                    }
+
+                    Icon {
+                        id: configCheckmark
+                        width: Dims.w(14)
+                        height: Dims.w(14)
+                        name: batteryBottom.value ? "ios-checkmark-circle-outline" : "ios-circle-outline"
+                        color: batteryBottom.value ? "#ffffff" : "#888888"
+                        anchors {
+                            verticalCenter: parent.verticalCenter
+                            right: parent.right
+                            rightMargin: Dims.l(10)
+                        }
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                batteryBottom.value = !batteryBottom.value;
+                            }
+                        }
                     }
                 }
 
@@ -371,7 +439,7 @@ Item {
                         top: parent.top
                         bottom: parent.bottom
                     }
-                    enabled: !isDragging && type === "toggle" // Disable for labels
+                    enabled: !isDragging && type === "toggle" // Disable for labels/spacer/config
 
                     property point startPos: Qt.point(0, 0)
                     property bool dragging: false
@@ -506,7 +574,7 @@ Item {
     function updateConfiguration() {
         var topArray = [];
         var mainArray = [];
-        for (var i = 0; i < slotModel.count; i++) {
+        for (var i = 0; i < slotModel.count - 2; i++) { // Skip spacer and config
             var item = slotModel.get(i);
             if (item.type === "toggle") {
                 if (i >= 1 && i <= 2) {

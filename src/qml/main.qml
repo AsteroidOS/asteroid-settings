@@ -21,12 +21,19 @@ import QtQuick 2.9
 import org.asteroid.controls 1.0
 import org.asteroid.utils 1.0
 import org.asteroid.settings 1.0
+import Nemo.Configuration 1.0
 
 Application {
     id: app
 
     centerColor: "#0044A6"
     outerColor: "#00010C"
+
+    ConfigurationValue {
+        id: batteryBottom
+        key: "/desktop/asteroid/quicksettings/batteryBottom"
+        defaultValue: true
+    }
 
     Component { id: quickSettingsLayer;         QuickSettingsPage { } }
     Component { id: timeLayer;                  TimePage       { } }
@@ -109,7 +116,7 @@ Application {
                 ListItem {
                     //% "Quick Settings"
                     title: qsTrId("id-quicksettings-page")
-                    iconName: "ios-quicksettings"
+                    iconName: batteryBottom.value ? "ios-quicksettings-batterybottom" : "ios-quicksettings-batterytop"
                     onClicked: layerStack.push(quickSettingsLayer)
                 }
                 ListItem {

@@ -24,13 +24,13 @@ Item {
 
     // ConfigurationValue for toggle arrays
     ConfigurationValue {
-        id: topToggles
-        key: "/desktop/asteroid/quicksettings/top"
+        id: fixedToggles
+        key: "/desktop/asteroid/quicksettings/fixed"
         defaultValue: ["lockButton", "settingsButton"]
     }
     ConfigurationValue {
-        id: mainToggles
-        key: "/desktop/asteroid/quicksettings/main"
+        id: sliderToggles
+        key: "/desktop/asteroid/quicksettings/slider"
         defaultValue: ["brightnessToggle", "bluetoothToggle", "hapticsToggle", "wifiToggle", "soundToggle", "cinemaToggle"]
     }
     ConfigurationValue {
@@ -77,7 +77,7 @@ Item {
     property string labelHeight: rowHeight * 0.5
     property int draggedItemIndex: -1  // The index of the item being dragged
     property int targetIndex: -1       // The index of the item will be dropped
-    property int topLength: 2 // Fixed to two top slots
+    property int fixedRowLength: 2 // Fixed to two top slots
 
     // Helper functions to replace Array.find
     function findToggle(toggleId) {
@@ -91,7 +91,7 @@ Item {
 
     function getToggleName(toggleId) {
         var toggle = findToggle(toggleId);
-        return toggle ? toggle.name : qsTrId("id-empty-slot");
+        return toggle ? toggle.name : "";
     }
 
     function getToggleIcon(toggleId) {
@@ -115,39 +115,37 @@ Item {
         }
     }
 
-    PageHeader {
-        id: title
-        //% "Quick Settings"
-        text: qsTrId("id-quicksettings-page")
-    }
-
     ListModel {
         id: slotModel
         Component.onCompleted: {
-            // Validate and reset topToggles
-            var validTop = topToggles.value && Array.isArray(topToggles.value) && topToggles.value.length > 0;
-            if (!validTop) {
-                topToggles.value = ["lockButton", "settingsButton"];
+            // Validate and reset fixedToggles
+            var validFixed = fixedToggles.value && Array.isArray(fixedToggles.value) && fixedToggles.value.length >= fixedRowLength;
+            if (!validFixed) {
+                fixedToggles.value = ["lockButton", "settingsButton"];
             } else {
-                // Filter invalid IDs
-                var filteredTop = topToggles.value.filter(id => findToggle(id));
-                while (filteredTop.length < topLength) {
-                    filteredTop.push("");
+                // Filter invalid or empty IDs and ensure exactly fixedRowLength valid toggles
+                var filteredFixed = fixedToggles.value.filter(id => findToggle(id) && id !== "");
+                if (filteredFixed.length < fixedRowLength) {
+                    // Fill with defaults if not enough valid toggles
+                    var defaults = ["lockButton", "settingsButton"];
+                    for (var i = filteredFixed.length; i < fixedRowLength; i++) {
+                        filteredFixed.push(defaults[i]);
+                    }
                 }
-                topToggles.value = filteredTop.slice(0, topLength);
+                fixedToggles.value = filteredFixed.slice(0, fixedRowLength);
             }
 
-            // Validate and reset mainToggles
-            var validMain = mainToggles.value && Array.isArray(mainToggles.value) && mainToggles.value.length > 0;
-            if (!validMain) {
-                mainToggles.value = ["brightnessToggle", "bluetoothToggle", "hapticsToggle", "wifiToggle", "soundToggle", "cinemaToggle"];
+            // Validate and reset sliderToggles
+            var validSlider = sliderToggles.value && Array.isArray(sliderToggles.value) && sliderToggles.value.length > 0;
+            if (!validSlider) {
+                sliderToggles.value = ["brightnessToggle", "bluetoothToggle", "hapticsToggle", "wifiToggle", "soundToggle", "cinemaToggle"];
             } else {
-                // Filter invalid IDs
-                var filteredMain = mainToggles.value.filter(id => findToggle(id));
-                if (filteredMain.length === 0) {
-                    filteredMain = mainToggles.defaultValue;
+                // Filter invalid or empty IDs
+                var filteredSlider = sliderToggles.value.filter(id => findToggle(id) && id !== "");
+                if (filteredSlider.length === 0) {
+                    filteredSlider = sliderToggles.defaultValue;
                 }
-                mainToggles.value = filteredMain;
+                sliderToggles.value = filteredSlider;
             }
 
             // Validate and reset toggleEnabled
@@ -172,13 +170,17 @@ Item {
             // Populate model
             //% "Fixed Row"
             append({ type: "label", labelText: qsTrId("id-fixed-row"), toggleId: "", listView: "" });
-            for (var i = 0; i < topToggles.value.length; i++) {
-                append({ type: "toggle", toggleId: topToggles.value[i], listView: "top", labelText: "" });
+            for (var i = 0; i < fixedToggles.value.length; i++) {
+                if (fixedToggles.value[i]) {
+                    append({ type: "toggle", toggleId: fixedToggles.value[i], listView: "fixed", labelText: "" });
+                }
             }
             //% "Sliding Row"
             append({ type: "label", labelText: qsTrId("id-sliding-row"), toggleId: "", listView: "" });
-            for (var j = 0; j < mainToggles.value.length; j++) {
-                append({ type: "toggle", toggleId: mainToggles.value[j], listView: "main", labelText: "" });
+            for (var j = 0; j < sliderToggles.value.length; j++) {
+                if (sliderToggles.value[j]) {
+                    append({ type: "toggle", toggleId: sliderToggles.value[j], listView: "slider", labelText: "" });
+                }
             }
             append({ type: "spacer", labelText: "", toggleId: "", listView: "" });
             //% "Battery Meter aligned to bottom?"
@@ -187,424 +189,517 @@ Item {
         }
     }
 
-    Column {
-        anchors.fill: parent
+    ListView {
+        id: slotList
+        anchors {
+            top: parent.top
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
+        height: parent.height
+        clip: true
+        interactive: draggedItemIndex === -1
+        model: slotModel
 
-        Item { width: parent.width; height: Dims.l(20) }
-
-        ListView {
-            id: slotList
+        // Header to offset content below PageHeader
+        header: Item {
             width: parent.width
-            anchors {
-                top: parent.top
-                topMargin: Dims.l(20)
-                bottom: parent.bottom
+            height: title.height
+        }
+
+        // Footer for bottom spacing
+        footer: Item {
+            width: parent.width
+            height: rowHeight * 1.5
+        }
+
+        onContentYChanged: {
+            // If we're dragging but the item has disappeared during scroll
+            if (draggedItemIndex !== -1 && !slotList.itemAt(0, contentY + height/2)) {
+                abortDrag();
             }
-            clip: true
-            interactive: draggedItemIndex === -1 // Only allow scrolling when not dragging
-            model: slotModel
+        }
 
-            // Footer for bottom spacing
-            footer: Item {
-                width: parent.width
-                height: rowHeight * 1.5
+        onMovementStarted: {
+            if (draggedItemIndex !== -1) {
+                abortDrag();
             }
+        }
 
-            // Auto-scroll when dragging near edges
-            Timer {
-                id: scrollTimer
-                interval: 16
-                repeat: true
-                running: draggedItemIndex !== -1
+        // Auto-scroll when dragging near edges
+        Timer {
+            id: scrollTimer
+            interval: 16
+            repeat: true
+            running: draggedItemIndex !== -1
 
-                onTriggered: {
-                    if (dragProxy.y < slotList.height * 0.2) {
-                        // Scroll up
-                        slotList.contentY = Math.max(0, slotList.contentY - 5);
-                    } else if (dragProxy.y > slotList.height * 0.8) {
-                        // Scroll down
-                        slotList.contentY = Math.min(
-                            slotList.contentHeight - slotList.height,
-                            slotList.contentY + 5
-                        );
+            onTriggered: {
+                // First ensure we have a valid state
+                if (draggedItemIndex === -1 || !dragProxy || draggedItemIndex >= slotModel.count) {
+                    running = false;
+                    return;
+                }
+
+                // Auto-scroll with improved bounds checking
+                if (safeGet(dragProxy, "y", 0) < slotList.height * 0.2) {
+                    // Scroll up with boundary check
+                    var newContentY = Math.max(0, slotList.contentY - 5);
+                    if (slotList.contentY !== newContentY) {
+                        slotList.contentY = newContentY;
                     }
+                } else if (safeGet(dragProxy, "y", 0) > slotList.height * 0.8) {
+                    // Scroll down with boundary check
+                    var maxScroll = Math.max(0, slotList.contentHeight - slotList.height);
+                    newContentY = Math.min(maxScroll, slotList.contentY + 5);
+                    if (slotList.contentY !== newContentY) {
+                        slotList.contentY = newContentY;
+                    }
+                }
 
-                    // Continuously check which item is under the drag proxy
-                    if (draggedItemIndex !== -1) {
-                        var dragCenterY = dragProxy.y + dragProxy.height / 2;
-                        for (var i = 0; i < slotList.count; i++) {
-                            var item = slotList.itemAt(0, slotList.contentY + dragCenterY);
-                            if (item) {
-                                var newTargetIndex = item.visualIndex;
-                                // Prevent dropping at index 0, 3, count-2 (spacer), or count-1 (config)
-                                if (newTargetIndex === 0 || newTargetIndex === 3 ||
-                                    newTargetIndex === slotModel.count - 2 || newTargetIndex === slotModel.count - 1) {
-                                    continue;
-                                }
-                                if (newTargetIndex !== targetIndex && newTargetIndex !== -1) {
-                                    targetIndex = newTargetIndex;
-                                    moveItems();
-                                }
-                                break;
-                            }
+                // Only process target detection if dragging is active
+                if (draggedItemIndex === -1) return;
+
+                // Calculate position with safe access
+                var dragCenterY = safeGet(dragProxy, "y", 0) + safeGet(dragProxy, "height", rowHeight) / 2;
+                var adjustedY = slotList.contentY + dragCenterY;
+
+                // Skip if outside content bounds
+                if (adjustedY < 0 || adjustedY >= slotList.contentHeight) {
+                    return;
+                }
+
+                // Estimate valid item bounds (first and last delegate)
+                var firstItemY = slotList.contentY;
+                var lastItemIndex = slotModel.count - 1;
+                var lastItemY = lastItemIndex * rowHeight;
+                if (slotModel.get(lastItemIndex).type === "label") {
+                    lastItemY -= (rowHeight - labelHeight);
+                }
+                lastItemY += slotList.contentY;
+
+                // Skip if adjustedY is not within actual item bounds
+                if (adjustedY < firstItemY || adjustedY > lastItemY) {
+                    return;
+                }
+
+                try {
+                    var item = slotList.itemAt(0, adjustedY);
+                    if (item && item.visualIndex !== undefined) {
+                        var newTargetIndex = item.visualIndex;
+
+                        // Prevent dropping at index 0, 3, count-2 (spacer), or count-1 (config)
+                        if (newTargetIndex === 0 || newTargetIndex === 3 ||
+                            newTargetIndex === slotModel.count - 2 || newTargetIndex === slotModel.count - 1) {
+                            return;
+                        }
+
+                        if (newTargetIndex !== targetIndex && newTargetIndex !== -1) {
+                            targetIndex = newTargetIndex;
+                            moveItems();
                         }
                     }
+                } catch (e) {
+                    console.log("Error while detecting drag target:", e);
+                    abortDrag();
                 }
             }
+        }
 
-            // Animation for displaced items
-            displaced: Transition {
-                NumberAnimation {
-                    properties: "y"
-                    duration: 200
-                    easing.type: Easing.InOutQuad
-                }
+        // Animation for displaced items
+        displaced: Transition {
+            NumberAnimation {
+                properties: "y"
+                duration: 200
+                easing.type: Easing.InOutQuad
             }
+        }
 
-            delegate: Item {
-                id: delegateItem
+        delegate: Item {
+            id: delegateItem
+            width: parent.width
+            height: type === "label" ? labelHeight : rowHeight
+            property int visualIndex: index
+            property bool isDragging: index === draggedItemIndex
+
+            // Fake press highlight
+            Rectangle {
+                id: pressHighlight
                 width: parent.width
-                height: type === "label" ? labelHeight : rowHeight
-                property int visualIndex: index
-                property bool isDragging: index === draggedItemIndex
+                height: rowHeight
+                color: "#222222"
+                opacity: 0
+                visible: type === "toggle"
+                z: -1
 
-                // Fake press highlight
-                Rectangle {
-                    id: pressHighlight
-                    width: parent.width
-                    height: rowHeight
-                    color: "#222222"
-                    opacity: 0
-                    visible: type === "toggle"
-                    z: -1
-
-                    Behavior on opacity {
-                        NumberAnimation {
-                            duration: 100
-                            easing.type: Easing.InOutQuad
-                        }
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: 100
+                        easing.type: Easing.InOutQuad
                     }
                 }
+            }
 
-                // Label delegate (Fixed Row, Sliding Row)
-                Label {
-                    visible: type === "label"
+            // Label delegate (Fixed Row, Sliding Row)
+            Label {
+                visible: type === "label"
+                text: labelText
+                color: "#ffffff"
+                font.pixelSize: Dims.l(5)
+                font.italic: true
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    verticalCenter: parent.verticalCenter
+                }
+            }
+
+            // Spacer delegate
+            Item {
+                visible: type === "spacer"
+                width: parent.width
+                height: rowHeight
+            }
+
+            // Config delegate (Battery Bottom)
+            Item {
+                visible: type === "config"
+                width: parent.width
+                height: rowHeight
+
+                Text {
+                    id: configLabel
                     text: labelText
                     color: "#ffffff"
-                    font.pixelSize: Dims.l(5)
-                    font.italic: true
+                    font.pixelSize: Dims.l(8) // Matches toggle Label default
+                    wrapMode: Text.WordWrap
                     anchors {
-                        horizontalCenter: parent.horizontalCenter
-                        verticalCenter: parent.verticalCenter
-                    }
-                }
-
-                // Spacer delegate
-                Item {
-                    visible: type === "spacer"
-                    width: parent.width
-                    height: rowHeight
-                }
-
-                // Config delegate (Battery Bottom)
-                Item {
-                    visible: type === "config"
-                    width: parent.width
-                    height: rowHeight
-
-                    Text {
-                        id: configLabel
-                        text: labelText
-                        color: "#ffffff"
-                        font.pixelSize: Dims.l(8) // Matches toggle Label default
-                        wrapMode: Text.WordWrap
-                        anchors {
-                            left: parent.left
-                            leftMargin: Dims.l(10)
-                            right: configCheckmark.left
-                            rightMargin: Dims.l(10)
-                            verticalCenter: parent.verticalCenter
-                        }
-                    }
-
-                    Icon {
-                        id: configCheckmark
-                        width: Dims.w(14)
-                        height: Dims.w(14)
-                        name: batteryBottom.value ? "ios-checkmark-circle-outline" : "ios-circle-outline"
-                        color: batteryBottom.value ? "#ffffff" : "#888888"
-                        anchors {
-                            verticalCenter: parent.verticalCenter
-                            right: parent.right
-                            rightMargin: Dims.l(10)
-                        }
-                        MouseArea {
-                            anchors.fill: parent
-                            onClicked: {
-                                batteryBottom.value = !batteryBottom.value;
-                            }
-                        }
-                    }
-                }
-
-                // Toggle delegate
-                Rectangle {
-                    width: parent.width
-                    height: rowHeight
-                    opacity: 0
-                    visible: isDragging && type === "toggle"
-                }
-
-                // Checkmark
-                Icon {
-                    id: checkmarkIcon
-                    width: Dims.w(14)
-                    height: Dims.w(14)
-                    name: toggleId && toggleEnabled.value[toggleId] ? "ios-checkmark-circle-outline" : "ios-circle-outline"
-                    color: toggleId && toggleEnabled.value[toggleId] ? "#ffffff" : "#888888"
-                    visible: type === "toggle" && toggleId !== "" && !isDragging
-                    anchors {
-                        verticalCenter: parent.verticalCenter
                         left: parent.left
                         leftMargin: Dims.l(10)
+                        right: configCheckmark.left
+                        rightMargin: Dims.l(10)
+                        verticalCenter: parent.verticalCenter
+                    }
+                }
+
+                Icon {
+                    id: configCheckmark
+                    width: Dims.w(14)
+                    height: Dims.w(14)
+                    name: batteryBottom.value ? "ios-checkmark-circle-outline" : "ios-circle-outline"
+                    color: batteryBottom.value ? "#ffffff" : "#888888"
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        right: parent.right
+                        rightMargin: Dims.l(10)
                     }
                     MouseArea {
                         anchors.fill: parent
                         onClicked: {
-                            if (toggleId) {
-                                var newEnabled = Object.assign({}, toggleEnabled.value);
-                                newEnabled[toggleId] = !newEnabled[toggleId];
-                                toggleEnabled.value = newEnabled;
-                            }
+                            batteryBottom.value = !batteryBottom.value;
                         }
                     }
                 }
+            }
 
-                // Icon
-                Rectangle {
-                    id: iconRectangle
-                    width: Dims.w(14)
-                    height: Dims.w(14)
-                    radius: width / 2
-                    color: "#222222"
-                    opacity: toggleId && toggleEnabled.value[toggleId] ? 0.7 : 0.3
-                    visible: type === "toggle" && !isDragging
-                    anchors {
-                        verticalCenter: parent.verticalCenter
-                        left: checkmarkIcon.right
-                        leftMargin: Dims.l(2)
-                    }
+            // Toggle delegate
+            Rectangle {
+                width: parent.width
+                height: rowHeight
+                opacity: 0
+                visible: isDragging && type === "toggle"
+            }
 
-                    Icon {
-                        id: toggleIcon
-                        name: getToggleIcon(toggleId)
-                        width: Dims.w(10)
-                        height: Dims.w(10)
-                        anchors.centerIn: parent
-                        color: "#ffffff"
-                        opacity: toggleId && toggleEnabled.value[toggleId] ? 1.0 : 0.5
-                        visible: toggleId !== ""
+            // Checkmark
+            Icon {
+                id: checkmarkIcon
+                width: Dims.w(14)
+                height: Dims.w(14)
+                name: toggleId && toggleEnabled.value[toggleId] ? "ios-checkmark-circle-outline" : "ios-circle-outline"
+                color: toggleId && toggleEnabled.value[toggleId] ? "#ffffff" : "#888888"
+                visible: type === "toggle" && toggleId !== "" && !isDragging
+                anchors {
+                    verticalCenter: parent.verticalCenter
+                    left: parent.left
+                    leftMargin: Dims.l(10)
+                }
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        if (toggleId) {
+                            var newEnabled = Object.assign({}, toggleEnabled.value);
+                            newEnabled[toggleId] = !newEnabled[toggleId];
+                            toggleEnabled.value = newEnabled;
+                        }
                     }
                 }
+            }
 
-                // Label
-                Label {
-                    text: getToggleName(toggleId)
+            // Icon
+            Rectangle {
+                id: iconRectangle
+                width: Dims.w(14)
+                height: Dims.w(14)
+                radius: width / 2
+                color: "#222222"
+                opacity: toggleId && toggleEnabled.value[toggleId] ? 0.7 : 0.3
+                visible: type === "toggle" && !isDragging
+                anchors {
+                    verticalCenter: parent.verticalCenter
+                    left: checkmarkIcon.right
+                    leftMargin: Dims.l(2)
+                }
+
+                Icon {
+                    id: toggleIcon
+                    name: getToggleIcon(toggleId)
+                    width: Dims.w(10)
+                    height: Dims.w(10)
+                    anchors.centerIn: parent
                     color: "#ffffff"
                     opacity: toggleId && toggleEnabled.value[toggleId] ? 1.0 : 0.5
-                    visible: type === "toggle" && !isDragging
-                    anchors {
-                        verticalCenter: parent.verticalCenter
-                        left: iconRectangle.right
-                        leftMargin: Dims.l(2)
-                    }
+                    visible: toggleId !== ""
                 }
+            }
 
-                Timer {
-                    id: longPressTimer
-                    interval: 400
-                    repeat: false
-                    running: false
-
-                    onTriggered: {
-                        dragArea.startDrag();
-                    }
+            // Label
+            Label {
+                text: getToggleName(toggleId)
+                color: "#ffffff"
+                opacity: toggleId && toggleEnabled.value[toggleId] ? 1.0 : 0.5
+                visible: type === "toggle" && !isDragging
+                anchors {
+                    verticalCenter: parent.verticalCenter
+                    left: iconRectangle.right
+                    leftMargin: Dims.l(2)
                 }
+            }
 
-                MouseArea {
-                    id: dragArea
-                    anchors {
-                        left: type === "toggle" ? iconRectangle.left : parent.left
-                        right: parent.right
-                        top: parent.top
-                        bottom: parent.bottom
-                    }
-                    enabled: !isDragging && type === "toggle" // Disable for labels/spacer/config
+            Timer {
+                id: longPressTimer
+                interval: 400
+                repeat: false
+                running: false
 
-                    property point startPos: Qt.point(0, 0)
-                    property bool dragging: false
+                onTriggered: {
+                    dragArea.startDrag();
+                }
+            }
 
-                    function startDrag() {
-                        if (!dragging) {
+            MouseArea {
+                id: dragArea
+                anchors {
+                    left: type === "toggle" ? iconRectangle.left : parent.left
+                    right: parent.right
+                    top: parent.top
+                    bottom: parent.bottom
+                }
+                enabled: !isDragging && type === "toggle" // Disable for labels/spacer/config
+
+                property point startPos: Qt.point(0, 0)
+                property bool dragging: false
+
+                function startDrag() {
+                    if (!dragging && slotList) {
+                        try {
                             dragging = true;
                             draggedItemIndex = index;
                             targetIndex = index;
 
                             storeOriginalData();
 
-                            dragProxy.x = 0;
-                            dragProxy.y = delegateItem.mapToItem(slotList, 0, 0).y;
-                            dragProxy.height = rowHeight;
-                            dragProxy.text = getToggleName(toggleId);
-                            dragProxy.icon = getToggleIcon(toggleId);
-                            dragProxy.visible = true;
-                        }
-                    }
-
-                    onPressed: {
-                        startPos = Qt.point(mouse.x, mouse.y);
-                        pressHighlight.opacity = 0.2;
-                        longPressTimer.start();
-                    }
-
-                    onPositionChanged: {
-                        if (dragging) {
-                            var pos = mapToItem(slotList, mouse.x, mouse.y);
-                            dragProxy.y = pos.y - dragProxy.height/2;
-                        } else if (Math.abs(mouse.x - startPos.x) > 10 || Math.abs(mouse.y - startPos.y) > 10) {
-                            longPressTimer.stop();
-                        }
-                    }
-
-                    onReleased: {
-                        longPressTimer.stop();
-                        pressHighlight.opacity = 0;
-
-                        if (dragging) {
-                            dragging = false;
-
-                            if (targetIndex !== -1 && draggedItemIndex !== targetIndex) {
-                                finalizeMove();
+                            // Make sure delegateItem exists and is visible
+                            if (delegateItem && delegateItem.visible) {
+                                var mapPos = delegateItem.mapToItem(slotList, 0, 0);
+                                if (mapPos) {
+                                    dragProxy.x = 0;
+                                    dragProxy.y = mapPos.y;
+                                    dragProxy.height = rowHeight;
+                                    dragProxy.text = getToggleName(toggleId);
+                                    dragProxy.icon = getToggleIcon(toggleId);
+                                    dragProxy.visible = true;
+                                } else {
+                                    throw new Error("Invalid mapping position");
+                                }
+                            } else {
+                                throw new Error("Delegate item not available for drag");
                             }
-
-                            dragProxy.visible = false;
+                        } catch (e) {
+                            console.log("Error starting drag:", e);
+                            dragging = false;
                             draggedItemIndex = -1;
-                            targetIndex = -1;
+                            abortDrag();
                         }
                     }
+                }
 
-                    onCanceled: {
-                        longPressTimer.stop();
-                        pressHighlight.opacity = 0;
-                        if (dragging) {
+                onPressed: {
+                    startPos = Qt.point(mouse.x, mouse.y);
+                    pressHighlight.opacity = 0.2;
+                    longPressTimer.start();
+                }
+
+                onPositionChanged: {
+                    if (dragging && slotList) {
+                        try {
+                            var pos = mapToItem(slotList, mouse.x, mouse.y);
+                            if (pos && dragProxy && dragProxy.visible) {
+                                dragProxy.y = pos.y - (safeGet(dragProxy, "height", rowHeight) / 2);
+                            }
+                        } catch (e) {
+                            console.log("Error during drag:", e);
                             dragging = false;
-                            dragProxy.visible = false;
-
-                            restoreOriginalOrder();
-
-                            draggedItemIndex = -1;
-                            targetIndex = -1;
+                            longPressTimer.stop();
+                            abortDrag();
                         }
+                    } else if (Math.abs(mouse.x - startPos.x) > 10 || Math.abs(mouse.y - startPos.y) > 10) {
+                        longPressTimer.stop();
+                    }
+                }
+
+                onReleased: {
+                    longPressTimer.stop();
+                    pressHighlight.opacity = 0;
+
+                    if (dragging) {
+                        dragging = false;
+
+                        if (targetIndex !== -1 && draggedItemIndex !== targetIndex) {
+                            finalizeMove();
+                        }
+
+                        draggedItemIndex = -1;
+                        targetIndex = -1;
+                        dragProxy.visible = false;
+                    }
+                }
+
+                onCanceled: {
+                    longPressTimer.stop();
+                    pressHighlight.opacity = 0;
+                    if (dragging) {
+                        dragging = false;
+                        restoreOriginalOrder();
+                        draggedItemIndex = -1;
+                        targetIndex = -1;
+                        dragProxy.visible = false;
                     }
                 }
             }
+        }
 
-            // Drag visual proxy
+        // Drag visual proxy
+        Rectangle {
+            id: dragProxy
+            visible: false
+            z: 10
+            width: parent ? parent.width : 0
+            height: rowHeight
+            color: "#222222"
+            opacity: 0.5
+            property string text: ""
+            property string icon: ""
+
+            Icon {
+                id: dragCheckmark
+                width: Dims.w(14)
+                height: Dims.w(14)
+                name: draggedItemIndex >= 0 &&
+                    draggedItemIndex < slotModel.count &&
+                    slotModel.get(draggedItemIndex) &&
+                    slotModel.get(draggedItemIndex).toggleId &&
+                    toggleEnabled.value[slotModel.get(draggedItemIndex).toggleId]
+                    ? "ios-checkmark-circle-outline" : "ios-circle-outline"
+                color: draggedItemIndex >= 0 &&
+                    draggedItemIndex < slotModel.count &&
+                    slotModel.get(draggedItemIndex) &&
+                    slotModel.get(draggedItemIndex).toggleId &&
+                    toggleEnabled.value[slotModel.get(draggedItemIndex).toggleId]
+                    ? "#ffffff" : "#888888"
+                anchors {
+                    verticalCenter: parent.verticalCenter
+                    left: parent.left
+                    leftMargin: Dims.l(10)
+                }
+            }
+
             Rectangle {
-                id: dragProxy
-                visible: false
-                z: 10
-                width: parent.width
-                height: rowHeight
+                id: dragIconRect
+                width: Dims.w(14)
+                height: Dims.w(14)
+                radius: width / 2
                 color: "#222222"
-                opacity: 0.5
-                property string text: ""
-                property string icon: ""
+                opacity: 0.7
+                anchors {
+                    verticalCenter: parent.verticalCenter
+                    left: dragCheckmark.right
+                    leftMargin: Dims.l(2)
+                }
 
                 Icon {
-                    id: dragCheckmark
-                    width: Dims.w(14)
-                    height: Dims.w(14)
-                    name: dragProxy.text === qsTrId("id-empty-slot") ? "ios-circle-outline" : (toggleEnabled.value[slotModel.get(draggedItemIndex).toggleId] ? "ios-checkmark-circle-outline" : "ios-circle-outline")
-                    color: dragProxy.text === qsTrId("id-empty-slot") ? "#888888" : (toggleEnabled.value[slotModel.get(draggedItemIndex).toggleId] ? "#ffffff" : "#888888")
-                    anchors {
-                        verticalCenter: parent.verticalCenter
-                        left: parent.left
-                        leftMargin: Dims.l(10)
-                    }
-                }
-
-                Rectangle {
-                    id: dragIconRect
-                    width: Dims.w(14)
-                    height: Dims.w(14)
-                    radius: width / 2
-                    color: "#222222"
-                    opacity: 0.7
-                    anchors {
-                        verticalCenter: parent.verticalCenter
-                        left: dragCheckmark.right
-                        leftMargin: Dims.l(2)
-                    }
-
-                    Icon {
-                        name: dragProxy.icon
-                        width: Dims.w(10)
-                        height: Dims.w(10)
-                        anchors.centerIn: parent
-                        color: "#ffffff"
-                        visible: dragProxy.icon !== ""
-                    }
-                }
-
-                Label {
-                    text: dragProxy.text
+                    name: dragProxy.icon
+                    width: Dims.w(10)
+                    height: Dims.w(10)
+                    anchors.centerIn: parent
                     color: "#ffffff"
-                    anchors {
-                        verticalCenter: parent.verticalCenter
-                        left: dragIconRect.right
-                        leftMargin: Dims.l(2)
-                    }
+                    visible: dragProxy.icon !== ""
+                }
+            }
+
+            Label {
+                text: dragProxy.text
+                color: "#ffffff"
+                anchors {
+                    verticalCenter: parent.verticalCenter
+                    left: dragIconRect.right
+                    leftMargin: Dims.l(2)
                 }
             }
         }
     }
 
+    PageHeader {
+        id: title
+        //% "Quick Settings"
+        text: qsTrId("id-quicksettings-page")
+    }
     // Function to update configuration arrays
     function updateConfiguration() {
-        var topArray = [];
-        var mainArray = [];
+        var fixedArray = [];
+        var sliderArray = [];
         for (var i = 0; i < slotModel.count - 2; i++) { // Skip spacer and config
             var item = slotModel.get(i);
-            if (item.type === "toggle") {
+            if (item.type === "toggle" && item.toggleId) {
                 if (i >= 1 && i <= 2) {
-                    topArray.push(item.toggleId);
+                    fixedArray.push(item.toggleId);
                 } else if (i >= 4) {
-                    mainArray.push(item.toggleId);
+                    sliderArray.push(item.toggleId);
                 }
             }
         }
-        // Pad topArray if needed
-        while (topArray.length < topLength) {
-            topArray.push("");
-        }
-        // Clear duplicates in top
-        for (i = 0; i < topArray.length; i++) {
-            var id = topArray[i];
-            if (id && topArray.indexOf(id, i + 1) !== -1) {
-                topArray[topArray.indexOf(id, i + 1)] = "";
+        // Ensure fixedArray has exactly fixedRowLength valid toggles
+        if (fixedArray.length < fixedRowLength) {
+            var defaults = ["lockButton", "settingsButton"];
+            for (var j = fixedArray.length; j < fixedRowLength; j++) {
+                fixedArray.push(defaults[j]);
             }
         }
-        // Clear duplicates in main
-        for (i = 0; i < mainArray.length; i++) {
-            id = mainArray[i];
-            if (id && mainArray.indexOf(id, i + 1) !== -1) {
-                mainArray[mainArray.indexOf(id, i + 1)] = "";
+        // Clear duplicates in fixedArray
+        for (i = 0; i < fixedArray.length; i++) {
+            var id = fixedArray[i];
+            if (id && fixedArray.indexOf(id, i + 1) !== -1) {
+                fixedArray[fixedArray.indexOf(id, i + 1)] = defaults[i];
+            }
+        }
+        // Clear duplicates in sliderArray
+        for (i = 0; i < sliderArray.length; i++) {
+            id = sliderArray[i];
+            if (id && sliderArray.indexOf(id, i + 1) !== -1) {
+                sliderArray[sliderArray.indexOf(id, i + 1)] = "";
             }
         }
         // Update ConfigurationValue
-        topToggles.value = topArray;
-        mainToggles.value = mainArray;
+        fixedToggles.value = fixedArray.slice(0, fixedRowLength);
+        sliderToggles.value = sliderArray.filter(id => id !== "");
     }
 
     // Function to find Sliding Row index
@@ -660,5 +755,31 @@ Item {
         for (var i = 0; i < originalData.length; i++) {
             slotModel.append(originalData[i]);
         }
+    }
+
+    function abortDrag() {
+        try {
+            if (draggedItemIndex !== -1) {
+                restoreOriginalOrder();
+            }
+            draggedItemIndex = -1;
+            targetIndex = -1;
+            if (dragProxy) {
+                dragProxy.visible = false;
+            }
+            // Reset any other state
+            if (scrollTimer && scrollTimer.running) {
+                scrollTimer.stop();
+            }
+        } catch (e) {
+            console.log("Error in abortDrag:", e);
+            // Last resort reset
+            draggedItemIndex = -1;
+            targetIndex = -1;
+        }
+    }
+
+    function safeGet(obj, prop, defaultValue) {
+        return (obj && obj[prop] !== undefined) ? obj[prop] : defaultValue;
     }
 }

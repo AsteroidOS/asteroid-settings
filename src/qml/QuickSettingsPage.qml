@@ -201,21 +201,20 @@ Item {
         clip: true
         interactive: draggedItemIndex === -1
         model: slotModel
+        cacheBuffer: rowHeight * 10 // Increase cache to stabilize delegate recycling
+        boundsBehavior: Flickable.StopAtBounds // Prevent overscrolling issues
 
-        // Header to offset content below PageHeader
         header: Item {
-            width: parent.width
+            width: parent ? parent.width : 0 // Safe parent access
             height: title.height
         }
 
-        // Footer for bottom spacing
         footer: Item {
-            width: parent.width
+            width: parent ? parent.width : 0 // Safe parent access
             height: rowHeight * 1.5
         }
 
         onContentYChanged: {
-            // If we're dragging but the item has disappeared during scroll
             if (draggedItemIndex !== -1 && !slotList.itemAt(0, contentY + height/2)) {
                 abortDrag();
             }
@@ -227,7 +226,6 @@ Item {
             }
         }
 
-        // Auto-scroll when dragging near edges
         Timer {
             id: scrollTimer
             interval: 16
@@ -235,21 +233,18 @@ Item {
             running: draggedItemIndex !== -1
 
             onTriggered: {
-                // First ensure we have a valid state
                 if (draggedItemIndex === -1 || !dragProxy || draggedItemIndex >= slotModel.count) {
                     running = false;
                     return;
                 }
 
-                // Auto-scroll with improved bounds checking
-                if (safeGet(dragProxy, "y", 0) < slotList.height * 0.2) {
-                    // Scroll up with boundary check
+                var dragY = safeGet(dragProxy, "y", 0);
+                if (dragY < slotList.height * 0.2) {
                     var newContentY = Math.max(0, slotList.contentY - 5);
                     if (slotList.contentY !== newContentY) {
                         slotList.contentY = newContentY;
                     }
-                } else if (safeGet(dragProxy, "y", 0) > slotList.height * 0.8) {
-                    // Scroll down with boundary check
+                } else if (dragY > slotList.height * 0.8) {
                     var maxScroll = Math.max(0, slotList.contentHeight - slotList.height);
                     newContentY = Math.min(maxScroll, slotList.contentY + 5);
                     if (slotList.contentY !== newContentY) {
@@ -257,19 +252,15 @@ Item {
                     }
                 }
 
-                // Only process target detection if dragging is active
                 if (draggedItemIndex === -1) return;
 
-                // Calculate position with safe access
-                var dragCenterY = safeGet(dragProxy, "y", 0) + safeGet(dragProxy, "height", rowHeight) / 2;
+                var dragCenterY = dragY + safeGet(dragProxy, "height", rowHeight) / 2;
                 var adjustedY = slotList.contentY + dragCenterY;
 
-                // Skip if outside content bounds
                 if (adjustedY < 0 || adjustedY >= slotList.contentHeight) {
                     return;
                 }
 
-                // Estimate valid item bounds (first and last delegate)
                 var firstItemY = slotList.contentY;
                 var lastItemIndex = slotModel.count - 1;
                 var lastItemY = lastItemIndex * rowHeight;
@@ -278,7 +269,6 @@ Item {
                 }
                 lastItemY += slotList.contentY;
 
-                // Skip if adjustedY is not within actual item bounds
                 if (adjustedY < firstItemY || adjustedY > lastItemY) {
                     return;
                 }
@@ -287,13 +277,10 @@ Item {
                     var item = slotList.itemAt(0, adjustedY);
                     if (item && item.visualIndex !== undefined) {
                         var newTargetIndex = item.visualIndex;
-
-                        // Prevent dropping at index 0, 3, count-2 (spacer), or count-1 (config)
                         if (newTargetIndex === 0 || newTargetIndex === 3 ||
                             newTargetIndex === slotModel.count - 2 || newTargetIndex === slotModel.count - 1) {
                             return;
                         }
-
                         if (newTargetIndex !== targetIndex && newTargetIndex !== -1) {
                             targetIndex = newTargetIndex;
                             moveItems();
@@ -306,7 +293,6 @@ Item {
             }
         }
 
-        // Animation for displaced items
         displaced: Transition {
             NumberAnimation {
                 properties: "y"
@@ -317,15 +303,14 @@ Item {
 
         delegate: Item {
             id: delegateItem
-            width: parent.width
+            width: slotList ? slotList.width : 0 // Use slotList.width instead of parent.width
             height: type === "label" ? labelHeight : rowHeight
             property int visualIndex: index
             property bool isDragging: index === draggedItemIndex
 
-            // Fake press highlight
             Rectangle {
                 id: pressHighlight
-                width: parent.width
+                width: delegateItem.width
                 height: rowHeight
                 color: "#222222"
                 opacity: 0
@@ -340,7 +325,6 @@ Item {
                 }
             }
 
-            // Label delegate (Fixed Row, Sliding Row)
             Label {
                 visible: type === "label"
                 text: labelText
@@ -353,24 +337,22 @@ Item {
                 }
             }
 
-            // Spacer delegate
             Item {
                 visible: type === "spacer"
-                width: parent.width
+                width: delegateItem.width
                 height: rowHeight
             }
 
-            // Config delegate (Battery Bottom)
             Item {
                 visible: type === "config"
-                width: parent.width
+                width: delegateItem.width
                 height: rowHeight
 
                 Text {
                     id: configLabel
                     text: labelText
                     color: "#ffffff"
-                    font.pixelSize: Dims.l(8) // Matches toggle Label default
+                    font.pixelSize: Dims.l(8)
                     wrapMode: Text.WordWrap
                     anchors {
                         left: parent.left
@@ -401,15 +383,13 @@ Item {
                 }
             }
 
-            // Toggle delegate
             Rectangle {
-                width: parent.width
+                width: delegateItem.width
                 height: rowHeight
                 opacity: 0
                 visible: isDragging && type === "toggle"
             }
 
-            // Checkmark
             Icon {
                 id: checkmarkIcon
                 width: Dims.w(14)
@@ -434,7 +414,6 @@ Item {
                 }
             }
 
-            // Icon
             Rectangle {
                 id: iconRectangle
                 width: Dims.w(14)
@@ -461,7 +440,6 @@ Item {
                 }
             }
 
-            // Label
             Label {
                 text: getToggleName(toggleId)
                 color: "#ffffff"
@@ -493,7 +471,7 @@ Item {
                     top: parent.top
                     bottom: parent.bottom
                 }
-                enabled: !isDragging && type === "toggle" // Disable for labels/spacer/config
+                enabled: !isDragging && type === "toggle"
 
                 property point startPos: Qt.point(0, 0)
                 property bool dragging: false
@@ -504,10 +482,7 @@ Item {
                             dragging = true;
                             draggedItemIndex = index;
                             targetIndex = index;
-
                             storeOriginalData();
-
-                            // Make sure delegateItem exists and is visible
                             if (delegateItem && delegateItem.visible) {
                                 var mapPos = delegateItem.mapToItem(slotList, 0, 0);
                                 if (mapPos) {
@@ -559,14 +534,11 @@ Item {
                 onReleased: {
                     longPressTimer.stop();
                     pressHighlight.opacity = 0;
-
                     if (dragging) {
                         dragging = false;
-
                         if (targetIndex !== -1 && draggedItemIndex !== targetIndex) {
                             finalizeMove();
                         }
-
                         draggedItemIndex = -1;
                         targetIndex = -1;
                         dragProxy.visible = false;
@@ -587,12 +559,11 @@ Item {
             }
         }
 
-        // Drag visual proxy
         Rectangle {
             id: dragProxy
             visible: false
             z: 10
-            width: parent ? parent.width : 0
+            width: slotList ? slotList.width : 0 // Use slotList.width
             height: rowHeight
             color: "#222222"
             opacity: 0.5

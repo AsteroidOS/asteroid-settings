@@ -96,6 +96,12 @@ Application {
                     visible: DeviceSpecs.hasSpeaker
                 }
                 ListItem {
+                    //% "Quick Settings"
+                    title: qsTrId("id-quicksettings-page")
+                    iconName: batteryBottom.value ? "ios-quicksettings-batterybottom" : "ios-quicksettings-batterytop"
+                    onClicked: layerStack.push(quickSettingsLayer)
+                }
+                ListItem {
                     //% "Wallpaper"
                     title: qsTrId("id-wallpaper-page")
                     iconName: "ios-wallpaper-outline"
@@ -112,12 +118,6 @@ Application {
                     title: qsTrId("id-launcher-page")
                     iconName: "ios-launcher-outline"
                     onClicked: layerStack.push(launcherLayer)
-                }
-                ListItem {
-                    //% "Quick Settings"
-                    title: qsTrId("id-quicksettings-page")
-                    iconName: batteryBottom.value ? "ios-quicksettings-batterybottom" : "ios-quicksettings-batterytop"
-                    onClicked: layerStack.push(quickSettingsLayer)
                 }
                 ListItem {
                     //% "Time"

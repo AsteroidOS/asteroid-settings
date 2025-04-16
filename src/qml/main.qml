@@ -30,9 +30,13 @@ Application {
     outerColor: "#00010C"
 
     ConfigurationValue {
-        id: batteryBottom
-        key: "/desktop/asteroid/quicksettings/batteryBottom"
-        defaultValue: true
+        id: options
+        key: "/desktop/asteroid/quicksettings/options"
+        defaultValue: {
+            "batteryBottom": true,
+            "batteryAnimation": true,
+            "batteryColored": false
+        }
     }
 
     Component { id: quickSettingsLayer;         QuickSettingsPage { } }
@@ -98,7 +102,7 @@ Application {
                 ListItem {
                     //% "Quick Settings"
                     title: qsTrId("id-quicksettings-page")
-                    iconName: batteryBottom.value ? "ios-quicksettings-batterybottom" : "ios-quicksettings-batterytop"
+                    iconName: options.value.batteryBottom ? "ios-quicksettings-batterybottom" : "ios-quicksettings-batterytop"
                     onClicked: layerStack.push(quickSettingsLayer)
                 }
                 ListItem {

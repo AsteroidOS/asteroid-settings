@@ -28,11 +28,13 @@ Item {
         key: "/desktop/asteroid/quicksettings/fixed"
         defaultValue: ["lockButton", "settingsButton"]
     }
+
     ConfigurationValue {
         id: sliderToggles
         key: "/desktop/asteroid/quicksettings/slider"
         defaultValue: ["brightnessToggle", "bluetoothToggle", "hapticsToggle", "wifiToggle", "soundToggle", "cinemaToggle"]
     }
+
     ConfigurationValue {
         id: toggleEnabled
         key: "/desktop/asteroid/quicksettings/enabled"
@@ -47,17 +49,22 @@ Item {
             "cinemaToggle": true
         }
     }
+
     ConfigurationValue {
-        id: batteryBottom
-        key: "/desktop/asteroid/quicksettings/batteryBottom"
-        defaultValue: true
+        id: options
+        key: "/desktop/asteroid/quicksettings/options"
+        defaultValue: {
+            "batteryBottom": true,
+            "batteryAnimation": true,
+            "batteryColored": false
+        }
     }
 
     // Toggle definitions
     property var toggleOptions: [
         //% "Lock Button"
         { id: "lockButton", name: qsTrId("id-toggle-lock"), icon: "ios-unlock" },
-        //% "Settings Shortcut"
+        //% "Settings Link"
         { id: "settingsButton", name: qsTrId("id-toggle-settings"), icon: "ios-settings" },
         //% "Brightness"
         { id: "brightnessToggle", name: qsTrId("id-toggle-brightness"), icon: "ios-sunny" },
@@ -117,6 +124,7 @@ Item {
 
     ListModel {
         id: slotModel
+
         Component.onCompleted: {
             // Validate and reset fixedToggles
             var validFixed = fixedToggles.value && Array.isArray(fixedToggles.value) && fixedToggles.value.length >= fixedRowLength;
@@ -162,29 +170,43 @@ Item {
                 toggleEnabled.value = newEnabled;
             }
 
-            // Validate batteryBottom
-            if (typeof batteryBottom.value !== "boolean") {
-                batteryBottom.value = batteryBottom.defaultValue;
+            // Validate options
+            var validOptions = options.value && typeof options.value === "object";
+            if (!validOptions) {
+                options.value = options.defaultValue;
+            } else {
+                var newOptions = Object.assign({}, options.defaultValue);
+                for (var opt in newOptions) {
+                    if (options.value.hasOwnProperty(opt)) {
+                        newOptions[opt] = options.value[opt];
+                    }
+                }
+                options.value = newOptions;
             }
 
             // Populate model
-            //% "Fixed Row"
+            //% "Fixed Row Content"
             append({ type: "label", labelText: qsTrId("id-fixed-row"), toggleId: "", listView: "" });
             for (var i = 0; i < fixedToggles.value.length; i++) {
                 if (fixedToggles.value[i]) {
                     append({ type: "toggle", toggleId: fixedToggles.value[i], listView: "fixed", labelText: "" });
                 }
             }
-            //% "Sliding Row"
+            //% "Sliding Row Content"
             append({ type: "label", labelText: qsTrId("id-sliding-row"), toggleId: "", listView: "" });
             for (var j = 0; j < sliderToggles.value.length; j++) {
                 if (sliderToggles.value[j]) {
                     append({ type: "toggle", toggleId: sliderToggles.value[j], listView: "slider", labelText: "" });
                 }
             }
-            append({ type: "spacer", labelText: "", toggleId: "", listView: "" });
-            //% "Battery Meter aligned to bottom?"
+            //% "Options"
+            append({ type: "label", labelText: qsTrId("id-options"), toggleId: "", listView: "" });
+            //% "Battery aligned to bottom?"
             append({ type: "config", labelText: qsTrId("id-battery-bottom"), toggleId: "", listView: "" });
+            //% "Show Battery Animation?"
+            append({ type: "config", labelText: qsTrId("id-battery-animation"), toggleId: "", listView: "" });
+            //% "Enable colored Battery?"
+            append({ type: "config", labelText: qsTrId("id-battery-colored"), toggleId: "", listView: "" });
             storeOriginalData();
         }
     }
@@ -304,7 +326,7 @@ Item {
         delegate: Item {
             id: delegateItem
             width: slotList ? slotList.width : 0 // Use slotList.width instead of parent.width
-            height: type === "label" ? labelHeight : rowHeight
+            height: type === "label" ? labelHeight : type === "config" ? Math.max(rowHeight * 2, delegateItem.childrenRect.height) : rowHeight
             property int visualIndex: index
             property bool isDragging: index === draggedItemIndex
 
@@ -337,49 +359,31 @@ Item {
                 }
             }
 
-            Item {
-                visible: type === "spacer"
-                width: delegateItem.width
-                height: rowHeight
-            }
-
-            Item {
+            LabeledSwitch {
                 visible: type === "config"
                 width: delegateItem.width
-                height: rowHeight
-
-                Text {
-                    id: configLabel
-                    text: labelText
-                    color: "#ffffff"
-                    font.pixelSize: Dims.l(8)
-                    wrapMode: Text.WordWrap
-                    anchors {
-                        left: parent.left
-                        leftMargin: Dims.l(10)
-                        right: configCheckmark.left
-                        rightMargin: Dims.l(10)
-                        verticalCenter: parent.verticalCenter
+                height: Math.max(rowHeight * 2, implicitHeight) // Adjust height based on text content
+                text: labelText
+                checked: {
+                    if (labelText === qsTrId("id-battery-bottom")) {
+                        return options.value.batteryBottom;
+                    } else if (labelText === qsTrId("id-battery-animation")) {
+                        return options.value.batteryAnimation;
+                    } else if (labelText === qsTrId("id-battery-colored")) {
+                        return options.value.batteryColored;
                     }
+                    return false;
                 }
-
-                Icon {
-                    id: configCheckmark
-                    width: Dims.w(14)
-                    height: Dims.w(14)
-                    name: batteryBottom.value ? "ios-checkmark-circle-outline" : "ios-circle-outline"
-                    color: batteryBottom.value ? "#ffffff" : "#888888"
-                    anchors {
-                        verticalCenter: parent.verticalCenter
-                        right: parent.right
-                        rightMargin: Dims.l(10)
+                onCheckedChanged: {
+                    var newOptions = Object.assign({}, options.value);
+                    if (labelText === qsTrId("id-battery-bottom")) {
+                        newOptions.batteryBottom = checked;
+                    } else if (labelText === qsTrId("id-battery-animation")) {
+                        newOptions.batteryAnimation = checked;
+                    } else if (labelText === qsTrId("id-battery-colored")) {
+                        newOptions.batteryColored = checked;
                     }
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            batteryBottom.value = !batteryBottom.value;
-                        }
-                    }
+                    options.value = newOptions;
                 }
             }
 
@@ -400,7 +404,7 @@ Item {
                 anchors {
                     verticalCenter: parent.verticalCenter
                     left: parent.left
-                    leftMargin: Dims.l(10)
+                    leftMargin: Dims.l(15)
                 }
                 MouseArea {
                     anchors.fill: parent

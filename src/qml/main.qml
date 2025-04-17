@@ -93,17 +93,17 @@ Application {
                     onClicked: layerStack.push(nightstandLayer)
                 }
                 ListItem {
+                    //% "Quick Settings"
+                    title: qsTrId("id-quicksettings-page")
+                    iconName: options.value.batteryBottom ? "ios-quicksettings-batterybottom" : "ios-quicksettings-batterytop"
+                    onClicked: layerStack.push(quickSettingsLayer)
+                }
+                ListItem {
                     //% "Sound"
                     title: qsTrId("id-sound-page")
                     iconName: "ios-sound-outline"
                     onClicked: layerStack.push(soundLayer)
                     visible: DeviceSpecs.hasSpeaker
-                }
-                ListItem {
-                    //% "Quick Settings"
-                    title: qsTrId("id-quicksettings-page")
-                    iconName: options.value.batteryBottom ? "ios-quicksettings-batterybottom" : "ios-quicksettings-batterytop"
-                    onClicked: layerStack.push(quickSettingsLayer)
                 }
                 ListItem {
                     //% "Wallpaper"

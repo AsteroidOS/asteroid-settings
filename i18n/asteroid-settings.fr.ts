@@ -60,31 +60,31 @@
         <translation>Fahrenheit :</translation>
     </message>
     <message id="id-time-page">
-        <location filename="../src/qml/main.qml" line="117"/>
+        <location filename="../src/qml/main.qml" line="128"/>
         <location filename="../src/qml/TimePage.qml" line="109"/>
         <source>Time</source>
         <translation>Heure</translation>
     </message>
     <message id="id-date-page">
         <location filename="../src/qml/DatePage.qml" line="97"/>
-        <location filename="../src/qml/main.qml" line="123"/>
+        <location filename="../src/qml/main.qml" line="134"/>
         <source>Date</source>
         <translation>Date</translation>
     </message>
     <message id="id-language-page">
         <location filename="../src/qml/LanguagePage.qml" line="64"/>
-        <location filename="../src/qml/main.qml" line="135"/>
+        <location filename="../src/qml/main.qml" line="146"/>
         <source>Language</source>
         <translation>Langue</translation>
     </message>
     <message id="id-bluetooth-page">
-        <location filename="../src/qml/main.qml" line="147"/>
+        <location filename="../src/qml/main.qml" line="158"/>
         <source>Bluetooth</source>
         <translation>Bluetooth</translation>
     </message>
     <message id="id-display-page">
         <location filename="../src/qml/DisplayPage.qml" line="132"/>
-        <location filename="../src/qml/main.qml" line="74"/>
+        <location filename="../src/qml/main.qml" line="85"/>
         <source>Display</source>
         <translation>Écran</translation>
     </message>
@@ -120,57 +120,57 @@
         <translation>Tapoter pour réveiller</translation>
     </message>
     <message id="id-timezone-page">
-        <location filename="../src/qml/main.qml" line="141"/>
+        <location filename="../src/qml/main.qml" line="152"/>
         <location filename="../src/qml/TimezonePage.qml" line="130"/>
         <source>Time zone</source>
         <translation>Fuseau horaire</translation>
     </message>
     <message id="id-sound-page">
-        <location filename="../src/qml/main.qml" line="86"/>
+        <location filename="../src/qml/main.qml" line="97"/>
         <source>Sound</source>
         <translation>Son</translation>
     </message>
     <message id="id-nightstand-page">
-        <location filename="../src/qml/main.qml" line="80"/>
+        <location filename="../src/qml/main.qml" line="91"/>
         <location filename="../src/qml/NightstandPage.qml" line="188"/>
         <source>Nightstand</source>
         <translation>Table de nuit</translation>
     </message>
     <message id="id-units-page">
-        <location filename="../src/qml/main.qml" line="129"/>
+        <location filename="../src/qml/main.qml" line="140"/>
         <location filename="../src/qml/UnitsPage.qml" line="65"/>
         <source>Units</source>
         <translation>Unités</translation>
     </message>
     <message id="id-wallpaper-page">
-        <location filename="../src/qml/main.qml" line="93"/>
+        <location filename="../src/qml/main.qml" line="110"/>
         <source>Wallpaper</source>
         <translation>Fond d&apos;écran</translation>
     </message>
     <message id="id-watchface-page">
-        <location filename="../src/qml/main.qml" line="99"/>
+        <location filename="../src/qml/main.qml" line="116"/>
         <source>Watchface</source>
         <translation>Cadran</translation>
     </message>
     <message id="id-launcher-page">
-        <location filename="../src/qml/main.qml" line="105"/>
+        <location filename="../src/qml/main.qml" line="122"/>
         <source>Launcher</source>
         <translation>Lanceur</translation>
     </message>
     <message id="id-quicksettings-page">
-        <location filename="../src/qml/main.qml" line="111"/>
-        <location filename="../src/qml/QuickSettingsPage.qml" line="98"/>
+        <location filename="../src/qml/main.qml" line="104"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="635"/>
         <source>Quick Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-usb-page">
-        <location filename="../src/qml/main.qml" line="153"/>
+        <location filename="../src/qml/main.qml" line="164"/>
         <location filename="../src/qml/USBPage.qml" line="85"/>
         <source>USB</source>
         <translation>USB</translation>
     </message>
     <message id="id-power-page">
-        <location filename="../src/qml/main.qml" line="159"/>
+        <location filename="../src/qml/main.qml" line="170"/>
         <location filename="../src/qml/PowerPage.qml" line="87"/>
         <source>Power</source>
         <translation>Marche/Arrêt</translation>
@@ -192,7 +192,7 @@
         <translation>Amorçage</translation>
     </message>
     <message id="id-about-page">
-        <location filename="../src/qml/main.qml" line="165"/>
+        <location filename="../src/qml/main.qml" line="176"/>
         <source>About</source>
         <translation>À propos</translation>
     </message>
@@ -230,48 +230,82 @@
         <translation>Sélectionner le cadran</translation>
     </message>
     <message id="id-toggle-lock">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="39"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="66"/>
         <source>Lock Button</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-settings">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="41"/>
-        <source>Settings Shortcut</source>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="68"/>
+        <source>Settings Link</source>
+        <oldsource>Settings Shortcut</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-brightness">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="43"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="70"/>
         <source>Brightness</source>
         <translation type="unfinished">Luminosité</translation>
     </message>
     <message id="id-toggle-bluetooth">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="45"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="72"/>
         <source>Bluetooth</source>
         <translation type="unfinished">Bluetooth</translation>
     </message>
     <message id="id-toggle-haptics">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="47"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="74"/>
         <source>Vibration</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-wifi">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="49"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="76"/>
         <source>WiFi</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-sound">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="51"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="78"/>
         <source>Mute Sound</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-cinema">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="53"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="80"/>
         <source>Cinema Mode</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="id-empty-slot">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="73"/>
-        <source>empty</source>
+    <message id="id-fixed-row">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="189"/>
+        <source>Fixed Row Content</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-sliding-row">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="196"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="680"/>
+        <source>Sliding Row Content</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-options">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="203"/>
+        <source>Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-battery-bottom">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="205"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="367"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="378"/>
+        <source>Battery aligned to bottom?</source>
+        <oldsource>Battery Meter aligned to bottom?</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-battery-animation">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="207"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="369"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="380"/>
+        <source>Show battery charge animation?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-battery-colored">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="209"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="371"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="382"/>
+        <source>Enable colored battery?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

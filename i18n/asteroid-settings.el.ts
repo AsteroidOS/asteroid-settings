@@ -181,7 +181,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-settings">
-        <source>Settings Shortcut</source>
+        <source>Settings Link</source>
+        <oldsource>Settings Shortcut</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-brightness">
@@ -208,8 +209,29 @@
         <source>Cinema Mode</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="id-empty-slot">
-        <source>empty</source>
+    <message id="id-fixed-row">
+        <source>Fixed Row Content</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-sliding-row">
+        <source>Sliding Row Content</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-battery-bottom">
+        <source>Battery aligned to bottom?</source>
+        <oldsource>Battery Meter aligned to bottom?</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-options">
+        <source>Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-battery-animation">
+        <source>Show battery charge animation?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-battery-colored">
+        <source>Enable colored battery?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

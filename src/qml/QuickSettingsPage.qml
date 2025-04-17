@@ -203,9 +203,9 @@ Item {
             append({ type: "label", labelText: qsTrId("id-options"), toggleId: "", listView: "" });
             //% "Battery aligned to bottom?"
             append({ type: "config", labelText: qsTrId("id-battery-bottom"), toggleId: "", listView: "" });
-            //% "Show Battery Animation?"
+            //% "Show battery charge animation?"
             append({ type: "config", labelText: qsTrId("id-battery-animation"), toggleId: "", listView: "" });
-            //% "Enable colored Battery?"
+            //% "Enable colored battery?"
             append({ type: "config", labelText: qsTrId("id-battery-colored"), toggleId: "", listView: "" });
             storeOriginalData();
         }
@@ -309,7 +309,6 @@ Item {
                         }
                     }
                 } catch (e) {
-                    console.log("Error while detecting drag target:", e);
                     abortDrag();
                 }
             }
@@ -503,7 +502,6 @@ Item {
                                 throw new Error("Delegate item not available for drag");
                             }
                         } catch (e) {
-                            console.log("Error starting drag:", e);
                             dragging = false;
                             draggedItemIndex = -1;
                             abortDrag();
@@ -525,7 +523,6 @@ Item {
                                 dragProxy.y = pos.y - (safeGet(dragProxy, "height", rowHeight) / 2);
                             }
                         } catch (e) {
-                            console.log("Error during drag:", e);
                             dragging = false;
                             longPressTimer.stop();
                             abortDrag();
@@ -747,7 +744,6 @@ Item {
                 scrollTimer.stop();
             }
         } catch (e) {
-            console.log("Error in abortDrag:", e);
             // Last resort reset
             draggedItemIndex = -1;
             targetIndex = -1;

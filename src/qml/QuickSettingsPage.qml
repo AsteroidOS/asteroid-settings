@@ -409,9 +409,40 @@ Item {
                     anchors.fill: parent
                     onClicked: {
                         if (toggleId) {
-                            var newEnabled = Object.assign({}, toggleEnabled.value);
-                            newEnabled[toggleId] = !newEnabled[toggleId];
-                            toggleEnabled.value = newEnabled;
+                            var newEnabled = Object.assign({}, toggleEnabled.value)
+                            var isFixedToggle = fixedToggles.value.indexOf(toggleId) !== -1
+                            var isSliderToggle = sliderToggles.value.indexOf(toggleId) !== -1
+
+                            // Count active toggles in fixed row
+                            var fixedActiveCount = 0
+                            for (var i = 0; i < fixedToggles.value.length; i++) {
+                                var fixedId = fixedToggles.value[i]
+                                if (fixedId && newEnabled[fixedId]) {
+                                    fixedActiveCount++
+                                }
+                            }
+
+                            // Count active toggles in slider row
+                            var sliderActiveCount = 0
+                            for (var j = 0; j < sliderToggles.value.length; j++) {
+                                var sliderId = sliderToggles.value[j]
+                                if (sliderId && newEnabled[sliderId]) {
+                                    sliderActiveCount++
+                                }
+                            }
+
+                            // Prevent disabling if at minimum active toggles
+                            if (newEnabled[toggleId]) {
+                                if (isFixedToggle && fixedActiveCount <= 1) {
+                                    return // Don't disable if only 1 fixed toggle is active
+                                }
+                                if (isSliderToggle && sliderActiveCount <= 2) {
+                                    return // Don't disable if only 2 slider toggles are active
+                                }
+                            }
+
+                            newEnabled[toggleId] = !newEnabled[toggleId]
+                            toggleEnabled.value = newEnabled
                         }
                     }
                 }

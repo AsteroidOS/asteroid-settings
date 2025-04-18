@@ -219,6 +219,8 @@ Item {
                 }
 
                 var dragY = safeGet(dragProxy, "y", 0);
+
+                // Keep automatic scrolling functionality
                 if (dragY < slotList.height * 0.2) {
                     var newContentY = Math.max(0, slotList.contentY - 5);
                     if (slotList.contentY !== newContentY) {
@@ -257,10 +259,23 @@ Item {
                     var item = slotList.itemAt(0, adjustedY);
                     if (item && item.visualIndex !== undefined) {
                         var newTargetIndex = item.visualIndex;
+
+                        // Find Options label index
+                        var optionsLabelIndex = -1;
+                        for (var i = 0; i < slotModel.count; i++) {
+                            if (slotModel.get(i).type === "label" && slotModel.get(i).labelText === qsTrId("id-options")) {
+                                optionsLabelIndex = i;
+                                break;
+                            }
+                        }
+
+                        // Prevent dropping on or below the Options label
                         if (newTargetIndex === 0 || newTargetIndex === 3 ||
-                            newTargetIndex === slotModel.count - 2 || newTargetIndex === slotModel.count - 1) {
+                            newTargetIndex === slotModel.count - 2 || newTargetIndex === slotModel.count - 1 ||
+                            (optionsLabelIndex !== -1 && newTargetIndex >= optionsLabelIndex)) {
                             return;
                         }
+
                         if (newTargetIndex !== targetIndex && newTargetIndex !== -1) {
                             targetIndex = newTargetIndex;
                             moveItems();
@@ -535,7 +550,22 @@ Item {
                     if (dragging) {
                         dragging = false;
                         if (targetIndex !== -1 && draggedItemIndex !== targetIndex) {
-                            finalizeMove();
+                            // Check if the target is valid
+                            var restrictedIndices = [
+                                0, // Fixed row label
+                                findSlidingRowIndex(), // Slider row label
+                                slotModel.count - 2, // Options label
+                                slotModel.count - 1 // Last config item
+                            ];
+                            var dropBarrierIndex = Math.min(findFirstUnavailableSliderIndex(), slotModel.count - 2);
+
+                            if (restrictedIndices.includes(targetIndex) || targetIndex >= dropBarrierIndex) {
+                                // Invalid drop target, restore original order
+                                restoreOriginalOrder();
+                            } else {
+                                // Valid drop target, finalize move
+                                finalizeMove();
+                            }
                         }
                         draggedItemIndex = -1;
                         targetIndex = -1;

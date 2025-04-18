@@ -864,19 +864,34 @@ Item {
         return (obj && obj[prop] !== undefined) ? obj[prop] : defaultValue;
     }
 
-    // Function to find the index of the first unavailable toggle in the slider row
+    // Updated function to find either first unavailable toggle or Options label
     function findFirstUnavailableSliderIndex() {
         var slidingRowIndex = findSlidingRowIndex();
         if (slidingRowIndex === -1) return slotModel.count; // Fallback
-        for (var i = slidingRowIndex + 1; i < slotModel.count; i++) {
+
+        // Find Options label index
+        var optionsLabelIndex = -1;
+        for (var i = 0; i < slotModel.count; i++) {
+            if (slotModel.get(i).type === "label" && slotModel.get(i).labelText === qsTrId("id-options")) {
+                optionsLabelIndex = i;
+                break;
+            }
+        }
+
+        // Find first unavailable toggle
+        var firstUnavailableIndex = slotModel.count;
+        for (i = slidingRowIndex + 1; i < slotModel.count; i++) {
             var item = slotModel.get(i);
             if (item.type === "toggle" && item.listView === "slider") {
                 var toggle = findToggle(item.toggleId);
                 if (toggle && !toggle.available) {
-                    return i;
+                    firstUnavailableIndex = i;
+                    break;
                 }
             }
         }
-        return slotModel.count; // No unavailable toggles
+
+        // Return the smaller of the two indices (first barrier encountered)
+        return Math.min(firstUnavailableIndex, optionsLabelIndex !== -1 ? optionsLabelIndex : slotModel.count);
     }
 }

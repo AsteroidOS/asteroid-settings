@@ -81,16 +81,6 @@ Item {
     property real dragYOffset: 0
     property string draggedToggleId: ""
 
-    function logSlotModelState(context) {
-        var log = context + " - slotModel state:\n";
-        for (var i = 0; i < slotModel.count; i++) {
-            var item = slotModel.get(i);
-            log += "  Index " + i + ": type=" + item.type + ", toggleId=" + item.toggleId + ", listView=" + item.listView + ", labelText=" + item.labelText + "\n";
-        }
-        log += "  draggedItemIndex=" + draggedItemIndex + ", targetIndex=" + targetIndex + ", dragProxy.text=" + dragProxy.text + ", dragProxy.icon=" + dragProxy.icon;
-        console.log(log);
-    }
-
     function safeGet(obj, prop, defaultValue) {
         return obj && obj[prop] !== undefined ? obj[prop] : defaultValue;
     }
@@ -259,18 +249,14 @@ Item {
 
     function moveItems() {
         if (draggedItemIndex === -1 || targetIndex === -1 || draggedItemIndex === targetIndex) {
-            console.log("moveItems skipped: invalid indices or no change");
             return;
         }
         var sliderLabelIndex = findSliderLabelIndex();
         var optionsLabelIndex = findOptionsLabelIndex();
         if (targetIndex === 0 || targetIndex === sliderLabelIndex ||
             targetIndex >= optionsLabelIndex) {
-            console.log("moveItems skipped: invalid targetIndex=" + targetIndex);
             return;
         }
-        console.log("moveItems called: from=" + draggedItemIndex + " to=" + targetIndex + ", draggedToggleId=" + draggedToggleId);
-        logSlotModelState("Before moveItems");
 
         // Lock dragProxy content
         dragProxy.text = getToggleName(draggedToggleId);
@@ -279,14 +265,12 @@ Item {
         // Handle same-row moves
         if ((draggedItemIndex < sliderLabelIndex && targetIndex < sliderLabelIndex) ||
             (draggedItemIndex > sliderLabelIndex && targetIndex > sliderLabelIndex && targetIndex < optionsLabelIndex)) {
-            console.log("Same-row move: from=" + draggedItemIndex + " to=" + targetIndex);
             slotModel.move(draggedItemIndex, targetIndex, 1);
             slotModel.setProperty(targetIndex, "listView", targetIndex < sliderLabelIndex ? "fixed" : "slider");
             draggedItemIndex = targetIndex;
         }
         // Handle slider to fixed move
         else if (draggedItemIndex > sliderLabelIndex && targetIndex < sliderLabelIndex) {
-            console.log("Slider to fixed move: from=" + draggedItemIndex + " to=" + targetIndex);
             var targetToggleId = slotModel.get(targetIndex).toggleId;
             // Move dragged toggle to target index
             slotModel.move(draggedItemIndex, targetIndex, 1);
@@ -294,12 +278,10 @@ Item {
             // Move displaced toggle to slider row
             slotModel.move(targetIndex + 1, sliderLabelIndex + 1, 1);
             slotModel.setProperty(sliderLabelIndex + 1, "listView", "slider");
-            console.log("Swapped " + draggedToggleId + " with " + targetToggleId);
             draggedItemIndex = targetIndex;
         }
         // Handle fixed to slider move
         else if (draggedItemIndex < sliderLabelIndex && targetIndex > sliderLabelIndex && targetIndex < optionsLabelIndex) {
-            console.log("Fixed to slider move: from=" + draggedItemIndex + " to=" + targetIndex);
             var targetToggleId = slotModel.get(targetIndex).toggleId;
             // Move dragged toggle to target index
             slotModel.move(draggedItemIndex, targetIndex, 1);
@@ -307,14 +289,12 @@ Item {
             // Move displaced toggle to fixed row
             slotModel.move(targetIndex - 1, draggedItemIndex, 1);
             slotModel.setProperty(draggedItemIndex, "listView", "fixed");
-            console.log("Swapped " + draggedToggleId + " with " + targetToggleId);
             draggedItemIndex = targetIndex;
         }
 
         ensureSliderLabelPosition();
         saveConfiguration();
         slotList.forceLayout();
-        logSlotModelState("After moveItems");
     }
 
     function restoreOriginalOrder() {
@@ -326,20 +306,13 @@ Item {
     }
 
     function abortDrag() {
-        console.log("abortDrag called, initial state: draggedItemIndex:", draggedItemIndex, "targetIndex:", targetIndex, "contentY:", slotList.contentY);
-        try {
-            if (draggedItemIndex !== -1) {
-                restoreOriginalOrder();
-            }
-            draggedItemIndex = -1;
-            targetIndex = -1;
-            dragProxy.visible = false;
-            autoScrollTimer.scrollSpeed = 0;
-            slotList.contentY = Math.max(0, slotList.contentY);
-        } catch (e) {
-            console.log("abortDrag error:", e);
+        if (draggedItemIndex !== -1) {
+            restoreOriginalOrder();
         }
-        console.log("abortDrag completed, final state: draggedItemIndex:", draggedItemIndex, "targetIndex:", targetIndex, "contentY:", slotList.contentY);
+        draggedItemIndex = -1;
+        targetIndex = -1;
+        dragProxy.visible = false;
+        autoScrollTimer.scrollSpeed = 0;
     }
 
     ListView {
@@ -574,8 +547,6 @@ Item {
                             dragProxy.icon = getToggleIcon(toggleId);
                             dragProxy.visible = true;
                             dragYOffset = dragArea.startPos.y;
-                            console.log("Long press triggered: draggedItemIndex=" + draggedItemIndex + ", toggleId=" + toggleId + ", draggedToggleId=" + draggedToggleId);
-                            logSlotModelState("After drag start");
                         }
                     }
                 }
@@ -600,7 +571,6 @@ Item {
                     startPos = Qt.point(mouse.x, mouse.y);
                     pressHighlight.opacity = 0.2;
                     longPressTimer.start();
-                    console.log("Drag pressed: index=" + index + ", toggleId=" + slotModel.get(index).toggleId);
                 }
 
                 onPositionChanged: {
@@ -633,8 +603,6 @@ Item {
                                     }
                                 }
                                 if (dropIndex !== targetIndex) {
-                                    console.log("Drag position changed: dropIndex=" + dropIndex + ", targetIndex=" + targetIndex + ", toggleId=" + slotModel.get(dropIndex).toggleId + ", draggedToggleId=" + draggedToggleId);
-                                    logSlotModelState("Before setting targetIndex");
                                     targetIndex = dropIndex;
                                     moveItems();
                                 }
@@ -649,8 +617,6 @@ Item {
                     if (draggedItemIndex !== -1) {
                         var pos = mapToItem(slotList, mouse.x, mouse.y);
                         var dropY = pos.y + slotList.contentY;
-                        console.log("Drag released: pos.y=" + pos.y + ", dropY=" + dropY + ", draggedItemIndex=" + draggedItemIndex);
-                        logSlotModelState("Before drop");
                         var itemUnder = slotList.itemAt(slotList.width / 2, dropY);
                         if (itemUnder && itemUnder.visualIndex !== undefined) {
                             var dropIndex = itemUnder.visualIndex;
@@ -662,19 +628,14 @@ Item {
                                 dropIndex < optionsIndex &&
                                 dropIndex !== sliderLabelIndex) {
                                 targetIndex = dropIndex;
-                                console.log("Attempting drop at dropIndex=" + dropIndex + ", draggedToggleId=" + draggedToggleId);
                                 moveItems();
                                 dragProxy.visible = false;
                                 draggedItemIndex = -1;
                                 targetIndex = -1;
-                                slotList.contentY = 0;
-                                logSlotModelState("After drop");
                             } else {
-                                console.log("Drop rejected: invalid dropIndex=" + dropIndex);
                                 abortDrag();
                             }
                         } else {
-                            console.log("Drop rejected: no item under drop position");
                             abortDrag();
                         }
                     }
@@ -685,8 +646,6 @@ Item {
                     pressHighlight.opacity = 0;
                     autoScrollTimer.scrollSpeed = 0;
                     abortDrag();
-                    console.log("Drag canceled");
-                    logSlotModelState("After cancel");
                 }
             }
         }

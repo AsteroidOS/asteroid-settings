@@ -502,20 +502,12 @@ Item {
             property int visualIndex: index
             property bool isDragging: index === draggedItemIndex
 
-            Rectangle {
+            HighlightBar {
                 id: pressHighlight
-                width: delegateItem.width
-                height: rowHeight
-                color: "#222222"
-                opacity: 0
+                anchors.fill: parent
                 visible: type === "toggle"
                 z: -1
-                Behavior on opacity {
-                    NumberAnimation {
-                        duration: 100
-                        easing.type: Easing.InOutQuad
-                    }
-                }
+                forceOn: dragArea.pressed
             }
 
             Label {
@@ -714,7 +706,6 @@ Item {
 
                 onPressed: {
                     startPos = Qt.point(mouse.x, mouse.y);
-                    pressHighlight.opacity = 0.2;
                     longPressTimer.start();
                 }
 
@@ -771,7 +762,6 @@ Item {
 
                 onReleased: {
                     // Reset highlight first
-                    pressHighlight.opacity = 0;
                     longPressTimer.stop();
 
                     if (draggedItemIndex !== -1) {
@@ -808,7 +798,6 @@ Item {
 
                 onCanceled: {
                     longPressTimer.stop();
-                    pressHighlight.opacity = 0;
                     autoScrollTimer.scrollSpeed = 0;
                     abortDrag();
                 }
@@ -825,10 +814,9 @@ Item {
         property string text: ""
         property string icon: ""
 
-        Rectangle {
+        HighlightBar {
             anchors.fill: parent
-            color: "#222222"
-            opacity: 0.5
+            forceOn: dragProxy.visible
         }
 
         Icon {

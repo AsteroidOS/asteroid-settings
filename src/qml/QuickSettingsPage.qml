@@ -80,6 +80,7 @@ Item {
     property int fixedRowLength: 2
     property real dragYOffset: 0
     property string draggedToggleId: ""
+    property bool crossRowMoveInProgress: false
 
     function safeGet(obj, prop, defaultValue) {
         return obj && obj[prop] !== undefined ? obj[prop] : defaultValue;
@@ -271,28 +272,37 @@ Item {
         }
         // Handle slider to fixed move
         else if (draggedItemIndex > sliderLabelIndex && targetIndex < sliderLabelIndex) {
+            crossRowMoveInProgress = true;
             var targetToggleId = slotModel.get(targetIndex).toggleId;
-            // Move dragged toggle to target index
+
+            // Use move with animation for both operations
             slotModel.move(draggedItemIndex, targetIndex, 1);
             slotModel.setProperty(targetIndex, "listView", "fixed");
-            // Move displaced toggle to slider row
-            slotModel.move(targetIndex + 1, sliderLabelIndex + 1, 1);
-            slotModel.setProperty(sliderLabelIndex + 1, "listView", "slider");
+
+            // Add a slight delay before the second move to let animation start
+            moveTimer.targetToggleIndex = targetIndex + 1;
+            moveTimer.newPosition = sliderLabelIndex + 1;
+            moveTimer.start();
+
             draggedItemIndex = targetIndex;
         }
         // Handle fixed to slider move
         else if (draggedItemIndex < sliderLabelIndex && targetIndex > sliderLabelIndex && targetIndex < optionsLabelIndex) {
+            crossRowMoveInProgress = true;
             var targetToggleId = slotModel.get(targetIndex).toggleId;
-            // Move dragged toggle to target index
+
+            // Use move with animation for both operations
             slotModel.move(draggedItemIndex, targetIndex, 1);
             slotModel.setProperty(targetIndex, "listView", "slider");
-            // Move displaced toggle to fixed row
-            slotModel.move(targetIndex - 1, draggedItemIndex, 1);
-            slotModel.setProperty(draggedItemIndex, "listView", "fixed");
+
+            // Add a slight delay before the second move to let animation start
+            moveTimer.targetToggleIndex = targetIndex - 1;
+            moveTimer.newPosition = draggedItemIndex;
+            moveTimer.start();
+
             draggedItemIndex = targetIndex;
         }
 
-        ensureSliderLabelPosition();
         saveConfiguration();
         slotList.forceLayout();
     }
@@ -313,6 +323,30 @@ Item {
         targetIndex = -1;
         dragProxy.visible = false;
         autoScrollTimer.scrollSpeed = 0;
+    }
+
+    Timer {
+        id: moveTimer
+        interval: 50  // Short delay to allow animation to start
+        repeat: false
+        property int targetToggleIndex: -1
+        property int newPosition: -1
+
+        onTriggered: {
+            if (targetToggleIndex >= 0 && newPosition >= 0) {
+                slotModel.move(targetToggleIndex, newPosition, 1);
+                slotModel.setProperty(newPosition, "listView", newPosition < findSliderLabelIndex() ? "fixed" : "slider");
+                targetToggleIndex = -1;
+                newPosition = -1;
+
+                // Ensure slider label stays in place
+                ensureSliderLabelPosition();
+                saveConfiguration();
+
+                // Reset cross-row flag
+                crossRowMoveInProgress = false;
+            }
+        }
     }
 
     ListView {
@@ -364,6 +398,23 @@ Item {
         }
 
         displaced: Transition {
+            NumberAnimation {
+                properties: "y"
+                duration: 200
+                easing.type: Easing.InOutQuad
+            }
+        }
+
+        add: Transition {
+            NumberAnimation {
+                properties: "y,opacity"
+                from: 0
+                duration: 200
+                easing.type: Easing.InOutQuad
+            }
+        }
+
+        move: Transition {
             NumberAnimation {
                 properties: "y"
                 duration: 200

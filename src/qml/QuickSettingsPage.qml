@@ -355,7 +355,9 @@ Item {
                 }
                 if (Math.abs(scrollSpeed) > 0.1) {
                     var newContentY = slotList.contentY + scrollSpeed;
-                    newContentY = Math.max(0, Math.min(newContentY, slotList.contentHeight - slotList.height));
+                    // Allow contentY to go negative to account for header
+                    var minContentY = -title.height;
+                    newContentY = Math.max(minContentY, Math.min(newContentY, slotList.contentHeight - slotList.height));
                     slotList.contentY = newContentY;
                 }
             }
@@ -577,6 +579,8 @@ Item {
                     if (draggedItemIndex !== -1) {
                         var pos = mapToItem(slotList, mouse.x, mouse.y);
                         dragProxy.y = pos.y - dragYOffset;
+
+                        // Adjust scroll calculations to account for header
                         var distFromTop = pos.y;
                         var distFromBottom = slotList.height - pos.y;
                         if (distFromTop < autoScrollTimer.scrollThreshold) {
@@ -586,25 +590,33 @@ Item {
                         } else {
                             autoScrollTimer.scrollSpeed = 0;
                         }
+
+                        // Account for header when calculating drop position
                         var dropY = pos.y + slotList.contentY;
-                        var itemUnder = slotList.itemAt(slotList.width / 2, dropY);
-                        if (itemUnder && itemUnder.visualIndex !== undefined) {
-                            var dropIndex = itemUnder.visualIndex;
-                            var optionsIndex = findOptionsLabelIndex();
-                            if (slotModel.get(dropIndex).type !== "label" &&
-                                slotModel.get(dropIndex).type !== "config" &&
-                                dropIndex !== draggedItemIndex &&
-                                dropIndex < optionsIndex) {
-                                var targetY = itemUnder.y + itemUnder.height / 2;
-                                if (dropY < targetY && dropIndex > 0) {
-                                    var prevItem = slotModel.get(dropIndex - 1);
-                                    if (prevItem.type !== "label") {
-                                        dropIndex -= 1;
+                        var headerAdjustedDropY = dropY;
+
+                        // Only try to get an item if we're below the header
+                        if (dropY >= 0) {
+                            var itemUnder = slotList.itemAt(slotList.width / 2, dropY);
+                            if (itemUnder && itemUnder.visualIndex !== undefined) {
+                                // Rest of your drag logic remains the same
+                                var dropIndex = itemUnder.visualIndex;
+                                var optionsIndex = findOptionsLabelIndex();
+                                if (slotModel.get(dropIndex).type !== "label" &&
+                                    slotModel.get(dropIndex).type !== "config" &&
+                                    dropIndex !== draggedItemIndex &&
+                                    dropIndex < optionsIndex) {
+                                    var targetY = itemUnder.y + itemUnder.height / 2;
+                                    if (dropY < targetY && dropIndex > 0) {
+                                        var prevItem = slotModel.get(dropIndex - 1);
+                                        if (prevItem.type !== "label") {
+                                            dropIndex -= 1;
+                                        }
                                     }
-                                }
-                                if (dropIndex !== targetIndex) {
-                                    targetIndex = dropIndex;
-                                    moveItems();
+                                    if (dropIndex !== targetIndex) {
+                                        targetIndex = dropIndex;
+                                        moveItems();
+                                    }
                                 }
                             }
                         }
@@ -617,28 +629,36 @@ Item {
                     if (draggedItemIndex !== -1) {
                         var pos = mapToItem(slotList, mouse.x, mouse.y);
                         var dropY = pos.y + slotList.contentY;
-                        var itemUnder = slotList.itemAt(slotList.width / 2, dropY);
-                        if (itemUnder && itemUnder.visualIndex !== undefined) {
-                            var dropIndex = itemUnder.visualIndex;
-                            var optionsIndex = findOptionsLabelIndex();
-                            var sliderLabelIndex = findSliderLabelIndex();
-                            if (slotModel.get(dropIndex).type !== "label" &&
-                                slotModel.get(dropIndex).type !== "config" &&
-                                dropIndex !== draggedItemIndex &&
-                                dropIndex < optionsIndex &&
-                                dropIndex !== sliderLabelIndex) {
-                                targetIndex = dropIndex;
-                                moveItems();
-                                dragProxy.visible = false;
-                                draggedItemIndex = -1;
-                                targetIndex = -1;
+
+                        // Only process drop if we're below the header
+                        if (dropY >= 0) {
+                            var itemUnder = slotList.itemAt(slotList.width / 2, dropY);
+                            if (itemUnder && itemUnder.visualIndex !== undefined) {
+                                var dropIndex = itemUnder.visualIndex;
+                                var optionsIndex = findOptionsLabelIndex();
+                                var sliderLabelIndex = findSliderLabelIndex();
+                                if (slotModel.get(dropIndex).type !== "label" &&
+                                    slotModel.get(dropIndex).type !== "config" &&
+                                    dropIndex !== draggedItemIndex &&
+                                    dropIndex < optionsIndex &&
+                                    dropIndex !== sliderLabelIndex) {
+                                    targetIndex = dropIndex;
+                                    moveItems();
+                                    dragProxy.visible = false;
+                                    draggedItemIndex = -1;
+                                    targetIndex = -1;
+                                } else {
+                                    abortDrag();
+                                }
                             } else {
                                 abortDrag();
                             }
                         } else {
+                            // We're in header area, abort drag
                             abortDrag();
                         }
                     }
+                    pressHighlight.opacity = 0;
                 }
 
                 onCanceled: {

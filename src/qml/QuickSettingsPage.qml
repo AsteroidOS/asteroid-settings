@@ -584,9 +584,9 @@ Item {
                         var distFromTop = pos.y;
                         var distFromBottom = slotList.height - pos.y;
                         if (distFromTop < autoScrollTimer.scrollThreshold) {
-                            autoScrollTimer.scrollSpeed = -15 * (1 - distFromTop / autoScrollTimer.scrollThreshold);
+                            autoScrollTimer.scrollSpeed = -25 * (1 - distFromTop / autoScrollTimer.scrollThreshold);
                         } else if (distFromBottom < autoScrollTimer.scrollThreshold) {
-                            autoScrollTimer.scrollSpeed = 15 * (1 - distFromBottom / autoScrollTimer.scrollThreshold);
+                            autoScrollTimer.scrollSpeed = 25 * (1 - distFromBottom / autoScrollTimer.scrollThreshold);
                         } else {
                             autoScrollTimer.scrollSpeed = 0;
                         }
@@ -626,6 +626,10 @@ Item {
                 }
 
                 onReleased: {
+                    // Reset highlight first
+                    pressHighlight.opacity = 0;
+                    longPressTimer.stop();
+
                     if (draggedItemIndex !== -1) {
                         var pos = mapToItem(slotList, mouse.x, mouse.y);
                         var dropY = pos.y + slotList.contentY;
@@ -644,21 +648,16 @@ Item {
                                     dropIndex !== sliderLabelIndex) {
                                     targetIndex = dropIndex;
                                     moveItems();
-                                    dragProxy.visible = false;
-                                    draggedItemIndex = -1;
-                                    targetIndex = -1;
-                                } else {
-                                    abortDrag();
                                 }
-                            } else {
-                                abortDrag();
                             }
-                        } else {
-                            // We're in header area, abort drag
-                            abortDrag();
                         }
+
+                        // Always end the drag operation, regardless of where it was dropped
+                        dragProxy.visible = false;
+                        draggedItemIndex = -1;
+                        targetIndex = -1;
+                        autoScrollTimer.scrollSpeed = 0;
                     }
-                    pressHighlight.opacity = 0;
                 }
 
                 onCanceled: {

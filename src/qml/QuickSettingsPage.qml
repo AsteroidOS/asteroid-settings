@@ -16,12 +16,18 @@
  */
 
 import QtQuick 2.9
+import QtGraphicalEffects 1.15
 import org.asteroid.controls 1.0
 import org.asteroid.utils 1.0
 import Nemo.Configuration 1.0
+import Nemo.Mce 1.0
 
 Item {
     id: settingsPage
+
+    MceBatteryLevel { id: batteryChargePercentage }
+    MceBatteryState { id: batteryChargeState }
+    MceChargerType { id: mceChargerType }
 
     // ConfigurationValue for toggle arrays
     ConfigurationValue {
@@ -57,7 +63,8 @@ Item {
         defaultValue: {
             "batteryBottom": true,
             "batteryAnimation": true,
-            "batteryColored": false
+            "batteryColored": false,
+            "particleDesign": "diamonds"
         }
     }
 
@@ -81,6 +88,9 @@ Item {
     property real dragYOffset: 0
     property string draggedToggleId: ""
     property bool crossRowMoveInProgress: false
+
+    // Available particle designs for cycling
+    property var particleDesigns: ["diamonds", "bubbles", "logos", "flashes"]
 
     function safeGet(obj, prop, defaultValue) {
         return obj && obj[prop] !== undefined ? obj[prop] : defaultValue;
@@ -198,8 +208,10 @@ Item {
 
         slotModel.append({ type: "label", labelText: qsTrId("id-options"), toggleId: "", listView: "" });
         slotModel.append({ type: "config", labelText: qsTrId("id-battery-bottom"), toggleId: "", listView: "" });
-        slotModel.append({ type: "config", labelText: qsTrId("id-battery-animation"), toggleId: "", listView: "" });
         slotModel.append({ type: "config", labelText: qsTrId("id-battery-colored"), toggleId: "", listView: "" });
+        slotModel.append({ type: "config", labelText: qsTrId("id-battery-animation"), toggleId: "", listView: "" });
+        slotModel.append({ type: "cycler", labelText: qsTrId("id-particle-design"), toggleId: "", listView: "" });
+        slotModel.append({ type: "display", labelText: qsTrId("id-battery-preview"), toggleId: "", listView: "" });
 
         saveConfiguration();
     }
@@ -245,7 +257,7 @@ Item {
                 return i;
             }
         }
-        return slotModel.count - 4;
+        return slotModel.count - 6; // Adjust for new cycler item
     }
 
     function ensureSliderLabelPosition() {
@@ -256,8 +268,9 @@ Item {
     }
 
     function isValidDropPosition(dropIndex) {
-        // Always prevent dropping on labels and config items
-        if (slotModel.get(dropIndex).type !== "toggle") {
+        // Prevent dropping on labels, config, cycler, and display items
+        var item = slotModel.get(dropIndex);
+        if (item.type !== "toggle") {
             return false;
         }
 
@@ -498,7 +511,11 @@ Item {
         delegate: Item {
             id: delegateItem
             width: slotList.width
-            height: type === "label" ? labelHeight : type === "config" ? Math.max(rowHeight * 2, childrenRect.height) : rowHeight
+            height: type === "label" ? labelHeight :
+                    type === "config" ? Math.max(rowHeight * 2, childrenRect.height) :
+                    type === "cycler" ? Math.max(rowHeight * 2, childrenRect.height) :
+                    type === "display" ? Math.max(rowHeight * 2, childrenRect.height) :
+                    rowHeight
             property int visualIndex: index
             property bool isDragging: index === draggedItemIndex
 
@@ -547,6 +564,166 @@ Item {
                         newOptions.batteryColored = checked;
                     }
                     options.value = newOptions;
+                }
+            }
+
+            OptionCycler {
+                visible: type === "cycler"
+                width: delegateItem.width
+                height: Math.max(rowHeight * 2, implicitHeight)
+                title: qsTr("Tap to cycle particle designs")
+                configObject: options.value
+                configKey: "particleDesign"
+                valueArray: particleDesigns
+                currentValue: options.value.particleDesign
+                opacity: options.value.batteryAnimation ? 1.0 : 0.5
+                onValueChanged: {
+                    var newOptions = Object.assign({}, options.value);
+                    newOptions.particleDesign = value;
+                    options.value = newOptions;
+                }
+            }
+
+            Item {
+                id: batteryMeter
+                visible: type === "display"
+                width: delegateItem.width
+                height: Math.max(rowHeight * 2, batteryDisplay.height + Dims.l(2))
+                anchors.horizontalCenter: parent.horizontalCenter
+
+                Item {
+                    id: batteryDisplay
+                    width: Dims.l(28) * 1.8
+                    height: Dims.l(8)
+                    anchors {
+                        top: parent.top
+                        horizontalCenter: parent.horizontalCenter
+                        topMargin: Dims.l(2)
+                    }
+
+                    Rectangle {
+                        id: batteryOutline
+                        width: parent.width
+                        height: parent.height
+                        color: "#FFF"
+                        opacity: 0.2
+                        radius: height / 2
+                    }
+
+                    Rectangle {
+                        id: batteryFill
+                        height: parent.height
+                        width: {
+                            var baseWidth = parent.width * (batteryChargePercentage.percent / 100)
+                            if (mceChargerType.type != MceChargerType.None && options.value.batteryAnimation && batteryFill.isVisible) {
+                                var waveAmplitude = parent.width * 0.05
+                                return baseWidth + waveAmplitude * Math.sin(waveTime)
+                            }
+                            return baseWidth
+                        }
+                        color: {
+                            if (!options.value.batteryColored) return "#FFF"
+                            var percent = batteryChargePercentage.percent
+                            if (percent > 50) return Qt.rgba(0, 1, 0, 0.5) // Green
+                            if (percent > 20) {
+                                // Interpolate green (#00FF00) to orange (#FFA500) from 50% to 20%
+                                var t = (50 - percent) / 30 // Normalize to 0 (50%) to 1 (20%)
+                                return Qt.rgba(t, 1 - (t * 0.35), 0, 0.5) // Green to orange
+                            }
+                            // Interpolate orange (#FFA500) to red (#FF0000) from 20% to 0%
+                            var t = (20 - percent) / 20 // Normalize to 0 (20%) to 1 (0%)
+                            return Qt.rgba(1, 0.65 * (1 - t), 0, 0.5) // Orange to red
+                        }
+                        anchors.left: parent.left
+                        opacity: 0.5
+                        clip: true
+
+                        property real waveTime: 0
+                        property bool isVisible: settingsPage.visible && Qt.application.active
+
+                        NumberAnimation on waveTime {
+                            id: waveAnimation
+                            running: mceChargerType.type != MceChargerType.None && batteryFill.isVisible
+                            from: 0
+                            to: 2 * Math.PI
+                            duration: 1500
+                            loops: Animation.Infinite
+                        }
+
+                        SequentialAnimation on opacity {
+                            running: mceChargerType.type == MceChargerType.None && options.value.batteryAnimation && batteryChargePercentage.percent < 30 && batteryFill.isVisible
+                            loops: Animation.Infinite
+                            NumberAnimation { to: 1.0; duration: 500; easing.type: Easing.InOutQuad }
+                            NumberAnimation { to: 0.6; duration: 500; easing.type: Easing.InOutQuad }
+                        }
+
+                        Item {
+                            id: particleContainer
+                            anchors.fill: parent
+                            visible: options.value.batteryAnimation
+
+                            property int particleCount: 8
+                            property real particleLifetime: mceChargerType.type != MceChargerType.None ? 600 : 2000
+                            property bool isCharging: mceChargerType.type != MceChargerType.None
+
+                            function createParticle() {
+                                var component = Qt.createComponent("QuickSettingsBatteryParticle.qml");
+                                if (component.status === Component.Ready) {
+                                    var isCharging = mceChargerType.type != MceChargerType.None;
+                                    var particleLifetime = isCharging ? 600 : 1200;
+                                    var pathLength = isCharging ? batteryFill.width / 2 : batteryFill.width;
+                                    var maxSize = batteryFill.height / 2;
+                                    var minSize = batteryFill.height / 6;
+
+                                    var startX = isCharging ?
+                                        Math.random() * batteryFill.width / 2 :
+                                        batteryFill.width - (Math.random() * batteryFill.width / 2);
+
+                                    var endX = isCharging ?
+                                        startX + pathLength :
+                                        startX - pathLength;
+
+                                    var startY = Math.random() * batteryFill.height;
+                                    var size = minSize + Math.random() * (maxSize - minSize);
+
+                                    var designType = options.value.particleDesign || "diamonds";
+
+                                    var particle = component.createObject(particleContainer, {
+                                        "x": startX,
+                                        "y": startY,
+                                        "targetX": endX,
+                                        "maxSize": size,
+                                        "lifetime": particleLifetime,
+                                        "isCharging": isCharging,
+                                        "design": designType
+                                    });
+                                }
+                            }
+
+                            Timer {
+                                id: particleTimer
+                                interval: batteryFill.width > 0 ?
+                                    particleContainer.particleLifetime / particleContainer.particleCount : 1000
+                                running: batteryFill.width > 0 && options.value.batteryAnimation && batteryFill.isVisible
+                                repeat: true
+                                triggeredOnStart: true
+                                onTriggered: {
+                                    if (batteryFill.width > 0 && batteryFill.isVisible) {
+                                        particleContainer.createParticle();
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    layer.enabled: true
+                    layer.effect: OpacityMask {
+                        maskSource: Item {
+                            width: batteryDisplay.width
+                            height: batteryDisplay.height
+                            Rectangle { anchors.fill: parent; radius: batteryOutline.radius }
+                        }
+                    }
                 }
             }
 
@@ -616,15 +793,13 @@ Item {
                 height: Dims.w(14)
                 radius: width / 2
                 color: "#222222"
-                // Update opacity to handle both inactive and unavailable states
                 opacity: {
-                    if (type !== "toggle") return 0;
                     if (toggleId === "") return 0;
                     var toggle = findToggle(toggleId);
-                    if (!toggle || !toggle.available) return 0.3; // Unavailable toggle
-                    return toggleEnabled.value[toggleId] ? 0.7 : 0.3; // Active vs inactive
+                    if (!toggle || !toggle.available) return 0.3;
+                    return toggleEnabled.value[toggleId] ? 0.7 : 0.3;
                 }
-                visible: type === "toggle" && !isDragging
+                visible: type === "toggle" && toggleId !== "" && !isDragging
                 anchors {
                     verticalCenter: parent.verticalCenter
                     left: checkmarkIcon.right
@@ -637,12 +812,11 @@ Item {
                     height: Dims.w(10)
                     anchors.centerIn: parent
                     color: "#ffffff"
-                    // Update opacity to handle both inactive and unavailable states
                     opacity: {
                         if (toggleId === "") return 0;
                         var toggle = findToggle(toggleId);
-                        if (!toggle || !toggle.available) return 0.5; // Unavailable toggle
-                        return toggleEnabled.value[toggleId] ? 1.0 : 0.5; // Active vs inactive
+                        if (!toggle || !toggle.available) return 0.5;
+                        return toggleEnabled.value[toggleId] ? 1.0 : 0.5;
                     }
                     visible: toggleId !== ""
                 }
@@ -651,14 +825,13 @@ Item {
             Label {
                 text: getToggleName(toggleId)
                 color: "#ffffff"
-                // Update opacity to handle both inactive and unavailable states
                 opacity: {
                     if (toggleId === "") return 0;
                     var toggle = findToggle(toggleId);
-                    if (!toggle || !toggle.available) return 0.5; // Unavailable toggle
-                    return toggleEnabled.value[toggleId] ? 1.0 : 0.5; // Active vs inactive
+                    if (!toggle || !toggle.available) return 0.5;
+                    return toggleEnabled.value[toggleId] ? 1.0 : 0.5;
                 }
-                visible: type === "toggle" && !isDragging
+                visible: type === "toggle" && toggleId !== "" && !isDragging
                 anchors {
                     verticalCenter: parent.verticalCenter
                     left: iconRectangle.right
@@ -676,7 +849,7 @@ Item {
                         if (toggle && toggle.available) {
                             draggedItemIndex = index;
                             targetIndex = index;
-                            draggedToggleId = toggleId; // Store dragged toggle ID
+                            draggedToggleId = toggleId;
                             var itemPos = delegateItem.mapToItem(slotList, 0, 0);
                             dragProxy.x = 0;
                             dragProxy.y = itemPos.y;
@@ -714,7 +887,6 @@ Item {
                         var pos = mapToItem(slotList, mouse.x, mouse.y);
                         dragProxy.y = pos.y - dragYOffset;
 
-                        // Adjust scroll calculations to account for header
                         var distFromTop = pos.y;
                         var distFromBottom = slotList.height - pos.y;
                         if (distFromTop < autoScrollTimer.scrollThreshold) {
@@ -725,17 +897,14 @@ Item {
                             autoScrollTimer.scrollSpeed = 0;
                         }
 
-                        // Account for header when calculating drop position
                         var dropY = pos.y + slotList.contentY;
 
-                        // Only try to get an item if we're below the header
                         if (dropY >= 0) {
                             var itemUnder = slotList.itemAt(slotList.width / 2, dropY);
                             if (itemUnder && itemUnder.visualIndex !== undefined) {
                                 var dropIndex = itemUnder.visualIndex;
                                 var optionsIndex = findOptionsLabelIndex();
 
-                                // Check if this is a valid drop position
                                 if (dropIndex !== draggedItemIndex &&
                                     dropIndex < optionsIndex &&
                                     isValidDropPosition(dropIndex)) {
@@ -761,14 +930,12 @@ Item {
                 }
 
                 onReleased: {
-                    // Reset highlight first
                     longPressTimer.stop();
 
                     if (draggedItemIndex !== -1) {
                         var pos = mapToItem(slotList, mouse.x, mouse.y);
                         var dropY = pos.y + slotList.contentY;
 
-                        // Only process drop if we're below the header
                         if (dropY >= 0) {
                             var itemUnder = slotList.itemAt(slotList.width / 2, dropY);
                             if (itemUnder && itemUnder.visualIndex !== undefined) {
@@ -776,7 +943,6 @@ Item {
                                 var optionsIndex = findOptionsLabelIndex();
                                 var sliderLabelIndex = findSliderLabelIndex();
 
-                                // Only allow dropping if it's a valid position
                                 if (dropIndex !== draggedItemIndex &&
                                     dropIndex < optionsIndex &&
                                     dropIndex !== sliderLabelIndex &&
@@ -788,7 +954,6 @@ Item {
                             }
                         }
 
-                        // Always end the drag operation
                         dragProxy.visible = false;
                         draggedItemIndex = -1;
                         targetIndex = -1;

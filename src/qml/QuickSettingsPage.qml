@@ -36,11 +36,11 @@ Item {
         defaultValue: ["lockButton", "settingsButton"]
     }
 
-    ConfigurationValue {
-        id: sliderToggles
-        key: "/desktop/asteroid/quicksettings/slider"
-        defaultValue: ["brightnessToggle", "bluetoothToggle", "hapticsToggle", "wifiToggle", "soundToggle", "cinemaToggle", "powerOffToggle", "rebootToggle"]
-    }
+ConfigurationValue {
+    id: sliderToggles
+    key: "/desktop/asteroid/quicksettings/slider"
+    defaultValue: ["brightnessToggle", "bluetoothToggle", "hapticsToggle", "wifiToggle", "soundToggle", "cinemaToggle", "aodToggle", "powerOffToggle", "rebootToggle"]
+}
 
     ConfigurationValue {
         id: toggleEnabled
@@ -54,6 +54,7 @@ Item {
             "wifiToggle": true,
             "soundToggle": true,
             "cinemaToggle": true,
+            "aodToggle": true,
             "powerOffToggle": true,
             "rebootToggle": true
         }
@@ -80,6 +81,7 @@ Item {
         { id: "wifiToggle", name: qsTrId("id-toggle-wifi"), icon: "ios-wifi-outline", available: DeviceInfo.hasWlan },
         { id: "soundToggle", name: qsTrId("id-toggle-sound"), icon: "ios-sound-indicator-high", available: DeviceInfo.hasSpeaker },
         { id: "cinemaToggle", name: qsTrId("id-toggle-cinema"), icon: "ios-film-outline", available: true },
+        { id: "aodToggle", name: qsTrId("id-always-on-display"), icon: "ios-watch-aod-on", available: true },
         { id: "powerOffToggle", name: qsTrId("id-toggle-power-off"), icon: "ios-power", available: true },
         { id: "rebootToggle", name: qsTrId("id-toggle-reboot"), icon: "ios-refresh", available: true }
     ]

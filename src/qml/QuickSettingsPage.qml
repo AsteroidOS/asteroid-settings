@@ -39,7 +39,7 @@ Item {
     ConfigurationValue {
         id: sliderToggles
         key: "/desktop/asteroid/quicksettings/slider"
-        defaultValue: ["brightnessToggle", "bluetoothToggle", "hapticsToggle", "wifiToggle", "soundToggle", "cinemaToggle"]
+        defaultValue: ["brightnessToggle", "bluetoothToggle", "hapticsToggle", "wifiToggle", "soundToggle", "cinemaToggle", "powerOffToggle", "rebootToggle"]
     }
 
     ConfigurationValue {
@@ -53,7 +53,9 @@ Item {
             "hapticsToggle": true,
             "wifiToggle": true,
             "soundToggle": true,
-            "cinemaToggle": true
+            "cinemaToggle": true,
+            "powerOffToggle": true,
+            "rebootToggle": true
         }
     }
 
@@ -77,7 +79,9 @@ Item {
         { id: "hapticsToggle", name: qsTrId("id-toggle-haptics"), icon: "ios-watch-vibrating", available: true },
         { id: "wifiToggle", name: qsTrId("id-toggle-wifi"), icon: "ios-wifi-outline", available: DeviceInfo.hasWlan },
         { id: "soundToggle", name: qsTrId("id-toggle-sound"), icon: "ios-sound-indicator-high", available: DeviceInfo.hasSpeaker },
-        { id: "cinemaToggle", name: qsTrId("id-toggle-cinema"), icon: "ios-film-outline", available: true }
+        { id: "cinemaToggle", name: qsTrId("id-toggle-cinema"), icon: "ios-film-outline", available: true },
+        { id: "powerOffToggle", name: qsTrId("id-toggle-power-off"), icon: "ios-power", available: true },
+        { id: "rebootToggle", name: qsTrId("id-toggle-reboot"), icon: "ios-refresh", available: true }
     ]
 
     property real rowHeight: Dims.h(16)
@@ -127,13 +131,19 @@ Item {
             var toggleA = findToggle(a);
             var toggleB = findToggle(b);
 
-            // First sort by availability (available first)
+            // Sort by availability (available first)
             if (toggleA && toggleB) {
                 if (toggleA.available && !toggleB.available) return -1;
                 if (!toggleA.available && toggleB.available) return 1;
+                // For available toggles, sort by toggleOptions index
+                if (toggleA.available && toggleB.available) {
+                    var indexA = toggleOptions.findIndex(function(t) { return t.id === a; });
+                    var indexB = toggleOptions.findIndex(function(t) { return t.id === b; });
+                    return indexA - indexB;
+                }
+                // For unavailable toggles, sort alphabetically by ID
+                return a.localeCompare(b);
             }
-
-            // Then keep original order
             return 0;
         });
     }

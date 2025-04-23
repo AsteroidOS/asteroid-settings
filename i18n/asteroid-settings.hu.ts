@@ -88,10 +88,6 @@
         <source>About</source>
         <translation>Az okosóráról</translation>
     </message>
-    <message id="id-app-launcher-name">
-        <source>Settings</source>
-        <translation>Beállítások</translation>
-    </message>
     <message id="id-charging-only">
         <source>Charging only</source>
         <translation>Csak töltés</translation>
@@ -198,7 +194,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-wifi">
-        <source>WiFi</source>
+        <source>Wifi Toggle</source>
+        <oldsource>WiFi</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-sound">
@@ -211,15 +208,17 @@
     </message>
     <message id="id-fixed-row">
         <source>Fixed Row Content</source>
+        <oldsource>Fixed Row</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-sliding-row">
         <source>Sliding Row Content</source>
+        <oldsource>Sliding Row</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-battery-bottom">
-        <source>Battery aligned to bottom?</source>
-        <oldsource>Battery Meter aligned to bottom?</oldsource>
+        <source>Battery Meter aligned to bottom?</source>
+        <oldsource>Battery aligned to bottom?</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-options">
@@ -232,6 +231,22 @@
     </message>
     <message id="id-battery-colored">
         <source>Enable colored battery?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-power-off">
+        <source>Poweroff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-reboot">
+        <source>Reboot</source>
+        <translation type="unfinished">Újraindítás</translation>
+    </message>
+    <message id="id-particle-design">
+        <source>Tap to cycle particle design</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-battery-preview">
+        <source>Battery preview</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

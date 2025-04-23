@@ -73,16 +73,27 @@ ConfigurationValue {
 
     // Toggle definitions
     property var toggleOptions: [
+        //% "Lock Button"
         { id: "lockButton", name: qsTrId("id-toggle-lock"), icon: "ios-unlock", available: true },
+        //% "Settings Link"
         { id: "settingsButton", name: qsTrId("id-toggle-settings"), icon: "ios-settings", available: true },
+        //% "Brightness"
         { id: "brightnessToggle", name: qsTrId("id-toggle-brightness"), icon: "ios-sunny", available: true },
+        //% "Bluetooth"
         { id: "bluetoothToggle", name: qsTrId("id-toggle-bluetooth"), icon: "ios-bluetooth", available: true },
+        //% "Vibration"
         { id: "hapticsToggle", name: qsTrId("id-toggle-haptics"), icon: "ios-watch-vibrating", available: true },
+        //% "Wifi Toggle"
         { id: "wifiToggle", name: qsTrId("id-toggle-wifi"), icon: "ios-wifi-outline", available: DeviceInfo.hasWlan },
+        //% "Mute Sound"
         { id: "soundToggle", name: qsTrId("id-toggle-sound"), icon: "ios-sound-indicator-high", available: DeviceInfo.hasSpeaker },
+        //% "Cinema Mode"
         { id: "cinemaToggle", name: qsTrId("id-toggle-cinema"), icon: "ios-film-outline", available: true },
+        //% "AoD Toggle"
         { id: "aodToggle", name: qsTrId("id-always-on-display"), icon: "ios-watch-aod-on", available: true },
+        //% "Poweroff"
         { id: "powerOffToggle", name: qsTrId("id-toggle-power-off"), icon: "ios-power", available: true },
+        //% "Reboot"
         { id: "rebootToggle", name: qsTrId("id-toggle-reboot"), icon: "ios-refresh", available: true }
     ]
 
@@ -158,7 +169,7 @@ ConfigurationValue {
 
         // Sort slider toggles by availability
         var sortedSliderToggles = sortToggles(sliderToggles.value);
-
+        //% "Fixed Row Content"
         slotModel.append({ type: "label", labelText: qsTrId("id-fixed-row"), toggleId: "", listView: "" });
         for (var i = 0; i < sortedFixedToggles.length && i < fixedRowLength; i++) {
             if (sortedFixedToggles[i]) {
@@ -205,7 +216,7 @@ ConfigurationValue {
             // Safety check to prevent infinite loop
             if (countFixedToggles() >= fixedRowLength) break;
         }
-
+        //% "Sliding Row Content"
         slotModel.append({ type: "label", labelText: qsTrId("id-sliding-row"), toggleId: "", listView: "" });
         for (i = 0; i < sortedSliderToggles.length; i++) {
             if (sortedSliderToggles[i] && !isToggleInFixedRow(sortedSliderToggles[i])) {
@@ -217,12 +228,17 @@ ConfigurationValue {
                 });
             }
         }
-
+        //% "Options"
         slotModel.append({ type: "label", labelText: qsTrId("id-options"), toggleId: "", listView: "" });
+        //% "Battery Meter aligned to bottom?"
         slotModel.append({ type: "config", labelText: qsTrId("id-battery-bottom"), toggleId: "", listView: "" });
+        //% "Enable colored battery?"
         slotModel.append({ type: "config", labelText: qsTrId("id-battery-colored"), toggleId: "", listView: "" });
+        //% "Show battery charge animation?"
         slotModel.append({ type: "config", labelText: qsTrId("id-battery-animation"), toggleId: "", listView: "" });
+        //% "Tap to cycle particle design"
         slotModel.append({ type: "cycler", labelText: qsTrId("id-particle-design"), toggleId: "", listView: "" });
+        //% "Battery preview"
         slotModel.append({ type: "display", labelText: qsTrId("id-battery-preview"), toggleId: "", listView: "" });
 
         saveConfiguration();
@@ -584,7 +600,7 @@ ConfigurationValue {
                 visible: type === "cycler"
                 width: delegateItem.width
                 height: Math.max(rowHeight * 2, implicitHeight)
-                title: qsTr("Tap to cycle particle designs")
+                title: qsTrId("id-particle-design")
                 configObject: options.value
                 configKey: "particleDesign"
                 valueArray: particleDesigns
@@ -1098,6 +1114,7 @@ ConfigurationValue {
 
     PageHeader {
         id: title
+        //% "Quick Settings"
         text: qsTrId("id-quicksettings-page")
     }
 }

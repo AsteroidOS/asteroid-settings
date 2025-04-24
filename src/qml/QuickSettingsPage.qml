@@ -105,8 +105,6 @@ ConfigurationValue {
     property real dragYOffset: 0
     property string draggedToggleId: ""
     property var particleDesigns: ["diamonds", "bubbles", "logos", "flashes"]
-    property int lastMoveProcessed: 0
-    property int moveThreshold: 16
 
     function safeGet(obj, prop, defaultValue) {
         return obj && obj[prop] !== undefined ? obj[prop] : defaultValue;
@@ -429,7 +427,7 @@ ConfigurationValue {
         interactive: draggedItemIndex === -1
         model: slotModel
         cacheBuffer: Dims.h(60)
-        maximumFlickVelocity: 800
+        maximumFlickVelocity: 1000
         boundsBehavior: Flickable.OvershootBounds
 
         header: Item {
@@ -446,23 +444,20 @@ ConfigurationValue {
             id: autoScrollTimer
             interval: 16
             repeat: true
-            running: draggedItemIndex !== -1
+            running: draggedItemIndex !== -1 && scrollSpeed != 0 // Only run when needed
             property real scrollSpeed: 0
             property real scrollThreshold: slotList.height * 0.2
 
             onTriggered: {
-                if (draggedItemIndex === -1) {
+                if (draggedItemIndex === -1 || Math.abs(scrollSpeed) <= 0.1) {
                     scrollSpeed = 0;
-                    running = false;
                     return;
                 }
-                if (Math.abs(scrollSpeed) > 0.1) {
-                    var newContentY = slotList.contentY + scrollSpeed;
-                    // Allow contentY to go negative to account for header
-                    var minContentY = -title.height;
-                    newContentY = Math.max(minContentY, Math.min(newContentY, slotList.contentHeight - slotList.height));
-                    slotList.contentY = newContentY;
-                }
+
+                var newContentY = slotList.contentY + scrollSpeed;
+                var minContentY = -title.height;
+                newContentY = Math.max(minContentY, Math.min(newContentY, slotList.contentHeight - slotList.height));
+                slotList.contentY = newContentY;
             }
         }
 
@@ -869,21 +864,24 @@ ConfigurationValue {
                 id: longPressTimer
                 interval: 400
                 repeat: false
+                property bool dragPending: false
+
                 onTriggered: {
-                    if (type === "toggle") {
-                        var toggle = findToggle(toggleId);
-                        if (toggle && toggle.available) {
-                            draggedItemIndex = index;
-                            targetIndex = index;
-                            draggedToggleId = toggleId;
-                            var itemPos = delegateItem.mapToItem(slotList, 0, 0);
-                            dragProxy.x = 0;
-                            dragProxy.y = itemPos.y;
-                            dragProxy.text = getToggleName(toggleId);
-                            dragProxy.icon = getToggleIcon(toggleId);
-                            dragProxy.visible = true;
-                            dragYOffset = dragArea.startPos.y;
-                        }
+                    if (!dragPending || type !== "toggle") return;
+                    dragPending = false;
+
+                    var toggle = findToggle(toggleId);
+                    if (toggle && toggle.available) {
+                        draggedItemIndex = index;
+                        targetIndex = index;
+                        draggedToggleId = toggleId;
+                        var itemPos = delegateItem.mapToItem(slotList, 0, 0);
+                        dragProxy.x = 0;
+                        dragProxy.y = itemPos.y;
+                        dragProxy.text = getToggleName(toggleId);
+                        dragProxy.icon = getToggleIcon(toggleId);
+                        dragProxy.visible = true;
+                        dragYOffset = dragArea.startPos.y;
                     }
                 }
             }
@@ -905,6 +903,7 @@ ConfigurationValue {
 
                 onPressed: {
                     startPos = Qt.point(mouse.x, mouse.y);
+                    longPressTimer.dragPending = true;
                     longPressTimer.start();
                 }
 

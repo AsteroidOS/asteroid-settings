@@ -23,7 +23,7 @@ import Nemo.Configuration 1.0
 import Nemo.Mce 1.0
 
 Item {
-    id: settingsPage
+    id: quickSettingsPage
 
     MceBatteryLevel { id: batteryChargePercentage }
     MceBatteryState { id: batteryChargeState }
@@ -104,9 +104,6 @@ ConfigurationValue {
     property int fixedRowLength: 2
     property real dragYOffset: 0
     property string draggedToggleId: ""
-    property bool crossRowMoveInProgress: false
-
-    // Available particle designs for cycling
     property var particleDesigns: ["diamonds", "bubbles", "logos", "flashes"]
 
     function safeGet(obj, prop, defaultValue) {
@@ -384,37 +381,16 @@ ConfigurationValue {
             slotModel.setProperty(targetIndex, "listView", targetIndex < sliderLabelIndex ? "fixed" : "slider");
             draggedItemIndex = targetIndex;
         }
-        // Handle slider to fixed move
-        else if (draggedItemIndex > sliderLabelIndex && targetIndex < sliderLabelIndex) {
-            crossRowMoveInProgress = true;
-            var targetToggleId = slotModel.get(targetIndex).toggleId;
-
-            // Use move with animation for both operations
+        // Handle cross-row moves (both directions)
+        else if ((draggedItemIndex > sliderLabelIndex && targetIndex < sliderLabelIndex) ||
+                (draggedItemIndex < sliderLabelIndex && targetIndex > sliderLabelIndex && targetIndex < optionsLabelIndex)) {
+            // Direct move without the two-step process
             slotModel.move(draggedItemIndex, targetIndex, 1);
-            slotModel.setProperty(targetIndex, "listView", "fixed");
-
-            // Add a slight delay before the second move to let animation start
-            moveTimer.targetToggleIndex = targetIndex + 1;
-            moveTimer.newPosition = sliderLabelIndex + 1;
-            moveTimer.start();
-
+            slotModel.setProperty(targetIndex, "listView", targetIndex < sliderLabelIndex ? "fixed" : "slider");
             draggedItemIndex = targetIndex;
-        }
-        // Handle fixed to slider move
-        else if (draggedItemIndex < sliderLabelIndex && targetIndex > sliderLabelIndex && targetIndex < optionsLabelIndex) {
-            crossRowMoveInProgress = true;
-            var targetToggleId = slotModel.get(targetIndex).toggleId;
 
-            // Use move with animation for both operations
-            slotModel.move(draggedItemIndex, targetIndex, 1);
-            slotModel.setProperty(targetIndex, "listView", "slider");
-
-            // Add a slight delay before the second move to let animation start
-            moveTimer.targetToggleIndex = targetIndex - 1;
-            moveTimer.newPosition = draggedItemIndex;
-            moveTimer.start();
-
-            draggedItemIndex = targetIndex;
+            // Ensure slider label stays in place
+            ensureSliderLabelPosition();
         }
 
         saveConfiguration();
@@ -437,30 +413,6 @@ ConfigurationValue {
         targetIndex = -1;
         dragProxy.visible = false;
         autoScrollTimer.scrollSpeed = 0;
-    }
-
-    Timer {
-        id: moveTimer
-        interval: 50  // Short delay to allow animation to start
-        repeat: false
-        property int targetToggleIndex: -1
-        property int newPosition: -1
-
-        onTriggered: {
-            if (targetToggleIndex >= 0 && newPosition >= 0) {
-                slotModel.move(targetToggleIndex, newPosition, 1);
-                slotModel.setProperty(newPosition, "listView", newPosition < findSliderLabelIndex() ? "fixed" : "slider");
-                targetToggleIndex = -1;
-                newPosition = -1;
-
-                // Ensure slider label stays in place
-                ensureSliderLabelPosition();
-                saveConfiguration();
-
-                // Reset cross-row flag
-                crossRowMoveInProgress = false;
-            }
-        }
     }
 
     ListView {
@@ -665,7 +617,7 @@ ConfigurationValue {
                         clip: true
 
                         property real waveTime: 0
-                        property bool isVisible: settingsPage.visible && Qt.application.active
+                        property bool isVisible: quickSettingsPage.visible && Qt.application.active
 
                         NumberAnimation on waveTime {
                             id: waveAnimation
@@ -976,20 +928,25 @@ ConfigurationValue {
                             if (itemUnder && itemUnder.visualIndex !== undefined) {
                                 var dropIndex = itemUnder.visualIndex;
                                 var optionsIndex = findOptionsLabelIndex();
+                                var sliderLabelIndex = findSliderLabelIndex();
 
+                                // Handle drop position calculation
                                 if (dropIndex !== draggedItemIndex &&
-                                    dropIndex < optionsIndex &&
-                                    isValidDropPosition(dropIndex)) {
+                                    dropIndex !== sliderLabelIndex &&
+                                    dropIndex < optionsIndex) {
 
                                     var targetY = itemUnder.y + itemUnder.height / 2;
                                     if (dropY < targetY && dropIndex > 0) {
                                         var prevItem = slotModel.get(dropIndex - 1);
-                                        if (prevItem.type !== "label" && isValidDropPosition(dropIndex - 1)) {
+                                        if (prevItem.type !== "label" &&
+                                            ((prevItem.listView === "fixed" && dropIndex < sliderLabelIndex) ||
+                                            (prevItem.listView === "slider" && dropIndex > sliderLabelIndex))) {
                                             dropIndex -= 1;
                                         }
                                     }
 
-                                    if (dropIndex !== targetIndex) {
+                                    // Check if valid before setting targetIndex
+                                    if (isValidDropPosition(dropIndex) && dropIndex !== targetIndex) {
                                         targetIndex = dropIndex;
                                         moveItems();
                                     }

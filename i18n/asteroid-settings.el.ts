@@ -22,7 +22,7 @@
     <message id="id-sound-percentage">
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">Ένταση ήχου %1%</translation>
+        <translation>Ένταση ήχου</translation>
     </message>
     <message id="id-adb-mode">
         <source>ADB Mode</source>
@@ -94,7 +94,7 @@
     </message>
     <message id="id-charging-only">
         <source>Charging only</source>
-        <translation>Φόρτιση μόνο</translation>
+        <translation>Μόνο φόρτιση</translation>
     </message>
     <message id="id-display-page">
         <source>Display</source>
@@ -118,42 +118,42 @@
     </message>
     <message id="id-burn-in-protection">
         <source>Burn in protection</source>
-        <translation type="unfinished"></translation>
+        <translation>Προστασία από εγκαύματα</translation>
     </message>
     <message id="id-launcher-page">
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Εκκινητής</translation>
     </message>
     <message id="id-automatic-brightness">
         <source>Automatic brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Αυτόματη φωτεινότητα</translation>
     </message>
     <message id="id-nightstand-page">
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>Κομοδίνο</translation>
     </message>
     <message id="id-nightstand-enable">
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενεργοποίηση</translation>
     </message>
     <message id="id-nightstand-brightness">
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation type="unfinished">Φωτεινότητα</translation>
+        <translation>Φωτεινότητα</translation>
     </message>
     <message id="id-nightstand-delay">
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Καθυστέρηση</translation>
     </message>
     <message id="id-nightstand-watchface">
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Επιλέξτε πρόσοψη ρολογιού</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσαρμοσμένη πρόσοψη ρολογιού</translation>
     </message>
     <message id="id-ssh-mode">
         <source>SSH Mode</source>
@@ -161,115 +161,115 @@
     </message>
     <message id="id-timezone-page">
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation>Ζώνη ώρας</translation>
     </message>
     <message id="id-power-page">
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation>Δύναμη</translation>
     </message>
     <message id="id-reboot-bootloader-page">
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Bootloader (φορτωτής εκκίνησης)</translation>
     </message>
 </context>
 <context>
     <name>AboutPage</name>
     <message>
         <source>Build ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID κατασκευής</translation>
     </message>
     <message>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>Κωδική ονομασία</translation>
     </message>
     <message>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>Όνομα κεντρικού υπολογιστή</translation>
     </message>
     <message>
         <source>WLAN MAC</source>
-        <translation type="unfinished"></translation>
+        <translation>WLAN MAC</translation>
     </message>
     <message>
         <source>IMEI</source>
-        <translation type="unfinished"></translation>
+        <translation>IMEI</translation>
     </message>
     <message>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>Σειριακός αριθμός</translation>
     </message>
     <message>
         <source>Total disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Συνολικός χώρος στο δίσκο</translation>
     </message>
     <message>
         <source>%L1</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1</translation>
     </message>
     <message>
         <source>Available disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Διαθέσιμος χώρος στο δίσκο</translation>
     </message>
     <message>
         <source>Display size</source>
-        <translation type="unfinished"></translation>
+        <translation>Μέγεθος οθόνης</translation>
     </message>
     <message>
         <source>Kernel version</source>
-        <translation type="unfinished"></translation>
+        <translation>Έκδοση πυρήνα</translation>
     </message>
     <message>
         <source>Qt version</source>
-        <translation type="unfinished"></translation>
+        <translation>Έκδοση Qt</translation>
     </message>
     <message>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB</translation>
     </message>
     <message>
         <source>%L1 GB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB (%L2 %)</translation>
     </message>
     <message>
         <source>%L1W x %L2H</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1W x %L2H</translation>
     </message>
     <message>
         <source>Uptime</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρόνος διαθεσιμότητας</translation>
     </message>
     <message>
         <source>%L1 days %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 ημέρες %L2</translation>
     </message>
     <message>
         <source>Threads</source>
-        <translation type="unfinished"></translation>
+        <translation>Νήματα</translation>
     </message>
     <message>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished"></translation>
+        <translation>Φορτία 1,5,15 λεπτών</translation>
     </message>
     <message>
         <source>%L1, %L2, %L3</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1, %L2, %L3</translation>
     </message>
     <message>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Συνολική μνήμη</translation>
     </message>
     <message>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB</translation>
     </message>
     <message>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Ελεύθερη μνήμη</translation>
     </message>
     <message>
         <source>%L1 MB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB (%L2 %)</translation>
     </message>
 </context>
 </TS>

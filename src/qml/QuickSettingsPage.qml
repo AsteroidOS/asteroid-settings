@@ -105,6 +105,8 @@ ConfigurationValue {
     property real dragYOffset: 0
     property string draggedToggleId: ""
     property var particleDesigns: ["diamonds", "bubbles", "logos", "flashes"]
+    property int lastMoveProcessed: 0
+    property int moveThreshold: 16
 
     function safeGet(obj, prop, defaultValue) {
         return obj && obj[prop] !== undefined ? obj[prop] : defaultValue;
@@ -426,8 +428,8 @@ ConfigurationValue {
         clip: true
         interactive: draggedItemIndex === -1
         model: slotModel
-        cacheBuffer: Dims.h(100) // Cache 100% of screen height
-        maximumFlickVelocity: 1000 // Smooth scrolling
+        cacheBuffer: Dims.h(60)
+        maximumFlickVelocity: 800
         boundsBehavior: Flickable.OvershootBounds
 
         header: Item {
@@ -467,8 +469,8 @@ ConfigurationValue {
         displaced: Transition {
             NumberAnimation {
                 properties: "y"
-                duration: 200
-                easing.type: Easing.InOutQuad
+                duration: 150
+                easing.type: Easing.OutQuad
             }
         }
 
@@ -476,16 +478,16 @@ ConfigurationValue {
             NumberAnimation {
                 properties: "y,opacity"
                 from: 0
-                duration: 200
-                easing.type: Easing.InOutQuad
+                duration: 150
+                easing.type: Easing.OutQuad
             }
         }
 
         move: Transition {
             NumberAnimation {
                 properties: "y"
-                duration: 200
-                easing.type: Easing.InOutQuad
+                duration: 150
+                easing.type: Easing.OutQuad
             }
         }
 

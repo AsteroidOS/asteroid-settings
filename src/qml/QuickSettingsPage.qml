@@ -36,11 +36,11 @@ Item {
         defaultValue: ["lockButton", "settingsButton"]
     }
 
-ConfigurationValue {
-    id: sliderToggles
-    key: "/desktop/asteroid/quicksettings/slider"
-    defaultValue: ["brightnessToggle", "bluetoothToggle", "hapticsToggle", "wifiToggle", "soundToggle", "cinemaToggle", "aodToggle", "powerOffToggle", "rebootToggle"]
-}
+    ConfigurationValue {
+        id: sliderToggles
+        key: "/desktop/asteroid/quicksettings/slider"
+        defaultValue: ["brightnessToggle", "bluetoothToggle", "hapticsToggle", "wifiToggle", "soundToggle", "cinemaToggle", "aodToggle", "powerOffToggle", "rebootToggle", "musicToggle", "flashlightToggle"]
+    }
 
     ConfigurationValue {
         id: toggleEnabled
@@ -56,7 +56,9 @@ ConfigurationValue {
             "cinemaToggle": true,
             "aodToggle": true,
             "powerOffToggle": true,
-            "rebootToggle": true
+            "rebootToggle": true,
+            "musicToggle": false,
+            "flashlightToggle": false
         }
     }
 
@@ -71,7 +73,6 @@ ConfigurationValue {
         }
     }
 
-    // Toggle definitions
     property var toggleOptions: [
         //% "Lock Button"
         { id: "lockButton", name: qsTrId("id-toggle-lock"), icon: "ios-unlock", available: true },
@@ -94,7 +95,11 @@ ConfigurationValue {
         //% "Poweroff"
         { id: "powerOffToggle", name: qsTrId("id-toggle-power-off"), icon: "ios-power", available: true },
         //% "Reboot"
-        { id: "rebootToggle", name: qsTrId("id-toggle-reboot"), icon: "ios-refresh", available: true }
+        { id: "rebootToggle", name: qsTrId("id-toggle-reboot"), icon: "ios-refresh", available: true },
+        //% "Music Link"
+        { id: "musicToggle", name: qsTrId("id-toggle-music"), icon: "ios-musical-notes-outline", available: true },
+        //% "Flashlight Link"
+        { id: "flashlightToggle", name: qsTrId("id-toggle-flashlight"), icon: "ios-bulb-outline", available: true }
     ]
 
     property real rowHeight: Dims.h(16)
@@ -105,18 +110,32 @@ ConfigurationValue {
     property real dragYOffset: 0
     property string draggedToggleId: ""
     property var particleDesigns: ["diamonds", "bubbles", "logos", "flashes"]
+    property var toggleCache: ({})
 
     function safeGet(obj, prop, defaultValue) {
         return obj && obj[prop] !== undefined ? obj[prop] : defaultValue;
     }
 
     function findToggle(toggleId) {
+        // Return cached result if available
+        if (toggleCache[toggleId] !== undefined) {
+            return toggleCache[toggleId];
+        }
+
         for (var i = 0; i < toggleOptions.length; i++) {
             if (toggleOptions[i].id === toggleId) {
+                // Cache the result
+                toggleCache[toggleId] = toggleOptions[i];
                 return toggleOptions[i];
             }
         }
+        // Cache null result too
+        toggleCache[toggleId] = null;
         return null;
+    }
+    // Clear cache when toggleOptions changes
+    onToggleOptionsChanged: {
+        toggleCache = ({});
     }
 
     function getToggleName(toggleId) {

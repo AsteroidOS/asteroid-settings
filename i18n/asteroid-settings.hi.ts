@@ -21,43 +21,43 @@
     <message id="id-disconnected">
         <location filename="../src/qml/BluetoothPage.qml" line="34"/>
         <source>Not connected</source>
-        <translation>जुड़ा नहीं है</translation>
+        <translation>कनेक्टेड नहीं है</translation>
     </message>
     <message id="id-sound-percentage">
         <location filename="../src/qml/SoundPage.qml" line="72"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">वॉल्यूम %1%</translation>
+        <translation>वॉल्यूम</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../src/qml/USBPage.qml" line="30"/>
         <source>Charging only</source>
-        <translation>केवल चार्ज हो रहा है</translation>
+        <translation>केवल चार्जिंग</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../src/qml/USBPage.qml" line="32"/>
         <source>ADB Mode</source>
-        <translation>ए डी बी मोड</translation>
+        <translation>ADB मोड</translation>
     </message>
     <message id="id-ssh-mode">
         <location filename="../src/qml/USBPage.qml" line="34"/>
         <source>SSH Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>SSH मोड</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../src/qml/USBPage.qml" line="36"/>
         <source>MTP Mode</source>
-        <translation>एम टी पी मोड</translation>
+        <translation>MTP मोड</translation>
     </message>
     <message id="id-12h-format">
         <location filename="../src/qml/UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation>12 एच फॉर्मेट का प्रयोग करो:</translation>
+        <translation>12 घंटे वाला फॉर्मेट का प्रयोग करो:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../src/qml/UnitsPage.qml" line="57"/>
         <source>Use Fahrenheit:</source>
-        <translation>फारेनहाइट का प्रयोग करो</translation>
+        <translation>फारेनहाइट का उपयोग करें:</translation>
     </message>
     <message id="id-time-page">
         <location filename="../src/qml/main.qml" line="110"/>
@@ -69,7 +69,7 @@
         <location filename="../src/qml/DatePage.qml" line="97"/>
         <location filename="../src/qml/main.qml" line="116"/>
         <source>Date</source>
-        <translation>तारीख</translation>
+        <translation>दिनांक</translation>
     </message>
     <message id="id-language-page">
         <location filename="../src/qml/LanguagePage.qml" line="64"/>
@@ -91,7 +91,7 @@
     <message id="id-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="55"/>
         <source>Brightness</source>
-        <translation type="unfinished">चमक</translation>
+        <translation>चमक</translation>
     </message>
     <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="75"/>
@@ -101,12 +101,12 @@
     <message id="id-always-on-display">
         <location filename="../src/qml/DisplayPage.qml" line="84"/>
         <source>Always on Display</source>
-        <translation>हमेशा डिस्प्ले पर</translation>
+        <translation>हमेशा डिस्प्ले ऑन (AOD)</translation>
     </message>
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="94"/>
         <source>Burn in protection</source>
-        <translation>डिस्प्ले जलने का संरक्षण बचाव</translation>
+        <translation>डिस्प्ले जलने का बचाव</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="105"/>
@@ -122,7 +122,7 @@
         <location filename="../src/qml/main.qml" line="134"/>
         <location filename="../src/qml/TimezonePage.qml" line="130"/>
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation>टाइम ज़ोन</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../src/qml/main.qml" line="85"/>
@@ -160,18 +160,18 @@
         <location filename="../src/qml/main.qml" line="146"/>
         <location filename="../src/qml/USBPage.qml" line="85"/>
         <source>USB</source>
-        <translation>यु एस बी</translation>
+        <translation>USB</translation>
     </message>
     <message id="id-power-page">
         <location filename="../src/qml/main.qml" line="152"/>
         <location filename="../src/qml/PowerPage.qml" line="87"/>
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation>पॉवर</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../src/qml/PowerPage.qml" line="29"/>
         <source>Power Off</source>
-        <translation>बिजली बंद है</translation>
+        <translation>पॉवर ऑफ</translation>
     </message>
     <message id="id-reboot-page">
         <location filename="../src/qml/PowerPage.qml" line="31"/>
@@ -182,7 +182,7 @@
         <location filename="../src/qml/PowerPage.qml" line="33"/>
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>बूटलोडर</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="158"/>
@@ -214,7 +214,7 @@
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="141"/>
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>कस्टम वॉचफेस</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="152"/>
@@ -238,17 +238,17 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="87"/>
         <source>Host name</source>
-        <translation>होस्ट  का नाम</translation>
+        <translation>होस्ट का नाम</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="88"/>
         <source>WLAN MAC</source>
-        <translation>व्लान लैन</translation>
+        <translation>WLAN MAC</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="89"/>
         <source>IMEI</source>
-        <translation>आई एम ई आई</translation>
+        <translation>IMEI</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="90"/>
@@ -263,22 +263,22 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>%L1 GB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 GB (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>%L1W x %L2H</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1W x %L2H</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>Uptime</source>
-        <translation type="unfinished"></translation>
+        <translation>Uptime/अपटाइम</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
@@ -293,37 +293,37 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>Threads</source>
-        <translation type="unfinished"></translation>
+        <translation>Threads</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished"></translation>
+        <translation>1,5,15 मिनट का लोड</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>%L1, %L2, %L3</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1, %L2, %L3</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>कुल मेमोरी</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>खाली मेमोरी</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>%L1 MB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
@@ -333,17 +333,17 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>Display size</source>
-        <translation>प्रदर्शन का आकार</translation>
+        <translation>डिस्प्ले साइज़</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="96"/>
         <source>Kernel version</source>
-        <translation>कर्नेल वर्जन</translation>
+        <translation>Kernel version</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="97"/>
         <source>Qt version</source>
-        <translation>क्यू टी वर्जन</translation>
+        <translation>Qt version</translation>
     </message>
 </context>
 </TS>

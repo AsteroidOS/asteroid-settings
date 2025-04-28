@@ -159,7 +159,7 @@
     </message>
     <message id="id-quicksettings-page">
         <location filename="../src/qml/main.qml" line="97"/>
-        <location filename="../src/qml/QuickSettingsPage.qml" line="1118"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="939"/>
         <source>Quick Settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -225,109 +225,119 @@
         <translation>시계 모드 선택</translation>
     </message>
     <message id="id-toggle-lock">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="77"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="78"/>
         <source>Lock Button</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-settings">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="79"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="80"/>
         <source>Settings Link</source>
         <oldsource>Settings Shortcut</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-brightness">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="81"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="82"/>
         <source>Brightness</source>
         <translation type="unfinished">밝기</translation>
     </message>
     <message id="id-toggle-bluetooth">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="83"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="84"/>
         <source>Bluetooth</source>
         <translation type="unfinished">블루투스</translation>
     </message>
     <message id="id-toggle-haptics">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="85"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="86"/>
         <source>Vibration</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-wifi">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="87"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="88"/>
         <source>Wifi Toggle</source>
         <oldsource>WiFi</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-sound">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="89"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="90"/>
         <source>Mute Sound</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-cinema">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="91"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="92"/>
         <source>Cinema Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-power-off">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="95"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="96"/>
         <source>Poweroff</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-reboot">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="97"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="98"/>
         <source>Reboot</source>
         <translation type="unfinished">재시동</translation>
     </message>
+    <message id="id-toggle-music">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="100"/>
+        <source>Music Link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-flashlight">
+        <location filename="../src/qml/QuickSettingsPage.qml" line="102"/>
+        <source>Flashlight Link</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="id-fixed-row">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="173"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="189"/>
         <source>Fixed Row Content</source>
         <oldsource>Fixed Row</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-sliding-row">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="220"/>
-        <location filename="../src/qml/QuickSettingsPage.qml" line="253"/>
-        <location filename="../src/qml/QuickSettingsPage.qml" line="263"/>
-        <location filename="../src/qml/QuickSettingsPage.qml" line="275"/>
-        <location filename="../src/qml/QuickSettingsPage.qml" line="339"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="236"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="269"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="279"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="291"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="355"/>
         <source>Sliding Row Content</source>
         <oldsource>Sliding Row</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-options">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="232"/>
-        <location filename="../src/qml/QuickSettingsPage.qml" line="284"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="248"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="300"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-battery-bottom">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="234"/>
-        <location filename="../src/qml/QuickSettingsPage.qml" line="577"/>
-        <location filename="../src/qml/QuickSettingsPage.qml" line="588"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="250"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="545"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="556"/>
         <source>Battery Meter aligned to bottom?</source>
         <oldsource>Battery aligned to bottom?</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-battery-animation">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="238"/>
-        <location filename="../src/qml/QuickSettingsPage.qml" line="579"/>
-        <location filename="../src/qml/QuickSettingsPage.qml" line="590"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="254"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="547"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="558"/>
         <source>Show battery charge animation?</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-particle-design">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="240"/>
-        <location filename="../src/qml/QuickSettingsPage.qml" line="603"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="256"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="571"/>
         <source>Tap to cycle particle design</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-battery-preview">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="242"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="258"/>
         <source>Battery preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-battery-colored">
-        <location filename="../src/qml/QuickSettingsPage.qml" line="236"/>
-        <location filename="../src/qml/QuickSettingsPage.qml" line="581"/>
-        <location filename="../src/qml/QuickSettingsPage.qml" line="592"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="252"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="549"/>
+        <location filename="../src/qml/QuickSettingsPage.qml" line="560"/>
         <source>Enable colored battery?</source>
         <translation type="unfinished"></translation>
     </message>

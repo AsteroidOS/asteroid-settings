@@ -249,6 +249,14 @@
         <source>Battery preview</source>
         <translation type="unfinished"></translation>
     </message>
+    <message id="id-toggle-music">
+        <source>Music Link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-flashlight">
+        <source>Flashlight Link</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AboutPage</name>

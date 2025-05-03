@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2022 - Timo Könnecke <github.com/eLtMosen>
+ * Copyright (C) 2023 - Arseniy Movshev <dodoradio@outlook.com>
+ *               2022 - Timo Könnecke <github.com/eLtMosen>
  *               2022 - Darrel Griët <dgriet@gmail.com>
  *               2015 - Florent Revest <revestflo@gmail.com>
  *
@@ -108,7 +109,7 @@ Item {
 
                         z: 2
                         visible: !previewPng.previewExists
-                        active: visible
+                        active: visible || (watchface === folderModel.folder + "/" + fileName)
                         anchors.centerIn: parent
                         width: Math.min(parent.width, parent.height)
                         height: width
@@ -118,7 +119,11 @@ Item {
 
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: watchface = folderModel.folder + "/" + fileName
+                        onClicked: if ((watchface === folderModel.folder + "/" + fileName) && (typeof previewQml.item.settingsPage !== "undefined")) {
+				 layerStack.push(previewQml.item.settingsPage) 
+			} else {
+                        	watchface = folderModel.folder + "/" + fileName
+			}
                     }
 
                     Image {
@@ -151,28 +156,16 @@ Item {
                 }
 
                 Icon {
-                    name: "ios-checkmark-circle"
+                    name: "ios-settings-outline"
 
                     z: 100
-                    width: parent.width * .3
+                    width: parent.width*0.8
                     height: width
-                    visible: watchface === folderModel.folder + "/" + fileName
-                    anchors {
-                        bottom: parent.bottom
-                        bottomMargin: DeviceInfo.hasRoundScreen ?
-                                          -parent.height * .03 :
-                                          -parent.height * .08
-                        horizontalCenter: parent.horizontalCenter
-                        horizontalCenterOffset: index % 2 ?
-                                                    DeviceInfo.hasRoundScreen ?
-                                                        -parent.height * .45 :
-                                                        -parent.height * .40 :
-                                                        DeviceInfo.hasRoundScreen ?
-                                                            parent.height * .45 :
-                                                            parent.height * .40
-                    }
-
+                    visible: (watchface === folderModel.folder + "/" + fileName) && (typeof previewQml.item.settingsPage !== "undefined")
+                    anchors.centerIn: parent
                     layer.enabled: visible
+                    opacity: visible ? 0.4 : 0
+                    Behavior on opacity { NumberAnimation { duration: 100 } }
                     layer.effect: DropShadow {
                         transparentBorder: true
                         horizontalOffset: 2
@@ -180,6 +173,30 @@ Item {
                         radius: 8.0
                         samples: 17
                         color: "#88000000"
+                    }
+                }
+                Rectangle {
+                    id: textContainer
+                    anchors { 
+                        bottom: parent.bottom
+                        left: parent.left
+                        right: parent.right
+                        margins: parent.width*0.05
+                    }
+                    radius: height*0.4
+                    height: parent.height*0.17
+                    color: "#000000"
+                    opacity: 0.6
+                    visible: watchface === folderModel.folder + "/" + fileName
+                    Marquee {
+                        text: fileName.replace(".qml","")
+                        color: "#FFFFFF"
+                        anchors {
+                            fill: parent
+                            leftMargin: parent.width*0.05
+                            rightMargin: parent.width*0.05
+                        }
+                        font.pixelSize: parent.height*0.7
                     }
                 }
             }

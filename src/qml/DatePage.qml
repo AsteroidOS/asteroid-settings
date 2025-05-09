@@ -31,9 +31,9 @@ Item {
         id: dateSelector
         anchors {
             left: parent.left
-            leftMargin: DeviceInfo.hasRoundScreen ? Dims.w(5) : 0
+            leftMargin: DeviceSpecs.hasRoundScreen ? Dims.w(5) : 0
             right: parent.right
-            rightMargin: DeviceInfo.hasRoundScreen ? Dims.w(5) : 0
+            rightMargin: DeviceSpecs.hasRoundScreen ? Dims.w(5) : 0
             top: title.bottom
         }
         height: Dims.h(60)

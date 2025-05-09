@@ -32,7 +32,7 @@ Item {
     ConfigurationValue {
         id: useBip
         key: "/org/asteroidos/settings/use-burn-in-protection"
-        defaultValue: DeviceInfo.needsBurnInProtection
+        defaultValue: DeviceSpecs.needsBurnInProtection
     }
 
     ConfigurationValue {
@@ -98,7 +98,7 @@ Item {
             LabeledSwitch {
                 height: rowHeight
                 width: parent.width
-                visible: DeviceInfo.needsBurnInProtection
+                visible: DeviceSpecs.needsBurnInProtection
                 //% "Burn in protection"
                 text: qsTrId("id-burn-in-protection")
                 checked: useBip.value

@@ -84,7 +84,7 @@ Item {
                     height: grid.cellHeight
                     anchors.centerIn: parent
                     color: "transparent"
-                    radius: DeviceInfo.hasRoundScreen ?
+                    radius: DeviceSpecs.hasRoundScreen ?
                                 width :
                                 Dims.w(3)
                     clip: true
@@ -159,15 +159,15 @@ Item {
                     visible: watchface === folderModel.folder + "/" + fileName
                     anchors {
                         bottom: parent.bottom
-                        bottomMargin: DeviceInfo.hasRoundScreen ?
+                        bottomMargin: DeviceSpecs.hasRoundScreen ?
                                           -parent.height * .03 :
                                           -parent.height * .08
                         horizontalCenter: parent.horizontalCenter
                         horizontalCenterOffset: index % 2 ?
-                                                    DeviceInfo.hasRoundScreen ?
+                                                    DeviceSpecs.hasRoundScreen ?
                                                         -parent.height * .45 :
                                                         -parent.height * .40 :
-                                                        DeviceInfo.hasRoundScreen ?
+                                                        DeviceSpecs.hasRoundScreen ?
                                                             parent.height * .45 :
                                                             parent.height * .40
                     }

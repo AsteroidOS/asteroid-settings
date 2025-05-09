@@ -66,7 +66,7 @@ Application {
                 id: settingsColumn
                 anchors.fill: parent
 
-                Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? Dims.h(6) : Dims.h(2) }
+                Item { width: parent.width; height: DeviceSpecs.hasRoundScreen ? Dims.h(6) : Dims.h(2) }
 
                 ListItem {
                     //% "Display"
@@ -85,7 +85,7 @@ Application {
                     title: qsTrId("id-sound-page")
                     iconName: "ios-sound-outline"
                     onClicked: layerStack.push(soundLayer)
-                    visible: DeviceInfo.hasSpeaker
+                    visible: DeviceSpecs.hasSpeaker
                 }
                 ListItem {
                     //% "Wallpaper"
@@ -160,7 +160,7 @@ Application {
                     onClicked: layerStack.push(aboutLayer)
                 }
 
-                Item { width: parent.width; height: DeviceInfo.hasRoundScreen ? Dims.h(6) : Dims.h(2) }
+                Item { width: parent.width; height: DeviceSpecs.hasRoundScreen ? Dims.h(6) : Dims.h(2) }
             }
         }
     }

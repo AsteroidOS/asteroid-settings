@@ -82,9 +82,9 @@ Flickable {
         }
         Repeater {
             model: [
-                { label: qsTr("Build ID"), text: DeviceInfo.buildID },
-                { label: qsTr("Codename"), text: DeviceInfo.machineName },
-                { label: qsTr("Host name"), text: DeviceInfo.hostname },
+                { label: qsTr("Build ID"), text: DeviceSpecs.buildID },
+                { label: qsTr("Codename"), text: DeviceSpecs.machineName },
+                { label: qsTr("Host name"), text: DeviceSpecs.hostname },
                 { label: qsTr("WLAN MAC"), text: about.wlanMacAddress },
                 { label: qsTr("IMEI"), text: about.imei },
                 { label: qsTr("Serial number"), text: about.serial },

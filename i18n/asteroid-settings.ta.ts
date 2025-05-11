@@ -271,5 +271,13 @@
         <source>%L1 MB (%L2 %)</source>
         <translation>%L1 mb ( %இல்லை %)</translation>
     </message>
+    <message>
+        <source>Vendor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Model</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

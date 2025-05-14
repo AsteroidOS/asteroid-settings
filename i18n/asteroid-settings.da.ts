@@ -27,7 +27,7 @@
         <location filename="../src/qml/SoundPage.qml" line="72"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">Lydstyrke %1%</translation>
+        <translation>Lydstyrke</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../src/qml/USBPage.qml" line="30"/>
@@ -91,38 +91,38 @@
     <message id="id-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="55"/>
         <source>Brightness</source>
-        <translation type="unfinished">Lysstyrke</translation>
+        <translation>Lysstyrke</translation>
     </message>
     <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="75"/>
         <source>Automatic brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisk lysstyrke</translation>
     </message>
     <message id="id-always-on-display">
         <location filename="../src/qml/DisplayPage.qml" line="84"/>
         <source>Always on Display</source>
-        <translation type="unfinished">Skærm altid på</translation>
+        <translation>Skærm altid tændt</translation>
     </message>
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="94"/>
         <source>Burn in protection</source>
-        <translation type="unfinished"></translation>
+        <translation>Beskyttelse mod fastbrænding</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="105"/>
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilt-for-at-vågne</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="114"/>
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Tryk-for-at-vække</translation>
     </message>
     <message id="id-timezone-page">
         <location filename="../src/qml/main.qml" line="134"/>
         <location filename="../src/qml/TimezonePage.qml" line="130"/>
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation>Tidszone</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../src/qml/main.qml" line="85"/>
@@ -133,7 +133,7 @@
         <location filename="../src/qml/main.qml" line="79"/>
         <location filename="../src/qml/NightstandPage.qml" line="165"/>
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>Natbord</translation>
     </message>
     <message id="id-units-page">
         <location filename="../src/qml/main.qml" line="122"/>
@@ -154,7 +154,7 @@
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="104"/>
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Launcher</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="146"/>
@@ -166,7 +166,7 @@
         <location filename="../src/qml/main.qml" line="152"/>
         <location filename="../src/qml/PowerPage.qml" line="87"/>
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation>Strøm</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../src/qml/PowerPage.qml" line="29"/>
@@ -197,30 +197,30 @@
     <message id="id-nightstand-enable">
         <location filename="../src/qml/NightstandPage.qml" line="75"/>
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktiver</translation>
     </message>
     <message id="id-nightstand-brightness">
         <location filename="../src/qml/NightstandPage.qml" line="96"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation type="unfinished">Lysstyrke</translation>
+        <translation>Lysstyrke</translation>
     </message>
     <message id="id-nightstand-delay">
         <location filename="../src/qml/NightstandPage.qml" line="115"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Forsinke</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="141"/>
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilpasset urskive</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="152"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Vælg urskive</translation>
     </message>
 </context>
 <context>
@@ -233,12 +233,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="86"/>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>Kodenavn</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="87"/>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>Værtsnavn</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="88"/>
@@ -253,12 +253,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="90"/>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>Serienummer</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>Total disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Samlet diskplads</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
@@ -278,12 +278,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>Uptime</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppetid</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>%L1 days %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 dage %L2</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
@@ -293,12 +293,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>Threads</source>
-        <translation type="unfinished"></translation>
+        <translation>Tråde</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished"></translation>
+        <translation>1,5,15 minutters belastning</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
@@ -308,7 +308,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Samlet hukommelse</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
@@ -318,7 +318,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Ledig hukommelse</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
@@ -328,17 +328,17 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>Available disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilgængelig diskplads</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>Display size</source>
-        <translation type="unfinished"></translation>
+        <translation>Skærmstørrelse</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="96"/>
         <source>Kernel version</source>
-        <translation type="unfinished"></translation>
+        <translation>Kerneversion</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="97"/>

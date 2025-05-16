@@ -11,6 +11,7 @@
         <file>qml/NightstandPage.qml</file>
         <file>qml/NightstandWatchfacePage.qml</file>
         <file>qml/UnitsPage.qml</file>
+        <file>qml/QuickSettingsPage.qml</file>
         <file>qml/WallpaperPage.qml</file>
         <file>qml/WatchfacePage.qml</file>
         <file>qml/WatchfaceSelector.qml</file>

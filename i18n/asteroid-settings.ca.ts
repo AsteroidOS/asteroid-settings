@@ -22,7 +22,7 @@
     <message id="id-sound-percentage">
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">Volum %1%</translation>
+        <translation>Volum</translation>
     </message>
     <message id="id-adb-mode">
         <source>ADB Mode</source>
@@ -70,7 +70,7 @@
     </message>
     <message id="id-watchface-page">
         <source>Watchface</source>
-        <translation>Aspecte del rellotge</translation>
+        <translation>Caràtula</translation>
     </message>
     <message id="id-usb-page">
         <source>USB</source>
@@ -78,11 +78,11 @@
     </message>
     <message id="id-poweroff-page">
         <source>Power Off</source>
-        <translation>Apagar</translation>
+        <translation>Apaga</translation>
     </message>
     <message id="id-reboot-page">
         <source>Reboot</source>
-        <translation>Reiniciar</translation>
+        <translation>Reinicia</translation>
     </message>
     <message id="id-about-page">
         <source>About</source>
@@ -90,15 +90,15 @@
     </message>
     <message id="id-app-launcher-name">
         <source>Settings</source>
-        <translation>Configuració</translation>
+        <translation>Paràmetres</translation>
     </message>
     <message id="id-charging-only">
         <source>Charging only</source>
-        <translation>Només carregant-se</translation>
+        <translation>Només càrrega</translation>
     </message>
     <message id="id-display-page">
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Pantalla</translation>
     </message>
     <message id="id-brightness">
         <source>Brightness</source>
@@ -106,27 +106,27 @@
     </message>
     <message id="id-always-on-display">
         <source>Always on Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Pantalla sempre activa</translation>
     </message>
     <message id="id-tilt-to-wake">
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Activa en inclinar</translation>
     </message>
     <message id="id-tap-to-wake">
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Activa en prémer</translation>
     </message>
     <message id="id-burn-in-protection">
         <source>Burn in protection</source>
-        <translation type="unfinished"></translation>
+        <translation>Protecció contra imatge fantasma</translation>
     </message>
     <message id="id-launcher-page">
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Iniciador</translation>
     </message>
     <message id="id-automatic-brightness">
         <source>Automatic brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Brillantor automàtica</translation>
     </message>
     <message id="id-nightstand-page">
         <source>Nightstand</source>
@@ -134,12 +134,12 @@
     </message>
     <message id="id-nightstand-enable">
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>Activa</translation>
     </message>
     <message id="id-nightstand-brightness">
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation type="unfinished">Brillantor</translation>
+        <translation>Brillantor</translation>
     </message>
     <message id="id-nightstand-delay">
         <source>Delay</source>
@@ -149,11 +149,11 @@
     <message id="id-nightstand-watchface">
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Seleccioneu una caràtula</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>Caràtula personalitzada</translation>
     </message>
     <message id="id-ssh-mode">
         <source>SSH Mode</source>
@@ -161,16 +161,16 @@
     </message>
     <message id="id-timezone-page">
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation>Fus horari</translation>
     </message>
     <message id="id-power-page">
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation>Engegada</translation>
     </message>
     <message id="id-reboot-bootloader-page">
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Gestor d’arrencada</translation>
     </message>
 </context>
 <context>
@@ -181,23 +181,23 @@
     </message>
     <message>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom en codi</translation>
     </message>
     <message>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom de l’amfitrió</translation>
     </message>
     <message>
         <source>WLAN MAC</source>
-        <translation type="unfinished"></translation>
+        <translation>MAC WLAN</translation>
     </message>
     <message>
         <source>IMEI</source>
-        <translation type="unfinished"></translation>
+        <translation>IMEI</translation>
     </message>
     <message>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>Número de sèrie</translation>
     </message>
     <message>
         <source>Total disk space</source>
@@ -213,31 +213,31 @@
     </message>
     <message>
         <source>Display size</source>
-        <translation type="unfinished"></translation>
+        <translation>Mida de la pantalla</translation>
     </message>
     <message>
         <source>Kernel version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versió del nucli</translation>
     </message>
     <message>
         <source>Qt version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versió del Qt</translation>
     </message>
     <message>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1&#xa0;GB</translation>
     </message>
     <message>
         <source>%L1 GB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1&#xa0;GB (%L2&#xa0;%)</translation>
     </message>
     <message>
         <source>%L1W x %L2H</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1W × %L2H</translation>
     </message>
     <message>
         <source>Uptime</source>
-        <translation type="unfinished"></translation>
+        <translation>Temps d’activitat</translation>
     </message>
     <message>
         <source>%L1 days %L2</source>
@@ -245,7 +245,7 @@
     </message>
     <message>
         <source>Threads</source>
-        <translation type="unfinished"></translation>
+        <translation>Fils</translation>
     </message>
     <message>
         <source>1,5,15 Minute loads</source>
@@ -257,15 +257,15 @@
     </message>
     <message>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Memòria total</translation>
     </message>
     <message>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1&#xa0;MB</translation>
     </message>
     <message>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Memòria disponible</translation>
     </message>
     <message>
         <source>%L1 MB (%L2 %)</source>

@@ -106,7 +106,7 @@
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="94"/>
         <source>Burn in protection</source>
-        <translation>Protección contra quemaduras</translation>
+        <translation>Protección contra imagen fantasma</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="105"/>
@@ -122,7 +122,7 @@
         <location filename="../src/qml/main.qml" line="134"/>
         <location filename="../src/qml/TimezonePage.qml" line="130"/>
         <source>Time zone</source>
-        <translation>Zona horaria</translation>
+        <translation>Huso horario</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../src/qml/main.qml" line="85"/>
@@ -154,7 +154,7 @@
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="104"/>
         <source>Launcher</source>
-        <translation>Lanzadores</translation>
+        <translation>Iniciador</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="146"/>
@@ -182,7 +182,7 @@
         <location filename="../src/qml/PowerPage.qml" line="33"/>
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation>Xestor de arranque</translation>
+        <translation>Gestor de arranque</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="158"/>
@@ -192,7 +192,7 @@
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation>Ajustes</translation>
+        <translation>Configuración</translation>
     </message>
     <message id="id-nightstand-enable">
         <location filename="../src/qml/NightstandPage.qml" line="75"/>
@@ -228,17 +228,17 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="85"/>
         <source>Build ID</source>
-        <translation>Identificador de la compilación</translation>
+        <translation>Id. de compilación</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="86"/>
         <source>Codename</source>
-        <translation>Nombre clave</translation>
+        <translation>Nombre en clave</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="87"/>
         <source>Host name</source>
-        <translation>Nombre del host</translation>
+        <translation>Nombre de anfitrión</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="88"/>
@@ -273,7 +273,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>%L1W x %L2H</source>
-        <translation>%L1W x %L2H</translation>
+        <translation>%L1W × %L2H</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
@@ -318,7 +318,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>Free memory</source>
-        <translation>Memoria Libre</translation>
+        <translation>Memoria libre</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
@@ -338,12 +338,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="96"/>
         <source>Kernel version</source>
-        <translation>Versión del kernel</translation>
+        <translation>Versión del núcleo</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="97"/>
         <source>Qt version</source>
-        <translation>Versión Qt</translation>
+        <translation>Versión de Qt</translation>
     </message>
 </context>
 </TS>

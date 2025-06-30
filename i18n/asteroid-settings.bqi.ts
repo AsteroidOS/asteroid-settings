@@ -6,22 +6,22 @@
     <message id="id-bluetooth-on">
         <location filename="../src/qml/BluetoothPage.qml" line="28"/>
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>بۊلۊتۊس رۊشن</translation>
     </message>
     <message id="id-bluetooth-off">
         <location filename="../src/qml/BluetoothPage.qml" line="30"/>
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>بۊلۊتۊس کۊر</translation>
     </message>
     <message id="id-connected">
         <location filename="../src/qml/BluetoothPage.qml" line="32"/>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>منپیز وابیڌه</translation>
     </message>
     <message id="id-disconnected">
         <location filename="../src/qml/BluetoothPage.qml" line="34"/>
         <source>Not connected</source>
-        <translation type="unfinished"></translation>
+        <translation>منپیز نوابیڌه</translation>
     </message>
     <message id="id-sound-percentage">
         <location filename="../src/qml/SoundPage.qml" line="72"/>

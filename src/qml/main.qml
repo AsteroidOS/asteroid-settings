@@ -33,6 +33,7 @@ Application {
     Component { id: timezoneLayer;              TimezonePage   { } }
     Component { id: languageLayer;              LanguagePage   { } }
     Component { id: bluetoothLayer;             BluetoothPage  { } }
+    Component { id: wifiLayer;                  WiFiPage       { } }
     Component { id: displayLayer;               DisplayPage    { } }
     Component { id: soundLayer;                 SoundPage      { } }
     Component { id: nightstandLayer;            NightstandPage { } }
@@ -140,6 +141,55 @@ Application {
                     title: qsTrId("id-bluetooth-page")
                     iconName: "ios-bluetooth-outline"
                     onClicked: layerStack.push(bluetoothLayer)
+                }
+                ListItem {
+                    //% "WiFi"
+                    title: qsTrId("id-wifi-page")
+                    iconName: "ios-wifi-outline"
+                    onClicked: layerStack.push(wifiLayer)
+                }
+                ListItem {
+                    //% "Display"
+                    title: qsTrId("id-display-page")
+                    iconName: "ios-sunny-outline"
+                    onClicked: layerStack.push(displayLayer)
+                }
+                ListItem {
+                    //% "Sound"
+                    title: qsTrId("id-sound-page")
+                    iconName: "ios-volume-up"
+                    onClicked: layerStack.push(soundLayer)
+                    visible: DeviceInfo.hasSpeaker
+                }
+                ListItem {
+                    //% "Nightstand"
+                    title: qsTrId("id-nightstand-page")
+                    iconName: "ios-moon-outline"
+                    onClicked: layerStack.push(nightstandLayer)
+                }
+                ListItem {
+                    //% "Units"
+                    title: qsTrId("id-units-page")
+                    iconName: "ios-speedometer-outline"
+                    onClicked: layerStack.push(unitsLayer)
+                }
+                ListItem {
+                    //% "Wallpaper"
+                    title: qsTrId("id-wallpaper-page")
+                    iconName: "ios-images-outline"
+                    onClicked: layerStack.push(wallpaperLayer)
+                }
+                ListItem {
+                    //% "Watchface"
+                    title: qsTrId("id-watchface-page")
+                    iconName: "ios-color-wand-outline"
+                    onClicked: layerStack.push(watchfaceLayer)
+                }
+                ListItem {
+                    //% "Launcher"
+                    title: qsTrId("id-launcher-page")
+                    iconName: "ios-apps-outline"
+                    onClicked: layerStack.push(launcherLayer)
                 }
                 ListItem {
                     //% "USB"

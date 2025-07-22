@@ -86,7 +86,7 @@
         <location filename="../src/qml/DisplayPage.qml" line="123"/>
         <location filename="../src/qml/main.qml" line="73"/>
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>ディスプレイ</translation>
     </message>
     <message id="id-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="55"/>
@@ -122,7 +122,7 @@
         <location filename="../src/qml/main.qml" line="134"/>
         <location filename="../src/qml/TimezonePage.qml" line="130"/>
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation>時間帯</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../src/qml/main.qml" line="85"/>
@@ -149,7 +149,7 @@
     <message id="id-watchface-page">
         <location filename="../src/qml/main.qml" line="98"/>
         <source>Watchface</source>
-        <translation>ウォッチフェイス</translation>
+        <translation>文字盤</translation>
     </message>
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="104"/>

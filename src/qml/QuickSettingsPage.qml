@@ -312,7 +312,7 @@ Item {
     }
 
     function isValidDropPosition(dropIndex) {
-        // Prevent dropping on labels, config, cycler, and display items
+        // Prevent dropping on labels, config, cycler, or display items
         var item = slotModel.get(dropIndex);
         if (item.type !== "toggle") {
             return false;
@@ -320,6 +320,11 @@ Item {
 
         var sliderLabelIndex = findSliderLabelIndex();
         var optionsIndex = findOptionsLabelIndex();
+
+        // Prevent dropping in invalid sections
+        if (dropIndex === 0 || dropIndex === sliderLabelIndex || dropIndex >= optionsIndex) {
+            return false;
+        }
 
         // Prevent dropping below unavailable toggles
         var toggleSection = dropIndex < sliderLabelIndex ? "fixed" : "slider";
@@ -338,7 +343,7 @@ Item {
             }
         }
 
-        // If there's an unavailable toggle in this section and we're trying to drop below it
+        // Allow dropping at or before the last available toggle
         if (firstUnavailableIndex !== -1 && dropIndex >= firstUnavailableIndex) {
             return false;
         }
@@ -426,12 +431,12 @@ Item {
 
     function abortDrag() {
         if (draggedItemIndex !== -1) {
-            restoreOriginalOrder();
+            draggedItemIndex = -1;
+            targetIndex = -1;
+            dragProxy.visible = false;
+            autoScrollTimer.scrollSpeed = 0;
+            slotList.forceLayout();
         }
-        draggedItemIndex = -1;
-        targetIndex = -1;
-        dragProxy.visible = false;
-        autoScrollTimer.scrollSpeed = 0;
     }
 
     ListView {
@@ -794,11 +799,13 @@ Item {
                                 var optionsIndex = findOptionsLabelIndex();
                                 var sliderLabelIndex = findSliderLabelIndex();
 
-                                // Handle drop position calculation
-                                if (dropIndex !== draggedItemIndex &&
-                                    dropIndex !== sliderLabelIndex &&
-                                    dropIndex < optionsIndex) {
+                                // Adjust dropIndex for the last position in the sliding row
+                                if (dropIndex > sliderLabelIndex && dropIndex >= optionsIndex - 1) {
+                                    // If dropping below the last toggle, set dropIndex to the last valid toggle position
+                                    dropIndex = optionsIndex - 1;
+                                }
 
+                                if (dropIndex !== draggedItemIndex && isValidDropPosition(dropIndex)) {
                                     var targetY = itemUnder.y + itemUnder.height / 2;
                                     if (dropY < targetY && dropIndex > 0) {
                                         var prevItem = slotModel.get(dropIndex - 1);
@@ -809,7 +816,6 @@ Item {
                                         }
                                     }
 
-                                    // Check if valid before setting targetIndex
                                     if (isValidDropPosition(dropIndex) && dropIndex !== targetIndex) {
                                         targetIndex = dropIndex;
                                         moveItems();
@@ -836,15 +842,22 @@ Item {
                                 var optionsIndex = findOptionsLabelIndex();
                                 var sliderLabelIndex = findSliderLabelIndex();
 
-                                if (dropIndex !== draggedItemIndex &&
-                                    dropIndex < optionsIndex &&
-                                    dropIndex !== sliderLabelIndex &&
-                                    isValidDropPosition(dropIndex)) {
+                                // Adjust dropIndex for the last position in the sliding row
+                                if (dropIndex > sliderLabelIndex && dropIndex >= optionsIndex - 1) {
+                                    dropIndex = optionsIndex - 1;
+                                }
 
+                                if (dropIndex !== draggedItemIndex && isValidDropPosition(dropIndex)) {
                                     targetIndex = dropIndex;
                                     moveItems();
+                                } else {
+                                    abortDrag();
                                 }
+                            } else {
+                                abortDrag();
                             }
+                        } else {
+                            abortDrag();
                         }
 
                         dragProxy.visible = false;

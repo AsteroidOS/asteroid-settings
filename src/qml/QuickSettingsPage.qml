@@ -180,21 +180,42 @@ Item {
     function refreshModel() {
         slotModel.clear();
 
-        // Sort fixed toggles by availability
-        var sortedFixedToggles = sortToggles(fixedToggles.value);
+        // Use fixedToggles.value directly to preserve user-defined order
+        var fixedTogglesArray = fixedToggles.value;
 
-        // Sort slider toggles by availability
-        var sortedSliderToggles = sortToggles(sliderToggles.value);
+        // Use sliderToggles.value directly to preserve user-defined order
+        var sliderTogglesArray = sliderToggles.value;
+
         //% "Fixed Row Content"
         slotModel.append({ type: "label", labelText: qsTrId("id-fixed-row"), toggleId: "", listView: "" });
-        for (var i = 0; i < sortedFixedToggles.length && i < fixedRowLength; i++) {
-            if (sortedFixedToggles[i]) {
-                slotModel.append({
-                    type: "toggle",
-                    toggleId: sortedFixedToggles[i],
-                    listView: "fixed",
-                    labelText: ""
-                });
+        // Append available toggles in user-defined order
+        for (var i = 0; i < fixedTogglesArray.length && i < fixedRowLength; i++) {
+            var toggleId = fixedTogglesArray[i];
+            if (toggleId) {
+                var toggle = findToggle(toggleId);
+                if (toggle && toggle.available) {
+                    slotModel.append({
+                        type: "toggle",
+                        toggleId: toggleId,
+                        listView: "fixed",
+                        labelText: ""
+                    });
+                }
+            }
+        }
+        // Append unavailable toggles to fill fixed row
+        for (i = 0; i < fixedTogglesArray.length && countFixedToggles() < fixedRowLength; i++) {
+            toggleId = fixedTogglesArray[i];
+            if (toggleId) {
+                toggle = findToggle(toggleId);
+                if (toggle && !toggle.available && !isToggleInFixedRow(toggleId)) {
+                    slotModel.append({
+                        type: "toggle",
+                        toggleId: toggleId,
+                        listView: "fixed",
+                        labelText: ""
+                    });
+                }
             }
         }
 
@@ -234,14 +255,34 @@ Item {
         }
         //% "Sliding Row Content"
         slotModel.append({ type: "label", labelText: qsTrId("id-sliding-row"), toggleId: "", listView: "" });
-        for (i = 0; i < sortedSliderToggles.length; i++) {
-            if (sortedSliderToggles[i] && !isToggleInFixedRow(sortedSliderToggles[i])) {
-                slotModel.append({
-                    type: "toggle",
-                    toggleId: sortedSliderToggles[i],
-                    listView: "slider",
-                    labelText: ""
-                });
+        // Append available toggles in user-defined order
+        for (i = 0; i < sliderTogglesArray.length; i++) {
+            toggleId = sliderTogglesArray[i];
+            if (toggleId && !isToggleInFixedRow(toggleId)) {
+                toggle = findToggle(toggleId);
+                if (toggle && toggle.available) {
+                    slotModel.append({
+                        type: "toggle",
+                        toggleId: toggleId,
+                        listView: "slider",
+                        labelText: ""
+                    });
+                }
+            }
+        }
+        // Append unavailable toggles at the end
+        for (i = 0; i < sliderTogglesArray.length; i++) {
+            toggleId = sliderTogglesArray[i];
+            if (toggleId && !isToggleInFixedRow(toggleId)) {
+                toggle = findToggle(toggleId);
+                if (toggle && !toggle.available) {
+                    slotModel.append({
+                        type: "toggle",
+                        toggleId: toggleId,
+                        listView: "slider",
+                        labelText: ""
+                    });
+                }
             }
         }
         //% "Options"
@@ -312,7 +353,7 @@ Item {
     }
 
     function isValidDropPosition(dropIndex) {
-        // Prevent dropping on labels, config, cycler, or display items
+        // Prevent dropping on labels, config, cycler, and display items
         var item = slotModel.get(dropIndex);
         if (item.type !== "toggle") {
             return false;
@@ -407,8 +448,7 @@ Item {
         }
         // Handle cross-row moves (both directions)
         else if ((draggedItemIndex > sliderLabelIndex && targetIndex < sliderLabelIndex) ||
-                (draggedItemIndex < sliderLabelIndex && targetIndex > sliderLabelIndex && targetIndex < optionsLabelIndex)) {
-            // Direct move without the two-step process
+                 (draggedItemIndex < sliderLabelIndex && targetIndex > sliderLabelIndex && targetIndex < optionsLabelIndex)) {
             slotModel.move(draggedItemIndex, targetIndex, 1);
             slotModel.setProperty(targetIndex, "listView", targetIndex < sliderLabelIndex ? "fixed" : "slider");
             draggedItemIndex = targetIndex;
@@ -801,7 +841,6 @@ Item {
 
                                 // Adjust dropIndex for the last position in the sliding row
                                 if (dropIndex > sliderLabelIndex && dropIndex >= optionsIndex - 1) {
-                                    // If dropping below the last toggle, set dropIndex to the last valid toggle position
                                     dropIndex = optionsIndex - 1;
                                 }
 
@@ -811,7 +850,7 @@ Item {
                                         var prevItem = slotModel.get(dropIndex - 1);
                                         if (prevItem.type !== "label" &&
                                             ((prevItem.listView === "fixed" && dropIndex < sliderLabelIndex) ||
-                                            (prevItem.listView === "slider" && dropIndex > sliderLabelIndex))) {
+                                             (prevItem.listView === "slider" && dropIndex > sliderLabelIndex))) {
                                             dropIndex -= 1;
                                         }
                                     }

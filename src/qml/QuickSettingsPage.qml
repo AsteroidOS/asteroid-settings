@@ -679,41 +679,6 @@ Item {
                     left: parent.left
                     leftMargin: Dims.l(15)
                 }
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        if (toggleId) {
-                            var newEnabled = Object.assign({}, toggleEnabled.value);
-                            var isFixedToggle = isToggleInFixedRow(toggleId);
-                            var sliderLabelIndex = findSliderLabelIndex();
-                            var optionsLabelIndex = findOptionsLabelIndex();
-                            var fixedActiveCount = 0;
-                            for (var i = 1; i < sliderLabelIndex; i++) {
-                                var item = slotModel.get(i);
-                                if (item.type === "toggle" && toggleEnabled.value[item.toggleId]) {
-                                    fixedActiveCount++;
-                                }
-                            }
-                            var sliderActiveCount = 0;
-                            for (i = sliderLabelIndex + 1; i < optionsLabelIndex; i++) {
-                                item = slotModel.get(i);
-                                if (item.type === "toggle" && toggleEnabled.value[item.toggleId]) {
-                                    sliderActiveCount++;
-                                }
-                            }
-                            if (newEnabled[toggleId]) {
-                                if (isFixedToggle && fixedActiveCount <= 1) {
-                                    return;
-                                }
-                                if (!isFixedToggle && sliderActiveCount <= 2) {
-                                    return;
-                                }
-                            }
-                            newEnabled[toggleId] = !newEnabled[toggleId];
-                            toggleEnabled.value = newEnabled;
-                        }
-                    }
-                }
             }
 
             Rectangle {
@@ -808,14 +773,24 @@ Item {
                     return toggle && toggle.available;
                 }
                 property point startPos: Qt.point(0, 0)
+                property real pressStartTime: 0
 
                 onPressed: {
                     startPos = Qt.point(mouse.x, mouse.y);
+                    pressStartTime = new Date().getTime();
                     longPressTimer.dragPending = true;
                     longPressTimer.start();
                 }
 
                 onPositionChanged: {
+                    if (!longPressTimer.running && draggedItemIndex === -1) {
+                        // Allow small movements without canceling the long press
+                        if (Math.abs(mouse.x - startPos.x) > 20 || Math.abs(mouse.y - startPos.y) > 20) {
+                            longPressTimer.stop();
+                        }
+                        return;
+                    }
+
                     if (draggedItemIndex !== -1) {
                         var pos = mapToItem(slotList, mouse.x, mouse.y);
                         dragProxy.y = pos.y - dragYOffset;
@@ -862,13 +837,11 @@ Item {
                                 }
                             }
                         }
-                    } else if (Math.abs(mouse.x - startPos.x) > 10 || Math.abs(mouse.y - startPos.y) > 10) {
-                        longPressTimer.stop();
                     }
                 }
 
                 onReleased: {
-                    longPressTimer.stop();
+                    var pressDuration = new Date().getTime() - pressStartTime;
 
                     if (draggedItemIndex !== -1) {
                         var pos = mapToItem(slotList, mouse.x, mouse.y);
@@ -903,6 +876,39 @@ Item {
                         draggedItemIndex = -1;
                         targetIndex = -1;
                         autoScrollTimer.scrollSpeed = 0;
+                        longPressTimer.stop();
+                    } else if (type === "toggle" && toggleId && pressDuration < 400) {
+                        longPressTimer.stop();
+                        var newEnabled = Object.assign({}, toggleEnabled.value);
+                        var isFixedToggle = isToggleInFixedRow(toggleId);
+                        var sliderLabelIndex = findSliderLabelIndex();
+                        var optionsLabelIndex = findOptionsLabelIndex();
+                        var fixedActiveCount = 0;
+                        for (var i = 1; i < sliderLabelIndex; i++) {
+                            var item = slotModel.get(i);
+                            if (item.type === "toggle" && toggleEnabled.value[item.toggleId]) {
+                                fixedActiveCount++;
+                            }
+                        }
+                        var sliderActiveCount = 0;
+                        for (i = sliderLabelIndex + 1; i < optionsLabelIndex; i++) {
+                            item = slotModel.get(i);
+                            if (item.type === "toggle" && toggleEnabled.value[item.toggleId]) {
+                                sliderActiveCount++;
+                            }
+                        }
+                        if (newEnabled[toggleId]) {
+                            if (isFixedToggle && fixedActiveCount <= 1) {
+                                return;
+                            }
+                            if (!isFixedToggle && sliderActiveCount <= 2) {
+                                return;
+                            }
+                        }
+                        newEnabled[toggleId] = !newEnabled[toggleId];
+                        toggleEnabled.value = newEnabled;
+                    } else {
+                        longPressTimer.stop();
                     }
                 }
 

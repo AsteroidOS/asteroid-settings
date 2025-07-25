@@ -25,6 +25,7 @@ import Nemo.Mce 1.0
 Item {
     id: quickSettingsPage
 
+    // Battery status components for the ValueMeter
     MceBatteryLevel { id: batteryChargePercentage }
     MceBatteryState { id: batteryChargeState }
     MceChargerType { id: mceChargerType }
@@ -73,6 +74,7 @@ Item {
         }
     }
 
+    // Available toggle options with translatable names and icons
     property var toggleOptions: [
         //% "Lock Button"
         { id: "lockButton", name: qsTrId("id-toggle-lock"), icon: "ios-unlock", available: true },
@@ -102,6 +104,7 @@ Item {
         { id: "flashlightButton", name: qsTrId("id-toggle-flashlight"), icon: "ios-bulb-outline", available: true }
     ]
 
+    // Layout properties
     property real rowHeight: Dims.h(16)
     property real labelHeight: rowHeight * 0.5
     property int draggedItemIndex: -1
@@ -112,37 +115,39 @@ Item {
     property var particleDesigns: ["diamonds", "bubbles", "logos", "flashes"]
     property var toggleCache: ({})
 
+    // Utility function to safely access object properties
     function safeGet(obj, prop, defaultValue) {
         return obj && obj[prop] !== undefined ? obj[prop] : defaultValue;
     }
 
+    // Find toggle by ID with caching for performance
     function findToggle(toggleId) {
-        // Return cached result if available
         if (toggleCache[toggleId] !== undefined) {
             return toggleCache[toggleId];
         }
 
         for (var i = 0; i < toggleOptions.length; i++) {
             if (toggleOptions[i].id === toggleId) {
-                // Cache the result
                 toggleCache[toggleId] = toggleOptions[i];
                 return toggleOptions[i];
             }
         }
-        // Cache null result too
         toggleCache[toggleId] = null;
         return null;
     }
+
     // Clear cache when toggleOptions changes
     onToggleOptionsChanged: {
         toggleCache = ({});
     }
 
+    // Get toggle name for display
     function getToggleName(toggleId) {
         var toggle = findToggle(toggleId);
         return toggle ? toggle.name : "";
     }
 
+    // Get toggle icon for display
     function getToggleIcon(toggleId) {
         var toggle = findToggle(toggleId);
         return toggle ? toggle.icon : "";
@@ -155,40 +160,35 @@ Item {
         }
     }
 
+    // Sort toggles by availability and original order
     function sortToggles(toggleIds) {
         return toggleIds.sort(function(a, b) {
             var toggleA = findToggle(a);
             var toggleB = findToggle(b);
 
-            // Sort by availability (available first)
             if (toggleA && toggleB) {
                 if (toggleA.available && !toggleB.available) return -1;
                 if (!toggleA.available && toggleB.available) return 1;
-                // For available toggles, sort by toggleOptions index
                 if (toggleA.available && toggleB.available) {
                     var indexA = toggleOptions.findIndex(function(t) { return t.id === a; });
                     var indexB = toggleOptions.findIndex(function(t) { return t.id === b; });
                     return indexA - indexB;
                 }
-                // For unavailable toggles, sort alphabetically by ID
                 return a.localeCompare(b);
             }
             return 0;
         });
     }
 
+    // Populate the model with fixed and slider toggles
     function refreshModel() {
         slotModel.clear();
 
-        // Use fixedToggles.value directly to preserve user-defined order
         var fixedTogglesArray = fixedToggles.value;
-
-        // Use sliderToggles.value directly to preserve user-defined order
         var sliderTogglesArray = sliderToggles.value;
 
         //% "Fixed Row Content"
         slotModel.append({ type: "label", labelText: qsTrId("id-fixed-row"), toggleId: "", listView: "" });
-        // Append available toggles in user-defined order
         for (var i = 0; i < fixedTogglesArray.length && i < fixedRowLength; i++) {
             var toggleId = fixedTogglesArray[i];
             if (toggleId) {
@@ -203,7 +203,6 @@ Item {
                 }
             }
         }
-        // Append unavailable toggles to fill fixed row
         for (i = 0; i < fixedTogglesArray.length && countFixedToggles() < fixedRowLength; i++) {
             toggleId = fixedTogglesArray[i];
             if (toggleId) {
@@ -220,7 +219,6 @@ Item {
         }
 
         while (countFixedToggles() < fixedRowLength) {
-            // Find an available toggle to fill empty slots
             var foundAvailableToggle = false;
             for (var t = 0; t < toggleOptions.length; t++) {
                 if (toggleOptions[t].available && !isToggleInFixedRow(toggleOptions[t].id)) {
@@ -234,8 +232,6 @@ Item {
                     break;
                 }
             }
-
-            // If no available toggles found, try with unavailable ones
             if (!foundAvailableToggle) {
                 for (t = 0; t < toggleOptions.length; t++) {
                     if (!isToggleInFixedRow(toggleOptions[t].id)) {
@@ -249,13 +245,10 @@ Item {
                     }
                 }
             }
-
-            // Safety check to prevent infinite loop
             if (countFixedToggles() >= fixedRowLength) break;
         }
         //% "Sliding Row Content"
         slotModel.append({ type: "label", labelText: qsTrId("id-sliding-row"), toggleId: "", listView: "" });
-        // Append available toggles in user-defined order
         for (i = 0; i < sliderTogglesArray.length; i++) {
             toggleId = sliderTogglesArray[i];
             if (toggleId && !isToggleInFixedRow(toggleId)) {
@@ -270,7 +263,6 @@ Item {
                 }
             }
         }
-        // Append unavailable toggles at the end
         for (i = 0; i < sliderTogglesArray.length; i++) {
             toggleId = sliderTogglesArray[i];
             if (toggleId && !isToggleInFixedRow(toggleId)) {
@@ -299,8 +291,10 @@ Item {
         slotModel.append({ type: "display", labelText: qsTrId("id-battery-preview"), toggleId: "", listView: "" });
 
         saveConfiguration();
+        listLoader.active = true;
     }
 
+    // Count the number of fixed toggles in the model
     function countFixedToggles() {
         var count = 0;
         for (var i = 1; i < slotModel.count; i++) {
@@ -314,6 +308,7 @@ Item {
         return count;
     }
 
+    // Check if a toggle is in the fixed row
     function isToggleInFixedRow(toggleId) {
         for (var i = 1; i < slotModel.count; i++) {
             var item = slotModel.get(i);
@@ -327,6 +322,7 @@ Item {
         return false;
     }
 
+    // Find the index of the slider label
     function findSliderLabelIndex() {
         for (var i = 0; i < slotModel.count; i++) {
             if (slotModel.get(i).type === "label" && slotModel.get(i).labelText === qsTrId("id-sliding-row")) {
@@ -336,15 +332,17 @@ Item {
         return 3;
     }
 
+    // Find the index of the options label
     function findOptionsLabelIndex() {
         for (var i = 0; i < slotModel.count; i++) {
             if (slotModel.get(i).type === "label" && slotModel.get(i).labelText === qsTrId("id-options")) {
                 return i;
             }
         }
-        return slotModel.count - 6; // Adjust for new cycler item
+        return slotModel.count - 6;
     }
 
+    // Ensure the slider label stays at the correct position
     function ensureSliderLabelPosition() {
         var sliderIndex = findSliderLabelIndex();
         if (sliderIndex !== 3) {
@@ -352,8 +350,8 @@ Item {
         }
     }
 
+    // Validate drop position for drag-and-drop
     function isValidDropPosition(dropIndex) {
-        // Prevent dropping on labels, config, cycler, and display items
         var item = slotModel.get(dropIndex);
         if (item.type !== "toggle") {
             return false;
@@ -362,17 +360,14 @@ Item {
         var sliderLabelIndex = findSliderLabelIndex();
         var optionsIndex = findOptionsLabelIndex();
 
-        // Prevent dropping in invalid sections
         if (dropIndex === 0 || dropIndex === sliderLabelIndex || dropIndex >= optionsIndex) {
             return false;
         }
 
-        // Prevent dropping below unavailable toggles
         var toggleSection = dropIndex < sliderLabelIndex ? "fixed" : "slider";
         var sectionStart = toggleSection === "fixed" ? 1 : sliderLabelIndex + 1;
         var sectionEnd = toggleSection === "fixed" ? sliderLabelIndex : optionsIndex;
 
-        // Find the first unavailable toggle in this section
         var firstUnavailableIndex = -1;
         for (var i = sectionStart; i < sectionEnd; i++) {
             if (slotModel.get(i).type === "toggle") {
@@ -384,7 +379,6 @@ Item {
             }
         }
 
-        // Allow dropping at or before the last available toggle
         if (firstUnavailableIndex !== -1 && dropIndex >= firstUnavailableIndex) {
             return false;
         }
@@ -392,6 +386,7 @@ Item {
         return true;
     }
 
+    // Save the current configuration
     function saveConfiguration() {
         var fixedArray = [];
         var sliderArray = [];
@@ -415,11 +410,11 @@ Item {
             }
         }
 
-        // Save the arrays with the current order
         fixedToggles.value = fixedArray;
         sliderToggles.value = sliderArray;
     }
 
+    // Handle drag-and-drop movement
     function moveItems() {
         if (draggedItemIndex === -1 || targetIndex === -1 || draggedItemIndex === targetIndex) {
             return;
@@ -435,32 +430,27 @@ Item {
             return;
         }
 
-        // Lock dragProxy content
         dragProxy.text = getToggleName(draggedToggleId);
         dragProxy.icon = getToggleIcon(draggedToggleId);
 
-        // Handle same-row moves
         if ((draggedItemIndex < sliderLabelIndex && targetIndex < sliderLabelIndex) ||
             (draggedItemIndex > sliderLabelIndex && targetIndex > sliderLabelIndex && targetIndex < optionsLabelIndex)) {
             slotModel.move(draggedItemIndex, targetIndex, 1);
             slotModel.setProperty(targetIndex, "listView", targetIndex < sliderLabelIndex ? "fixed" : "slider");
             draggedItemIndex = targetIndex;
-        }
-        // Handle cross-row moves (both directions)
-        else if ((draggedItemIndex > sliderLabelIndex && targetIndex < sliderLabelIndex) ||
-                 (draggedItemIndex < sliderLabelIndex && targetIndex > sliderLabelIndex && targetIndex < optionsLabelIndex)) {
+        } else if ((draggedItemIndex > sliderLabelIndex && targetIndex < sliderLabelIndex) ||
+                   (draggedItemIndex < sliderLabelIndex && targetIndex > sliderLabelIndex && targetIndex < optionsLabelIndex)) {
             slotModel.move(draggedItemIndex, targetIndex, 1);
             slotModel.setProperty(targetIndex, "listView", targetIndex < sliderLabelIndex ? "fixed" : "slider");
             draggedItemIndex = targetIndex;
-
-            // Ensure slider label stays in place
             ensureSliderLabelPosition();
         }
 
         saveConfiguration();
-        slotList.forceLayout();
+        listLoader.item.forceLayout();
     }
 
+    // Restore original order after drag cancellation
     function restoreOriginalOrder() {
         if (draggedItemIndex !== -1 && targetIndex !== -1 && draggedItemIndex !== targetIndex) {
             slotModel.move(draggedItemIndex, targetIndex, 1);
@@ -469,242 +459,259 @@ Item {
         }
     }
 
+    // Abort drag operation
     function abortDrag() {
         if (draggedItemIndex !== -1) {
             draggedItemIndex = -1;
             targetIndex = -1;
             dragProxy.visible = false;
             autoScrollTimer.scrollSpeed = 0;
-            slotList.forceLayout();
+            listLoader.item.forceLayout();
         }
     }
 
-    ListView {
-        id: slotList
+    Loader {
+        id: listLoader
         anchors {
             top: parent.top
             left: parent.left
             right: parent.right
             bottom: parent.bottom
         }
-        clip: true
-        interactive: draggedItemIndex === -1
-        model: slotModel
-        cacheBuffer: Dims.h(60)
-        maximumFlickVelocity: 1000
-        boundsBehavior: Flickable.OvershootBounds
+        active: false
+        sourceComponent: ListView {
+            id: slotList
+            clip: true
+            interactive: draggedItemIndex === -1
+            model: slotModel
+            cacheBuffer: Dims.h(60)
+            maximumFlickVelocity: 1000
+            boundsBehavior: Flickable.OvershootBounds
 
-        header: Item {
-            width: parent.width
-            height: title.height
-        }
-
-        footer: Item {
-            width: parent.width
-            height: rowHeight * 1.5
-        }
-
-        Timer {
-            id: autoScrollTimer
-            interval: 16
-            repeat: true
-            running: draggedItemIndex !== -1 && scrollSpeed != 0 // Only run when needed
-            property real scrollSpeed: 0
-            property real scrollThreshold: slotList.height * 0.2
-
-            onTriggered: {
-                if (draggedItemIndex === -1 || Math.abs(scrollSpeed) <= 0.1) {
-                    scrollSpeed = 0;
-                    return;
-                }
-
-                var newContentY = slotList.contentY + scrollSpeed;
-                var minContentY = -title.height;
-                newContentY = Math.max(minContentY, Math.min(newContentY, slotList.contentHeight - slotList.height));
-                slotList.contentY = newContentY;
-            }
-        }
-
-        displaced: Transition {
-            NumberAnimation {
-                properties: "y"
-                duration: 150
-                easing.type: Easing.OutQuad
-            }
-        }
-
-        add: Transition {
-            NumberAnimation {
-                properties: "y,opacity"
-                from: 0
-                duration: 150
-                easing.type: Easing.OutQuad
-            }
-        }
-
-        move: Transition {
-            NumberAnimation {
-                properties: "y"
-                duration: 150
-                easing.type: Easing.OutQuad
-            }
-        }
-
-        delegate: Item {
-            id: delegateItem
-            width: slotList.width
-            height: type === "label" ? labelHeight :
-                    type === "config" ? Math.max(rowHeight * 2, childrenRect.height) :
-                    type === "cycler" ? Math.max(rowHeight * 2, childrenRect.height) :
-                    type === "display" ? Math.max(rowHeight * 2, childrenRect.height) :
-                    rowHeight
-            property int visualIndex: index
-            property bool isDragging: index === draggedItemIndex
-
-            HighlightBar {
-                id: pressHighlight
-                anchors.fill: parent
-                visible: type === "toggle"
-                z: -1
-                forceOn: dragArea.pressed
+            Component.onCompleted: {
+                forceLayout();
             }
 
-            Label {
-                visible: type === "label"
-                text: labelText
-                color: "#ffffff"
-                font.pixelSize: Dims.l(5)
-                font.italic: true
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    verticalCenter: parent.verticalCenter
-                }
+            header: Item {
+                width: parent.width
+                height: title.height
             }
 
-            LabeledSwitch {
-                visible: type === "config"
-                width: delegateItem.width
-                height: Math.max(rowHeight * 2, implicitHeight)
-                text: labelText
-                checked: {
-                    if (labelText === qsTrId("id-battery-bottom")) {
-                        return options.value.batteryBottom;
-                    } else if (labelText === qsTrId("id-battery-animation")) {
-                        return options.value.batteryAnimation;
-                    } else if (labelText === qsTrId("id-battery-colored")) {
-                        return options.value.batteryColored;
+            footer: Item {
+                width: parent.width
+                height: rowHeight * 1.5
+            }
+
+            Timer {
+                id: autoScrollTimer
+                interval: 16
+                repeat: true
+                running: draggedItemIndex !== -1 && scrollSpeed !== 0
+                property real scrollSpeed: 0
+                property real scrollThreshold: height * 0.2
+
+                onTriggered: {
+                    if (draggedItemIndex === -1 || Math.abs(scrollSpeed) <= 0.1) {
+                        scrollSpeed = 0;
+                        return;
                     }
-                    return false;
+
+                    var newContentY = contentY + scrollSpeed;
+                    var minContentY = -title.height;
+                    newContentY = Math.max(minContentY, Math.min(newContentY, contentHeight - height));
+                    contentY = newContentY;
                 }
-                onCheckedChanged: {
-                    var newOptions = Object.assign({}, options.value);
-                    if (labelText === qsTrId("id-battery-bottom")) {
-                        newOptions.batteryBottom = checked;
-                    } else if (labelText === qsTrId("id-battery-animation")) {
-                        newOptions.batteryAnimation = checked;
-                    } else if (labelText === qsTrId("id-battery-colored")) {
-                        newOptions.batteryColored = checked;
+            }
+
+            displaced: Transition {
+                NumberAnimation {
+                    properties: "y"
+                    duration: 150
+                    easing.type: Easing.OutQuad
+                }
+            }
+
+            add: Transition {
+                NumberAnimation {
+                    properties: "y,opacity"
+                    from: 0
+                    duration: 150
+                    easing.type: Easing.OutQuad
+                }
+            }
+
+            move: Transition {
+                NumberAnimation {
+                    properties: "y"
+                    duration: 150
+                    easing.type: Easing.OutQuad
+                }
+            }
+
+            delegate: Item {
+                id: delegateItem
+                width: slotList.width
+                height: type === "label" ? labelHeight :
+                        type === "config" ? Math.max(rowHeight * 2, childrenRect.height) :
+                        type === "cycler" ? Math.max(rowHeight * 2, childrenRect.height) :
+                        type === "display" ? Math.max(rowHeight * 2, childrenRect.height) :
+                        rowHeight
+                property int visualIndex: index
+                property bool isDragging: index === draggedItemIndex
+
+                HighlightBar {
+                    id: pressHighlight
+                    anchors.fill: parent
+                    visible: type === "toggle"
+                    z: -1
+                    forceOn: dragArea.pressed
+                }
+
+                Label {
+                    visible: type === "label"
+                    text: labelText
+                    color: "#ffffff"
+                    font.pixelSize: Dims.l(5)
+                    font.italic: true
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                        verticalCenter: parent.verticalCenter
                     }
-                    options.value = newOptions;
                 }
-            }
 
-            OptionCycler {
-                visible: type === "cycler"
-                width: delegateItem.width
-                height: Math.max(rowHeight * 2, implicitHeight)
-                title: qsTrId("id-particle-design")
-                configObject: options.value
-                configKey: "particleDesign"
-                valueArray: particleDesigns
-                currentValue: options.value.particleDesign
-                opacity: options.value.batteryAnimation ? 1.0 : 0.5
-                onValueChanged: {
-                    var newOptions = Object.assign({}, options.value);
-                    newOptions.particleDesign = value;
-                    options.value = newOptions;
-                }
-            }
-
-            ValueMeter {
-                id: valueMeter
-                visible: type === "display"
-                width: Dims.l(28) * 1.8
-                height: Dims.l(8)
-                valueLowerBound: 0
-                valueUpperBound: 100
-                value: batteryChargePercentage.percent
-                isIncreasing: mceChargerType.type != MceChargerType.None
-                enableAnimations: options.value.batteryAnimation
-                enableColoredFill: options.value.batteryColored
-                particleDesign: options.value.particleDesign
-                fillColor: {
-                    if (!options.value.batteryColored) return Qt.rgba(1, 1, 1, 0.3)
-                    var percent = batteryChargePercentage.percent
-                    if (percent > 50) return Qt.rgba(0, 1, 0, 0.3)
-                    if (percent > 20) {
-                        var t = (50 - percent) / 30
-                        return Qt.rgba(t, 1 - (t * 0.35), 0, 0.3)
+                LabeledSwitch {
+                    visible: type === "config"
+                    width: delegateItem.width
+                    height: Math.max(rowHeight * 2, implicitHeight)
+                    text: labelText
+                    checked: {
+                        if (labelText === qsTrId("id-battery-bottom")) return options.value.batteryBottom;
+                        if (labelText === qsTrId("id-battery-animation")) return options.value.batteryAnimation;
+                        if (labelText === qsTrId("id-battery-colored")) return options.value.batteryColored;
+                        return false;
                     }
-                    var t = (20 - percent) / 20
-                    return Qt.rgba(1, 0.65 * (1 - t), 0, 0.3)
+                    onCheckedChanged: {
+                        var newOptions = Object.assign({}, options.value);
+                        if (labelText === qsTrId("id-battery-bottom")) {
+                            newOptions.batteryBottom = checked;
+                        } else if (labelText === qsTrId("id-battery-animation")) {
+                            newOptions.batteryAnimation = checked;
+                        } else if (labelText === qsTrId("id-battery-colored")) {
+                            newOptions.batteryColored = checked;
+                        }
+                        options.value = newOptions;
+                    }
                 }
-                anchors {
-                    top: parent.top
-                    horizontalCenter: parent.horizontalCenter
-                    topMargin: Dims.l(2)
-                }
-            }
 
-            Rectangle {
-                width: delegateItem.width
-                height: rowHeight
-                opacity: 0
-                visible: isDragging && type === "toggle"
-            }
+                OptionCycler {
+                    visible: type === "cycler"
+                    width: delegateItem.width
+                    height: Math.max(rowHeight * 2, implicitHeight)
+                    title: qsTrId("id-particle-design")
+                    configObject: options.value
+                    configKey: "particleDesign"
+                    valueArray: particleDesigns
+                    currentValue: options.value.particleDesign
+                    opacity: options.value.batteryAnimation ? 1.0 : 0.5
+                    onValueChanged: {
+                        var newOptions = Object.assign({}, options.value);
+                        newOptions.particleDesign = value;
+                        options.value = newOptions;
+                    }
+                }
 
-            Icon {
-                id: checkmarkIcon
-                width: Dims.w(14)
-                height: Dims.w(14)
-                name: toggleId && toggleEnabled.value[toggleId] ? "ios-checkmark-circle-outline" : "ios-circle-outline"
-                color: toggleId && toggleEnabled.value[toggleId] ? "#ffffff" : "#888888"
-                visible: {
-                    if (type !== "toggle" || toggleId === "" || isDragging) return false;
-                    var toggle = findToggle(toggleId);
-                    return toggle && toggle.available;
+                ValueMeter {
+                    id: valueMeter
+                    visible: type === "display"
+                    width: Dims.l(28) * 1.8
+                    height: Dims.l(8)
+                    valueLowerBound: 0
+                    valueUpperBound: 100
+                    value: batteryChargePercentage.percent
+                    isIncreasing: mceChargerType.type != MceChargerType.None
+                    enableAnimations: options.value.batteryAnimation
+                    enableColoredFill: options.value.batteryColored
+                    particleDesign: options.value.particleDesign
+                    fillColor: {
+                        if (!options.value.batteryColored) return Qt.rgba(1, 1, 1, 0.3)
+                        var percent = batteryChargePercentage.percent
+                        if (percent > 50) return Qt.rgba(0, 1, 0, 0.3)
+                        if (percent > 20) {
+                            var t = (50 - percent) / 30
+                            return Qt.rgba(t, 1 - (t * 0.35), 0, 0.3)
+                        }
+                        var t = (20 - percent) / 20
+                        return Qt.rgba(1, 0.65 * (1 - t), 0, 0.3)
+                    }
+                    anchors {
+                        top: parent.top
+                        horizontalCenter: parent.horizontalCenter
+                        topMargin: Dims.l(2)
+                    }
                 }
-                anchors {
-                    verticalCenter: parent.verticalCenter
-                    left: parent.left
-                    leftMargin: Dims.l(15)
-                }
-            }
 
-            Rectangle {
-                id: iconRectangle
-                width: Dims.w(14)
-                height: Dims.w(14)
-                radius: width / 2
-                color: "#222222"
-                opacity: {
-                    if (toggleId === "") return 0;
-                    var toggle = findToggle(toggleId);
-                    if (!toggle || !toggle.available) return 0.3;
-                    return toggleEnabled.value[toggleId] ? 0.7 : 0.3;
+                Rectangle {
+                    width: delegateItem.width
+                    height: rowHeight
+                    opacity: 0
+                    visible: isDragging && type === "toggle"
                 }
-                visible: type === "toggle" && toggleId !== "" && !isDragging
-                anchors {
-                    verticalCenter: parent.verticalCenter
-                    left: checkmarkIcon.right
-                    leftMargin: Dims.l(2)
-                }
+
                 Icon {
-                    id: toggleIcon
-                    name: getToggleIcon(toggleId)
-                    width: Dims.w(10)
-                    height: Dims.w(10)
-                    anchors.centerIn: parent
+                    id: checkmarkIcon
+                    width: Dims.w(14)
+                    height: Dims.w(14)
+                    name: toggleId && toggleEnabled.value[toggleId] ? "ios-checkmark-circle-outline" : "ios-circle-outline"
+                    color: toggleId && toggleEnabled.value[toggleId] ? "#ffffff" : "#888888"
+                    visible: {
+                        if (type !== "toggle" || toggleId === "" || isDragging) return false;
+                        var toggle = findToggle(toggleId);
+                        return toggle && toggle.available;
+                    }
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        left: parent.left
+                        leftMargin: Dims.l(15)
+                    }
+                }
+
+                Rectangle {
+                    id: iconRectangle
+                    width: Dims.w(14)
+                    height: Dims.w(14)
+                    radius: width / 2
+                    color: "#222222"
+                    opacity: {
+                        if (toggleId === "") return 0;
+                        var toggle = findToggle(toggleId);
+                        if (!toggle || !toggle.available) return 0.3;
+                        return toggleEnabled.value[toggleId] ? 0.7 : 0.3;
+                    }
+                    visible: type === "toggle" && toggleId !== "" && !isDragging
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        left: checkmarkIcon.right
+                        leftMargin: Dims.l(2)
+                    }
+                    Icon {
+                        id: toggleIcon
+                        name: getToggleIcon(toggleId)
+                        width: Dims.w(10)
+                        height: Dims.w(10)
+                        anchors.centerIn: parent
+                        color: "#ffffff"
+                        opacity: {
+                            if (toggleId === "") return 0;
+                            var toggle = findToggle(toggleId);
+                            if (!toggle || !toggle.available) return 0.5;
+                            return toggleEnabled.value[toggleId] ? 1.0 : 0.5;
+                        }
+                        visible: toggleId !== ""
+                    }
+                }
+
+                Label {
+                    text: getToggleName(toggleId)
                     color: "#ffffff"
                     opacity: {
                         if (toggleId === "") return 0;
@@ -712,210 +719,195 @@ Item {
                         if (!toggle || !toggle.available) return 0.5;
                         return toggleEnabled.value[toggleId] ? 1.0 : 0.5;
                     }
-                    visible: toggleId !== ""
-                }
-            }
-
-            Label {
-                text: getToggleName(toggleId)
-                color: "#ffffff"
-                opacity: {
-                    if (toggleId === "") return 0;
-                    var toggle = findToggle(toggleId);
-                    if (!toggle || !toggle.available) return 0.5;
-                    return toggleEnabled.value[toggleId] ? 1.0 : 0.5;
-                }
-                visible: type === "toggle" && toggleId !== "" && !isDragging
-                anchors {
-                    verticalCenter: parent.verticalCenter
-                    left: iconRectangle.right
-                    leftMargin: Dims.l(2)
-                }
-            }
-
-            Timer {
-                id: longPressTimer
-                interval: 400
-                repeat: false
-                property bool dragPending: false
-
-                onTriggered: {
-                    if (!dragPending || type !== "toggle") return;
-                    dragPending = false;
-
-                    var toggle = findToggle(toggleId);
-                    if (toggle && toggle.available) {
-                        draggedItemIndex = index;
-                        targetIndex = index;
-                        draggedToggleId = toggleId;
-                        var itemPos = delegateItem.mapToItem(slotList, 0, 0);
-                        dragProxy.x = 0;
-                        dragProxy.y = itemPos.y;
-                        dragProxy.text = getToggleName(toggleId);
-                        dragProxy.icon = getToggleIcon(toggleId);
-                        dragProxy.visible = true;
-                        dragYOffset = dragArea.startPos.y;
+                    visible: type === "toggle" && toggleId !== "" && !isDragging
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        left: iconRectangle.right
+                        leftMargin: Dims.l(2)
                     }
                 }
-            }
 
-            MouseArea {
-                id: dragArea
-                anchors {
-                    left: type === "toggle" ? iconRectangle.left : parent.left
-                    right: parent.right
-                    top: parent.top
-                    bottom: parent.bottom
-                }
-                enabled: {
-                    if (isDragging || type !== "toggle") return false;
-                    var toggle = findToggle(toggleId);
-                    return toggle && toggle.available;
-                }
-                property point startPos: Qt.point(0, 0)
-                property real pressStartTime: 0
+                Timer {
+                    id: longPressTimer
+                    interval: 400
+                    repeat: false
+                    property bool dragPending: false
 
-                onPressed: {
-                    startPos = Qt.point(mouse.x, mouse.y);
-                    pressStartTime = new Date().getTime();
-                    longPressTimer.dragPending = true;
-                    longPressTimer.start();
-                }
+                    onTriggered: {
+                        if (!dragPending || type !== "toggle") return;
+                        dragPending = false;
 
-                onPositionChanged: {
-                    if (!longPressTimer.running && draggedItemIndex === -1) {
-                        // Allow small movements without canceling the long press
-                        if (Math.abs(mouse.x - startPos.x) > 20 || Math.abs(mouse.y - startPos.y) > 20) {
-                            longPressTimer.stop();
+                        var toggle = findToggle(toggleId);
+                        if (toggle && toggle.available) {
+                            draggedItemIndex = index;
+                            targetIndex = index;
+                            draggedToggleId = toggleId;
+                            var itemPos = delegateItem.mapToItem(slotList, 0, 0);
+                            dragProxy.x = 0;
+                            dragProxy.y = itemPos.y;
+                            dragProxy.text = getToggleName(toggleId);
+                            dragProxy.icon = getToggleIcon(toggleId);
+                            dragProxy.visible = true;
+                            dragYOffset = dragArea.startPos.y;
                         }
-                        return;
+                    }
+                }
+
+                MouseArea {
+                    id: dragArea
+                    anchors {
+                        left: type === "toggle" ? iconRectangle.left : parent.left
+                        right: parent.right
+                        top: parent.top
+                        bottom: parent.bottom
+                    }
+                    enabled: {
+                        if (isDragging || type !== "toggle") return false;
+                        var toggle = findToggle(toggleId);
+                        return toggle && toggle.available;
+                    }
+                    property point startPos: Qt.point(0, 0)
+                    property real pressStartTime: 0
+
+                    onPressed: {
+                        startPos = Qt.point(mouse.x, mouse.y);
+                        pressStartTime = new Date().getTime();
+                        longPressTimer.dragPending = true;
+                        longPressTimer.start();
                     }
 
-                    if (draggedItemIndex !== -1) {
-                        var pos = mapToItem(slotList, mouse.x, mouse.y);
-                        dragProxy.y = pos.y - dragYOffset;
-
-                        var distFromTop = pos.y;
-                        var distFromBottom = slotList.height - pos.y;
-                        if (distFromTop < autoScrollTimer.scrollThreshold) {
-                            autoScrollTimer.scrollSpeed = -25 * (1 - distFromTop / autoScrollTimer.scrollThreshold);
-                        } else if (distFromBottom < autoScrollTimer.scrollThreshold) {
-                            autoScrollTimer.scrollSpeed = 25 * (1 - distFromBottom / autoScrollTimer.scrollThreshold);
-                        } else {
-                            autoScrollTimer.scrollSpeed = 0;
+                    onPositionChanged: {
+                        if (!longPressTimer.running && draggedItemIndex === -1) {
+                            if (Math.abs(mouse.x - startPos.x) > 20 || Math.abs(mouse.y - startPos.y) > 20) {
+                                longPressTimer.stop();
+                            }
+                            return;
                         }
 
-                        var dropY = pos.y + slotList.contentY;
+                        if (draggedItemIndex !== -1) {
+                            var pos = mapToItem(slotList, mouse.x, mouse.y);
+                            dragProxy.y = pos.y - dragYOffset;
 
-                        if (dropY >= 0) {
-                            var itemUnder = slotList.itemAt(slotList.width / 2, dropY);
-                            if (itemUnder && itemUnder.visualIndex !== undefined) {
-                                var dropIndex = itemUnder.visualIndex;
-                                var optionsIndex = findOptionsLabelIndex();
-                                var sliderLabelIndex = findSliderLabelIndex();
+                            var distFromTop = pos.y;
+                            var distFromBottom = slotList.height - pos.y;
+                            if (distFromTop < autoScrollTimer.scrollThreshold) {
+                                autoScrollTimer.scrollSpeed = -25 * (1 - distFromTop / autoScrollTimer.scrollThreshold);
+                            } else if (distFromBottom < autoScrollTimer.scrollThreshold) {
+                                autoScrollTimer.scrollSpeed = 25 * (1 - distFromBottom / autoScrollTimer.scrollThreshold);
+                            } else {
+                                autoScrollTimer.scrollSpeed = 0;
+                            }
 
-                                // Adjust dropIndex for the last position in the sliding row
-                                if (dropIndex > sliderLabelIndex && dropIndex >= optionsIndex - 1) {
-                                    dropIndex = optionsIndex - 1;
-                                }
+                            var dropY = pos.y + slotList.contentY;
 
-                                if (dropIndex !== draggedItemIndex && isValidDropPosition(dropIndex)) {
-                                    var targetY = itemUnder.y + itemUnder.height / 2;
-                                    if (dropY < targetY && dropIndex > 0) {
-                                        var prevItem = slotModel.get(dropIndex - 1);
-                                        if (prevItem.type !== "label" &&
-                                            ((prevItem.listView === "fixed" && dropIndex < sliderLabelIndex) ||
-                                             (prevItem.listView === "slider" && dropIndex > sliderLabelIndex))) {
-                                            dropIndex -= 1;
-                                        }
+                            if (dropY >= 0) {
+                                var itemUnder = slotList.itemAt(slotList.width / 2, dropY);
+                                if (itemUnder && itemUnder.visualIndex !== undefined) {
+                                    var dropIndex = itemUnder.visualIndex;
+                                    var optionsIndex = findOptionsLabelIndex();
+                                    var sliderLabelIndex = findSliderLabelIndex();
+
+                                    if (dropIndex > sliderLabelIndex && dropIndex >= optionsIndex - 1) {
+                                        dropIndex -= 1;
                                     }
 
-                                    if (isValidDropPosition(dropIndex) && dropIndex !== targetIndex) {
-                                        targetIndex = dropIndex;
-                                        moveItems();
+                                    if (dropIndex !== draggedItemIndex && isValidDropPosition(dropIndex)) {
+                                        var targetY = itemUnder.y + itemUnder.height / 2;
+                                        if (dropY < targetY && dropIndex > 0) {
+                                            var prevItem = slotModel.get(dropIndex - 1);
+                                            if (prevItem.type !== "label" &&
+                                                ((prevItem.listView === "fixed" && dropIndex < sliderLabelIndex) ||
+                                                 (prevItem.listView === "slider" && dropIndex > sliderLabelIndex))) {
+                                                dropIndex -= 1;
+                                            }
+                                        }
+
+                                        if (isValidDropPosition(dropIndex) && dropIndex !== targetIndex) {
+                                            targetIndex = dropIndex;
+                                            moveItems();
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                }
 
-                onReleased: {
-                    var pressDuration = new Date().getTime() - pressStartTime;
+                    onReleased: {
+                        var pressDuration = new Date().getTime() - pressStartTime;
 
-                    if (draggedItemIndex !== -1) {
-                        var pos = mapToItem(slotList, mouse.x, mouse.y);
-                        var dropY = pos.y + slotList.contentY;
+                        if (draggedItemIndex !== -1) {
+                            var pos = mapToItem(slotList, mouse.x, mouse.y);
+                            var dropY = pos.y + slotList.contentY;
 
-                        if (dropY >= 0) {
-                            var itemUnder = slotList.itemAt(slotList.width / 2, dropY);
-                            if (itemUnder && itemUnder.visualIndex !== undefined) {
-                                var dropIndex = itemUnder.visualIndex;
-                                var optionsIndex = findOptionsLabelIndex();
-                                var sliderLabelIndex = findSliderLabelIndex();
+                            if (dropY >= 0) {
+                                var itemUnder = slotList.itemAt(slotList.width / 2, dropY);
+                                if (itemUnder && itemUnder.visualIndex !== undefined) {
+                                    var dropIndex = itemUnder.visualIndex;
+                                    var optionsIndex = findOptionsLabelIndex();
+                                    var sliderLabelIndex = findSliderLabelIndex();
 
-                                // Adjust dropIndex for the last position in the sliding row
-                                if (dropIndex > sliderLabelIndex && dropIndex >= optionsIndex - 1) {
-                                    dropIndex = optionsIndex - 1;
-                                }
+                                    if (dropIndex > sliderLabelIndex && dropIndex >= optionsIndex - 1) {
+                                        dropIndex -= 1;
+                                    }
 
-                                if (dropIndex !== draggedItemIndex && isValidDropPosition(dropIndex)) {
-                                    targetIndex = dropIndex;
-                                    moveItems();
+                                    if (dropIndex !== draggedItemIndex && isValidDropPosition(dropIndex)) {
+                                        targetIndex = dropIndex;
+                                        moveItems();
+                                    } else {
+                                        abortDrag();
+                                    }
                                 } else {
                                     abortDrag();
                                 }
                             } else {
                                 abortDrag();
                             }
+
+                            dragProxy.visible = false;
+                            draggedItemIndex = -1;
+                            targetIndex = -1;
+                            autoScrollTimer.scrollSpeed = 0;
+                            longPressTimer.stop();
+                        } else if (type === "toggle" && toggleId && pressDuration < 400) {
+                            longPressTimer.stop();
+                            var newEnabled = Object.assign({}, toggleEnabled.value);
+                            var isFixedToggle = isToggleInFixedRow(toggleId);
+                            var sliderLabelIndex = findSliderLabelIndex();
+                            var optionsLabelIndex = findOptionsLabelIndex();
+                            var fixedActiveCount = 0;
+                            for (var i = 1; i < sliderLabelIndex; i++) {
+                                var item = slotModel.get(i);
+                                if (item.type === "toggle" && toggleEnabled.value[item.toggleId]) {
+                                    fixedActiveCount++;
+                                }
+                            }
+                            var sliderActiveCount = 0;
+                            for (i = sliderLabelIndex + 1; i < optionsLabelIndex; i++) {
+                                item = slotModel.get(i);
+                                if (item.type === "toggle" && toggleEnabled.value[item.toggleId]) {
+                                    sliderActiveCount++;
+                                }
+                            }
+                            if (newEnabled[toggleId]) {
+                                if (isFixedToggle && fixedActiveCount <= 1) {
+                                    return;
+                                }
+                                if (!isFixedToggle && sliderActiveCount <= 2) {
+                                    return;
+                                }
+                            }
+                            newEnabled[toggleId] = !newEnabled[toggleId];
+                            toggleEnabled.value = newEnabled;
                         } else {
-                            abortDrag();
+                            longPressTimer.stop();
                         }
-
-                        dragProxy.visible = false;
-                        draggedItemIndex = -1;
-                        targetIndex = -1;
-                        autoScrollTimer.scrollSpeed = 0;
-                        longPressTimer.stop();
-                    } else if (type === "toggle" && toggleId && pressDuration < 400) {
-                        longPressTimer.stop();
-                        var newEnabled = Object.assign({}, toggleEnabled.value);
-                        var isFixedToggle = isToggleInFixedRow(toggleId);
-                        var sliderLabelIndex = findSliderLabelIndex();
-                        var optionsLabelIndex = findOptionsLabelIndex();
-                        var fixedActiveCount = 0;
-                        for (var i = 1; i < sliderLabelIndex; i++) {
-                            var item = slotModel.get(i);
-                            if (item.type === "toggle" && toggleEnabled.value[item.toggleId]) {
-                                fixedActiveCount++;
-                            }
-                        }
-                        var sliderActiveCount = 0;
-                        for (i = sliderLabelIndex + 1; i < optionsLabelIndex; i++) {
-                            item = slotModel.get(i);
-                            if (item.type === "toggle" && toggleEnabled.value[item.toggleId]) {
-                                sliderActiveCount++;
-                            }
-                        }
-                        if (newEnabled[toggleId]) {
-                            if (isFixedToggle && fixedActiveCount <= 1) {
-                                return;
-                            }
-                            if (!isFixedToggle && sliderActiveCount <= 2) {
-                                return;
-                            }
-                        }
-                        newEnabled[toggleId] = !newEnabled[toggleId];
-                        toggleEnabled.value = newEnabled;
-                    } else {
-                        longPressTimer.stop();
                     }
-                }
 
-                onCanceled: {
-                    longPressTimer.stop();
-                    autoScrollTimer.scrollSpeed = 0;
-                    abortDrag();
+                    onCanceled: {
+                        longPressTimer.stop();
+                        autoScrollTimer.scrollSpeed = 0;
+                        abortDrag();
+                    }
                 }
             }
         }
@@ -925,7 +917,7 @@ Item {
         id: dragProxy
         visible: false
         z: 10
-        width: slotList.width
+        width: Dims.w(100)
         height: rowHeight
         property string text: ""
         property string icon: ""

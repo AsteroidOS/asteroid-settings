@@ -231,9 +231,9 @@
     </message>
     <message id="id-toggle-settings">
         <location filename="../src/qml/QuickSettingsPage.qml" line="80"/>
-        <source>Settings Link</source>
+        <source>Settings</source>
         <oldsource>Settings Shortcut</oldsource>
-        <translation>Settings Link</translation>
+        <translation>Settings</translation>
     </message>
     <message id="id-toggle-brightness">
         <location filename="../src/qml/QuickSettingsPage.qml" line="82"/>
@@ -278,19 +278,19 @@
     </message>
     <message id="id-toggle-music">
         <location filename="../src/qml/QuickSettingsPage.qml" line="100"/>
-        <source>Music Link</source>
-        <translation>Music Link</translation>
+        <source>Music</source>
+        <translation>Music</translation>
     </message>
     <message id="id-toggle-flashlight">
         <location filename="../src/qml/QuickSettingsPage.qml" line="102"/>
-        <source>Flashlight Link</source>
-        <translation>Flashlight Link</translation>
+        <source>Flashlight</source>
+        <translation>Flashlight</translation>
     </message>
     <message id="id-fixed-row">
         <location filename="../src/qml/QuickSettingsPage.qml" line="189"/>
-        <source>Fixed Row Content</source>
+        <source>Fixed Row</source>
         <oldsource>Fixed Row</oldsource>
-        <translation>Fixed Row Content</translation>
+        <translation>Fixed Row</translation>
     </message>
     <message id="id-sliding-row">
         <location filename="../src/qml/QuickSettingsPage.qml" line="236"/>
@@ -298,9 +298,9 @@
         <location filename="../src/qml/QuickSettingsPage.qml" line="279"/>
         <location filename="../src/qml/QuickSettingsPage.qml" line="291"/>
         <location filename="../src/qml/QuickSettingsPage.qml" line="355"/>
-        <source>Sliding Row Content</source>
+        <source>Sliding Row</source>
         <oldsource>Sliding Row</oldsource>
-        <translation>Sliding Row Content</translation>
+        <translation>Sliding Row</translation>
     </message>
     <message id="id-options">
         <location filename="../src/qml/QuickSettingsPage.qml" line="248"/>

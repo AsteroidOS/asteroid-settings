@@ -88,13 +88,10 @@
         <source>About</source>
         <translation>Quant a</translation>
     </message>
-<<<<<<< HEAD
     <message id="id-app-launcher-name">
         <source>Settings</source>
         <translation>Paràmetres</translation>
     </message>
-=======
->>>>>>> 88cefca (Update Translations)
     <message id="id-charging-only">
         <source>Charging only</source>
         <translation>Només càrrega</translation>
@@ -184,7 +181,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-settings">
-        <source>Settings Link</source>
+        <source>Settings</source>
         <oldsource>Settings Shortcut</oldsource>
         <translation type="unfinished"></translation>
     </message>
@@ -214,12 +211,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message id="id-fixed-row">
-        <source>Fixed Row Content</source>
+        <source>Fixed Row</source>
         <oldsource>Fixed Row</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-sliding-row">
-        <source>Sliding Row Content</source>
+        <source>Sliding Row</source>
         <oldsource>Sliding Row</oldsource>
         <translation type="unfinished"></translation>
     </message>
@@ -257,11 +254,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-music">
-        <source>Music Link</source>
+        <source>Music</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-flashlight">
-        <source>Flashlight Link</source>
+        <source>Flashlight</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

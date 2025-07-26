@@ -231,7 +231,7 @@
     </message>
     <message id="id-toggle-settings">
         <location filename="../src/qml/QuickSettingsPage.qml" line="80"/>
-        <source>Settings Link</source>
+        <source>Settings</source>
         <oldsource>Settings Shortcut</oldsource>
         <translation type="unfinished"></translation>
     </message>
@@ -278,17 +278,17 @@
     </message>
     <message id="id-toggle-music">
         <location filename="../src/qml/QuickSettingsPage.qml" line="100"/>
-        <source>Music Link</source>
+        <source>Music</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-flashlight">
         <location filename="../src/qml/QuickSettingsPage.qml" line="102"/>
-        <source>Flashlight Link</source>
+        <source>Flashlight</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-fixed-row">
         <location filename="../src/qml/QuickSettingsPage.qml" line="189"/>
-        <source>Fixed Row Content</source>
+        <source>Fixed Row</source>
         <oldsource>Fixed Row</oldsource>
         <translation type="unfinished"></translation>
     </message>
@@ -298,7 +298,7 @@
         <location filename="../src/qml/QuickSettingsPage.qml" line="279"/>
         <location filename="../src/qml/QuickSettingsPage.qml" line="291"/>
         <location filename="../src/qml/QuickSettingsPage.qml" line="355"/>
-        <source>Sliding Row Content</source>
+        <source>Sliding Row</source>
         <oldsource>Sliding Row</oldsource>
         <translation type="unfinished"></translation>
     </message>

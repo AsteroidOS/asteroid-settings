@@ -78,7 +78,7 @@ Item {
     property var toggleOptions: [
         //% "Lock Button"
         { id: "lockButton", name: qsTrId("id-toggle-lock"), icon: "ios-unlock", available: true },
-        //% "Settings Link"
+        //% "Settings"
         { id: "settingsButton", name: qsTrId("id-toggle-settings"), icon: "ios-settings", available: true },
         //% "Brightness"
         { id: "brightnessToggle", name: qsTrId("id-toggle-brightness"), icon: "ios-sunny", available: true },
@@ -98,9 +98,9 @@ Item {
         { id: "powerOffToggle", name: qsTrId("id-toggle-power-off"), icon: "ios-power", available: true },
         //% "Reboot"
         { id: "rebootToggle", name: qsTrId("id-toggle-reboot"), icon: "ios-refresh", available: true },
-        //% "Music Link"
+        //% "Music"
         { id: "musicButton", name: qsTrId("id-toggle-music"), icon: "ios-musical-notes-outline", available: true },
-        //% "Flashlight Link"
+        //% "Flashlight"
         { id: "flashlightButton", name: qsTrId("id-toggle-flashlight"), icon: "ios-bulb-outline", available: true }
     ]
 
@@ -186,7 +186,7 @@ Item {
         var fixedTogglesArray = fixedToggles.value;
         var sliderTogglesArray = sliderToggles.value;
 
-        //% "Fixed Row Content"
+        //% "Fixed Row"
         slotModel.append({ type: "label", labelText: qsTrId("id-fixed-row"), toggleId: "", listView: "" });
         for (var i = 0; i < fixedTogglesArray.length && i < fixedRowLength; i++) {
             var toggleId = fixedTogglesArray[i];
@@ -246,7 +246,7 @@ Item {
             }
             if (countFixedToggles() >= fixedRowLength) break;
         }
-        //% "Sliding Row Content"
+        //% "Sliding Row"
         slotModel.append({ type: "label", labelText: qsTrId("id-sliding-row"), toggleId: "", listView: "" });
         for (i = 0; i < sliderTogglesArray.length; i++) {
             toggleId = sliderTogglesArray[i];

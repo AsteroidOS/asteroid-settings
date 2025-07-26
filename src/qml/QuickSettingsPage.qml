@@ -105,8 +105,7 @@ Item {
     ]
 
     // Layout properties
-    property real rowHeight: Dims.h(16)
-    property real labelHeight: rowHeight * 0.5
+    property real rowHeight: Dims.h(18)
     property int draggedItemIndex: -1
     property int targetIndex: -1
     property int fixedRowLength: 2
@@ -486,7 +485,7 @@ Item {
             model: slotModel
             cacheBuffer: Dims.h(60)
             maximumFlickVelocity: 1000
-            boundsBehavior: Flickable.OvershootBounds
+            boundsBehavior: Flickable.DragAndOvershootBounds
 
             Component.onCompleted: {
                 forceLayout();
@@ -494,7 +493,7 @@ Item {
 
             header: Item {
                 width: parent.width
-                height: title.height
+                height: 0
             }
 
             footer: Item {
@@ -517,7 +516,7 @@ Item {
                     }
 
                     var newContentY = contentY + scrollSpeed;
-                    var minContentY = -title.height;
+                    var minContentY = 0
                     newContentY = Math.max(minContentY, Math.min(newContentY, contentHeight - height));
                     contentY = newContentY;
                 }
@@ -551,7 +550,7 @@ Item {
             delegate: Item {
                 id: delegateItem
                 width: slotList.width
-                height: type === "label" ? labelHeight :
+                height: type === "label" ? rowHeight :
                         type === "config" ? Math.max(rowHeight * 2, childrenRect.height) :
                         type === "cycler" ? Math.max(rowHeight * 2, childrenRect.height) :
                         type === "display" ? Math.max(rowHeight * 2, childrenRect.height) :
@@ -571,7 +570,7 @@ Item {
                     visible: type === "label"
                     text: labelText
                     color: "#ffffff"
-                    font.pixelSize: Dims.l(5)
+                    font.pixelSize: Dims.l(6)
                     font.italic: true
                     anchors {
                         horizontalCenter: parent.horizontalCenter
@@ -657,41 +656,23 @@ Item {
                     visible: isDragging && type === "toggle"
                 }
 
-                Icon {
-                    id: checkmarkIcon
-                    width: Dims.w(14)
-                    height: Dims.w(14)
-                    name: toggleId && toggleEnabled.value[toggleId] ? "ios-checkmark-circle-outline" : "ios-circle-outline"
-                    color: toggleId && toggleEnabled.value[toggleId] ? "#ffffff" : "#888888"
-                    visible: {
-                        if (type !== "toggle" || toggleId === "" || isDragging) return false;
-                        var toggle = findToggle(toggleId);
-                        return toggle && toggle.available;
-                    }
-                    anchors {
-                        verticalCenter: parent.verticalCenter
-                        left: parent.left
-                        leftMargin: Dims.l(15)
-                    }
-                }
-
                 Rectangle {
                     id: iconRectangle
-                    width: Dims.w(14)
-                    height: Dims.w(14)
+                    width: Dims.w(16)
+                    height: Dims.w(16)
                     radius: width / 2
                     color: "#222222"
                     opacity: {
                         if (toggleId === "") return 0;
                         var toggle = findToggle(toggleId);
-                        if (!toggle || !toggle.available) return 0.3;
+                        if (!toggle || !toggle.available) return 0.2;
                         return toggleEnabled.value[toggleId] ? 0.7 : 0.3;
                     }
                     visible: type === "toggle" && toggleId !== "" && !isDragging
                     anchors {
                         verticalCenter: parent.verticalCenter
-                        left: checkmarkIcon.right
-                        leftMargin: Dims.l(2)
+                        left: parent.left
+                        leftMargin: Dims.l(14)
                     }
                     Icon {
                         id: toggleIcon
@@ -703,8 +684,8 @@ Item {
                         opacity: {
                             if (toggleId === "") return 0;
                             var toggle = findToggle(toggleId);
-                            if (!toggle || !toggle.available) return 0.5;
-                            return toggleEnabled.value[toggleId] ? 1.0 : 0.5;
+                            if (!toggle || !toggle.available) return 0.4;
+                            return toggleEnabled.value[toggleId] ? 1.0 : 0.8;
                         }
                         visible: toggleId !== ""
                     }
@@ -717,19 +698,23 @@ Item {
                         if (toggleId === "") return 0;
                         var toggle = findToggle(toggleId);
                         if (!toggle || !toggle.available) return 0.5;
-                        return toggleEnabled.value[toggleId] ? 1.0 : 0.5;
+                        return toggleEnabled.value[toggleId] ? 1.0 : 0.6;
                     }
                     visible: type === "toggle" && toggleId !== "" && !isDragging
                     anchors {
                         verticalCenter: parent.verticalCenter
                         left: iconRectangle.right
-                        leftMargin: Dims.l(2)
+                        leftMargin: Dims.l(4)
+                    }
+                    font {
+                        pixelSize: Dims.l(8)
+                        styleName: "Light"
                     }
                 }
 
                 Timer {
                     id: longPressTimer
-                    interval: 400
+                    interval: 500
                     repeat: false
                     property bool dragPending: false
 
@@ -868,7 +853,7 @@ Item {
                             targetIndex = -1;
                             autoScrollTimer.scrollSpeed = 0;
                             longPressTimer.stop();
-                        } else if (type === "toggle" && toggleId && pressDuration < 400) {
+                        } else if (type === "toggle" && toggleId && pressDuration < 500) {
                             longPressTimer.stop();
                             var newEnabled = Object.assign({}, toggleEnabled.value);
                             var isFixedToggle = isToggleInFixedRow(toggleId);
@@ -927,40 +912,17 @@ Item {
             forceOn: dragProxy.visible
         }
 
-        Icon {
-            id: dragCheckmark
-            width: Dims.w(14)
-            height: Dims.w(14)
-            name: draggedItemIndex >= 0 &&
-                  draggedItemIndex < slotModel.count &&
-                  slotModel.get(draggedItemIndex) &&
-                  slotModel.get(draggedItemIndex).toggleId &&
-                  toggleEnabled.value[slotModel.get(draggedItemIndex).toggleId]
-                  ? "ios-checkmark-circle-outline" : "ios-circle-outline"
-            color: draggedItemIndex >= 0 &&
-                   draggedItemIndex < slotModel.count &&
-                   slotModel.get(draggedItemIndex) &&
-                   slotModel.get(draggedItemIndex).toggleId &&
-                   toggleEnabled.value[slotModel.get(draggedItemIndex).toggleId]
-                   ? "#ffffff" : "#888888"
+        Rectangle {
+            id: dragIconRect
+            width: Dims.w(16)
+            height: Dims.w(16)
+            radius: width / 2
+            color: "#222222"
+            opacity: 0.8
             anchors {
                 verticalCenter: parent.verticalCenter
                 left: parent.left
-                leftMargin: Dims.l(10)
-            }
-        }
-
-        Rectangle {
-            id: dragIconRect
-            width: Dims.w(14)
-            height: Dims.w(14)
-            radius: width / 2
-            color: "#222222"
-            opacity: 0.7
-            anchors {
-                verticalCenter: parent.verticalCenter
-                left: dragCheckmark.right
-                leftMargin: Dims.l(2)
+                leftMargin: Dims.l(14)
             }
             Icon {
                 name: dragProxy.icon
@@ -975,17 +937,16 @@ Item {
         Label {
             text: dragProxy.text
             color: "#ffffff"
+            opacity: 0.9
             anchors {
                 verticalCenter: parent.verticalCenter
                 left: dragIconRect.right
-                leftMargin: Dims.l(2)
+                leftMargin: Dims.l(4)
+            }
+            font {
+                pixelSize: Dims.l(8)
+                styleName: "Light"
             }
         }
-    }
-
-    PageHeader {
-        id: title
-        //% "Quick Settings"
-        text: qsTrId("id-quicksettings-page")
     }
 }

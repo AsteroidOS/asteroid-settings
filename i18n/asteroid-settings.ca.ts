@@ -172,8 +172,8 @@
         <oldsource>Reboot to bootloader</oldsource>
         <translation>Gestor d’arrencada</translation>
     </message>
-    <message id="id-quicksettings-page">
-        <source>Quick Settings</source>
+    <message id="id-quickpanel-page">
+        <source>Quick Panel</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-lock">

@@ -23,7 +23,7 @@ import Nemo.Configuration 1.0
 import Nemo.Mce 1.0
 
 Item {
-    id: quickSettingsPage
+    id: quickPanelPage
 
     // Battery status components for the ValueMeter
     MceBatteryLevel { id: batteryChargePercentage }
@@ -33,19 +33,19 @@ Item {
     // ConfigurationValue for toggle arrays
     ConfigurationValue {
         id: fixedToggles
-        key: "/desktop/asteroid/quicksettings/fixed"
+        key: "/desktop/asteroid/quickpanel/fixed"
         defaultValue: ["lockButton", "settingsButton"]
     }
 
     ConfigurationValue {
         id: sliderToggles
-        key: "/desktop/asteroid/quicksettings/slider"
+        key: "/desktop/asteroid/quickpanel/slider"
         defaultValue: ["brightnessToggle", "bluetoothToggle", "hapticsToggle", "wifiToggle", "soundToggle", "cinemaToggle", "aodToggle", "powerOffToggle", "rebootToggle", "musicButton", "flashlightButton"]
     }
 
     ConfigurationValue {
         id: toggleEnabled
-        key: "/desktop/asteroid/quicksettings/enabled"
+        key: "/desktop/asteroid/quickpanel/enabled"
         defaultValue: {
             "lockButton": true,
             "settingsButton": true,
@@ -65,7 +65,7 @@ Item {
 
     ConfigurationValue {
         id: options
-        key: "/desktop/asteroid/quicksettings/options"
+        key: "/desktop/asteroid/quickpanel/options"
         defaultValue: {
             "batteryBottom": true,
             "batteryAnimation": true,

@@ -168,8 +168,8 @@
         <oldsource>Reboot to bootloader</oldsource>
         <translation>துவக்க ஏற்றி</translation>
     </message>
-    <message id="id-quicksettings-page">
-        <source>Quick Settings</source>
+    <message id="id-quickpanel-page">
+        <source>Quick Panel</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-lock">

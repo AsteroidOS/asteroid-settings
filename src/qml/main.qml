@@ -31,7 +31,7 @@ Application {
 
     ConfigurationValue {
         id: options
-        key: "/desktop/asteroid/quicksettings/options"
+        key: "/desktop/asteroid/quickpanel/options"
         defaultValue: {
             "batteryBottom": true,
             "batteryAnimation": true,
@@ -39,7 +39,7 @@ Application {
         }
     }
 
-    Component { id: quickSettingsLayer;         QuickSettingsPage { } }
+    Component { id: quickPanelLayer;         QuickPanelPage { } }
     Component { id: timeLayer;                  TimePage       { } }
     Component { id: dateLayer;                  DatePage       { } }
     Component { id: timezoneLayer;              TimezonePage   { } }
@@ -93,10 +93,10 @@ Application {
                     onClicked: layerStack.push(nightstandLayer)
                 }
                 ListItem {
-                    //% "Quick Settings"
-                    title: qsTrId("id-quicksettings-page")
-                    iconName: options.value.batteryBottom ? "ios-quicksettings-batterybottom" : "ios-quicksettings-batterytop"
-                    onClicked: layerStack.push(quickSettingsLayer)
+                    //% "Quick Panel"
+                    title: qsTrId("id-quickpanel-page")
+                    iconName: options.value.batteryBottom ? "ios-quickpanel-batterybottom" : "ios-quickpanel-batterytop"
+                    onClicked: layerStack.push(quickPanelLayer)
                 }
                 ListItem {
                     //% "Sound"

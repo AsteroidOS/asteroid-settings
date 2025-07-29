@@ -27,12 +27,12 @@
         <location filename="../src/qml/SoundPage.qml" line="72"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>هندا دونگ</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../src/qml/USBPage.qml" line="30"/>
         <source>Charging only</source>
-        <translation type="unfinished"></translation>
+        <translation>تینا شارژ وابیڌن</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../src/qml/USBPage.qml" line="32"/>
@@ -57,51 +57,51 @@
     <message id="id-fahrenheit">
         <location filename="../src/qml/UnitsPage.qml" line="57"/>
         <source>Use Fahrenheit:</source>
-        <translation type="unfinished"></translation>
+        <translation>و کار گرؽڌن فارنهایت:</translation>
     </message>
     <message id="id-time-page">
         <location filename="../src/qml/main.qml" line="110"/>
         <location filename="../src/qml/TimePage.qml" line="109"/>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation>زمووݩ</translation>
     </message>
     <message id="id-date-page">
         <location filename="../src/qml/DatePage.qml" line="97"/>
         <location filename="../src/qml/main.qml" line="116"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>ویرگار</translation>
     </message>
     <message id="id-language-page">
         <location filename="../src/qml/LanguagePage.qml" line="64"/>
         <location filename="../src/qml/main.qml" line="128"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>زووݩ</translation>
     </message>
     <message id="id-bluetooth-page">
         <location filename="../src/qml/main.qml" line="140"/>
         <source>Bluetooth</source>
-        <translation type="unfinished"></translation>
+        <translation>بۊلۊتۊس</translation>
     </message>
     <message id="id-display-page">
         <location filename="../src/qml/DisplayPage.qml" line="123"/>
         <location filename="../src/qml/main.qml" line="73"/>
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>بلگه نمایش</translation>
     </message>
     <message id="id-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="55"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>رۊشنایی</translation>
     </message>
     <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="75"/>
         <source>Automatic brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>رۊشنایی خوتکار</translation>
     </message>
     <message id="id-always-on-display">
         <location filename="../src/qml/DisplayPage.qml" line="84"/>
         <source>Always on Display</source>
-        <translation type="unfinished"></translation>
+        <translation>بلگه هی رۊشن</translation>
     </message>
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="94"/>
@@ -111,12 +111,12 @@
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="105"/>
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>لر داڌن سی بیاری</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="114"/>
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>زربه سی بیاری</translation>
     </message>
     <message id="id-timezone-page">
         <location filename="../src/qml/main.qml" line="134"/>

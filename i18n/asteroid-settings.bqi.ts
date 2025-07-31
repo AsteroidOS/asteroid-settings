@@ -106,7 +106,7 @@
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="94"/>
         <source>Burn in protection</source>
-        <translation type="unfinished"></translation>
+        <translation>زفت وابیڌن ز سوئڌن</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="105"/>
@@ -122,12 +122,12 @@
         <location filename="../src/qml/main.qml" line="134"/>
         <location filename="../src/qml/TimezonePage.qml" line="130"/>
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation>جاگه زمووی</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../src/qml/main.qml" line="85"/>
         <source>Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>دونگ</translation>
     </message>
     <message id="id-nightstand-page">
         <location filename="../src/qml/main.qml" line="79"/>
@@ -139,28 +139,28 @@
         <location filename="../src/qml/main.qml" line="122"/>
         <location filename="../src/qml/UnitsPage.qml" line="65"/>
         <source>Units</source>
-        <translation type="unfinished"></translation>
+        <translation>واهڌا</translation>
     </message>
     <message id="id-wallpaper-page">
         <location filename="../src/qml/main.qml" line="92"/>
         <source>Wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>کاقز دیواری</translation>
     </message>
     <message id="id-watchface-page">
         <location filename="../src/qml/main.qml" line="98"/>
         <source>Watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>بلگه ساعت</translation>
     </message>
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="104"/>
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>ر ون</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="146"/>
         <location filename="../src/qml/USBPage.qml" line="85"/>
         <source>USB</source>
-        <translation type="unfinished"></translation>
+        <translation>یۊ اس بی</translation>
     </message>
     <message id="id-power-page">
         <location filename="../src/qml/main.qml" line="152"/>
@@ -171,39 +171,39 @@
     <message id="id-poweroff-page">
         <location filename="../src/qml/PowerPage.qml" line="29"/>
         <source>Power Off</source>
-        <translation type="unfinished"></translation>
+        <translation>خامۊش</translation>
     </message>
     <message id="id-reboot-page">
         <location filename="../src/qml/PowerPage.qml" line="31"/>
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>ر وندن دوواره</translation>
     </message>
     <message id="id-reboot-bootloader-page">
         <location filename="../src/qml/PowerPage.qml" line="33"/>
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>بارکون ر ون</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="158"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>زبار</translation>
     </message>
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>سامووا</translation>
     </message>
     <message id="id-nightstand-enable">
         <location filename="../src/qml/NightstandPage.qml" line="75"/>
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>و کار وندن</translation>
     </message>
     <message id="id-nightstand-brightness">
         <location filename="../src/qml/NightstandPage.qml" line="96"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>رۊشنایی</translation>
     </message>
     <message id="id-nightstand-delay">
         <location filename="../src/qml/NightstandPage.qml" line="115"/>
@@ -214,13 +214,13 @@
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="141"/>
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>بلگه ساعت سیخومی</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="152"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>پسند بلگه ساعت</translation>
     </message>
 </context>
 <context>
@@ -228,47 +228,47 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="85"/>
         <source>Build ID</source>
-        <translation type="unfinished"></translation>
+        <translation>شناسه وورکل بیڌن</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="86"/>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>نوم رزمی</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="87"/>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>نوم میزبووݩ</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="88"/>
         <source>WLAN MAC</source>
-        <translation type="unfinished"></translation>
+        <translation>مک بؽ سیم</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="89"/>
         <source>IMEI</source>
-        <translation type="unfinished"></translation>
+        <translation>IMEI</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="90"/>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>نومره سریال</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>Total disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>کول جاگه دیسک</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 گ ب</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>%L1 GB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 گ ب (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
@@ -278,12 +278,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>Uptime</source>
-        <translation type="unfinished"></translation>
+        <translation>زمووݩ رۊشنی</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>%L1 days %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 رۊز %L2</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
@@ -293,12 +293,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>Threads</source>
-        <translation type="unfinished"></translation>
+        <translation>رشته یل</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished"></translation>
+        <translation>بار 1،5،15 دیقه</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
@@ -308,42 +308,42 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>ویرگه کول</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 م ب</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>ویرگه آزاد</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>%L1 MB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 م ب (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>Available disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>جاگه دیسک من دسرس</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>Display size</source>
-        <translation type="unfinished"></translation>
+        <translation>هندا نمایشگر</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="96"/>
         <source>Kernel version</source>
-        <translation type="unfinished"></translation>
+        <translation>نوسخه کرنل</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="97"/>
         <source>Qt version</source>
-        <translation type="unfinished"></translation>
+        <translation>نوسخه Qt</translation>
     </message>
 </context>
 </TS>

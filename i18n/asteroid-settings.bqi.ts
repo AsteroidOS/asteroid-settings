@@ -42,7 +42,7 @@
     <message id="id-ssh-mode">
         <location filename="../src/qml/USBPage.qml" line="34"/>
         <source>SSH Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>هالت پۊسته ٱمن</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../src/qml/USBPage.qml" line="36"/>
@@ -52,7 +52,7 @@
     <message id="id-12h-format">
         <location filename="../src/qml/UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation type="unfinished"></translation>
+        <translation>و کار گرؽڌن قالوو 12 ساعته:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../src/qml/UnitsPage.qml" line="57"/>

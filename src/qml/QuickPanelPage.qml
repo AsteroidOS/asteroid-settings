@@ -265,7 +265,8 @@ Item {
                     break;
                 }
             }
-            if (countFixedToggles() >= fixedRowLength) break;
+            // TODO: Useless check, this is the same as the one in the while-loop
+            // if (countFixedToggles() >= fixedRowLength) break;
         }
         //% "Sliding Row"
         slotModel.append({ type: "label", labelText: qsTrId("id-sliding-row"), toggleId: "", listView: "" });

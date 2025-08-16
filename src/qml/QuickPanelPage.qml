@@ -40,7 +40,19 @@ Item {
     ConfigurationValue {
         id: sliderToggles
         key: "/desktop/asteroid/quickpanel/slider"
-        defaultValue: ["brightnessToggle", "bluetoothToggle", "hapticsToggle", "wifiToggle", "soundToggle", "cinemaToggle", "aodToggle", "powerOffToggle", "rebootToggle", "musicButton", "flashlightButton"]
+        defaultValue: [
+            "brightnessToggle",
+            "bluetoothToggle",
+            "hapticsToggle",
+            "wifiToggle",
+            "soundToggle",
+            "cinemaToggle",
+            "aodToggle",
+            "powerOffToggle",
+            "rebootToggle",
+            "musicButton",
+            "flashlightButton"
+        ]
     }
 
     ConfigurationValue {
@@ -121,11 +133,15 @@ Item {
 
     // Find toggle by ID with caching for performance
     function findToggle(toggleId) {
+        if (!toggleId) {
+            return null;
+        }
+
         if (toggleCache[toggleId] !== undefined) {
             return toggleCache[toggleId];
         }
 
-        for (var i = 0; i < toggleOptions.length; i++) {
+        for (let i = 0; i < toggleOptions.length; i++) {
             if (toggleOptions[i].id === toggleId) {
                 toggleCache[toggleId] = toggleOptions[i];
                 return toggleOptions[i];
@@ -142,13 +158,13 @@ Item {
 
     // Get toggle name for display
     function getToggleName(toggleId) {
-        var toggle = findToggle(toggleId);
+        const toggle = findToggle(toggleId);
         return toggle ? toggle.name : "";
     }
 
     // Get toggle icon for display
     function getToggleIcon(toggleId) {
-        var toggle = findToggle(toggleId);
+        const toggle = findToggle(toggleId);
         return toggle ? toggle.icon : "";
     }
 
@@ -162,15 +178,15 @@ Item {
     // Sort toggles by availability and original order
     function sortToggles(toggleIds) {
         return toggleIds.sort(function(a, b) {
-            var toggleA = findToggle(a);
-            var toggleB = findToggle(b);
+            const toggleA = findToggle(a);
+            const toggleB = findToggle(b);
 
             if (toggleA && toggleB) {
                 if (toggleA.available && !toggleB.available) return -1;
                 if (!toggleA.available && toggleB.available) return 1;
                 if (toggleA.available && toggleB.available) {
-                    var indexA = toggleOptions.findIndex(function(t) { return t.id === a; });
-                    var indexB = toggleOptions.findIndex(function(t) { return t.id === b; });
+                    const indexA = toggleOptions.findIndex(function(t) { return t.id === a; });
+                    const indexB = toggleOptions.findIndex(function(t) { return t.id === b; });
                     return indexA - indexB;
                 }
                 return a.localeCompare(b);
@@ -183,98 +199,101 @@ Item {
     function refreshModel() {
         slotModel.clear();
 
-        var fixedTogglesArray = fixedToggles.value;
-        var sliderTogglesArray = sliderToggles.value;
+        const fixedTogglesArray = fixedToggles.value;
+        const sliderTogglesArray = sliderToggles.value;
 
         //% "Fixed Row"
         slotModel.append({ type: "label", labelText: qsTrId("id-fixed-row"), toggleId: "", listView: "" });
-        for (var i = 0; i < fixedTogglesArray.length && i < fixedRowLength; i++) {
-            var toggleId = fixedTogglesArray[i];
-            if (toggleId) {
-                var toggle = findToggle(toggleId);
-                if (toggle && toggle.available) {
-                    slotModel.append({
-                        type: "toggle",
-                        toggleId: toggleId,
-                        listView: "fixed",
-                        labelText: ""
-                    });
-                }
-            }
+        for (let i = 0; i < fixedTogglesArray.length && i < fixedRowLength; i++) {
+            const toggleId = fixedTogglesArray[i];
+            const toggle = findToggle(toggleId);
+            if (!toggle || !toggle.available) continue;
+
+            slotModel.append({
+                type: "toggle",
+                toggleId: toggleId,
+                listView: "fixed",
+                labelText: ""
+            });
         }
-        for (i = 0; i < fixedTogglesArray.length && countFixedToggles() < fixedRowLength; i++) {
-            toggleId = fixedTogglesArray[i];
-            if (toggleId) {
-                toggle = findToggle(toggleId);
-                if (toggle && !toggle.available && !isToggleInFixedRow(toggleId)) {
-                    slotModel.append({
-                        type: "toggle",
-                        toggleId: toggleId,
-                        listView: "fixed",
-                        labelText: ""
-                    });
-                }
-            }
+
+        for (let i = 0; i < fixedTogglesArray.length && countFixedToggles() < fixedRowLength; i++) {
+            const toggleId = fixedTogglesArray[i];
+            const toggle = findToggle(toggleId);
+            if (!toggle || toggle.available || isToggleInFixedRow(toggleId)) continue;
+
+            slotModel.append({
+                type: "toggle",
+                toggleId: toggleId,
+                listView: "fixed",
+                labelText: ""
+            });
         }
 
         while (countFixedToggles() < fixedRowLength) {
-            var foundAvailableToggle = false;
-            for (var t = 0; t < toggleOptions.length; t++) {
-                if (toggleOptions[t].available && !isToggleInFixedRow(toggleOptions[t].id)) {
+            let foundAvailableToggle = false;
+            for (let t = 0; t < toggleOptions.length; t++) {
+                if (!toggleOptions[t].available || isToggleInFixedRow(toggleOptions[t].id)) continue;
+
+                slotModel.append({
+                    type: "toggle",
+                    toggleId: toggleOptions[t].id,
+                    listView: "fixed",
+                    labelText: ""
+                });
+
+                foundAvailableToggle = true;
+                break;
+            }
+
+            if (!foundAvailableToggle) {
+                for (let t = 0; t < toggleOptions.length; t++) {
+                    if (isToggleInFixedRow(toggleOptions[t].id)) continue;
+
                     slotModel.append({
                         type: "toggle",
                         toggleId: toggleOptions[t].id,
                         listView: "fixed",
                         labelText: ""
                     });
-                    foundAvailableToggle = true;
                     break;
-                }
-            }
-            if (!foundAvailableToggle) {
-                for (t = 0; t < toggleOptions.length; t++) {
-                    if (!isToggleInFixedRow(toggleOptions[t].id)) {
-                        slotModel.append({
-                            type: "toggle",
-                            toggleId: toggleOptions[t].id,
-                            listView: "fixed",
-                            labelText: ""
-                        });
-                        break;
-                    }
                 }
             }
             if (countFixedToggles() >= fixedRowLength) break;
         }
         //% "Sliding Row"
         slotModel.append({ type: "label", labelText: qsTrId("id-sliding-row"), toggleId: "", listView: "" });
-        for (i = 0; i < sliderTogglesArray.length; i++) {
-            toggleId = sliderTogglesArray[i];
-            if (toggleId && !isToggleInFixedRow(toggleId)) {
-                toggle = findToggle(toggleId);
-                if (toggle && toggle.available) {
-                    slotModel.append({
-                        type: "toggle",
-                        toggleId: toggleId,
-                        listView: "slider",
-                        labelText: ""
-                    });
-                }
-            }
+        for (let i = 0; i < sliderTogglesArray.length; i++) {
+            const toggleId = sliderTogglesArray[i];
+
+            if (!toggleId || isToggleInFixedRow(toggleId)) continue;
+
+            const toggle = findToggle(toggleId);
+            if (!toggle || !toggle.available) continue;
+
+            slotModel.append({
+                type: "toggle",
+                toggleId: toggleId,
+                listView: "slider",
+                labelText: ""
+            });
         }
-        for (i = 0; i < sliderTogglesArray.length; i++) {
-            toggleId = sliderTogglesArray[i];
-            if (toggleId && !isToggleInFixedRow(toggleId)) {
-                toggle = findToggle(toggleId);
-                if (toggle && !toggle.available) {
-                    slotModel.append({
-                        type: "toggle",
-                        toggleId: toggleId,
-                        listView: "slider",
-                        labelText: ""
-                    });
-                }
-            }
+
+        // Add unavailable toggles last
+        for (let i = 0; i < sliderTogglesArray.length; i++) {
+            const toggleId = sliderTogglesArray[i];
+
+            if (!toggleId || isToggleInFixedRow(toggleId)) continue;
+
+            const toggle = findToggle(toggleId);
+            if (!toggle || toggle.available) continue;
+
+            slotModel.append({
+                type: "toggle",
+                toggleId: toggleId,
+                listView: "slider",
+                labelText: ""
+            });
         }
         //% "Options"
         slotModel.append({ type: "label", labelText: qsTrId("id-options"), toggleId: "", listView: "" });
@@ -295,12 +314,13 @@ Item {
 
     // Count the number of fixed toggles in the model
     function countFixedToggles() {
-        var count = 0;
-        for (var i = 1; i < slotModel.count; i++) {
-            if (slotModel.get(i).type === "toggle" && slotModel.get(i).listView === "fixed") {
+        let count = 0;
+        for (let i = 1; i < slotModel.count; i++) {
+            const item = slotModel.get(i);
+            if (item.type === "toggle" && item.listView === "fixed") {
                 count++;
             }
-            if (slotModel.get(i).type === "label" && slotModel.get(i).labelText === qsTrId("id-sliding-row")) {
+            if (item.type === "label" && item.labelText === qsTrId("id-sliding-row")) {
                 break;
             }
         }
@@ -309,8 +329,8 @@ Item {
 
     // Check if a toggle is in the fixed row
     function isToggleInFixedRow(toggleId) {
-        for (var i = 1; i < slotModel.count; i++) {
-            var item = slotModel.get(i);
+        for (let i = 1; i < slotModel.count; i++) {
+            const item = slotModel.get(i);
             if (item.type === "label" && item.labelText === qsTrId("id-sliding-row")) {
                 break;
             }
@@ -323,8 +343,9 @@ Item {
 
     // Find the index of the slider label
     function findSliderLabelIndex() {
-        for (var i = 0; i < slotModel.count; i++) {
-            if (slotModel.get(i).type === "label" && slotModel.get(i).labelText === qsTrId("id-sliding-row")) {
+        for (let i = 0; i < slotModel.count; i++) {
+            const item = slotModel.get(i);
+            if (item.type === "label" && item.labelText === qsTrId("id-sliding-row")) {
                 return i;
             }
         }
@@ -333,8 +354,9 @@ Item {
 
     // Find the index of the options label
     function findOptionsLabelIndex() {
-        for (var i = 0; i < slotModel.count; i++) {
-            if (slotModel.get(i).type === "label" && slotModel.get(i).labelText === qsTrId("id-options")) {
+        for (let i = 0; i < slotModel.count; i++) {
+            const item = slotModel.get(i);
+            if (item.type === "label" && item.labelText === qsTrId("id-options")) {
                 return i;
             }
         }
@@ -343,7 +365,7 @@ Item {
 
     // Ensure the slider label stays at the correct position
     function ensureSliderLabelPosition() {
-        var sliderIndex = findSliderLabelIndex();
+        const sliderIndex = findSliderLabelIndex();
         if (sliderIndex !== 3) {
             slotModel.move(sliderIndex, 3, 1);
         }
@@ -351,26 +373,27 @@ Item {
 
     // Validate drop position for drag-and-drop
     function isValidDropPosition(dropIndex) {
-        var item = slotModel.get(dropIndex);
+        const item = slotModel.get(dropIndex);
         if (item.type !== "toggle") {
             return false;
         }
 
-        var sliderLabelIndex = findSliderLabelIndex();
-        var optionsIndex = findOptionsLabelIndex();
+        const sliderLabelIndex = findSliderLabelIndex();
+        const optionsIndex = findOptionsLabelIndex();
 
         if (dropIndex === 0 || dropIndex === sliderLabelIndex || dropIndex >= optionsIndex) {
             return false;
         }
 
-        var toggleSection = dropIndex < sliderLabelIndex ? "fixed" : "slider";
-        var sectionStart = toggleSection === "fixed" ? 1 : sliderLabelIndex + 1;
-        var sectionEnd = toggleSection === "fixed" ? sliderLabelIndex : optionsIndex;
+        const toggleSection = dropIndex < sliderLabelIndex ? "fixed" : "slider";
+        const sectionStart = toggleSection === "fixed" ? 1 : sliderLabelIndex + 1;
+        const sectionEnd = toggleSection === "fixed" ? sliderLabelIndex : optionsIndex;
 
-        var firstUnavailableIndex = -1;
-        for (var i = sectionStart; i < sectionEnd; i++) {
-            if (slotModel.get(i).type === "toggle") {
-                var toggle = findToggle(slotModel.get(i).toggleId);
+        let firstUnavailableIndex = -1;
+        for (let i = sectionStart; i < sectionEnd; i++) {
+            const item = slotModel.get(i);
+            if (item.type === "toggle") {
+                const toggle = findToggle(item.toggleId);
                 if (toggle && !toggle.available) {
                     firstUnavailableIndex = i;
                     break;
@@ -387,11 +410,11 @@ Item {
 
     // Save the current configuration
     function saveConfiguration() {
-        var fixedArray = [];
-        var sliderArray = [];
+        let fixedArray = [];
+        let sliderArray = [];
 
-        for (var i = 1; i < slotModel.count; i++) {
-            var item = slotModel.get(i);
+        for (let i = 1; i < slotModel.count; i++) {
+            const item = slotModel.get(i);
             if (item.type === "label" && item.labelText === qsTrId("id-sliding-row")) {
                 break;
             }
@@ -400,13 +423,13 @@ Item {
             }
         }
 
-        var sliderStart = findSliderLabelIndex() + 1;
-        var optionsIndex = findOptionsLabelIndex();
-        for (i = sliderStart; i < optionsIndex; i++) {
-            item = slotModel.get(i);
-            if (item.type === "toggle") {
-                sliderArray.push(item.toggleId);
-            }
+        const sliderStart = findSliderLabelIndex() + 1;
+        const optionsIndex = findOptionsLabelIndex();
+        for (let i = sliderStart; i < optionsIndex; i++) {
+            const item = slotModel.get(i);
+            if (item.type !== "toggle") continue;
+
+            sliderArray.push(item.toggleId);
         }
 
         fixedToggles.value = fixedArray;
@@ -419,8 +442,8 @@ Item {
             return;
         }
 
-        var sliderLabelIndex = findSliderLabelIndex();
-        var optionsLabelIndex = findOptionsLabelIndex();
+        const sliderLabelIndex = findSliderLabelIndex();
+        const optionsLabelIndex = findOptionsLabelIndex();
 
         if (targetIndex === 0 ||
             targetIndex === sliderLabelIndex ||
@@ -451,22 +474,22 @@ Item {
 
     // Restore original order after drag cancellation
     function restoreOriginalOrder() {
-        if (draggedItemIndex !== -1 && targetIndex !== -1 && draggedItemIndex !== targetIndex) {
-            slotModel.move(draggedItemIndex, targetIndex, 1);
-            slotModel.setProperty(targetIndex, "listView", targetIndex < findSliderLabelIndex() ? "fixed" : "slider");
-            saveConfiguration();
-        }
+        if (draggedItemIndex === targetIndex || draggedItemIndex === -1) return;
+
+        slotModel.move(draggedItemIndex, targetIndex, 1);
+        slotModel.setProperty(targetIndex, "listView", targetIndex < findSliderLabelIndex() ? "fixed" : "slider");
+        saveConfiguration();
     }
 
     // Abort drag operation
     function abortDrag() {
-        if (draggedItemIndex !== -1) {
-            draggedItemIndex = -1;
-            targetIndex = -1;
-            dragProxy.visible = false;
-            autoScrollTimer.scrollSpeed = 0;
-            listLoader.item.forceLayout();
-        }
+        if (draggedItemIndex === -1) return;
+
+        draggedItemIndex = -1;
+        targetIndex = -1;
+        dragProxy.visible = false;
+        autoScrollTimer.scrollSpeed = 0;
+        listLoader.item.forceLayout();
     }
 
     Loader {
@@ -515,10 +538,8 @@ Item {
                         return;
                     }
 
-                    var newContentY = contentY + scrollSpeed;
-                    var minContentY = 0
-                    newContentY = Math.max(minContentY, Math.min(newContentY, contentHeight - height));
-                    contentY = newContentY;
+                    const newContentY = contentY + scrollSpeed;
+                    contentY = Math.max(0, Math.min(newContentY, contentHeight - height));
                 }
             }
 
@@ -590,7 +611,7 @@ Item {
                         return false;
                     }
                     onCheckedChanged: {
-                        var newOptions = Object.assign({}, options.value);
+                        const newOptions = Object.assign({}, options.value);
                         if (labelText === qsTrId("id-battery-bottom")) {
                             newOptions.batteryBottom = checked;
                         } else if (labelText === qsTrId("id-battery-animation")) {
@@ -613,7 +634,7 @@ Item {
                     currentValue: options.value.particleDesign
                     opacity: options.value.batteryAnimation ? 1.0 : 0.5
                     onValueChanged: {
-                        var newOptions = Object.assign({}, options.value);
+                        const newOptions = Object.assign({}, options.value);
                         newOptions.particleDesign = value;
                         options.value = newOptions;
                     }
@@ -633,13 +654,13 @@ Item {
                     particleDesign: options.value.particleDesign
                     fillColor: {
                         if (!options.value.batteryColored) return Qt.rgba(1, 1, 1, 0.3)
-                        var percent = batteryChargePercentage.percent
+                        const percent = batteryChargePercentage.percent
                         if (percent > 50) return Qt.rgba(0, 1, 0, 0.3)
                         if (percent > 20) {
-                            var t = (50 - percent) / 30
+                            const t = (50 - percent) / 30
                             return Qt.rgba(t, 1 - (t * 0.35), 0, 0.3)
                         }
-                        var t = (20 - percent) / 20
+                        const t = (20 - percent) / 20
                         return Qt.rgba(1, 0.65 * (1 - t), 0, 0.3)
                     }
                     anchors {
@@ -664,7 +685,7 @@ Item {
                     color: "#222222"
                     opacity: {
                         if (toggleId === "") return 0;
-                        var toggle = findToggle(toggleId);
+                        const toggle = findToggle(toggleId);
                         if (!toggle || !toggle.available) return 0.2;
                         return toggleEnabled.value[toggleId] ? 0.7 : 0.3;
                     }
@@ -683,7 +704,7 @@ Item {
                         color: "#ffffff"
                         opacity: {
                             if (toggleId === "") return 0;
-                            var toggle = findToggle(toggleId);
+                            const toggle = findToggle(toggleId);
                             if (!toggle || !toggle.available) return 0.4;
                             return toggleEnabled.value[toggleId] ? 1.0 : 0.8;
                         }
@@ -696,7 +717,7 @@ Item {
                     color: "#ffffff"
                     opacity: {
                         if (toggleId === "") return 0;
-                        var toggle = findToggle(toggleId);
+                        const toggle = findToggle(toggleId);
                         if (!toggle || !toggle.available) return 0.5;
                         return toggleEnabled.value[toggleId] ? 1.0 : 0.6;
                     }
@@ -722,12 +743,12 @@ Item {
                         if (!dragPending || type !== "toggle") return;
                         dragPending = false;
 
-                        var toggle = findToggle(toggleId);
+                        const toggle = findToggle(toggleId);
                         if (toggle && toggle.available) {
                             draggedItemIndex = index;
                             targetIndex = index;
                             draggedToggleId = toggleId;
-                            var itemPos = delegateItem.mapToItem(slotList, 0, 0);
+                            const itemPos = delegateItem.mapToItem(slotList, 0, 0);
                             dragProxy.x = 0;
                             dragProxy.y = itemPos.y;
                             dragProxy.text = getToggleName(toggleId);
@@ -748,7 +769,7 @@ Item {
                     }
                     enabled: {
                         if (isDragging || type !== "toggle") return false;
-                        var toggle = findToggle(toggleId);
+                        const toggle = findToggle(toggleId);
                         return toggle && toggle.available;
                     }
                     property point startPos: Qt.point(0, 0)
@@ -770,11 +791,11 @@ Item {
                         }
 
                         if (draggedItemIndex !== -1) {
-                            var pos = mapToItem(slotList, mouse.x, mouse.y);
+                            const pos = mapToItem(slotList, mouse.x, mouse.y);
                             dragProxy.y = pos.y - dragYOffset;
 
-                            var distFromTop = pos.y;
-                            var distFromBottom = slotList.height - pos.y;
+                            const distFromTop = pos.y;
+                            const distFromBottom = slotList.height - pos.y;
                             if (distFromTop < autoScrollTimer.scrollThreshold) {
                                 autoScrollTimer.scrollSpeed = -25 * (1 - distFromTop / autoScrollTimer.scrollThreshold);
                             } else if (distFromBottom < autoScrollTimer.scrollThreshold) {
@@ -783,23 +804,23 @@ Item {
                                 autoScrollTimer.scrollSpeed = 0;
                             }
 
-                            var dropY = pos.y + slotList.contentY;
+                            const dropY = pos.y + slotList.contentY;
 
                             if (dropY >= 0) {
-                                var itemUnder = slotList.itemAt(slotList.width / 2, dropY);
+                                const itemUnder = slotList.itemAt(slotList.width / 2, dropY);
                                 if (itemUnder && itemUnder.visualIndex !== undefined) {
-                                    var dropIndex = itemUnder.visualIndex;
-                                    var optionsIndex = findOptionsLabelIndex();
-                                    var sliderLabelIndex = findSliderLabelIndex();
+                                    let dropIndex = itemUnder.visualIndex;
+                                    const optionsIndex = findOptionsLabelIndex();
+                                    const sliderLabelIndex = findSliderLabelIndex();
 
                                     if (dropIndex > sliderLabelIndex && dropIndex >= optionsIndex - 1) {
                                         dropIndex -= 1;
                                     }
 
                                     if (dropIndex !== draggedItemIndex && isValidDropPosition(dropIndex)) {
-                                        var targetY = itemUnder.y + itemUnder.height / 2;
+                                        const targetY = itemUnder.y + itemUnder.height / 2;
                                         if (dropY < targetY && dropIndex > 0) {
-                                            var prevItem = slotModel.get(dropIndex - 1);
+                                            const prevItem = slotModel.get(dropIndex - 1);
                                             if (prevItem.type !== "label" &&
                                                 ((prevItem.listView === "fixed" && dropIndex < sliderLabelIndex) ||
                                                  (prevItem.listView === "slider" && dropIndex > sliderLabelIndex))) {
@@ -817,58 +838,65 @@ Item {
                         }
                     }
 
+                    function handleDropReleased(dropY) {
+                        if (dropY < 0) {
+                            abortDrag();
+                            return;
+                        }
+
+                        const itemUnder = slotList.itemAt(slotList.width / 2, dropY);
+                        if (!itemUnder || itemUnder.visualIndex === undefined) {
+                            abortDrag();
+                            return;
+                        }
+
+                        const dropIndex = itemUnder.visualIndex;
+                        const optionsIndex = findOptionsLabelIndex();
+                        const sliderLabelIndex = findSliderLabelIndex();
+
+                        if (dropIndex > sliderLabelIndex && dropIndex >= optionsIndex - 1) {
+                            dropIndex -= 1;
+                        }
+
+                        if (dropIndex === draggedItemIndex || !isValidDropPosition(dropIndex)) {
+                            abortDrag();
+                            return;
+                        }
+
+                        targetIndex = dropIndex;
+                        moveItems();
+                    }
+
                     onReleased: {
-                        var pressDuration = new Date().getTime() - pressStartTime;
+                        const pressDuration = new Date().getTime() - pressStartTime;
+
+                        longPressTimer.stop();
 
                         if (draggedItemIndex !== -1) {
-                            var pos = mapToItem(slotList, mouse.x, mouse.y);
-                            var dropY = pos.y + slotList.contentY;
+                            const pos = mapToItem(slotList, mouse.x, mouse.y);
+                            const dropY = pos.y + slotList.contentY;
 
-                            if (dropY >= 0) {
-                                var itemUnder = slotList.itemAt(slotList.width / 2, dropY);
-                                if (itemUnder && itemUnder.visualIndex !== undefined) {
-                                    var dropIndex = itemUnder.visualIndex;
-                                    var optionsIndex = findOptionsLabelIndex();
-                                    var sliderLabelIndex = findSliderLabelIndex();
-
-                                    if (dropIndex > sliderLabelIndex && dropIndex >= optionsIndex - 1) {
-                                        dropIndex -= 1;
-                                    }
-
-                                    if (dropIndex !== draggedItemIndex && isValidDropPosition(dropIndex)) {
-                                        targetIndex = dropIndex;
-                                        moveItems();
-                                    } else {
-                                        abortDrag();
-                                    }
-                                } else {
-                                    abortDrag();
-                                }
-                            } else {
-                                abortDrag();
-                            }
+                            handleDropReleased(dropY);
 
                             dragProxy.visible = false;
                             draggedItemIndex = -1;
                             targetIndex = -1;
                             autoScrollTimer.scrollSpeed = 0;
-                            longPressTimer.stop();
                         } else if (type === "toggle" && toggleId && pressDuration < 500) {
-                            longPressTimer.stop();
-                            var newEnabled = Object.assign({}, toggleEnabled.value);
-                            var isFixedToggle = isToggleInFixedRow(toggleId);
-                            var sliderLabelIndex = findSliderLabelIndex();
-                            var optionsLabelIndex = findOptionsLabelIndex();
-                            var fixedActiveCount = 0;
-                            for (var i = 1; i < sliderLabelIndex; i++) {
-                                var item = slotModel.get(i);
+                            const newEnabled = Object.assign({}, toggleEnabled.value);
+                            const isFixedToggle = isToggleInFixedRow(toggleId);
+                            const sliderLabelIndex = findSliderLabelIndex();
+                            const optionsLabelIndex = findOptionsLabelIndex();
+                            let fixedActiveCount = 0;
+                            for (let i = 1; i < sliderLabelIndex; i++) {
+                                const item = slotModel.get(i);
                                 if (item.type === "toggle" && toggleEnabled.value[item.toggleId]) {
                                     fixedActiveCount++;
                                 }
                             }
-                            var sliderActiveCount = 0;
-                            for (i = sliderLabelIndex + 1; i < optionsLabelIndex; i++) {
-                                item = slotModel.get(i);
+                            let sliderActiveCount = 0;
+                            for (let i = sliderLabelIndex + 1; i < optionsLabelIndex; i++) {
+                                const item = slotModel.get(i);
                                 if (item.type === "toggle" && toggleEnabled.value[item.toggleId]) {
                                     sliderActiveCount++;
                                 }
@@ -883,8 +911,6 @@ Item {
                             }
                             newEnabled[toggleId] = !newEnabled[toggleId];
                             toggleEnabled.value = newEnabled;
-                        } else {
-                            longPressTimer.stop();
                         }
                     }
 

@@ -357,7 +357,7 @@ Item {
                 return i;
             }
         }
-        return 3;
+        return null;
     }
 
     // Find the index of the options label
@@ -368,15 +368,16 @@ Item {
                 return i;
             }
         }
-        return slotModel.count - 6;
+        return null;
     }
 
     // Ensure the slider label stays at the correct position
     function ensureSliderLabelPosition() {
         const sliderIndex = findSliderLabelIndex();
-        if (sliderIndex !== 3) {
-            slotModel.move(sliderIndex, 3, 1);
-        }
+        if (sliderIndex === null) return;
+
+        // Ensure slider label is right after the fixed row
+        slotModel.move(sliderIndex, fixedRowLength + 1, 1);
     }
 
     // Validate drop position for drag-and-drop
@@ -787,50 +788,50 @@ Item {
                             return;
                         }
 
-                        if (draggedItemIndex !== -1) {
-                            const pos = mapToItem(slotList, mouse.x, mouse.y);
-                            dragProxy.y = pos.y - dragYOffset;
+                        if (draggedItemIndex === -1) return;
 
-                            const distFromTop = pos.y;
-                            const distFromBottom = slotList.height - pos.y;
-                            if (distFromTop < autoScrollTimer.scrollThreshold) {
-                                autoScrollTimer.scrollSpeed = -25 * (1 - distFromTop / autoScrollTimer.scrollThreshold);
-                            } else if (distFromBottom < autoScrollTimer.scrollThreshold) {
-                                autoScrollTimer.scrollSpeed = 25 * (1 - distFromBottom / autoScrollTimer.scrollThreshold);
-                            } else {
-                                autoScrollTimer.scrollSpeed = 0;
+                        const pos = mapToItem(slotList, mouse.x, mouse.y);
+                        dragProxy.y = pos.y - dragYOffset;
+
+                        const distFromTop = pos.y;
+                        const distFromBottom = slotList.height - pos.y;
+                        if (distFromTop < autoScrollTimer.scrollThreshold) {
+                            autoScrollTimer.scrollSpeed = -25 * (1 - distFromTop / autoScrollTimer.scrollThreshold);
+                        } else if (distFromBottom < autoScrollTimer.scrollThreshold) {
+                            autoScrollTimer.scrollSpeed = 25 * (1 - distFromBottom / autoScrollTimer.scrollThreshold);
+                        } else {
+                            autoScrollTimer.scrollSpeed = 0;
+                        }
+
+                        const dropY = pos.y + slotList.contentY;
+
+                        if (dropY < 0) return;
+
+                        const itemUnder = slotList.itemAt(slotList.width / 2, dropY);
+                        if (!itemUnder || itemUnder.visualIndex === undefined) return;
+
+                        let dropIndex = itemUnder.visualIndex;
+                        const optionsIndex = findOptionsLabelIndex();
+                        const sliderLabelIndex = findSliderLabelIndex();
+
+                        if (dropIndex > sliderLabelIndex && dropIndex >= optionsIndex - 1) {
+                            dropIndex -= 1;
+                        }
+
+                        if (dropIndex !== draggedItemIndex && isValidDropPosition(dropIndex)) {
+                            const targetY = itemUnder.y + itemUnder.height / 2;
+                            if (dropY < targetY && dropIndex > 0) {
+                                const prevItem = slotModel.get(dropIndex - 1);
+                                if (prevItem.type !== "label" &&
+                                    ((prevItem.listView === "fixed" && dropIndex < sliderLabelIndex) ||
+                                        (prevItem.listView === "slider" && dropIndex > sliderLabelIndex))) {
+                                    dropIndex -= 1;
+                                }
                             }
 
-                            const dropY = pos.y + slotList.contentY;
-
-                            if (dropY >= 0) {
-                                const itemUnder = slotList.itemAt(slotList.width / 2, dropY);
-                                if (itemUnder && itemUnder.visualIndex !== undefined) {
-                                    let dropIndex = itemUnder.visualIndex;
-                                    const optionsIndex = findOptionsLabelIndex();
-                                    const sliderLabelIndex = findSliderLabelIndex();
-
-                                    if (dropIndex > sliderLabelIndex && dropIndex >= optionsIndex - 1) {
-                                        dropIndex -= 1;
-                                    }
-
-                                    if (dropIndex !== draggedItemIndex && isValidDropPosition(dropIndex)) {
-                                        const targetY = itemUnder.y + itemUnder.height / 2;
-                                        if (dropY < targetY && dropIndex > 0) {
-                                            const prevItem = slotModel.get(dropIndex - 1);
-                                            if (prevItem.type !== "label" &&
-                                                ((prevItem.listView === "fixed" && dropIndex < sliderLabelIndex) ||
-                                                 (prevItem.listView === "slider" && dropIndex > sliderLabelIndex))) {
-                                                dropIndex -= 1;
-                                            }
-                                        }
-
-                                        if (isValidDropPosition(dropIndex) && dropIndex !== targetIndex) {
-                                            targetIndex = dropIndex;
-                                            moveItems();
-                                        }
-                                    }
-                                }
+                            if (isValidDropPosition(dropIndex) && dropIndex !== targetIndex) {
+                                targetIndex = dropIndex;
+                                moveItems();
                             }
                         }
                     }

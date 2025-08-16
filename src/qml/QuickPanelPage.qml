@@ -204,6 +204,7 @@ Item {
 
         //% "Fixed Row"
         slotModel.append({ type: "label", labelText: qsTrId("id-fixed-row"), toggleId: "", listView: "" });
+        // Adds available fixed row toggles first
         for (let i = 0; i < fixedTogglesArray.length && i < fixedRowLength; i++) {
             const toggleId = fixedTogglesArray[i];
             const toggle = findToggle(toggleId);
@@ -217,6 +218,7 @@ Item {
             });
         }
 
+        // Add unavailable fixed row toggles next
         for (let i = 0; i < fixedTogglesArray.length && countFixedToggles() < fixedRowLength; i++) {
             const toggleId = fixedTogglesArray[i];
             const toggle = findToggle(toggleId);
@@ -230,8 +232,11 @@ Item {
             });
         }
 
+        // In case less than fixedRowLength, fill with any other toggle
         while (countFixedToggles() < fixedRowLength) {
             let foundAvailableToggle = false;
+
+            // Adds a single available toggle to the fixed row
             for (let t = 0; t < toggleOptions.length; t++) {
                 if (!toggleOptions[t].available || isToggleInFixedRow(toggleOptions[t].id)) continue;
 
@@ -247,6 +252,7 @@ Item {
             }
 
             if (!foundAvailableToggle) {
+                // If no toggle was added, then add an unavailable toggle
                 for (let t = 0; t < toggleOptions.length; t++) {
                     if (isToggleInFixedRow(toggleOptions[t].id)) continue;
 
@@ -263,6 +269,7 @@ Item {
         }
         //% "Sliding Row"
         slotModel.append({ type: "label", labelText: qsTrId("id-sliding-row"), toggleId: "", listView: "" });
+        // Adds available slider row toggles first. Ensure it doesn't already exist in the fixed row
         for (let i = 0; i < sliderTogglesArray.length; i++) {
             const toggleId = sliderTogglesArray[i];
 
@@ -279,7 +286,7 @@ Item {
             });
         }
 
-        // Add unavailable toggles last
+        // Add unavailable toggles last. Ensure it doesn't already exist in the fixed row
         for (let i = 0; i < sliderTogglesArray.length; i++) {
             const toggleId = sliderTogglesArray[i];
 

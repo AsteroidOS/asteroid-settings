@@ -481,17 +481,6 @@ Item {
         saveConfiguration();
     }
 
-    // Abort drag operation
-    function abortDrag() {
-        if (draggedItemIndex === -1) return;
-
-        draggedItemIndex = -1;
-        targetIndex = -1;
-        dragProxy.visible = false;
-        autoScrollTimer.scrollSpeed = 0;
-        listLoader.item.forceLayout();
-    }
-
     Loader {
         id: listLoader
         anchors {
@@ -836,6 +825,17 @@ Item {
                                 }
                             }
                         }
+                    }
+
+                    // Abort drag operation
+                    function abortDrag() {
+                        if (draggedItemIndex === -1) return;
+
+                        draggedItemIndex = -1;
+                        targetIndex = -1;
+                        dragProxy.visible = false;
+                        autoScrollTimer.scrollSpeed = 0;
+                        listLoader.item.forceLayout();
                     }
 
                     function handleDropReleased(dropY) {

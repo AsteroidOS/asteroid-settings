@@ -400,12 +400,12 @@ Item {
         let firstUnavailableIndex = -1;
         for (let i = sectionStart; i < sectionEnd; i++) {
             const item = slotModel.get(i);
-            if (item.type === "toggle") {
-                const toggle = findToggle(item.toggleId);
-                if (toggle && !toggle.available) {
-                    firstUnavailableIndex = i;
-                    break;
-                }
+            if (item.type !== "toggle") continue;
+
+            const toggle = findToggle(item.toggleId);
+            if (toggle && !toggle.available) {
+                firstUnavailableIndex = i;
+                break;
             }
         }
 

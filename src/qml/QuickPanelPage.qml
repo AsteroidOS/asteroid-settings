@@ -465,11 +465,6 @@ Item {
                 forceLayout();
             }
 
-            header: Item {
-                width: parent.width
-                height: 0
-            }
-
             footer: Item {
                 width: parent.width
                 height: rowHeight * 1.5

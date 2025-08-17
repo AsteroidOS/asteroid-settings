@@ -231,7 +231,7 @@ Item {
 
             // Adds a single available toggle to the fixed row
             for (let t = 0; t < toggleOptions.length; t++) {
-                if (isToggleInFixedRow(toggleOptions[t].id)) continue;
+                if (isToggleInRow(toggleOptions[t].id)) continue;
 
                 slotModel.append({
                     type: "toggle",
@@ -250,10 +250,23 @@ Item {
         for (let i = 0; i < sliderTogglesArray.length; i++) {
             const toggleId = sliderTogglesArray[i];
 
-            if (!toggleId || isToggleInFixedRow(toggleId)) continue;
+            if (!toggleId || isToggleInRow(toggleId)) continue;
 
             const toggle = findToggle(toggleId);
             if (!toggle) continue;
+
+            slotModel.append({
+                type: "toggle",
+                toggleId: toggleId,
+                listView: "slider",
+                labelText: ""
+            });
+        }
+
+        // Adds remaining toggles to sliding row
+        for (let t = 0; t < toggleOptions.length; t++) {
+            const toggleId = toggleOptions[t].id;
+            if (isToggleInRow(toggleId)) continue;
 
             slotModel.append({
                 type: "toggle",
@@ -304,6 +317,24 @@ Item {
             if (item.type === "toggle" && item.toggleId === toggleId) {
                 return true;
             }
+        }
+        return false;
+    }
+
+    // Check if a toggle is in any row
+    function isToggleInRow(toggleId) {
+        for (let i = 1; i < slotModel.count; i++) {
+            const item = slotModel.get(i);
+
+            if (item.type !== "toggle") {
+                continue;
+            }
+
+            if (item.toggleId !== toggleId) {
+                continue;
+            }
+
+            return true;
         }
         return false;
     }

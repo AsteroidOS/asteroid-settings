@@ -87,34 +87,7 @@ Item {
     }
 
     // Available toggle options with translatable names and icons
-    property var toggleOptions: [
-        //% "Lock Button"
-        { id: "lockButton", name: qsTrId("id-toggle-lock"), icon: "ios-unlock", available: true },
-        //% "Settings"
-        { id: "settingsButton", name: qsTrId("id-toggle-settings"), icon: "ios-settings", available: true },
-        //% "Brightness"
-        { id: "brightnessToggle", name: qsTrId("id-toggle-brightness"), icon: "ios-sunny", available: true },
-        //% "Bluetooth"
-        { id: "bluetoothToggle", name: qsTrId("id-toggle-bluetooth"), icon: "ios-bluetooth", available: true },
-        //% "Vibration"
-        { id: "hapticsToggle", name: qsTrId("id-toggle-haptics"), icon: "ios-watch-vibrating", available: true },
-        //% "Wifi Toggle"
-        { id: "wifiToggle", name: qsTrId("id-toggle-wifi"), icon: "ios-wifi-outline", available: DeviceSpecs.hasWlan },
-        //% "Mute Sound"
-        { id: "soundToggle", name: qsTrId("id-toggle-sound"), icon: "ios-sound-indicator-high", available: DeviceSpecs.hasSpeaker },
-        //% "Cinema Mode"
-        { id: "cinemaToggle", name: qsTrId("id-toggle-cinema"), icon: "ios-film-outline", available: true },
-        //% "AoD Toggle"
-        { id: "aodToggle", name: qsTrId("id-always-on-display"), icon: "ios-watch-aod-on", available: true },
-        //% "Poweroff"
-        { id: "powerOffToggle", name: qsTrId("id-toggle-power-off"), icon: "ios-power", available: true },
-        //% "Reboot"
-        { id: "rebootToggle", name: qsTrId("id-toggle-reboot"), icon: "ios-refresh", available: true },
-        //% "Music"
-        { id: "musicButton", name: qsTrId("id-toggle-music"), icon: "ios-musical-notes-outline", available: true },
-        //% "Flashlight"
-        { id: "flashlightButton", name: qsTrId("id-toggle-flashlight"), icon: "ios-bulb-outline", available: true }
-    ]
+    property var toggleOptions: []
 
     // Layout properties
     property real rowHeight: Dims.h(18)
@@ -125,6 +98,44 @@ Item {
     property string draggedToggleId: ""
     property var particleDesigns: ["diamonds", "bubbles", "logos", "flashes"]
     property var toggleCache: ({})
+
+    Component.onCompleted: {
+        populateToggleOptions();
+    }
+
+    function populateToggleOptions() {
+
+        //% "Lock Button"
+        toggleOptions.push({ id: "lockButton", name: qsTrId("id-toggle-lock"), icon: "ios-unlock"});
+        //% "Settings"
+        toggleOptions.push({ id: "settingsButton", name: qsTrId("id-toggle-settings"), icon: "ios-settings"});
+        //% "Brightness"
+        toggleOptions.push({ id: "brightnessToggle", name: qsTrId("id-toggle-brightness"), icon: "ios-sunny"});
+        //% "Bluetooth"
+        toggleOptions.push({ id: "bluetoothToggle", name: qsTrId("id-toggle-bluetooth"), icon: "ios-bluetooth"});
+        //% "Vibration"
+        toggleOptions.push({ id: "hapticsToggle", name: qsTrId("id-toggle-haptics"), icon: "ios-watch-vibrating"});
+        if (DeviceSpecs.hasWlan) {
+            //% "Wifi Toggle"
+            toggleOptions.push({ id: "wifiToggle", name: qsTrId("id-toggle-wifi"), icon: "ios-wifi-outline"});
+        }
+        if (DeviceSpecs.hasSpeaker) {
+            //% "Mute Sound"
+            toggleOptions.push({ id: "soundToggle", name: qsTrId("id-toggle-sound"), icon: "ios-sound-indicator-high"});
+        }
+        //% "Cinema Mode"
+        toggleOptions.push({ id: "cinemaToggle", name: qsTrId("id-toggle-cinema"), icon: "ios-film-outline"});
+        //% "AoD Toggle"
+        toggleOptions.push({ id: "aodToggle", name: qsTrId("id-always-on-display"), icon: "ios-watch-aod-on"});
+        //% "Poweroff"
+        toggleOptions.push({ id: "powerOffToggle", name: qsTrId("id-toggle-power-off"), icon: "ios-power"});
+        //% "Reboot"
+        toggleOptions.push({ id: "rebootToggle", name: qsTrId("id-toggle-reboot"), icon: "ios-refresh"});
+        //% "Music"
+        toggleOptions.push({ id: "musicButton", name: qsTrId("id-toggle-music"), icon: "ios-musical-notes-outline"});
+        //% "Flashlight"
+        toggleOptions.push({ id: "flashlightButton", name: qsTrId("id-toggle-flashlight"), icon: "ios-bulb-outline"});
+    }
 
     // Utility function to safely access object properties
     function safeGet(obj, prop, defaultValue) {
@@ -181,17 +192,13 @@ Item {
             const toggleA = findToggle(a);
             const toggleB = findToggle(b);
 
-            if (toggleA && toggleB) {
-                if (toggleA.available && !toggleB.available) return -1;
-                if (!toggleA.available && toggleB.available) return 1;
-                if (toggleA.available && toggleB.available) {
-                    const indexA = toggleOptions.findIndex(function(t) { return t.id === a; });
-                    const indexB = toggleOptions.findIndex(function(t) { return t.id === b; });
-                    return indexA - indexB;
-                }
-                return a.localeCompare(b);
+            if (!toggleA && !toggleB) {
+                return 0;
             }
-            return 0;
+
+            const indexA = toggleOptions.findIndex(function(t) { return t.id === a; });
+            const indexB = toggleOptions.findIndex(function(t) { return t.id === b; });
+            return indexA - indexB;
         });
     }
 
@@ -208,7 +215,7 @@ Item {
         for (let i = 0; i < fixedTogglesArray.length && i < fixedRowLength; i++) {
             const toggleId = fixedTogglesArray[i];
             const toggle = findToggle(toggleId);
-            if (!toggle || !toggle.available) continue;
+            if (!toggle) continue;
 
             slotModel.append({
                 type: "toggle",
@@ -222,7 +229,7 @@ Item {
         for (let i = 0; i < fixedTogglesArray.length && countFixedToggles() < fixedRowLength; i++) {
             const toggleId = fixedTogglesArray[i];
             const toggle = findToggle(toggleId);
-            if (!toggle || toggle.available || isToggleInFixedRow(toggleId)) continue;
+            if (!toggle || isToggleInFixedRow(toggleId)) continue;
 
             slotModel.append({
                 type: "toggle",
@@ -238,7 +245,7 @@ Item {
 
             // Adds a single available toggle to the fixed row
             for (let t = 0; t < toggleOptions.length; t++) {
-                if (!toggleOptions[t].available || isToggleInFixedRow(toggleOptions[t].id)) continue;
+                if (isToggleInFixedRow(toggleOptions[t].id)) continue;
 
                 slotModel.append({
                     type: "toggle",
@@ -250,23 +257,6 @@ Item {
                 foundAvailableToggle = true;
                 break;
             }
-
-            if (!foundAvailableToggle) {
-                // If no toggle was added, then add an unavailable toggle
-                for (let t = 0; t < toggleOptions.length; t++) {
-                    if (isToggleInFixedRow(toggleOptions[t].id)) continue;
-
-                    slotModel.append({
-                        type: "toggle",
-                        toggleId: toggleOptions[t].id,
-                        listView: "fixed",
-                        labelText: ""
-                    });
-                    break;
-                }
-            }
-            // TODO: Useless check, this is the same as the one in the while-loop
-            // if (countFixedToggles() >= fixedRowLength) break;
         }
         //% "Sliding Row"
         slotModel.append({ type: "label", labelText: qsTrId("id-sliding-row"), toggleId: "", listView: "" });
@@ -277,24 +267,7 @@ Item {
             if (!toggleId || isToggleInFixedRow(toggleId)) continue;
 
             const toggle = findToggle(toggleId);
-            if (!toggle || !toggle.available) continue;
-
-            slotModel.append({
-                type: "toggle",
-                toggleId: toggleId,
-                listView: "slider",
-                labelText: ""
-            });
-        }
-
-        // Add unavailable toggles last. Ensure it doesn't already exist in the fixed row
-        for (let i = 0; i < sliderTogglesArray.length; i++) {
-            const toggleId = sliderTogglesArray[i];
-
-            if (!toggleId || isToggleInFixedRow(toggleId)) continue;
-
-            const toggle = findToggle(toggleId);
-            if (!toggle || toggle.available) continue;
+            if (!toggle) continue;
 
             slotModel.append({
                 type: "toggle",
@@ -391,26 +364,6 @@ Item {
         const optionsIndex = findOptionsLabelIndex();
 
         if (dropIndex === 0 || dropIndex === sliderLabelIndex || dropIndex >= optionsIndex) {
-            return false;
-        }
-
-        const toggleSection = dropIndex < sliderLabelIndex ? "fixed" : "slider";
-        const sectionStart = toggleSection === "fixed" ? 1 : sliderLabelIndex + 1;
-        const sectionEnd = toggleSection === "fixed" ? sliderLabelIndex : optionsIndex;
-
-        let firstUnavailableIndex = -1;
-        for (let i = sectionStart; i < sectionEnd; i++) {
-            const item = slotModel.get(i);
-            if (item.type !== "toggle") continue;
-
-            const toggle = findToggle(item.toggleId);
-            if (toggle && !toggle.available) {
-                firstUnavailableIndex = i;
-                break;
-            }
-        }
-
-        if (firstUnavailableIndex !== -1 && dropIndex >= firstUnavailableIndex) {
             return false;
         }
 
@@ -684,7 +637,7 @@ Item {
                     opacity: {
                         if (toggleId === "") return 0;
                         const toggle = findToggle(toggleId);
-                        if (!toggle || !toggle.available) return 0.2;
+                        if (!toggle) return 0.2;
                         return toggleEnabled.value[toggleId] ? 0.7 : 0.3;
                     }
                     visible: type === "toggle" && toggleId !== "" && !isDragging
@@ -703,7 +656,7 @@ Item {
                         opacity: {
                             if (toggleId === "") return 0;
                             const toggle = findToggle(toggleId);
-                            if (!toggle || !toggle.available) return 0.4;
+                            if (!toggle) return 0.4;
                             return toggleEnabled.value[toggleId] ? 1.0 : 0.8;
                         }
                         visible: toggleId !== ""
@@ -716,7 +669,7 @@ Item {
                     opacity: {
                         if (toggleId === "") return 0;
                         const toggle = findToggle(toggleId);
-                        if (!toggle || !toggle.available) return 0.5;
+                        if (!toggle) return 0.5;
                         return toggleEnabled.value[toggleId] ? 1.0 : 0.6;
                     }
                     visible: type === "toggle" && toggleId !== "" && !isDragging
@@ -742,7 +695,7 @@ Item {
                         dragPending = false;
 
                         const toggle = findToggle(toggleId);
-                        if (toggle && toggle.available) {
+                        if (toggle) {
                             draggedItemIndex = index;
                             targetIndex = index;
                             draggedToggleId = toggleId;
@@ -768,7 +721,7 @@ Item {
                     enabled: {
                         if (isDragging || type !== "toggle") return false;
                         const toggle = findToggle(toggleId);
-                        return toggle && toggle.available;
+                        return toggle;
                     }
                     property point startPos: Qt.point(0, 0)
                     property real pressStartTime: 0

@@ -876,6 +876,7 @@ Item {
                                 }
                             }
                             if (newEnabled[toggleId]) {
+                                // Ensure that a toggle is always enabled
                                 if (isFixedToggle && fixedActiveCount <= 1) {
                                     return;
                                 }

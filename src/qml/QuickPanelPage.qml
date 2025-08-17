@@ -225,20 +225,6 @@ Item {
             });
         }
 
-        // Add unavailable fixed row toggles next
-        for (let i = 0; i < fixedTogglesArray.length && countFixedToggles() < fixedRowLength; i++) {
-            const toggleId = fixedTogglesArray[i];
-            const toggle = findToggle(toggleId);
-            if (!toggle || isToggleInFixedRow(toggleId)) continue;
-
-            slotModel.append({
-                type: "toggle",
-                toggleId: toggleId,
-                listView: "fixed",
-                labelText: ""
-            });
-        }
-
         // In case less than fixedRowLength, fill with any other toggle
         while (countFixedToggles() < fixedRowLength) {
             let foundAvailableToggle = false;

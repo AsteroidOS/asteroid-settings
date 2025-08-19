@@ -186,22 +186,6 @@ Item {
         }
     }
 
-    // Sort toggles by availability and original order
-    function sortToggles(toggleIds) {
-        return toggleIds.sort(function(a, b) {
-            const toggleA = findToggle(a);
-            const toggleB = findToggle(b);
-
-            if (!toggleA && !toggleB) {
-                return 0;
-            }
-
-            const indexA = toggleOptions.findIndex(function(t) { return t.id === a; });
-            const indexB = toggleOptions.findIndex(function(t) { return t.id === b; });
-            return indexA - indexB;
-        });
-    }
-
     // Populate the model with fixed and slider toggles
     function refreshModel() {
         slotModel.clear();

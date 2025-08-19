@@ -398,15 +398,6 @@ Item {
         listLoader.item.forceLayout();
     }
 
-    // Restore original order after drag cancellation
-    function restoreOriginalOrder() {
-        if (draggedItemIndex === targetIndex || draggedItemIndex === -1) return;
-
-        slotModel.move(draggedItemIndex, targetIndex, 1);
-        slotModel.setProperty(targetIndex, "listView", targetIndex < findSliderLabelIndex() ? "fixed" : "slider");
-        saveConfiguration();
-    }
-
     Loader {
         id: listLoader
         anchors {

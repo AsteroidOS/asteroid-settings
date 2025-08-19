@@ -428,8 +428,9 @@ Item {
             return;
         }
 
-        dragProxy.text = getToggleName(draggedToggleId);
-        dragProxy.icon = getToggleIcon(draggedToggleId);
+        const toggle = findToggle(draggedToggleId);
+        dragProxy.text = toggle.name;
+        dragProxy.icon = toggle.icon;
 
         if ((draggedItemIndex < sliderLabelIndex && targetIndex < sliderLabelIndex) ||
             (draggedItemIndex > sliderLabelIndex && targetIndex > sliderLabelIndex && targetIndex < optionsLabelIndex)) {
@@ -643,12 +644,7 @@ Item {
                     height: Dims.w(16)
                     radius: width / 2
                     color: "#222222"
-                    opacity: {
-                        if (toggleId === "") return 0;
-                        const toggle = findToggle(toggleId);
-                        if (!toggle) return 0.2;
-                        return toggleEnabled.value[toggleId] ? 0.7 : 0.3;
-                    }
+                    opacity: toggleId ? (toggleEnabled.value[toggleId] ? 0.7 : 0.3) : 0;
                     visible: type === "toggle" && toggleId !== "" && !isDragging
                     anchors {
                         verticalCenter: parent.verticalCenter
@@ -662,12 +658,7 @@ Item {
                         height: Dims.w(10)
                         anchors.centerIn: parent
                         color: "#ffffff"
-                        opacity: {
-                            if (toggleId === "") return 0;
-                            const toggle = findToggle(toggleId);
-                            if (!toggle) return 0.4;
-                            return toggleEnabled.value[toggleId] ? 1.0 : 0.8;
-                        }
+                        opacity: toggleId ? (toggleEnabled.value[toggleId] ? 1.0 : 0.8) : 0;
                         visible: toggleId !== ""
                     }
                 }
@@ -675,12 +666,7 @@ Item {
                 Label {
                     text: getToggleName(toggleId)
                     color: "#ffffff"
-                    opacity: {
-                        if (toggleId === "") return 0;
-                        const toggle = findToggle(toggleId);
-                        if (!toggle) return 0.5;
-                        return toggleEnabled.value[toggleId] ? 1.0 : 0.6;
-                    }
+                    opacity: toggleId ? (toggleEnabled.value[toggleId] ? 1.0 : 0.6) : 0;
                     visible: type === "toggle" && toggleId !== "" && !isDragging
                     anchors {
                         verticalCenter: parent.verticalCenter
@@ -703,19 +689,17 @@ Item {
                         if (!dragPending || type !== "toggle") return;
                         dragPending = false;
 
+                        draggedItemIndex = index;
+                        targetIndex = index;
+                        draggedToggleId = toggleId;
+                        const itemPos = delegateItem.mapToItem(slotList, 0, 0);
+                        dragProxy.x = 0;
+                        dragProxy.y = itemPos.y;
                         const toggle = findToggle(toggleId);
-                        if (toggle) {
-                            draggedItemIndex = index;
-                            targetIndex = index;
-                            draggedToggleId = toggleId;
-                            const itemPos = delegateItem.mapToItem(slotList, 0, 0);
-                            dragProxy.x = 0;
-                            dragProxy.y = itemPos.y;
-                            dragProxy.text = getToggleName(toggleId);
-                            dragProxy.icon = getToggleIcon(toggleId);
-                            dragProxy.visible = true;
-                            dragYOffset = dragArea.startPos.y;
-                        }
+                        dragProxy.text = toggle.name;
+                        dragProxy.icon = toggle.icon;
+                        dragProxy.visible = true;
+                        dragYOffset = dragArea.startPos.y;
                     }
                 }
 
@@ -727,11 +711,7 @@ Item {
                         top: parent.top
                         bottom: parent.bottom
                     }
-                    enabled: {
-                        if (isDragging || type !== "toggle") return false;
-                        const toggle = findToggle(toggleId);
-                        return toggle;
-                    }
+                    enabled: !isDragging && type === "toggle"
                     property point startPos: Qt.point(0, 0)
                     property real pressStartTime: 0
 

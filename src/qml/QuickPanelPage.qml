@@ -95,9 +95,8 @@ Item {
     property int targetIndex: -1
     property int fixedRowLength: 2
     property real dragYOffset: 0
-    property string draggedToggleId: ""
+    property var draggedToggle: null
     property var particleDesigns: ["diamonds", "bubbles", "logos", "flashes"]
-    property var toggleCache: ({})
 
     Component.onCompleted: {
         populateToggleOptions();
@@ -106,77 +105,35 @@ Item {
     function populateToggleOptions() {
 
         //% "Lock Button"
-        toggleOptions.push({ id: "lockButton", name: qsTrId("id-toggle-lock"), icon: "ios-unlock"});
+        toggleOptions["lockButton"] = ({ name: qsTrId("id-toggle-lock"), icon: "ios-unlock"});
         //% "Settings"
-        toggleOptions.push({ id: "settingsButton", name: qsTrId("id-toggle-settings"), icon: "ios-settings"});
+        toggleOptions["settingsButton"] = ({ name: qsTrId("id-toggle-settings"), icon: "ios-settings"});
         //% "Brightness"
-        toggleOptions.push({ id: "brightnessToggle", name: qsTrId("id-toggle-brightness"), icon: "ios-sunny"});
+        toggleOptions["brightnessToggle"] = ({name: qsTrId("id-toggle-brightness"), icon: "ios-sunny"});
         //% "Bluetooth"
-        toggleOptions.push({ id: "bluetoothToggle", name: qsTrId("id-toggle-bluetooth"), icon: "ios-bluetooth"});
+        toggleOptions["bluetoothToggle"] = ({ name: qsTrId("id-toggle-bluetooth"), icon: "ios-bluetooth"});
         //% "Vibration"
-        toggleOptions.push({ id: "hapticsToggle", name: qsTrId("id-toggle-haptics"), icon: "ios-watch-vibrating"});
+        toggleOptions["hapticsToggle"] = ({ name: qsTrId("id-toggle-haptics"), icon: "ios-watch-vibrating"});
         if (DeviceSpecs.hasWlan) {
             //% "Wifi Toggle"
-            toggleOptions.push({ id: "wifiToggle", name: qsTrId("id-toggle-wifi"), icon: "ios-wifi-outline"});
+            toggleOptions["wifiToggle"] = ({ name: qsTrId("id-toggle-wifi"), icon: "ios-wifi-outline"});
         }
         if (DeviceSpecs.hasSpeaker) {
             //% "Mute Sound"
-            toggleOptions.push({ id: "soundToggle", name: qsTrId("id-toggle-sound"), icon: "ios-sound-indicator-high"});
+            toggleOptions["soundToggle"] = ({ name: qsTrId("id-toggle-sound"), icon: "ios-sound-indicator-high"});
         }
         //% "Cinema Mode"
-        toggleOptions.push({ id: "cinemaToggle", name: qsTrId("id-toggle-cinema"), icon: "ios-film-outline"});
+        toggleOptions["cinemaToggle"] = ({ name: qsTrId("id-toggle-cinema"), icon: "ios-film-outline"});
         //% "AoD Toggle"
-        toggleOptions.push({ id: "aodToggle", name: qsTrId("id-always-on-display"), icon: "ios-watch-aod-on"});
+        toggleOptions["aodToggle"] = ({ name: qsTrId("id-always-on-display"), icon: "ios-watch-aod-on"});
         //% "Poweroff"
-        toggleOptions.push({ id: "powerOffToggle", name: qsTrId("id-toggle-power-off"), icon: "ios-power"});
+        toggleOptions["powerOffToggle"] = ({ name: qsTrId("id-toggle-power-off"), icon: "ios-power"});
         //% "Reboot"
-        toggleOptions.push({ id: "rebootToggle", name: qsTrId("id-toggle-reboot"), icon: "ios-refresh"});
+        toggleOptions["rebootToggle"] = ({ name: qsTrId("id-toggle-reboot"), icon: "ios-refresh"});
         //% "Music"
-        toggleOptions.push({ id: "musicButton", name: qsTrId("id-toggle-music"), icon: "ios-musical-notes-outline"});
+        toggleOptions["musicButton"] = ({ name: qsTrId("id-toggle-music"), icon: "ios-musical-notes-outline"});
         //% "Flashlight"
-        toggleOptions.push({ id: "flashlightButton", name: qsTrId("id-toggle-flashlight"), icon: "ios-bulb-outline"});
-    }
-
-    // Utility function to safely access object properties
-    function safeGet(obj, prop, defaultValue) {
-        return obj && obj[prop] !== undefined ? obj[prop] : defaultValue;
-    }
-
-    // Find toggle by ID with caching for performance
-    function findToggle(toggleId) {
-        if (!toggleId) {
-            return null;
-        }
-
-        if (toggleCache[toggleId] !== undefined) {
-            return toggleCache[toggleId];
-        }
-
-        for (let i = 0; i < toggleOptions.length; i++) {
-            if (toggleOptions[i].id === toggleId) {
-                toggleCache[toggleId] = toggleOptions[i];
-                return toggleOptions[i];
-            }
-        }
-        toggleCache[toggleId] = null;
-        return null;
-    }
-
-    // Clear cache when toggleOptions changes
-    onToggleOptionsChanged: {
-        toggleCache = ({});
-    }
-
-    // Get toggle name for display
-    function getToggleName(toggleId) {
-        const toggle = findToggle(toggleId);
-        return toggle ? toggle.name : "";
-    }
-
-    // Get toggle icon for display
-    function getToggleIcon(toggleId) {
-        const toggle = findToggle(toggleId);
-        return toggle ? toggle.icon : "";
+        toggleOptions["flashlightButton"] = ({ name: qsTrId("id-toggle-flashlight"), icon: "ios-bulb-outline"});
     }
 
     ListModel {
@@ -198,14 +155,15 @@ Item {
         // Adds available fixed row toggles first
         for (let i = 0; i < fixedTogglesArray.length && i < fixedRowLength; i++) {
             const toggleId = fixedTogglesArray[i];
-            const toggle = findToggle(toggleId);
+            const toggle = toggleOptions[toggleId];
             if (!toggle) continue;
 
             slotModel.append({
                 type: "toggle",
                 toggleId: toggleId,
                 listView: "fixed",
-                labelText: ""
+                labelText: "",
+                toggle: toggle
             });
         }
 
@@ -215,12 +173,15 @@ Item {
             for (let t = 0; t < toggleOptions.length; t++) {
                 const toggleId = toggleOptions[t].id;
                 if (isToggleInRow(toggleId)) continue;
+                const toggle = toggleOptions[toggleId];
+                if (!toggle) continue;
 
                 slotModel.append({
                     type: "toggle",
                     toggleId: toggleId,
                     listView: "fixed",
-                    labelText: ""
+                    labelText: "",
+                    toggle: toggle
                 });
                 break;
             }
@@ -233,14 +194,15 @@ Item {
 
             if (!toggleId || isToggleInRow(toggleId)) continue;
 
-            const toggle = findToggle(toggleId);
+            const toggle = toggleOptions[toggleId];
             if (!toggle) continue;
 
             slotModel.append({
                 type: "toggle",
                 toggleId: toggleId,
                 listView: "slider",
-                labelText: ""
+                labelText: "",
+                toggle: toggle
             });
         }
 
@@ -249,11 +211,15 @@ Item {
             const toggleId = toggleOptions[t].id;
             if (isToggleInRow(toggleId)) continue;
 
+            const toggle = toggleOptions[toggleId];
+            if (!toggle) continue;
+
             slotModel.append({
                 type: "toggle",
                 toggleId: toggleId,
                 listView: "slider",
-                labelText: ""
+                labelText: "",
+                toggle: toggle
             });
         }
         //% "Options"
@@ -412,9 +378,8 @@ Item {
             return;
         }
 
-        const toggle = findToggle(draggedToggleId);
-        dragProxy.text = toggle.name;
-        dragProxy.icon = toggle.icon;
+        dragProxy.text = draggedToggle.name;
+        dragProxy.icon = draggedToggle.icon;
 
         if ((draggedItemIndex < sliderLabelIndex && targetIndex < sliderLabelIndex) ||
             (draggedItemIndex > sliderLabelIndex && targetIndex > sliderLabelIndex && targetIndex < optionsLabelIndex)) {
@@ -637,7 +602,7 @@ Item {
                     }
                     Icon {
                         id: toggleIcon
-                        name: getToggleIcon(toggleId)
+                        name: toggle ? toggle.icon : null
                         width: Dims.w(10)
                         height: Dims.w(10)
                         anchors.centerIn: parent
@@ -648,7 +613,7 @@ Item {
                 }
 
                 Label {
-                    text: getToggleName(toggleId)
+                    text: toggle ? toggle.name : null
                     color: "#ffffff"
                     opacity: toggleId ? (toggleEnabled.value[toggleId] ? 1.0 : 0.6) : 0;
                     visible: type === "toggle" && toggleId !== "" && !isDragging
@@ -675,11 +640,10 @@ Item {
 
                         draggedItemIndex = index;
                         targetIndex = index;
-                        draggedToggleId = toggleId;
+                        draggedToggle = toggle;
                         const itemPos = delegateItem.mapToItem(slotList, 0, 0);
                         dragProxy.x = 0;
                         dragProxy.y = itemPos.y;
-                        const toggle = findToggle(toggleId);
                         dragProxy.text = toggle.name;
                         dragProxy.icon = toggle.icon;
                         dragProxy.visible = true;

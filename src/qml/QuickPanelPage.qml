@@ -740,7 +740,7 @@ Item {
                             return;
                         }
 
-                        const dropIndex = itemUnder.visualIndex;
+                        let dropIndex = itemUnder.visualIndex;
                         const optionsIndex = findOptionsLabelIndex();
                         const sliderLabelIndex = findSliderLabelIndex();
 

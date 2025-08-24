@@ -767,11 +767,7 @@ Item {
                             const dropY = pos.y + slotList.contentY;
 
                             handleDropReleased(dropY);
-
-                            dragProxy.visible = false;
-                            draggedItemIndex = -1;
-                            targetIndex = -1;
-                            autoScrollTimer.scrollSpeed = 0;
+                            abortDrag();
                         } else if (type === "toggle" && toggleId && pressDuration < 500) {
                             const newEnabled = Object.assign({}, toggleEnabled.value);
                             const isFixedToggle = isToggleInFixedRow(toggleId);

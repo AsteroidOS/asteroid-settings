@@ -109,7 +109,7 @@
     </message>
     <message id="id-app-launcher-name">
         <source>Settings</source>
-        <translation>Iɣewwaṛen</translation>
+        <translation>Iɣewwaren</translation>
     </message>
     <message id="id-charging-only">
         <source>Charging only</source>

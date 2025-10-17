@@ -27,7 +27,7 @@
         <location filename="../src/qml/SoundPage.qml" line="72"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">ხმის სიმაღლე %1%</translation>
+        <translation>ხმის სიმაღლე</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../src/qml/USBPage.qml" line="30"/>
@@ -203,7 +203,7 @@
         <location filename="../src/qml/NightstandPage.qml" line="96"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation type="unfinished">სიკაშკაშე</translation>
+        <translation>სიკაშკაშე</translation>
     </message>
     <message id="id-nightstand-delay">
         <location filename="../src/qml/NightstandPage.qml" line="115"/>

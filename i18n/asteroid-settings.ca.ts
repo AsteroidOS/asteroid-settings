@@ -102,7 +102,7 @@
     </message>
     <message id="id-brightness">
         <source>Brightness</source>
-        <translation type="unfinished">Brillantor</translation>
+        <translation>Brillantor</translation>
     </message>
     <message id="id-always-on-display">
         <source>Always on Display</source>
@@ -110,11 +110,11 @@
     </message>
     <message id="id-tilt-to-wake">
         <source>Tilt-to-wake</source>
-        <translation>Activa en inclinar</translation>
+        <translation>Inclineu per despertar</translation>
     </message>
     <message id="id-tap-to-wake">
         <source>Tap-to-wake</source>
-        <translation>Activa en prémer</translation>
+        <translation>Toc per despertar</translation>
     </message>
     <message id="id-burn-in-protection">
         <source>Burn in protection</source>
@@ -130,7 +130,7 @@
     </message>
     <message id="id-nightstand-page">
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>Tauleta de nit</translation>
     </message>
     <message id="id-nightstand-enable">
         <source>Enable</source>
@@ -144,7 +144,7 @@
     <message id="id-nightstand-delay">
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Retard</translation>
     </message>
     <message id="id-nightstand-watchface">
         <source>Select watchface</source>
@@ -177,7 +177,7 @@
     <name>AboutPage</name>
     <message>
         <source>Build ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Id de la compilació</translation>
     </message>
     <message>
         <source>Codename</source>
@@ -201,15 +201,15 @@
     </message>
     <message>
         <source>Total disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Espai total en disc</translation>
     </message>
     <message>
         <source>%L1</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1</translation>
     </message>
     <message>
         <source>Available disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Espai disponible en disc</translation>
     </message>
     <message>
         <source>Display size</source>
@@ -241,7 +241,7 @@
     </message>
     <message>
         <source>%L1 days %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 dies %L2</translation>
     </message>
     <message>
         <source>Threads</source>
@@ -249,11 +249,11 @@
     </message>
     <message>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished"></translation>
+        <translation>Càrregues d&apos;1,5,15 minuts</translation>
     </message>
     <message>
         <source>%L1, %L2, %L3</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1, %L2, %L3</translation>
     </message>
     <message>
         <source>Total memory</source>
@@ -269,7 +269,7 @@
     </message>
     <message>
         <source>%L1 MB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB (%L2 %)</translation>
     </message>
 </context>
 </TS>

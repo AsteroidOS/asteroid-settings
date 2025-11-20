@@ -27,7 +27,7 @@
         <location filename="../src/qml/SoundPage.qml" line="72"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">Laŭto %1%</translation>
+        <translation>Laŭteco</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../src/qml/USBPage.qml" line="30"/>
@@ -52,7 +52,7 @@
     <message id="id-12h-format">
         <location filename="../src/qml/UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uzu 12-horecon:</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../src/qml/UnitsPage.qml" line="57"/>

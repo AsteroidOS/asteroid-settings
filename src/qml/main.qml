@@ -21,6 +21,7 @@ import QtQuick 2.9
 import org.asteroid.controls 1.0
 import org.asteroid.utils 1.0
 import org.asteroid.settings 1.0
+import Nemo.Configuration 1.0
 
 Application {
     id: app
@@ -28,6 +29,17 @@ Application {
     centerColor: "#0044A6"
     outerColor: "#00010C"
 
+    ConfigurationValue {
+        id: options
+        key: "/desktop/asteroid/quickpanel/options"
+        defaultValue: {
+            "batteryBottom": true,
+            "batteryAnimation": true,
+            "batteryColored": false
+        }
+    }
+
+    Component { id: quickPanelLayer;         QuickPanelPage { } }
     Component { id: timeLayer;                  TimePage       { } }
     Component { id: dateLayer;                  DatePage       { } }
     Component { id: timezoneLayer;              TimezonePage   { } }
@@ -79,6 +91,12 @@ Application {
                     title: qsTrId("id-nightstand-page")
                     iconName: "ios-moon-outline"
                     onClicked: layerStack.push(nightstandLayer)
+                }
+                ListItem {
+                    //% "Quick Panel"
+                    title: qsTrId("id-quickpanel-page")
+                    iconName: options.value.batteryBottom ? "ios-quickpanel-batterybottom" : "ios-quickpanel-batterytop"
+                    onClicked: layerStack.push(quickPanelLayer)
                 }
                 ListItem {
                     //% "Sound"

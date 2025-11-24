@@ -60,110 +60,117 @@
         <translation>ఫరెన్హెఇట్ ను వాడు:</translation>
     </message>
     <message id="id-time-page">
-        <location filename="../src/qml/main.qml" line="110"/>
+        <location filename="../src/qml/main.qml" line="128"/>
         <location filename="../src/qml/TimePage.qml" line="109"/>
         <source>Time</source>
         <translation>సమయం</translation>
     </message>
     <message id="id-date-page">
         <location filename="../src/qml/DatePage.qml" line="97"/>
-        <location filename="../src/qml/main.qml" line="116"/>
+        <location filename="../src/qml/main.qml" line="134"/>
         <source>Date</source>
         <translation>తేది</translation>
     </message>
     <message id="id-language-page">
         <location filename="../src/qml/LanguagePage.qml" line="64"/>
-        <location filename="../src/qml/main.qml" line="128"/>
+        <location filename="../src/qml/main.qml" line="146"/>
         <source>Language</source>
         <translation>భాష</translation>
     </message>
     <message id="id-bluetooth-page">
-        <location filename="../src/qml/main.qml" line="140"/>
+        <location filename="../src/qml/main.qml" line="158"/>
         <source>Bluetooth</source>
         <translation>బ్లూటూత్</translation>
     </message>
     <message id="id-display-page">
-        <location filename="../src/qml/DisplayPage.qml" line="123"/>
-        <location filename="../src/qml/main.qml" line="73"/>
+        <location filename="../src/qml/DisplayPage.qml" line="132"/>
+        <location filename="../src/qml/main.qml" line="85"/>
         <source>Display</source>
         <translation>ప్రదర్శన</translation>
     </message>
     <message id="id-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="55"/>
+        <location filename="../src/qml/DisplayPage.qml" line="61"/>
         <source>Brightness</source>
         <translation>ప్రకాశం</translation>
     </message>
     <message id="id-automatic-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="75"/>
+        <location filename="../src/qml/DisplayPage.qml" line="81"/>
         <source>Automatic brightness</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-always-on-display">
-        <location filename="../src/qml/DisplayPage.qml" line="84"/>
+        <location filename="../src/qml/DisplayPage.qml" line="90"/>
+        <location filename="../src/qml/NightstandPage.qml" line="149"/>
         <source>Always on Display</source>
         <translation>ఎల్లప్పుడూ ప్రదర్శనలో ఉంటుంది</translation>
     </message>
     <message id="id-burn-in-protection">
-        <location filename="../src/qml/DisplayPage.qml" line="94"/>
+        <location filename="../src/qml/DisplayPage.qml" line="103"/>
         <source>Burn in protection</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-tilt-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="105"/>
+        <location filename="../src/qml/DisplayPage.qml" line="114"/>
         <source>Tilt-to-wake</source>
         <translation>వంపు నుండి మేల్కొలపండి</translation>
     </message>
     <message id="id-tap-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="114"/>
+        <location filename="../src/qml/DisplayPage.qml" line="123"/>
         <source>Tap-to-wake</source>
         <translation>మేల్కొలపడానికి నొక్కండి</translation>
     </message>
     <message id="id-timezone-page">
-        <location filename="../src/qml/main.qml" line="134"/>
+        <location filename="../src/qml/main.qml" line="152"/>
         <location filename="../src/qml/TimezonePage.qml" line="130"/>
         <source>Time zone</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-sound-page">
-        <location filename="../src/qml/main.qml" line="85"/>
+        <location filename="../src/qml/main.qml" line="103"/>
         <source>Sound</source>
         <translation>శబ్దం</translation>
     </message>
     <message id="id-nightstand-page">
-        <location filename="../src/qml/main.qml" line="79"/>
-        <location filename="../src/qml/NightstandPage.qml" line="165"/>
+        <location filename="../src/qml/main.qml" line="91"/>
+        <location filename="../src/qml/NightstandPage.qml" line="188"/>
         <source>Nightstand</source>
         <translation>నైట్‌స్టాండ్</translation>
     </message>
     <message id="id-units-page">
-        <location filename="../src/qml/main.qml" line="122"/>
+        <location filename="../src/qml/main.qml" line="140"/>
         <location filename="../src/qml/UnitsPage.qml" line="65"/>
         <source>Units</source>
         <translation>యూనిట్స్</translation>
     </message>
     <message id="id-wallpaper-page">
-        <location filename="../src/qml/main.qml" line="92"/>
+        <location filename="../src/qml/main.qml" line="110"/>
         <source>Wallpaper</source>
         <translation>వాల్పేపర్</translation>
     </message>
     <message id="id-watchface-page">
-        <location filename="../src/qml/main.qml" line="98"/>
+        <location filename="../src/qml/main.qml" line="116"/>
         <source>Watchface</source>
         <translation>గడియారముఖం</translation>
     </message>
     <message id="id-launcher-page">
-        <location filename="../src/qml/main.qml" line="104"/>
+        <location filename="../src/qml/main.qml" line="122"/>
         <source>Launcher</source>
         <translation type="unfinished"></translation>
     </message>
+    <message id="id-quickpanel-page">
+        <location filename="../src/qml/main.qml" line="97"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="939"/>
+        <source>Quick Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="id-usb-page">
-        <location filename="../src/qml/main.qml" line="146"/>
+        <location filename="../src/qml/main.qml" line="164"/>
         <location filename="../src/qml/USBPage.qml" line="85"/>
         <source>USB</source>
         <translation>యుఎస్బి</translation>
     </message>
     <message id="id-power-page">
-        <location filename="../src/qml/main.qml" line="152"/>
+        <location filename="../src/qml/main.qml" line="170"/>
         <location filename="../src/qml/PowerPage.qml" line="87"/>
         <source>Power</source>
         <translation>శక్తి</translation>
@@ -185,42 +192,154 @@
         <translation>బూట్‌లోడర్</translation>
     </message>
     <message id="id-about-page">
-        <location filename="../src/qml/main.qml" line="158"/>
+        <location filename="../src/qml/main.qml" line="176"/>
         <source>About</source>
         <translation>గురించి</translation>
     </message>
-    <message id="id-app-launcher-name">
-        <location filename="asteroid-settings.desktop.h" line="6"/>
-        <source>Settings</source>
-        <translation>సెట్టింగ్స్</translation>
-    </message>
     <message id="id-nightstand-enable">
-        <location filename="../src/qml/NightstandPage.qml" line="75"/>
+        <location filename="../src/qml/NightstandPage.qml" line="86"/>
         <source>Enable</source>
         <translation>ప్రారంభించు</translation>
     </message>
     <message id="id-nightstand-brightness">
-        <location filename="../src/qml/NightstandPage.qml" line="96"/>
+        <location filename="../src/qml/NightstandPage.qml" line="107"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
         <translation type="unfinished">ప్రకాశం</translation>
     </message>
     <message id="id-nightstand-delay">
-        <location filename="../src/qml/NightstandPage.qml" line="115"/>
+        <location filename="../src/qml/NightstandPage.qml" line="126"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
         <translation>ఆలస్యం</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
-        <location filename="../src/qml/NightstandPage.qml" line="141"/>
+        <location filename="../src/qml/NightstandPage.qml" line="164"/>
         <source>Custom watchface</source>
         <translation>అనుకూల వాచ్‌ఫేస్</translation>
     </message>
     <message id="id-nightstand-watchface">
-        <location filename="../src/qml/NightstandPage.qml" line="152"/>
+        <location filename="../src/qml/NightstandPage.qml" line="175"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
         <translation>వాచ్‌ఫేస్‌ని ఎంచుకోండి</translation>
+    </message>
+    <message id="id-toggle-lock">
+        <location filename="../src/qml/QuickPanelPage.qml" line="78"/>
+        <source>Lock Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-settings">
+        <location filename="../src/qml/QuickPanelPage.qml" line="80"/>
+        <source>Settings</source>
+        <oldsource>Settings Shortcut</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-brightness">
+        <location filename="../src/qml/QuickPanelPage.qml" line="82"/>
+        <source>Brightness</source>
+        <translation type="unfinished">ప్రకాశం</translation>
+    </message>
+    <message id="id-toggle-bluetooth">
+        <location filename="../src/qml/QuickPanelPage.qml" line="84"/>
+        <source>Bluetooth</source>
+        <translation type="unfinished">బ్లూటూత్</translation>
+    </message>
+    <message id="id-toggle-haptics">
+        <location filename="../src/qml/QuickPanelPage.qml" line="86"/>
+        <source>Vibration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-wifi">
+        <location filename="../src/qml/QuickPanelPage.qml" line="88"/>
+        <source>Wifi Toggle</source>
+        <oldsource>WiFi</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-sound">
+        <location filename="../src/qml/QuickPanelPage.qml" line="90"/>
+        <source>Mute Sound</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-cinema">
+        <location filename="../src/qml/QuickPanelPage.qml" line="92"/>
+        <source>Cinema Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-power-off">
+        <location filename="../src/qml/QuickPanelPage.qml" line="96"/>
+        <source>Poweroff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-reboot">
+        <location filename="../src/qml/QuickPanelPage.qml" line="98"/>
+        <source>Reboot</source>
+        <translation type="unfinished">రీబూట్</translation>
+    </message>
+    <message id="id-toggle-music">
+        <location filename="../src/qml/QuickPanelPage.qml" line="100"/>
+        <source>Music</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-flashlight">
+        <location filename="../src/qml/QuickPanelPage.qml" line="102"/>
+        <source>Flashlight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-fixed-row">
+        <location filename="../src/qml/QuickPanelPage.qml" line="189"/>
+        <source>Fixed Row</source>
+        <oldsource>Fixed Row</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-sliding-row">
+        <location filename="../src/qml/QuickPanelPage.qml" line="236"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="269"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="279"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="291"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="355"/>
+        <source>Sliding Row</source>
+        <oldsource>Sliding Row</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-options">
+        <location filename="../src/qml/QuickPanelPage.qml" line="248"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="300"/>
+        <source>Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-battery-bottom">
+        <location filename="../src/qml/QuickPanelPage.qml" line="250"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="545"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="556"/>
+        <source>Battery Meter aligned to bottom?</source>
+        <oldsource>Battery aligned to bottom?</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-battery-animation">
+        <location filename="../src/qml/QuickPanelPage.qml" line="254"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="547"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="558"/>
+        <source>Show battery charge animation?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-particle-design">
+        <location filename="../src/qml/QuickPanelPage.qml" line="256"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="571"/>
+        <source>Tap to cycle particle design</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-battery-preview">
+        <location filename="../src/qml/QuickPanelPage.qml" line="258"/>
+        <source>Battery preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-battery-colored">
+        <location filename="../src/qml/QuickPanelPage.qml" line="252"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="549"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="560"/>
+        <source>Enable colored battery?</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -529,8 +529,6 @@ Item {
                     width: delegateItem.width
                     height: Math.max(rowHeight * 2, implicitHeight)
                     title: qsTrId("id-particle-design")
-                    configObject: options.value
-                    configKey: "particleDesign"
                     valueArray: particleDesigns
                     currentValue: options.value.particleDesign
                     opacity: options.value.batteryAnimation ? 1.0 : 0.5

@@ -182,7 +182,7 @@
         <location filename="../src/qml/PowerPage.qml" line="33"/>
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Bootloader</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="158"/>
@@ -243,12 +243,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="88"/>
         <source>WLAN MAC</source>
-        <translation type="unfinished"></translation>
+        <translation>WLAN MAC</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="89"/>
         <source>IMEI</source>
-        <translation type="unfinished"></translation>
+        <translation>IMEI</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="90"/>

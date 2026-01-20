@@ -83,38 +83,39 @@
         <translation>藍牙</translation>
     </message>
     <message id="id-display-page">
-        <location filename="../src/qml/DisplayPage.qml" line="123"/>
+        <location filename="../src/qml/DisplayPage.qml" line="132"/>
         <location filename="../src/qml/main.qml" line="73"/>
         <source>Display</source>
         <translation>顯示</translation>
     </message>
     <message id="id-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="55"/>
+        <location filename="../src/qml/DisplayPage.qml" line="61"/>
         <source>Brightness</source>
         <translation>亮度</translation>
     </message>
     <message id="id-automatic-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="75"/>
+        <location filename="../src/qml/DisplayPage.qml" line="81"/>
         <source>Automatic brightness</source>
         <translation>自動亮度</translation>
     </message>
     <message id="id-always-on-display">
-        <location filename="../src/qml/DisplayPage.qml" line="84"/>
+        <location filename="../src/qml/DisplayPage.qml" line="90"/>
+        <location filename="../src/qml/NightstandPage.qml" line="149"/>
         <source>Always on Display</source>
         <translation>始終在顯示幕上</translation>
     </message>
     <message id="id-burn-in-protection">
-        <location filename="../src/qml/DisplayPage.qml" line="94"/>
+        <location filename="../src/qml/DisplayPage.qml" line="103"/>
         <source>Burn in protection</source>
         <translation>燒傷螢幕保護</translation>
     </message>
     <message id="id-tilt-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="105"/>
+        <location filename="../src/qml/DisplayPage.qml" line="114"/>
         <source>Tilt-to-wake</source>
         <translation>傾斜喚醒</translation>
     </message>
     <message id="id-tap-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="114"/>
+        <location filename="../src/qml/DisplayPage.qml" line="123"/>
         <source>Tap-to-wake</source>
         <translation>點擊喚醒</translation>
     </message>
@@ -131,7 +132,7 @@
     </message>
     <message id="id-nightstand-page">
         <location filename="../src/qml/main.qml" line="79"/>
-        <location filename="../src/qml/NightstandPage.qml" line="165"/>
+        <location filename="../src/qml/NightstandPage.qml" line="188"/>
         <source>Nightstand</source>
         <translation type="unfinished"></translation>
     </message>
@@ -195,29 +196,29 @@
         <translation>設定</translation>
     </message>
     <message id="id-nightstand-enable">
-        <location filename="../src/qml/NightstandPage.qml" line="75"/>
+        <location filename="../src/qml/NightstandPage.qml" line="86"/>
         <source>Enable</source>
         <translation>啟用</translation>
     </message>
     <message id="id-nightstand-brightness">
-        <location filename="../src/qml/NightstandPage.qml" line="96"/>
+        <location filename="../src/qml/NightstandPage.qml" line="107"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
         <translation>亮度</translation>
     </message>
     <message id="id-nightstand-delay">
-        <location filename="../src/qml/NightstandPage.qml" line="115"/>
+        <location filename="../src/qml/NightstandPage.qml" line="126"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
         <translation>延遲</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
-        <location filename="../src/qml/NightstandPage.qml" line="141"/>
+        <location filename="../src/qml/NightstandPage.qml" line="164"/>
         <source>Custom watchface</source>
         <translation>自訂錶盤</translation>
     </message>
     <message id="id-nightstand-watchface">
-        <location filename="../src/qml/NightstandPage.qml" line="152"/>
+        <location filename="../src/qml/NightstandPage.qml" line="175"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
         <translation>選擇錶盤</translation>
@@ -257,91 +258,101 @@
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
+        <source>Vendor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="92"/>
+        <source>Model</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/qml/AboutPage.qml" line="93"/>
         <source>Total disk space</source>
         <translation>總磁碟空間</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="91"/>
+        <location filename="../src/qml/AboutPage.qml" line="93"/>
         <source>%L1 GB</source>
         <translation>%L1 GB</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="92"/>
+        <location filename="../src/qml/AboutPage.qml" line="94"/>
         <source>%L1 GB (%L2 %)</source>
         <translation>%L1 GB（%L2 %）</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="95"/>
+        <location filename="../src/qml/AboutPage.qml" line="97"/>
         <source>%L1W x %L2H</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="98"/>
+        <location filename="../src/qml/AboutPage.qml" line="100"/>
         <source>Uptime</source>
         <translation>運作時間</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="98"/>
+        <location filename="../src/qml/AboutPage.qml" line="100"/>
         <source>%L1 days %L2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="102"/>
+        <location filename="../src/qml/AboutPage.qml" line="104"/>
         <source>%L1</source>
         <translation>%L1</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="102"/>
+        <location filename="../src/qml/AboutPage.qml" line="104"/>
         <source>Threads</source>
         <translation>執行緒數</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="103"/>
+        <location filename="../src/qml/AboutPage.qml" line="105"/>
         <source>1,5,15 Minute loads</source>
         <translation>1、5、15 分鐘負載</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="103"/>
+        <location filename="../src/qml/AboutPage.qml" line="105"/>
         <source>%L1, %L2, %L3</source>
         <translation>%L1, %L2, %L3</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="108"/>
+        <location filename="../src/qml/AboutPage.qml" line="110"/>
         <source>Total memory</source>
         <translation>總記憶體</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="108"/>
+        <location filename="../src/qml/AboutPage.qml" line="110"/>
         <source>%L1 MB</source>
         <translation>%L1 MB</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="109"/>
+        <location filename="../src/qml/AboutPage.qml" line="111"/>
         <source>Free memory</source>
         <translation>空閒記憶體</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="109"/>
+        <location filename="../src/qml/AboutPage.qml" line="111"/>
         <source>%L1 MB (%L2 %)</source>
         <translation>%L1 MB（%L2 %）</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="92"/>
+        <location filename="../src/qml/AboutPage.qml" line="94"/>
         <source>Available disk space</source>
         <translation>可用磁碟空間</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="95"/>
+        <location filename="../src/qml/AboutPage.qml" line="97"/>
         <source>Display size</source>
         <translation>顯示尺寸</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="96"/>
+        <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>Kernel version</source>
         <translation>核心版本</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="97"/>
+        <location filename="../src/qml/AboutPage.qml" line="99"/>
         <source>Qt version</source>
         <translation>Qt 版本</translation>
     </message>

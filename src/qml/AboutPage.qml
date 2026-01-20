@@ -88,6 +88,8 @@ Flickable {
                 { label: qsTr("WLAN MAC"), text: about.wlanMacAddress },
                 { label: qsTr("IMEI"), text: about.imei },
                 { label: qsTr("Serial number"), text: about.serial },
+                { label: qsTr("Vendor"), text: about.vendorName },
+                { label: qsTr("Model"), text: about.vendorVersion },
                 { label: qsTr("Total disk space"), text: qsTr("%L1 GB").arg(Math.round(about.totalDiskSpace() / 1e7)/100) },
                 { label: qsTr("Available disk space"), text: qsTr("%L1 GB (%L2 %)").
                     arg(Math.round(about.availableDiskSpace() / 1e7)/100).

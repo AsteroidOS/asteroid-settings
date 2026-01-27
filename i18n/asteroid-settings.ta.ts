@@ -88,10 +88,6 @@
         <source>About</source>
         <translation>பற்றி</translation>
     </message>
-    <message id="id-app-launcher-name">
-        <source>Settings</source>
-        <translation>அமைவுகள்</translation>
-    </message>
     <message id="id-charging-only">
         <source>Charging only</source>
         <translation>மின்னினைப்பில் மட்டும்</translation>
@@ -171,6 +167,95 @@
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
         <translation>துவக்க ஏற்றி</translation>
+    </message>
+    <message id="id-quickpanel-page">
+        <source>Quick Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-lock">
+        <source>Lock Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-settings">
+        <source>Settings</source>
+        <oldsource>Settings Shortcut</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-brightness">
+        <source>Brightness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-bluetooth">
+        <source>Bluetooth</source>
+        <translation type="unfinished">ப்ளூடுத்</translation>
+    </message>
+    <message id="id-toggle-haptics">
+        <source>Vibration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-wifi">
+        <source>Wifi Toggle</source>
+        <oldsource>WiFi</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-sound">
+        <source>Mute Sound</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-cinema">
+        <source>Cinema Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-fixed-row">
+        <source>Fixed Row</source>
+        <oldsource>Fixed Row</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-sliding-row">
+        <source>Sliding Row</source>
+        <oldsource>Sliding Row</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-battery-bottom">
+        <source>Battery Meter aligned to bottom?</source>
+        <oldsource>Battery aligned to bottom?</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-options">
+        <source>Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-battery-animation">
+        <source>Show battery charge animation?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-battery-colored">
+        <source>Enable colored battery?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-power-off">
+        <source>Poweroff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-reboot">
+        <source>Reboot</source>
+        <translation type="unfinished">மீள்துவக்கு</translation>
+    </message>
+    <message id="id-particle-design">
+        <source>Tap to cycle particle design</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-battery-preview">
+        <source>Battery preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-music">
+        <source>Music</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-toggle-flashlight">
+        <source>Flashlight</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -549,7 +549,6 @@ Item {
                     value: batteryChargePercentage.percent
                     isIncreasing: mceChargerType.type != MceChargerType.None
                     enableAnimations: options.value.batteryAnimation
-                    enableColoredFill: options.value.batteryColored
                     particleDesign: options.value.particleDesign
                     fillColor: {
                         if (!options.value.batteryColored) return Qt.rgba(1, 1, 1, 0.3)

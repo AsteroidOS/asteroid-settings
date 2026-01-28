@@ -42,7 +42,7 @@
     </message>
     <message id="id-time-page">
         <source>Time</source>
-        <translation>Saat</translation>
+        <translation>Zaman</translation>
     </message>
     <message id="id-date-page">
         <source>Date</source>
@@ -70,7 +70,7 @@
     </message>
     <message id="id-watchface-page">
         <source>Watchface</source>
-        <translation>Saat Yüzü</translation>
+        <translation>Saat Kadranı</translation>
     </message>
     <message id="id-usb-page">
         <source>USB</source>
@@ -149,11 +149,11 @@
     <message id="id-nightstand-watchface">
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation>Saat yüzünü seç</translation>
+        <translation>Saat kadranı seç</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
         <source>Custom watchface</source>
-        <translation>Özel saat yüzü</translation>
+        <translation>Özel saat kadranı</translation>
     </message>
     <message id="id-ssh-mode">
         <source>SSH Mode</source>
@@ -161,7 +161,7 @@
     </message>
     <message id="id-timezone-page">
         <source>Time zone</source>
-        <translation>Saat dilimi</translation>
+        <translation>Zaman Dilimi</translation>
     </message>
     <message id="id-power-page">
         <source>Power</source>

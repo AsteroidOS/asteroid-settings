@@ -83,6 +83,7 @@ Item {
             height: Dims.h(25)
             stepSize: 10
             property bool initialized: false
+            valueLabelVisible: preMuteLevel.value == 0
             onValueChanged: {
                 if (initialized) {
                     [ volumeControl.volume, preMuteLevel.value ] = [ value, 0 ]

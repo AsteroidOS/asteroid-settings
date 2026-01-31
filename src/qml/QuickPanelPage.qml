@@ -127,9 +127,9 @@ Item {
         //% "AoD Toggle"
         toggleOptions["aodToggle"] = ({ name: qsTrId("id-always-on-display"), icon: "ios-watch-aod-on"});
         //% "Poweroff"
-        toggleOptions["powerOffToggle"] = ({ name: qsTrId("id-toggle-power-off"), icon: "ios-power"});
+        toggleOptions["powerOffToggle"] = ({ name: qsTrId("id-toggle-power-off"), icon: "ios-power-outline"});
         //% "Reboot"
-        toggleOptions["rebootToggle"] = ({ name: qsTrId("id-toggle-reboot"), icon: "ios-refresh"});
+        toggleOptions["rebootToggle"] = ({ name: qsTrId("id-toggle-reboot"), icon: "ios-sync"});
         //% "Music"
         toggleOptions["musicButton"] = ({ name: qsTrId("id-toggle-music"), icon: "ios-musical-notes-outline"});
         //% "Flashlight"

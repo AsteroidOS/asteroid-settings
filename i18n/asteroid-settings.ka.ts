@@ -91,7 +91,7 @@
     <message id="id-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="61"/>
         <source>Brightness</source>
-        <translation type="unfinished">სიკაშკაშე</translation>
+        <translation>სიკაშკაშე</translation>
     </message>
     <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="81"/>
@@ -112,7 +112,7 @@
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="114"/>
         <source>Tilt-to-wake</source>
-        <translation type="unfinished">დახრით გამოღვიძება</translation>
+        <translation>დახრით გაღვიძება</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="123"/>
@@ -238,12 +238,12 @@
     <message id="id-toggle-brightness">
         <location filename="../src/qml/QuickPanelPage.qml" line="82"/>
         <source>Brightness</source>
-        <translation type="unfinished">სიკაშკაშე</translation>
+        <translation>სიკაშკაშე</translation>
     </message>
     <message id="id-toggle-bluetooth">
         <location filename="../src/qml/QuickPanelPage.qml" line="84"/>
         <source>Bluetooth</source>
-        <translation type="unfinished">ბლუთუზი</translation>
+        <translation>ბლუთუზი</translation>
     </message>
     <message id="id-toggle-haptics">
         <location filename="../src/qml/QuickPanelPage.qml" line="86"/>
@@ -274,7 +274,7 @@
     <message id="id-toggle-reboot">
         <location filename="../src/qml/QuickPanelPage.qml" line="98"/>
         <source>Reboot</source>
-        <translation type="unfinished">გადატვირთვა</translation>
+        <translation>გადატვირთვა</translation>
     </message>
     <message id="id-toggle-music">
         <location filename="../src/qml/QuickPanelPage.qml" line="100"/>

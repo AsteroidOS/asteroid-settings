@@ -30,7 +30,7 @@ Item {
         id: preMuteLevel
 
         key: "/desktop/asteroid/pre-mute-level"
-        defaultValue: 0
+        defaultValue: 80
     }
 
     Rectangle {

@@ -170,92 +170,92 @@
     </message>
     <message id="id-quickpanel-page">
         <source>Quick Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Hızlı Panel</translation>
     </message>
     <message id="id-toggle-lock">
         <source>Lock Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Kilit Düğmesi</translation>
     </message>
     <message id="id-toggle-settings">
         <source>Settings</source>
         <oldsource>Settings Shortcut</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Ayarlar</translation>
     </message>
     <message id="id-toggle-brightness">
         <source>Brightness</source>
-        <translation type="unfinished">Parlaklık</translation>
+        <translation>Parlaklık</translation>
     </message>
     <message id="id-toggle-bluetooth">
         <source>Bluetooth</source>
-        <translation type="unfinished">Bluetooth</translation>
+        <translation>Bluetooth</translation>
     </message>
     <message id="id-toggle-haptics">
         <source>Vibration</source>
-        <translation type="unfinished"></translation>
+        <translation>Titreşim</translation>
     </message>
     <message id="id-toggle-wifi">
         <source>Wifi Toggle</source>
         <oldsource>WiFi</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Wifi Düğmesi</translation>
     </message>
     <message id="id-toggle-sound">
         <source>Mute Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>Sesi Kıs</translation>
     </message>
     <message id="id-toggle-cinema">
         <source>Cinema Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Sinema Kipi</translation>
     </message>
     <message id="id-fixed-row">
         <source>Fixed Row</source>
         <oldsource>Fixed Row</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Sabit Satır</translation>
     </message>
     <message id="id-sliding-row">
         <source>Sliding Row</source>
         <oldsource>Sliding Row</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Kayan Satır</translation>
     </message>
     <message id="id-battery-bottom">
         <source>Battery Meter aligned to bottom?</source>
         <oldsource>Battery aligned to bottom?</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Pil Ölçer aşağıya mı koyulsun?</translation>
     </message>
     <message id="id-options">
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçenekler</translation>
     </message>
     <message id="id-battery-animation">
         <source>Show battery charge animation?</source>
-        <translation type="unfinished"></translation>
+        <translation>Pil değişimi canlandırılsın mı?</translation>
     </message>
     <message id="id-battery-colored">
         <source>Enable colored battery?</source>
-        <translation type="unfinished"></translation>
+        <translation>Renkli pil etkinleştirilsin mi?</translation>
     </message>
     <message id="id-toggle-power-off">
         <source>Poweroff</source>
-        <translation type="unfinished"></translation>
+        <translation>Gücü Kapat</translation>
     </message>
     <message id="id-toggle-reboot">
         <source>Reboot</source>
-        <translation type="unfinished">Yeniden Başlat</translation>
+        <translation>Yeniden Başlat</translation>
     </message>
     <message id="id-particle-design">
         <source>Tap to cycle particle design</source>
-        <translation type="unfinished"></translation>
+        <translation>Parça tasarımını değiştirmek için dokun</translation>
     </message>
     <message id="id-battery-preview">
         <source>Battery preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Pil ön izlemesi</translation>
     </message>
     <message id="id-toggle-music">
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Müzik</translation>
     </message>
     <message id="id-toggle-flashlight">
         <source>Flashlight</source>
-        <translation type="unfinished"></translation>
+        <translation>El feneri</translation>
     </message>
 </context>
 <context>

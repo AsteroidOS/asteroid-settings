@@ -233,17 +233,17 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="80"/>
         <source>Settings</source>
         <oldsource>Settings Shortcut</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Paramètres</translation>
     </message>
     <message id="id-toggle-brightness">
         <location filename="../src/qml/QuickPanelPage.qml" line="82"/>
         <source>Brightness</source>
-        <translation type="unfinished">Luminosité</translation>
+        <translation>Luminosité</translation>
     </message>
     <message id="id-toggle-bluetooth">
         <location filename="../src/qml/QuickPanelPage.qml" line="84"/>
         <source>Bluetooth</source>
-        <translation type="unfinished">Bluetooth</translation>
+        <translation>Bluetooth</translation>
     </message>
     <message id="id-toggle-haptics">
         <location filename="../src/qml/QuickPanelPage.qml" line="86"/>
@@ -254,17 +254,17 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="88"/>
         <source>Wifi Toggle</source>
         <oldsource>WiFi</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Bascule Wifi</translation>
     </message>
     <message id="id-toggle-sound">
         <location filename="../src/qml/QuickPanelPage.qml" line="90"/>
         <source>Mute Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>Couper le son</translation>
     </message>
     <message id="id-toggle-cinema">
         <location filename="../src/qml/QuickPanelPage.qml" line="92"/>
         <source>Cinema Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode cinéma</translation>
     </message>
     <message id="id-toggle-power-off">
         <location filename="../src/qml/QuickPanelPage.qml" line="96"/>
@@ -279,12 +279,12 @@
     <message id="id-toggle-music">
         <location filename="../src/qml/QuickPanelPage.qml" line="100"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Musique</translation>
     </message>
     <message id="id-toggle-flashlight">
         <location filename="../src/qml/QuickPanelPage.qml" line="102"/>
         <source>Flashlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Lampe de poche</translation>
     </message>
     <message id="id-fixed-row">
         <location filename="../src/qml/QuickPanelPage.qml" line="189"/>
@@ -306,7 +306,7 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="248"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="300"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Options</translation>
     </message>
     <message id="id-battery-bottom">
         <location filename="../src/qml/QuickPanelPage.qml" line="250"/>
@@ -314,14 +314,14 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="556"/>
         <source>Battery Meter aligned to bottom?</source>
         <oldsource>Battery aligned to bottom?</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Jauge batterie alignée vers le bas&#x202f;?</translation>
     </message>
     <message id="id-battery-animation">
         <location filename="../src/qml/QuickPanelPage.qml" line="254"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="547"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="558"/>
         <source>Show battery charge animation?</source>
-        <translation type="unfinished"></translation>
+        <translation>Montrer l’animation de charge de la batterie&#x202f;?</translation>
     </message>
     <message id="id-particle-design">
         <location filename="../src/qml/QuickPanelPage.qml" line="256"/>
@@ -332,14 +332,14 @@
     <message id="id-battery-preview">
         <location filename="../src/qml/QuickPanelPage.qml" line="258"/>
         <source>Battery preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Aperçu batterie</translation>
     </message>
     <message id="id-battery-colored">
         <location filename="../src/qml/QuickPanelPage.qml" line="252"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="549"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="560"/>
         <source>Enable colored battery?</source>
-        <translation type="unfinished"></translation>
+        <translation>Activer batterie colorée&#x202f;?</translation>
     </message>
 </context>
 <context>

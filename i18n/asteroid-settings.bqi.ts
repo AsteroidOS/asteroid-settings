@@ -37,7 +37,7 @@
     <message id="id-adb-mode">
         <location filename="../src/qml/USBPage.qml" line="32"/>
         <source>ADB Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>پول تووسعه ٱندروید</translation>
     </message>
     <message id="id-ssh-mode">
         <location filename="../src/qml/USBPage.qml" line="34"/>
@@ -47,7 +47,7 @@
     <message id="id-mtp-mode">
         <location filename="../src/qml/USBPage.qml" line="36"/>
         <source>MTP Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>هالت جاگورویی وارسگر</translation>
     </message>
     <message id="id-12h-format">
         <location filename="../src/qml/UnitsPage.qml" line="48"/>
@@ -133,7 +133,7 @@
         <location filename="../src/qml/main.qml" line="79"/>
         <location filename="../src/qml/NightstandPage.qml" line="165"/>
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>پایه شاوونه</translation>
     </message>
     <message id="id-units-page">
         <location filename="../src/qml/main.qml" line="122"/>
@@ -166,7 +166,7 @@
         <location filename="../src/qml/main.qml" line="152"/>
         <location filename="../src/qml/PowerPage.qml" line="87"/>
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation>نیرۊ</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../src/qml/PowerPage.qml" line="29"/>
@@ -209,7 +209,7 @@
         <location filename="../src/qml/NightstandPage.qml" line="115"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>تاخیر</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="141"/>
@@ -273,7 +273,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>%L1W x %L2H</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1پ × %L2ب</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
@@ -288,7 +288,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>%L1</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
@@ -303,7 +303,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>%L1, %L2, %L3</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1، %L2، %L3</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>

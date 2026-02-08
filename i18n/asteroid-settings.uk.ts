@@ -161,7 +161,7 @@
         <location filename="../src/qml/main.qml" line="97"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="939"/>
         <source>Quick Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Швидка панель</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="164"/>
@@ -227,70 +227,70 @@
     <message id="id-toggle-lock">
         <location filename="../src/qml/QuickPanelPage.qml" line="78"/>
         <source>Lock Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Кнопка блокування</translation>
     </message>
     <message id="id-toggle-settings">
         <location filename="../src/qml/QuickPanelPage.qml" line="80"/>
         <source>Settings</source>
         <oldsource>Settings Shortcut</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Налаштування</translation>
     </message>
     <message id="id-toggle-brightness">
         <location filename="../src/qml/QuickPanelPage.qml" line="82"/>
         <source>Brightness</source>
-        <translation type="unfinished">Яскравість</translation>
+        <translation>Яскравість</translation>
     </message>
     <message id="id-toggle-bluetooth">
         <location filename="../src/qml/QuickPanelPage.qml" line="84"/>
         <source>Bluetooth</source>
-        <translation type="unfinished">Bluetooth</translation>
+        <translation>Bluetooth</translation>
     </message>
     <message id="id-toggle-haptics">
         <location filename="../src/qml/QuickPanelPage.qml" line="86"/>
         <source>Vibration</source>
-        <translation type="unfinished"></translation>
+        <translation>Вібрація</translation>
     </message>
     <message id="id-toggle-wifi">
         <location filename="../src/qml/QuickPanelPage.qml" line="88"/>
         <source>Wifi Toggle</source>
         <oldsource>WiFi</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Перемикач Wi-Fi</translation>
     </message>
     <message id="id-toggle-sound">
         <location filename="../src/qml/QuickPanelPage.qml" line="90"/>
         <source>Mute Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимкнути звук</translation>
     </message>
     <message id="id-toggle-cinema">
         <location filename="../src/qml/QuickPanelPage.qml" line="92"/>
         <source>Cinema Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим «Кіно»</translation>
     </message>
     <message id="id-toggle-power-off">
         <location filename="../src/qml/QuickPanelPage.qml" line="96"/>
         <source>Poweroff</source>
-        <translation type="unfinished"></translation>
+        <translation>Вимкнути</translation>
     </message>
     <message id="id-toggle-reboot">
         <location filename="../src/qml/QuickPanelPage.qml" line="98"/>
         <source>Reboot</source>
-        <translation type="unfinished">Перезавантажити</translation>
+        <translation>Перезавантажити</translation>
     </message>
     <message id="id-toggle-music">
         <location filename="../src/qml/QuickPanelPage.qml" line="100"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Музика</translation>
     </message>
     <message id="id-toggle-flashlight">
         <location filename="../src/qml/QuickPanelPage.qml" line="102"/>
         <source>Flashlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Ліхтарик</translation>
     </message>
     <message id="id-fixed-row">
         <location filename="../src/qml/QuickPanelPage.qml" line="189"/>
         <source>Fixed Row</source>
         <oldsource>Fixed Row</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Закріплений рядок</translation>
     </message>
     <message id="id-sliding-row">
         <location filename="../src/qml/QuickPanelPage.qml" line="236"/>
@@ -300,13 +300,13 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="355"/>
         <source>Sliding Row</source>
         <oldsource>Sliding Row</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Рухомий рядок</translation>
     </message>
     <message id="id-options">
         <location filename="../src/qml/QuickPanelPage.qml" line="248"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="300"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Параметри</translation>
     </message>
     <message id="id-battery-bottom">
         <location filename="../src/qml/QuickPanelPage.qml" line="250"/>
@@ -314,32 +314,32 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="556"/>
         <source>Battery Meter aligned to bottom?</source>
         <oldsource>Battery aligned to bottom?</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Індикатор заряду вирівняно по низу?</translation>
     </message>
     <message id="id-battery-animation">
         <location filename="../src/qml/QuickPanelPage.qml" line="254"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="547"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="558"/>
         <source>Show battery charge animation?</source>
-        <translation type="unfinished"></translation>
+        <translation>Показувати анімацію наснаження батареї?</translation>
     </message>
     <message id="id-particle-design">
         <location filename="../src/qml/QuickPanelPage.qml" line="256"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="571"/>
         <source>Tap to cycle particle design</source>
-        <translation type="unfinished"></translation>
+        <translation>Торкніться для зміни дизайну частинок</translation>
     </message>
     <message id="id-battery-preview">
         <location filename="../src/qml/QuickPanelPage.qml" line="258"/>
         <source>Battery preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Передперегляд батареї</translation>
     </message>
     <message id="id-battery-colored">
         <location filename="../src/qml/QuickPanelPage.qml" line="252"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="549"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="560"/>
         <source>Enable colored battery?</source>
-        <translation type="unfinished"></translation>
+        <translation>Увімкнути кольорову батарею?</translation>
     </message>
 </context>
 <context>

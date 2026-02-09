@@ -170,41 +170,41 @@
     </message>
     <message id="id-quickpanel-page">
         <source>Quick Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Rychlý panel</translation>
     </message>
     <message id="id-toggle-lock">
         <source>Lock Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Tlačítko uzamčení</translation>
     </message>
     <message id="id-toggle-settings">
         <source>Settings</source>
         <oldsource>Settings Shortcut</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Nastavení</translation>
     </message>
     <message id="id-toggle-brightness">
         <source>Brightness</source>
-        <translation type="unfinished">Jas</translation>
+        <translation>Jas</translation>
     </message>
     <message id="id-toggle-bluetooth">
         <source>Bluetooth</source>
-        <translation type="unfinished">Bluetooth</translation>
+        <translation>Bluetooth</translation>
     </message>
     <message id="id-toggle-haptics">
         <source>Vibration</source>
-        <translation type="unfinished"></translation>
+        <translation>Vibrace</translation>
     </message>
     <message id="id-toggle-wifi">
         <source>Wifi Toggle</source>
         <oldsource>WiFi</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>WiFi vyp/zap.</translation>
     </message>
     <message id="id-toggle-sound">
         <source>Mute Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>Ztlumit zvuk</translation>
     </message>
     <message id="id-toggle-cinema">
         <source>Cinema Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Režim v kině</translation>
     </message>
     <message id="id-fixed-row">
         <source>Fixed Row</source>

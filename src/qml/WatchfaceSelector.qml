@@ -27,6 +27,25 @@ import Nemo.Time 1.0
 
 Item {
     id: watchfaceSelector
+
+    readonly property var previewSizes: [112, 128, 144, 160, 182]
+    readonly property int idealPreviewSize: Math.round(Dims.w(40))
+    readonly property int previewSize: {
+        let best = previewSizes[0];
+        let minDiff = Math.abs(best - idealPreviewSize);
+
+        for (let i = 1, n = previewSizes.length; i < n; ++i) {
+            const size = previewSizes[i];
+            const diff = Math.abs(size - idealPreviewSize);
+
+            if (diff < minDiff || (diff === minDiff && size > best)) {
+                minDiff = diff;
+                best = size;
+            }
+        }
+        return best;
+    }
+
     GridView {
         id: grid
         cellWidth: Dims.w(50)
@@ -92,7 +111,8 @@ Item {
                     Image {
                         id: previewPng
 
-                        property string previewImg: (assetPath + "watchfaces-preview/" + Dims.w(40) + "/" + fileName).slice(0, -4) + ".png"
+                        readonly property string previewFolder: `${assetPath}watchfaces-preview/${previewSize}/`
+                        readonly property string previewImg: `${previewFolder}${fileName.slice(0, -4)}.png`
                         property bool previewExists: FileInfo.exists(previewImg)
 
                         z: 1
@@ -101,6 +121,8 @@ Item {
                         height: width
                         source: !previewExists ? "" : previewImg
                         asynchronous: true
+                        fillMode: Image.PreserveAspectFit
+                        mipmap: true
                     }
 
                     Loader {
@@ -125,7 +147,7 @@ Item {
                         id: wallpaperBack
 
                         property string previewSizePath: "wallpapers/" + Dims.w(50)
-                        property string wallpaperPreviewImg: wallpaperSource.value.replace("\wallpapers/full/g", previewSizePath).slice(0, -3) + "jpg"
+                        property string wallpaperPreviewImg: wallpaperSource.value.replace("\\wallpapers/full\\", previewSizePath).slice(0, -3) + "jpg"
 
                         z: 0
                         anchors.fill: parent

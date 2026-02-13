@@ -194,7 +194,7 @@
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="176"/>
         <source>About</source>
-        <translation>AsteroidOS შესახებ</translation>
+        <translation>შესახებ</translation>
     </message>
     <message id="id-nightstand-enable">
         <location filename="../src/qml/NightstandPage.qml" line="86"/>

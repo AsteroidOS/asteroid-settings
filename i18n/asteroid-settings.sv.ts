@@ -91,7 +91,7 @@
     <message id="id-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="61"/>
         <source>Brightness</source>
-        <translation>Ljusstyrka</translation>
+        <translation>Ljus styrka</translation>
     </message>
     <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="81"/>
@@ -227,23 +227,23 @@
     <message id="id-toggle-lock">
         <location filename="../src/qml/QuickPanelPage.qml" line="78"/>
         <source>Lock Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Lås knapp</translation>
     </message>
     <message id="id-toggle-settings">
         <location filename="../src/qml/QuickPanelPage.qml" line="80"/>
         <source>Settings</source>
         <oldsource>Settings Shortcut</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Inställningar</translation>
     </message>
     <message id="id-toggle-brightness">
         <location filename="../src/qml/QuickPanelPage.qml" line="82"/>
         <source>Brightness</source>
-        <translation type="unfinished">Ljusstyrka</translation>
+        <translation>Ljusstyrka</translation>
     </message>
     <message id="id-toggle-bluetooth">
         <location filename="../src/qml/QuickPanelPage.qml" line="84"/>
         <source>Bluetooth</source>
-        <translation type="unfinished">Bluetooth</translation>
+        <translation>Bluetooth</translation>
     </message>
     <message id="id-toggle-haptics">
         <location filename="../src/qml/QuickPanelPage.qml" line="86"/>
@@ -259,32 +259,32 @@
     <message id="id-toggle-sound">
         <location filename="../src/qml/QuickPanelPage.qml" line="90"/>
         <source>Mute Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>Stäng av ljudet</translation>
     </message>
     <message id="id-toggle-cinema">
         <location filename="../src/qml/QuickPanelPage.qml" line="92"/>
         <source>Cinema Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Bio läge</translation>
     </message>
     <message id="id-toggle-power-off">
         <location filename="../src/qml/QuickPanelPage.qml" line="96"/>
         <source>Poweroff</source>
-        <translation type="unfinished"></translation>
+        <translation>Stäng av</translation>
     </message>
     <message id="id-toggle-reboot">
         <location filename="../src/qml/QuickPanelPage.qml" line="98"/>
         <source>Reboot</source>
-        <translation type="unfinished">Starta om</translation>
+        <translation>Starta om</translation>
     </message>
     <message id="id-toggle-music">
         <location filename="../src/qml/QuickPanelPage.qml" line="100"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Musik</translation>
     </message>
     <message id="id-toggle-flashlight">
         <location filename="../src/qml/QuickPanelPage.qml" line="102"/>
         <source>Flashlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Ficklampa</translation>
     </message>
     <message id="id-fixed-row">
         <location filename="../src/qml/QuickPanelPage.qml" line="189"/>

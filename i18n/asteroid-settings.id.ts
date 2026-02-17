@@ -161,7 +161,7 @@
         <location filename="../src/qml/main.qml" line="97"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="939"/>
         <source>Quick Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Panel Cepat</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="164"/>
@@ -227,70 +227,70 @@
     <message id="id-toggle-lock">
         <location filename="../src/qml/QuickPanelPage.qml" line="78"/>
         <source>Lock Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Tombol Kunci</translation>
     </message>
     <message id="id-toggle-settings">
         <location filename="../src/qml/QuickPanelPage.qml" line="80"/>
         <source>Settings</source>
         <oldsource>Settings Shortcut</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Pengaturan</translation>
     </message>
     <message id="id-toggle-brightness">
         <location filename="../src/qml/QuickPanelPage.qml" line="82"/>
         <source>Brightness</source>
-        <translation type="unfinished">Kecerahan</translation>
+        <translation>Kecerahan</translation>
     </message>
     <message id="id-toggle-bluetooth">
         <location filename="../src/qml/QuickPanelPage.qml" line="84"/>
         <source>Bluetooth</source>
-        <translation type="unfinished">Bluetooth</translation>
+        <translation>Bluetooth</translation>
     </message>
     <message id="id-toggle-haptics">
         <location filename="../src/qml/QuickPanelPage.qml" line="86"/>
         <source>Vibration</source>
-        <translation type="unfinished"></translation>
+        <translation>Getaran</translation>
     </message>
     <message id="id-toggle-wifi">
         <location filename="../src/qml/QuickPanelPage.qml" line="88"/>
         <source>Wifi Toggle</source>
         <oldsource>WiFi</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Sakelar Wifi</translation>
     </message>
     <message id="id-toggle-sound">
         <location filename="../src/qml/QuickPanelPage.qml" line="90"/>
         <source>Mute Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>Bisukan Suara</translation>
     </message>
     <message id="id-toggle-cinema">
         <location filename="../src/qml/QuickPanelPage.qml" line="92"/>
         <source>Cinema Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode Bioskop</translation>
     </message>
     <message id="id-toggle-power-off">
         <location filename="../src/qml/QuickPanelPage.qml" line="96"/>
         <source>Poweroff</source>
-        <translation type="unfinished"></translation>
+        <translation>Matikan</translation>
     </message>
     <message id="id-toggle-reboot">
         <location filename="../src/qml/QuickPanelPage.qml" line="98"/>
         <source>Reboot</source>
-        <translation type="unfinished">Nyalakan Ulang</translation>
+        <translation>Nyalakan Ulang</translation>
     </message>
     <message id="id-toggle-music">
         <location filename="../src/qml/QuickPanelPage.qml" line="100"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Musik</translation>
     </message>
     <message id="id-toggle-flashlight">
         <location filename="../src/qml/QuickPanelPage.qml" line="102"/>
         <source>Flashlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Senter</translation>
     </message>
     <message id="id-fixed-row">
         <location filename="../src/qml/QuickPanelPage.qml" line="189"/>
         <source>Fixed Row</source>
         <oldsource>Fixed Row</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Baris Tetap</translation>
     </message>
     <message id="id-sliding-row">
         <location filename="../src/qml/QuickPanelPage.qml" line="236"/>
@@ -300,13 +300,13 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="355"/>
         <source>Sliding Row</source>
         <oldsource>Sliding Row</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Baris Geser</translation>
     </message>
     <message id="id-options">
         <location filename="../src/qml/QuickPanelPage.qml" line="248"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="300"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opsi</translation>
     </message>
     <message id="id-battery-bottom">
         <location filename="../src/qml/QuickPanelPage.qml" line="250"/>
@@ -314,32 +314,32 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="556"/>
         <source>Battery Meter aligned to bottom?</source>
         <oldsource>Battery aligned to bottom?</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Indikator Baterai disejajarkan ke bawah?</translation>
     </message>
     <message id="id-battery-animation">
         <location filename="../src/qml/QuickPanelPage.qml" line="254"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="547"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="558"/>
         <source>Show battery charge animation?</source>
-        <translation type="unfinished"></translation>
+        <translation>Tampilkan animasi pengisian baterai?</translation>
     </message>
     <message id="id-particle-design">
         <location filename="../src/qml/QuickPanelPage.qml" line="256"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="571"/>
         <source>Tap to cycle particle design</source>
-        <translation type="unfinished"></translation>
+        <translation>Ketuk untuk berganti desain partikel</translation>
     </message>
     <message id="id-battery-preview">
         <location filename="../src/qml/QuickPanelPage.qml" line="258"/>
         <source>Battery preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Pratinjau baterai</translation>
     </message>
     <message id="id-battery-colored">
         <location filename="../src/qml/QuickPanelPage.qml" line="252"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="549"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="560"/>
         <source>Enable colored battery?</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktifkan baterai berwarna?</translation>
     </message>
 </context>
 <context>

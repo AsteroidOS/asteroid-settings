@@ -30,7 +30,7 @@
     </message>
     <message id="id-mtp-mode">
         <source>MTP Mode</source>
-        <translation>MTP režim</translation>
+        <translation>Režim MTP</translation>
     </message>
     <message id="id-12h-format">
         <source>Use 12H format:</source>
@@ -86,7 +86,7 @@
     </message>
     <message id="id-about-page">
         <source>About</source>
-        <translation>O programu</translation>
+        <translation>O systému</translation>
     </message>
     <message id="id-charging-only">
         <source>Charging only</source>
@@ -126,7 +126,7 @@
     </message>
     <message id="id-nightstand-page">
         <source>Nightstand</source>
-        <translation>Noc na stojánku</translation>
+        <translation>Noční režim na stojánku</translation>
     </message>
     <message id="id-nightstand-enable">
         <source>Enable</source>
@@ -209,53 +209,53 @@
     <message id="id-fixed-row">
         <source>Fixed Row</source>
         <oldsource>Fixed Row</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Řádek napevno</translation>
     </message>
     <message id="id-sliding-row">
         <source>Sliding Row</source>
         <oldsource>Sliding Row</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Posuvný řádek</translation>
     </message>
     <message id="id-battery-bottom">
         <source>Battery Meter aligned to bottom?</source>
         <oldsource>Battery aligned to bottom?</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Ukazatel nabití zarovnaný dolů?</translation>
     </message>
     <message id="id-options">
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Předvolby</translation>
     </message>
     <message id="id-battery-animation">
         <source>Show battery charge animation?</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazovat animaci nabíjení akumulátoru?</translation>
     </message>
     <message id="id-battery-colored">
         <source>Enable colored battery?</source>
-        <translation type="unfinished"></translation>
+        <translation>Obarvovat ukazatel nabití?</translation>
     </message>
     <message id="id-toggle-power-off">
         <source>Poweroff</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnout</translation>
     </message>
     <message id="id-toggle-reboot">
         <source>Reboot</source>
-        <translation type="unfinished">Restart</translation>
+        <translation>Restartovat</translation>
     </message>
     <message id="id-particle-design">
         <source>Tap to cycle particle design</source>
-        <translation type="unfinished"></translation>
+        <translation>Klepnutím přepínejte mezi designem částic</translation>
     </message>
     <message id="id-battery-preview">
         <source>Battery preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Náhled akumulátoru</translation>
     </message>
     <message id="id-toggle-music">
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Hudba</translation>
     </message>
     <message id="id-toggle-flashlight">
         <source>Flashlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Svítilna</translation>
     </message>
 </context>
 <context>

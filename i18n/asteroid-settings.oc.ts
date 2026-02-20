@@ -6,22 +6,22 @@
     <message id="id-bluetooth-on">
         <location filename="../src/qml/BluetoothPage.qml" line="28"/>
         <source>Bluetooth on</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth activat</translation>
     </message>
     <message id="id-bluetooth-off">
         <location filename="../src/qml/BluetoothPage.qml" line="30"/>
         <source>Bluetooth off</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth atudat</translation>
     </message>
     <message id="id-connected">
         <location filename="../src/qml/BluetoothPage.qml" line="32"/>
         <source>Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Connectat</translation>
     </message>
     <message id="id-disconnected">
         <location filename="../src/qml/BluetoothPage.qml" line="34"/>
         <source>Not connected</source>
-        <translation type="unfinished"></translation>
+        <translation>Non connectat</translation>
     </message>
     <message id="id-sound-percentage">
         <location filename="../src/qml/SoundPage.qml" line="72"/>
@@ -52,7 +52,7 @@
     <message id="id-12h-format">
         <location filename="../src/qml/UnitsPage.qml" line="48"/>
         <source>Use 12H format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizar format 12h :</translation>
     </message>
     <message id="id-fahrenheit">
         <location filename="../src/qml/UnitsPage.qml" line="57"/>
@@ -63,19 +63,19 @@
         <location filename="../src/qml/main.qml" line="128"/>
         <location filename="../src/qml/TimePage.qml" line="109"/>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Ora</translation>
     </message>
     <message id="id-date-page">
         <location filename="../src/qml/DatePage.qml" line="97"/>
         <location filename="../src/qml/main.qml" line="134"/>
         <source>Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Data</translation>
     </message>
     <message id="id-language-page">
         <location filename="../src/qml/LanguagePage.qml" line="64"/>
         <location filename="../src/qml/main.qml" line="146"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Lenga</translation>
     </message>
     <message id="id-bluetooth-page">
         <location filename="../src/qml/main.qml" line="158"/>
@@ -86,7 +86,7 @@
         <location filename="../src/qml/DisplayPage.qml" line="132"/>
         <location filename="../src/qml/main.qml" line="85"/>
         <source>Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Ecran</translation>
     </message>
     <message id="id-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="61"/>
@@ -123,12 +123,12 @@
         <location filename="../src/qml/main.qml" line="152"/>
         <location filename="../src/qml/TimezonePage.qml" line="130"/>
         <source>Time zone</source>
-        <translation type="unfinished"></translation>
+        <translation>Fus orari</translation>
     </message>
     <message id="id-sound-page">
         <location filename="../src/qml/main.qml" line="103"/>
         <source>Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>Son</translation>
     </message>
     <message id="id-nightstand-page">
         <location filename="../src/qml/main.qml" line="91"/>
@@ -173,12 +173,12 @@
         <location filename="../src/qml/main.qml" line="170"/>
         <location filename="../src/qml/PowerPage.qml" line="87"/>
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation>Alucar</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../src/qml/PowerPage.qml" line="29"/>
         <source>Power Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Atudar</translation>
     </message>
     <message id="id-reboot-page">
         <location filename="../src/qml/PowerPage.qml" line="31"/>
@@ -274,12 +274,12 @@
     <message id="id-toggle-reboot">
         <location filename="../src/qml/QuickPanelPage.qml" line="98"/>
         <source>Reboot</source>
-        <translation type="unfinished">Redémarrer</translation>
+        <translation>Reaviar</translation>
     </message>
     <message id="id-toggle-music">
         <location filename="../src/qml/QuickPanelPage.qml" line="100"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Musica</translation>
     </message>
     <message id="id-toggle-flashlight">
         <location filename="../src/qml/QuickPanelPage.qml" line="102"/>
@@ -427,7 +427,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Memòria totala</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
@@ -437,7 +437,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Memòria disponibla</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
@@ -447,12 +447,12 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>Available disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Espaci disponible</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>Display size</source>
-        <translation type="unfinished"></translation>
+        <translation>Talha d’ecran</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="96"/>
@@ -462,7 +462,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="97"/>
         <source>Qt version</source>
-        <translation type="unfinished"></translation>
+        <translation>Version de Qt</translation>
     </message>
 </context>
 </TS>

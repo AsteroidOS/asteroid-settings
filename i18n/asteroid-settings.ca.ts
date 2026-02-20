@@ -17,7 +17,7 @@
     </message>
     <message id="id-disconnected">
         <source>Not connected</source>
-        <translation>Sense connexió</translation>
+        <translation>No connectat</translation>
     </message>
     <message id="id-sound-percentage">
         <source>Volume</source>

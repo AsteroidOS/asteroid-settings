@@ -98,7 +98,7 @@
     </message>
     <message id="id-brightness">
         <source>Brightness</source>
-        <translation>亮度设置</translation>
+        <translation>亮度</translation>
     </message>
     <message id="id-always-on-display">
         <source>Always on Display</source>

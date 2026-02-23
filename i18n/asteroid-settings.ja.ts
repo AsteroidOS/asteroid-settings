@@ -91,7 +91,7 @@
     <message id="id-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="61"/>
         <source>Brightness</source>
-        <translation type="unfinished">輝度</translation>
+        <translation>明るさ</translation>
     </message>
     <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="81"/>

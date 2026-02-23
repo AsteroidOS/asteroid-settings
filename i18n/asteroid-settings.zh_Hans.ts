@@ -187,7 +187,7 @@
     </message>
     <message id="id-toggle-bluetooth">
         <source>Bluetooth</source>
-        <translation type="unfinished">蓝牙</translation>
+        <translation>蓝牙</translation>
     </message>
     <message id="id-toggle-haptics">
         <source>Vibration</source>
@@ -239,7 +239,7 @@
     </message>
     <message id="id-toggle-reboot">
         <source>Reboot</source>
-        <translation type="unfinished">重启</translation>
+        <translation>重启</translation>
     </message>
     <message id="id-particle-design">
         <source>Tap to cycle particle design</source>

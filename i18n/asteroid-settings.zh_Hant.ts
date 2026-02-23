@@ -134,7 +134,7 @@
         <location filename="../src/qml/main.qml" line="91"/>
         <location filename="../src/qml/NightstandPage.qml" line="188"/>
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>夜間待機模式</translation>
     </message>
     <message id="id-units-page">
         <location filename="../src/qml/main.qml" line="140"/>
@@ -161,7 +161,7 @@
         <location filename="../src/qml/main.qml" line="97"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="939"/>
         <source>Quick Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>快速設定</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="164"/>

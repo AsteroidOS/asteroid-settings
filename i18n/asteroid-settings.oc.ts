@@ -27,27 +27,27 @@
         <location filename="../src/qml/SoundPage.qml" line="72"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Volum</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../src/qml/USBPage.qml" line="30"/>
         <source>Charging only</source>
-        <translation type="unfinished"></translation>
+        <translation>Carga solament</translation>
     </message>
     <message id="id-adb-mode">
         <location filename="../src/qml/USBPage.qml" line="32"/>
         <source>ADB Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mòde ADB</translation>
     </message>
     <message id="id-ssh-mode">
         <location filename="../src/qml/USBPage.qml" line="34"/>
         <source>SSH Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mòde SSH</translation>
     </message>
     <message id="id-mtp-mode">
         <location filename="../src/qml/USBPage.qml" line="36"/>
         <source>MTP Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mòde MTP</translation>
     </message>
     <message id="id-12h-format">
         <location filename="../src/qml/UnitsPage.qml" line="48"/>
@@ -57,7 +57,7 @@
     <message id="id-fahrenheit">
         <location filename="../src/qml/UnitsPage.qml" line="57"/>
         <source>Use Fahrenheit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizar Fahrenheit :</translation>
     </message>
     <message id="id-time-page">
         <location filename="../src/qml/main.qml" line="128"/>
@@ -80,7 +80,7 @@
     <message id="id-bluetooth-page">
         <location filename="../src/qml/main.qml" line="158"/>
         <source>Bluetooth</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth</translation>
     </message>
     <message id="id-display-page">
         <location filename="../src/qml/DisplayPage.qml" line="132"/>
@@ -91,33 +91,33 @@
     <message id="id-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="61"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Luminositat</translation>
     </message>
     <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="81"/>
         <source>Automatic brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Luminositat automatica</translation>
     </message>
     <message id="id-always-on-display">
         <location filename="../src/qml/DisplayPage.qml" line="90"/>
         <location filename="../src/qml/NightstandPage.qml" line="149"/>
         <source>Always on Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Totjorn alucat</translation>
     </message>
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="103"/>
         <source>Burn in protection</source>
-        <translation type="unfinished"></translation>
+        <translation>Proteccion contra las cremaduras</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="114"/>
         <source>Tilt-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Inclinar per desrevelhar</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="123"/>
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>Tocar per desrevelhar</translation>
     </message>
     <message id="id-timezone-page">
         <location filename="../src/qml/main.qml" line="152"/>
@@ -134,40 +134,40 @@
         <location filename="../src/qml/main.qml" line="91"/>
         <location filename="../src/qml/NightstandPage.qml" line="188"/>
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>Tauleta de nuèch</translation>
     </message>
     <message id="id-units-page">
         <location filename="../src/qml/main.qml" line="140"/>
         <location filename="../src/qml/UnitsPage.qml" line="65"/>
         <source>Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Unitats</translation>
     </message>
     <message id="id-wallpaper-page">
         <location filename="../src/qml/main.qml" line="110"/>
         <source>Wallpaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Fons d&apos;ecran</translation>
     </message>
     <message id="id-watchface-page">
         <location filename="../src/qml/main.qml" line="116"/>
         <source>Watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>Quadran</translation>
     </message>
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="122"/>
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>Lançador</translation>
     </message>
     <message id="id-quickpanel-page">
         <location filename="../src/qml/main.qml" line="97"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="939"/>
         <source>Quick Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Opcionq rapidas</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="164"/>
         <location filename="../src/qml/USBPage.qml" line="85"/>
         <source>USB</source>
-        <translation type="unfinished"></translation>
+        <translation>USB</translation>
     </message>
     <message id="id-power-page">
         <location filename="../src/qml/main.qml" line="170"/>
@@ -183,93 +183,93 @@
     <message id="id-reboot-page">
         <location filename="../src/qml/PowerPage.qml" line="31"/>
         <source>Reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Reaviar</translation>
     </message>
     <message id="id-reboot-bootloader-page">
         <location filename="../src/qml/PowerPage.qml" line="33"/>
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Cargador d’amorsatge</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="176"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>A prepaus</translation>
     </message>
     <message id="id-nightstand-enable">
         <location filename="../src/qml/NightstandPage.qml" line="86"/>
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>Activar</translation>
     </message>
     <message id="id-nightstand-brightness">
         <location filename="../src/qml/NightstandPage.qml" line="107"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Luminositat</translation>
     </message>
     <message id="id-nightstand-delay">
         <location filename="../src/qml/NightstandPage.qml" line="126"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Relambi</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="164"/>
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>Quadran personalizat</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="175"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionatz un quadran</translation>
     </message>
     <message id="id-toggle-lock">
         <location filename="../src/qml/QuickPanelPage.qml" line="78"/>
         <source>Lock Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Boton de verrolhatge</translation>
     </message>
     <message id="id-toggle-settings">
         <location filename="../src/qml/QuickPanelPage.qml" line="80"/>
         <source>Settings</source>
         <oldsource>Settings Shortcut</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Paramètres</translation>
     </message>
     <message id="id-toggle-brightness">
         <location filename="../src/qml/QuickPanelPage.qml" line="82"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Luminositat</translation>
     </message>
     <message id="id-toggle-bluetooth">
         <location filename="../src/qml/QuickPanelPage.qml" line="84"/>
         <source>Bluetooth</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth</translation>
     </message>
     <message id="id-toggle-haptics">
         <location filename="../src/qml/QuickPanelPage.qml" line="86"/>
         <source>Vibration</source>
-        <translation type="unfinished"></translation>
+        <translation>Vibracion</translation>
     </message>
     <message id="id-toggle-wifi">
         <location filename="../src/qml/QuickPanelPage.qml" line="88"/>
         <source>Wifi Toggle</source>
         <oldsource>WiFi</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Interruptor Wifi</translation>
     </message>
     <message id="id-toggle-sound">
         <location filename="../src/qml/QuickPanelPage.qml" line="90"/>
         <source>Mute Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>Amudir</translation>
     </message>
     <message id="id-toggle-cinema">
         <location filename="../src/qml/QuickPanelPage.qml" line="92"/>
         <source>Cinema Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mòde cinèma</translation>
     </message>
     <message id="id-toggle-power-off">
         <location filename="../src/qml/QuickPanelPage.qml" line="96"/>
         <source>Poweroff</source>
-        <translation type="unfinished"></translation>
+        <translation>Atudar</translation>
     </message>
     <message id="id-toggle-reboot">
         <location filename="../src/qml/QuickPanelPage.qml" line="98"/>
@@ -284,13 +284,13 @@
     <message id="id-toggle-flashlight">
         <location filename="../src/qml/QuickPanelPage.qml" line="102"/>
         <source>Flashlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Lampa</translation>
     </message>
     <message id="id-fixed-row">
         <location filename="../src/qml/QuickPanelPage.qml" line="189"/>
         <source>Fixed Row</source>
         <oldsource>Fixed Row</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Linha fixa</translation>
     </message>
     <message id="id-sliding-row">
         <location filename="../src/qml/QuickPanelPage.qml" line="236"/>
@@ -306,7 +306,7 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="248"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="300"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opcions</translation>
     </message>
     <message id="id-battery-bottom">
         <location filename="../src/qml/QuickPanelPage.qml" line="250"/>
@@ -332,7 +332,7 @@
     <message id="id-battery-preview">
         <location filename="../src/qml/QuickPanelPage.qml" line="258"/>
         <source>Battery preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Apercebut batariá</translation>
     </message>
     <message id="id-battery-colored">
         <location filename="../src/qml/QuickPanelPage.qml" line="252"/>
@@ -397,32 +397,32 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>Uptime</source>
-        <translation type="unfinished"></translation>
+        <translation>Temps d’activitat</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>%L1 days %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 jorns %L2</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>%L1</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>Threads</source>
-        <translation type="unfinished"></translation>
+        <translation>Fils</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>1,5,15 Minute loads</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargas de 1, 5, 15 minutas</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>%L1, %L2, %L3</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1, %L2, %L3</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
@@ -432,7 +432,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="108"/>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1&#xa0;Mo</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
@@ -442,7 +442,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="109"/>
         <source>%L1 MB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 Mo (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>

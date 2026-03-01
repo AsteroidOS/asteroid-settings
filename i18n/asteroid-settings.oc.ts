@@ -300,7 +300,7 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="355"/>
         <source>Sliding Row</source>
         <oldsource>Sliding Row</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Linha lisanta</translation>
     </message>
     <message id="id-options">
         <location filename="../src/qml/QuickPanelPage.qml" line="248"/>
@@ -314,20 +314,20 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="556"/>
         <source>Battery Meter aligned to bottom?</source>
         <oldsource>Battery aligned to bottom?</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Indicador de batariá alinhat en bas ?</translation>
     </message>
     <message id="id-battery-animation">
         <location filename="../src/qml/QuickPanelPage.qml" line="254"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="547"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="558"/>
         <source>Show battery charge animation?</source>
-        <translation type="unfinished"></translation>
+        <translation>Afichar l&apos;animacion de carga de la batariá?</translation>
     </message>
     <message id="id-particle-design">
         <location filename="../src/qml/QuickPanelPage.qml" line="256"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="571"/>
         <source>Tap to cycle particle design</source>
-        <translation type="unfinished"></translation>
+        <translation>Tocar per percórrer lo dessenh de las particulas</translation>
     </message>
     <message id="id-battery-preview">
         <location filename="../src/qml/QuickPanelPage.qml" line="258"/>
@@ -339,7 +339,7 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="549"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="560"/>
         <source>Enable colored battery?</source>
-        <translation type="unfinished"></translation>
+        <translation>Activar la batariá colorada&#xa0;?</translation>
     </message>
 </context>
 <context>
@@ -347,52 +347,52 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="85"/>
         <source>Build ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID de compilacion</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="86"/>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom de còde</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="87"/>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom d’òste</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="88"/>
         <source>WLAN MAC</source>
-        <translation type="unfinished"></translation>
+        <translation>MAC WIFI</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="89"/>
         <source>IMEI</source>
-        <translation type="unfinished"></translation>
+        <translation>IMEI</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="90"/>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>Numèro de seria</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>Total disk space</source>
-        <translation type="unfinished"></translation>
+        <translation>Espaci disc total</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1&#xa0;Go</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>%L1 GB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1&#xa0;Go (%L2&#xa0;%)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>%L1W x %L2H</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1W × %L2H</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
@@ -457,7 +457,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="96"/>
         <source>Kernel version</source>
-        <translation type="unfinished"></translation>
+        <translation>Version del nuclèu</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="97"/>

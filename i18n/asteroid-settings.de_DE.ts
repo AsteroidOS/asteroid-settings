@@ -161,7 +161,7 @@
         <location filename="../src/qml/main.qml" line="97"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="939"/>
         <source>Quick Panel</source>
-        <translation>Schalter Leiste</translation>
+        <translation>Schnellzugriff-Leiste</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="164"/>
@@ -173,7 +173,7 @@
         <location filename="../src/qml/main.qml" line="170"/>
         <location filename="../src/qml/PowerPage.qml" line="87"/>
         <source>Power</source>
-        <translation>Beenden</translation>
+        <translation>Einschalten</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../src/qml/PowerPage.qml" line="29"/>
@@ -189,7 +189,7 @@
         <location filename="../src/qml/PowerPage.qml" line="33"/>
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation>Bootloader</translation>
+        <translation>Bootlader</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="176"/>
@@ -227,7 +227,7 @@
     <message id="id-toggle-lock">
         <location filename="../src/qml/QuickPanelPage.qml" line="78"/>
         <source>Lock Button</source>
-        <translation>Schloss</translation>
+        <translation>Sperrtaste</translation>
     </message>
     <message id="id-toggle-settings">
         <location filename="../src/qml/QuickPanelPage.qml" line="80"/>
@@ -254,7 +254,7 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="88"/>
         <source>Wifi Toggle</source>
         <oldsource>WiFi</oldsource>
-        <translation>WLan</translation>
+        <translation>WLAN-Schalter</translation>
     </message>
     <message id="id-toggle-sound">
         <location filename="../src/qml/QuickPanelPage.qml" line="90"/>
@@ -314,20 +314,20 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="556"/>
         <source>Battery Meter aligned to bottom?</source>
         <oldsource>Battery aligned to bottom?</oldsource>
-        <translation>Batterie position unten?</translation>
+        <translation>Batterieanzeige unten ausgerichtet?</translation>
     </message>
     <message id="id-battery-animation">
         <location filename="../src/qml/QuickPanelPage.qml" line="254"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="547"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="558"/>
         <source>Show battery charge animation?</source>
-        <translation>Animierte Batterie Anzeige</translation>
+        <translation>Zeige animierte Batterieladeanzeige?</translation>
     </message>
     <message id="id-particle-design">
         <location filename="../src/qml/QuickPanelPage.qml" line="256"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="571"/>
         <source>Tap to cycle particle design</source>
-        <translation>Tip für nächstes Partikel Design</translation>
+        <translation>Tippe für nächstes Partikel Design</translation>
     </message>
     <message id="id-battery-preview">
         <location filename="../src/qml/QuickPanelPage.qml" line="258"/>
@@ -347,7 +347,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="85"/>
         <source>Build ID</source>
-        <translation>Buildnummer</translation>
+        <translation>Build ID</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="86"/>

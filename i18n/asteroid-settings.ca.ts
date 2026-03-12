@@ -183,7 +183,7 @@
     <message id="id-toggle-settings">
         <source>Settings</source>
         <oldsource>Settings Shortcut</oldsource>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Paràmetres</translation>
     </message>
     <message id="id-toggle-brightness">
         <source>Brightness</source>
@@ -259,6 +259,10 @@
     </message>
     <message id="id-toggle-flashlight">
         <source>Flashlight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-tap-to-cancel">
+        <source>Tap to cancel</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

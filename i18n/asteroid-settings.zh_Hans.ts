@@ -183,7 +183,7 @@
     </message>
     <message id="id-toggle-brightness">
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">亮度</translation>
     </message>
     <message id="id-toggle-bluetooth">
         <source>Bluetooth</source>
@@ -255,6 +255,14 @@
     </message>
     <message id="id-toggle-flashlight">
         <source>Flashlight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-tap-to-cancel">
+        <source>Tap to cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-app-launcher-name">
+        <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

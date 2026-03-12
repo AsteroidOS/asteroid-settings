@@ -159,7 +159,6 @@
     </message>
     <message id="id-quickpanel-page">
         <location filename="../src/qml/main.qml" line="97"/>
-        <location filename="../src/qml/QuickPanelPage.qml" line="939"/>
         <source>Quick Panel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -171,25 +170,30 @@
     </message>
     <message id="id-power-page">
         <location filename="../src/qml/main.qml" line="170"/>
-        <location filename="../src/qml/PowerPage.qml" line="87"/>
+        <location filename="../src/qml/PowerPage.qml" line="96"/>
         <source>Power</source>
         <translation>Virta</translation>
     </message>
     <message id="id-poweroff-page">
-        <location filename="../src/qml/PowerPage.qml" line="29"/>
+        <location filename="../src/qml/PowerPage.qml" line="31"/>
         <source>Power Off</source>
         <translation>Sammuta</translation>
     </message>
     <message id="id-reboot-page">
-        <location filename="../src/qml/PowerPage.qml" line="31"/>
+        <location filename="../src/qml/PowerPage.qml" line="33"/>
         <source>Reboot</source>
         <translation>Käynnistä uudelleen</translation>
     </message>
     <message id="id-reboot-bootloader-page">
-        <location filename="../src/qml/PowerPage.qml" line="33"/>
+        <location filename="../src/qml/PowerPage.qml" line="35"/>
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
         <translation>Käynnistyksenlataaja</translation>
+    </message>
+    <message id="id-tap-to-cancel">
+        <location filename="../src/qml/PowerPage.qml" line="65"/>
+        <source>Tap to cancel</source>
+        <translation type="unfinished"></translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="176"/>
@@ -225,120 +229,125 @@
         <translation>Valitse kellon ilme</translation>
     </message>
     <message id="id-toggle-lock">
-        <location filename="../src/qml/QuickPanelPage.qml" line="78"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="108"/>
         <source>Lock Button</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-settings">
-        <location filename="../src/qml/QuickPanelPage.qml" line="80"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="110"/>
         <source>Settings</source>
         <oldsource>Settings Shortcut</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-brightness">
-        <location filename="../src/qml/QuickPanelPage.qml" line="82"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="112"/>
         <source>Brightness</source>
         <translation type="unfinished">Kirkkaus</translation>
     </message>
     <message id="id-toggle-bluetooth">
-        <location filename="../src/qml/QuickPanelPage.qml" line="84"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="114"/>
         <source>Bluetooth</source>
         <translation type="unfinished">Bluetooth</translation>
     </message>
     <message id="id-toggle-haptics">
-        <location filename="../src/qml/QuickPanelPage.qml" line="86"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="116"/>
         <source>Vibration</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-wifi">
-        <location filename="../src/qml/QuickPanelPage.qml" line="88"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="119"/>
         <source>Wifi Toggle</source>
         <oldsource>WiFi</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-sound">
-        <location filename="../src/qml/QuickPanelPage.qml" line="90"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="123"/>
         <source>Mute Sound</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-cinema">
-        <location filename="../src/qml/QuickPanelPage.qml" line="92"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="126"/>
         <source>Cinema Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-power-off">
-        <location filename="../src/qml/QuickPanelPage.qml" line="96"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="130"/>
         <source>Poweroff</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-reboot">
-        <location filename="../src/qml/QuickPanelPage.qml" line="98"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="132"/>
         <source>Reboot</source>
         <translation type="unfinished">Käynnistä uudelleen</translation>
     </message>
     <message id="id-toggle-music">
-        <location filename="../src/qml/QuickPanelPage.qml" line="100"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="134"/>
         <source>Music</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-toggle-flashlight">
-        <location filename="../src/qml/QuickPanelPage.qml" line="102"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="136"/>
         <source>Flashlight</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-fixed-row">
-        <location filename="../src/qml/QuickPanelPage.qml" line="189"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="154"/>
         <source>Fixed Row</source>
         <oldsource>Fixed Row</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-sliding-row">
-        <location filename="../src/qml/QuickPanelPage.qml" line="236"/>
-        <location filename="../src/qml/QuickPanelPage.qml" line="269"/>
-        <location filename="../src/qml/QuickPanelPage.qml" line="279"/>
-        <location filename="../src/qml/QuickPanelPage.qml" line="291"/>
-        <location filename="../src/qml/QuickPanelPage.qml" line="355"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="190"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="250"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="261"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="293"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="344"/>
         <source>Sliding Row</source>
         <oldsource>Sliding Row</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-options">
-        <location filename="../src/qml/QuickPanelPage.qml" line="248"/>
-        <location filename="../src/qml/QuickPanelPage.qml" line="300"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="226"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="304"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-battery-bottom">
-        <location filename="../src/qml/QuickPanelPage.qml" line="250"/>
-        <location filename="../src/qml/QuickPanelPage.qml" line="545"/>
-        <location filename="../src/qml/QuickPanelPage.qml" line="556"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="228"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="509"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="516"/>
         <source>Battery Meter aligned to bottom?</source>
         <oldsource>Battery aligned to bottom?</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-battery-animation">
-        <location filename="../src/qml/QuickPanelPage.qml" line="254"/>
-        <location filename="../src/qml/QuickPanelPage.qml" line="547"/>
-        <location filename="../src/qml/QuickPanelPage.qml" line="558"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="232"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="510"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="518"/>
         <source>Show battery charge animation?</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-particle-design">
-        <location filename="../src/qml/QuickPanelPage.qml" line="256"/>
-        <location filename="../src/qml/QuickPanelPage.qml" line="571"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="234"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="531"/>
         <source>Tap to cycle particle design</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-battery-preview">
-        <location filename="../src/qml/QuickPanelPage.qml" line="258"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="236"/>
         <source>Battery preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-battery-colored">
-        <location filename="../src/qml/QuickPanelPage.qml" line="252"/>
-        <location filename="../src/qml/QuickPanelPage.qml" line="549"/>
-        <location filename="../src/qml/QuickPanelPage.qml" line="560"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="230"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="511"/>
+        <location filename="../src/qml/QuickPanelPage.qml" line="520"/>
         <source>Enable colored battery?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-app-launcher-name">
+        <location filename="asteroid-settings.desktop.h" line="6"/>
+        <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

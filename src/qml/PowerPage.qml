@@ -48,10 +48,12 @@ Item {
         delegate: ListItem {
             title: text
             iconName: icon
-            onClicked: {
-                pendingIndex = index
-                remorse.action = text
-                remorse.start()
+            HighlightBar {
+                onClicked: {
+                    pendingIndex = index
+                    remorse.action = text
+                    remorse.start()
+                }
             }
         }
     }

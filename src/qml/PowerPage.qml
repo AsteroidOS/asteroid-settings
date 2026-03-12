@@ -23,6 +23,8 @@ import Nemo.DBus 2.0
 
 Item {
 
+    property int pendingIndex: -1
+
     ListModel {
         id: powerModel
         //% "Power Off"
@@ -39,24 +41,27 @@ Item {
         model: powerModel
         anchors {
             top: parent.top
-            topMargin: parent.height * 0.15
+            topMargin: pageHeader.height
         }
         height: parent.height
         width: parent.width
         delegate: ListItem {
             title: text
             iconName: icon
-            highlight: powerItems.currentIndex == index ? 0.2 : 0
-            onClicked: powerItems.currentIndex = index
+            onClicked: {
+                pendingIndex = index
+                remorse.action = text
+                remorse.start()
+            }
         }
     }
 
-    IconButton {
-        iconName: "ios-checkmark-circle-outline"
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: parent.height * 0.05
-        onClicked: login1DBus.command(powerItems.currentIndex)
+    RemorseTimer {
+        id: remorse
+        duration: 3000
+        //% "Tap to cancel"
+        cancelText: qsTrId("id-tap-to-cancel")
+        onTriggered: login1DBus.command(pendingIndex)
     }
 
     DBusInterface {
@@ -83,7 +88,9 @@ Item {
             }
         }
     }
+
     PageHeader {
+        id: pageHeader
         text: qsTrId("id-power-page")
     }
 }

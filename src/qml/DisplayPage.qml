@@ -32,7 +32,7 @@ Item {
     ConfigurationValue {
         id: bipLevel
         key: "/org/asteroidos/settings/burn-in-protection-level"
-        defaultValue: DeviceSpecs.needsBurnInProtection ? 3 : 0
+        defaultValue: DeviceSpecs.needsBurnInProtection ? 1.0 : 0.0
     }
 
     property var bipLabels: [
@@ -45,6 +45,8 @@ Item {
         //% "Low"
         qsTrId("id-low")
     ]
+
+    property var bipValues: [0.0, 1.0, 0.5, 0.25]
 
     ConfigurationValue {
         id: alwaysOnDisplay
@@ -119,8 +121,8 @@ Item {
                 //% "Burn-in Protection"
                 title: qsTrId("id-burn-in-protection")
                 valueArray: bipLabels
-                currentValue: bipLabels[Math.max(0, Math.min(3, bipLevel.value))]
-                onValueChanged: bipLevel.value = bipLabels.indexOf(value)
+                currentValue: bipLabels[bipValues.indexOf(bipLevel.value)] || bipLabels[0]
+                onValueChanged: bipLevel.value = bipValues[bipLabels.indexOf(value)]
             }
 
             RowSeparator {}

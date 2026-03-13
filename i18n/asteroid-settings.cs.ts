@@ -113,8 +113,9 @@
         <translation>Probuzení klepnutím</translation>
     </message>
     <message id="id-burn-in-protection">
-        <source>Burn in protection</source>
-        <translation>Ochrana proti popálení</translation>
+        <source>Burn-in Protection</source>
+        <oldsource>Burn in protection</oldsource>
+        <translation type="unfinished">Ochrana proti popálení</translation>
     </message>
     <message id="id-launcher-page">
         <source>Launcher</source>
@@ -259,6 +260,20 @@
     </message>
     <message id="id-tap-to-cancel">
         <source>Tap to cancel</source>
+    <message id="id-off">
+        <source>Off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-high">
+        <source>High</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-medium">
+        <source>Medium</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-low">
+        <source>Low</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-app-launcher-name">

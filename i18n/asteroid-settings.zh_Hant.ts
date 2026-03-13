@@ -83,39 +83,60 @@
         <translation>藍牙</translation>
     </message>
     <message id="id-display-page">
-        <location filename="../src/qml/DisplayPage.qml" line="132"/>
+        <location filename="../src/qml/DisplayPage.qml" line="154"/>
         <location filename="../src/qml/main.qml" line="85"/>
         <source>Display</source>
         <translation>顯示</translation>
     </message>
     <message id="id-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="61"/>
+        <location filename="../src/qml/DisplayPage.qml" line="72"/>
         <source>Brightness</source>
         <translation>亮度</translation>
     </message>
+    <message id="id-off">
+        <location filename="../src/qml/DisplayPage.qml" line="40"/>
+        <source>Off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-high">
+        <location filename="../src/qml/DisplayPage.qml" line="42"/>
+        <source>High</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-medium">
+        <location filename="../src/qml/DisplayPage.qml" line="44"/>
+        <source>Medium</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-low">
+        <location filename="../src/qml/DisplayPage.qml" line="46"/>
+        <source>Low</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="id-automatic-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="81"/>
+        <location filename="../src/qml/DisplayPage.qml" line="94"/>
         <source>Automatic brightness</source>
         <translation>自動亮度</translation>
     </message>
     <message id="id-always-on-display">
-        <location filename="../src/qml/DisplayPage.qml" line="90"/>
+        <location filename="../src/qml/DisplayPage.qml" line="105"/>
         <location filename="../src/qml/NightstandPage.qml" line="149"/>
         <source>Always on Display</source>
         <translation>始終在顯示幕上</translation>
     </message>
     <message id="id-burn-in-protection">
-        <location filename="../src/qml/DisplayPage.qml" line="103"/>
-        <source>Burn in protection</source>
-        <translation>燒傷螢幕保護</translation>
+        <location filename="../src/qml/DisplayPage.qml" line="120"/>
+        <source>Burn-in Protection</source>
+        <oldsource>Burn in protection</oldsource>
+        <translation type="unfinished">燒傷螢幕保護</translation>
     </message>
     <message id="id-tilt-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="114"/>
+        <location filename="../src/qml/DisplayPage.qml" line="134"/>
         <source>Tilt-to-wake</source>
         <translation>傾斜喚醒</translation>
     </message>
     <message id="id-tap-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="123"/>
+        <location filename="../src/qml/DisplayPage.qml" line="145"/>
         <source>Tap-to-wake</source>
         <translation>點擊喚醒</translation>
     </message>

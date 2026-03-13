@@ -83,39 +83,60 @@
         <translation>Bluetooth</translation>
     </message>
     <message id="id-display-page">
-        <location filename="../src/qml/DisplayPage.qml" line="132"/>
+        <location filename="../src/qml/DisplayPage.qml" line="154"/>
         <location filename="../src/qml/main.qml" line="85"/>
         <source>Display</source>
         <translation>Näyttö</translation>
     </message>
     <message id="id-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="61"/>
+        <location filename="../src/qml/DisplayPage.qml" line="72"/>
         <source>Brightness</source>
         <translation>Kirkkaus</translation>
     </message>
+    <message id="id-off">
+        <location filename="../src/qml/DisplayPage.qml" line="40"/>
+        <source>Off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-high">
+        <location filename="../src/qml/DisplayPage.qml" line="42"/>
+        <source>High</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-medium">
+        <location filename="../src/qml/DisplayPage.qml" line="44"/>
+        <source>Medium</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-low">
+        <location filename="../src/qml/DisplayPage.qml" line="46"/>
+        <source>Low</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="id-automatic-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="81"/>
+        <location filename="../src/qml/DisplayPage.qml" line="94"/>
         <source>Automatic brightness</source>
         <translation>Automaattinen kirkkaus</translation>
     </message>
     <message id="id-always-on-display">
-        <location filename="../src/qml/DisplayPage.qml" line="90"/>
+        <location filename="../src/qml/DisplayPage.qml" line="105"/>
         <location filename="../src/qml/NightstandPage.qml" line="149"/>
         <source>Always on Display</source>
         <translation>Tyyni näyttö (ei sammu)</translation>
     </message>
     <message id="id-burn-in-protection">
-        <location filename="../src/qml/DisplayPage.qml" line="103"/>
-        <source>Burn in protection</source>
-        <translation>Burn-in suojaus</translation>
+        <location filename="../src/qml/DisplayPage.qml" line="120"/>
+        <source>Burn-in Protection</source>
+        <oldsource>Burn in protection</oldsource>
+        <translation type="unfinished">Burn-in suojaus</translation>
     </message>
     <message id="id-tilt-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="114"/>
+        <location filename="../src/qml/DisplayPage.qml" line="134"/>
         <source>Tilt-to-wake</source>
         <translation>Nosta herättääksesi puhelin</translation>
     </message>
     <message id="id-tap-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="123"/>
+        <location filename="../src/qml/DisplayPage.qml" line="145"/>
         <source>Tap-to-wake</source>
         <translation>Napauta herättääksesi puhelin</translation>
     </message>

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 - Timo Könnecke <github.com/eLtMosen>
+ * Copyright (C) 2026 - Timo Könnecke <github.com/moWerk>
  * Copyright (C) 2020 - Darrel Griët <idanlcontact@gmail.com>
  * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
  *
@@ -30,10 +30,21 @@ Item {
     TiltToWake { id: tiltToWake }
     DisplaySettings { id: displaySettings }
     ConfigurationValue {
-        id: useBip
-        key: "/org/asteroidos/settings/use-burn-in-protection"
-        defaultValue: DeviceSpecs.needsBurnInProtection
+        id: bipLevel
+        key: "/org/asteroidos/settings/burn-in-protection-level"
+        defaultValue: DeviceSpecs.needsBurnInProtection ? 3 : 0
     }
+
+    property var bipLabels: [
+        //% "Off"
+        qsTrId("id-off"),
+        //% "High"
+        qsTrId("id-high"),
+        //% "Medium"
+        qsTrId("id-medium"),
+        //% "Low"
+        qsTrId("id-low")
+    ]
 
     ConfigurationValue {
         id: alwaysOnDisplay
@@ -74,6 +85,8 @@ Item {
                 onValueChanged: displaySettings.brightness = value
             }
 
+            RowSeparator {}
+
             LabeledSwitch {
                 height: rowHeight
                 width: parent.width
@@ -82,6 +95,8 @@ Item {
                 checked: displaySettings.ambientLightSensorEnabled
                 onCheckedChanged: displaySettings.ambientLightSensorEnabled = checked
             }
+
+            RowSeparator {}
 
             LabeledSwitch {
                 height: rowHeight
@@ -95,15 +110,20 @@ Item {
                 }
             }
 
-            LabeledSwitch {
+            RowSeparator {}
+
+            OptionCycler {
                 height: rowHeight
                 width: parent.width
                 visible: DeviceSpecs.needsBurnInProtection
-                //% "Burn in protection"
-                text: qsTrId("id-burn-in-protection")
-                checked: useBip.value
-                onCheckedChanged: useBip.value = checked
+                //% "Burn-in Protection"
+                title: qsTrId("id-burn-in-protection")
+                valueArray: bipLabels
+                currentValue: bipLabels[Math.max(0, Math.min(3, bipLevel.value))]
+                onValueChanged: bipLevel.value = bipLabels.indexOf(value)
             }
+
+            RowSeparator {}
 
             LabeledSwitch {
                 height: rowHeight
@@ -115,6 +135,8 @@ Item {
                 checked: tiltToWake.enabled
                 onCheckedChanged: tiltToWake.enabled = checked
             }
+
+            RowSeparator {}
 
             LabeledSwitch {
                 height: rowHeight

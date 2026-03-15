@@ -264,6 +264,7 @@
     </message>
     <message id="id-tap-to-cancel">
         <source>Tap to cancel</source>
+    </message>
     <message id="id-off">
         <source>Off</source>
         <translation type="unfinished"></translation>

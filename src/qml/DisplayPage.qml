@@ -119,7 +119,7 @@ Item {
                 width: parent.width
                 visible: DeviceSpecs.needsBurnInProtection
                 //% "Burn-in Protection"
-                title: qsTrId("id-burn-in-protection")
+                text: qsTrId("id-burn-in-protection")
                 valueArray: bipLabels
                 currentValue: bipLabels[bipValues.indexOf(bipLevel.value)] || bipLabels[0]
                 onValueChanged: bipLevel.value = bipValues[bipLabels.indexOf(value)]

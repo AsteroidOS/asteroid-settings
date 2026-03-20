@@ -7,7 +7,7 @@ project(
 )
 
 find_package(ECM REQUIRED NO_MODULE)
-find_package(AsteroidApp REQUIRED)
+find_package(AsteroidApp6 REQUIRED)
 
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ASTEROID_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake)
 
@@ -15,16 +15,18 @@ include(FindPkgConfig)
 include(FeatureSummary)
 include(GNUInstallDirs)
 include(ECMFindQmlModule)
-include(AsteroidCMakeSettings)
-include(AsteroidTranslations)
+include(Asteroid6CMakeSettings)
+include(Asteroid6Translations)
 
-find_package(Qt5 COMPONENTS Core Qml Quick DBus Multimedia REQUIRED)
+find_package(Qt6 REQUIRED COMPONENTS Core Qml Quick DBus Multimedia)
 find_package(Mce REQUIRED)
 
-ecm_find_qmlmodule(Nemo.DBus 2.0)
-ecm_find_qmlmodule(Nemo.Configuration 1.0)
-ecm_find_qmlmodule(Qt.labs.folderlistmodel 2.1)
-ecm_find_qmlmodule(org.nemomobile.systemsettings 1.0)
+ecm_find_qmlmodule(Nemo.Configuration 1.0 REQUIRED)
+ecm_find_qmlmodule(Nemo.DBus 2.0 REQUIRED)
+ecm_find_qmlmodule(Nemo.FileManager 1.0 REQUIRED)
+ecm_find_qmlmodule(Nemo.Mce 1.0 REQUIRED)
+ecm_find_qmlmodule(Qt.labs.folderlistmodel 2.1 REQUIRED)
+ecm_find_qmlmodule(org.nemomobile.systemsettings 1.0 REQUIRED)
 
 add_subdirectory(src)
 

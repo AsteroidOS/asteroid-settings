@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 3.10.0)
 
-project(asteroid-settings
+project(
+	asteroid-settings
 	VERSION 2.0
-	DESCRIPTION "Default settings app for AsteroidOS")
+	DESCRIPTION "Default settings app for AsteroidOS"
+)
 
 find_package(ECM REQUIRED NO_MODULE)
 find_package(AsteroidApp REQUIRED)
@@ -26,12 +28,16 @@ ecm_find_qmlmodule(org.nemomobile.systemsettings 1.0)
 
 add_subdirectory(src)
 
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/asteroid-settings.in
+configure_file(
+	${CMAKE_CURRENT_SOURCE_DIR}/asteroid-settings.in
 	${CMAKE_BINARY_DIR}/asteroid-settings
-	@ONLY)
+	@ONLY
+)
 
-install(PROGRAMS ${CMAKE_BINARY_DIR}/asteroid-settings
-	DESTINATION ${CMAKE_INSTALL_BINDIR})
+install(
+	PROGRAMS ${CMAKE_BINARY_DIR}/asteroid-settings
+	DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
 
 build_translations(i18n)
 generate_desktop(${CMAKE_SOURCE_DIR} asteroid-settings)

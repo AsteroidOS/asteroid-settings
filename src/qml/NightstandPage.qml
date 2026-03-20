@@ -25,6 +25,7 @@ import org.asteroid.utils 1.0
 import org.asteroid.settings 1.0
 import org.nemomobile.systemsettings 1.0 as NemoSystemSettings
 import Nemo.Configuration 1.0
+import Nemo.Mce 1.0
 
 Item {
     ConfigurationValue {
@@ -56,9 +57,13 @@ Item {
         key: "/desktop/asteroid/nightstand/always-on-display"
         defaultValue: true
     }
-    
-    NemoSystemSettings.DisplaySettings { 
+
+    NemoSystemSettings.DisplaySettings {
         id: displaySettings
+    }
+
+    MceChargerType {
+        id: mceChargerType
     }
 
 
@@ -149,8 +154,11 @@ Item {
                     text: qsTrId("id-always-on-display")
                     checked: nightstandAlwaysOnDisplay.value
                     onCheckedChanged: {
-                        nightstandAlwaysOnDisplay.value = checked
-                        displaySettings.lowPowerModeEnabled = checked
+                        // only alter displaySettings if Nightstand mode is
+                        // active and we're currently on a charger
+                        if (nightstandEnabled.value && mceChargerType.type != MceChargerType.None) {
+                            displaySettings.lowPowerModeEnabled = checked
+                        }
                     }
                 }
             }

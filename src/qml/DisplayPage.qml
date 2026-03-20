@@ -24,6 +24,7 @@ import org.asteroid.utils 1.0
 import org.asteroid.settings 1.0
 import org.nemomobile.systemsettings 1.0
 import Nemo.Configuration 1.0
+import Nemo.Mce 1.0
 
 Item {
     TapToWake { id: tapToWake }
@@ -52,6 +53,16 @@ Item {
         id: alwaysOnDisplay
         key: "/org/asteroidos/settings/always-on-display"
         defaultValue: true
+    }
+
+    ConfigurationValue {
+        id: nightstandEnabled
+        key: "/desktop/asteroid/nightstand/enabled"
+        defaultValue: true
+    }
+
+    MceChargerType {
+        id: mceChargerType
     }
 
     property string rowHeight: Dims.h(25)
@@ -107,8 +118,12 @@ Item {
                 text: qsTrId("id-always-on-display")
                 checked: alwaysOnDisplay.value
                 onCheckedChanged: {
-                    displaySettings.lowPowerModeEnabled = checked
                     alwaysOnDisplay.value = checked
+                    // alter displaySettings unless NightStand mode is active
+                    // and we are on a charger
+                    if (!nightstandEnabled.value || mceChargerType.type == MceChargerType.None) {
+                        displaySettings.lowPowerModeEnabled = checked
+                    }
                 }
             }
 

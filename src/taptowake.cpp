@@ -55,7 +55,7 @@
 
 #include <mce/dbus-names.h>
 #include <mce/mode-names.h>
-#include "mceiface.h"
+#include "mceinterface.h"
 
 static const char *MceTapToWakeEnabled = "/system/osso/dsm/powerkey/actions_gesture4";
 

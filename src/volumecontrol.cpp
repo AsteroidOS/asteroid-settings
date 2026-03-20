@@ -28,7 +28,7 @@
  */
 
 #include "volumecontrol.h"
-#include "VolumeControl2.h"
+#include "volumecontrol2interface.h"
 #include <QDBusMessage>
 #include <QDBusConnection>
 #include <QDBusArgument>
@@ -94,7 +94,7 @@ void VolumeControl::setVolume(int volume)
             if(effect != NULL)
                 effect->stop();
             effect = new QMediaPlayer(this);
-            effect->setMedia(QUrl::fromLocalFile("/usr/share/sounds/notification.wav"));
+            effect->setSource(QUrl::fromLocalFile("/usr/share/sounds/notification.wav"));
             effect->play();
         }
     }

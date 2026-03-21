@@ -55,7 +55,7 @@
 
 #include <mce/dbus-names.h>
 #include <mce/mode-names.h>
-#include "mceiface.h"
+#include "mceinterface.h"
 
 static const char *MceWristSensorEnabled = "/system/osso/dsm/display/wrist_sensor_enabled";
 static const char *MceWristSensorAvailable = "/system/osso/dsm/display/wrist_sensor_available";

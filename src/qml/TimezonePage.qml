@@ -1,8 +1,9 @@
 /*
- * Copyright (C) 2023 - Arseniy Movshev <dodoradio@outlook.com>
- * Copyright (C) 2023 - Ed Beroset <beroset@ieee.org>
- * Copyright (C) 2016 - Sylvia van Os <iamsylvie@openmailbox.org>
- * Copyright (C) 2015 - Florent Revest <revestflo@gmail.com>
+ * Copyright (C) 2026 - Timo Könnecke <github.com/moWerk>
+ *               2023 - Arseniy Movshev <dodoradio@outlook.com>
+ *               2023 - Ed Beroset <beroset@ieee.org>
+ *               2016 - Sylvia van Os <iamsylvie@openmailbox.org>
+ *               2015 - Florent Revest <revestflo@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -31,13 +32,28 @@ Item {
     property string regionPath: ""
 
     onTimezoneListChanged: {
+        // ---- top level: replace dynamic dedup with curated continent allowlist
+        if (regionLevel === 0) {
+            var allowlist = ["Africa", "America", "Antarctica", "Arctic", "Asia", "Atlantic", "Australia", "Europe", "Indian", "Pacific"]
+            var currentRegion = root.selectedTz.split("/")[0]
+            var selectIdx = 5 // ---- default to Atlantic as visual center
+            for (var a = 0; a < allowlist.length; a++) {
+                timezoneModel.append({"visualName": "  " + allowlist[a] + " ›", "name": allowlist[a], "fullPath": "", "bottomLevel": false});
+                if (allowlist[a] === currentRegion)
+                    selectIdx = a
+            }
+            // ---- Zulu: flat single-component entry, no city subpage needed
+            timezoneModel.append({"visualName": "Zulu", "name": "Zulu", "fullPath": "Zulu", "bottomLevel": true});
+            timezoneSpinner.positionViewAtIndex(selectIdx, ListView.SnapPosition);
+            return;
+        }
+        // ---- city level and below: existing dynamic loop unchanged
         var processedRegionList = [];
         var i = 0;
         timezoneList.forEach(function(region) {
-            //console.log("processing ", region);
             if(region.includes(regionPath)) {
                 var tzAsList = region.split("/")
-                if (tzAsList.length > (regionLevel + 1)) { //check if this item in the list has children
+                if (tzAsList.length > (regionLevel + 1)) {
                     if (processedRegionList.indexOf(tzAsList[regionLevel]) < 0) {
                         processedRegionList.push(tzAsList[regionLevel]);
                         timezoneModel.append({"visualName": "  " + tzAsList[regionLevel].replace("_"," ") + " ›", "name": tzAsList[regionLevel],"fullPath": region, "bottomLevel": false});
@@ -46,15 +62,13 @@ Item {
                         }
                         i++;
                     }
-                } else { //if this item doesn't have children - add it with a full name
+                } else {
                     timezoneModel.append({"visualName": tzAsList[regionLevel].replace("_"," "), "name": tzAsList[regionLevel], "fullPath": region, "bottomLevel": true});
                     if(selectedTz.includes(root.regionPath + tzAsList[regionLevel])) {
                         timezoneSpinner.positionViewAtIndex(i, ListView.SnapPosition);
                     }
                     i++;
                 }
-            } else {
-                //console.log("skipping ", region, " because it does not contain ", regionPath, " which is the region path");
             }
         });
     }
@@ -112,7 +126,7 @@ Item {
                     console.log("Attempting to set timezone to ",tzname);
                     timedateDbus.typedCall("SetTimezone", [
                             { "type":"s", "value": tzname },
-                            { "type":"b", "value":"0" }
+                            { "type":"b", "value": false }
                         ],
                         function(result) { console.log('call completed with:', result) },
                     function(error, message) { console.log('call failed', error, 'message:', message) }

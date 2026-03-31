@@ -579,6 +579,10 @@ Item {
             userRoot + "watchfaces-img/",
             false)
         _fetchDirectory(
+            _apiBase + name + "/usr/share/asteroid-launcher/wallpapers/full/",
+            userRoot + "wallpapers/full/",
+            false)
+        _fetchDirectory(
             _apiBase + name + "/usr/share/fonts/",
             WatchfaceHelper.userFontsPath(),
             true)

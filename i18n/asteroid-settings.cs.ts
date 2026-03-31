@@ -260,6 +260,7 @@
     </message>
     <message id="id-tap-to-cancel">
         <source>Tap to cancel</source>
+        <translation></translation>
     </message>
     <message id="id-off">
         <source>Off</source>
@@ -277,9 +278,33 @@
         <source>Low</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="id-app-launcher-name">
-        <source>Settings</source>
-        <translation type="unfinished">Nastavení</translation>
+    <message id="id-remove">
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-get-more-watchfaces">
+        <source>Get More Watchfaces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-connect-for-watchfaces">
+        <source>Connect to get more watchfaces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-refresh-store">
+        <source>Refresh store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-restart-launcher">
+        <source>Restart launcher</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-loading">
+        <source>Loading...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-watchface-store">
+        <source>Watchface Store</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

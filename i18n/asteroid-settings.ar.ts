@@ -83,60 +83,60 @@
         <translation>بلوتوث</translation>
     </message>
     <message id="id-display-page">
-        <location filename="../src/qml/DisplayPage.qml" line="154"/>
+        <location filename="../src/qml/DisplayPage.qml" line="171"/>
         <location filename="../src/qml/main.qml" line="85"/>
         <source>Display</source>
         <translation>العرض</translation>
     </message>
     <message id="id-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="72"/>
+        <location filename="../src/qml/DisplayPage.qml" line="85"/>
         <source>Brightness</source>
         <translation>السطوع</translation>
     </message>
     <message id="id-off">
-        <location filename="../src/qml/DisplayPage.qml" line="40"/>
+        <location filename="../src/qml/DisplayPage.qml" line="41"/>
         <source>Off</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-high">
-        <location filename="../src/qml/DisplayPage.qml" line="42"/>
+        <location filename="../src/qml/DisplayPage.qml" line="43"/>
         <source>High</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-medium">
-        <location filename="../src/qml/DisplayPage.qml" line="44"/>
+        <location filename="../src/qml/DisplayPage.qml" line="45"/>
         <source>Medium</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-low">
-        <location filename="../src/qml/DisplayPage.qml" line="46"/>
+        <location filename="../src/qml/DisplayPage.qml" line="47"/>
         <source>Low</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-automatic-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="94"/>
+        <location filename="../src/qml/DisplayPage.qml" line="107"/>
         <source>Automatic brightness</source>
         <translation>سطوع تلقائي</translation>
     </message>
     <message id="id-always-on-display">
-        <location filename="../src/qml/DisplayPage.qml" line="105"/>
-        <location filename="../src/qml/NightstandPage.qml" line="149"/>
+        <location filename="../src/qml/DisplayPage.qml" line="118"/>
+        <location filename="../src/qml/NightstandPage.qml" line="154"/>
         <source>Always on Display</source>
         <translation>دائمة الظهور</translation>
     </message>
     <message id="id-burn-in-protection">
-        <location filename="../src/qml/DisplayPage.qml" line="120"/>
+        <location filename="../src/qml/DisplayPage.qml" line="137"/>
         <source>Burn-in Protection</source>
         <oldsource>Burn in protection</oldsource>
         <translation type="unfinished">الحماية من الاحتراق</translation>
     </message>
     <message id="id-tilt-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="134"/>
+        <location filename="../src/qml/DisplayPage.qml" line="151"/>
         <source>Tilt-to-wake</source>
         <translation>إمالة للإيقاظ</translation>
     </message>
     <message id="id-tap-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="145"/>
+        <location filename="../src/qml/DisplayPage.qml" line="162"/>
         <source>Tap-to-wake</source>
         <translation>انقر للاستيقاظ</translation>
     </message>
@@ -153,7 +153,7 @@
     </message>
     <message id="id-nightstand-page">
         <location filename="../src/qml/main.qml" line="91"/>
-        <location filename="../src/qml/NightstandPage.qml" line="188"/>
+        <location filename="../src/qml/NightstandPage.qml" line="196"/>
         <source>Nightstand</source>
         <translation>منضدة السرير</translation>
     </message>
@@ -213,6 +213,9 @@
     </message>
     <message id="id-tap-to-cancel">
         <location filename="../src/qml/PowerPage.qml" line="65"/>
+        <location filename="../src/qml/WatchfaceSelector.qml" line="135"/>
+        <location filename="../src/qml/WatchfaceStorePage.qml" line="438"/>
+        <location filename="../src/qml/WatchfaceStorePage.qml" line="476"/>
         <source>Tap to cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -222,29 +225,29 @@
         <translation>حول</translation>
     </message>
     <message id="id-nightstand-enable">
-        <location filename="../src/qml/NightstandPage.qml" line="86"/>
+        <location filename="../src/qml/NightstandPage.qml" line="91"/>
         <source>Enable</source>
         <translation>تمكين</translation>
     </message>
     <message id="id-nightstand-brightness">
-        <location filename="../src/qml/NightstandPage.qml" line="107"/>
+        <location filename="../src/qml/NightstandPage.qml" line="112"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
         <translation>السطوع</translation>
     </message>
     <message id="id-nightstand-delay">
-        <location filename="../src/qml/NightstandPage.qml" line="126"/>
+        <location filename="../src/qml/NightstandPage.qml" line="131"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
         <translation>التأخير</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
-        <location filename="../src/qml/NightstandPage.qml" line="164"/>
+        <location filename="../src/qml/NightstandPage.qml" line="172"/>
         <source>Custom watchface</source>
         <translation>واجهة شاشة مخصصة</translation>
     </message>
     <message id="id-nightstand-watchface">
-        <location filename="../src/qml/NightstandPage.qml" line="175"/>
+        <location filename="../src/qml/NightstandPage.qml" line="183"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
         <translation>اختر واجهة الساعة</translation>
@@ -366,9 +369,41 @@
         <source>Enable colored battery?</source>
         <translation type="unfinished"></translation>
     </message>
-    <message id="id-app-launcher-name">
-        <location filename="asteroid-settings.desktop.h" line="6"/>
-        <source>Settings</source>
+    <message id="id-remove">
+        <location filename="../src/qml/WatchfaceSelector.qml" line="225"/>
+        <location filename="../src/qml/WatchfaceStorePage.qml" line="160"/>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-get-more-watchfaces">
+        <location filename="../src/qml/WatchfaceSelector.qml" line="405"/>
+        <source>Get More Watchfaces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-connect-for-watchfaces">
+        <location filename="../src/qml/WatchfaceSelector.qml" line="407"/>
+        <source>Connect to get more watchfaces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-refresh-store">
+        <location filename="../src/qml/WatchfaceStorePage.qml" line="366"/>
+        <source>Refresh store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-restart-launcher">
+        <location filename="../src/qml/WatchfaceStorePage.qml" line="396"/>
+        <location filename="../src/qml/WatchfaceStorePage.qml" line="474"/>
+        <source>Restart launcher</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-loading">
+        <location filename="../src/qml/WatchfaceStorePage.qml" line="413"/>
+        <source>Loading...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-watchface-store">
+        <location filename="../src/qml/WatchfaceStorePage.qml" line="423"/>
+        <source>Watchface Store</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -14,12 +14,14 @@ set(SRC
 	sysinfo.cpp
 	taptowake.cpp
 	tilttowake.cpp
-	volumecontrol.cpp)
+	volumecontrol.cpp
+	WatchfaceHelper.cpp)
 set(HEADERS
 	sysinfo.h
 	taptowake.h
 	tilttowake.h
-	volumecontrol.h)
+	volumecontrol.h
+	WatchfaceHelper.h)
 
 add_library(asteroid-settings ${SRC} ${HEADERS} resources.qrc 
     ${CMAKE_CURRENT_BINARY_DIR}/mceiface.h 
@@ -34,6 +36,7 @@ target_link_libraries(asteroid-settings PRIVATE
 	Qt5::Quick
 	Qt5::DBus
 	Qt5::Multimedia
+	Qt5::Network
 	AsteroidApp)
 
 install(TARGETS asteroid-settings

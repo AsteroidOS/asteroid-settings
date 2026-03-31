@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 - Timo Könnecke <github.com/eLtMosen>
+ * Copyright (C) 2026 - Timo Könnecke <github.com/eLtMosen>
  *               2022 - Darrel Griët <dgriet@gmail.com>
  *               2015 - Florent Revest <revestflo@gmail.com>
  *
@@ -23,24 +23,71 @@ import Qt.labs.folderlistmodel 2.1
 import Nemo.Configuration 1.0
 import org.asteroid.controls 1.0
 import org.asteroid.utils 1.0
-
+import org.asteroid.settings 1.0
 
 Item {
 
     property string assetPath: "file:///usr/share/asteroid-launcher/wallpapers/"
+    readonly property string userAssetPath: WatchfaceHelper.userAssetPath() + "wallpapers/"
 
     ConfigurationValue {
         id: wallpaperSource
-
         key: "/desktop/asteroid/background-filename"
         defaultValue: assetPath + "full/000-flatmesh.qml"
     }
 
     FolderListModel {
         id: qmlWallpapersModel
-
         folder: assetPath + "full"
         nameFilters: ["*.qml"]
+    }
+
+    ListModel { id: unifiedModel }
+
+    FolderListModel {
+        id: sysWallpaperModel
+        folder: assetPath + "full"
+        nameFilters: ["*.jpg", "*.png", "*.svg"]
+        onCountChanged: rebuildTimer.restart()
+    }
+
+    FolderListModel {
+        id: userWallpaperModel
+        folder: userAssetPath + "full"
+        nameFilters: ["*.jpg", "*.png", "*.svg"]
+        onCountChanged: rebuildTimer.restart()
+    }
+
+    Timer {
+        id: rebuildTimer
+        interval: 100
+        repeat: false
+        onTriggered: {
+            unifiedModel.clear()
+            var i, fn, fb
+            for (i = 0; i < sysWallpaperModel.count; i++) {
+                fn = sysWallpaperModel.get(i, "fileName")
+                fb = sysWallpaperModel.get(i, "fileBaseName")
+                unifiedModel.append({ fileName: fn, fileBaseName: fb,
+                    filePath: assetPath + "full/" + fn, isUser: false })
+            }
+            for (i = 0; i < userWallpaperModel.count; i++) {
+                fn = userWallpaperModel.get(i, "fileName")
+                fb = userWallpaperModel.get(i, "fileBaseName")
+                var fullPath = (userAssetPath + "full/" + fn).slice(7)
+                if (!FileInfo.exists(fullPath)) continue
+                    unifiedModel.append({ fileName: fn, fileBaseName: fb,
+                        filePath: userAssetPath + "full/" + fn, isUser: true })
+            }
+            for (i = 0; i < unifiedModel.count; i++) {
+                var entry = unifiedModel.get(i)
+                if (wallpaperSource.value === entry.filePath ||
+                    wallpaperSource.value === entry.filePath.replace(/\.[^.]+$/, ".qml")) {
+                    grid.positionViewAtIndex(i, GridView.Center)
+                    break
+                    }
+            }
+        }
     }
 
     GridView {
@@ -50,24 +97,7 @@ Item {
         cellHeight: Dims.h(40)
         anchors.fill: parent
 
-        model: FolderListModel {
-            id: folderModel
-
-            folder: assetPath + "full"
-            nameFilters: ["*.jpg", "*.png", "*.svg"]
-            onCountChanged: {
-                var i = 0
-                while (i < folderModel.count){
-                    var fileName = folderModel.get(i, "fileName")
-                    var fileBaseName = folderModel.get(i, "fileBaseName")
-                    if(wallpaperSource.value === folderModel.folder + "/" + fileName |
-                       wallpaperSource.value === folderModel.folder + "/" + fileBaseName + ".qml") {
-                        grid.positionViewAtIndex(i, GridView.Center)
-                    }
-                    i = i + 1
-                }
-            }
-        }
+        model: unifiedModel
 
         delegate: Component {
             id: fileDelegate
@@ -75,34 +105,37 @@ Item {
             Item {
                 width: grid.cellWidth
                 height: grid.cellHeight
+
                 Image {
                     id: img
 
                     anchors.fill: parent
                     fillMode: Image.PreserveAspectCrop
-                    // If a pre-scaled thumbnail file exists, use that.
-                    source: FileInfo.exists((assetPath + Dims.w(50) + "/" + fileName).slice(7)) ?
-                                assetPath + Dims.w(50) + "/" + fileName :
-                                // Else use the full resolution wallpaper with negative impact on performance, as failsafe.
-                                folderModel.folder + "/" + fileName
+                    source: {
+                        var sysThumb = (assetPath + Dims.w(50) + "/" + model.fileName).slice(7)
+                        if (!model.isUser && FileInfo.exists(sysThumb))
+                            return assetPath + Dims.w(50) + "/" + model.fileName
+                        return model.filePath
+                    }
                     asynchronous: true
                 }
 
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        if(qmlWallpapersModel.indexOf(folderModel.folder + "/" + fileBaseName + ".qml") !== -1)
-                            wallpaperSource.value = folderModel.folder + "/" + fileBaseName + ".qml"
+                        var qmlPath = model.filePath.replace(/\.[^.]+$/, ".qml")
+                        if (!model.isUser && qmlWallpapersModel.indexOf(qmlPath) !== -1)
+                            wallpaperSource.value = qmlPath
                         else
-                            wallpaperSource.value = folderModel.folder + "/" + fileName
+                            wallpaperSource.value = model.filePath
                     }
                 }
 
                 Rectangle {
                     id: highlightSelection
 
-                    property bool notSelected: wallpaperSource.value !== folderModel.folder + "/" + fileName &
-                                               wallpaperSource.value !== folderModel.folder + "/" + fileBaseName + ".qml"
+                    property bool notSelected: wallpaperSource.value !== model.filePath &&
+                        wallpaperSource.value !== model.filePath.replace(/\.[^.]+$/, ".qml")
 
                     anchors.fill: img
                     color: "#30000000"
@@ -123,8 +156,8 @@ Item {
                     }
                     height: width
                     width: parent.width * 0.3
-                    visible: wallpaperSource.value === folderModel.folder + "/" + fileName |
-                             wallpaperSource.value === folderModel.folder + "/" + fileBaseName + ".qml"
+                    visible: wallpaperSource.value === model.filePath ||
+                             wallpaperSource.value === model.filePath.replace(/\.[^.]+$/, ".qml")
 
                     layer.enabled: visible
                     layer.effect: DropShadow {

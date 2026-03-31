@@ -401,6 +401,8 @@ Item {
                 
                 HighlightBar { onClicked: restartRemorse.start() }
             }
+            
+            Item { width: parent.width; height: DeviceSpecs.hasRoundScreen ? Dims.l(8) : 0 }
         }
     }
 

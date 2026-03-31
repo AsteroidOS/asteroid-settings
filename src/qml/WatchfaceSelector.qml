@@ -415,6 +415,8 @@ RemorseTimer {
                     onClicked: layerStack.push(watchfaceStoreComponent, { assetPath: assetPath, previewSize: watchfaceSelector.previewSize })
                 }
             }
+            
+            Item { width: parent.width; height: DeviceSpecs.hasRoundScreen ? Dims.l(8) : 0 }
         }
     }
 }

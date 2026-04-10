@@ -264,6 +264,7 @@
     </message>
     <message id="id-tap-to-cancel">
         <source>Tap to cancel</source>
+        <translation></translation>
     </message>
     <message id="id-off">
         <source>Off</source>
@@ -310,7 +311,7 @@
     </message>
     <message>
         <source>Total disk space</source>
-        <translation>Espai total en disc</translation>
+        <translation type="vanished">Espai total en disc</translation>
     </message>
     <message>
         <source>%L1</source>
@@ -318,7 +319,7 @@
     </message>
     <message>
         <source>Available disk space</source>
-        <translation>Espai disponible en disc</translation>
+        <translation type="vanished">Espai disponible en disc</translation>
     </message>
     <message>
         <source>Display size</source>
@@ -334,11 +335,11 @@
     </message>
     <message>
         <source>%L1 GB</source>
-        <translation>%L1&#xa0;GB</translation>
+        <translation type="vanished">%L1&#xa0;GB</translation>
     </message>
     <message>
         <source>%L1 GB (%L2 %)</source>
-        <translation>%L1&#xa0;GB (%L2&#xa0;%)</translation>
+        <translation type="vanished">%L1&#xa0;GB (%L2&#xa0;%)</translation>
     </message>
     <message>
         <source>%L1W x %L2H</source>

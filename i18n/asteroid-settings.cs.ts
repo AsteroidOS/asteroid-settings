@@ -260,6 +260,7 @@
     </message>
     <message id="id-tap-to-cancel">
         <source>Tap to cancel</source>
+        <translation></translation>
     </message>
     <message id="id-off">
         <source>Off</source>
@@ -310,7 +311,7 @@
     </message>
     <message>
         <source>Total disk space</source>
-        <translation>Celkem kapacita úložiště</translation>
+        <translation type="vanished">Celkem kapacita úložiště</translation>
     </message>
     <message>
         <source>%L1</source>
@@ -318,7 +319,7 @@
     </message>
     <message>
         <source>Available disk space</source>
-        <translation>Prostor dostupný na úložišti</translation>
+        <translation type="vanished">Prostor dostupný na úložišti</translation>
     </message>
     <message>
         <source>Display size</source>
@@ -334,11 +335,11 @@
     </message>
     <message>
         <source>%L1 GB</source>
-        <translation>%L1 GB</translation>
+        <translation type="vanished">%L1 GB</translation>
     </message>
     <message>
         <source>%L1 GB (%L2 %)</source>
-        <translation>%L1 GB (%L2 %)</translation>
+        <translation type="vanished">%L1 GB (%L2 %)</translation>
     </message>
     <message>
         <source>%L1W x %L2H</source>

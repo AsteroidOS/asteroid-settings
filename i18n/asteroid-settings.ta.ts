@@ -260,6 +260,7 @@
     </message>
     <message id="id-tap-to-cancel">
         <source>Tap to cancel</source>
+        <translation></translation>
     </message>
     <message id="id-off">
         <source>Off</source>
@@ -310,7 +311,7 @@
     </message>
     <message>
         <source>Total disk space</source>
-        <translation>மொத்த வட்டு இடம்</translation>
+        <translation type="vanished">மொத்த வட்டு இடம்</translation>
     </message>
     <message>
         <source>%L1</source>
@@ -318,7 +319,7 @@
     </message>
     <message>
         <source>Available disk space</source>
-        <translation>கிடைக்கும் வட்டு இடம்</translation>
+        <translation type="vanished">கிடைக்கும் வட்டு இடம்</translation>
     </message>
     <message>
         <source>Display size</source>
@@ -334,11 +335,11 @@
     </message>
     <message>
         <source>%L1 GB</source>
-        <translation>%எல் 1 சிபி</translation>
+        <translation type="vanished">%எல் 1 சிபி</translation>
     </message>
     <message>
         <source>%L1 GB (%L2 %)</source>
-        <translation>%எல் 1 சிபி ( %எல் 2 %)</translation>
+        <translation type="vanished">%எல் 1 சிபி ( %எல் 2 %)</translation>
     </message>
     <message>
         <source>%L1W x %L2H</source>

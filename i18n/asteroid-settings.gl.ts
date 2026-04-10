@@ -83,66 +83,66 @@
         <translation>Bluetooth</translation>
     </message>
     <message id="id-display-page">
-        <location filename="../src/qml/DisplayPage.qml" line="154"/>
+        <location filename="../src/qml/DisplayPage.qml" line="171"/>
         <location filename="../src/qml/main.qml" line="85"/>
         <source>Display</source>
         <translation>Pantalla</translation>
     </message>
     <message id="id-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="72"/>
+        <location filename="../src/qml/DisplayPage.qml" line="85"/>
         <source>Brightness</source>
         <translation>Luminosidade</translation>
     </message>
     <message id="id-off">
-        <location filename="../src/qml/DisplayPage.qml" line="40"/>
+        <location filename="../src/qml/DisplayPage.qml" line="41"/>
         <source>Off</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-high">
-        <location filename="../src/qml/DisplayPage.qml" line="42"/>
+        <location filename="../src/qml/DisplayPage.qml" line="43"/>
         <source>High</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-medium">
-        <location filename="../src/qml/DisplayPage.qml" line="44"/>
+        <location filename="../src/qml/DisplayPage.qml" line="45"/>
         <source>Medium</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-low">
-        <location filename="../src/qml/DisplayPage.qml" line="46"/>
+        <location filename="../src/qml/DisplayPage.qml" line="47"/>
         <source>Low</source>
         <translation type="unfinished"></translation>
     </message>
     <message id="id-automatic-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="94"/>
+        <location filename="../src/qml/DisplayPage.qml" line="107"/>
         <source>Automatic brightness</source>
         <translation>Brillo automático</translation>
     </message>
     <message id="id-always-on-display">
-        <location filename="../src/qml/DisplayPage.qml" line="105"/>
-        <location filename="../src/qml/NightstandPage.qml" line="149"/>
+        <location filename="../src/qml/DisplayPage.qml" line="118"/>
+        <location filename="../src/qml/NightstandPage.qml" line="154"/>
         <source>Always on Display</source>
         <translation>Pantalla sempre acesa</translation>
     </message>
     <message id="id-burn-in-protection">
-        <location filename="../src/qml/DisplayPage.qml" line="120"/>
+        <location filename="../src/qml/DisplayPage.qml" line="137"/>
         <source>Burn-in Protection</source>
         <oldsource>Burn in protection</oldsource>
         <translation type="unfinished">Protección contra queimaduras</translation>
     </message>
     <message id="id-tilt-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="134"/>
+        <location filename="../src/qml/DisplayPage.qml" line="151"/>
         <source>Tilt-to-wake</source>
         <translation>Inclinar para prender</translation>
     </message>
     <message id="id-tap-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="145"/>
+        <location filename="../src/qml/DisplayPage.qml" line="162"/>
         <source>Tap-to-wake</source>
         <translation>Tocar para despertar</translation>
     </message>
     <message id="id-timezone-page">
         <location filename="../src/qml/main.qml" line="152"/>
-        <location filename="../src/qml/TimezonePage.qml" line="130"/>
+        <location filename="../src/qml/TimezonePage.qml" line="144"/>
         <source>Time zone</source>
         <translation>Franxa horaria</translation>
     </message>
@@ -153,7 +153,7 @@
     </message>
     <message id="id-nightstand-page">
         <location filename="../src/qml/main.qml" line="91"/>
-        <location filename="../src/qml/NightstandPage.qml" line="188"/>
+        <location filename="../src/qml/NightstandPage.qml" line="196"/>
         <source>Nightstand</source>
         <translation>Mesita de noite</translation>
     </message>
@@ -222,29 +222,29 @@
         <translation>Acerca de</translation>
     </message>
     <message id="id-nightstand-enable">
-        <location filename="../src/qml/NightstandPage.qml" line="86"/>
+        <location filename="../src/qml/NightstandPage.qml" line="91"/>
         <source>Enable</source>
         <translation>Activar</translation>
     </message>
     <message id="id-nightstand-brightness">
-        <location filename="../src/qml/NightstandPage.qml" line="107"/>
+        <location filename="../src/qml/NightstandPage.qml" line="112"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
         <translation>Brillo</translation>
     </message>
     <message id="id-nightstand-delay">
-        <location filename="../src/qml/NightstandPage.qml" line="126"/>
+        <location filename="../src/qml/NightstandPage.qml" line="131"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
         <translation>Atraso</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
-        <location filename="../src/qml/NightstandPage.qml" line="164"/>
+        <location filename="../src/qml/NightstandPage.qml" line="172"/>
         <source>Custom watchface</source>
         <translation>Esfera do reloxo personalizable</translation>
     </message>
     <message id="id-nightstand-watchface">
-        <location filename="../src/qml/NightstandPage.qml" line="175"/>
+        <location filename="../src/qml/NightstandPage.qml" line="183"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
         <translation>Seleccionala esfera do reloxo</translation>
@@ -375,122 +375,118 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="85"/>
+        <location filename="../src/qml/AboutPage.qml" line="82"/>
         <source>Build ID</source>
         <translation>Identificación da compilación</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="86"/>
+        <location filename="../src/qml/AboutPage.qml" line="83"/>
         <source>Codename</source>
         <translation>Nome en clave</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="87"/>
+        <location filename="../src/qml/AboutPage.qml" line="84"/>
         <source>Host name</source>
         <translation>Nome do anfitrión</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="88"/>
+        <location filename="../src/qml/AboutPage.qml" line="85"/>
         <source>WLAN MAC</source>
         <translation>WLAN MAC</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="89"/>
+        <location filename="../src/qml/AboutPage.qml" line="86"/>
         <source>IMEI</source>
         <translation>IMEI</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="90"/>
+        <location filename="../src/qml/AboutPage.qml" line="87"/>
         <source>Serial number</source>
         <translation>Número de serie</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>Total disk space</source>
-        <translation>Espazo total no disco</translation>
+        <translation type="vanished">Espazo total no disco</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>%L1 GB</source>
-        <translation>%L1 GB</translation>
+        <translation type="vanished">%L1 GB</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>%L1 GB (%L2 %)</source>
-        <translation>%L1 GB (%L2 %)</translation>
+        <translation type="vanished">%L1 GB (%L2 %)</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="95"/>
+        <location filename="../src/qml/AboutPage.qml" line="88"/>
         <source>%L1W x %L2H</source>
         <translation>%L1W x %L2H</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="98"/>
+        <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>Uptime</source>
         <translation>Tempo de actividade</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="98"/>
+        <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>%L1 days %L2</source>
         <translation>%L1 días %L2</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="102"/>
+        <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>%L1</source>
         <translation>%L1</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="102"/>
+        <location filename="../src/qml/AboutPage.qml" line="95"/>
         <source>Threads</source>
         <translation>Fíos</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="103"/>
+        <location filename="../src/qml/AboutPage.qml" line="96"/>
         <source>1,5,15 Minute loads</source>
         <translation>Cargas de 1,5,15 minutos</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="103"/>
+        <location filename="../src/qml/AboutPage.qml" line="96"/>
         <source>%L1, %L2, %L3</source>
         <translation>%L1, %L2, %L3</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="108"/>
+        <location filename="../src/qml/AboutPage.qml" line="101"/>
         <source>Total memory</source>
         <translation>Memoria total</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="108"/>
+        <location filename="../src/qml/AboutPage.qml" line="101"/>
         <source>%L1 MB</source>
         <translation>%L1 MB</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="109"/>
+        <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>Free memory</source>
         <translation>Memoria libre</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="109"/>
+        <location filename="../src/qml/AboutPage.qml" line="102"/>
         <source>%L1 MB (%L2 %)</source>
         <translation>%L1 MB (%L2 %)</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>Available disk space</source>
-        <translation>Espazo dispoñible no disco</translation>
+        <translation type="vanished">Espazo dispoñible no disco</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="95"/>
+        <location filename="../src/qml/AboutPage.qml" line="88"/>
         <source>Display size</source>
         <translation>Tamaño da pantalla</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="96"/>
+        <location filename="../src/qml/AboutPage.qml" line="89"/>
         <source>Kernel version</source>
         <translation>Versión do kernel</translation>
     </message>
     <message>
-        <location filename="../src/qml/AboutPage.qml" line="97"/>
+        <location filename="../src/qml/AboutPage.qml" line="90"/>
         <source>Qt version</source>
         <translation>Versión de Qt</translation>
     </message>

@@ -260,6 +260,7 @@
     </message>
     <message id="id-tap-to-cancel">
         <source>Tap to cancel</source>
+        <translation></translation>
     </message>
     <message id="id-off">
         <source>Off</source>
@@ -309,15 +310,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Total disk space</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>%L1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Available disk space</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -330,14 +323,6 @@
     </message>
     <message>
         <source>Qt version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%L1 GB</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%L1 GB (%L2 %)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

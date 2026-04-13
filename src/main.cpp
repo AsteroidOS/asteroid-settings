@@ -27,6 +27,7 @@
 #include "tilttowake.h"
 #include "taptowake.h"
 #include "sysinfo.h"
+#include "WatchfaceHelper.h"
 
 int main(int argc, char *argv[])
 {
@@ -38,6 +39,8 @@ int main(int argc, char *argv[])
     qmlRegisterType<TiltToWake>("org.asteroid.settings", 1, 0, "TiltToWake");
     qmlRegisterType<TapToWake>("org.asteroid.settings", 1, 0, "TapToWake");
     qmlRegisterType<SysInfo>("org.asteroid.settings", 1, 0, "SysInfo");
+    qmlRegisterSingletonType<WatchfaceHelper>("org.asteroid.settings", 1, 0, "WatchfaceHelper",
+                                              WatchfaceHelper::qmlInstance);
     view->setSource(QUrl("qrc:/qml/main.qml"));
     view->rootContext()->setContextProperty("qtVersion", QString(qVersion()));
     view->rootContext()->setContextProperty("kernelVersion", QString(buf.release));

@@ -34,7 +34,7 @@ target_link_libraries(asteroid-settings PRIVATE
 	Qt5::Quick
 	Qt5::DBus
 	Qt5::Multimedia
-	AsteroidApp)
+	Asteroid::AsteroidApp)
 
 install(TARGETS asteroid-settings
 	DESTINATION ${CMAKE_INSTALL_LIBDIR})

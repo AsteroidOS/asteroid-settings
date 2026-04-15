@@ -262,6 +262,11 @@
         <source>Flashlight</source>
         <translation type="unfinished"></translation>
     </message>
+    <message id="id-toggle-airplane-mode">
+        <location filename="../src/qml/QuickPanelPage.qml" line="130"/>
+        <source>Airplane Mode</source>
+        <translation>Mode d'avió</translation>
+    </message>
     <message id="id-tap-to-cancel">
         <source>Tap to cancel</source>
     </message>

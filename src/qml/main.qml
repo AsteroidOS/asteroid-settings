@@ -55,6 +55,7 @@ Application {
     Component { id: launcherLayer;              LauncherPage   { } }
     Component { id: usbLayer;                   USBPage        { } }
     Component { id: powerLayer;                 PowerPage      { } }
+    Component { id: powerManagerLayer;          PowerManagerPage { } }
     Component { id: aboutLayer;                 AboutPage      { } }
 
     TiltToWake { id: tiltToWake }
@@ -170,6 +171,12 @@ Application {
                     title: qsTrId("id-power-page")
                     iconName: "ios-power-outline"
                     onClicked: layerStack.push(powerLayer)
+                }
+                ListItem {
+                    //% "Power Manager"
+                    title: qsTrId("id-power-manager-page")
+                    iconName: "ios-battery-full-outline"
+                    onClicked: layerStack.push(powerManagerLayer)
                 }
                 ListItem {
                     //% "About"

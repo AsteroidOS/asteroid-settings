@@ -311,6 +311,11 @@
         <source>Flashlight</source>
         <translation type="unfinished"></translation>
     </message>
+    <message id="id-toggle-airplane-mode">
+        <location filename="../src/qml/QuickPanelPage.qml" line="130"/>
+        <source>Airplane Mode</source>
+        <translation>Tryb samolotowy</translation>
+    </message>
     <message id="id-fixed-row">
         <location filename="../src/qml/QuickPanelPage.qml" line="154"/>
         <source>Fixed Row</source>

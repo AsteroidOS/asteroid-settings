@@ -21,7 +21,7 @@ import Qt.labs.folderlistmodel 2.1
 import Nemo.Time 1.0
 import Nemo.Configuration 1.0
 import org.asteroid.controls 1.0
-import QtQml.Models 2.15
+import QtQml.Models 2.12
 
 Item {
     property alias displayAmbient: compositor.displayAmbient

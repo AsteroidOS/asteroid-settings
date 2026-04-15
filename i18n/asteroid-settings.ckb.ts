@@ -115,5 +115,10 @@
         <source>Charging only</source>
         <translation>تەنها لە کاتی شەحن کردن</translation>
     </message>
+    <message id="id-toggle-airplane-mode">
+        <location filename="../src/qml/QuickPanelPage.qml" line="130"/>
+        <source>Airplane Mode</source>
+        <translation type="unfinished">Airplane Mode</translation>
+    </message>
 </context>
 </TS>

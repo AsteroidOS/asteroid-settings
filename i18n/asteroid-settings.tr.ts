@@ -258,6 +258,11 @@
         <source>Flashlight</source>
         <translation>El feneri</translation>
     </message>
+    <message id="id-toggle-airplane-mode">
+        <location filename="../src/qml/QuickPanelPage.qml" line="130"/>
+        <source>Airplane Mode</source>
+        <translation>Uçak modu</translation>
+    </message>
     <message id="id-tap-to-cancel">
         <source>Tap to cancel</source>
     </message>

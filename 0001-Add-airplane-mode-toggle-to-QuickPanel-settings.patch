@@ -1,0 +1,41 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: AsteroidOS Developer <dev@asteroidos.org>
+Date: Sun, 13 Apr 2026 22:00:00 -0700
+Subject: [PATCH] Add airplane mode toggle to QuickPanel settings page
+
+Adds the airplaneModeToggle to the QuickPanel settings page so users
+can rearrange, enable, or disable it alongside other toggles. The toggle
+uses the ios-plane-outline icon and is enabled by default.
+
+Upstream-Status: Pending
+Signed-off-by: AsteroidOS Developer <dev@asteroidos.org>
+---
+--- a/src/qml/QuickPanelPage.qml	2026-04-13 22:06:02.163114516 -0700
++++ b/src/qml/QuickPanelPage.qml	2026-04-13 22:06:25.975885866 -0700
+@@ -48,6 +48,7 @@
+             "soundToggle",
+             "cinemaToggle",
+             "aodToggle",
++            "airplaneModeToggle",
+             "powerOffToggle",
+             "rebootToggle",
+             "musicButton",
+@@ -71,7 +72,8 @@
+             "powerOffToggle": true,
+             "rebootToggle": true,
+             "musicButton": false,
+-            "flashlightButton": false
++            "flashlightButton": false,
++            "airplaneModeToggle": true
+         }
+     }
+ 
+@@ -126,6 +128,8 @@
+         toggleOptions["cinemaToggle"] = ({ name: qsTrId("id-toggle-cinema"), icon: "ios-film-outline"});
+         //% "AoD Toggle"
+         toggleOptions["aodToggle"] = ({ name: qsTrId("id-always-on-display"), icon: "ios-watch-aod-on"});
++        //% "Airplane Mode"
++        toggleOptions["airplaneModeToggle"] = ({ name: qsTrId("id-toggle-airplane-mode"), icon: "ios-plane-outline"});
+         //% "Poweroff"
+         toggleOptions["powerOffToggle"] = ({ name: qsTrId("id-toggle-power-off"), icon: "ios-power-outline"});
+         //% "Reboot"

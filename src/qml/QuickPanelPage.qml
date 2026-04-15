@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.9
-import QtGraphicalEffects 1.15
+import QtGraphicalEffects 1.0
 import org.asteroid.controls 1.0
 import org.asteroid.utils 1.0
 import Nemo.Configuration 1.0
@@ -48,6 +48,7 @@ Item {
             "soundToggle",
             "cinemaToggle",
             "aodToggle",
+            "airplaneModeToggle",
             "powerOffToggle",
             "rebootToggle",
             "musicButton",
@@ -71,7 +72,8 @@ Item {
             "powerOffToggle": true,
             "rebootToggle": true,
             "musicButton": false,
-            "flashlightButton": false
+            "flashlightButton": false,
+            "airplaneModeToggle": true
         }
     }
 
@@ -126,6 +128,8 @@ Item {
         toggleOptions["cinemaToggle"] = ({ name: qsTrId("id-toggle-cinema"), icon: "ios-film-outline"});
         //% "AoD Toggle"
         toggleOptions["aodToggle"] = ({ name: qsTrId("id-always-on-display"), icon: "ios-watch-aod-on"});
+        //% "Airplane Mode"
+        toggleOptions["airplaneModeToggle"] = ({ name: qsTrId("id-toggle-airplane-mode"), icon: "ios-plane-outline"});
         //% "Poweroff"
         toggleOptions["powerOffToggle"] = ({ name: qsTrId("id-toggle-power-off"), icon: "ios-power-outline"});
         //% "Reboot"

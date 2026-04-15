@@ -96,12 +96,7 @@ Item {
             height: listItem.height
 
             property bool isActive: model.id === activeProfileId
-            property bool isDefault: model.id && (
-                model.id.indexOf("ultra_saver") === 0 ||
-                model.id.indexOf("health") === 0 ||
-                model.id.indexOf("smartwatch") === 0 ||
-                model.id.indexOf("performance") === 0
-            )
+            property bool isBuiltin: model.builtin === true
 
             ListItem {
                 id: listItem
@@ -131,7 +126,7 @@ Item {
                 }
 
                 onPressAndHold: {
-                    if (!isDefault) {
+                    if (!isBuiltin) {
                         deleteRemorse.execute(listItem, "", function() {
                             powerd.typedCall("DeleteProfile", [model.id], function(success) {
                                 if (success) {

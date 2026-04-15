@@ -19,5 +19,10 @@
         <file>qml/USBPage.qml</file>
         <file>qml/PowerPage.qml</file>
         <file>qml/AboutPage.qml</file>
+        <file>qml/PowerManagerPage.qml</file>
+        <file>qml/ProfileSelectorPage.qml</file>
+        <file>qml/ProfileListPage.qml</file>
+        <file>qml/ProfileEditPage.qml</file>
+        <file>qml/AutomationEditPage.qml</file>
     </qresource>
 </RCC>

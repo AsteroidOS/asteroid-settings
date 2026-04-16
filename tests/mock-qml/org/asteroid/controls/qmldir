@@ -1,0 +1,14 @@
+module org.asteroid.controls
+singleton Dims 1.0 Dims.qml
+Icon 1.0 Icon.qml
+IconButton 1.0 IconButton.qml
+Label 1.0 Label.qml
+LabeledSwitch 1.0 LabeledSwitch.qml
+LayerStack 1.0 LayerStack.qml
+ListItem 1.0 ListItem.qml
+ListRow 1.0 ListRow.qml
+OptionCycler 1.0 OptionCycler.qml
+PageHeader 1.0 PageHeader.qml
+RemorseTimer 1.0 RemorseTimer.qml
+RowSeparator 1.0 RowSeparator.qml
+StatusPage 1.0 StatusPage.qml

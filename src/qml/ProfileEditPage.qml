@@ -27,6 +27,7 @@ Item {
     property bool isNewProfile: false
     property var profileData: ({})
     property bool isLoading: true
+    property bool isBuiltin: false
 
     property var sensorModeLabels: ({
         "off": qsTrId("id-off"),
@@ -59,7 +60,7 @@ Item {
                 profileData = {
                     "id": "",
                     "name": qsTrId("id-new-profile"),
-                    "icon": "ios-battery-outline",
+                    "icon": "ios-battery-full",
                     "color": "#2196F3",
                     "sensors": {
                         "accelerometer": "medium",
@@ -103,8 +104,9 @@ Item {
                 }
                 isLoading = false
             } else {
-                typedCall("GetProfile", [profileId], function(result) {
+                typedCall("GetProfile", [{"type": "s", "value": profileId}], function(result) {
                     profileData = JSON.parse(result)
+                    isBuiltin = profileData.builtin === true
                     isLoading = false
                 }, handleError)
             }
@@ -115,72 +117,103 @@ Item {
         }
     }
 
+    function persistProfile() {
+        if (isLoading) return
+        var profileJson = JSON.stringify(profileData)
+        if (isNewProfile) {
+            powerd.typedCall("AddProfile",
+                [{"type": "s", "value": profileJson}],
+                function(newId) {
+                    if (newId) {
+                        profileId = newId
+                        isNewProfile = false
+                        profileData.id = newId
+                        profileData = profileData
+                    }
+                }, powerd.handleError)
+        } else {
+            powerd.typedCall("UpdateProfile",
+                [{"type": "s", "value": profileJson}],
+                function(success) {}, powerd.handleError)
+        }
+    }
+
     function updateSensor(sensorName, value) {
         if (!profileData.sensors) profileData.sensors = {}
         profileData.sensors[sensorName] = value
-        profileDataChanged()
+        profileData = profileData
+        persistProfile()
     }
 
     function updateRadioState(radioName, state) {
         if (!profileData.radios) profileData.radios = {}
         if (!profileData.radios[radioName]) profileData.radios[radioName] = {}
         profileData.radios[radioName].state = state
-        profileDataChanged()
+        profileData = profileData
+        persistProfile()
     }
 
     function updateRadioSyncMode(radioName, mode) {
         if (!profileData.radios) profileData.radios = {}
         if (!profileData.radios[radioName]) profileData.radios[radioName] = {}
         profileData.radios[radioName].sync_mode = mode
-        profileDataChanged()
+        profileData = profileData
+        persistProfile()
     }
 
     function updateRadioInterval(radioName, interval) {
         if (!profileData.radios) profileData.radios = {}
         if (!profileData.radios[radioName]) profileData.radios[radioName] = {}
         profileData.radios[radioName].interval_hours = interval
-        profileDataChanged()
+        profileData = profileData
+        persistProfile()
     }
 
     function updateRadioDisableSleep(radioName, disable) {
         if (!profileData.radios) profileData.radios = {}
         if (!profileData.radios[radioName]) profileData.radios[radioName] = {}
         profileData.radios[radioName].disable_during_sleep = disable
-        profileDataChanged()
+        profileData = profileData
+        persistProfile()
     }
 
     function updateSystemSetting(setting, value) {
         if (!profileData.system) profileData.system = {}
         profileData.system[setting] = value
-        profileDataChanged()
+        profileData = profileData
+        persistProfile()
     }
-
-    signal profileDataChanged()
 
     function saveProfile() {
         var profileJson = JSON.stringify(profileData)
         
         if (isNewProfile) {
-            powerd.typedCall("AddProfile", [profileJson], function(newId) {
-                if (newId) {
-                    layerStack.pop(root)
-                }
-            }, powerd.handleError)
+            powerd.typedCall("AddProfile",
+                [{"type": "s", "value": profileJson}],
+                function(newId) {
+                    if (newId) {
+                        layerStack.pop(root)
+                    }
+                }, powerd.handleError)
         } else {
-            powerd.typedCall("UpdateProfile", [profileJson], function(success) {
-                if (success) {
-                    layerStack.pop(root)
-                }
-            }, powerd.handleError)
+            powerd.typedCall("UpdateProfile",
+                [{"type": "s", "value": profileJson}],
+                function(success) {
+                    if (success) {
+                        layerStack.pop(root)
+                    }
+                }, powerd.handleError)
         }
     }
 
     function deleteProfile() {
-        powerd.typedCall("DeleteProfile", [profileId], function(success) {
-            if (success) {
-                layerStack.pop(root)
-            }
-        }, powerd.handleError)
+        powerd.typedCall("DeleteProfile",
+            [{"type": "s", "value": profileId}],
+            function(success) {
+                if (success) {
+                    layerStack.pop(root)
+                }
+            }, powerd.handleError)
     }
 
     Component {
@@ -235,127 +268,121 @@ Item {
 
             RowSeparator {}
 
-            OptionCycler {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
                 //% "Accelerometer"
                 text: qsTrId("id-accelerometer")
                 valueArray: ["off", "low", "medium", "high", "workout"]
                 currentValue: profileData.sensors ? profileData.sensors.accelerometer : "medium"
-                onCurrentValueChanged: {
-                    updateSensor("accelerometer", currentValue)
+                onValueChanged: {
+                    currentValue = value
+                    updateSensor("accelerometer", value)
                 }
             }
 
             RowSeparator {}
 
-            OptionCycler {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
                 //% "Gyroscope"
                 text: qsTrId("id-gyroscope")
                 valueArray: ["off", "low", "medium", "high", "workout"]
                 currentValue: profileData.sensors ? profileData.sensors.gyroscope : "medium"
-                onCurrentValueChanged: {
-                    updateSensor("gyroscope", currentValue)
+                onValueChanged: {
+                    currentValue = value
+                    updateSensor("gyroscope", value)
                 }
             }
 
             RowSeparator {}
 
-            OptionCycler {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
-                //% "Heart Rate"
+                //% "Heart\nRate"
                 text: qsTrId("id-heart-rate")
                 valueArray: ["off", "low", "medium", "high", "workout"]
                 currentValue: profileData.sensors ? profileData.sensors.heart_rate : "medium"
-                onCurrentValueChanged: {
-                    updateSensor("heart_rate", currentValue)
+                onValueChanged: {
+                    currentValue = value
+                    updateSensor("heart_rate", value)
                 }
             }
 
             RowSeparator {}
 
-            OptionCycler {
-                height: Dims.h(15)
-                width: parent.width
-                //% "HRV"
-                text: qsTrId("id-hrv")
-                valueArray: ["off", "sleep_only", "always"]
-                currentValue: profileData.sensors ? profileData.sensors.hrv : "sleep_only"
-                onCurrentValueChanged: {
-                    updateSensor("hrv", currentValue)
-                }
-            }
-
-            RowSeparator {}
-
-            OptionCycler {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
                 //% "SpO2"
                 text: qsTrId("id-spo2")
                 valueArray: ["off", "periodic", "continuous"]
                 currentValue: profileData.sensors ? profileData.sensors.spo2 : "off"
-                onCurrentValueChanged: {
-                    updateSensor("spo2", currentValue)
+                onValueChanged: {
+                    currentValue = value
+                    updateSensor("spo2", value)
                 }
             }
 
             RowSeparator {}
 
-            OptionCycler {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
                 //% "Barometer"
                 text: qsTrId("id-barometer")
                 valueArray: ["off", "low", "high"]
                 currentValue: profileData.sensors ? profileData.sensors.barometer : "low"
-                onCurrentValueChanged: {
-                    updateSensor("barometer", currentValue)
+                onValueChanged: {
+                    currentValue = value
+                    updateSensor("barometer", value)
                 }
             }
 
             RowSeparator {}
 
-            OptionCycler {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
                 //% "Compass"
                 text: qsTrId("id-compass")
                 valueArray: ["off", "on_demand", "continuous"]
                 currentValue: profileData.sensors ? profileData.sensors.compass : "on_demand"
-                onCurrentValueChanged: {
-                    updateSensor("compass", currentValue)
+                onValueChanged: {
+                    currentValue = value
+                    updateSensor("compass", value)
                 }
             }
 
             RowSeparator {}
 
-            OptionCycler {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
-                //% "Ambient Light"
+                //% "Ambient\nLight"
                 text: qsTrId("id-ambient-light")
                 valueArray: ["off", "low", "high"]
                 currentValue: profileData.sensors ? profileData.sensors.ambient_light : "low"
-                onCurrentValueChanged: {
-                    updateSensor("ambient_light", currentValue)
+                onValueChanged: {
+                    currentValue = value
+                    updateSensor("ambient_light", value)
                 }
             }
 
             RowSeparator {}
 
-            OptionCycler {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
                 //% "GPS"
                 text: qsTrId("id-gps")
                 valueArray: ["off", "periodic", "continuous"]
                 currentValue: profileData.sensors ? profileData.sensors.gps : "off"
-                onCurrentValueChanged: {
-                    updateSensor("gps", currentValue)
+                onValueChanged: {
+                    currentValue = value
+                    updateSensor("gps", value)
                 }
             }
 
@@ -379,20 +406,22 @@ Item {
 
             RowSeparator {}
 
-            LabeledSwitch {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
                 //% "Bluetooth"
                 text: qsTrId("id-bluetooth")
-                checked: profileData.radios && profileData.radios.ble ? profileData.radios.ble.state === "on" : true
-                onCheckedChanged: {
-                    updateRadioState("ble", checked ? "on" : "off")
+                valueArray: ["off", "on"]
+                currentValue: profileData.radios && profileData.radios.ble && profileData.radios.ble.state === "on" ? "on" : "off"
+                onValueChanged: {
+                    currentValue = value
+                    updateRadioState("ble", value)
                 }
             }
 
             RowSeparator {}
 
-            OptionCycler {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
                 visible: profileData.radios && profileData.radios.ble && profileData.radios.ble.state === "on"
@@ -400,8 +429,9 @@ Item {
                 text: qsTrId("id-ble-sync")
                 valueArray: ["manual", "interval", "time_window"]
                 currentValue: profileData.radios && profileData.radios.ble ? profileData.radios.ble.sync_mode : "interval"
-                onCurrentValueChanged: {
-                    updateRadioSyncMode("ble", currentValue)
+                onValueChanged: {
+                    currentValue = value
+                    updateRadioSyncMode("ble", value)
                 }
             }
 
@@ -409,16 +439,17 @@ Item {
                 visible: profileData.radios && profileData.radios.ble && profileData.radios.ble.state === "on"
             }
 
-            OptionCycler {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
                 visible: profileData.radios && profileData.radios.ble && profileData.radios.ble.state === "on" && profileData.radios.ble.sync_mode === "interval"
-                //% "BLE Interval"
+                //% "BLE\nInterval"
                 text: qsTrId("id-ble-interval")
-                valueArray: ["1", "2", "5", "10"]
-                currentValue: profileData.radios && profileData.radios.ble ? String(profileData.radios.ble.interval_hours) : "2"
-                onCurrentValueChanged: {
-                    updateRadioInterval("ble", parseInt(currentValue))
+                valueArray: ["1h", "5h", "10h", "24h"]
+                currentValue: profileData.radios && profileData.radios.ble ? profileData.radios.ble.interval_hours + "h" : "5h"
+                onValueChanged: {
+                    currentValue = value
+                    updateRadioInterval("ble", parseInt(value))
                 }
             }
 
@@ -426,15 +457,17 @@ Item {
                 visible: profileData.radios && profileData.radios.ble && profileData.radios.ble.state === "on" && profileData.radios.ble.sync_mode === "interval"
             }
 
-            LabeledSwitch {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
                 visible: profileData.radios && profileData.radios.ble && profileData.radios.ble.state === "on" && profileData.radios.ble.sync_mode === "interval"
-                //% "Disable during sleep"
+                //% "Disable\nDuring Sleep"
                 text: qsTrId("id-ble-disable-sleep")
-                checked: profileData.radios && profileData.radios.ble ? profileData.radios.ble.disable_during_sleep : false
-                onCheckedChanged: {
-                    updateRadioDisableSleep("ble", checked)
+                valueArray: ["off", "on"]
+                currentValue: profileData.radios && profileData.radios.ble && profileData.radios.ble.disable_during_sleep ? "on" : "off"
+                onValueChanged: {
+                    currentValue = value
+                    updateRadioDisableSleep("ble", value === "on")
                 }
             }
 
@@ -442,29 +475,32 @@ Item {
                 visible: profileData.radios && profileData.radios.ble && profileData.radios.ble.state === "on" && profileData.radios.ble.sync_mode === "interval"
             }
 
-            LabeledSwitch {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
                 //% "Wi-Fi"
                 text: qsTrId("id-wifi")
-                checked: profileData.radios && profileData.radios.wifi ? profileData.radios.wifi.state === "on" : false
-                onCheckedChanged: {
-                    updateRadioState("wifi", checked ? "on" : "off")
+                valueArray: ["off", "on"]
+                currentValue: profileData.radios && profileData.radios.wifi && profileData.radios.wifi.state === "on" ? "on" : "off"
+                onValueChanged: {
+                    currentValue = value
+                    updateRadioState("wifi", value)
                 }
             }
 
             RowSeparator {}
 
-            OptionCycler {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
                 visible: profileData.radios && profileData.radios.wifi && profileData.radios.wifi.state === "on"
-                //% "Wi-Fi Sync"
+                //% "Wi-Fi\nSync"
                 text: qsTrId("id-wifi-sync")
                 valueArray: ["manual", "interval", "time_window"]
                 currentValue: profileData.radios && profileData.radios.wifi ? profileData.radios.wifi.sync_mode : "manual"
-                onCurrentValueChanged: {
-                    updateRadioSyncMode("wifi", currentValue)
+                onValueChanged: {
+                    currentValue = value
+                    updateRadioSyncMode("wifi", value)
                 }
             }
 
@@ -490,41 +526,46 @@ Item {
 
             RowSeparator {}
 
-            LabeledSwitch {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
-                //% "Always-on Display"
+                //% "Always-on\nDisplay"
                 text: qsTrId("id-always-on-display")
-                checked: profileData.system ? profileData.system.always_on_display : true
-                onCheckedChanged: {
-                    updateSystemSetting("always_on_display", checked)
+                valueArray: ["off", "on"]
+                currentValue: profileData.system && profileData.system.always_on_display ? "on" : "off"
+                onValueChanged: {
+                    currentValue = value
+                    updateSystemSetting("always_on_display", value === "on")
                 }
             }
 
             RowSeparator {}
 
-            LabeledSwitch {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
                 //% "Tilt-to-wake"
                 text: qsTrId("id-tilt-to-wake")
-                checked: profileData.system ? profileData.system.tilt_to_wake : true
-                onCheckedChanged: {
-                    updateSystemSetting("tilt_to_wake", checked)
+                valueArray: ["off", "on"]
+                currentValue: profileData.system && profileData.system.tilt_to_wake ? "on" : "off"
+                onValueChanged: {
+                    currentValue = value
+                    updateSystemSetting("tilt_to_wake", value === "on")
                 }
             }
 
             RowSeparator {}
 
-            OptionCycler {
+            FillBarRow {
                 height: Dims.h(15)
                 width: parent.width
-                //% "Background Sync"
+                //% "Background\nSync"
                 text: qsTrId("id-background-sync")
                 valueArray: ["auto", "when_radios_on", "off"]
                 currentValue: profileData.system ? profileData.system.background_sync : "when_radios_on"
-                onCurrentValueChanged: {
-                    updateSystemSetting("background_sync", currentValue)
+                onValueChanged: {
+                    currentValue = value
+                    updateSystemSetting("background_sync", value)
                 }
             }
 
@@ -551,7 +592,7 @@ Item {
             ListItem {
                 height: Dims.h(15)
                 width: parent.width
-                //% "Battery & Time Rules"
+                //% "Battery / Time Rules"
                 title: qsTrId("id-battery-time-rules")
                 iconName: "ios-cog-outline"
                 
@@ -570,29 +611,7 @@ Item {
             Item {
                 width: parent.width
                 height: Dims.h(18)
-
-                IconButton {
-                    anchors.centerIn: parent
-                    width: parent.width * 0.8
-                    height: Dims.h(15)
-                    iconName: "ios-checkmark-circle-outline"
-                    iconColor: "#4CAF50"
-
-                    onClicked: saveProfile()
-                }
-
-                Label {
-                    anchors.centerIn: parent
-                    //% "Save"
-                    text: qsTrId("id-save")
-                    font.pixelSize: Dims.l(6)
-                }
-            }
-
-            Item {
-                width: parent.width
-                height: Dims.h(18)
-                visible: !isNewProfile
+                visible: !isNewProfile && !isBuiltin
 
                 IconButton {
                     anchors.centerIn: parent

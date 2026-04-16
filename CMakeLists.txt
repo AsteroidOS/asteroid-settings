@@ -26,6 +26,12 @@ ecm_find_qmlmodule(org.nemomobile.systemsettings 1.0)
 
 add_subdirectory(src)
 
+option(BUILD_TESTS "Build QML validation tests" OFF)
+if(BUILD_TESTS)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
+
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/asteroid-settings.in
 	${CMAKE_BINARY_DIR}/asteroid-settings
 	@ONLY)

@@ -81,104 +81,104 @@ Application {
 
                 Item { width: parent.width; height: DeviceSpecs.hasRoundScreen ? Dims.h(6) : Dims.h(2) }
 
-                ListItem {
+                CompactListItem {
                     //% "Display"
                     title: qsTrId("id-display-page")
                     iconName: "ios-display-outline"
                     onClicked: layerStack.push(displayLayer)
                 }
-                ListItem {
+                CompactListItem {
                     //% "Nightstand"
                     title: qsTrId("id-nightstand-page")
                     iconName: "ios-moon-outline"
                     onClicked: layerStack.push(nightstandLayer)
                 }
-                ListItem {
+                CompactListItem {
                     //% "Quick Panel"
                     title: qsTrId("id-quickpanel-page")
                     iconName: options.value.batteryBottom ? "ios-quickpanel-batterybottom" : "ios-quickpanel-batterytop"
                     onClicked: layerStack.push(quickPanelLayer)
                 }
-                ListItem {
+                CompactListItem {
                     //% "Sound"
                     title: qsTrId("id-sound-page")
                     iconName: "ios-sound-outline"
                     onClicked: layerStack.push(soundLayer)
                     visible: DeviceSpecs.hasSpeaker
                 }
-                ListItem {
+                CompactListItem {
                     //% "Wallpaper"
                     title: qsTrId("id-wallpaper-page")
                     iconName: "ios-wallpaper-outline"
                     onClicked: layerStack.push(wallpaperLayer)
                 }
-                ListItem {
+                CompactListItem {
                     //% "Watchface"
                     title: qsTrId("id-watchface-page")
                     iconName: "ios-watchface-outline"
                     onClicked: layerStack.push(watchfaceLayer)
                 }
-                ListItem {
+                CompactListItem {
                     //% "Launcher"
                     title: qsTrId("id-launcher-page")
                     iconName: "ios-launcher-outline"
                     onClicked: layerStack.push(launcherLayer)
                 }
-                ListItem {
+                CompactListItem {
                     //% "Time"
                     title: qsTrId("id-time-page")
                     iconName: "ios-clock-outline"
                     onClicked: layerStack.push(timeLayer)
                 }
-                ListItem {
+                CompactListItem {
                     //% "Date"
                     title: qsTrId("id-date-page")
                     iconName: "ios-date-outline"
                     onClicked: layerStack.push(dateLayer)
                 }
-                ListItem {
+                CompactListItem {
                     //% "Units"
                     title: qsTrId("id-units-page")
                     iconName: "ios-units-outline"
                     onClicked: layerStack.push(unitsLayer)
                 }
-                ListItem {
+                CompactListItem {
                     //% "Language"
                     title: qsTrId("id-language-page")
                     iconName: "ios-earth-outline"
                     onClicked: layerStack.push(languageLayer)
                 }
-                ListItem {
+                CompactListItem {
                     //% "Time zone"
                     title: qsTrId("id-timezone-page")
                     iconName: "ios-globe-outline"
                     onClicked: layerStack.push(timezoneLayer)
                 }
-                ListItem {
+                CompactListItem {
                     //% "Bluetooth"
                     title: qsTrId("id-bluetooth-page")
                     iconName: "ios-bluetooth-outline"
                     onClicked: layerStack.push(bluetoothLayer)
                 }
-                ListItem {
+                CompactListItem {
                     //% "USB"
                     title: qsTrId("id-usb-page")
                     iconName: "ios-usb"
                     onClicked: layerStack.push(usbLayer)
                 }
-                ListItem {
+                CompactListItem {
                     //% "Power"
                     title: qsTrId("id-power-page")
                     iconName: "ios-power-outline"
                     onClicked: layerStack.push(powerLayer)
                 }
-                ListItem {
+                CompactListItem {
                     //% "Power Manager"
                     title: qsTrId("id-power-manager-page")
-                    iconName: "ios-battery-full-outline"
+                    iconName: "ios-battery-full"
                     onClicked: layerStack.push(powerManagerLayer)
                 }
-                ListItem {
+                CompactListItem {
                     //% "About"
                     title: qsTrId("id-about-page")
                     iconName: "ios-help-circle-outline"

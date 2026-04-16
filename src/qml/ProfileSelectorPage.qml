@@ -56,24 +56,16 @@ Item {
             }, handleError)
         }
 
-        Component.onCompleted: {
+        function activeProfileChanged(newId) {
+            activeProfileId = newId
+        }
+
+        function profilesChanged() {
             loadData()
         }
 
-        onServiceAvailableChanged: {
-            if (available) {
-                loadData()
-            }
-        }
-    }
-
-    Connections {
-        target: powerd
-        onActiveProfileChanged: {
-            activeProfileId = id
-        }
-        onProfilesChanged: {
-            powerd.loadData()
+        Component.onCompleted: {
+            loadData()
         }
     }
 
@@ -97,35 +89,17 @@ Item {
                 height: Dims.h(15)
                 width: parent.width
                 title: model.name
-                iconName: model.icon || "ios-battery-outline"
-
-                Rectangle {
-                    anchors.fill: parent
-                    color: "#FFFFFF"
-                    opacity: isActive ? 0.1 : 0
-                    z: -1
-                }
-
-                Label {
-                    anchors.right: parent.right
-                    anchors.rightMargin: Dims.w(8)
-                    anchors.verticalCenter: parent.verticalCenter
-                    text: "✓"
-                    font.pixelSize: Dims.l(8)
-                    visible: isActive
-                }
+                iconName: model.icon || "ios-battery-full"
 
                 onClicked: {
-                    if (!isActive) {
-                        powerd.typedCall("SetActiveProfile", [model.id], function(success) {
+                    powerd.typedCall("SetActiveProfile",
+                        [{"type": "s", "value": model.id}],
+                        function(success) {
                             if (success) {
                                 activeProfileId = model.id
                                 layerStack.pop(root)
                             }
                         }, powerd.handleError)
-                    } else {
-                        layerStack.pop(root)
-                    }
                 }
             }
 

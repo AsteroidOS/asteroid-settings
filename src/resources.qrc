@@ -24,5 +24,8 @@
         <file>qml/ProfileListPage.qml</file>
         <file>qml/ProfileEditPage.qml</file>
         <file>qml/AutomationEditPage.qml</file>
+        <file>qml/FillBarRow.qml</file>
+        <file>qml/CompactListItem.qml</file>
+        <file>qml/BatteryHistoryGraph.qml</file>
     </qresource>
 </RCC>

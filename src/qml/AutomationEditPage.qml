@@ -39,7 +39,7 @@ Item {
         }
 
         function loadProfile() {
-            typedCall("GetProfile", [profileId], function(result) {
+            typedCall("GetProfile", [{"type": "s", "value": profileId}], function(result) {
                 var p = JSON.parse(result)
                 profile = p
                 automation = p.automation || {
@@ -59,11 +59,13 @@ Item {
         profile.automation = automation
         var profileJson = JSON.stringify(profile)
         
-        powerd.typedCall("UpdateProfile", [profileJson], function(success) {
-            if (success) {
-                layerStack.pop(root)
-            }
-        }, powerd.handleError)
+        powerd.typedCall("UpdateProfile",
+            [{"type": "s", "value": profileJson}],
+            function(success) {
+                if (success) {
+                    layerStack.pop(root)
+                }
+            }, powerd.handleError)
     }
 
     Flickable {
@@ -116,22 +118,27 @@ Item {
                     spacing: 0
 
                     ListItem {
+                        id: batteryRuleItem
                         height: Dims.h(15)
                         width: parent.width
                         title: modelData.threshold + "% → " + modelData.switch_to_profile
-                        iconName: "ios-battery-charging-outline"
+                        iconName: "ios-battery-charging"
+                    }
 
+                    MouseArea {
+                        anchors.fill: batteryRuleItem
                         onPressAndHold: {
-                            deleteRuleRemorse.execute(this, "", function() {
+                            deleteRuleRemorse.execute(batteryRuleItem, "", function() {
                                 var rules = automation.battery_rules.slice()
                                 rules.splice(index, 1)
                                 automation.battery_rules = rules
                             })
                         }
+                        onClicked: batteryRuleItem.clicked()
+                    }
 
-                        RemorseTimer {
-                            id: deleteRuleRemorse
-                        }
+                    RemorseTimer {
+                        id: deleteRuleRemorse
                     }
 
                     RowSeparator {}
@@ -187,22 +194,27 @@ Item {
                     spacing: 0
 
                     ListItem {
+                        id: timeRuleItem
                         height: Dims.h(15)
                         width: parent.width
                         title: modelData.start + " - " + modelData.end + " → " + modelData.switch_to_profile
                         iconName: "ios-time-outline"
+                    }
 
+                    MouseArea {
+                        anchors.fill: timeRuleItem
                         onPressAndHold: {
-                            deleteTimeRuleRemorse.execute(this, "", function() {
+                            deleteTimeRuleRemorse.execute(timeRuleItem, "", function() {
                                 var rules = automation.time_rules.slice()
                                 rules.splice(index, 1)
                                 automation.time_rules = rules
                             })
                         }
+                        onClicked: timeRuleItem.clicked()
+                    }
 
-                        RemorseTimer {
-                            id: deleteTimeRuleRemorse
-                        }
+                    RemorseTimer {
+                        id: deleteTimeRuleRemorse
                     }
 
                     RowSeparator {}

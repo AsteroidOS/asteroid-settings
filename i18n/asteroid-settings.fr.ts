@@ -376,6 +376,261 @@
         <source>Settings</source>
         <translation type="unfinished">Paramètres</translation>
     </message>
+    <message id="id-power-manager-page">
+        <location filename="../src/qml/main.qml" line="176"/>
+        <source>Power Manager</source>
+        <translation>Gestionnaire d&apos;énergie</translation>
+    </message>
+    <message id="id-active-profile">
+        <location filename="../src/qml/PowerManagerPage.qml" line="170"/>
+        <source>Active Profile</source>
+        <translation>Profil actif</translation>
+    </message>
+    <message id="id-service-unavailable">
+        <location filename="../src/qml/PowerManagerPage.qml" line="189"/>
+        <source>Service unavailable</source>
+        <translation>Service indisponible</translation>
+    </message>
+    <message id="id-quick-switch">
+        <location filename="../src/qml/PowerManagerPage.qml" line="241"/>
+        <source>Quick Switch</source>
+        <translation>Changement rapide</translation>
+    </message>
+    <message id="id-all-profiles">
+        <location filename="../src/qml/PowerManagerPage.qml" line="295"/>
+        <source>All Profiles</source>
+        <translation>Tous les profils</translation>
+    </message>
+    <message id="id-edit-profiles">
+        <location filename="../src/qml/PowerManagerPage.qml" line="306"/>
+        <source>Edit Profiles</source>
+        <translation>Modifier les profils</translation>
+    </message>
+    <message id="id-automation">
+        <location filename="../src/qml/PowerManagerPage.qml" line="318"/>
+        <source>Automation</source>
+        <translation>Automatisation</translation>
+    </message>
+    <message id="id-no-profiles">
+        <location filename="../src/qml/ProfileSelectorPage.qml" line="145"/>
+        <source>No profiles available</source>
+        <translation>Aucun profil disponible</translation>
+    </message>
+    <message id="id-service-may-be-unavailable">
+        <location filename="../src/qml/ProfileSelectorPage.qml" line="154"/>
+        <source>Service may be unavailable</source>
+        <translation>Le service peut être indisponible</translation>
+    </message>
+    <message id="id-select-profile">
+        <location filename="../src/qml/ProfileSelectorPage.qml" line="165"/>
+        <source>Select Profile</source>
+        <translation>Sélectionner le profil</translation>
+    </message>
+    <message id="id-add-new-profile">
+        <location filename="../src/qml/ProfileListPage.qml" line="152"/>
+        <source>Add New Profile</source>
+        <translation>Ajouter un nouveau profil</translation>
+    </message>
+    <message id="id-profiles">
+        <location filename="../src/qml/ProfileListPage.qml" line="202"/>
+        <source>Profiles</source>
+        <translation>Profils</translation>
+    </message>
+    <message id="id-workout">
+        <location filename="../src/qml/ProfileEditPage.qml" line="36"/>
+        <source>Workout</source>
+        <translation>Entraînement</translation>
+    </message>
+    <message id="id-sleep-only">
+        <location filename="../src/qml/ProfileEditPage.qml" line="37"/>
+        <source>Sleep only</source>
+        <translation>Sommeil uniquement</translation>
+    </message>
+    <message id="id-always">
+        <location filename="../src/qml/ProfileEditPage.qml" line="38"/>
+        <source>Always</source>
+        <translation>Toujours</translation>
+    </message>
+    <message id="id-periodic">
+        <location filename="../src/qml/ProfileEditPage.qml" line="39"/>
+        <source>Periodic</source>
+        <translation>Périodique</translation>
+    </message>
+    <message id="id-continuous">
+        <location filename="../src/qml/ProfileEditPage.qml" line="40"/>
+        <source>Continuous</source>
+        <translation>Continu</translation>
+    </message>
+    <message id="id-on-demand">
+        <location filename="../src/qml/ProfileEditPage.qml" line="41"/>
+        <source>On demand</source>
+        <translation>À la demande</translation>
+    </message>
+    <message id="id-new-profile">
+        <location filename="../src/qml/ProfileEditPage.qml" line="61"/>
+        <source>New Profile</source>
+        <translation>Nouveau profil</translation>
+    </message>
+    <message id="id-loading">
+        <location filename="../src/qml/ProfileEditPage.qml" line="197"/>
+        <source>Loading...</source>
+        <translation>Chargement...</translation>
+    </message>
+    <message id="id-sensors">
+        <location filename="../src/qml/ProfileEditPage.qml" line="228"/>
+        <source>Sensors</source>
+        <translation>Capteurs</translation>
+    </message>
+    <message id="id-accelerometer">
+        <location filename="../src/qml/ProfileEditPage.qml" line="239"/>
+        <source>Accelerometer</source>
+        <translation>Accéléromètre</translation>
+    </message>
+    <message id="id-gyroscope">
+        <location filename="../src/qml/ProfileEditPage.qml" line="253"/>
+        <source>Gyroscope</source>
+        <translation>Gyroscope</translation>
+    </message>
+    <message id="id-heart-rate">
+        <location filename="../src/qml/ProfileEditPage.qml" line="267"/>
+        <source>Heart Rate</source>
+        <translation>Fréquence cardiaque</translation>
+    </message>
+    <message id="id-hrv">
+        <location filename="../src/qml/ProfileEditPage.qml" line="281"/>
+        <source>HRV</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-spo2">
+        <location filename="../src/qml/ProfileEditPage.qml" line="295"/>
+        <source>SpO2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-barometer">
+        <location filename="../src/qml/ProfileEditPage.qml" line="309"/>
+        <source>Barometer</source>
+        <translation>Baromètre</translation>
+    </message>
+    <message id="id-compass">
+        <location filename="../src/qml/ProfileEditPage.qml" line="323"/>
+        <source>Compass</source>
+        <translation>Boussole</translation>
+    </message>
+    <message id="id-ambient-light">
+        <location filename="../src/qml/ProfileEditPage.qml" line="337"/>
+        <source>Ambient Light</source>
+        <translation>Lumière ambiante</translation>
+    </message>
+    <message id="id-gps">
+        <location filename="../src/qml/ProfileEditPage.qml" line="351"/>
+        <source>GPS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-radios">
+        <location filename="../src/qml/ProfileEditPage.qml" line="372"/>
+        <source>Radios</source>
+        <translation>Communications</translation>
+    </message>
+    <message id="id-bluetooth">
+        <location filename="../src/qml/ProfileEditPage.qml" line="383"/>
+        <source>Bluetooth</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-ble-sync">
+        <location filename="../src/qml/ProfileEditPage.qml" line="397"/>
+        <source>BLE Sync</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-ble-interval">
+        <location filename="../src/qml/ProfileEditPage.qml" line="414"/>
+        <source>BLE Interval</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-ble-disable-sleep">
+        <location filename="../src/qml/ProfileEditPage.qml" line="431"/>
+        <source>Disable during sleep</source>
+        <translation>Désactiver pendant le sommeil</translation>
+    </message>
+    <message id="id-wifi">
+        <location filename="../src/qml/ProfileEditPage.qml" line="446"/>
+        <source>Wi-Fi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-wifi-sync">
+        <location filename="../src/qml/ProfileEditPage.qml" line="460"/>
+        <source>Wi-Fi Sync</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-system">
+        <location filename="../src/qml/ProfileEditPage.qml" line="483"/>
+        <source>System</source>
+        <translation>Système</translation>
+    </message>
+    <message id="id-background-sync">
+        <location filename="../src/qml/ProfileEditPage.qml" line="520"/>
+        <source>Background Sync</source>
+        <translation>Synchronisation en arrière-plan</translation>
+    </message>
+    <message id="id-battery-time-rules">
+        <location filename="../src/qml/ProfileEditPage.qml" line="552"/>
+        <source>Battery / Time Rules</source>
+        <translation>Règles batterie et horaire</translation>
+    </message>
+    <message id="id-save">
+        <location filename="../src/qml/ProfileEditPage.qml" line="584"/>
+        <source>Save</source>
+        <translation>Enregistrer</translation>
+    </message>
+    <message id="id-delete-profile">
+        <location filename="../src/qml/ProfileEditPage.qml" line="611"/>
+        <source>Delete Profile</source>
+        <translation>Supprimer le profil</translation>
+    </message>
+    <message id="id-battery-rules">
+        <location filename="../src/qml/AutomationEditPage.qml" line="92"/>
+        <source>Battery Rules</source>
+        <translation>Règles de batterie</translation>
+    </message>
+    <message id="id-battery-rules-desc">
+        <location filename="../src/qml/AutomationEditPage.qml" line="103"/>
+        <source>Switch profile when battery reaches threshold</source>
+        <translation>Changer le profil lorsque la batterie atteint le seuil</translation>
+    </message>
+    <message id="id-add-battery-rule">
+        <location filename="../src/qml/AutomationEditPage.qml" line="144"/>
+        <source>Add Battery Rule</source>
+        <translation>Ajouter une règle de batterie</translation>
+    </message>
+    <message id="id-time-rules">
+        <location filename="../src/qml/AutomationEditPage.qml" line="163"/>
+        <source>Time Rules</source>
+        <translation>Règles horaires</translation>
+    </message>
+    <message id="id-time-rules-desc">
+        <location filename="../src/qml/AutomationEditPage.qml" line="174"/>
+        <source>Switch profile during time window</source>
+        <translation>Changer le profil pendant une plage horaire</translation>
+    </message>
+    <message id="id-add-time-rule">
+        <location filename="../src/qml/AutomationEditPage.qml" line="215"/>
+        <source>Add Time Rule</source>
+        <translation>Ajouter une règle horaire</translation>
+    </message>
+    <message id="id-workout-profiles">
+        <location filename="../src/qml/AutomationEditPage.qml" line="234"/>
+        <source>Workout Profiles</source>
+        <translation>Profils d&apos;entraînement</translation>
+    </message>
+    <message id="id-workout-profiles-desc">
+        <location filename="../src/qml/AutomationEditPage.qml" line="245"/>
+        <source>Assign profile for each workout type</source>
+        <translation>Attribuer un profil pour chaque type d&apos;entraînement</translation>
+    </message>
+    <message id="id-workout-configure-in-app">
+        <location filename="../src/qml/AutomationEditPage.qml" line="256"/>
+        <source>Configure in Workout app settings</source>
+        <translation>Configurer dans les paramètres de l&apos;app Entraînement</translation>
+    </message>
 </context>
 <context>
     <name>AboutPage</name>

@@ -321,6 +321,51 @@
         <source>Automation</source>
         <translation type="unfinished"></translation>
     </message>
+    <message id="id-battery-health">
+        <location filename="../src/qml/PowerManagerPage.qml" line="477"/>
+        <source>Battery Health</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-charge-cycles">
+        <location filename="../src/qml/PowerManagerPage.qml" line="547"/>
+        <source>%1 charge cycles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-health-accuracy-high">
+        <location filename="../src/qml/PowerManagerPage.qml" line="564"/>
+        <source>Accuracy: High (%1 samples)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-health-accuracy-medium">
+        <location filename="../src/qml/PowerManagerPage.qml" line="567"/>
+        <source>Accuracy: Medium (%1 samples)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-health-accuracy-low">
+        <location filename="../src/qml/PowerManagerPage.qml" line="570"/>
+        <source>Accuracy: Improving...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-health-excellent">
+        <location filename="../src/qml/PowerManagerPage.qml" line="588"/>
+        <source>Battery is in excellent condition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-health-good">
+        <location filename="../src/qml/PowerManagerPage.qml" line="591"/>
+        <source>Battery is in good condition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-health-worn">
+        <location filename="../src/qml/PowerManagerPage.qml" line="594"/>
+        <source>Battery is showing wear — consider replacement</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-health-degraded">
+        <location filename="../src/qml/PowerManagerPage.qml" line="596"/>
+        <source>Battery is significantly degraded</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="id-no-profiles">
         <location filename="../src/qml/ProfileSelectorPage.qml" line="145"/>
         <source>No profiles available</source>

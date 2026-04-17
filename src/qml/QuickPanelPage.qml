@@ -46,11 +46,11 @@ Item {
             "hapticsToggle",
             "wifiToggle",
             "soundToggle",
-            "cinemaToggle",
-            "aodToggle",
             "airplaneModeToggle",
+            "aodToggle",
             "powerOffToggle",
             "rebootToggle",
+            "cinemaToggle",
             "musicButton",
             "flashlightButton"
         ]
@@ -67,7 +67,7 @@ Item {
             "hapticsToggle": true,
             "wifiToggle": true,
             "soundToggle": true,
-            "cinemaToggle": true,
+            "cinemaToggle": false,
             "aodToggle": true,
             "powerOffToggle": true,
             "rebootToggle": true,

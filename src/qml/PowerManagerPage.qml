@@ -34,6 +34,14 @@ Item {
     property bool serviceAvailable: false
     property bool isEmulator: false
 
+    // Battery health properties
+    property int healthPercent: -1
+    property int learnedCapacityMah: -1
+    property int designCapacityMah: -1
+    property int cycleCount: 0
+    property string healthConfidence: "unavailable"
+    property int healthSampleCount: 0
+
     ListModel {
         id: profilesModel
     }
@@ -82,6 +90,22 @@ Item {
                 if (state.battery) {
                     batteryLevel = state.battery.level || 0
                     batteryCharging = state.battery.charging || false
+                    // Health data included in current state
+                    if (state.battery.health_percent !== undefined) {
+                        healthPercent = state.battery.health_percent
+                    }
+                    if (state.battery.learned_capacity_mah !== undefined) {
+                        learnedCapacityMah = state.battery.learned_capacity_mah
+                    }
+                    if (state.battery.design_capacity_mah !== undefined) {
+                        designCapacityMah = state.battery.design_capacity_mah
+                    }
+                    if (state.battery.cycle_count !== undefined) {
+                        cycleCount = state.battery.cycle_count
+                    }
+                    if (state.battery.health_confidence !== undefined) {
+                        healthConfidence = state.battery.health_confidence
+                    }
                 }
             }, handleError)
             
@@ -95,6 +119,43 @@ Item {
                     drainRate = ""
                 }
             }, handleError)
+        }
+
+        function loadBatteryHealth() {
+            typedCall("GetBatteryHealth", [], function(result) {
+                var health = JSON.parse(result)
+                if (health.health_percent !== undefined)
+                    healthPercent = health.health_percent
+                if (health.learned_capacity_mah !== undefined)
+                    learnedCapacityMah = health.learned_capacity_mah
+                if (health.design_capacity_mah !== undefined)
+                    designCapacityMah = health.design_capacity_mah
+                if (health.cycle_count !== undefined)
+                    cycleCount = health.cycle_count
+                if (health.confidence !== undefined)
+                    healthConfidence = health.confidence
+                if (health.sample_count !== undefined)
+                    healthSampleCount = health.sample_count
+
+                // On emulator with no real fuel gauge, generate demo data
+                if (isEmulator && healthPercent <= 0) {
+                    healthPercent = 87
+                    learnedCapacityMah = 361
+                    designCapacityMah = 415
+                    cycleCount = 142
+                    healthConfidence = "high"
+                    healthSampleCount = 45
+                }
+            }, function() {
+                if (isEmulator) {
+                    healthPercent = 87
+                    learnedCapacityMah = 361
+                    designCapacityMah = 415
+                    cycleCount = 142
+                    healthConfidence = "high"
+                    healthSampleCount = 45
+                }
+            })
         }
 
         function loadBatteryHistory() {
@@ -130,12 +191,20 @@ Item {
             loadBatteryHistory()
         }
 
+        function batteryHealthChanged(newHealth, newLearned, newDesign) {
+            healthPercent = newHealth
+            learnedCapacityMah = newLearned
+            designCapacityMah = newDesign
+            loadBatteryHealth()
+        }
+
         Component.onCompleted: {
             detectEmulator()
             loadProfiles()
             loadActiveProfile()
             loadBatteryState()
             loadBatteryHistory()
+            loadBatteryHealth()
         }
     }
 
@@ -152,6 +221,10 @@ Item {
                     // Re-try history now that we know we're on emulator
                     if (batteryHistory.length === 0) {
                         powerd.loadBatteryHistory()
+                    }
+                    // Load demo health data on emulator
+                    if (healthPercent <= 0) {
+                        powerd.loadBatteryHealth()
                     }
                 }
             }
@@ -376,6 +449,158 @@ Item {
                     anchors.verticalCenter: parent.verticalCenter
                     visible: batteryCharging
                 }
+            }
+
+            // --- Battery Health Section ---
+            Item {
+                width: parent.width
+                height: Dims.h(3)
+                visible: healthPercent > 0 || isEmulator
+            }
+
+            RowSeparator {
+                visible: healthPercent > 0 || isEmulator
+            }
+
+            Column {
+                id: healthSection
+                width: parent.width
+                spacing: Dims.h(1)
+                visible: healthPercent > 0 || isEmulator
+
+                Item { width: 1; height: Dims.h(1) }
+
+                Label {
+                    width: parent.width
+                    horizontalAlignment: Text.AlignHCenter
+                    //% "Battery Health"
+                    text: qsTrId("id-battery-health")
+                    font.pixelSize: Dims.l(5)
+                    opacity: 0.6
+                }
+
+                // Health bar
+                Item {
+                    width: parent.width
+                    height: Dims.h(5)
+
+                    Rectangle {
+                        id: healthBarTrack
+                        anchors.centerIn: parent
+                        width: parent.width * 0.70
+                        height: Dims.h(1.5)
+                        radius: height / 2
+                        color: "#333333"
+
+                        Rectangle {
+                            id: healthBarFill
+                            anchors.left: parent.left
+                            anchors.top: parent.top
+                            anchors.bottom: parent.bottom
+                            width: parent.width * Math.max(0, Math.min(1, healthPercent / 100.0))
+                            radius: parent.radius
+                            color: healthPercent >= 80 ? "#4CAF50" :
+                                   healthPercent >= 60 ? "#FF9800" :
+                                   healthPercent >= 40 ? "#FF5722" : "#F44336"
+
+                            Behavior on width {
+                                NumberAnimation { duration: 400; easing.type: Easing.OutQuad }
+                            }
+                            Behavior on color {
+                                ColorAnimation { duration: 300 }
+                            }
+                        }
+                    }
+                }
+
+                // Health percentage + capacity
+                Row {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    spacing: Dims.w(2)
+
+                    Label {
+                        text: healthPercent > 0 ? healthPercent + "%" : "--"
+                        font.pixelSize: Dims.l(7)
+                        font.styleName: "SemiCondensed Light"
+                        color: healthPercent >= 80 ? "#4CAF50" :
+                               healthPercent >= 60 ? "#FF9800" :
+                               healthPercent >= 40 ? "#FF5722" : "#F44336"
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
+
+                    Column {
+                        anchors.verticalCenter: parent.verticalCenter
+                        Label {
+                            text: {
+                                if (learnedCapacityMah > 0 && designCapacityMah > 0)
+                                    return learnedCapacityMah + " / " + designCapacityMah + " mAh"
+                                return ""
+                            }
+                            font.pixelSize: Dims.l(3.5)
+                            opacity: 0.7
+                            visible: text !== ""
+                        }
+                        Label {
+                            text: {
+                                if (cycleCount > 0)
+                                    //% "%1 charge cycles"
+                                    return qsTrId("id-charge-cycles").arg(cycleCount)
+                                return ""
+                            }
+                            font.pixelSize: Dims.l(3)
+                            opacity: 0.5
+                            visible: text !== ""
+                        }
+                    }
+                }
+
+                // Confidence indicator
+                Label {
+                    width: parent.width
+                    horizontalAlignment: Text.AlignHCenter
+                    text: {
+                        if (healthConfidence === "high")
+                            //% "Accuracy: High (%1 samples)"
+                            return qsTrId("id-health-accuracy-high").arg(healthSampleCount)
+                        if (healthConfidence === "medium")
+                            //% "Accuracy: Medium (%1 samples)"
+                            return qsTrId("id-health-accuracy-medium").arg(healthSampleCount)
+                        if (healthConfidence === "low")
+                            //% "Accuracy: Improving..."
+                            return qsTrId("id-health-accuracy-low")
+                        return ""
+                    }
+                    font.pixelSize: Dims.l(3)
+                    opacity: 0.4
+                    visible: text !== "" && healthPercent > 0
+                }
+
+                // Health status text
+                Label {
+                    width: parent.width * 0.85
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    wrapMode: Text.WordWrap
+                    text: {
+                        if (healthPercent <= 0) return ""
+                        if (healthPercent >= 90)
+                            //% "Battery is in excellent condition"
+                            return qsTrId("id-health-excellent")
+                        if (healthPercent >= 80)
+                            //% "Battery is in good condition"
+                            return qsTrId("id-health-good")
+                        if (healthPercent >= 60)
+                            //% "Battery is showing wear — consider replacement"
+                            return qsTrId("id-health-worn")
+                        //% "Battery is significantly degraded"
+                        return qsTrId("id-health-degraded")
+                    }
+                    font.pixelSize: Dims.l(3)
+                    opacity: 0.5
+                    visible: text !== ""
+                }
+
+                Item { width: 1; height: Dims.h(1) }
             }
 
             Item {

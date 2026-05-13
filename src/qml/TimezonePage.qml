@@ -77,7 +77,7 @@ Item {
         id: timezoneModel
         Component.onCompleted: {
             if (!root.selectedTz) {
-                root.selectedTz = timedateDbus.getProperty("Timezone");
+                root.selectedTz = timedateDbus.getProperty("Timezone").toString();
             };
             if (root.timezoneList.length < 1) {
                 timedateDbus.call("ListTimezones", undefined, function(m) {

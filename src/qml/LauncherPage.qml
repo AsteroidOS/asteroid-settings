@@ -46,7 +46,7 @@ Item {
     }
 
     GridView {
-        id: grid
+        id: previewGrid
         cellWidth: Dims.w(50)
         cellHeight: Dims.h(40)
         anchors.fill: parent
@@ -60,7 +60,7 @@ Item {
                 while (i < folderModel.count){
                     var fileName = folderModel.get(i, "fileName")
                     if(appLauncherSource.value == folderModel.folder + "/" + fileName)
-                        grid.positionViewAtIndex(i, GridView.Center)
+                        previewGrid.positionViewAtIndex(i, GridView.Center)
 
                     i = i+1
                 }
@@ -138,16 +138,33 @@ Item {
             property string changesObserver: ""
         }
 
+        QtObject {
+            id: grid
+            // Stub for PanelsGrid interface; real instance provided by the live launcher scope chain.
+            property int currentVerticalPos: 0
+            property int currentHorizontalPos: 0
+            property real contentY: 0
+            property real panelHeight: 0
+            property real height: 0
+            function changeAllowedDirections() {}
+        }
+
+        QtObject {
+            id: appLauncher
+            // Stub for launcher application object; real instance provided by the live launcher scope chain.
+            property bool fakePressed: false
+        }
+
         delegate: Component {
             id: fileDelegate
             Item {
-                width: grid.cellWidth
-                height: grid.cellHeight
+                width: previewGrid.cellWidth
+                height: previewGrid.cellHeight
                 Loader {
                     id: preview
                     anchors.centerIn: parent
-                    width: Math.min(grid.cellWidth, grid.cellHeight)
-                    height: Math.min(grid.cellWidth, grid.cellHeight)
+                    width: Math.min(previewGrid.cellWidth, previewGrid.cellHeight)
+                    height: Math.min(previewGrid.cellWidth, previewGrid.cellHeight)
                     source: folderModel.folder + "/" + fileName
                     asynchronous: true
                 }

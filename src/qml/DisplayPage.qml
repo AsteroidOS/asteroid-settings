@@ -27,6 +27,8 @@ import Nemo.Configuration
 import Nemo.Mce
 
 Item {
+    property int depth
+    property var pop
     TapToWake { id: tapToWake }
     TiltToWake { id: tiltToWake }
     DisplaySettings { id: displaySettings }

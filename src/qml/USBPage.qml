@@ -21,6 +21,7 @@ import Nemo.DBus
 import org.asteroid.controls
 
 Item {
+    property int depth
     id: root
     property var pop
 

@@ -25,6 +25,8 @@ import Nemo.Configuration
 import Nemo.Time
 
 Item {
+    property int depth
+    property var pop
 
     property alias displayAmbient: compositor.displayAmbient
     property string assetPath: "file:///usr/share/asteroid-launcher/"

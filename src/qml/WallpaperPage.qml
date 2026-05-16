@@ -26,6 +26,8 @@ import org.asteroid.utils
 
 
 Item {
+    property int depth
+    property var pop
 
     property string assetPath: "file:///usr/share/asteroid-launcher/wallpapers/"
 

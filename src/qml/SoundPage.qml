@@ -24,6 +24,8 @@ import Nemo.Configuration
 
 
 Item {
+    property int depth
+    property var pop
     VolumeControl { id: volumeControl }
 
     ConfigurationValue {

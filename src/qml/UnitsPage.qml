@@ -21,6 +21,8 @@ import Nemo.Configuration
 import org.asteroid.controls
 
 Item {
+    property int depth
+    property var pop
 
     ConfigurationValue {
         id: use12H

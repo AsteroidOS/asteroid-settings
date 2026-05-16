@@ -28,6 +28,8 @@ import Nemo.Configuration
 import Nemo.Mce
 
 Item {
+    property int depth
+    property var pop
     ConfigurationValue {
         id: nightstandBrightness
         key: "/desktop/asteroid/nightstand/brightness"

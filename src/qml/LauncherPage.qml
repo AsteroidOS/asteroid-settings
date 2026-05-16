@@ -24,6 +24,8 @@ import org.asteroid.controls
 import QtQml.Models
 
 Item {
+    property int depth
+    property var pop
     property alias displayAmbient: compositor.displayAmbient
     property bool fakePressed:     false
     property bool toTopAllowed:    false

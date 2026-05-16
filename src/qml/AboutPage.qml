@@ -23,6 +23,8 @@ import org.asteroid.settings
 import org.nemomobile.systemsettings
 
 Flickable {
+    property int depth
+    property var pop
     AboutSettings {
         id: about
     }

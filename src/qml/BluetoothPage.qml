@@ -21,6 +21,8 @@ import org.asteroid.controls
 import org.asteroid.utils
 
 Item {
+    property int depth
+    property var pop
     BluetoothStatus { id: btStatus }
 
     StatusPage {

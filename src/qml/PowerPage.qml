@@ -22,6 +22,8 @@ import org.asteroid.controls
 import Nemo.DBus
 
 Item {
+    property int depth
+    property var pop
 
     property int pendingIndex: -1
 

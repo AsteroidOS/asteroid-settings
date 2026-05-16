@@ -22,6 +22,8 @@ import Nemo.Configuration
 import Nemo.Mce
 
 Item {
+    property int depth
+    property var pop
     id: quickPanelPage
 
     // Battery status components for the ValueMeter

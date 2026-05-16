@@ -21,6 +21,7 @@ import org.asteroid.controls
 import org.nemomobile.systemsettings
 
 Item {
+    property int depth
     id: root
     property var pop
 

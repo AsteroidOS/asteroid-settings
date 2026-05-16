@@ -24,6 +24,7 @@ import org.asteroid.controls
 import Nemo.DBus
 
 Item {
+    property int depth
     id: root
     property var pop
     property string selectedTz: ""

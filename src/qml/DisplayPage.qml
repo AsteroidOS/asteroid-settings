@@ -120,6 +120,8 @@ Item {
                 text: qsTrId("id-always-on-display")
                 checked: alwaysOnDisplay.value
                 onCheckedChanged: {
+                    if (alwaysOnDisplay.value === checked)
+                        return
                     alwaysOnDisplay.value = checked
                     // alter displaySettings unless NightStand mode is active
                     // and we are on a charger
@@ -139,7 +141,7 @@ Item {
                 text: qsTrId("id-burn-in-protection")
                 valueArray: bipLabels
                 currentValue: bipLabels[bipValues.indexOf(bipLevel.value)] || bipLabels[0]
-                onValueChanged: bipLevel.value = bipValues[bipLabels.indexOf(value)]
+                onValueChanged: (value) => bipLevel.value = bipValues[bipLabels.indexOf(value)]
             }
 
             RowSeparator {}

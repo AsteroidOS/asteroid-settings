@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
     qmlRegisterType<TiltToWake>("org.asteroid.settings", 1, 0, "TiltToWake");
     qmlRegisterType<TapToWake>("org.asteroid.settings", 1, 0, "TapToWake");
     qmlRegisterType<SysInfo>("org.asteroid.settings", 1, 0, "SysInfo");
-    view->setSource(QUrl("qrc:/qml/main.qml"));
+    view->setSource(QUrl("qrc:/Settings/qml/main.qml"));
     view->rootContext()->setContextProperty("qtVersion", QString(qVersion()));
     view->rootContext()->setContextProperty("kernelVersion", QString(buf.release));
     view->resize(app->primaryScreen()->size());

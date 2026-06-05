@@ -26,7 +26,28 @@ set(
 	volumecontrol.h
 )
 
-add_library(asteroid-settings ${SRC} ${HEADERS} resources.qrc)
+add_library(asteroid-settings ${SRC} ${HEADERS})
+asteroid_app_qml_module(asteroid-settings
+	qml/main.qml
+	qml/LanguagePage.qml
+	qml/TimePage.qml
+	qml/DatePage.qml
+	qml/TimezonePage.qml
+	qml/BluetoothPage.qml
+	qml/DisplayPage.qml
+	qml/SoundPage.qml
+	qml/NightstandPage.qml
+	qml/NightstandWatchfacePage.qml
+	qml/UnitsPage.qml
+	qml/QuickPanelPage.qml
+	qml/WallpaperPage.qml
+	qml/WatchfacePage.qml
+	qml/WatchfaceSelector.qml
+	qml/LauncherPage.qml
+	qml/USBPage.qml
+	qml/PowerPage.qml
+	qml/AboutPage.qml
+)
 message(${CMAKE_CURRENT_BINARY_DIR})
 target_include_directories(
 	asteroid-settings

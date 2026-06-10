@@ -156,6 +156,9 @@ Item {
                     text: qsTrId("id-always-on-display")
                     checked: nightstandAlwaysOnDisplay.value
                     onCheckedChanged: {
+                        if (nightstandAlwaysOnDisplay.value === checked)
+                            return
+                        nightstandAlwaysOnDisplay.value = checked
                         // only alter displaySettings if Nightstand mode is
                         // active and we're currently on a charger
                         if (nightstandEnabled.value && mceChargerType.type != MceChargerType.None) {

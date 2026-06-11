@@ -22,7 +22,7 @@ import QtQuick.Layouts
 import org.asteroid.controls
 import org.asteroid.utils
 import org.asteroid.settings
-import org.nemomobile.systemsettings
+import org.asteroid.settings
 import Nemo.Configuration
 import Nemo.Mce
 

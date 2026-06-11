@@ -21,7 +21,7 @@ import org.asteroid.controls
 import org.asteroid.utils
 import Nemo.Time
 import Nemo.Configuration
-import org.nemomobile.systemsettings
+import org.asteroid.settings
 
 Item {
     property int depth

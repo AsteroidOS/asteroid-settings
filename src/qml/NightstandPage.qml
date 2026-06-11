@@ -23,7 +23,6 @@ import QtQuick.Layouts
 import org.asteroid.controls
 import org.asteroid.utils
 import org.asteroid.settings
-import org.nemomobile.systemsettings as NemoSystemSettings
 import Nemo.Configuration
 import Nemo.Mce
 
@@ -60,7 +59,7 @@ Item {
         defaultValue: true
     }
 
-    NemoSystemSettings.DisplaySettings {
+    DisplaySettings {
         id: displaySettings
     }
 

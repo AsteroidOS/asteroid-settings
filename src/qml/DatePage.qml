@@ -19,7 +19,7 @@
 import QtQuick
 import org.asteroid.controls
 import org.asteroid.utils
-import org.nemomobile.systemsettings
+import org.asteroid.settings
 
 Item {
     property int depth

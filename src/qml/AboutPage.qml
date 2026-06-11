@@ -20,7 +20,7 @@ import QtQuick
 import org.asteroid.utils
 import org.asteroid.controls
 import org.asteroid.settings
-import org.nemomobile.systemsettings
+import org.asteroid.settings
 
 Flickable {
     property int depth

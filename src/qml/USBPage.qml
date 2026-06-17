@@ -71,7 +71,9 @@ Item {
                     break;
                 }
             }
+            usbModeLV.forceLayout();
             usbModeLV.positionViewAtIndex(idx, ListView.SnapPosition);
+            usbModeLV.currentIndex = idx;
         });
     }
 

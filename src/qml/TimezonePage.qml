@@ -45,12 +45,15 @@ Item {
             }
             // ---- Zulu: flat single-component entry, no city subpage needed
             timezoneModel.append({"visualName": "Zulu", "name": "Zulu", "fullPath": "Zulu", "bottomLevel": true});
+            timezoneSpinner.forceLayout();
             timezoneSpinner.positionViewAtIndex(selectIdx, ListView.SnapPosition);
+            timezoneSpinner.currentIndex = selectIdx;
             return;
         }
         // ---- city level and below: existing dynamic loop unchanged
         var processedRegionList = [];
         var i = 0;
+        var selectIdx = 0;
         timezoneList.forEach(function(region) {
             if(region.includes(regionPath)) {
                 var tzAsList = region.split("/")
@@ -59,19 +62,22 @@ Item {
                         processedRegionList.push(tzAsList[regionLevel]);
                         timezoneModel.append({"visualName": "  " + tzAsList[regionLevel].replace("_"," ") + " ›", "name": tzAsList[regionLevel],"fullPath": region, "bottomLevel": false});
                         if(selectedTz.includes(root.regionPath + tzAsList[regionLevel])) {
-                            timezoneSpinner.positionViewAtIndex(i, ListView.SnapPosition);
+                            selectIdx = i;
                         }
                         i++;
                     }
                 } else {
                     timezoneModel.append({"visualName": tzAsList[regionLevel].replace("_"," "), "name": tzAsList[regionLevel], "fullPath": region, "bottomLevel": true});
                     if(selectedTz.includes(root.regionPath + tzAsList[regionLevel])) {
-                        timezoneSpinner.positionViewAtIndex(i, ListView.SnapPosition);
+                        selectIdx = i;
                     }
                     i++;
                 }
             }
         });
+        timezoneSpinner.forceLayout();
+        timezoneSpinner.positionViewAtIndex(selectIdx, ListView.SnapPosition);
+        timezoneSpinner.currentIndex = selectIdx;
     }
 
     ListModel {

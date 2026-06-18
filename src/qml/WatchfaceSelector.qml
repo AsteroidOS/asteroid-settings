@@ -18,7 +18,7 @@
  */
 
 import QtQuick
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 import Qt.labs.folderlistmodel
 import org.asteroid.controls
 import org.asteroid.utils
@@ -161,14 +161,22 @@ Item {
                     }
 
                     layer.enabled: true
-                    layer.effect: OpacityMask {
-                        maskSource:
-                            Rectangle {
-                                anchors.centerIn: parent
-                                width: Math.min(wallpaperBack.width, wallpaperBack.height)
-                                height: width
-                                radius: maskArea.radius
+                    layer.effect: MultiEffect {
+                        maskEnabled: true
+                        maskSource: ShaderEffectSource {
+                            smooth: true
+                            hideSource: true
+                            sourceItem: Item {
+                                width: maskArea.width
+                                height: maskArea.height
+                                Rectangle {
+                                    anchors.centerIn: parent
+                                    width: Math.min(maskArea.width, maskArea.height)
+                                    height: width
+                                    radius: maskArea.radius
+                                }
                             }
+                        }
                     }
                 }
 
@@ -195,13 +203,13 @@ Item {
                     }
 
                     layer.enabled: visible
-                    layer.effect: DropShadow {
-                        transparentBorder: true
-                        horizontalOffset: 2
-                        verticalOffset: 2
-                        radius: 8.0
-                        samples: 17
-                        color: "#88000000"
+                    layer.effect: MultiEffect {
+                        shadowEnabled: true
+                        shadowColor: "#88000000"
+                        shadowHorizontalOffset: 2
+                        shadowVerticalOffset: 2
+                        shadowBlur: 1.0
+                        blurMax: 8
                     }
                 }
             }

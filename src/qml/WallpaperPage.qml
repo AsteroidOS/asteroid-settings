@@ -18,7 +18,7 @@
  */
 
 import QtQuick
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 import Qt.labs.folderlistmodel
 import Nemo.Configuration
 import org.asteroid.controls
@@ -129,13 +129,13 @@ Item {
                              wallpaperSource.value === folderModel.folder + "/" + fileBaseName + ".qml"
 
                     layer.enabled: visible
-                    layer.effect: DropShadow {
-                        transparentBorder: true
-                        horizontalOffset: 2
-                        verticalOffset: 2
-                        radius: 8.0
-                        samples: 17
-                        color: "#88000000"
+                    layer.effect: MultiEffect {
+                        shadowEnabled: true
+                        shadowColor: "#88000000"
+                        shadowHorizontalOffset: 2
+                        shadowVerticalOffset: 2
+                        shadowBlur: 1.0
+                        blurMax: 8
                     }
                 }
             }

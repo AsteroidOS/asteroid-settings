@@ -21,6 +21,7 @@
 
 import QtQuick
 import org.asteroid.controls
+import org.asteroid.settings
 import Nemo.DBus
 
 Item {
@@ -31,6 +32,8 @@ Item {
     property var timezoneList: []
     property int regionLevel: 0
     property string regionPath: ""
+
+    DateTimeSettings { id: dtSettings }
 
     onTimezoneListChanged: {
         // ---- top level: replace dynamic dedup with curated continent allowlist
@@ -84,7 +87,7 @@ Item {
         id: timezoneModel
         Component.onCompleted: {
             if (!root.selectedTz) {
-                root.selectedTz = timedateDbus.getProperty("Timezone").toString();
+                root.selectedTz = dtSettings.currentTimezone()
             };
             if (root.timezoneList.length < 1) {
                 timedateDbus.call("ListTimezones", undefined, function(m) {

@@ -62,7 +62,7 @@ target_link_libraries(
 		Qt::Qml
 		Qt::Quick
 		Qt::DBus
-		Qt::Multimedia
+		PkgConfig::NGF
 		Asteroid::AsteroidApp6
 )
 

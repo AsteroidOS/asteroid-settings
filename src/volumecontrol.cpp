@@ -65,6 +65,9 @@ VolumeControl::VolumeControl(QObject *parent) :
     m_volIface = new ComMeegoMainVolume2Interface(VOLUME_SERVICE, VOLUME_PATH, con, this);
     setSteps(m_volIface->stepCount(), m_volIface->currentStep());
     connect(m_volIface, &ComMeegoMainVolume2Interface::StepsUpdated, this, &VolumeControl::setSteps);
+
+    m_ngf = new Ngf::Client(this);
+    m_ngf->connect();
 }
 
 void VolumeControl::setSteps(uint stepCount, uint currentStep)
@@ -91,11 +94,8 @@ void VolumeControl::setVolume(int volume)
         emit volumeChanged();
         if (m_volIface->isValid()) {
             m_volIface->setCurrentStep(newVolume);
-            if(effect != NULL)
-                effect->stop();
-            effect = new QMediaPlayer(this);
-            effect->setSource(QUrl::fromLocalFile("/usr/share/sounds/notification.wav"));
-            effect->play();
+            if (m_ngf)
+                m_ngf->play("notification");
         }
     }
 }

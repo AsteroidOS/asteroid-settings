@@ -31,7 +31,7 @@
 #define VOLUMECONTROL_H
 
 #include <QObject>
-#include <QMediaPlayer>
+#include <ngfclient.h>
 
 class ComMeegoMainVolume2Interface;
 
@@ -53,7 +53,7 @@ private:
     ComMeegoMainVolume2Interface *m_volIface = nullptr;
     int volumePercentage = 0;
     quint32 maximumVolume = 0;
-    QMediaPlayer *effect = nullptr;
+    Ngf::Client *m_ngf = nullptr;
 };
 
 #endif

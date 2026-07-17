@@ -17,7 +17,6 @@
  */
 
 import QtQuick
-import QtMultimedia
 import org.asteroid.controls
 import org.asteroid.settings
 import Nemo.Configuration

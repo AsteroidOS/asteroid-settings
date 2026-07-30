@@ -18,7 +18,7 @@
 
 import QtQuick
 import Qt.labs.folderlistmodel
-import Nemo.Time
+import org.asteroid.utils
 import Nemo.Configuration
 import org.asteroid.controls
 import QtQml.Models

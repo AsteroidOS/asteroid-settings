@@ -23,7 +23,6 @@ import Qt.labs.folderlistmodel
 import org.asteroid.controls
 import org.asteroid.utils
 import Nemo.Configuration
-import Nemo.Time
 
 Item {
     id: watchfaceSelector

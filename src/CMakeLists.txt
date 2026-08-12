@@ -21,6 +21,7 @@ set(
 	watchfaceinstaller.cpp
 	watchfacepreviews.cpp
 	watchfaceqmlprobe.cpp
+	watchfacestoremodel.cpp
 	${dbus_srcs}
 )
 set(
@@ -34,6 +35,7 @@ set(
 	watchfaceinstaller.h
 	watchfacepreviews.h
 	watchfaceqmlprobe.h
+	watchfacestoremodel.h
 )
 
 add_library(asteroid-settings ${SRC} ${HEADERS})

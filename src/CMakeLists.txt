@@ -16,6 +16,7 @@ set(
 	taptowake.cpp
 	tilttowake.cpp
 	volumecontrol.cpp
+	watchfacehelper.cpp
 	${dbus_srcs}
 )
 set(
@@ -24,6 +25,7 @@ set(
 	taptowake.h
 	tilttowake.h
 	volumecontrol.h
+	watchfacehelper.h
 )
 
 add_library(asteroid-settings ${SRC} ${HEADERS})
@@ -64,6 +66,7 @@ target_link_libraries(
 		Qt::Qml
 		Qt::Quick
 		Qt::DBus
+		Qt::Network
 		PkgConfig::NGF
 		Asteroid::AsteroidApp6
 )

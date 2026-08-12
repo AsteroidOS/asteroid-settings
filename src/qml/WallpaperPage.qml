@@ -142,6 +142,7 @@ Item {
                 // The value a tap writes: the live .qml sibling when the
                 // wallpaper has one, the image itself otherwise.
                 readonly property string activationValue: model.qmlPath !== "" ? model.qmlPath : model.filePath
+                readonly property bool selected: wallpaperSource.value === activationValue
 
                 width: grid.cellWidth
                 height: grid.cellHeight
@@ -170,10 +171,7 @@ Item {
                     anchors.fill: img
                     color: "#30000000"
                     visible: opacity
-                    property bool notSelected: wallpaperSource.value !== model.qmlPath &
-                                               wallpaperSource.value !== model.filePath
-
-                    opacity: notSelected ? 1 : 0
+                    opacity: selected ? 0 : 1
 
                     Behavior on opacity {
                         NumberAnimation {
@@ -188,8 +186,7 @@ Item {
                     name: "ios-checkmark-circle"
                     height: width
                     width: parent.width * 0.3
-                    visible: wallpaperSource.value === model.qmlPath |
-                             wallpaperSource.value === model.filePath
+                    visible: selected
                     layer.enabled: visible
 
                     anchors {

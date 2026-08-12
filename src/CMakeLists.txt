@@ -16,6 +16,7 @@ set(
 	taptowake.cpp
 	tilttowake.cpp
 	volumecontrol.cpp
+	watchfacecatalog.cpp
 	watchfacehelper.cpp
 	${dbus_srcs}
 )
@@ -25,6 +26,7 @@ set(
 	taptowake.h
 	tilttowake.h
 	volumecontrol.h
+	watchfacecatalog.h
 	watchfacehelper.h
 )
 

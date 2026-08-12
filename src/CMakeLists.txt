@@ -18,6 +18,7 @@ set(
 	volumecontrol.cpp
 	watchfacecatalog.cpp
 	watchfacehelper.cpp
+	watchfaceinstaller.cpp
 	watchfacepreviews.cpp
 	watchfaceqmlprobe.cpp
 	${dbus_srcs}
@@ -30,6 +31,7 @@ set(
 	volumecontrol.h
 	watchfacecatalog.h
 	watchfacehelper.h
+	watchfaceinstaller.h
 	watchfacepreviews.h
 	watchfaceqmlprobe.h
 )

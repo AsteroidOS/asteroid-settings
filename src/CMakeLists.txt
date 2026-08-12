@@ -18,6 +18,7 @@ set(
 	volumecontrol.cpp
 	watchfacecatalog.cpp
 	watchfacehelper.cpp
+	watchfacepreviews.cpp
 	${dbus_srcs}
 )
 set(
@@ -28,6 +29,7 @@ set(
 	volumecontrol.h
 	watchfacecatalog.h
 	watchfacehelper.h
+	watchfacepreviews.h
 )
 
 add_library(asteroid-settings ${SRC} ${HEADERS})

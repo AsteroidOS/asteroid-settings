@@ -91,22 +91,22 @@
     <message id="id-off">
         <location filename="../src/qml/DisplayPage.qml" line="43"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Desactivada</translation>
     </message>
     <message id="id-high">
         <location filename="../src/qml/DisplayPage.qml" line="45"/>
         <source>High</source>
-        <translation type="unfinished"></translation>
+        <translation>Elevada</translation>
     </message>
     <message id="id-medium">
         <location filename="../src/qml/DisplayPage.qml" line="47"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Mejana</translation>
     </message>
     <message id="id-low">
         <location filename="../src/qml/DisplayPage.qml" line="49"/>
         <source>Low</source>
-        <translation type="unfinished"></translation>
+        <translation>Febla</translation>
     </message>
     <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="109"/>
@@ -123,7 +123,7 @@
         <location filename="../src/qml/DisplayPage.qml" line="141"/>
         <source>Burn-in Protection</source>
         <oldsource>Burn in protection</oldsource>
-        <translation type="unfinished">Proteccion contra las cremaduras</translation>
+        <translation>Proteccion contra las cremaduras</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="155"/>
@@ -181,7 +181,7 @@
     <message id="id-wifi-page">
         <location filename="../src/qml/main.qml" line="165"/>
         <source>WiFi</source>
-        <translation type="unfinished"></translation>
+        <translation>WiFi</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="171"/>
@@ -214,7 +214,7 @@
     <message id="id-tap-to-cancel">
         <location filename="../src/qml/PowerPage.qml" line="67"/>
         <source>Tap to cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Tocatz per anullar</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="183"/>
@@ -369,17 +369,17 @@
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation type="unfinished">Paramètres</translation>
+        <translation>Paramètres</translation>
     </message>
     <message id="id-wifi-password">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="214"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Senhal :</translation>
     </message>
     <message id="id-wifi-disconnect">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="141"/>
         <source>Disconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>Se desconnectar</translation>
     </message>
     <message id="id-wifi-connectionError">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="85"/>
@@ -389,74 +389,74 @@
     <message id="id-wifi-autoconnect">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="154"/>
         <source>Autoconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>Connexion auto</translation>
     </message>
     <message id="id-wifi-removenetwork">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="163"/>
         <source>Forget network</source>
         <oldsource>Remove network</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Oblidar lo ret</translation>
     </message>
     <message id="id-wifi-ssid">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="204"/>
         <source>Name (SSID):</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom (SSID):</translation>
     </message>
     <message id="id-wifi-identity">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="206"/>
         <source>Name (Identity):</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom (Identitat) :</translation>
     </message>
     <message id="id-wifi-passphrase">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="208"/>
         <source>Passphrase:</source>
-        <translation type="unfinished"></translation>
+        <translation>Frasa secrèta :</translation>
     </message>
     <message id="id-wifi-wps">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="210"/>
         <source>WPS:</source>
-        <translation type="unfinished"></translation>
+        <translation>WPS :</translation>
     </message>
     <message id="id-wifi-username">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="212"/>
         <source>Username:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom d’utilizaire :</translation>
     </message>
     <message id="id-wifi-on">
         <location filename="../src/qml/WiFiPage.qml" line="93"/>
         <source>WiFi on</source>
-        <translation type="unfinished"></translation>
+        <translation>WiFi alucat</translation>
     </message>
     <message id="id-wifi-off">
         <location filename="../src/qml/WiFiPage.qml" line="95"/>
         <source>WiFi off</source>
-        <translation type="unfinished"></translation>
+        <translation>WiFi atudat</translation>
     </message>
     <message id="id-wifi-connected">
         <location filename="../src/qml/WiFiPage.qml" line="97"/>
         <location filename="../src/qml/WiFiPage.qml" line="142"/>
         <source>Connected</source>
-        <translation type="unfinished">Connectat</translation>
+        <translation>Connectat</translation>
     </message>
     <message id="id-wifi-disconnected">
         <location filename="../src/qml/WiFiPage.qml" line="99"/>
         <source>Not connected</source>
-        <translation type="unfinished">Non connectat</translation>
+        <translation>Non connectat</translation>
     </message>
     <message id="id-wifi-hiddennetwork">
         <location filename="../src/qml/WiFiPage.qml" line="125"/>
         <source>Hidden network</source>
-        <translation type="unfinished"></translation>
+        <translation>Ret rescondut</translation>
     </message>
     <message id="id-wifi-saved">
         <location filename="../src/qml/WiFiPage.qml" line="145"/>
         <source>Saved</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrats</translation>
     </message>
     <message id="id-wifi-available">
         <location filename="../src/qml/WiFiPage.qml" line="148"/>
         <source>Available</source>
-        <translation type="unfinished"></translation>
+        <translation>Disponibles</translation>
     </message>
 </context>
 <context>

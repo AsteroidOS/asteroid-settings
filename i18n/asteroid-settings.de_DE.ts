@@ -181,7 +181,7 @@
     <message id="id-wifi-page">
         <location filename="../src/qml/main.qml" line="165"/>
         <source>WiFi</source>
-        <translation type="unfinished"></translation>
+        <translation>WLAN</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="171"/>
@@ -374,12 +374,12 @@
     <message id="id-wifi-password">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="214"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Passwort:</translation>
     </message>
     <message id="id-wifi-disconnect">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="141"/>
         <source>Disconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>Trennen</translation>
     </message>
     <message id="id-wifi-connectionError">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="85"/>
@@ -389,74 +389,74 @@
     <message id="id-wifi-autoconnect">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="154"/>
         <source>Autoconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisch verbinden</translation>
     </message>
     <message id="id-wifi-removenetwork">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="163"/>
         <source>Forget network</source>
         <oldsource>Remove network</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Netzwerk vergessen</translation>
     </message>
     <message id="id-wifi-ssid">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="204"/>
         <source>Name (SSID):</source>
-        <translation type="unfinished"></translation>
+        <translation>Name (SSID):</translation>
     </message>
     <message id="id-wifi-identity">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="206"/>
         <source>Name (Identity):</source>
-        <translation type="unfinished"></translation>
+        <translation>Name (Identität):</translation>
     </message>
     <message id="id-wifi-passphrase">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="208"/>
         <source>Passphrase:</source>
-        <translation type="unfinished"></translation>
+        <translation>Passphrase:</translation>
     </message>
     <message id="id-wifi-wps">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="210"/>
         <source>WPS:</source>
-        <translation type="unfinished"></translation>
+        <translation>WPS:</translation>
     </message>
     <message id="id-wifi-username">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="212"/>
         <source>Username:</source>
-        <translation type="unfinished"></translation>
+        <translation>Benutzername:</translation>
     </message>
     <message id="id-wifi-on">
         <location filename="../src/qml/WiFiPage.qml" line="93"/>
         <source>WiFi on</source>
-        <translation type="unfinished"></translation>
+        <translation>WLAN ein</translation>
     </message>
     <message id="id-wifi-off">
         <location filename="../src/qml/WiFiPage.qml" line="95"/>
         <source>WiFi off</source>
-        <translation type="unfinished"></translation>
+        <translation>WLAN aus</translation>
     </message>
     <message id="id-wifi-connected">
         <location filename="../src/qml/WiFiPage.qml" line="97"/>
         <location filename="../src/qml/WiFiPage.qml" line="142"/>
         <source>Connected</source>
-        <translation type="unfinished">Verbunden</translation>
+        <translation>Verbunden</translation>
     </message>
     <message id="id-wifi-disconnected">
         <location filename="../src/qml/WiFiPage.qml" line="99"/>
         <source>Not connected</source>
-        <translation type="unfinished">Nicht verbunden</translation>
+        <translation>Nicht verbunden</translation>
     </message>
     <message id="id-wifi-hiddennetwork">
         <location filename="../src/qml/WiFiPage.qml" line="125"/>
         <source>Hidden network</source>
-        <translation type="unfinished"></translation>
+        <translation>Verstecktes Netzwerk</translation>
     </message>
     <message id="id-wifi-saved">
         <location filename="../src/qml/WiFiPage.qml" line="145"/>
         <source>Saved</source>
-        <translation type="unfinished"></translation>
+        <translation>Gespeichert</translation>
     </message>
     <message id="id-wifi-available">
         <location filename="../src/qml/WiFiPage.qml" line="148"/>
         <source>Available</source>
-        <translation type="unfinished"></translation>
+        <translation>Verfügbar</translation>
     </message>
 </context>
 <context>

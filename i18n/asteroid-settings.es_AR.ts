@@ -91,22 +91,22 @@
     <message id="id-off">
         <location filename="../src/qml/DisplayPage.qml" line="43"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Desactivado</translation>
     </message>
     <message id="id-high">
         <location filename="../src/qml/DisplayPage.qml" line="45"/>
         <source>High</source>
-        <translation type="unfinished"></translation>
+        <translation>Alta</translation>
     </message>
     <message id="id-medium">
         <location filename="../src/qml/DisplayPage.qml" line="47"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Media</translation>
     </message>
     <message id="id-low">
         <location filename="../src/qml/DisplayPage.qml" line="49"/>
         <source>Low</source>
-        <translation type="unfinished"></translation>
+        <translation>Baja</translation>
     </message>
     <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="109"/>
@@ -176,12 +176,12 @@
     <message id="id-quickpanel-page">
         <location filename="../src/qml/main.qml" line="98"/>
         <source>Quick Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra de acceso rápido</translation>
     </message>
     <message id="id-wifi-page">
         <location filename="../src/qml/main.qml" line="165"/>
         <source>WiFi</source>
-        <translation type="unfinished"></translation>
+        <translation>WiFi</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="171"/>
@@ -214,7 +214,7 @@
     <message id="id-tap-to-cancel">
         <location filename="../src/qml/PowerPage.qml" line="67"/>
         <source>Tap to cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Toca para cancelar</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="183"/>
@@ -252,13 +252,13 @@
     <message id="id-toggle-lock">
         <location filename="../src/qml/QuickPanelPage.qml" line="109"/>
         <source>Lock Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Botón de bloqueo</translation>
     </message>
     <message id="id-toggle-settings">
         <location filename="../src/qml/QuickPanelPage.qml" line="111"/>
         <source>Settings</source>
         <oldsource>Settings Shortcut</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Ajustes</translation>
     </message>
     <message id="id-toggle-brightness">
         <location filename="../src/qml/QuickPanelPage.qml" line="113"/>
@@ -268,33 +268,33 @@
     <message id="id-toggle-bluetooth">
         <location filename="../src/qml/QuickPanelPage.qml" line="115"/>
         <source>Bluetooth</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth</translation>
     </message>
     <message id="id-toggle-haptics">
         <location filename="../src/qml/QuickPanelPage.qml" line="117"/>
         <source>Vibration</source>
-        <translation type="unfinished"></translation>
+        <translation>Vibración</translation>
     </message>
     <message id="id-toggle-wifi">
         <location filename="../src/qml/QuickPanelPage.qml" line="120"/>
         <source>Wifi Toggle</source>
         <oldsource>WiFi</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>WiFi</translation>
     </message>
     <message id="id-toggle-sound">
         <location filename="../src/qml/QuickPanelPage.qml" line="124"/>
         <source>Mute Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>Silenciar</translation>
     </message>
     <message id="id-toggle-cinema">
         <location filename="../src/qml/QuickPanelPage.qml" line="127"/>
         <source>Cinema Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo de cine</translation>
     </message>
     <message id="id-toggle-power-off">
         <location filename="../src/qml/QuickPanelPage.qml" line="131"/>
         <source>Poweroff</source>
-        <translation type="unfinished"></translation>
+        <translation>Apagar</translation>
     </message>
     <message id="id-toggle-reboot">
         <location filename="../src/qml/QuickPanelPage.qml" line="133"/>
@@ -304,18 +304,18 @@
     <message id="id-toggle-music">
         <location filename="../src/qml/QuickPanelPage.qml" line="135"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Música</translation>
     </message>
     <message id="id-toggle-flashlight">
         <location filename="../src/qml/QuickPanelPage.qml" line="137"/>
         <source>Flashlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Linterna</translation>
     </message>
     <message id="id-fixed-row">
         <location filename="../src/qml/QuickPanelPage.qml" line="155"/>
         <source>Fixed Row</source>
         <oldsource>Fixed Row</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Fila fija</translation>
     </message>
     <message id="id-sliding-row">
         <location filename="../src/qml/QuickPanelPage.qml" line="191"/>
@@ -325,13 +325,13 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="345"/>
         <source>Sliding Row</source>
         <oldsource>Sliding Row</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Fila deslizante</translation>
     </message>
     <message id="id-options">
         <location filename="../src/qml/QuickPanelPage.qml" line="227"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="305"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opciones</translation>
     </message>
     <message id="id-battery-bottom">
         <location filename="../src/qml/QuickPanelPage.qml" line="229"/>
@@ -339,47 +339,47 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="517"/>
         <source>Battery Meter aligned to bottom?</source>
         <oldsource>Battery aligned to bottom?</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>¿Alinear el indicador de batería abajo?</translation>
     </message>
     <message id="id-battery-animation">
         <location filename="../src/qml/QuickPanelPage.qml" line="233"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="511"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="519"/>
         <source>Show battery charge animation?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Mostrar animación de carga de la batería?</translation>
     </message>
     <message id="id-particle-design">
         <location filename="../src/qml/QuickPanelPage.qml" line="235"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="532"/>
         <source>Tap to cycle particle design</source>
-        <translation type="unfinished"></translation>
+        <translation>Toca para cambiar el diseño de las partículas</translation>
     </message>
     <message id="id-battery-preview">
         <location filename="../src/qml/QuickPanelPage.qml" line="237"/>
         <source>Battery preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista previa de la batería</translation>
     </message>
     <message id="id-battery-colored">
         <location filename="../src/qml/QuickPanelPage.qml" line="231"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="512"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="521"/>
         <source>Enable colored battery?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Activar indicador de batería a color?</translation>
     </message>
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajustes</translation>
     </message>
     <message id="id-wifi-password">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="214"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Contraseña:</translation>
     </message>
     <message id="id-wifi-disconnect">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="141"/>
         <source>Disconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>Desconectar</translation>
     </message>
     <message id="id-wifi-connectionError">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="85"/>
@@ -389,48 +389,48 @@
     <message id="id-wifi-autoconnect">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="154"/>
         <source>Autoconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>Autoconectar</translation>
     </message>
     <message id="id-wifi-removenetwork">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="163"/>
         <source>Forget network</source>
         <oldsource>Remove network</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Olvidar red</translation>
     </message>
     <message id="id-wifi-ssid">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="204"/>
         <source>Name (SSID):</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre (SSID):</translation>
     </message>
     <message id="id-wifi-identity">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="206"/>
         <source>Name (Identity):</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre (Identidad):</translation>
     </message>
     <message id="id-wifi-passphrase">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="208"/>
         <source>Passphrase:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasfrase:</translation>
     </message>
     <message id="id-wifi-wps">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="210"/>
         <source>WPS:</source>
-        <translation type="unfinished"></translation>
+        <translation>WPS:</translation>
     </message>
     <message id="id-wifi-username">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="212"/>
         <source>Username:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de usuario:</translation>
     </message>
     <message id="id-wifi-on">
         <location filename="../src/qml/WiFiPage.qml" line="93"/>
         <source>WiFi on</source>
-        <translation type="unfinished"></translation>
+        <translation>WiFi activado</translation>
     </message>
     <message id="id-wifi-off">
         <location filename="../src/qml/WiFiPage.qml" line="95"/>
         <source>WiFi off</source>
-        <translation type="unfinished"></translation>
+        <translation>WiFi desactivado</translation>
     </message>
     <message id="id-wifi-connected">
         <location filename="../src/qml/WiFiPage.qml" line="97"/>
@@ -446,17 +446,17 @@
     <message id="id-wifi-hiddennetwork">
         <location filename="../src/qml/WiFiPage.qml" line="125"/>
         <source>Hidden network</source>
-        <translation type="unfinished"></translation>
+        <translation>Red oculta</translation>
     </message>
     <message id="id-wifi-saved">
         <location filename="../src/qml/WiFiPage.qml" line="145"/>
         <source>Saved</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardado</translation>
     </message>
     <message id="id-wifi-available">
         <location filename="../src/qml/WiFiPage.qml" line="148"/>
         <source>Available</source>
-        <translation type="unfinished"></translation>
+        <translation>Disponible</translation>
     </message>
 </context>
 <context>

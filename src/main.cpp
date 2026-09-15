@@ -27,6 +27,8 @@
 #include "tilttowake.h"
 #include "taptowake.h"
 #include "sysinfo.h"
+#include "watchfacehelper.h"
+#include "watchfacestoremodel.h"
 
 int main(int argc, char *argv[])
 {
@@ -38,6 +40,20 @@ int main(int argc, char *argv[])
     qmlRegisterType<TiltToWake>("org.asteroid.settings", 1, 0, "TiltToWake");
     qmlRegisterType<TapToWake>("org.asteroid.settings", 1, 0, "TapToWake");
     qmlRegisterType<SysInfo>("org.asteroid.settings", 1, 0, "SysInfo");
+    // Singletons: one store backend for the whole app. A creatable type would
+    // construct a full backend (watchers, network manager, directory scans)
+    // per page that declares one — three pages do — and again on every page
+    // reopen. The helper singleton exists so path-only consumers (the
+    // wallpaper page) need not touch the store at all.
+    qmlRegisterSingletonType<WatchfaceStoreModel>(
+        "org.asteroid.settings", 1, 0, "WatchfaceStoreModel",
+        [](QQmlEngine *engine, QJSEngine *) -> QObject * {
+            auto *model = new WatchfaceStoreModel;
+            model->setQmlEngine(engine);
+            return model;
+        });
+    qmlRegisterSingletonInstance("org.asteroid.settings", 1, 0, "WatchfaceHelper",
+                                 WatchfaceHelper::instance());
     view->setSource(QUrl("qrc:/Settings/qml/main.qml"));
     view->rootContext()->setContextProperty("qtVersion", QString(qVersion()));
     view->rootContext()->setContextProperty("kernelVersion", QString(buf.release));

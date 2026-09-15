@@ -16,6 +16,12 @@ set(
 	taptowake.cpp
 	tilttowake.cpp
 	volumecontrol.cpp
+	watchfacecatalog.cpp
+	watchfacehelper.cpp
+	watchfaceinstaller.cpp
+	watchfacepreviews.cpp
+	watchfaceqmlprobe.cpp
+	watchfacestoremodel.cpp
 	${dbus_srcs}
 )
 set(
@@ -24,6 +30,12 @@ set(
 	taptowake.h
 	tilttowake.h
 	volumecontrol.h
+	watchfacecatalog.h
+	watchfacehelper.h
+	watchfaceinstaller.h
+	watchfacepreviews.h
+	watchfaceqmlprobe.h
+	watchfacestoremodel.h
 )
 
 add_library(asteroid-settings ${SRC} ${HEADERS})
@@ -43,6 +55,7 @@ asteroid_app_qml_module(asteroid-settings
 	qml/WallpaperPage.qml
 	qml/WatchfacePage.qml
 	qml/WatchfaceSelector.qml
+	qml/WatchfaceSettingsContainer.qml
 	qml/WiFiConnectionDialog.qml
 	qml/WiFiPage.qml
 	qml/LauncherPage.qml
@@ -64,6 +77,7 @@ target_link_libraries(
 		Qt::Qml
 		Qt::Quick
 		Qt::DBus
+		Qt::Network
 		PkgConfig::NGF
 		Asteroid::AsteroidApp6
 )

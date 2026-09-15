@@ -56,5 +56,8 @@ Item {
 
     WatchfaceSelector {
         anchors.fill: parent
+        // Face selection only: this path picks the nightstand face, it is not
+        // a second store surface — no catalog browsing, no network probe.
+        storeEnabled: false
     }
 }

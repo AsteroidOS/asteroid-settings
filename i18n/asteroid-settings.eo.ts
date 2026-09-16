@@ -91,22 +91,22 @@
     <message id="id-off">
         <location filename="../src/qml/DisplayPage.qml" line="43"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Malŝaltita</translation>
     </message>
     <message id="id-high">
         <location filename="../src/qml/DisplayPage.qml" line="45"/>
         <source>High</source>
-        <translation type="unfinished"></translation>
+        <translation>Alta</translation>
     </message>
     <message id="id-medium">
         <location filename="../src/qml/DisplayPage.qml" line="47"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>Meza</translation>
     </message>
     <message id="id-low">
         <location filename="../src/qml/DisplayPage.qml" line="49"/>
         <source>Low</source>
-        <translation type="unfinished"></translation>
+        <translation>Malalta</translation>
     </message>
     <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="109"/>
@@ -123,7 +123,7 @@
         <location filename="../src/qml/DisplayPage.qml" line="141"/>
         <source>Burn-in Protection</source>
         <oldsource>Burn in protection</oldsource>
-        <translation type="unfinished">enbrulada protekto</translation>
+        <translation>Enbrulada protekto</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="155"/>
@@ -176,12 +176,12 @@
     <message id="id-quickpanel-page">
         <location filename="../src/qml/main.qml" line="98"/>
         <source>Quick Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Rapida panelo</translation>
     </message>
     <message id="id-wifi-page">
         <location filename="../src/qml/main.qml" line="165"/>
         <source>WiFi</source>
-        <translation type="unfinished"></translation>
+        <translation>WiFi</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="171"/>
@@ -214,7 +214,7 @@
     <message id="id-tap-to-cancel">
         <location filename="../src/qml/PowerPage.qml" line="67"/>
         <source>Tap to cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Tuŝi por nuligi</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="183"/>
@@ -230,7 +230,7 @@
         <location filename="../src/qml/NightstandPage.qml" line="113"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation>Brileco</translation>
+        <translation>Brilo</translation>
     </message>
     <message id="id-nightstand-delay">
         <location filename="../src/qml/NightstandPage.qml" line="132"/>
@@ -252,49 +252,49 @@
     <message id="id-toggle-lock">
         <location filename="../src/qml/QuickPanelPage.qml" line="109"/>
         <source>Lock Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Ŝlosbutono</translation>
     </message>
     <message id="id-toggle-settings">
         <location filename="../src/qml/QuickPanelPage.qml" line="111"/>
         <source>Settings</source>
         <oldsource>Settings Shortcut</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Agordoj</translation>
     </message>
     <message id="id-toggle-brightness">
         <location filename="../src/qml/QuickPanelPage.qml" line="113"/>
         <source>Brightness</source>
-        <translation type="unfinished">Brilo</translation>
+        <translation>Brilo</translation>
     </message>
     <message id="id-toggle-bluetooth">
         <location filename="../src/qml/QuickPanelPage.qml" line="115"/>
         <source>Bluetooth</source>
-        <translation type="unfinished">Bludento</translation>
+        <translation>Bludento</translation>
     </message>
     <message id="id-toggle-haptics">
         <location filename="../src/qml/QuickPanelPage.qml" line="117"/>
         <source>Vibration</source>
-        <translation type="unfinished"></translation>
+        <translation>Vibrado</translation>
     </message>
     <message id="id-toggle-wifi">
         <location filename="../src/qml/QuickPanelPage.qml" line="120"/>
         <source>Wifi Toggle</source>
         <oldsource>WiFi</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>WiFi baskulo</translation>
     </message>
     <message id="id-toggle-sound">
         <location filename="../src/qml/QuickPanelPage.qml" line="124"/>
         <source>Mute Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>Silentiga sono</translation>
     </message>
     <message id="id-toggle-cinema">
         <location filename="../src/qml/QuickPanelPage.qml" line="127"/>
         <source>Cinema Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Kineja reĝimo</translation>
     </message>
     <message id="id-toggle-power-off">
         <location filename="../src/qml/QuickPanelPage.qml" line="131"/>
         <source>Poweroff</source>
-        <translation type="unfinished"></translation>
+        <translation>Malŝalti</translation>
     </message>
     <message id="id-toggle-reboot">
         <location filename="../src/qml/QuickPanelPage.qml" line="133"/>
@@ -304,18 +304,18 @@
     <message id="id-toggle-music">
         <location filename="../src/qml/QuickPanelPage.qml" line="135"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Muziko</translation>
     </message>
     <message id="id-toggle-flashlight">
         <location filename="../src/qml/QuickPanelPage.qml" line="137"/>
         <source>Flashlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Fulmilo</translation>
     </message>
     <message id="id-fixed-row">
         <location filename="../src/qml/QuickPanelPage.qml" line="155"/>
         <source>Fixed Row</source>
         <oldsource>Fixed Row</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Fiksita vico</translation>
     </message>
     <message id="id-sliding-row">
         <location filename="../src/qml/QuickPanelPage.qml" line="191"/>
@@ -325,13 +325,13 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="345"/>
         <source>Sliding Row</source>
         <oldsource>Sliding Row</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Glita vico</translation>
     </message>
     <message id="id-options">
         <location filename="../src/qml/QuickPanelPage.qml" line="227"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="305"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Elektoj</translation>
     </message>
     <message id="id-battery-bottom">
         <location filename="../src/qml/QuickPanelPage.qml" line="229"/>

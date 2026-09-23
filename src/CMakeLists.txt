@@ -50,6 +50,7 @@ asteroid_app_qml_module(asteroid-settings
 	qml/BluetoothPage.qml
 	qml/DisplayPage.qml
 	qml/SoundPage.qml
+	qml/HandsCalibrationPage.qml
 	qml/NightstandPage.qml
 	qml/NightstandWatchfacePage.qml
 	qml/UnitsPage.qml

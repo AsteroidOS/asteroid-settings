@@ -48,6 +48,7 @@ Application {
     Component { id: wifiLayer;                  WiFiPage       { } }
     Component { id: displayLayer;               DisplayPage    { } }
     Component { id: soundLayer;                 SoundPage      { } }
+    Component { id: handsCalibrationLayer;      HandsCalibrationPage { } }
     Component { id: nightstandLayer;            NightstandPage { } }
     Component { id: nightstandWatchfaceLayer;   NightstandWatchfacePage { } }
     Component { id: unitsLayer;                 UnitsPage      { } }
@@ -59,6 +60,7 @@ Application {
     Component { id: aboutLayer;                 AboutPage      { } }
 
     TiltToWake { id: tiltToWake }
+    Coprocessor { id: coprocessor }
 
     LayerStack {
         id: layerStack
@@ -86,6 +88,13 @@ Application {
                     title: qsTrId("id-display-page")
                     iconName: "ios-display-outline"
                     onClicked: layerStack.push(displayLayer)
+                }
+                ListItem {
+                    //% "Hands"
+                    title: qsTrId("id-hands-page")
+                    iconName: "ios-time-outline"
+                    onClicked: layerStack.push(handsCalibrationLayer)
+                    visible: coprocessor.available && coprocessor.hasHands
                 }
                 ListItem {
                     //% "Nightstand"

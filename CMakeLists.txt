@@ -18,7 +18,7 @@ include(ECMFindQmlModule)
 include(Asteroid6CMakeSettings)
 include(Asteroid6Translations)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Qml Quick DBus)
+find_package(Qt6 REQUIRED COMPONENTS Core Qml Quick DBus Network)
 find_package(Mce REQUIRED)
 pkg_check_modules(NGF REQUIRED IMPORTED_TARGET ngf-qt6)
 

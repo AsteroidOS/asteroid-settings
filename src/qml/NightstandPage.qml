@@ -75,17 +75,13 @@ Item {
         contentHeight: onOffSettings.implicitHeight
         boundsBehavior: Flickable.DragOverBounds
         flickableDirection: Flickable.VerticalFlick
-        anchors {
-            topMargin: Dims.l(10)
-            bottomMargin: Dims.l(15)
-        }
-
-        Item { width: parent.width; height: Dims.l(15) }
 
         Column {
             id: onOffSettings
 
             anchors.fill: parent
+
+            Item { width: parent.width; height: Dims.l(15) }
 
             LabeledSwitch {
                 //% "Enable"
@@ -191,7 +187,7 @@ Item {
                 onClicked: function() { layerStack.push(nightstandWatchfaceLayer) }
             }
 
-            Item { width: parent.width; height: Dims.l(10) }
+            Item { width: parent.width; height: Dims.l(15) }
         }
     }
 

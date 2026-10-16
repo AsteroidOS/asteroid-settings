@@ -54,6 +54,12 @@ Item {
     }
 
     ConfigurationValue {
+        id: nightstandRotate
+        key: "/desktop/asteroid/nightstand/rotate"
+        defaultValue: true
+    }
+
+    ConfigurationValue {
         id: nightstandAlwaysOnDisplay
         key: "/desktop/asteroid/nightstand/always-on-display"
         defaultValue: true
@@ -164,6 +170,15 @@ Item {
                             displaySettings.lowPowerModeEnabled = checked
                         }
                     }
+                }
+
+                LabeledSwitch {
+                    height: rowHeight
+                    width: parent.width
+                    //% "Auto rotate"
+                    text: qsTrId("id-nightstand-rotate")
+                    checked: nightstandRotate.value
+                    onCheckedChanged: nightstandRotate.value = checked
                 }
             }
 

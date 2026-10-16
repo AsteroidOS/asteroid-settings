@@ -71,13 +71,13 @@ Item {
 
     Flickable {
         anchors.fill: parent
-        anchors.topMargin: Dims.l(15)
-        anchors.bottomMargin: Dims.l(15)
         contentHeight: contentColumn.implicitHeight
 
         Column {
             id: contentColumn
             anchors.fill: parent
+
+            Item { width: parent.width; height: Dims.l(15) }
 
             Label {
                 id: brightnessLabel
@@ -167,6 +167,8 @@ Item {
                 checked: tapToWake.enabled
                 onCheckedChanged: tapToWake.enabled = checked
             }
+
+            Item { width: parent.width; height: Dims.l(15) }
         }
     }
 

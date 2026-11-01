@@ -46,7 +46,7 @@
     </message>
     <message id="id-time-page">
         <location filename="../src/qml/main.qml" line="129"/>
-        <location filename="../src/qml/TimePage.qml" line="110"/>
+        <location filename="../src/qml/TimePage.qml" line="109"/>
         <source>Time</source>
         <translation>Hora</translation>
     </message>
@@ -94,7 +94,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message id="id-usb-page">
-        <location filename="../src/qml/main.qml" line="171"/>
+        <location filename="../src/qml/main.qml" line="172"/>
         <location filename="../src/qml/USBPage.qml" line="90"/>
         <source>USB</source>
         <translation>USB</translation>
@@ -110,7 +110,7 @@
         <translation>Reinicia</translation>
     </message>
     <message id="id-about-page">
-        <location filename="../src/qml/main.qml" line="183"/>
+        <location filename="../src/qml/main.qml" line="184"/>
         <source>About</source>
         <translation>Quant a</translation>
     </message>
@@ -125,7 +125,7 @@
         <translation>Només càrrega</translation>
     </message>
     <message id="id-display-page">
-        <location filename="../src/qml/DisplayPage.qml" line="175"/>
+        <location filename="../src/qml/DisplayPage.qml" line="177"/>
         <location filename="../src/qml/main.qml" line="86"/>
         <source>Display</source>
         <translation>Pantalla</translation>
@@ -137,7 +137,7 @@
     </message>
     <message id="id-always-on-display">
         <location filename="../src/qml/DisplayPage.qml" line="120"/>
-        <location filename="../src/qml/NightstandPage.qml" line="155"/>
+        <location filename="../src/qml/NightstandPage.qml" line="151"/>
         <source>Always on Display</source>
         <translation>Pantalla sempre activa</translation>
     </message>
@@ -169,35 +169,35 @@
     </message>
     <message id="id-nightstand-page">
         <location filename="../src/qml/main.qml" line="92"/>
-        <location filename="../src/qml/NightstandPage.qml" line="200"/>
+        <location filename="../src/qml/NightstandPage.qml" line="196"/>
         <source>Nightstand</source>
         <translation>Tauleta de nit</translation>
     </message>
     <message id="id-nightstand-enable">
-        <location filename="../src/qml/NightstandPage.qml" line="92"/>
+        <location filename="../src/qml/NightstandPage.qml" line="88"/>
         <source>Enable</source>
         <translation>Activa</translation>
     </message>
     <message id="id-nightstand-brightness">
-        <location filename="../src/qml/NightstandPage.qml" line="113"/>
+        <location filename="../src/qml/NightstandPage.qml" line="109"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
         <translation>Brillantor</translation>
     </message>
     <message id="id-nightstand-delay">
-        <location filename="../src/qml/NightstandPage.qml" line="132"/>
+        <location filename="../src/qml/NightstandPage.qml" line="128"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
         <translation>Retard</translation>
     </message>
     <message id="id-nightstand-watchface">
-        <location filename="../src/qml/NightstandPage.qml" line="187"/>
+        <location filename="../src/qml/NightstandPage.qml" line="183"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
         <translation>Seleccioneu una caràtula</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
-        <location filename="../src/qml/NightstandPage.qml" line="176"/>
+        <location filename="../src/qml/NightstandPage.qml" line="172"/>
         <source>Custom watchface</source>
         <translation>Caràtula personalitzada</translation>
     </message>
@@ -213,7 +213,7 @@
         <translation>Fus horari</translation>
     </message>
     <message id="id-power-page">
-        <location filename="../src/qml/main.qml" line="177"/>
+        <location filename="../src/qml/main.qml" line="178"/>
         <location filename="../src/qml/PowerPage.qml" line="98"/>
         <source>Power</source>
         <translation>Engegada</translation>
@@ -348,6 +348,7 @@
     </message>
     <message id="id-tap-to-cancel">
         <location filename="../src/qml/PowerPage.qml" line="67"/>
+        <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="176"/>
         <source>Tap to cancel</source>
         <translation></translation>
     </message>
@@ -456,6 +457,34 @@
     <message id="id-wifi-available">
         <location filename="../src/qml/WiFiPage.qml" line="148"/>
         <source>Available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-needs-module">
+        <location filename="../src/qml/WatchfaceSelector.qml" line="461"/>
+        <source>needs
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-loading">
+        <location filename="../src/qml/WatchfaceSelector.qml" line="740"/>
+        <source>Loading</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-update">
+        <location filename="../src/qml/WatchfaceSelector.qml" line="742"/>
+        <source>Update</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-get-more">
+        <location filename="../src/qml/WatchfaceSelector.qml" line="744"/>
+        <source>Get more</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-remove">
+        <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="75"/>
+        <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="136"/>
+        <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="152"/>
+        <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

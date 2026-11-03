@@ -339,14 +339,14 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="517"/>
         <source>Battery Meter aligned to bottom?</source>
         <oldsource>Battery aligned to bottom?</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Bateria mezurilo aranĝita malsupre?</translation>
     </message>
     <message id="id-battery-animation">
         <location filename="../src/qml/QuickPanelPage.qml" line="233"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="511"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="519"/>
         <source>Show battery charge animation?</source>
-        <translation type="unfinished"></translation>
+        <translation>Montru bateria ŝarĝa animacio?</translation>
     </message>
     <message id="id-particle-design">
         <location filename="../src/qml/QuickPanelPage.qml" line="235"/>

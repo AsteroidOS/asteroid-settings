@@ -463,29 +463,30 @@
         <location filename="../src/qml/WatchfaceSelector.qml" line="461"/>
         <source>needs
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1
+gerektiriyor</translation>
     </message>
     <message id="id-loading">
         <location filename="../src/qml/WatchfaceSelector.qml" line="740"/>
         <source>Loading</source>
-        <translation type="unfinished"></translation>
+        <translation>Yükleniyor</translation>
     </message>
     <message id="id-update">
         <location filename="../src/qml/WatchfaceSelector.qml" line="742"/>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Güncelle</translation>
     </message>
     <message id="id-get-more">
         <location filename="../src/qml/WatchfaceSelector.qml" line="744"/>
         <source>Get more</source>
-        <translation type="unfinished"></translation>
+        <translation>Dahasını al</translation>
     </message>
     <message id="id-remove">
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="75"/>
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="136"/>
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="152"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaldır</translation>
     </message>
 </context>
 <context>

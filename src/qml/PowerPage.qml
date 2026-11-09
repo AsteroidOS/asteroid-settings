@@ -43,9 +43,10 @@ Item {
         anchors {
             top: parent.top
             topMargin: pageHeader.height
+            bottom: parent.bottom
         }
-        height: parent.height
         width: parent.width
+        footer: Item { width: parent.width; height: Dims.l(15) }
         delegate: ListItem {
             title: text
             iconName: icon

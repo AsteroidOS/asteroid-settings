@@ -25,17 +25,16 @@ Item {
     property int depth
     property var pop
 
-    property int pendingIndex: -1
+    property var pendingAction
 
     ListModel {
         id: powerModel
         //% "Power Off"
-        ListElement { text: qsTrId("id-poweroff-page"); icon: "ios-power-outline" }
+        ListElement { text: qsTrId("id-poweroff-page"); icon: "ios-power-outline"; action: function() { login1DBus.call("PowerOff", [false]) } }
         //% "Reboot"
-        ListElement { text: qsTrId("id-reboot-page"); icon: "ios-sync" }
+        ListElement { text: qsTrId("id-reboot-page"); icon: "ios-sync"; action: function() { login1DBus.reboot("") } }
         //% "Bootloader"
-        ListElement { text: qsTrId("id-reboot-bootloader-page"); icon: "ios-bootloader-outline" }
-
+        ListElement { text: qsTrId("id-reboot-bootloader-page"); icon: "ios-bootloader-outline"; action: function() { login1DBus.reboot("bootloader") } }
     }
 
     ListView {
@@ -52,7 +51,7 @@ Item {
             iconName: icon
             HighlightBar {
                 onClicked: {
-                    pendingIndex = index
+                    pendingAction = action
                     remorse.action = text
                     remorse.start()
                 }
@@ -65,7 +64,7 @@ Item {
         duration: 3000
         //% "Tap to cancel"
         cancelText: qsTrId("id-tap-to-cancel")
-        onTriggered: login1DBus.command(pendingIndex)
+        onTriggered: pendingAction()
     }
 
     DBusInterface {
@@ -74,22 +73,9 @@ Item {
         service: "org.freedesktop.login1"
         path: "/org/freedesktop/login1"
         iface: "org.freedesktop.login1.Manager"
-        function command(num) {
-            switch(num) {
-                case 0:
-                    call("PowerOff",[false]);
-                    break;
-                case 1:
-                    call("SetRebootParameter", [""])
-                    call("Reboot",[false]);
-                    break;
-                case 2:
-                    call("SetRebootParameter", ["bootloader"])
-                    call("Reboot",[false]);
-                    break;
-                default:
-                    console.log("Error: bad case ", num, " in login1DBus command");
-            }
+        function reboot(parameter) {
+            call("SetRebootParameter", [parameter])
+            call("Reboot", [false])
         }
     }
 

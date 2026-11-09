@@ -55,31 +55,31 @@
         <translation>Fahrenheit verwenden:</translation>
     </message>
     <message id="id-time-page">
-        <location filename="../src/qml/main.qml" line="129"/>
+        <location filename="../src/qml/main.qml" line="138"/>
         <location filename="../src/qml/TimePage.qml" line="109"/>
         <source>Time</source>
         <translation>Uhrzeit</translation>
     </message>
     <message id="id-date-page">
         <location filename="../src/qml/DatePage.qml" line="98"/>
-        <location filename="../src/qml/main.qml" line="135"/>
+        <location filename="../src/qml/main.qml" line="144"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
     <message id="id-language-page">
         <location filename="../src/qml/LanguagePage.qml" line="71"/>
-        <location filename="../src/qml/main.qml" line="147"/>
+        <location filename="../src/qml/main.qml" line="156"/>
         <source>Language</source>
         <translation>Sprache</translation>
     </message>
     <message id="id-bluetooth-page">
-        <location filename="../src/qml/main.qml" line="159"/>
+        <location filename="../src/qml/main.qml" line="168"/>
         <source>Bluetooth</source>
         <translation>Bluetooth</translation>
     </message>
     <message id="id-display-page">
         <location filename="../src/qml/DisplayPage.qml" line="177"/>
-        <location filename="../src/qml/main.qml" line="86"/>
+        <location filename="../src/qml/main.qml" line="88"/>
         <source>Display</source>
         <translation>Bildschirm</translation>
     </message>
@@ -136,62 +136,67 @@
         <translation>Tippen zum Aufwachen</translation>
     </message>
     <message id="id-timezone-page">
-        <location filename="../src/qml/main.qml" line="153"/>
+        <location filename="../src/qml/main.qml" line="162"/>
         <location filename="../src/qml/TimezonePage.qml" line="154"/>
         <source>Time zone</source>
         <translation>Zeitzone</translation>
     </message>
     <message id="id-sound-page">
-        <location filename="../src/qml/main.qml" line="104"/>
+        <location filename="../src/qml/main.qml" line="113"/>
         <source>Sound</source>
         <translation>Ton</translation>
     </message>
     <message id="id-nightstand-page">
-        <location filename="../src/qml/main.qml" line="92"/>
+        <location filename="../src/qml/main.qml" line="101"/>
         <location filename="../src/qml/NightstandPage.qml" line="196"/>
         <source>Nightstand</source>
         <translation>Nachttisch</translation>
     </message>
     <message id="id-units-page">
-        <location filename="../src/qml/main.qml" line="141"/>
+        <location filename="../src/qml/main.qml" line="150"/>
         <location filename="../src/qml/UnitsPage.qml" line="67"/>
         <source>Units</source>
         <translation>Einheiten</translation>
     </message>
     <message id="id-wallpaper-page">
-        <location filename="../src/qml/main.qml" line="111"/>
+        <location filename="../src/qml/main.qml" line="120"/>
         <source>Wallpaper</source>
         <translation>Hintergrundbild</translation>
     </message>
     <message id="id-watchface-page">
-        <location filename="../src/qml/main.qml" line="117"/>
+        <location filename="../src/qml/main.qml" line="126"/>
         <source>Watchface</source>
         <translation>Ziffernblatt</translation>
     </message>
     <message id="id-launcher-page">
-        <location filename="../src/qml/main.qml" line="123"/>
+        <location filename="../src/qml/main.qml" line="132"/>
         <source>Launcher</source>
         <translation>Starter</translation>
     </message>
     <message id="id-quickpanel-page">
-        <location filename="../src/qml/main.qml" line="98"/>
+        <location filename="../src/qml/main.qml" line="107"/>
         <source>Quick Panel</source>
         <translation>Schnellzugriff-Leiste</translation>
     </message>
+    <message id="id-hands-page">
+        <location filename="../src/qml/main.qml" line="94"/>
+        <source>Hands</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="id-wifi-page">
-        <location filename="../src/qml/main.qml" line="165"/>
+        <location filename="../src/qml/main.qml" line="174"/>
         <source>WiFi</source>
         <translation>WLAN</translation>
     </message>
     <message id="id-usb-page">
-        <location filename="../src/qml/main.qml" line="172"/>
+        <location filename="../src/qml/main.qml" line="181"/>
         <location filename="../src/qml/USBPage.qml" line="90"/>
         <source>USB</source>
         <translation>USB</translation>
     </message>
     <message id="id-power-page">
-        <location filename="../src/qml/main.qml" line="178"/>
-        <location filename="../src/qml/PowerPage.qml" line="98"/>
+        <location filename="../src/qml/main.qml" line="187"/>
+        <location filename="../src/qml/PowerPage.qml" line="89"/>
         <source>Power</source>
         <translation>Einschalten</translation>
     </message>
@@ -211,14 +216,19 @@
         <oldsource>Reboot to bootloader</oldsource>
         <translation>Bootlader</translation>
     </message>
+    <message id="id-timepiece">
+        <location filename="../src/qml/PowerPage.qml" line="39"/>
+        <source>Timepiece</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="id-tap-to-cancel">
-        <location filename="../src/qml/PowerPage.qml" line="67"/>
+        <location filename="../src/qml/PowerPage.qml" line="71"/>
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="176"/>
         <source>Tap to cancel</source>
         <translation>Drücken bricht ab</translation>
     </message>
     <message id="id-about-page">
-        <location filename="../src/qml/main.qml" line="184"/>
+        <location filename="../src/qml/main.qml" line="193"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
@@ -485,6 +495,26 @@
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="136"/>
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="152"/>
         <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-hands-calibration-minute">
+        <location filename="../src/qml/HandsCalibrationPage.qml" line="64"/>
+        <source>Minute hand</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-hands-calibration-hour">
+        <location filename="../src/qml/HandsCalibrationPage.qml" line="71"/>
+        <source>Hour hand</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-hands-calibration-hint">
+        <location filename="../src/qml/HandsCalibrationPage.qml" line="82"/>
+        <source>Point both hands at 12</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="id-hands-calibration-page">
+        <location filename="../src/qml/HandsCalibrationPage.qml" line="88"/>
+        <source>Calibrate hands</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

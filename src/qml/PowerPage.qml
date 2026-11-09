@@ -35,6 +35,8 @@ Item {
         ListElement { text: qsTrId("id-reboot-page"); icon: "ios-sync"; action: function() { login1DBus.reboot("") } }
         //% "Bootloader"
         ListElement { text: qsTrId("id-reboot-bootloader-page"); icon: "ios-bootloader-outline"; action: function() { login1DBus.reboot("bootloader") } }
+        //% "Timepiece"
+        ListElement { text: qsTrId("id-timepiece"); icon: "ios-watch"; available: function() { return coprocessor.hasTimepieceMode }; action: function() { coprocessor.enterTimepieceMode() } }
     }
 
     ListView {
@@ -50,6 +52,8 @@ Item {
         delegate: ListItem {
             title: text
             iconName: icon
+            visible: !model.available || model.available()
+            height: visible ? Dims.h(21) : 0
             HighlightBar {
                 onClicked: {
                     pendingAction = action

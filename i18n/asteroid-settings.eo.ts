@@ -300,7 +300,7 @@
     <message id="id-toggle-reboot">
         <location filename="../src/qml/QuickPanelPage.qml" line="133"/>
         <source>Reboot</source>
-        <translation type="unfinished">Restartigi</translation>
+        <translation>Restartigi</translation>
     </message>
     <message id="id-toggle-music">
         <location filename="../src/qml/QuickPanelPage.qml" line="135"/>
@@ -353,7 +353,7 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="235"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="532"/>
         <source>Tap to cycle particle design</source>
-        <translation type="unfinished"></translation>
+        <translation>Tuŝeti por cikli partikla dezajno</translation>
     </message>
     <message id="id-battery-preview">
         <location filename="../src/qml/QuickPanelPage.qml" line="237"/>
@@ -365,22 +365,22 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="512"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="521"/>
         <source>Enable colored battery?</source>
-        <translation type="unfinished"></translation>
+        <translation>Permesu kolorita baterio?</translation>
     </message>
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation type="unfinished">Agordoj</translation>
+        <translation>Agordoj</translation>
     </message>
     <message id="id-wifi-password">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="214"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasvorto:</translation>
     </message>
     <message id="id-wifi-disconnect">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="141"/>
         <source>Disconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>Malkonektu</translation>
     </message>
     <message id="id-wifi-connectionError">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="85"/>
@@ -390,69 +390,69 @@
     <message id="id-wifi-autoconnect">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="154"/>
         <source>Autoconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>Aŭtokonektu</translation>
     </message>
     <message id="id-wifi-removenetwork">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="163"/>
         <source>Forget network</source>
         <oldsource>Remove network</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Forgesu reto</translation>
     </message>
     <message id="id-wifi-ssid">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="204"/>
         <source>Name (SSID):</source>
-        <translation type="unfinished"></translation>
+        <translation>Nomo (SSID):</translation>
     </message>
     <message id="id-wifi-identity">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="206"/>
         <source>Name (Identity):</source>
-        <translation type="unfinished"></translation>
+        <translation>Nomo (Identeco):</translation>
     </message>
     <message id="id-wifi-passphrase">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="208"/>
         <source>Passphrase:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasfrazo:</translation>
     </message>
     <message id="id-wifi-wps">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="210"/>
         <source>WPS:</source>
-        <translation type="unfinished"></translation>
+        <translation>WPS:</translation>
     </message>
     <message id="id-wifi-username">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="212"/>
         <source>Username:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uzantonomo:</translation>
     </message>
     <message id="id-wifi-on">
         <location filename="../src/qml/WiFiPage.qml" line="93"/>
         <source>WiFi on</source>
-        <translation type="unfinished"></translation>
+        <translation>Vifio ŝaltita</translation>
     </message>
     <message id="id-wifi-off">
         <location filename="../src/qml/WiFiPage.qml" line="95"/>
         <source>WiFi off</source>
-        <translation type="unfinished"></translation>
+        <translation>Vifio malŝaltita</translation>
     </message>
     <message id="id-wifi-connected">
         <location filename="../src/qml/WiFiPage.qml" line="97"/>
         <location filename="../src/qml/WiFiPage.qml" line="142"/>
         <source>Connected</source>
-        <translation type="unfinished">Konektita</translation>
+        <translation>Konektita</translation>
     </message>
     <message id="id-wifi-disconnected">
         <location filename="../src/qml/WiFiPage.qml" line="99"/>
         <source>Not connected</source>
-        <translation type="unfinished">Ne konektita</translation>
+        <translation>Ne konektita</translation>
     </message>
     <message id="id-wifi-hiddennetwork">
         <location filename="../src/qml/WiFiPage.qml" line="125"/>
         <source>Hidden network</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaŝita reto</translation>
     </message>
     <message id="id-wifi-saved">
         <location filename="../src/qml/WiFiPage.qml" line="145"/>
         <source>Saved</source>
-        <translation type="unfinished"></translation>
+        <translation>Konservita</translation>
     </message>
     <message id="id-wifi-available">
         <location filename="../src/qml/WiFiPage.qml" line="148"/>
@@ -463,29 +463,30 @@
         <location filename="../src/qml/WatchfaceSelector.qml" line="461"/>
         <source>needs
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>bezonas
+%1</translation>
     </message>
     <message id="id-loading">
         <location filename="../src/qml/WatchfaceSelector.qml" line="740"/>
         <source>Loading</source>
-        <translation type="unfinished"></translation>
+        <translation>Ŝarĝado</translation>
     </message>
     <message id="id-update">
         <location filename="../src/qml/WatchfaceSelector.qml" line="742"/>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Ĝisdatigo</translation>
     </message>
     <message id="id-get-more">
         <location filename="../src/qml/WatchfaceSelector.qml" line="744"/>
         <source>Get more</source>
-        <translation type="unfinished"></translation>
+        <translation>Akiri pli</translation>
     </message>
     <message id="id-remove">
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="75"/>
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="136"/>
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="152"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Forigu</translation>
     </message>
 </context>
 <context>

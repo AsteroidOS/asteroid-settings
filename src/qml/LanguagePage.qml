@@ -34,20 +34,10 @@ Item {
         anchors.top: title.bottom
         height: Dims.h(60)
         model: langSettings
+        currentIndex: langSettings.currentIndex
 
         delegate: SpinnerDelegate { text: langSettings.languageName(index) }
 
-        property bool _positioned: false
-        onContentHeightChanged: {
-            if (!_positioned && contentHeight > 0) {
-                _positioned = true;
-                var i = langSettings.currentIndex;
-                if (i !== -1) {
-                    positionViewAtIndex(i, ListView.SnapPosition);
-                    currentIndex = i;
-                }
-            }
-        }
     }
 
     IconButton {

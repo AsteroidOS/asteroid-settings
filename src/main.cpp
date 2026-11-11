@@ -29,6 +29,7 @@
 #include "sysinfo.h"
 #include "watchfacehelper.h"
 #include "watchfacestoremodel.h"
+#include "coprocessor.h"
 
 int main(int argc, char *argv[])
 {
@@ -40,6 +41,7 @@ int main(int argc, char *argv[])
     qmlRegisterType<TiltToWake>("org.asteroid.settings", 1, 0, "TiltToWake");
     qmlRegisterType<TapToWake>("org.asteroid.settings", 1, 0, "TapToWake");
     qmlRegisterType<SysInfo>("org.asteroid.settings", 1, 0, "SysInfo");
+    qmlRegisterType<Coprocessor>("org.asteroid.settings", 1, 0, "Coprocessor");
     // Singletons: one store backend for the whole app. A creatable type would
     // construct a full backend (watchers, network manager, directory scans)
     // per page that declares one — three pages do — and again on every page

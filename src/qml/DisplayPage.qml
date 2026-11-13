@@ -58,6 +58,12 @@ Item {
     }
 
     ConfigurationValue {
+        id: displayRotation
+        key: "/desktop/asteroid/display-rotation"
+        defaultValue: 0
+    }
+
+    ConfigurationValue {
         id: nightstandEnabled
         key: "/desktop/asteroid/nightstand/enabled"
         defaultValue: true
@@ -142,6 +148,21 @@ Item {
                 valueArray: bipLabels
                 currentValue: bipLabels[bipValues.indexOf(bipLevel.value)] || bipLabels[0]
                 onValueChanged: (value) => bipLevel.value = bipValues[bipLabels.indexOf(value)]
+            }
+
+            RowSeparator {}
+
+            LabeledSwitch {
+                height: rowHeight
+                width: parent.width
+                //% "Rotate by 180°"
+                text: qsTrId("id-rotate-by-180")
+                checked: displayRotation.value === 180
+                onCheckedChanged: {
+                    var angle = checked ? 180 : 0
+                    if (displayRotation.value !== angle)
+                        displayRotation.value = angle
+                }
             }
 
             RowSeparator {}

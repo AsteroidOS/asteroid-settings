@@ -340,14 +340,14 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="517"/>
         <source>Battery Meter aligned to bottom?</source>
         <oldsource>Battery aligned to bottom?</oldsource>
-        <translation>Индик. батареи внизу</translation>
+        <translation>Индикатор заряда батареи снизу?</translation>
     </message>
     <message id="id-battery-animation">
         <location filename="../src/qml/QuickPanelPage.qml" line="233"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="511"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="519"/>
         <source>Show battery charge animation?</source>
-        <translation>Анимация зарядки</translation>
+        <translation>Показывать анимацию зарядки?</translation>
     </message>
     <message id="id-particle-design">
         <location filename="../src/qml/QuickPanelPage.qml" line="235"/>
@@ -365,7 +365,7 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="512"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="521"/>
         <source>Enable colored battery?</source>
-        <translation>Вкл. цвет. батар.</translation>
+        <translation>включить цвет. индикацию заряда?</translation>
     </message>
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
@@ -411,7 +411,7 @@
     <message id="id-wifi-passphrase">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="208"/>
         <source>Passphrase:</source>
-        <translation>Пароль:</translation>
+        <translation>Фраза-пароль:</translation>
     </message>
     <message id="id-wifi-wps">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="210"/>
@@ -469,24 +469,24 @@
     <message id="id-loading">
         <location filename="../src/qml/WatchfaceSelector.qml" line="740"/>
         <source>Loading</source>
-        <translation type="unfinished"></translation>
+        <translation>Загрузка</translation>
     </message>
     <message id="id-update">
         <location filename="../src/qml/WatchfaceSelector.qml" line="742"/>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Обновление</translation>
     </message>
     <message id="id-get-more">
         <location filename="../src/qml/WatchfaceSelector.qml" line="744"/>
         <source>Get more</source>
-        <translation type="unfinished"></translation>
+        <translation>Узнать больше</translation>
     </message>
     <message id="id-remove">
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="75"/>
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="136"/>
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="152"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Убрать</translation>
     </message>
 </context>
 <context>
@@ -559,7 +559,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>Total memory</source>
-        <translation>Всего RAM</translation>
+        <translation>Всего ОЗУ</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
@@ -569,7 +569,7 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="104"/>
         <source>Free memory</source>
-        <translation>Свободно RAM</translation>
+        <translation>Свободно ОЗУ</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="104"/>

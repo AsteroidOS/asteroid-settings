@@ -12,6 +12,7 @@ qt_add_dbus_interfaces(
 set(
 	SRC
 	main.cpp
+	coprocessor.cpp
 	sysinfo.cpp
 	taptowake.cpp
 	tilttowake.cpp
@@ -26,6 +27,7 @@ set(
 )
 set(
 	HEADERS
+	coprocessor.h
 	sysinfo.h
 	taptowake.h
 	tilttowake.h
@@ -48,6 +50,7 @@ asteroid_app_qml_module(asteroid-settings
 	qml/BluetoothPage.qml
 	qml/DisplayPage.qml
 	qml/SoundPage.qml
+	qml/HandsCalibrationPage.qml
 	qml/NightstandPage.qml
 	qml/NightstandWatchfacePage.qml
 	qml/UnitsPage.qml

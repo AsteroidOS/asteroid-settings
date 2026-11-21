@@ -120,34 +120,39 @@
         <translation>Pouze nabíjení</translation>
     </message>
     <message id="id-display-page">
-        <location filename="../src/qml/DisplayPage.qml" line="177"/>
+        <location filename="../src/qml/DisplayPage.qml" line="198"/>
         <location filename="../src/qml/main.qml" line="86"/>
         <source>Display</source>
         <translation>Displej</translation>
     </message>
     <message id="id-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="87"/>
+        <location filename="../src/qml/DisplayPage.qml" line="93"/>
         <source>Brightness</source>
         <translation>Jas</translation>
     </message>
     <message id="id-always-on-display">
-        <location filename="../src/qml/DisplayPage.qml" line="120"/>
+        <location filename="../src/qml/DisplayPage.qml" line="126"/>
         <location filename="../src/qml/NightstandPage.qml" line="151"/>
         <source>Always on Display</source>
         <translation>Vždy zapnutý displej</translation>
     </message>
+    <message id="id-rotate-by-180">
+        <location filename="../src/qml/DisplayPage.qml" line="159"/>
+        <source>Rotate by 180°</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="id-tilt-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="155"/>
+        <location filename="../src/qml/DisplayPage.qml" line="176"/>
         <source>Tilt-to-wake</source>
         <translation>Probuzení naklopením</translation>
     </message>
     <message id="id-tap-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="166"/>
+        <location filename="../src/qml/DisplayPage.qml" line="187"/>
         <source>Tap-to-wake</source>
         <translation>Probuzení klepnutím</translation>
     </message>
     <message id="id-burn-in-protection">
-        <location filename="../src/qml/DisplayPage.qml" line="141"/>
+        <location filename="../src/qml/DisplayPage.qml" line="147"/>
         <source>Burn-in Protection</source>
         <oldsource>Burn in protection</oldsource>
         <translation>Ochrana proti popálení</translation>
@@ -158,7 +163,7 @@
         <translation>Spouštěč</translation>
     </message>
     <message id="id-automatic-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="109"/>
+        <location filename="../src/qml/DisplayPage.qml" line="115"/>
         <source>Automatic brightness</source>
         <translation>Automatická úroveň jasu</translation>
     </message>

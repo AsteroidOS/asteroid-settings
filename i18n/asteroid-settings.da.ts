@@ -78,60 +78,65 @@
         <translation>Bluetooth</translation>
     </message>
     <message id="id-display-page">
-        <location filename="../src/qml/DisplayPage.qml" line="177"/>
+        <location filename="../src/qml/DisplayPage.qml" line="206"/>
         <location filename="../src/qml/main.qml" line="86"/>
         <source>Display</source>
         <translation>Skærm</translation>
     </message>
     <message id="id-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="87"/>
+        <location filename="../src/qml/DisplayPage.qml" line="88"/>
         <source>Brightness</source>
         <translation>Lysstyrke</translation>
     </message>
     <message id="id-off">
-        <location filename="../src/qml/DisplayPage.qml" line="43"/>
+        <location filename="../src/qml/DisplayPage.qml" line="44"/>
         <source>Off</source>
         <translation>Slukket</translation>
     </message>
     <message id="id-high">
-        <location filename="../src/qml/DisplayPage.qml" line="45"/>
+        <location filename="../src/qml/DisplayPage.qml" line="46"/>
         <source>High</source>
         <translation>Høj</translation>
     </message>
     <message id="id-medium">
-        <location filename="../src/qml/DisplayPage.qml" line="47"/>
+        <location filename="../src/qml/DisplayPage.qml" line="48"/>
         <source>Medium</source>
         <translation>Mellem</translation>
     </message>
     <message id="id-low">
-        <location filename="../src/qml/DisplayPage.qml" line="49"/>
+        <location filename="../src/qml/DisplayPage.qml" line="50"/>
         <source>Low</source>
         <translation>Lav</translation>
     </message>
     <message id="id-automatic-brightness">
-        <location filename="../src/qml/DisplayPage.qml" line="109"/>
+        <location filename="../src/qml/DisplayPage.qml" line="110"/>
         <source>Automatic brightness</source>
         <translation>Automatisk lysstyrke</translation>
     </message>
     <message id="id-always-on-display">
-        <location filename="../src/qml/DisplayPage.qml" line="120"/>
+        <location filename="../src/qml/DisplayPage.qml" line="121"/>
         <location filename="../src/qml/NightstandPage.qml" line="151"/>
         <source>Always on Display</source>
         <translation>Skærm altid tændt</translation>
     </message>
+    <message id="id-always-on-brightness">
+        <location filename="../src/qml/DisplayPage.qml" line="144"/>
+        <source>Always on brightness</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message id="id-burn-in-protection">
-        <location filename="../src/qml/DisplayPage.qml" line="141"/>
+        <location filename="../src/qml/DisplayPage.qml" line="170"/>
         <source>Burn-in Protection</source>
         <oldsource>Burn in protection</oldsource>
         <translation type="unfinished">Beskyttelse mod fastbrænding</translation>
     </message>
     <message id="id-tilt-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="155"/>
+        <location filename="../src/qml/DisplayPage.qml" line="184"/>
         <source>Tilt-to-wake</source>
         <translation>Tilt-for-at-vågne</translation>
     </message>
     <message id="id-tap-to-wake">
-        <location filename="../src/qml/DisplayPage.qml" line="166"/>
+        <location filename="../src/qml/DisplayPage.qml" line="195"/>
         <source>Tap-to-wake</source>
         <translation>Tryk-for-at-vække</translation>
     </message>

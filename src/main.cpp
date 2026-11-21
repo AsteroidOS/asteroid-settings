@@ -23,6 +23,7 @@
 
 #include <asteroidapp.h>
 
+#include "aodbrightness.h"
 #include "volumecontrol.h"
 #include "tilttowake.h"
 #include "taptowake.h"
@@ -36,6 +37,7 @@ int main(int argc, char *argv[])
     uname(&buf);
     QScopedPointer<QGuiApplication> app(AsteroidApp::application(argc, argv));
     QScopedPointer<QQuickView> view(AsteroidApp::createView());
+    qmlRegisterType<AodBrightness>("org.asteroid.settings", 1, 0, "AodBrightness");
     qmlRegisterType<VolumeControl>("org.asteroid.settings", 1, 0, "VolumeControl");
     qmlRegisterType<TiltToWake>("org.asteroid.settings", 1, 0, "TiltToWake");
     qmlRegisterType<TapToWake>("org.asteroid.settings", 1, 0, "TapToWake");

@@ -86,7 +86,7 @@
     <message id="id-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="87"/>
         <source>Brightness</source>
-        <translation>Ljus styrka</translation>
+        <translation>Ljusstyrka</translation>
     </message>
     <message id="id-off">
         <location filename="../src/qml/DisplayPage.qml" line="43"/>

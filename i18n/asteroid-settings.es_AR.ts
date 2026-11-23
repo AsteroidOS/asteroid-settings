@@ -215,7 +215,7 @@
         <location filename="../src/qml/PowerPage.qml" line="67"/>
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="176"/>
         <source>Tap to cancel</source>
-        <translation>Tocar para cancelar</translation>
+        <translation>Toca para cancelar</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="184"/>

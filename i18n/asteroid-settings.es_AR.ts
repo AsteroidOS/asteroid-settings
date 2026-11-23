@@ -215,7 +215,7 @@
         <location filename="../src/qml/PowerPage.qml" line="67"/>
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="176"/>
         <source>Tap to cancel</source>
-        <translation>Toca para cancelar</translation>
+        <translation>Tocar para cancelar</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="184"/>
@@ -264,7 +264,7 @@
     <message id="id-toggle-brightness">
         <location filename="../src/qml/QuickPanelPage.qml" line="113"/>
         <source>Brightness</source>
-        <translation type="unfinished">Brillo</translation>
+        <translation>Brillo</translation>
     </message>
     <message id="id-toggle-bluetooth">
         <location filename="../src/qml/QuickPanelPage.qml" line="115"/>
@@ -300,7 +300,7 @@
     <message id="id-toggle-reboot">
         <location filename="../src/qml/QuickPanelPage.qml" line="133"/>
         <source>Reboot</source>
-        <translation type="unfinished">Reiniciar</translation>
+        <translation>Reiniciar</translation>
     </message>
     <message id="id-toggle-music">
         <location filename="../src/qml/QuickPanelPage.qml" line="135"/>
@@ -437,7 +437,7 @@
         <location filename="../src/qml/WiFiPage.qml" line="97"/>
         <location filename="../src/qml/WiFiPage.qml" line="142"/>
         <source>Connected</source>
-        <translation type="unfinished">Conectado</translation>
+        <translation>Conectado</translation>
     </message>
     <message id="id-wifi-disconnected">
         <location filename="../src/qml/WiFiPage.qml" line="99"/>
@@ -463,29 +463,30 @@
         <location filename="../src/qml/WatchfaceSelector.qml" line="461"/>
         <source>needs
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>necesita
+%1</translation>
     </message>
     <message id="id-loading">
         <location filename="../src/qml/WatchfaceSelector.qml" line="740"/>
         <source>Loading</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargando</translation>
     </message>
     <message id="id-update">
         <location filename="../src/qml/WatchfaceSelector.qml" line="742"/>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizar</translation>
     </message>
     <message id="id-get-more">
         <location filename="../src/qml/WatchfaceSelector.qml" line="744"/>
         <source>Get more</source>
-        <translation type="unfinished"></translation>
+        <translation>Obtener más</translation>
     </message>
     <message id="id-remove">
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="75"/>
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="136"/>
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="152"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Quitar</translation>
     </message>
 </context>
 <context>

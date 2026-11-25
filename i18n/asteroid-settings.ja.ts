@@ -27,7 +27,7 @@
         <location filename="../src/qml/SoundPage.qml" line="73"/>
         <source>Volume</source>
         <oldsource>Volume %1%</oldsource>
-        <translation type="unfinished">音量 %1%</translation>
+        <translation>音量</translation>
     </message>
     <message id="id-charging-only">
         <location filename="../src/qml/USBPage.qml" line="31"/>
@@ -91,49 +91,49 @@
     <message id="id-off">
         <location filename="../src/qml/DisplayPage.qml" line="43"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>オフ</translation>
     </message>
     <message id="id-high">
         <location filename="../src/qml/DisplayPage.qml" line="45"/>
         <source>High</source>
-        <translation type="unfinished"></translation>
+        <translation>高</translation>
     </message>
     <message id="id-medium">
         <location filename="../src/qml/DisplayPage.qml" line="47"/>
         <source>Medium</source>
-        <translation type="unfinished"></translation>
+        <translation>中</translation>
     </message>
     <message id="id-low">
         <location filename="../src/qml/DisplayPage.qml" line="49"/>
         <source>Low</source>
-        <translation type="unfinished"></translation>
+        <translation>低</translation>
     </message>
     <message id="id-automatic-brightness">
         <location filename="../src/qml/DisplayPage.qml" line="109"/>
         <source>Automatic brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>明るさの自動調節</translation>
     </message>
     <message id="id-always-on-display">
         <location filename="../src/qml/DisplayPage.qml" line="120"/>
         <location filename="../src/qml/NightstandPage.qml" line="151"/>
         <source>Always on Display</source>
-        <translation type="unfinished"></translation>
+        <translation>常に画面をオン</translation>
     </message>
     <message id="id-burn-in-protection">
         <location filename="../src/qml/DisplayPage.qml" line="141"/>
         <source>Burn-in Protection</source>
         <oldsource>Burn in protection</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>焼き付き防止</translation>
     </message>
     <message id="id-tilt-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="155"/>
         <source>Tilt-to-wake</source>
-        <translation type="unfinished">振ってスリープを解除</translation>
+        <translation>振ってスリープを解除</translation>
     </message>
     <message id="id-tap-to-wake">
         <location filename="../src/qml/DisplayPage.qml" line="166"/>
         <source>Tap-to-wake</source>
-        <translation type="unfinished"></translation>
+        <translation>タップしてスリープを解除</translation>
     </message>
     <message id="id-timezone-page">
         <location filename="../src/qml/main.qml" line="153"/>
@@ -150,7 +150,7 @@
         <location filename="../src/qml/main.qml" line="92"/>
         <location filename="../src/qml/NightstandPage.qml" line="196"/>
         <source>Nightstand</source>
-        <translation type="unfinished"></translation>
+        <translation>ナイトスタンド</translation>
     </message>
     <message id="id-units-page">
         <location filename="../src/qml/main.qml" line="141"/>
@@ -171,17 +171,17 @@
     <message id="id-launcher-page">
         <location filename="../src/qml/main.qml" line="123"/>
         <source>Launcher</source>
-        <translation type="unfinished"></translation>
+        <translation>ランチャー</translation>
     </message>
     <message id="id-quickpanel-page">
         <location filename="../src/qml/main.qml" line="98"/>
         <source>Quick Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>クイックパネル</translation>
     </message>
     <message id="id-wifi-page">
         <location filename="../src/qml/main.qml" line="165"/>
         <source>WiFi</source>
-        <translation type="unfinished"></translation>
+        <translation>Wi-Fi</translation>
     </message>
     <message id="id-usb-page">
         <location filename="../src/qml/main.qml" line="172"/>
@@ -193,7 +193,7 @@
         <location filename="../src/qml/main.qml" line="178"/>
         <location filename="../src/qml/PowerPage.qml" line="98"/>
         <source>Power</source>
-        <translation type="unfinished"></translation>
+        <translation>電源</translation>
     </message>
     <message id="id-poweroff-page">
         <location filename="../src/qml/PowerPage.qml" line="33"/>
@@ -209,13 +209,13 @@
         <location filename="../src/qml/PowerPage.qml" line="37"/>
         <source>Bootloader</source>
         <oldsource>Reboot to bootloader</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>ブートローダー</translation>
     </message>
     <message id="id-tap-to-cancel">
         <location filename="../src/qml/PowerPage.qml" line="67"/>
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="176"/>
         <source>Tap to cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>タップしてキャンセル</translation>
     </message>
     <message id="id-about-page">
         <location filename="../src/qml/main.qml" line="184"/>
@@ -225,77 +225,77 @@
     <message id="id-nightstand-enable">
         <location filename="../src/qml/NightstandPage.qml" line="88"/>
         <source>Enable</source>
-        <translation type="unfinished"></translation>
+        <translation>有効化</translation>
     </message>
     <message id="id-nightstand-brightness">
         <location filename="../src/qml/NightstandPage.qml" line="109"/>
         <source>Brightness</source>
         <oldsource>Nightstand Brightness</oldsource>
-        <translation type="unfinished">輝度</translation>
+        <translation>明るさ</translation>
     </message>
     <message id="id-nightstand-delay">
         <location filename="../src/qml/NightstandPage.qml" line="128"/>
         <source>Delay</source>
         <oldsource>Nightstand delay</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>遅延</translation>
     </message>
     <message id="id-nightstand-custom-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="172"/>
         <source>Custom watchface</source>
-        <translation type="unfinished"></translation>
+        <translation>カスタム文字盤</translation>
     </message>
     <message id="id-nightstand-watchface">
         <location filename="../src/qml/NightstandPage.qml" line="183"/>
         <source>Select watchface</source>
         <oldsource>select nightstand watchface</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>文字盤を選択</translation>
     </message>
     <message id="id-toggle-lock">
         <location filename="../src/qml/QuickPanelPage.qml" line="109"/>
         <source>Lock Button</source>
-        <translation type="unfinished"></translation>
+        <translation>ロックボタン</translation>
     </message>
     <message id="id-toggle-settings">
         <location filename="../src/qml/QuickPanelPage.qml" line="111"/>
         <source>Settings</source>
         <oldsource>Settings Shortcut</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>設定</translation>
     </message>
     <message id="id-toggle-brightness">
         <location filename="../src/qml/QuickPanelPage.qml" line="113"/>
         <source>Brightness</source>
-        <translation type="unfinished">輝度</translation>
+        <translation>明るさ</translation>
     </message>
     <message id="id-toggle-bluetooth">
         <location filename="../src/qml/QuickPanelPage.qml" line="115"/>
         <source>Bluetooth</source>
-        <translation type="unfinished">Bluetooth</translation>
+        <translation>Bluetooth</translation>
     </message>
     <message id="id-toggle-haptics">
         <location filename="../src/qml/QuickPanelPage.qml" line="117"/>
         <source>Vibration</source>
-        <translation type="unfinished"></translation>
+        <translation>振動</translation>
     </message>
     <message id="id-toggle-wifi">
         <location filename="../src/qml/QuickPanelPage.qml" line="120"/>
         <source>Wifi Toggle</source>
         <oldsource>WiFi</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>Wi-Fi トグル</translation>
     </message>
     <message id="id-toggle-sound">
         <location filename="../src/qml/QuickPanelPage.qml" line="124"/>
         <source>Mute Sound</source>
-        <translation type="unfinished"></translation>
+        <translation>音量をミュート</translation>
     </message>
     <message id="id-toggle-cinema">
         <location filename="../src/qml/QuickPanelPage.qml" line="127"/>
         <source>Cinema Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>シネマモード</translation>
     </message>
     <message id="id-toggle-power-off">
         <location filename="../src/qml/QuickPanelPage.qml" line="131"/>
         <source>Poweroff</source>
-        <translation type="unfinished"></translation>
+        <translation>電源オフ</translation>
     </message>
     <message id="id-toggle-reboot">
         <location filename="../src/qml/QuickPanelPage.qml" line="133"/>
@@ -305,18 +305,18 @@
     <message id="id-toggle-music">
         <location filename="../src/qml/QuickPanelPage.qml" line="135"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>音楽</translation>
     </message>
     <message id="id-toggle-flashlight">
         <location filename="../src/qml/QuickPanelPage.qml" line="137"/>
         <source>Flashlight</source>
-        <translation type="unfinished"></translation>
+        <translation>ライト</translation>
     </message>
     <message id="id-fixed-row">
         <location filename="../src/qml/QuickPanelPage.qml" line="155"/>
         <source>Fixed Row</source>
         <oldsource>Fixed Row</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>固定行</translation>
     </message>
     <message id="id-sliding-row">
         <location filename="../src/qml/QuickPanelPage.qml" line="191"/>
@@ -326,13 +326,13 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="345"/>
         <source>Sliding Row</source>
         <oldsource>Sliding Row</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>スライド行</translation>
     </message>
     <message id="id-options">
         <location filename="../src/qml/QuickPanelPage.qml" line="227"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="305"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>オプション</translation>
     </message>
     <message id="id-battery-bottom">
         <location filename="../src/qml/QuickPanelPage.qml" line="229"/>
@@ -340,47 +340,47 @@
         <location filename="../src/qml/QuickPanelPage.qml" line="517"/>
         <source>Battery Meter aligned to bottom?</source>
         <oldsource>Battery aligned to bottom?</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>バッテリーメーターを下に揃えますか？</translation>
     </message>
     <message id="id-battery-animation">
         <location filename="../src/qml/QuickPanelPage.qml" line="233"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="511"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="519"/>
         <source>Show battery charge animation?</source>
-        <translation type="unfinished"></translation>
+        <translation>バッテリー充電アニメーションを表示しますか？</translation>
     </message>
     <message id="id-particle-design">
         <location filename="../src/qml/QuickPanelPage.qml" line="235"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="532"/>
         <source>Tap to cycle particle design</source>
-        <translation type="unfinished"></translation>
+        <translation>タップしてパーティクルのデザインを切り替え</translation>
     </message>
     <message id="id-battery-preview">
         <location filename="../src/qml/QuickPanelPage.qml" line="237"/>
         <source>Battery preview</source>
-        <translation type="unfinished"></translation>
+        <translation>バッテリープレビュー</translation>
     </message>
     <message id="id-battery-colored">
         <location filename="../src/qml/QuickPanelPage.qml" line="231"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="512"/>
         <location filename="../src/qml/QuickPanelPage.qml" line="521"/>
         <source>Enable colored battery?</source>
-        <translation type="unfinished"></translation>
+        <translation>バッテリーの色を有効化しますか？</translation>
     </message>
     <message id="id-app-launcher-name">
         <location filename="asteroid-settings.desktop.h" line="6"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>設定</translation>
     </message>
     <message id="id-wifi-password">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="214"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>パスワード:</translation>
     </message>
     <message id="id-wifi-disconnect">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="141"/>
         <source>Disconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>接続解除</translation>
     </message>
     <message id="id-wifi-connectionError">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="85"/>
@@ -390,7 +390,7 @@
     <message id="id-wifi-autoconnect">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="154"/>
         <source>Autoconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>自動接続</translation>
     </message>
     <message id="id-wifi-removenetwork">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="163"/>
@@ -401,7 +401,7 @@
     <message id="id-wifi-ssid">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="204"/>
         <source>Name (SSID):</source>
-        <translation type="unfinished"></translation>
+        <translation>名前 (SSID):</translation>
     </message>
     <message id="id-wifi-identity">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="206"/>
@@ -411,69 +411,70 @@
     <message id="id-wifi-passphrase">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="208"/>
         <source>Passphrase:</source>
-        <translation type="unfinished"></translation>
+        <translation>パスフレーズ:</translation>
     </message>
     <message id="id-wifi-wps">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="210"/>
         <source>WPS:</source>
-        <translation type="unfinished"></translation>
+        <translation>WPS:</translation>
     </message>
     <message id="id-wifi-username">
         <location filename="../src/qml/WiFiConnectionDialog.qml" line="212"/>
         <source>Username:</source>
-        <translation type="unfinished"></translation>
+        <translation>ユーザーネーム:</translation>
     </message>
     <message id="id-wifi-on">
         <location filename="../src/qml/WiFiPage.qml" line="93"/>
         <source>WiFi on</source>
-        <translation type="unfinished"></translation>
+        <translation>Wi-Fi オン</translation>
     </message>
     <message id="id-wifi-off">
         <location filename="../src/qml/WiFiPage.qml" line="95"/>
         <source>WiFi off</source>
-        <translation type="unfinished"></translation>
+        <translation>Wi-Fi オフ</translation>
     </message>
     <message id="id-wifi-connected">
         <location filename="../src/qml/WiFiPage.qml" line="97"/>
         <location filename="../src/qml/WiFiPage.qml" line="142"/>
         <source>Connected</source>
-        <translation type="unfinished">接続中</translation>
+        <translation>接続済</translation>
     </message>
     <message id="id-wifi-disconnected">
         <location filename="../src/qml/WiFiPage.qml" line="99"/>
         <source>Not connected</source>
-        <translation type="unfinished">未接続</translation>
+        <translation>未接続</translation>
     </message>
     <message id="id-wifi-hiddennetwork">
         <location filename="../src/qml/WiFiPage.qml" line="125"/>
         <source>Hidden network</source>
-        <translation type="unfinished"></translation>
+        <translation>ネットワークを隠す</translation>
     </message>
     <message id="id-wifi-saved">
         <location filename="../src/qml/WiFiPage.qml" line="145"/>
         <source>Saved</source>
-        <translation type="unfinished"></translation>
+        <translation>保存済</translation>
     </message>
     <message id="id-wifi-available">
         <location filename="../src/qml/WiFiPage.qml" line="148"/>
         <source>Available</source>
-        <translation type="unfinished"></translation>
+        <translation>利用可能</translation>
     </message>
     <message id="id-needs-module">
         <location filename="../src/qml/WatchfaceSelector.qml" line="461"/>
         <source>needs
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>必要
+%1</translation>
     </message>
     <message id="id-loading">
         <location filename="../src/qml/WatchfaceSelector.qml" line="740"/>
         <source>Loading</source>
-        <translation type="unfinished"></translation>
+        <translation>読み込み中</translation>
     </message>
     <message id="id-update">
         <location filename="../src/qml/WatchfaceSelector.qml" line="742"/>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>アップデート</translation>
     </message>
     <message id="id-get-more">
         <location filename="../src/qml/WatchfaceSelector.qml" line="744"/>
@@ -485,7 +486,7 @@
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="136"/>
         <location filename="../src/qml/WatchfaceSettingsContainer.qml" line="152"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>削除</translation>
     </message>
 </context>
 <context>
@@ -493,57 +494,57 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="84"/>
         <source>Build ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ビルドID</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="85"/>
         <source>Codename</source>
-        <translation type="unfinished"></translation>
+        <translation>コードネーム</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="86"/>
         <source>Host name</source>
-        <translation type="unfinished"></translation>
+        <translation>ホスト名</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="87"/>
         <source>WLAN MAC</source>
-        <translation type="unfinished"></translation>
+        <translation>WLAN MAC</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="88"/>
         <source>IMEI</source>
-        <translation type="unfinished"></translation>
+        <translation>IMEI</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="89"/>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>シリアルナンバー</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="90"/>
         <source>%L1W x %L2H</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1W x %L2H</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="93"/>
         <source>Uptime</source>
-        <translation type="unfinished"></translation>
+        <translation>稼働時間</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="93"/>
         <source>%L1 days %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 日 %L2</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="97"/>
         <source>%L1</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="97"/>
         <source>Threads</source>
-        <translation type="unfinished"></translation>
+        <translation>スレッド</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
@@ -553,42 +554,42 @@
     <message>
         <location filename="../src/qml/AboutPage.qml" line="98"/>
         <source>%L1, %L2, %L3</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1, %L2, %L3</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>Total memory</source>
-        <translation type="unfinished"></translation>
+        <translation>合計メモリ</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="103"/>
         <source>%L1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="104"/>
         <source>Free memory</source>
-        <translation type="unfinished"></translation>
+        <translation>使用可能なメモリ</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="104"/>
         <source>%L1 MB (%L2 %)</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 MB (%L2 %)</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="90"/>
         <source>Display size</source>
-        <translation type="unfinished"></translation>
+        <translation>画面サイズ</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="91"/>
         <source>Kernel version</source>
-        <translation type="unfinished"></translation>
+        <translation>カーネルバージョン</translation>
     </message>
     <message>
         <location filename="../src/qml/AboutPage.qml" line="92"/>
         <source>Qt version</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt バージョン</translation>
     </message>
 </context>
 </TS>

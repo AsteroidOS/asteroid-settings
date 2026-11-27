@@ -31,6 +31,7 @@ Item {
     property var pop
     TapToWake { id: tapToWake }
     TiltToWake { id: tiltToWake }
+    AodBrightness { id: aodBrightness }
     DisplaySettings { id: displaySettings }
     ConfigurationValue {
         id: bipLevel
@@ -132,6 +133,34 @@ Item {
             }
 
             RowSeparator {}
+
+            Label {
+                width: parent.width
+                height: Dims.l(12)
+                // Hidden where mce does not carry the setting, so an
+                // unpatched watch shows no control it cannot honour.
+                visible: aodBrightness.available && alwaysOnDisplay.value
+                //% "Always on brightness"
+                text: qsTrId("id-always-on-brightness")
+                font.pixelSize: Dims.l(6)
+                verticalAlignment: Text.AlignBottom
+                horizontalAlignment: Text.AlignHCenter
+                wrapMode: Text.Wrap
+            }
+
+            IntSelector {
+                width: parent.width
+                height: rowHeight
+                visible: aodBrightness.available && alwaysOnDisplay.value
+                stepSize: 1
+                min: 1
+                value: aodBrightness.brightness
+                onValueChanged: aodBrightness.brightness = value
+            }
+
+            RowSeparator {
+                visible: aodBrightness.available && alwaysOnDisplay.value
+            }
 
             OptionCycler {
                 height: rowHeight
